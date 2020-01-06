@@ -62,3 +62,18 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'typo';
+@import 'utility';
+@import 'header';
+@import 'landing';
+@import 'projectsblock';
+@import 'scrollindicator';
+@import 'cta';
+@import 'footer';
+@import 'aos';
+@import 'services';
+@import 'cases';
+@import 'page';
+@import 'components/pagetitle';
+@import 'mobile/mobile';

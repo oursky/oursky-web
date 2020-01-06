@@ -15,3 +15,21 @@ require('foundation-sites');
 
 
 $(document).foundation();
+
+	// init controller
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 0}});
+
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#content"})
+					.setClassToggle(".header", "dark") // add class toggle
+					.addTo(controller);
+
+$(function() {
+    var $el = $('.parallax-background');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'background-position':'50% '+(.4*scroll)+'px'
+        });
+    });
+});

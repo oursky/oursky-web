@@ -1,0 +1,53 @@
+
+
+.viewmore {
+	font-size: 21px;
+	padding: 50px 0;
+	color: #263043;
+}
+
+.icon {
+	&__arrow {
+		width: 38px;
+		height: 18px;
+		display: inline-block;
+		background: url("../img/arrow.svg") no-repeat;
+		background-size: 38px 18px;
+		vertical-align: middle;
+	}
+	&__tick {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		background: url("../img/icon-tick.svg") no-repeat;
+		background-size: 24px 24px;
+		vertical-align: middle;
+	}
+}
+
+/* Colours */
+
+$color-darkgrey: #263043;
+$color-white: #f3f3f3;
+$color-blue: #123fae;
+$color-lightblue: #eaf4ff;
+$color-green: #02aba6;
+$color-orange: #FAAC2C;
+$color-black: #232323;
+
+.imgph {
+	width: 100%;
+	height: 300px;
+	background-color: #ccc;
+	display: block;
+}
+
+
+
+.button {
+	background: $color-orange;
+	border-radius: 6px;
+	&:hover {
+		background: darken($color-orange, 20);
+	}
+}

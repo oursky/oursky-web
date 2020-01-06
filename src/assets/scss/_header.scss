@@ -1,0 +1,192 @@
+.header {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index: 99;
+	padding-top: 24px;
+	padding-bottom: 18px;
+	transition: all 0.5s 0s ease;
+	background: none;
+	nav {
+	display: block;
+	 text-align: right;
+		ul{
+			list-style: none;
+			display: inline-block;
+			margin:0;
+
+			li {
+				float: left;
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+				position: relative;
+				padding-bottom: 12px;
+				&.cta {
+					margin-top: 2px;
+					a {
+						color: #fff;
+					}
+				}
+				a {
+					font-weight: 500;
+					color:#263043;
+					&:hover {
+						color: #123fae;
+					}
+				}
+			}
+		}
+
+		li:hover,ul.header__dropmenu:hover {
+			ul.header__dropmenu {
+				display: block;
+			}
+		}
+
+		ul.header__dropmenu {
+			position: absolute;
+			left: 0;
+			top: 30px;
+			width: 210px;
+			background: #fff;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+			border-radius: 2px;
+			padding: 13px 13px 23px;
+			text-align: left;
+			display: none;
+
+			li {
+				padding-left: 10px;
+				padding-bottom: 8px;
+				a {
+					font-weight: 300;
+				}
+				&.header__dropmenu__title {
+					padding-left: 0;
+					a {
+					font-weight: 600;
+					}
+				}
+			}
+
+			li.header__dropmenu__sublist {
+				padding: 0;
+				margin: 0;
+			}
+
+			&__subitems {
+				margin-left: 42px;
+				li {
+					padding: 0;
+					margin: 0;
+
+				}
+				li a {
+					font-size: 11px;
+				}
+			}
+
+			&--services {
+				@extend ul.header__dropmenu;
+				width: 300px;
+
+				li {
+					padding-left: 0;
+					padding-bottom: 2px;
+					width: 100%;
+					.service__proservice__item {
+						padding: 0px;
+						border: none;
+						margin: 0;
+						width: 100%;
+						display: block;
+						&:hover {
+							box-shadow: none;
+							color: #123fae;
+						}
+
+					}
+					.service__proservice__icon {
+						width: 28px;
+						height: 28px;
+						padding-right: 5px;
+					}
+					.service__proservice__label {
+						width: calc(100% - 35px);
+						font-weight: 300;
+					}
+					.service__proservice__name {
+						font-weight: 500;
+					}
+				}
+			}
+
+			
+		}
+	}
+	&__logo {
+		top: 20px;
+		transition: all 0.5s 0s ease;
+
+	}
+	&__cta {
+		
+		display: block;
+		top:14px;
+		z-index: 100;
+		color: #fff;
+		background: #FAAC2C;
+		border-radius: 6px;
+		padding: 7px 20px;
+		font-weight: 600;
+	}
+	&.dark {
+		background-color: #fff;
+		padding-top: 14px;
+		padding-bottom: 0;
+		.header__logo {
+			top:10px;
+		}
+		.header__cta {
+			top:9px;
+		}
+		nav ul li a {
+			color: #263043;
+			&:hover {
+						color: #123fae;
+					}
+		}
+
+		nav ul li.cta a {
+			color: #fff;
+		}
+	}
+
+}
+
+div.header {
+	&__logo {
+		padding-top: 8px;
+		z-index: 100;
+		svg {
+			height: 25px;
+			fill: #123fae;
+		}
+	}
+	
+}
+
+header.dark {
+	.header__logo {
+		padding-top: 8px;
+		z-index: 100;
+		svg {
+			height: 25px;
+			fill: #263043;
+		}
+	}
+	
+}
+

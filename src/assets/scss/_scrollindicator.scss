@@ -1,0 +1,31 @@
+.scrollindicator {
+	width:3px;
+	height: 40px;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	z-index: 51;
+	left:50%;
+	bottom:18px;
+	overflow: hidden;
+
+	&__bar {
+		position: relative;
+		top:-40px;
+		left:0;
+		width: 3px;
+		height: 40px;
+		animation-name: scrollloop;
+	    animation-duration: 1.2s;
+	    animation-iteration-count: infinite;
+	    background: #fff;
+	}
+}
+
+@keyframes scrollloop {
+	from {
+		top: -40px;
+	}
+	to {
+		top: 40px;
+	}
+}

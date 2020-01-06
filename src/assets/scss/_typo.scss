@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700,900&display=swap');
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+ color: #1c274a;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+	font-weight: 700;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+h4 {
+	font-weight: 800;
+}
+
+p {
+  font-size: 15px;
+  line-height: 28px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+	color: #3155A5;
+	&:hover {
+		color: #004be0;
+	}
+}
+
+.text {
+	&--huge {
+		font-size: 62px;
+		font-weight: 600;
+		line-height: 72px;
+	}
+	&--medium {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 42px;
+	}
+	&--uppercase {
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	&--bold {
+		font-weight: 800;
+	}
+	&--lead {
+		margin: 1.2rem 0 0.5rem;
+	}
+}
+
+
+
+.color {
+
+	&--blue {
+		color: #3155A5;
+	}	
+
+	&--pink {
+		color: #FA2C9C;
+	}
+	&--purple {
+		color: #562CFA;
+	}
+	&--green {
+		color: #48E9BC;
+	}
+	&--orange {
+		color: #E97548;
+	}
+	&--darkblue {
+		color: #2C2DA9;
+	}
+
+	&--gradient-orange {
+		background-image: linear-gradient(30deg,#ffbf02,#ed0082);
+	}
+}

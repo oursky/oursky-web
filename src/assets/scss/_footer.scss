@@ -1,0 +1,38 @@
+footer {
+	width: 100%;
+	background:$color-black;
+	color: #fff;
+	padding: 40px 0 20px;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding-bottom: 14px;
+			line-height: 20px;
+		}
+
+		a {
+			color: rgba(255,255,255,0.75);
+		}
+	}
+
+	svg {
+		width: 100%;
+		max-width: 110px;
+		fill: #fff;
+	}
+}
+
+.footer {
+	&__copy {
+		font-size: 12px;
+		padding: 140px 0 0;
+		color: #888;
+		a {
+			color: #888;
+		}
+	}
+}

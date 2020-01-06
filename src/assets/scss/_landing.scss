@@ -1,0 +1,400 @@
+
+.hero {
+
+	&__art {
+		width: 330px;
+		height: 330px;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+
+		&__blocks {
+			background: #EFCE47;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			//transform: rotate(45deg);
+			
+		}
+
+
+
+
+		&__block {
+			transform-origin: center;
+			  
+			  border: 3px solid #fff;
+			 
+			  border-radius: 25px;
+
+
+			&--1 {
+				
+				width: 100px;
+				height: 160px;
+				position: absolute;
+				top: 86px;
+				left: 50%;
+				transform: translateX(-50%);
+				
+
+				//background-color: #6FD1A0;
+			}
+
+			&--2 {
+				width: 30px;
+				height: 10px;
+				//background-color: #F4782E;
+				position: absolute;
+				top: 100px;
+				left: 149px;
+
+			}
+
+			&--3 {
+				width: 30px;
+				height: 10px;
+				//background-color: #F4782E;
+				position: absolute;
+				top: 100px;
+				left: 149px;
+			}
+
+			&--4 {
+				
+				width: 30px;
+				height: 10px;
+				//background-color: #F4782E;
+				position: absolute;
+				top: 100px;
+				left: 149px;
+			}
+
+			&--5 {
+				
+				background-color: #D35151;
+			}
+
+			&--6 {
+				
+				background-color: #4b58a0;
+			}
+
+			&--7 {
+				
+				background-color: #7E5140;
+			}
+
+			&--8 {
+				
+				background-color: #415be3;
+			}
+
+			&--9 {
+				
+				background-color: #43b7e1;
+			}
+
+		}
+	}
+
+	&__mask {
+		width: 330px;
+		height: 330px;
+		position: absolute;
+		z-index: 8;
+		top:0;
+		left: 0;
+		background: url('../img/h-mask.png') no-repeat;
+		background-size: 100%;
+	}
+
+	&__container {
+		width: 330px;
+		height: 330px;
+		position: absolute;
+		z-index: 2;
+		top:0;
+		left: 0;
+	}
+
+
+}
+
+
+.landing {
+	&__hero {
+		width: 100%;
+		padding-top: 130px;
+		padding-bottom: 120px;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+		background: $color-white;
+		color: $color-darkgrey;
+			}
+	
+	&__wrap {
+		height: 100%;
+		position: relative;
+	}
+	&__tagwrap {
+		position: relative;
+		z-index: 51;
+
+	}
+
+	&__tag{
+		font-weight: 600;
+		font-size: 60px;
+		display: inline-block;
+		line-height: 72px;
+		
+		opacity: 1;
+		animation-fill-mode: forwards;
+	}
+	&__subtag{
+		
+		margin-top: 42px;
+		
+		
+	}
+	&__fade {
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		position: absolute;
+		top:0;
+		left:0;
+		background: url("../img/hero-img.jpg") center center #000;
+		background-size: cover;
+		background-repeat: no-repeat;
+		 -moz-transform: translate3d(0,0,0);
+	    -webkit-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+
+	}
+
+	&__btn {
+		background:#fff;
+		padding: 30px 0 0 0;
+		box-shadow: 0 15px 20px rgba(0,0,0,0.4);
+		position: absolute;
+		top: -80px;
+		z-index: 52;
+		width: 100%;
+		color: $color-darkgrey;
+
+		&__img {
+			display: block;
+			padding-bottom: 20px;
+		}
+
+		&__title {
+			height: 21px;
+			padding-left: 15px;
+			font-size: 18px;
+
+			
+		}
+
+		
+
+		&__desc {
+			min-height: 38px;
+			padding-left: 15px;
+			line-height: 18px;
+			.icon__arrow {
+				margin-top: 20px;
+				display: inline-block;
+			}
+		}
+
+		
+
+		&__container {
+			position: relative;
+			padding-bottom: 0px;
+			height: 0px;
+		}
+	}
+	
+	&__about {
+		padding: 150px 0 70px;
+		background: $color-blue;
+		color: #fff;
+	}
+	&__projects {
+		padding: 50px 0 120px;
+	}
+
+	&__viewmore {
+		padding-top: 50px;
+	}
+
+	&__wwd {
+		padding-top: 60px;
+		padding-bottom: 120px;
+		background-color: $color-white;
+		background-size: 200px;
+
+		color: $color-darkgrey;
+		p {
+			color: $color-darkgrey;
+		}
+
+		&__content {
+			padding-top: 80px;
+		}
+	}
+
+	
+
+	&__skygear {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		background-color: $color-lightblue;
+
+		&__img {
+			max-width: 200px;
+		}
+	}
+
+	&__sections {
+		padding: 160px 0 120px;
+		overflow-x: hidden;
+		color: $color-darkgrey;
+
+		h3 {
+			margin-bottom: 60px;
+		}
+
+		&--tech {
+			background:$color-black;
+			color: #fff;
+
+			.landing__icon {
+				max-width: 180px;
+			}
+
+			a {
+				color: #6c9ae8;
+			}
+		}
+
+		&--great {
+			background: #122c68;
+			color: #fff;
+
+			.landing__icon {
+				max-width: 180px;
+			}
+		}
+	}
+	&__circle {
+		&__container {
+			width:100%;
+			height: 600px;
+			position: relative;
+		}
+		&--product {
+		width: 80%;
+		display: block;
+		height: 400px;
+		width: 400px;
+		color: #fff;
+		text-align: center;
+		background-color: rgba(255,90,0,0.1);
+		border:1px solid rgba(255,90,0,0.2);
+		border-radius: 200px;
+		padding-top: 190px;
+		
+		}
+
+		&__centercontainer {
+			left:50%;
+			position: absolute;
+			transform: translateX(-50%);
+			top:0;
+		}
+
+		&--customer {
+			width: 250px;
+			height: 250px;
+			text-align: center;
+			background-color: rgba(0,200,200,0.1);
+			border:1px solid rgba(0,200,200,0.2);
+			position: absolute;
+			left: 0;
+			top:80px;
+			padding: 20px;
+			border-radius: 250px;
+			padding-top: 70px;
+		}
+
+		&--oursky {
+			width: 250px;
+			height: 250px;
+			text-align: center;
+			background-color: rgba(0,90,255,0.1);
+			border:1px solid rgba(0,90,255,0.2);
+			position: absolute;
+			right: 0;
+			top:80px;
+			padding: 20px;
+			border-radius: 250px;
+			padding-top: 70px;
+
+		}
+
+		&--content {
+			font-size: 11px;
+			color: rgba(255,255,255,0.5);
+		}
+	}
+
+	&__metrics {
+		background: $color-green;
+		&__container {
+			background: #fff;
+			margin: 50px 0;
+			padding: 30px;
+		}
+	}
+
+	&__brands {
+		background: $color-white;
+		padding: 120px 0;
+		&__logo {
+			display: block;
+			margin: 10px 0;
+			height: 80px;
+			img {
+				padding: 20px 0;
+				height: 80px;
+			}
+		}
+		&__title {
+			padding-bottom: 80px;
+			display: inline-block;
+		}
+	}
+
+	&__cta {
+		padding: 30px 0;
+		color: #fff;
+		background: #181818;
+
+		.button--cta {
+			margin-top: 30px;
+			color: #fff;
+			background: #FAAC2C;
+			border-radius: 6px;
+			padding: 18px 20px;
+			font-weight: 500;
+			font-size: 18px;
+		}
+	}
+}
+

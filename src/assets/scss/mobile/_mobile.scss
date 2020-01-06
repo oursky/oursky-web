@@ -1,0 +1,112 @@
+@include breakpoint(small only) {
+
+	.header {
+		background: rgba(255,255,255,0.5);
+		padding-top: 15px;
+	}
+
+	.header.dark {
+		padding-bottom: 17px;
+	}
+
+	.landing {
+
+		&__hero {
+			.hero__art {
+				margin-top: 50px;
+			}
+		}
+
+		&__tag {
+			font-size: 42px;
+			line-height: 48px;
+		}
+
+		&__btn{
+			position: relative;
+			background-color: #fff;
+			display: block;
+			padding-bottom: 10px;
+			width: 100%;
+			padding-right: 20px;
+			&__container {
+			height: auto;
+			width: 100%;
+			margin-bottom: 20px;
+			display: inline-block;
+			}
+		}
+
+		&__cards {
+			background-color: #123fae;
+		}
+
+		&__about {
+			padding-top: 20px;
+
+			h4.text--medium {
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+
+		&__wwd {
+			padding-top: 10px;
+			&__content {
+				padding-top: 120px;
+				padding-bottom: 120px;
+				p {
+					line-height: 18px;
+				}
+			}
+		}
+
+		&__metrics {
+			h1 {
+				padding-top: 20px;
+			}
+		}
+	}
+
+	.services__about {
+		h4 {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.services__section {
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.services__colimg {
+		margin-top: 30px;
+	}
+
+	.services__section--process {
+		img {
+			max-width: 200px;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+		}
+
+	}
+
+   .innerpage__title {
+   	 h1 {
+   	 	font-size: 42px;
+   	 	line-height: 48px;
+   	 }
+   }
+
+	footer {
+		.footer__list {
+			padding: 50px 0 10px;
+			p {
+				opacity: 0.4;
+			}
+		}
+	}
+ }

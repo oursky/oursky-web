@@ -1,0 +1,61 @@
+.cases__title {
+	margin: 100px 0 0;
+	font-size: 32px;
+}
+
+.cases__list {
+	padding: 100px 0 200px;
+}
+
+.case__title {
+	padding: 200px 0 20px;
+	&__hr {
+		width: 100%;
+		max-width: 450px;
+		display: inline-block;
+		height: 1px;
+		background:#cacaca;
+		margin-top: 70px;
+	}
+}
+
+
+.case__content {
+	padding: 100px 0;
+	h3,h4 {
+		margin-bottom: 4rem;
+	}
+
+	h5 {
+		margin-top: 3rem;
+		font-weight: 600;
+	}
+
+	h6 {
+		font-weight: 600;
+	}
+
+	ul li {
+		font-size: 15px;
+
+	}
+
+	ul.number {
+		padding-left: 40px;
+		list-style: decimal;
+	}
+
+	&__quote {
+		margin: 120px 0;
+
+		q {
+			font-size: 32px;
+			font-style: italic;
+			font-family: times, serif;
+			text-align: left;
+			line-height: 38px;
+			margin-bottom: 2.4rem;
+			display: inline-block;
+		}
+	}
+}

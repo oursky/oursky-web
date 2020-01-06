@@ -1,4 +1,4 @@
-{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
+{{!-- This is the base layout for your project, and will be used on every page. --}}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -6,14 +6,174 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Oursky</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
-<body>
+  <body>
 
-{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-{{> body}}
 
-<script src="{{root}}assets/js/app.js"></script>
-</body>
+   
+
+  {{> header}}
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+  {{> footer}}
+
+    <script src="{{root}}assets/smagic/ScrollMagic.min.js"></script>
+    <script src="{{root}}assets/smagic/debug.addIndicators.min.js"></script>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script src="{{root}}assets/aos/aos.js"></script>
+    <script src="{{root}}assets/anime/anime.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script type="text/javascript">
+        
+
+            // main logo animation
+
+            var heroAnimation1 = (function() {
+
+              /*var heroAnimationEl = document.querySelector('.hero__art__blocks');
+              
+              var initscale = function() { return anime.random(.8, 1.1); };
+              var initrotate = function() { return anime.random(-120, 140); };
+              var initborderradius = function() { return [anime.random(20, 40) + 'px']; };
+              */
+              var heroAnimationTL = anime.timeline({
+                autoplay: false,
+                easing: 'easeOutElastic(1, .8)',
+                loop: true,
+                //direction: 'alternate'
+               })
+              
+              
+               .add({
+                targets: ['.hero__art__block--1'],
+                width: 180,
+                duration: 1000,
+                borderRadius: 25 + 'px',
+                height: 140,
+                top: 90,
+                endDelay: 2500
+              })
+                .add({
+                targets: ['.hero__art__block--2','.hero__art__block--3','.hero__art__block--4'],
+                width: 180,
+                duration: 1000,
+                borderRadius: 25 + 'px',
+                height: 12,
+                top: 235,
+                left: 75,
+                endDelay: 2500
+              }, '-=3500')
+               .add({
+                targets: ['.hero__art__blocks'],
+                 background: '#EFCE47',
+                 duration: 1000,
+                  endDelay: 2500
+               },'-=3500')
+                
+                .add({
+                targets: ['.hero__art__block--1'],
+                width: 200,
+                duration: 1000,
+                borderRadius: 25 + 'px',
+                height: 130,
+                top: 100,
+                endDelay: 2500
+              })
+                .add({
+                targets: ['.hero__art__block--2'],
+                width: 12,
+                duration: 1000,
+                borderRadius: 20 + 'px',
+                height: 12,
+                top: 115,
+                left: 80,
+                endDelay: 2500
+              }, '-=3500')
+
+                .add({
+                targets: ['.hero__art__block--3'],
+                width: 12,
+                duration: 1100,
+                borderRadius: 20 + 'px',
+                height: 12,
+                top: 115,
+                left: 100,
+                endDelay: 2500
+              }, '-=3500')
+
+                .add({
+                targets: ['.hero__art__block--4'],
+                width: 12,
+                duration: 1300,
+                borderRadius: 20 + 'px',
+                height: 12,
+                top: 115,
+                left: 120,
+                endDelay: 2500
+              }, '-=3500')
+                
+                .add({
+                targets: ['.hero__art__blocks'],
+                 background: '#3578AC',
+                 duration: 1000,
+                  endDelay: 2500
+               },'-=3500')
+                 
+              .add({
+                targets: ['.hero__art__block--1'],
+                width: 100,
+                duration: 1000,
+                borderRadius: 25 + 'px',
+                height: 160,
+                top: 86,
+                endDelay: 2500
+              })
+                .add({
+                targets: ['.hero__art__block--2','.hero__art__block--3','.hero__art__block--4'],
+                width: 30,
+                duration: 1000,
+                borderRadius: 25 + 'px',
+                height: 10,
+                top: 100,
+                left: 149,
+                endDelay: 2500
+              }, '-=3500')
+
+                .add({
+                targets: ['.hero__art__blocks'],
+                 background: '#474C81',
+                 duration: 1000,
+                  endDelay: 2500
+               },'-=3500')
+                
+               
+              
+              return heroAnimationTL;
+              //return ;
+
+            })();
+
+           
+
+            heroAnimation1.play();
+            
+
+
+    </script>
+
+
+
+
+
+    
+
+
+  </body>
 </html>

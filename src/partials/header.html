@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="grid-container">
 	  <div class="grid-x grid-padding-x">
-		  <div class="medium-2 cell">
+		  <div class="small-6 medium-2 cell">
 		  	<div href="#" class="header__logo">
 			<a href="{{root}}index.html">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="3 215.1 806 165" enable-background="new 3 215.1 806 165" xml:space="preserve">
@@ -23,7 +23,7 @@
 
 			</div>
 
-			 <div class="medium-10 cell show-for-large">
+			 <div class="large-10 cell show-for-large">
 					<nav>
 						<ul>
 							<li><a href="#">Products</a>
@@ -127,8 +127,91 @@
 						</ul>
 					</nav>
 			</div>
+
+			<div class="small-6 medium-10 cell hide-for-large header__mobilenav">
+				 <button class="header__mobilenavbtn header__mobilenavbtn-x">
+				      <span>
+				        toggle menu
+				      </span>
+				 </button>
+			</div>
 				
 			</div>
-	  
-
+	  	</div>
+	  </div>
 </header>
+
+<div class="mobile__nav hide-for-large">
+
+	<ul class="mobile__nav__list">
+		<li><a href="#">Products</a>
+			<ul class="header__dropmenu">
+				<li class="header__dropmenu__title"><a href="https://skygear.io" target="_blank">Skygear</a></li>
+				<li><a href="https://skygear.io" target="_blank">Skygear Cloud</a></li>
+				<li><a href="https://skygear.io" target="_blank">Skygear Enterprise</a></li>
+			</ul>
+		</li>
+		<li><a href="{{root}}services.html">Services</a>
+			<ul class="header__dropmenu--services">
+				<li class="header__dropmenu__title"><a href="services.html">Software Development Services</a></li>
+				<li> <a href="{{root}}development.html">
+		            <div class="service__proservice__item">
+		             <div class="service__proservice__icon">
+		             <img src="{{root}}assets/img/icon-dev.svg">
+		              </div>
+		              <div class="service__proservice__label">
+		                <p class="service__proservice__name">App Development</p>
+
+		              </div>
+		            </div>
+		          </a></li>
+		          <li class="header__dropmenu__sublist">
+		          <ul class="header__dropmenu__subitems">
+					<li><a href="{{root}}/design.html">UI/UX Design</a></li>
+		       	 	<li><a href="{{root}}/mobile.html">Mobile Development</a></li>
+		       	 	<li><a href="{{root}}/web.html">Web Application Development</a></li>
+		       	 	<li><a href="{{root}}/tech.html">Technologies</a></li>
+		           </ul>
+		          </li>
+					
+
+		<li>
+			<a href="{{root}}microservice.html">
+				<div class="service__proservice__item">
+					<div class="service__proservice__icon">
+						<img src="{{root}}assets/img/icon-micro.svg">
+					</div>
+				<div class="service__proservice__label">
+					<p class="service__proservice__name">Microservices Development</p>
+				</div>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="https://skylab.ai" target="_blank">
+				<div class="service__proservice__item">
+				<div class="service__proservice__icon">
+				<img src="{{root}}assets/img/icon-skylab.svg">
+				</div>
+				<div class="service__proservice__label">
+				<p class="service__proservice__name">Skylab.AI</p>
+
+				</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+
+		</li>
+		<li><a href="{{root}}cases.html">Our Works</a></li>
+
+
+		<li><a href="https://github.com/oursky">Open Source</a></li>
+		<li><a href="#">About Us</a></li>
+		<li class="cta"><a href="#" class="header__cta">
+			Work with us
+		</a></li>
+		</ul>
+
+</div>

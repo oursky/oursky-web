@@ -33,3 +33,12 @@ $(function() {
         });
     });
 });
+
+
+
+$('.header__mobilenav').click(function(e) {
+
+  $('.header__mobilenavbtn-x').toggleClass("active");
+  $('.mobile__nav').toggleClass("active");
+  e.preventDefault();
+ });

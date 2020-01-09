@@ -309,10 +309,10 @@ header.dark {
 
 .mobile__nav {
 	position: fixed;
-	top:0;
+	
 	left: 0;
 	width: 100%;
-	height: auto;
+	
 	padding-top: 30px;
 	z-index: 999;
 	background: #fff;
@@ -322,7 +322,8 @@ header.dark {
 	padding-right: 13px;
 	max-height: 100%;
 	overflow-y: scroll;
-	top: -100vh;
+	height: 0;
+
 	-webkit-transition-property: top, -webkit-transform;
   	transition-property: top, transform;
   	-webkit-transition-duration: 0.5s;
@@ -330,7 +331,7 @@ header.dark {
 }
 
 .mobile__nav.active {
-	top: 0vh;
+	height: 100vh;
 }
 
 .mobile__nav__list {
@@ -339,7 +340,7 @@ header.dark {
 	margin-top: 50px;
 	a {
 		display: block;
-		
+
 	}
 	ul {
 		list-style: none;

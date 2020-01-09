@@ -22,9 +22,10 @@ $(document).foundation();
 	// build scenes
 	new ScrollMagic.Scene({triggerElement: "#content"})
 					.setClassToggle(".header", "dark") // add class toggle
+          .offset(200)
 					.addTo(controller);
 
-$(function() {
+/*$(function() {
     var $el = $('.parallax-background');
     $(window).on('scroll', function () {
         var scroll = $(document).scrollTop();
@@ -32,7 +33,9 @@ $(function() {
             'background-position':'50% '+(.4*scroll)+'px'
         });
     });
-});
+
+    */
+
 
 
 

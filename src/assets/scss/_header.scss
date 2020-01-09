@@ -190,6 +190,13 @@ header.dark {
 	
 }
 
+header.black {
+	background: none;
+	div.header__logo svg {
+		fill: #fff;
+	}
+}
+
 /* -------- Animated button ---------- */
 
 .header__mobilenav {
@@ -265,8 +272,8 @@ header.dark {
 .header__mobilenavbtn-x span::after {
   -webkit-transition-duration: 0.3s, 0.3s;
   transition-duration: 0.3s, 0.3s;
-  -webkit-transition-delay: 0.3s, 0;
-  transition-delay: 0.3s, 0;
+  -webkit-transition-delay: 0s, 0;
+  transition-delay: 0s, 0;
 }
 
 .header__mobilenavbtn-x span::before {
@@ -285,7 +292,7 @@ header.dark {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #3155a5;
+  background-color: #fff;
 }
 
 .header__mobilenavbtn-x.active span::after {
@@ -293,7 +300,7 @@ header.dark {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background-color: #3155a5;
+  background-color: #fff;
 }
 
 .header__mobilenavbtn-x.active span::before,
@@ -330,14 +337,34 @@ header.dark {
 	  transition-duration:  0.5s;
 }
 
+.header__mobilecta {
+	position: fixed;
+	bottom: 0;
+	height: 60px;
+	text-align: center;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	left: 0;
+	border-top: 1px solid rgba(255,255,255,0.4);
+	padding: 10px 20px;
+	z-index: 1001;
+}
+
 .mobile__nav.active {
 	height: 100vh;
+	background:rgba(0,0,0,0.8);
+	color:#fff;
+	ul li a {color: #fff;}
+	.service__proservice__item {
+		color: #fff;
+	}
 }
 
 .mobile__nav__list {
 	list-style: none;
 	margin-left: 0;
 	margin-top: 50px;
+	padding-bottom: 70px;
 	a {
 		display: block;
 

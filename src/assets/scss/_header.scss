@@ -342,7 +342,7 @@ header.black {
 	max-height: 100%;
 	overflow-y: scroll;
 	height: 0;
-
+	top: -50px;
 	-webkit-transition-property: top, -webkit-transform;
   	transition-property: top, transform;
   	-webkit-transition-duration: 0.5s;
@@ -366,6 +366,7 @@ header.black {
 	height: 100vh;
 	background:rgba(0,0,0,0.8);
 	color:#fff;
+	top:0;
 	ul li a {color: #fff;}
 	.service__proservice__item {
 		color: #fff;

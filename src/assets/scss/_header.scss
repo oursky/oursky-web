@@ -190,8 +190,20 @@ header.dark {
 	
 }
 
+header.black.dark {
+	background: none;
+	padding-top: 8px;
+
+	div.header__logo svg {
+		fill: #fff;
+	}
+}
+
+
 header.black {
 	background: none;
+	padding-top: 8px;
+	
 	div.header__logo svg {
 		fill: #fff;
 	}

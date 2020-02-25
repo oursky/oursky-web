@@ -164,6 +164,8 @@
 		}
 	}
 
+
+
 }
 
 div.header {
@@ -178,6 +180,32 @@ div.header {
 	
 }
 
+header.header--home {
+		.header__logo {
+			svg {
+				fill: #fff;
+			}
+		}
+
+		nav li a {
+			color: #fff;
+			&:hover {
+				color: #fff;
+				opacity: 0.8;
+			}
+		}
+
+		nav li ul a {
+			color: #263043;
+			&:hover {
+				color: #123fae;
+				opacity: 1;
+			}
+		}
+	}
+
+
+
 header.dark {
 	.header__logo {
 		padding-top: 8px;
@@ -189,6 +217,8 @@ header.dark {
 	}
 	
 }
+
+
 
 header.black.dark {
 	background: none;
@@ -208,6 +238,8 @@ header.black {
 		fill: #fff;
 	}
 }
+
+
 
 /* -------- Animated button ---------- */
 

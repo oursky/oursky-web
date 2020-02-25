@@ -6,21 +6,62 @@
 		padding-bottom: 5px;
 	}
 
+	.header--home {
+		background: none;
+	}
+
+	.header__mobilenavbtn span,
+	.header__mobilenavbtn span::before,
+	.header__mobilenavbtn span::after {
+		background: #fff;
+	}
+
 	.header.dark {
 		padding-bottom: 5px;
+
+		.header__mobilenavbtn span,
+		.header__mobilenavbtn span::before,
+		.header__mobilenavbtn span::after {
+			background-color: rgba(49, 85, 165, 1);
+		}
+
+		.header__mobilenavbtn-x.active span {
+			background: none;
+		}
+
+		.header__mobilenavbtn-x.active span::before,
+		.header__mobilenavbtn-x.active span::after {
+			background: #fff;
+		}
+
+	}
+
+	#stripesBG {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left:0;
+		z-index:0;
 	}
 
 	.landing {
 
 		&__hero {
-			.hero__art {
-				margin-top: 50px;
-			}
+			
+
+			height: 80vh;
 		}
 
 		&__tag {
 			font-size: 42px;
 			line-height: 48px;
+
+		}
+
+		&__tagwrap {
+			top: 50%;
+			transform: translateY(-50%);
 		}
 
 		&__btn{
@@ -39,17 +80,39 @@
 		}
 
 		&__cards {
-			background-color: #123fae;
+			background-color: $color-white;
+
 		}
 
 		&__about {
 			padding-top: 20px;
+			padding-bottom: 50px;
+			
+			text-align: center;
 
 			h4.text--medium {
 				font-size: 20px;
 				line-height: 24px;
 			}
+
+			.hero__art__container {
+				width: 100%;
+				position: relative;
+				height: 280px;
+			}
+
+			.hero__art {
+				margin-top: 50px;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left:50%;
+				transform: scale(0.6) translateX(-50%);
+				transform-origin: 0 0;
+			}
 		}
+
+
 
 		&__wwd {
 			padding-top: 10px;

@@ -1,4 +1,23 @@
+
+.ipx_safearea {
+	padding-right:  env(safe-area-inset-right);
+	padding-left:  env(safe-area-inset-left);
+}
+
+@include breakpoint(medium only) {
+
+	.header__mobilenavbtn span,
+	.header__mobilenavbtn span::before,
+	.header__mobilenavbtn span::after {
+		background: #fff;
+	}
+
+}
+
+
 @include breakpoint(small only) {
+
+	
 
 	.header {
 		background: rgba(255,255,255,0.5);
@@ -60,7 +79,7 @@
 		}
 
 		&__tagwrap {
-			top: 50%;
+			top: calc(50% - 45px);
 			transform: translateY(-50%);
 		}
 

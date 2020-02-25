@@ -50,13 +50,13 @@
 		&__hero {
 			
 
-			height: 80vh;
+			height: 100vh;
 		}
 
 		&__tag {
 			font-size: 42px;
 			line-height: 48px;
-
+			text-align: center;
 		}
 
 		&__tagwrap {
@@ -116,11 +116,12 @@
 
 		&__wwd {
 			padding-top: 10px;
+			text-align: center;
 			&__content {
 				padding-top: 120px;
 				padding-bottom: 120px;
 				p {
-					line-height: 18px;
+					line-height: 24px;
 				}
 			}
 		}

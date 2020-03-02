@@ -89,6 +89,10 @@
           stroke-dashoffset: 900;
         }
       }
+
+      @media (max-width: 768px) {
+        margin-right: 12px;
+      }
     }
   }
   &__use-case {

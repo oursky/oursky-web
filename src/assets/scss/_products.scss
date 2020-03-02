@@ -8,6 +8,11 @@
   }
   &__feature {
     padding: 60px 0;
+    margin-bottom: -24px;
+
+    div .cell {
+      margin-bottom: 24px;
+    }
   }
   &__why {
     background: $color-darkgrey;
@@ -20,6 +25,10 @@
 
     h5 {
       margin: 0;
+    }
+
+    &__separator {
+      height: 16px;
     }
 
     svg {

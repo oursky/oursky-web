@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-@import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import "settings";
+@import "foundation";
+@import "motion-ui";
 
 // Global styles
 @include foundation-global-styles;
@@ -63,17 +63,18 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'typo';
-@import 'utility';
-@import 'header';
-@import 'landing';
-@import 'projectsblock';
-@import 'scrollindicator';
-@import 'cta';
-@import 'footer';
-@import 'aos';
-@import 'services';
-@import 'cases';
-@import 'page';
-@import 'components/pagetitle';
-@import 'mobile/mobile';
+@import "typo";
+@import "utility";
+@import "header";
+@import "landing";
+@import "projectsblock";
+@import "scrollindicator";
+@import "cta";
+@import "footer";
+@import "aos";
+@import "services";
+@import "products";
+@import "cases";
+@import "page";
+@import "components/pagetitle";
+@import "mobile/mobile";

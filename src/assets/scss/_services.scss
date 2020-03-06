@@ -81,6 +81,10 @@
     }
   }
 
+  &__desc {
+    margin-bottom: 50px;
+  }
+
   &__icon {
     @include breakpoint(small only) {
       max-width: 100%;

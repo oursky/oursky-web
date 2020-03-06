@@ -379,7 +379,7 @@ header.black {
   	transition-property: top, transform;
   	-webkit-transition-duration: 0.5s;
 	  transition-duration:  0.5s;
-	 padding-bottom: 200px;
+
 }
 
 .header__mobilecta {
@@ -404,6 +404,7 @@ header.black {
 	.service__proservice__item {
 		color: #fff;
 	}
+	padding-bottom: 200px;
 }
 
 .mobile__nav__list {

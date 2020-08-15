@@ -126,7 +126,70 @@
 
             })();
 
+
+            var heroAnimation2 = (function() {
+
+              /*var heroAnimationEl = document.querySelector('.hero__art__blocks');
+              
+              var initscale = function() { return anime.random(.8, 1.1); };
+              var initrotate = function() { return anime.random(-120, 140); };
+              var initborderradius = function() { return [anime.random(20, 40) + 'px']; };
+              */
+              var heroAnimationTL2 = anime.timeline({
+                autoplay: false,
+                easing: 'easeOutElastic(0.3, .4)',
+                loop: false,
+                //direction: 'alternate'
+               })
+              
+              
+               .add({
+                targets: ['.landing__hf--1'],
+                duration: 3000,
+                top: -20,
+                left: 150
+              })
+                .add({
+                targets: ['.landing__hf--2'],
+                duration: 3000,
+                top: 130
+              },'-=3000')
+
+                 .add({
+                targets: ['.landing__hf--dott'],
+                duration: 3000,
+                left: -30,
+              },'-=3000')
+
+                 .add({
+                targets: ['.landing__hf--dotr'],
+                duration: 3000,
+                left: 200,
+                top: 190,
+              },'-=3000')
+
+                 .add({
+                targets: ['.landing__hf--dotb'],
+                duration: 3000,
+                left: 380,
+                top: 230,
+              },'-=3000')
+
+                 .add({
+                targets: ['.landing__hf--doty'],
+                duration: 3000,
+                left: 40,
+                top: 20,
+              },'-=3000')
+            
+              
+              return heroAnimationTL2;
+              //return ;
+
+            })();
+
            
 
             heroAnimation1.play();
+            heroAnimation2.play();
             

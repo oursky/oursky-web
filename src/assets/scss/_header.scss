@@ -49,7 +49,7 @@
 			position: absolute;
 			left: 0;
 			top: 30px;
-			width: 210px;
+			width: 270px;
 			background: #fff;
 			box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 			border-radius: 2px;
@@ -62,6 +62,12 @@
 				padding-bottom: 8px;
 				a {
 					font-weight: 300;
+					.header__dropmenu__description {
+						font-size: 11px;
+						font-weight: 300;
+						display: block;
+						padding-left: 10px;
+					}
 				}
 				&.header__dropmenu__title {
 					padding-left: 0;
@@ -87,10 +93,20 @@
 					font-size: 11px;
 				}
 			}
+			&--about,
+			&--resources {
+				@extend ul.header__dropmenu;
+				width: 220px;
 
+				li {
+					padding-left: 0;
+					padding-bottom: 2px;
+					width: 100%;
+				}
+			}
 			&--services {
 				@extend ul.header__dropmenu;
-				width: 300px;
+				width: 330px;
 
 				li {
 					padding-left: 0;
@@ -447,6 +463,8 @@ header.black {
 		}
 	}
 
+	ul.header__dropmenu--about,
+	ul.header__dropmenu--resources,
 	ul.header__dropmenu--services {
 		li { 
 			padding: 3px 0;

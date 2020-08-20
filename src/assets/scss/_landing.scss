@@ -330,6 +330,11 @@
 		}
 	}
 
+	&__wwd_p {
+		@extend .landing__wwd;
+		background-color: #fff; 
+	}
+
 	
 
 	&__skygear {

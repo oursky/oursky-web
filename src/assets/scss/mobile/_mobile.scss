@@ -42,6 +42,10 @@
 			width: 100%;
 			transform: scale(0.8);
 		}
+
+	.product-list {
+		order: 2;
+	}
 }
 
 
@@ -229,5 +233,9 @@
 				opacity: 0.4;
 			}
 		}
+	}
+
+	.product-list {
+		order: 2;
 	}
  }

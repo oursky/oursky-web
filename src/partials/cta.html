@@ -3,13 +3,22 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="cell medium-12 text-center">
-      <h2> We build award-winning digital products.</h2>
-      <h4> Oursky can help you create one. </h4>
-      <p> 
-      <a href="{{root}}enquiry" class="button button--cta">
-        Let’s talk!
-      </a>
-      </p>
+        <!-- 
+          To use customized text please add custom-cta, cta-line1 and cta-line2
+          to the top of the page as variables. 
+        -->
+        {{#if custom-cta}}
+        <h2>{{cta-line1}}</h2>
+        <h4>{{cta-line2}}</h4>
+        {{else}}
+        <h2>We build award-winning digital products.</h2>
+        <h4>Creating one? Oursky can help.</h4>
+        {{/if}}
+        <p>
+          <a href="{{root}}enquiry" class="button button--cta">
+            Let’s talk!
+          </a>
+        </p>
       </div>
 
     </div>

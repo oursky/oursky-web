@@ -150,6 +150,10 @@
       background: $color-darkgrey;
       color: #fff;
     }
+    &--pure {
+      padding: 80px 0;
+      background: $color-purewhite
+    }
     &__title {
       margin-bottom: 50px;
     }

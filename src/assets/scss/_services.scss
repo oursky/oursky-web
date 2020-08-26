@@ -149,6 +149,12 @@
       padding: 80px 0;
       background: $color-darkgrey;
       color: #fff;
+      & a {
+        color: #ff9900;
+        &:hover {
+          color: #ff9900;
+        }
+      }
     }
     &--pure {
       padding: 80px 0;

@@ -15,6 +15,10 @@ import named from 'vinyl-named';
 import uncss from 'uncss';
 import autoprefixer from 'autoprefixer';
 import purgecss from 'gulp-purgecss';
+import webp from 'gulp-webp';
+import gulpFilter from 'gulp-filter';
+import webpReplace from 'gulp-webp-replace';
+import webpCss from 'gulp-webp-css';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -33,7 +37,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
+  gulp.series(clean, images, gulp.parallel(pages, javascript, copy), sass, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -62,6 +66,7 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
+    .pipe(webpReplace.collector())
     .pipe(gulp.dest(PATHS.dist));
 }
 
@@ -86,7 +91,6 @@ function sass() {
   const postCssPlugins = [
     // Autoprefixer
     autoprefixer(),
-
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
@@ -100,6 +104,7 @@ function sass() {
     .pipe($.postcss(postCssPlugins))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(webpCss())
     .pipe(purgecss({
       content: ['src/**/*.html', 'src/**/*.js']
     }))
@@ -143,10 +148,15 @@ function javascript() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
+  var filter = gulpFilter(['**/*.png', '**/*.jpg', '**/*.jpeg'], { restore: true });
   return gulp.src('src/assets/img/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin([
-      $.imagemin.jpegtran({ progressive: true }),
-    ])))
+    // .pipe($.if(PRODUCTION, $.imagemin([
+    //   $.imagemin.jpegtran({ progressive: true }),
+    // ])))
+    .pipe(filter)
+    .pipe(webp())
+    .pipe(webpReplace())
+    .pipe(filter.restore)
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 

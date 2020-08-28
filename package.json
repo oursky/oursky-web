@@ -11,8 +11,15 @@
   "license": "MIT",
   "dependencies": {
     "foundation-sites": "^6.6.0",
+    "gulp-filter": "^6.0.0",
+    "gulp-purgecss": "^2.3.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-replace": "^1.0.2",
     "jquery": "^3.5.0",
     "motion-ui": "^2.0.3",
+    "webp-converter": "2.2.3",
     "what-input": "^5.1.2"
   },
   "devDependencies": {

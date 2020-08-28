@@ -116,7 +116,7 @@
 		top:0;
 		left: 0;
 		background: url('../img/h-mask.png') no-repeat;
-		background-size: 100%;
+		background-size: 100% !important;
 	}
 
 	&__container {
@@ -183,7 +183,7 @@
 		top:0;
 		left:0;
 		background: url("../img/hero-cd.png") center center;
-		background-size: cover;
+		background-size: cover !important;
 		background-repeat: no-repeat;
 		 -moz-transform: translate3d(0,0,0);
 	    -webkit-transform: translate3d(0,0,0);
@@ -198,7 +198,7 @@
 		top:0;
 		left:0;
 		background: url("../img/hero-ds.png") center center;
-		background-size: cover;
+		background-size: cover !important;
 		background-repeat: no-repeat;
 		 -moz-transform: translate3d(0,0,0);
 	    -webkit-transform: translate3d(0,0,0);

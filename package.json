@@ -12,6 +12,7 @@
   "dependencies": {
     "foundation-sites": "^6.6.0",
     "gulp-filter": "^6.0.0",
+    "gulp-ignore": "^3.0.0",
     "gulp-purgecss": "^2.3.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",

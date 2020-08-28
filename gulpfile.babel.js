@@ -20,6 +20,7 @@ import gulpFilter from 'gulp-filter';
 import webpReplace from 'gulp-webp-replace';
 import webpCss from 'gulp-webp-css';
 import uglify from 'gulp-uglify';
+import gulpIgnore from 'gulp-ignore';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -143,6 +144,7 @@ function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulpIgnore.exclude([ "**/*.map" ]))
     .pipe(uglify({
       toplevel: true
     }))

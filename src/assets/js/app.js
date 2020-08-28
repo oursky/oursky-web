@@ -16,14 +16,14 @@ require('foundation-sites');
 
 $(document).foundation();
 
-	// init controller
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 0}});
+// init controller
+var controller = new ScrollMagic.Controller({ globalSceneOptions: { duration: 0 } });
 
-	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#content"})
-					.setClassToggle(".header", "dark") // add class toggle
-          .offset(200)
-					.addTo(controller);
+// build scenes
+new ScrollMagic.Scene({ triggerElement: "#content" })
+  .setClassToggle(".header", "dark") // add class toggle
+  .offset(200)
+  .addTo(controller);
 
 /*$(function() {
     var $el = $('.parallax-background');
@@ -36,13 +36,28 @@ $(document).foundation();
 
     */
 
+$('#submission_successful').hide();
+$('#general-enquiry-form').submit(function (e) {
+  e.preventDefault();
+  $.ajax({
+    url: 'https://hooks.zapier.com/hooks/catch/7208/oauy7ns',
+    type: 'post',
+    data: $('#general-enquiry-form').serialize(),
+    success: function () {
+      $('#general-form').hide();
+      $('#enquiry-heading').hide();
+      $('#submission_successful').show();
+    }
+  })
+})
 
 
 
-$('.header__mobilenav').click(function(e) {
+
+$('.header__mobilenav').click(function (e) {
 
   $('.header__mobilenavbtn-x').toggleClass("active");
   $('.mobile__nav').toggleClass("active");
   $('.header').toggleClass("black");
   e.preventDefault();
- });
+});

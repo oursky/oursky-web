@@ -15,10 +15,6 @@ import named from 'vinyl-named';
 import uncss from 'uncss';
 import autoprefixer from 'autoprefixer';
 import purgecss from 'gulp-purgecss';
-import webp from 'gulp-webp';
-import gulpFilter from 'gulp-filter';
-import webpReplace from 'gulp-webp-replace';
-import webpCss from 'gulp-webp-css';
 import uglify from 'gulp-uglify';
 import gulpIgnore from 'gulp-ignore';
 
@@ -68,7 +64,6 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe(webpReplace.collector())
     .pipe(gulp.dest(PATHS.dist));
 }
 
@@ -106,7 +101,6 @@ function sass() {
     .pipe($.postcss(postCssPlugins))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(webpCss())
     .pipe(purgecss({
       content: ['src/**/*.html', 'src/**/*.js']
     }))
@@ -144,7 +138,7 @@ function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulpIgnore.exclude([ "**/*.map" ]))
+    .pipe(gulpIgnore.exclude(["**/*.map"]))
     .pipe(uglify({
       toplevel: true
     }))
@@ -154,15 +148,10 @@ function javascript() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
-  var filter = gulpFilter(['**/*.png', '**/*.jpg', '**/*.jpeg'], { restore: true });
   return gulp.src('src/assets/img/**/*')
-    // .pipe($.if(PRODUCTION, $.imagemin([
-    //   $.imagemin.jpegtran({ progressive: true }),
-    // ])))
-    .pipe(filter)
-    .pipe(webp())
-    .pipe(webpReplace())
-    .pipe(filter.restore)
+    .pipe($.if(PRODUCTION, $.imagemin([
+      $.imagemin.jpegtran({ progressive: true }),
+    ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 

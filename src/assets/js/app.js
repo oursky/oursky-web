@@ -20,9 +20,9 @@ $(document).foundation();
 var controller = new ScrollMagic.Controller({ globalSceneOptions: { duration: 0 } });
 
 // build scenes
-new ScrollMagic.Scene({ triggerElement: "#content" })
+new ScrollMagic.Scene({ triggerElement: "#landing__btn" })
   .setClassToggle(".header", "dark") // add class toggle
-  .offset(200)
+  .offset(150)
   .addTo(controller);
 
 /*$(function() {

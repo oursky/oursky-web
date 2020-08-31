@@ -55,9 +55,14 @@ $('#general-enquiry-form').submit(function (e) {
 
 
 $('.header__mobilenav').click(function (e) {
-
   $('.header__mobilenavbtn-x').toggleClass("active");
   $('.mobile__nav').toggleClass("active");
   $('.header').toggleClass("black");
   e.preventDefault();
+});
+
+$(window).resize(function (e) {
+  $('.header__mobilenavbtn-x').removeClass("active");
+  $('.mobile__nav').removeClass("active");
+  $('.header').removeClass("black");
 });

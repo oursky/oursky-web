@@ -378,7 +378,7 @@ header.black {
 
 .mobile__nav {
 	position: fixed;
-	
+	display: none;
 	left: 0;
 	width: 100%;
 	
@@ -420,6 +420,7 @@ header.black {
 	.service__proservice__item {
 		color: #fff;
 	}
+	display: block;
 }
 
 .mobile__nav__list {

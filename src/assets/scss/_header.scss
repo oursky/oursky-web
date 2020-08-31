@@ -387,8 +387,6 @@ header.black {
 	background: #fff;
 	background: rgba(255,255,255,0.7);
 	backdrop-filter: blur(10px) grayscale(100%);
-	padding-left:13px;
-	padding-right: 13px;
 	max-height: 100%;
 	overflow-y: scroll;
 	height: 0;
@@ -401,7 +399,7 @@ header.black {
 }
 
 .header__mobilecta {
-	position: fixed;
+	position: sticky;
 	bottom: 0;
 	height: 60px;
 	text-align: center;
@@ -422,14 +420,14 @@ header.black {
 	.service__proservice__item {
 		color: #fff;
 	}
-	padding-bottom: 200px;
 }
 
 .mobile__nav__list {
 	list-style: none;
-	margin-left: 0;
+	margin-left: 13px;
+	margin-right: 13px;
 	margin-top: 50px;
-	padding-bottom: 70px;
+	padding-bottom: 270px;
 	a {
 		display: block;
 

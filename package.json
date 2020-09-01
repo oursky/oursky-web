@@ -12,8 +12,8 @@
   "dependencies": {
     "foundation-sites": "^6.6.0",
     "gulp-ignore": "^3.0.0",
+    "gulp-pretty-url": "^0.1.1",
     "gulp-purgecss": "^2.3.0",
-    "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.0",
     "motion-ui": "^2.0.3",

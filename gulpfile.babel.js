@@ -17,7 +17,7 @@ import autoprefixer from 'autoprefixer';
 import purgecss from 'gulp-purgecss';
 import uglify from 'gulp-uglify';
 import gulpIgnore from 'gulp-ignore';
-import rename from 'gulp-rename';
+import prettyUrl from 'gulp-pretty-url';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -58,6 +58,7 @@ function copy() {
 // Copy page templates into finished HTML files
 function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+    .pipe($.if(PRODUCTION, prettyUrl()))
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
@@ -65,9 +66,6 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe($.if(PRODUCTION, rename({
-      extname: ""
-    })))
     .pipe(gulp.dest(PATHS.dist));
 }
 

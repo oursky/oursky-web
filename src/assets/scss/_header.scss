@@ -249,7 +249,7 @@ header.black.dark {
 
 
 header.black {
-	background: none;
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 	padding-top: 8px;
 	
 	div.header__logo svg {

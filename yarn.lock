@@ -3822,6 +3822,13 @@ gulp-postcss@^8.0.0:
     postcss-load-config "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-pretty-url@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gulp-pretty-url/-/gulp-pretty-url-0.1.1.tgz#a10d7937979698479dc2e19b730af560d85c4737"
+  integrity sha1-oQ15N5eWmEedwuGbcwr1YNhcRzc=
+  dependencies:
+    gulp-rename "^1.2.0"
+
 gulp-purgecss@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gulp-purgecss/-/gulp-purgecss-2.3.0.tgz#12446217d90483c53fc4293bfbc28cb5ce3d194e"

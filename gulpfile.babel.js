@@ -17,6 +17,7 @@ import autoprefixer from 'autoprefixer';
 import purgecss from 'gulp-purgecss';
 import uglify from 'gulp-uglify';
 import gulpIgnore from 'gulp-ignore';
+import rename from 'gulp-rename';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -64,6 +65,9 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
+    .pipe($.if(PRODUCTION, rename({
+      extname: ""
+    })))
     .pipe(gulp.dest(PATHS.dist));
 }
 

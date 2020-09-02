@@ -354,7 +354,7 @@ header.black {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .header__mobilenavbtn-x.active span::after {
@@ -362,7 +362,7 @@ header.black {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .header__mobilenavbtn-x.active span::before,

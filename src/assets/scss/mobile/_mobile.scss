@@ -50,6 +50,12 @@
 
 
 @include breakpoint(small only) {
+	#submission_successful {
+		h1 {
+			font-size: 42px;
+			line-height: 48px;
+		}
+	}
 
 	
 

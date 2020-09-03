@@ -62,15 +62,14 @@ $('.header__mobilenav').click(function (e) {
   e.preventDefault();
 });
 
-$(document).ready(function (_) {
-  var width = $(window).width();
-  $(window).resize(function (e) {
-    if (width == $(window).width()) {
-      return;
-    }
-    $('.header__mobilenavbtn-x').removeClass("active");
-    $('.mobile__nav').removeClass("active");
-    $('.header').removeClass("black");
-    $('body').removeClass('noscroll');
-  });
+$(document).ready(function () {
+  // Threshold for a mobile nav menu to show is 64em according to zurb foundation
+  if (!window.matchMedia("(max-width: 64em)").matches) {
+    $(window).resize(function (e) {
+      $('.header__mobilenavbtn-x').removeClass("active");
+      $('.mobile__nav').removeClass("active");
+      $('.header').removeClass("black");
+      $('body').removeClass('noscroll');
+    });
+  }
 })

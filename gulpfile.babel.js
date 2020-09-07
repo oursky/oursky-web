@@ -36,7 +36,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, images, gulp.parallel(pages, javascript, copy), sass, styleGuide, common));
+  gulp.series(clean, images, gulp.parallel(pages, javascript, copy), sass, styleGuide, favicon, common));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -66,6 +66,13 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
+    .pipe(gulp.dest(PATHS.dist));
+}
+
+
+// Moves the favicon to the root folder
+function favicon() {
+  return gulp.src('src/assets/favicon/favicon.ico')
     .pipe(gulp.dest(PATHS.dist));
 }
 

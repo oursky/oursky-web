@@ -14,6 +14,10 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "dist"
+  # Paths to static assets that directoy copy to root folder
+  # Becareful on override other files.
+  static:
+    - "src/static/*"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"

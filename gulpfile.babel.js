@@ -36,7 +36,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, images, gulp.parallel(pages, javascript, copy), sass, styleGuide, favicon, common));
+  gulp.series(clean, images, gulp.parallel(pages, javascript, copy, copyStatic), sass, styleGuide, favicon, common));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -53,6 +53,12 @@ function clean(done) {
 function copy() {
   return gulp.src(PATHS.assets)
     .pipe(gulp.dest(PATHS.dist + '/assets'));
+}
+
+// Copy files out of the static folder
+function copyStatic() {
+  return gulp.src(PATHS.static)
+    .pipe(gulp.dest(PATHS.dist + '/'));
 }
 
 // Copy page templates into finished HTML files

@@ -60,3 +60,26 @@ $color-black: #232323;
 		background: darken($color-orange, 20);
 	}
 }
+
+/* Animations */
+
+.animate--hint{
+  animation: animationHint ease-in-out 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes animationHint{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(10px,0px)  ;
+  }
+  93% {
+    transform:  translate(0px,0px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}

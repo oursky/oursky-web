@@ -191,5 +191,5 @@
            
 
             heroAnimation1.play();
-            heroAnimation2.play();
+            //heroAnimation2.play();
             

@@ -158,12 +158,13 @@
 
 	&__tag{
 		font-weight: 600;
-		font-size: 60px;
+		font-size: 54px;
 		display: inline-block;
-		line-height: 72px;
-		
+		line-height: 62px;
+		margin-top: 50%;
 		opacity: 1;
 		animation-fill-mode: forwards;
+		transform: translateY(-20%);
 	}
 	&__subtag{
 		
@@ -281,11 +282,14 @@
 			padding-left: 15px;
 			padding-right: 15px;
 			line-height: 18px;
-			.icon__arrow {
+
+		}
+
+		.icon__arrow {
 				margin-top: 20px;
 				display: inline-block;
+				margin-right: 30px;
 			}
-		}
 
 		
 
@@ -502,3 +506,4 @@
 		left:0;
 		z-index:0;
 	}
+

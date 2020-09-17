@@ -1,7 +1,7 @@
 .service {
   &__proservice {
     background: #fff;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
     padding: 30px;
     border-radius: 8px;
 
@@ -51,7 +51,7 @@
       }
 
       &:hover {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: #f8f8f8;
       }
     }
   }

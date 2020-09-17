@@ -33,22 +33,32 @@
 
 	.landing__tag {
 		width: 100%;
-		margin-top: 50%;
-		font-size: 48px;
-		line-height: 58px;
-		transform: translateY(-40%);
+		font-size: 42px;
+		line-height: 46px;
+		transform: translateY(0%);
+		margin-top: 20px;
+		top: 50%;
+
 	}
 
-	.landing__hf__container {
-			margin-top: 0;
-			left: -50px;
-			width: 100%;
-			width: 100%;
-			transform: scale(0.8);
-		}
+	.heroimg {
+		width: 100%;
+	}
 
 	.product-list {
 		order: 2;
+	}
+
+	.landing__about__contents h4 {
+		margin-bottom: 100px;
+	}
+
+	.landing__wwd__content {
+		text-align: center;
+	}
+
+	.service__proservice {
+		margin-top: 60px;
 	}
 }
 
@@ -108,16 +118,22 @@
 		z-index:0;
 	}
 
+	.heroimg {
+		max-width: 380px;
+	}
+
 	.landing {
 
 		
 
 		&__tag {
-			font-size: 42px;
-			line-height: 48px;
+			font-size: 36px;
+			line-height: 40px;
 			text-align: center;
 			width: 100%;
 			margin-top: 50px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 
 		&__hf__container {
@@ -133,7 +149,7 @@
 			display: block;
 			padding-bottom: 10px;
 			width: 100%;
-			padding-right: 20px;
+			
 			&__container {
 			height: auto;
 			width: 100%;

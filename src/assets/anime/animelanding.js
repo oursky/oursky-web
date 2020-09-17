@@ -126,15 +126,10 @@
 
             })();
 
-
+/*
             var heroAnimation2 = (function() {
 
-              /*var heroAnimationEl = document.querySelector('.hero__art__blocks');
-              
-              var initscale = function() { return anime.random(.8, 1.1); };
-              var initrotate = function() { return anime.random(-120, 140); };
-              var initborderradius = function() { return [anime.random(20, 40) + 'px']; };
-              */
+             
               var heroAnimationTL2 = anime.timeline({
                 autoplay: false,
                 easing: 'easeOutElastic(0.3, .4)',
@@ -189,7 +184,6 @@
             })();
 
            
-
+*/
             heroAnimation1.play();
             //heroAnimation2.play();
-            

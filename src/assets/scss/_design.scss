@@ -1,0 +1,11 @@
+.design {
+  &__section {
+    padding: 120px 0;
+    background: $color-darkgrey;
+    color: $color-white;
+  }
+
+  &__description {
+    font-weight: 400;
+  }
+}

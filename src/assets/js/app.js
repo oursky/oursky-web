@@ -47,6 +47,7 @@ $('#general-enquiry-form').submit(function (e) {
       $('#general-form').hide();
       $('#enquiry-heading').hide();
       $('#submission_successful').show();
+      ga('send', 'event', 'EnquiryForm', 'Submit')
     }
   })
 })

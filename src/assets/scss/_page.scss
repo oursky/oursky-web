@@ -1,9 +1,28 @@
 .about__section {
 	padding: 50px 0;
+
+	.about__icon {
+		max-width:180px;
+		@include breakpoint(small only) {
+			max-width:100%;
+		}
+	}
 }
 
 .about__leader {
 	margin: 50px 0;
+}
+
+.about__section__digital {
+	background-color: $color-blue;
+	color: #fff;
+	margin: 140px 0;
+	h4 {
+		margin: 10px 0 40px 0;
+	}
+	a {
+		color: $color-orange;
+	}
 }
 
 

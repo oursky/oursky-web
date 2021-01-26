@@ -62,6 +62,7 @@
     padding: 120px 0;
     background: $color-darkgrey;
     color: $color-white;
+
     &__content {
       font-family: "Red Hat Display", sans-serif;
       padding-top: 40px;
@@ -160,7 +161,12 @@
     }
     &--pure {
       padding: 80px 0;
-      background: $color-purewhite
+      background: $color-purewhite;
+      h5 {
+        font-weight: 600;
+        margin-top: 60px;
+        
+      }
     }
     &__title {
       margin-bottom: 50px;

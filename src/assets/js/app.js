@@ -40,7 +40,7 @@ $('#submission_successful').hide();
 $('#general-enquiry-form').submit(function (e) {
   e.preventDefault();
   $.ajax({
-    url: 'https://hooks.zapier.com/hooks/catch/7208/oauy7ns',
+    url: 'https://oursky.app.n8n.cloud/webhook-test/8ec65905-8f31-4c70-9ea3-9eb614f6bfb3',
     type: 'post',
     data: $('#general-enquiry-form').serialize(),
     success: function () {

@@ -1,0 +1,104 @@
+{
+  "collection": "Works",
+  "collectionId": "654ba60d6d88c15f2b6e94e3",
+  "extracted_at": "2026-04-15",
+  "total": 8,
+  "works": [
+    {
+      "id": "66d09662a0d17da6fcc71c66",
+      "slug": "cornerstone",
+      "name": "Cornerstone",
+      "order": 0,
+      "description": "Cornerstone partners with Oursky to build the future of EV charging network.",
+      "thumbnail": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67f6930ea4da66d89e2681ec_cornerstone.png",
+      "heroImage": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66d09fb24e2a8b9549c35424_Animated%20phone%20mockup%402-1512x900%20(8).png",
+      "featured": false,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "65802c0e1421eaa74fd5fd04",
+      "slug": "hl-insurance",
+      "name": "HL Insurance",
+      "order": 5,
+      "description": "HL Insurance partnered with Oursky to deliver a mobile-first digital experience to tech-savvy millennials.",
+      "thumbnail": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/659516460b07e0284df1c13d_hl-preview-phone.png",
+      "heroImage": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/659516993eefb52c0b720cb4_65802c01b29d515ac2d8e41e_HL%20Insurance-p-1600.webp",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "658029c97bc738af86516c6f",
+      "slug": "jamn-player",
+      "name": "Jamn PLAYER",
+      "order": 3,
+      "description": "We teamed up with Jamn by MiQ Limited to build the next iteration of an award-winning music app.",
+      "thumbnail": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/6595219127ede6e1108f5f48_jp-preview-phone.png",
+      "heroImage": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65802992efd477e9e9f34e8d_Jamn%20Player.webp",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "65802bc3326ad330e903c260",
+      "slug": "lavatools-carbon-lite",
+      "name": "Lavatools / Carbon Lite",
+      "order": 4,
+      "description": "Oursky worked with Lavatools in designing mobile apps that can be smoothly paired with IoT devices.",
+      "thumbnail": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65951e1ec7221bf0ed6edf6b_cb-preview-ipad.png",
+      "heroImage": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65802bb45dfc85aa91e05c94_Lavatools.webp",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "67eeddd0d8505637ff53555b",
+      "slug": "mtr-mobile",
+      "name": "MTR Mobile",
+      "order": 0,
+      "description": "Oursky collaborated with MTR to streamline their mobile app, enhancing commutes for millions through smarter design.",
+      "thumbnail": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67f67f73e089bd5b4b12d991_mtr-mobile.png",
+      "heroImage": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67eedfc1001c726d46b11411_mockup3.jpg",
+      "featured": false,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "65a11132779b3ead687f4b04",
+      "slug": "palace",
+      "name": "Palace",
+      "order": 1,
+      "description": "Oursky works collaboratively with Palace Studio for a Fitness Marketplace App.",
+      "thumbnail": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/65a1111002c8f2d7ca131e27_pl-preview-phone.png",
+      "heroImage": "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66d09af647c0fdcef8a01dee_Noisy%20Glass%20Cube%402-1512x900.png",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "65802c54a07870c109215192",
+      "slug": "swrm-greenswrm",
+      "name": "SWRM / GreenSwrm",
+      "order": 2,
+      "description": "Oursky worked with swrm (formerly Edwel Energy) to create a digital platform that promotes a sustainable lifestyle.",
+      "thumbnail": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/659513ea6bd758cb3a45b94c_swrm-preview-phone.png",
+      "heroImage": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65802c4a9bd169732357595b_SWRM.webp",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    },
+    {
+      "id": "65802c8c1ca2c616c3898122",
+      "slug": "wilson-parking",
+      "name": "Wilson Parking",
+      "order": 6,
+      "description": "We worked with Wilson Parking to complement its digital transformation initiatives by reinvigorating its mobile apps.",
+      "thumbnail": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65951119c3ce9c6556fb8afa_wilsonparking-preview-phone.png",
+      "heroImage": "https://uploads-ssl.webflow.com/654ba60def05336c1f0eb138/65802c80b9d86a471ec92cee_Wilson%20Parking.webp",
+      "featured": true,
+      "isDraft": false,
+      "isArchived": false
+    }
+  ]
+}

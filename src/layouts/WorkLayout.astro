@@ -1,0 +1,84 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  work: CollectionEntry<'works'>;
+}
+
+const { work } = Astro.props;
+const { title, description, client, industry, services, heroImage, heroImageAlt, testimonial } =
+  work.data;
+---
+
+<BaseLayout title={title} description={description} ogImage={heroImage} ogType="article">
+  <article>
+    <!-- Hero -->
+    <section class="bg-[var(--color-brand-black)] text-white py-20 px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)]">
+      <div class="max-w-[var(--max-w-content)] mx-auto">
+        <p class="text-[var(--color-brand-primary)] font-medium uppercase tracking-wider mb-4 text-sm">
+          {client} &mdash; {industry}
+        </p>
+        <h1 class="text-4xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          {title}
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl">{description}</p>
+        {
+          services.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-8">
+              {services.map((s) => (
+                <span class="bg-white/10 text-white text-sm px-3 py-1 rounded-full">{s}</span>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </section>
+
+    <!-- Hero image -->
+    {
+      heroImage && (
+        <div class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] -mt-10">
+          <img
+            src={heroImage}
+            alt={heroImageAlt ?? title}
+            class="w-full rounded-xl shadow-2xl object-cover max-h-[480px]"
+            loading="eager"
+          />
+        </div>
+      )
+    }
+
+    <!-- Body content -->
+    <div class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+      <div class="prose prose-lg max-w-none">
+        <slot />
+      </div>
+
+      <!-- Testimonial -->
+      {
+        testimonial && (
+          <blockquote class="mt-16 border-l-4 border-[var(--color-brand-primary)] pl-6 py-2">
+            <p class="text-2xl font-medium leading-relaxed text-[var(--color-brand-gray-900)]">
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <footer class="mt-4">
+              <cite class="not-italic font-semibold">{testimonial.author}</cite>
+              {testimonial.role && (
+                <span class="text-[var(--color-brand-gray-500)] ml-2">— {testimonial.role}</span>
+              )}
+            </footer>
+          </blockquote>
+        )
+      }
+    </div>
+
+    <div class="border-t border-[var(--color-brand-gray-200)] py-8 px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)]">
+      <div class="max-w-[var(--max-w-content)] mx-auto">
+        <a href="/works" class="text-[var(--color-brand-primary)] hover:underline font-medium">
+          &larr; All Works
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

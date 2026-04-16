@@ -1,0 +1,25 @@
+---
+import PillButton from '../ui/PillButton.astro';
+---
+
+<section
+  class="flex flex-row flex-wrap items-center justify-between gap-10 bg-[#f2f2f2] mt-[60px] mb-[100px] w-full text-[28px] leading-10 box-border max-md:flex-col max-md:items-start max-md:mt-8 max-md:mb-12 max-md:text-lg max-md:leading-7"
+  aria-label="Introduction"
+>
+  <img
+    src="/images/os-w-1-2.svg"
+    loading="lazy"
+    alt=""
+    aria-hidden="true"
+    class="max-w-[320px] shrink-0 max-[991px]:max-w-[200px] max-md:max-w-[140px]"
+  />
+  <p class="mb-0 flex-1">
+    <span class="font-semibold">Welcome to Oursky</span>
+    <span class="inline max-md:hidden">&nbsp;⎯⎯⎯⎯⎯&nbsp;</span>
+    <span class="hidden max-md:inline">&nbsp;⎯⎯⎯&nbsp;</span>Across Hong Kong, London, Taipei, Tokyo, and Canada, our talented and
+    close-knit team of developers, designers, and product managers is driven
+    to help you craft the unique experience with excellent user experiences
+    and cutting-edge technologies.
+  </p>
+  <PillButton href="/about" label="Meet The Team" variant="secondary" />
+</section>

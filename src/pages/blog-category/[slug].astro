@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories');
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return categories.map((cat) => {
+    const posts = allPosts
+      .filter((p) => p.data.category === cat.id)
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+    return {
+      params: { slug: cat.data.slug },
+      props: { category: cat, posts },
+    };
+  });
+}
+
+const { category, posts } = Astro.props;
+const { name, description } = category.data;
+---
+
+<BaseLayout
+  title={`${name} — Blog`}
+  description={description ?? `All blog posts in the ${name} category.`}
+>
+  <main class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+    <header class="mb-12">
+      <p class="text-sm font-semibold uppercase tracking-wider text-[var(--color-brand-primary)] mb-2">
+        Category
+      </p>
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{name}</h1>
+      {description && <p class="text-xl text-[var(--color-brand-gray-700)]">{description}</p>}
+    </header>
+
+    {
+      posts.length === 0 ? (
+        <p class="text-[var(--color-brand-gray-500)]">No posts in this category yet.</p>
+      ) : (
+        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <li>
+              <a href={`/blogs/${post.id}`} class="group block">
+                {post.data.image && (
+                  <img
+                    src={post.data.image}
+                    alt={post.data.imageAlt ?? post.data.title}
+                    class="w-full aspect-video object-cover rounded-lg mb-4 group-hover:opacity-90 transition-opacity"
+                    loading="lazy"
+                  />
+                )}
+                <h2 class="text-xl font-bold leading-snug group-hover:text-[var(--color-brand-primary)] transition-colors">
+                  {post.data.title}
+                </h2>
+                <p class="text-[var(--color-brand-gray-500)] text-sm mt-2">
+                  {post.data.pubDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <div class="mt-12">
+      <a href="/blog" class="text-[var(--color-brand-primary)] hover:underline font-medium">
+        &larr; All Posts
+      </a>
+    </div>
+  </main>
+</BaseLayout>

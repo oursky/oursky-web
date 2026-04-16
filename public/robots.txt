@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block non-canonical paths (Astro static output doesn't need these)
+Disallow: /404
+
+Sitemap: https://www.oursky.com/sitemap-index.xml

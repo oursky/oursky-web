@@ -1,0 +1,66 @@
+---
+/**
+ * ContactCtaSection — "How can we help?" two-column section.
+ *
+ * Webflow: .contact-us div inside .section__home__lastsection
+ * Visual:
+ *   Left column (dark, ~35%): "How can we help?" heading, email link, 3D wireframe grid
+ *   Right column (light, ~65%): ContactForm component
+ */
+import ContactForm from '../ui/ContactForm.astro';
+---
+
+<div class="grid [grid-template-columns:2fr_3fr] rounded-lg overflow-hidden min-h-[26rem] max-lg:grid-cols-1">
+  <!-- Banner side (left) -->
+  <div class="bg-black px-8 py-10 flex flex-col gap-3 relative overflow-hidden justify-start">
+    <h2 class="text-2xl font-black text-white m-0 relative z-10">How can we help?</h2>
+    <p class="m-0 relative z-10">
+      <a
+        href="mailto:hello@oursky.com"
+        class="text-sm text-primary-dark no-underline font-medium transition-opacity hover:opacity-75 hover:underline"
+      >
+        hello@oursky.com
+      </a>
+    </p>
+    <!-- 3D wireframe grid decoration — perspective transform requires CSS -->
+    <div class="banner-grid" aria-hidden="true"></div>
+  </div>
+
+  <!-- Form side (right) -->
+  <div class="bg-surface p-10 flex flex-col gap-5">
+    <!-- Shown only on mobile when banner is stacked above -->
+    <div class="hidden max-lg:flex flex-col gap-1">
+      <p class="font-bold text-base m-0 text-text">How can we help?</p>
+      <p class="text-sm m-0 text-text-muted">hello@oursky.com</p>
+    </div>
+    <ContactForm />
+  </div>
+</div>
+
+<style>
+  /* Perspective 3D grid — repeating-linear-gradient + perspective transform, no Tailwind equivalent */
+  .banner-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 24px,
+        rgba(255,255,255,0.06) 24px,
+        rgba(255,255,255,0.06) 25px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 24px,
+        rgba(255,255,255,0.06) 24px,
+        rgba(255,255,255,0.06) 25px
+      );
+    transform: perspective(400px) rotateX(-35deg);
+    transform-origin: bottom center;
+  }
+</style>

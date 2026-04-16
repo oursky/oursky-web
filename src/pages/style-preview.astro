@@ -1,0 +1,534 @@
+---
+/**
+ * Design System Preview — /style-preview
+ * Showcases all brand tokens, typography, and UI components.
+ * Not linked from public navigation; noindex so it stays internal.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Style Preview"
+  description="Oursky design system preview — internal reference page."
+  noindex={true}
+>
+  <div class="min-h-screen">
+
+    <header class="bg-black text-white pt-20 pb-16 px-5 lg:px-10">
+      <div class="max-w-content mx-auto">
+        <p class="text-sm font-semibold tracking-[0.1em] uppercase text-primary-dark m-0 mb-3">
+          Design System
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight m-0 mb-4">
+          Style Preview
+        </h1>
+        <p class="text-base text-white/60 m-0">
+          Brand tokens, typography, and UI components extracted from the Webflow Designer.
+          Source of truth: <code class="bg-white/10 px-1.5 py-0.5 rounded-sm text-sm">src/styles/global.css</code> — updated 2026-04-15.
+        </p>
+      </div>
+    </header>
+
+    <div class="max-w-content mx-auto px-5 lg:px-10 pt-16 pb-24">
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="colors">
+        <h2 class="text-2xl font-black mb-10 text-black">Colors</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-0 mb-4">Core brand</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] gap-4">
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-primary"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">primary</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#e29f34</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Oursky amber/gold</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-primary-dark"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">primary-dark</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#ffbb55</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Amber (dark mode / CTA)</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-secondary"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">secondary</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#ffe5c0</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Warm cream</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-ring"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">ring</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#f2c079</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Focus ring / chart</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-destructive"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">destructive</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#d5455f</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Error / danger</p>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Backgrounds &amp; surfaces</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] gap-4">
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/15 bg-bg"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">bg</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#f3f3f3</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Page background</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/15 bg-surface"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">surface</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#ffffff</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Card / panel</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-muted"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">muted</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#ececec</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-accent"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">accent</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#d9d9d9</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/15 bg-border"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">border</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#eeeeee</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/15 bg-input"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">input</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#f1f1f1</p>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Text</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] gap-4">
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-text"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">text</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#333333</p>
+            <p class="text-[0.65rem] text-text-muted m-0">Body text</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-text-muted"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">text-muted</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#726f70</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/10 bg-black"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">black</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#000000</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-black/15 bg-white"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-text m-0 break-all">white</p>
+            <p class="text-[0.7rem] font-mono text-text-muted m-0">#ffffff</p>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Dark mode palette</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] gap-4 bg-[#111] p-4 rounded-lg">
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-white/10 bg-bg-dark"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-white/70 m-0 break-all">bg-dark</p>
+            <p class="text-[0.7rem] font-mono text-white/70 m-0">#080808</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-white/10 bg-surface-dark"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-white/70 m-0 break-all">surface-dark</p>
+            <p class="text-[0.7rem] font-mono text-white/70 m-0">#1b1b1b</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-white/10 bg-footer-bg"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-white/70 m-0 break-all">footer-bg</p>
+            <p class="text-[0.7rem] font-mono text-white/70 m-0">#000000</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-white/10 bg-footer-accent"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-white/70 m-0 break-all">footer-accent</p>
+            <p class="text-[0.7rem] font-mono text-white/70 m-0">#ffbb55</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="w-full h-16 rounded-md border border-white/10 bg-footer-opensource"></div>
+            <p class="text-[0.7rem] font-bold font-mono text-white/70 m-0 break-all">footer-opensource</p>
+            <p class="text-[0.7rem] font-mono text-white/70 m-0">#cfeaff</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="typography">
+        <h2 class="text-2xl font-black mb-10 text-black">Typography</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Font — Borna Webfont (self-hosted)</h3>
+        <div class="flex flex-col gap-3 p-6 bg-surface border border-border rounded-lg">
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">400 Regular</span>
+            <span class="text-xl text-text font-normal">Build it right the First Time</span>
+          </div>
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">500 Medium</span>
+            <span class="text-xl text-text font-medium">Build it right the First Time</span>
+          </div>
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">500 Medium Italic</span>
+            <span class="text-xl text-text font-medium italic">Build it right the First Time</span>
+          </div>
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">600 SemiBold</span>
+            <span class="text-xl text-text font-semibold">Build it right the First Time</span>
+          </div>
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">700 Bold</span>
+            <span class="text-xl text-text font-bold">Build it right the First Time</span>
+          </div>
+          <div class="flex items-baseline gap-6">
+            <span class="text-[0.7rem] font-mono text-text-muted min-w-36 shrink-0">900 Black</span>
+            <span class="text-xl text-text font-black">Build it right the First Time</span>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Type scale</h3>
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-xs · 12px</span>
+            <span class="text-xs">Engineering excellence is the baseline here.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-sm · 14px · body default</span>
+            <span class="text-sm">Engineering excellence is the baseline here.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-base · 16px</span>
+            <span class="text-base">Engineering excellence is the baseline here.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-lg · 20px · nav links</span>
+            <span class="text-lg">Engineering excellence is the baseline here.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-xl · 24px</span>
+            <span class="text-xl">Engineering excellence is the baseline.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-2xl · 32px · Heading</span>
+            <span class="text-2xl font-black">Build it right.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-3xl · 48px · Section titles</span>
+            <span class="text-3xl font-semibold">Build it right.</span>
+          </div>
+          <div class="flex flex-col gap-1 pb-5 border-b border-dashed border-border">
+            <span class="text-[0.65rem] font-mono text-text-muted tracking-[0.03em]">--text-hero-primary · 5rem · Hero heading</span>
+            <span class="preview-gradient-text inline-block text-[5rem] font-medium leading-none">
+              Build it right
+            </span>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Hero gradient text</h3>
+        <div class="bg-bg rounded-lg py-16 px-8 flex flex-col items-center gap-2">
+          <p class="preview-gradient-text text-center text-[clamp(2.5rem,6vw,5rem)] font-medium leading-tight">
+            Build it right<br />the First Time
+          </p>
+          <p class="text-[2.5rem] font-normal text-center mt-5 text-text max-md:text-xl max-md:mt-4">
+            Engineering Excellence is the baseline here.
+          </p>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="spacing">
+        <h2 class="text-2xl font-black mb-10 text-black">Spacing &amp; Radii</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Layout spacing</h3>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <div class="h-8 bg-primary rounded-sm shrink-0 w-5"></div>
+            <span class="text-sm font-mono text-text-muted">--spacing-page-x · 1.25rem (20px) mobile</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="h-8 bg-primary rounded-sm shrink-0 w-10"></div>
+            <span class="text-sm font-mono text-text-muted">--spacing-page-x-lg · 2.5rem (40px) desktop</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="h-[4.25rem] w-[4.25rem] bg-primary rounded-none shrink-0"></div>
+            <span class="text-sm font-mono text-text-muted">--nav-height · 4.25rem (68px)</span>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Border radii</h3>
+        <div class="flex gap-8 flex-wrap items-end">
+          <div class="flex flex-col items-center gap-3 text-[0.7rem] font-mono text-text-muted text-center">
+            <div class="w-20 h-20 bg-primary rounded-sm"></div>
+            <span>--radius-sm<br/>6px</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-[0.7rem] font-mono text-text-muted text-center">
+            <div class="w-20 h-20 bg-primary rounded-md"></div>
+            <span>--radius-md<br/>12px</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-[0.7rem] font-mono text-text-muted text-center">
+            <div class="w-20 h-20 bg-primary rounded-lg"></div>
+            <span>--radius-lg<br/>24px · cards</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-[0.7rem] font-mono text-text-muted text-center">
+            <div class="w-20 h-20 bg-primary rounded-xl"></div>
+            <span>--radius-xl<br/>48px · hero</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-[0.7rem] font-mono text-text-muted text-center">
+            <div class="w-20 h-20 bg-primary rounded-full"></div>
+            <span>--radius-full<br/>9999px · pills</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="buttons">
+        <h2 class="text-2xl font-black mb-10 text-black">Buttons</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Primary (nav CTA)</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <a href="#" class="inline-flex items-center justify-center h-[4.25rem] px-[3.125rem] py-4 rounded-full bg-primary-dark text-black text-lg font-semibold no-underline whitespace-nowrap border-0 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_16px_rgba(226,159,52,0.4)]">Contact</a>
+          <a href="#" class="inline-flex items-center justify-center h-[4.25rem] px-[3.125rem] py-4 rounded-full bg-primary-dark text-black text-lg font-semibold no-underline whitespace-nowrap border-0 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_16px_rgba(226,159,52,0.4)]">Get in Touch</a>
+          <a href="#" class="inline-flex items-center justify-center h-12 px-8 py-3 rounded-full bg-primary-dark text-black text-base font-semibold no-underline whitespace-nowrap border-0 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_16px_rgba(226,159,52,0.4)]">View Work</a>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Secondary / ghost</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <a href="#" class="inline-flex items-center justify-center h-[4.25rem] px-8 py-4 rounded-full border-[1.5px] border-text text-text text-lg font-medium no-underline bg-transparent cursor-pointer transition-colors hover:bg-text hover:text-surface">Learn More</a>
+          <a href="#" class="inline-flex items-center text-base font-medium text-text no-underline border-0 bg-transparent cursor-pointer py-2 px-0 hover:opacity-60 transition-opacity">Read Blog →</a>
+          <a href="#" class="inline-flex items-center bg-white/18 px-6 py-3 rounded-full text-white border border-white/25 text-base font-medium no-underline hover:bg-white/30 transition-colors">Open Source ⭐</a>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Dark background variants</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-[#111] rounded-lg relative z-[1]">
+          <a href="#" class="inline-flex items-center justify-center h-[4.25rem] px-[3.125rem] py-4 rounded-full bg-[#ffbb55] text-black text-lg font-semibold no-underline whitespace-nowrap border-0 cursor-pointer shadow-[0_0_0_2px_rgba(255,187,85,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_16px_rgba(226,159,52,0.4)]">Contact</a>
+          <a href="#" class="inline-flex items-center justify-center h-[4.25rem] px-8 py-4 rounded-full border-[1.5px] border-white/85 text-white text-lg font-medium no-underline bg-transparent cursor-pointer transition-colors hover:bg-white/15">Learn More</a>
+          <a href="#" class="inline-flex items-center bg-white/18 px-6 py-3 rounded-full text-white border border-white/25 text-base font-medium no-underline hover:bg-white/30 transition-colors">View Work →</a>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Nav active pill</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <span class="inline-flex items-center py-2 px-3 rounded-full text-lg font-medium text-black cursor-default">Home</span>
+          <span class="preview-nav-active inline-flex items-center py-2 px-3 rounded-full text-lg font-medium text-white cursor-default">Works</span>
+          <span class="inline-flex items-center py-2 px-3 rounded-full text-lg font-medium text-black cursor-default">Blog</span>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="cards">
+        <h2 class="text-2xl font-black mb-10 text-black">Cards</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Blog card</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(18rem,1fr))] gap-6">
+          <article class="group bg-surface rounded-lg overflow-hidden transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
+            <div class="aspect-video w-full bg-gradient-to-br from-muted to-accent flex items-center justify-center text-sm text-text-muted">
+              <span>Image</span>
+            </div>
+            <div class="p-6 flex flex-col gap-2">
+              <span class="text-sm font-semibold uppercase tracking-wide text-primary">Machine Learning &amp; AI</span>
+              <h3 class="text-base font-bold leading-snug m-0 text-text">The New Era of E2E Test Automation: Faster, Cheaper, and More Accessible</h3>
+              <p class="text-sm text-text-muted m-0">April 15, 2026</p>
+            </div>
+          </article>
+          <article class="group bg-surface rounded-lg overflow-hidden transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
+            <div class="aspect-video w-full bg-gradient-to-br from-[#d9eeff] to-[#b3d4ff] flex items-center justify-center text-sm text-text-muted">
+              <span>Image</span>
+            </div>
+            <div class="p-6 flex flex-col gap-2">
+              <span class="text-sm font-semibold uppercase tracking-wide text-primary">Engineering</span>
+              <h3 class="text-base font-bold leading-snug m-0 text-text">I don't care what tools a developer uses. I hire based on fundamentals.</h3>
+              <p class="text-sm text-text-muted m-0">March 4, 2026</p>
+            </div>
+          </article>
+          <article class="group bg-surface rounded-lg overflow-hidden transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
+            <div class="w-full aspect-video bg-gradient-to-br from-[#ffecd2] to-[#fcb69f] flex items-center justify-center rounded-md text-sm text-text-muted m-3 mb-0 w-[calc(100%-1.5rem)]">
+              <span>Image</span>
+            </div>
+            <div class="p-6 flex flex-col gap-2">
+              <span class="text-sm font-semibold uppercase tracking-wide text-primary">Product Growth</span>
+              <h3 class="text-base font-bold leading-snug m-0 text-text">5 Questions to Ask Agencies Before Outsourcing Software Development</h3>
+              <p class="text-sm text-text-muted m-0">February 18, 2026</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Works / case study card</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(22rem,1fr))] gap-6">
+          <article class="group bg-surface rounded-lg overflow-hidden transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+            <div class="w-full aspect-[4/3] bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] flex items-center justify-center text-white/40 text-sm">
+              <span>Thumbnail</span>
+            </div>
+            <div class="p-6 flex flex-col gap-3">
+              <h3 class="text-xl font-bold m-0 text-text">MTR Mobile</h3>
+              <p class="text-sm text-text-muted leading-normal m-0">Redesigning the mobile experience for Hong Kong's mass transit railway system.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">Mobile Development</span>
+                <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">UI / UX Design</span>
+              </div>
+            </div>
+          </article>
+          <article class="group bg-surface rounded-lg overflow-hidden transition-all cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+            <div class="w-full aspect-[4/3] bg-gradient-to-br from-[#0a0a1a] via-[#1a1a3e] to-[#2a2a6e] flex items-center justify-center text-white/40 text-sm">
+              <span>Thumbnail</span>
+            </div>
+            <div class="p-6 flex flex-col gap-3">
+              <h3 class="text-xl font-bold m-0 text-text">Wilson Parking</h3>
+              <p class="text-sm text-text-muted leading-normal m-0">A smart parking app serving millions of commuters across Australia and Asia.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">iOS / Android</span>
+                <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">Backend</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Testimonial card</h3>
+        <div class="bg-black text-white rounded-lg p-10 flex flex-col gap-6 max-w-3xl">
+          <blockquote class="text-lg font-normal leading-relaxed m-0 italic text-white/90">
+            "Simply the best dev shop I have worked with. No need to fly to Silicon Valley,
+            when SV knowledge &amp; approach is right here in Oursky."
+          </blockquote>
+          <cite class="flex flex-col gap-1 not-italic">
+            <span class="font-semibold text-primary-dark">Hugh Bell</span>
+            <span class="text-sm text-white/50">Founder, Cococolors</span>
+          </cite>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="badges">
+        <h2 class="text-2xl font-black mb-10 text-black">Badges &amp; Pills</h2>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Category badges</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">Engineering</span>
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">Machine Learning &amp; AI</span>
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">Product Management</span>
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">UI Design</span>
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">Culture</span>
+          <span class="inline-flex items-center py-1.5 px-3.5 rounded-full bg-muted text-text text-sm font-medium">Open Source</span>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Service tags</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">Mobile Development</span>
+          <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">UI / UX Design</span>
+          <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">AI</span>
+          <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">Backend</span>
+          <span class="inline-flex items-center py-1 px-3 rounded-full border border-border text-text-muted text-xs font-medium">iOS / Android</span>
+        </div>
+
+        <h3 class="text-sm font-semibold tracking-[0.08em] uppercase text-text-muted mt-8 mb-4">Section eyebrow (amber)</h3>
+        <div class="flex items-center gap-4 flex-wrap p-6 bg-bg rounded-lg">
+          <span class="inline-block py-1.5 px-4 rounded-full bg-secondary text-secondary-fg text-sm font-bold tracking-wide">Our Works</span>
+          <span class="inline-block py-1.5 px-4 rounded-full bg-secondary text-secondary-fg text-sm font-bold tracking-wide">Blog</span>
+          <span class="inline-block py-1.5 px-4 rounded-full bg-secondary text-secondary-fg text-sm font-bold tracking-wide">Products</span>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="forms">
+        <h2 class="text-2xl font-black mb-10 text-black">Form Elements</h2>
+
+        <div class="flex flex-col gap-5 max-w-md p-8 bg-surface rounded-lg border border-border">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-text" for="demo-name">Name</label>
+            <input
+              class="w-full px-4 py-3 bg-input border border-border rounded-md text-sm text-text outline-none transition-colors focus:border-ring focus:shadow-[0_0_0_3px_rgba(242,192,121,0.3)]"
+              id="demo-name"
+              type="text"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-text" for="demo-email">Email</label>
+            <input
+              class="w-full px-4 py-3 bg-input border border-border rounded-md text-sm text-text outline-none transition-colors focus:border-ring focus:shadow-[0_0_0_3px_rgba(242,192,121,0.3)]"
+              id="demo-email"
+              type="email"
+              placeholder="hello@yourcompany.com"
+            />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-text" for="demo-message">Message</label>
+            <textarea
+              class="w-full px-4 py-3 bg-input border border-border rounded-md text-sm text-text outline-none transition-colors focus:border-ring focus:shadow-[0_0_0_3px_rgba(242,192,121,0.3)] resize-y min-h-28"
+              id="demo-message"
+              rows="4"
+              placeholder="Tell us about your project…"
+            ></textarea>
+          </div>
+          <button
+            type="button"
+            class="inline-flex items-center justify-center h-[4.25rem] px-[3.125rem] py-4 rounded-full bg-primary-dark text-black text-lg font-semibold no-underline whitespace-nowrap border-0 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_16px_rgba(226,159,52,0.4)] self-start"
+          >
+            Send Message
+          </button>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="prose">
+        <h2 class="text-2xl font-black mb-10 text-black">Prose (Blog / MDX)</h2>
+        <div class="max-w-2xl p-8 bg-surface rounded-lg border border-border">
+          <h1 class="text-2xl font-black mb-2 leading-tight">Heading Level 1</h1>
+          <h2 class="text-xl font-bold mt-6 mb-2 leading-snug">Heading Level 2</h2>
+          <h3 class="text-base font-bold mt-5 mb-1.5">Heading Level 3</h3>
+          <p class="text-sm leading-[1.7] mb-4">
+            Body text at <strong>14px / 20px line-height</strong> (Webflow default). Borna Webfont
+            brings a distinctive geometric quality to both body and display text. Links are styled
+            in the <a class="text-primary underline" href="#">primary amber</a> colour with underline.
+          </p>
+          <ul class="pl-6 mb-4 list-disc">
+            <li class="text-sm leading-[1.7]">Engineering excellence is the baseline</li>
+            <li class="text-sm leading-[1.7]">Developer-led, product-focused</li>
+            <li class="text-sm leading-[1.7]">Built for longevity, not just speed</li>
+          </ul>
+          <blockquote class="border-l-[3px] border-primary pl-4 my-4 italic text-text-muted">
+            "We build digital products that users love — from conception to launch."
+          </blockquote>
+          <pre class="bg-bg rounded-md p-4 overflow-x-auto text-sm mt-4 mb-0"><code class="font-mono">{'const oursky = { mission: \'Build it right the First Time\' };'}</code></pre>
+        </div>
+      </section>
+
+      <section class="mb-20 pb-16 border-b border-border last:border-b-0 last:mb-0" id="nav-demo">
+        <h2 class="text-2xl font-black mb-10 text-black">Nav Pill (isolated)</h2>
+        <p class="-mt-6 mb-8 text-sm text-text-muted">The nav uses three separate pill elements on desktop: logo, links, contact.</p>
+
+        <div class="flex items-center gap-2 p-6 bg-bg rounded-lg flex-wrap">
+          <div class="backdrop-blur-[7px] bg-white/90 border border-border rounded-full h-[4.25rem] flex items-center justify-center px-3 w-[7.75rem] transition-transform hover:scale-105">
+            <img src="/images/oursky-logo.svg" alt="Oursky" height="28" class="block" />
+          </div>
+          <div class="backdrop-blur-[7px] bg-white/90 border border-border rounded-full h-[4.25rem] flex items-center gap-1 p-3 transition-transform">
+            <span class="preview-nav-active px-3 text-lg font-medium text-white rounded-full h-full flex items-center cursor-default whitespace-nowrap">Home</span>
+            <span class="px-3 text-lg font-medium text-black rounded-full h-full flex items-center cursor-default whitespace-nowrap">About</span>
+            <span class="px-3 text-lg font-medium text-black rounded-full h-full flex items-center cursor-default whitespace-nowrap">Services</span>
+            <span class="px-3 text-lg font-medium text-black rounded-full h-full flex items-center cursor-default whitespace-nowrap">Blog</span>
+            <span class="px-3 text-lg font-medium text-black rounded-full h-full flex items-center cursor-default whitespace-nowrap">Works</span>
+          </div>
+          <div class="h-[4.25rem] px-[3.125rem] py-4 rounded-full bg-primary-dark text-lg font-semibold text-black flex items-center cursor-default border border-transparent">
+            Contact
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Hero gradient text — requires background-clip on variable gradient */
+  .preview-gradient-text {
+    background-image: var(--gradient-hero-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Nav active pill — radial gradient + inset shadow */
+  .preview-nav-active {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: radial-gradient(circle, #0b40ffc4, #0022ffc9);
+    box-shadow:
+      inset 0 0 3px 2px rgba(255, 255, 255, 0.2),
+      0 3px 14px rgba(0, 0, 0, 0.2);
+  }
+</style>

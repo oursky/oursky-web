@@ -1,0 +1,64 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, author, category, image, imageAlt } = post.data;
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={image}
+  ogType="article"
+>
+  <article class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+    <header class="mb-10">
+      <div class="mb-4">
+        <a
+          href={`/blog-category/${category}`}
+          class="text-sm font-medium uppercase tracking-wider text-[var(--color-brand-primary)] hover:underline"
+        >
+          {category}
+        </a>
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-4">{title}</h1>
+      <p class="text-[var(--color-brand-gray-500)]">
+        {formattedDate} &middot; {author}
+      </p>
+    </header>
+
+    {
+      image && (
+        <figure class="mb-10">
+          <img
+            src={image}
+            alt={imageAlt ?? title}
+            class="w-full rounded-lg object-cover"
+            loading="eager"
+          />
+        </figure>
+      )
+    }
+
+    <div class="prose prose-lg max-w-none">
+      <slot />
+    </div>
+
+    <footer class="mt-16 pt-8 border-t border-[var(--color-brand-gray-200)]">
+      <a href="/blog" class="text-[var(--color-brand-primary)] hover:underline font-medium">
+        &larr; Back to Blog
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+/**
+ * SectionBadge — small pill label for section headers.
+ *
+ * Variants:
+ *   default  — dark translucent pill (e.g. "Blog", "Services")
+ *   viewall  — ghost/muted link style (e.g. "View All →")
+ *
+ * When `href` is supplied the badge renders as an <a> tag.
+ */
+
+interface Props {
+  label: string;
+  variant?: 'default' | 'viewall';
+  href?: string;
+  external?: boolean;
+  class?: string;
+}
+
+const {
+  label,
+  variant = 'default',
+  href,
+  external = false,
+  class: extraClass,
+} = Astro.props;
+
+const externalAttrs = external
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {};
+
+const base = 'inline-flex items-center py-1.5 px-4 rounded-full text-xs font-bold tracking-[0.05em] uppercase no-underline whitespace-nowrap';
+const variantMap: Record<string, string> = {
+  default: 'bg-black/[.08] text-text',
+  viewall: 'bg-transparent text-text-muted font-medium normal-case tracking-normal transition-opacity hover:opacity-70',
+};
+
+const classes = [base, variantMap[variant], extraClass].filter(Boolean).join(' ');
+---
+
+{href ? (
+  <a href={href} class={`${classes} hover:opacity-70`} {...externalAttrs}>{label}</a>
+) : (
+  <span class={classes}>{label}</span>
+)}

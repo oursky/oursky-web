@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+/*
+  Oursky brand design tokens
+  Sourced from: Webflow published CSS (oursky-com-2023.webflow.shared.*.min.css)
+  Extracted: 2026-04-15 — Phase 2 of Webflow → Astro migration
+  Run Webflow Designer style_tool to verify/refine if tokens drift.
+*/
+
+/* ── Self-hosted Borna Webfont ──────────────────────── */
+@font-face {
+  font-family: "Borna";
+  src: url("/fonts/borna-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Borna";
+  src: url("/fonts/borna-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Borna";
+  src: url("/fonts/borna-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Borna";
+  src: url("/fonts/borna-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Borna";
+  src: url("/fonts/borna-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* ── Brand Colors ────────────────────────────────────
+     Source: --colors--* CSS vars in Webflow published CSS
+  ────────────────────────────────────────────────────── */
+
+  /* Core palette */
+  --color-brand-black:        #000000;
+  --color-brand-white:        #ffffff;
+
+  /* Semantic background / surface */
+  --color-bg:                 #f3f3f3;  /* --colors--background */
+  --color-bg-dark:            #080808;  /* --colors--background-dark */
+  --color-surface:            #ffffff;  /* card/panel surface */
+  --color-surface-dark:       #1b1b1b;  /* --colors--card-dark */
+
+  /* Text */
+  --color-text:               #333333;  /* --colors--foreground */
+  --color-text-dark:          #f8f8f8;  /* --colors--foreground-dark */
+  --color-text-muted:         #726f70;  /* --colors--muted-foreground */
+  --color-text-on-dark:       #ffffff;
+
+  /* Primary — Oursky amber/gold */
+  --color-primary:            #e29f34;  /* --colors--primary */
+  --color-primary-dark:       #ffbb55;  /* --colors--primary-dark (#fb5) */
+  --color-primary-fg:         #120c04;  /* --colors--primary-foreground */
+
+  /* Secondary — warm cream */
+  --color-secondary:          #ffe5c0;  /* --colors--secondary */
+  --color-secondary-fg:       #100d08;  /* --colors--secondary-foreground */
+
+  /* Muted / accent */
+  --color-muted:              #ececec;  /* --colors--muted */
+  --color-accent:             #d9d9d9;  /* --colors--accent */
+  --color-accent-fg:          #0d0d0d;  /* --colors--accent-foreground */
+
+  /* Functional */
+  --color-border:             #eeeeee;  /* --colors--border */
+  --color-input:              #f1f1f1;  /* --colors--input */
+  --color-ring:               #f2c079;  /* --colors--ring */
+  --color-destructive:        #d5455f;  /* --colors--destructive */
+
+  /* Nav-specific (from .navbar-container, .navbar__link) */
+  --color-nav-bg:             #ffffffe6;  /* frosted-glass navbar pill bg */
+  --color-nav-link:           #000000;    /* .navbar__link color */
+  --color-nav-active-from:    #0b40ffc4;  /* active pill gradient start */
+  --color-nav-active-to:      #0022ffc9;  /* active pill gradient end */
+  --color-nav-contact-from:   #fabe45ed;  /* contact CTA gradient */
+  --color-nav-contact-to:     #fcab1eb5;
+
+  /* Footer */
+  --color-footer-bg:          #000000;  /* .footer background-color */
+  --color-footer-text:        #ffffff;
+  --color-footer-accent:      #ffbb55;  /* .footer__oursky-subtitle (#fb5) */
+  --color-footer-opensource:  #cfeaff;  /* .footer__opensource__container */
+
+  /* ── Typography ──────────────────────────────────────
+     Source: font-family declarations in Webflow published CSS
+  ────────────────────────────────────────────────────── */
+  --font-sans: "Borna", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Type Scale ──────────────────────────────────────
+     Source: style_tool body/heading styles from Designer
+     Body base: 14px (Webflow default-body style)
+     Headings: 2rem–3rem; nav links: 20px
+  ────────────────────────────────────────────────────── */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px — body base (Designer: default-body) */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.25rem;    /* 20px — nav links, primary-link-text */
+  --text-xl:   1.5rem;     /* 24px */
+  --text-2xl:  2rem;       /* 32px — Heading / Heading 2 (font-size: 2rem) */
+  --text-3xl:  3rem;       /* 48px — page-title-heading, section titles */
+  --text-4xl:  3.25rem;    /* 52px — hero */
+
+  /* Font weights (confirmed via style_tool) */
+  --font-weight-body:    400;
+  --font-weight-medium:  500;   /* navbar__link */
+  --font-weight-semibold: 600;  /* primary-link-text, page-title-heading */
+  --font-weight-heading: 900;   /* Heading, Heading 2 (Designer style) */
+
+  /* ── Spacing / Layout ────────────────────────────────
+     Source: padding/margin values in Webflow CSS
+  ────────────────────────────────────────────────────── */
+  --spacing-page-x:     1.25rem;   /* mobile: 20px (from .header padding) */
+  --spacing-page-x-lg:  2.5rem;    /* desktop: 40px (from .footer padding) */
+  --max-w-content:      78.75rem;  /* 1260px (from .header-container max-width) */
+
+  /* Nav pill dimensions (from .navbar-container, .header__icon) */
+  --nav-height:         4.25rem;   /* 68px */
+  --nav-radius:         6.25rem;   /* 100px pill */
+  --nav-blur:           7px;
+
+  /* Border radius tokens (confirmed via Designer) */
+  --radius-sm:    0.375rem;   /* 6px */
+  --radius-md:    0.75rem;    /* 12px — blog-card__thumbnail */
+  --radius-lg:    1.5rem;     /* 24px — card/footer/people-card */
+  --radius-xl:    3rem;       /* 48px — hero-banner-static */
+  --radius-full:  9999px;     /* pill */
+
+  /* ── Hero / Page gradients ───────────────────────────
+     Source: hero-banner__caption__primary (style_tool)
+  ────────────────────────────────────────────────────── */
+
+  /* Hero heading gradient — the blue gradient text on Home page */
+  --gradient-hero-text: linear-gradient(
+    128deg,
+    hsla(187, 51%, 46%, 1) 0%,
+    hsla(230, 100%, 54%, 1) 38%,
+    hsla(213, 77%, 47%, 1) 64%,
+    hsla(202, 100%, 50%, 1) 97%
+  );
+
+  /* Hero type scale (Designer: hero-banner__caption__primary/secondary) */
+  --text-hero-primary:   5rem;    /* hero heading — font-size: 5rem */
+  --text-hero-secondary: 2.5rem;  /* hero subtitle — font-size: 2.5rem */
+
+  /* Hero dimensions */
+  --hero-height:     90vh;
+  --hero-min-height: 31.25rem;  /* 500px */
+}
+
+/* ── Base resets ─────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  /* Designer: default-body → background-color: #f3f3f3 */
+  background-color: var(--color-bg);
+  /* Designer: default-body → font-size: 14px, line-height: 20px */
+  font-size: var(--text-sm);
+  line-height: 1.43; /* 20px / 14px */
+}
+
+/* ── Prose (MDX content) ─────────────────────────────── */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.prose img {
+  border-radius: var(--radius-md);
+  max-width: 100%;
+}
+
+/* ── Scroll-driven section reveals (homepage, marketing pages) ──
+   Subtle fade + lift when blocks enter the viewport; respects reduced motion.
+────────────────────────────────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 1.75rem, 0);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

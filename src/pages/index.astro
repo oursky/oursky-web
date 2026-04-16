@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import HeroSection from '../components/home/HeroSection.astro';
+import IntroSection from '../components/home/IntroSection.astro';
+import WorksPreviewSection from '../components/home/WorksPreviewSection.astro';
+import ProductsSection from '../components/home/ProductsSection.astro';
+import ClientLogosSection from '../components/home/ClientLogosSection.astro';
+import TestimonialsSection from '../components/home/TestimonialsSection.astro';
+import BlogPreviewSection from '../components/home/BlogPreviewSection.astro';
+import ActionCardsSection from '../components/home/ActionCardsSection.astro';
+import ContactCtaSection from '../components/home/ContactCtaSection.astro';
+---
+
+<BaseLayout
+  title="Oursky - Build it right the First Time"
+  description="We are a developer-led software agency comprising a diverse team of experts who work with startups and enterprises to create award-winning digital experiences and fast-track digital transformation."
+  omitSiteHeader
+>
+  <!--
+    Single horizontal rail: same max-width + gutters as Webflow .content-container (1360 / 2.5rem).
+    Child sections inherit --home-rail-* for alignment with the hero video card edges.
+  -->
+  <div class="home-page">
+    <!--
+      Wraps hero + intro: light gray background, max-width 1360px, centered.
+      The hero card (border-radius 48px) fills the rail content box.
+    -->
+    <div class="home-hero-wrapper">
+      <HeroSection>
+        <Header slot="header" variant="home-hero" />
+      </HeroSection>
+      <div class="scroll-reveal w-full">
+        <IntroSection />
+      </div>
+    </div>
+
+    <!-- Full-width section backgrounds; inner rails use --home-rail-* -->
+    <div class="scroll-reveal w-full">
+      <WorksPreviewSection />
+    </div>
+    <div class="scroll-reveal w-full">
+      <ProductsSection />
+    </div>
+    <div class="scroll-reveal w-full">
+      <ClientLogosSection />
+    </div>
+    <div class="scroll-reveal w-full">
+      <TestimonialsSection />
+    </div>
+
+    <!--
+      .section__home__lastsection: light (#f7f7f7) rounded-top section containing
+      the blog scroll, action cards, and contact form.
+    -->
+    <section class="section__home__lastsection">
+      <div class="home-lower-blogscroll scroll-reveal w-full">
+        <BlogPreviewSection />
+      </div>
+
+      <div class="home-lower-content">
+        <div class="scroll-reveal w-full">
+          <ActionCardsSection />
+        </div>
+        <div class="scroll-reveal w-full">
+          <ContactCtaSection />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function initHomeScrollReveal() {
+      const nodes = document.querySelectorAll('.home-page .scroll-reveal');
+      if (!nodes.length) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        nodes.forEach((el) => el.classList.add('scroll-reveal--visible'));
+        return;
+      }
+
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add('scroll-reveal--visible');
+            observer.unobserve(entry.target);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -6% 0px', threshold: 0.06 }
+      );
+
+      nodes.forEach((el) => io.observe(el));
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initHomeScrollReveal, { once: true });
+    } else {
+      initHomeScrollReveal();
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .home-page {
+    --home-rail-max: 1360px;
+    --home-rail-gutter: 2.5rem;
+  }
+
+  @media (max-width: 767px) {
+    .home-page {
+      --home-rail-gutter: 1.25rem;
+    }
+  }
+
+  /*
+   * Hero wrapper: same horizontal rail as Works / Products / blog / lower content.
+   */
+  .home-hero-wrapper {
+    background-color: #f2f2f2; /* Webflow hero section bg — close to --color-bg but intentionally distinct */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: var(--home-rail-max);
+    margin-left: auto;
+    margin-right: auto;
+    /* Narrow grey strip above the rounded card (about one header band). */
+    padding-top: 1rem;
+    padding-left: var(--home-rail-gutter);
+    padding-right: var(--home-rail-gutter);
+    gap: 0;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  /*
+   * Last section: light gray (#f7f7f7), top-left/right border-radius 40px,
+   * stacks blog scroll + lower content column.
+   */
+  .section__home__lastsection {
+    background-color: #f7f7f7; /* Webflow last-section bg — no exact token */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* Action cards + contact: same rail as hero video card */
+  .home-lower-content {
+    width: 100%;
+    max-width: var(--home-rail-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--home-rail-gutter);
+    padding-right: var(--home-rail-gutter);
+    padding-bottom: 2rem;
+    background-color: #f7f7f7;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    /* Same step between action row → contact → space before footer (incl. open-source block below) */
+    gap: 2rem;
+    box-sizing: border-box;
+  }
+
+  /* Blog block: same max width as hero; horizontal gutters in BlogPreviewSection. */
+  .home-lower-blogscroll {
+    width: 100%;
+    max-width: var(--home-rail-max);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  /* ~40px grey strip above hero card on large screens (ref live home / DOM top rhythm) */
+  @media (min-width: 1024px) {
+    .home-hero-wrapper {
+      padding-top: 2.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .home-hero-wrapper {
+      padding-top: 0.75rem;
+    }
+    .home-lower-content {
+      padding-bottom: 1.5rem;
+      gap: 1.5rem;
+    }
+  }
+</style>

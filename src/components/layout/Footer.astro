@@ -1,0 +1,158 @@
+---
+/**
+ * Footer — matches live oursky.com design.
+ *
+ * Structure:
+ * 1. Dark footer card: OURSKY logo + "We are hiring!" on left, two live clocks on right
+ * 2. Light-blue "We 😻 Open Source!" bar
+ * 3. Copyright
+ */
+
+const currentYear = new Date().getFullYear();
+
+const clockSvgPaths = `
+  <path d="M54.5098 0H48.7708L51.5862 4.40147L54.5098 0Z" fill="#D9D9D9"/>
+  <path d="M54.5098 102.017H48.7708L51.5862 97.6151L54.5098 102.017Z" fill="#D9D9D9"/>
+  <path d="M28.621 5.39904L23.6509 8.26855L28.2899 10.6726L28.621 5.39904Z" fill="#D9D9D9"/>
+  <path d="M79.6293 93.7482L74.6592 96.6177L74.8967 91.3982L79.6293 93.7482Z" fill="#D9D9D9"/>
+  <path d="M102.648 53.8777L102.648 48.1387L98.247 50.9541L102.648 53.8777Z" fill="#D9D9D9"/>
+  <path d="M0.631836 53.8777L0.631836 48.1387L5.03331 50.9541L0.631836 53.8777Z" fill="#D9D9D9"/>
+  <path d="M97.2494 27.9892L94.3799 23.019L91.9758 27.658L97.2494 27.9892Z" fill="#D9D9D9"/>
+  <path d="M8.90052 78.9975L6.03101 74.0273L11.2505 74.2649L8.90052 78.9975Z" fill="#D9D9D9"/>
+  <path d="M79.6293 8.26844L74.6592 5.39893L74.8967 10.6184L79.6293 8.26844Z" fill="#D9D9D9"/>
+  <path d="M28.621 96.6176L23.6509 93.748L28.2899 91.344L28.621 96.6176Z" fill="#D9D9D9"/>
+  <path d="M94.38 78.9975L97.2495 74.0273L92.03 74.2649L94.38 78.9975Z" fill="#D9D9D9"/>
+  <path d="M6.03088 27.9892L8.90039 23.019L11.3045 27.658L6.03088 27.9892Z" fill="#D9D9D9"/>
+  <circle cx="51.6928" cy="51.0082" r="2.86951" fill="white"/>
+  <path class="clock__hand--hour" d="M49.1198 32.6873L51.7019 51.0098L54.1075 32.6741C52.5607 30.4796 51.6389 27.2997 51.6389 27.2997C51.6389 27.2997 50.6561 30.4053 49.1198 32.6873Z" fill="white"/>
+  <path class="clock__hand--minute" d="M49.0737 16.8969L51.7007 51.0147L54.0613 16.8832C52.5143 14.6888 51.5794 6.81542 51.5794 6.81542C51.5794 6.81542 50.6098 14.6147 49.0737 16.8969Z" fill="white"/>
+`;
+---
+
+<footer class="w-full max-w-[1360px] mx-auto px-10 pb-10 box-border max-md:px-5 max-md:pb-5">
+
+  <!-- Dark card: logo + clocks -->
+  <div class="bg-black rounded-lg flex justify-between items-center px-10 py-12 pb-16 gap-8 mb-8 max-[991px]:flex-col max-[991px]:items-start max-[991px]:px-8 max-[991px]:py-10 max-md:px-6 max-md:py-8 max-md:mb-6">
+    <!-- Left: OURSKY logo + "We are hiring!" -->
+    <div class="flex flex-col gap-3 justify-between shrink-0">
+      <div class="flex items-center gap-2 pr-10">
+        <a href="/" class="inline-block no-underline" aria-label="Oursky home">
+          <img
+            src="/images/oursky-logo-footer.svg"
+            alt="Oursky"
+            width="160"
+            height="64"
+            class="w-40 block h-auto"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+          />
+          <span class="text-[1.75rem] font-black text-white tracking-[-0.02em]" style="display:none">OURSKY</span>
+        </a>
+      </div>
+      <a
+        href="https://jobs.oursky.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-[#ffbb55] text-lg font-bold leading-[2.375rem] no-underline transition-opacity hover:opacity-60"
+      >
+        We are hiring!
+      </a>
+    </div>
+
+    <!-- Right: two live clocks -->
+    <div class="flex gap-12 items-start max-[991px]:gap-8 max-md:flex-col max-md:gap-6">
+      <!-- HK clock -->
+      <div class="flex gap-8 flex-wrap items-start max-md:gap-5">
+        <div id="clock-container--hk" class="flex flex-col items-center justify-center">
+          <div class="flex justify-center items-center w-[6.3762rem] h-[6.3762rem] relative">
+            <svg class="w-full h-full" width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <Fragment set:html={clockSvgPaths} />
+            </svg>
+          </div>
+          <p class="text-white mt-3 mb-0 text-lg leading-[2.375rem] max-md:text-base">--:--</p>
+        </div>
+        <div class="flex flex-col gap-0">
+          <h3 class="text-white m-0 text-lg font-semibold leading-[2.375rem] max-md:text-base max-md:leading-[1.8rem]">Oursky</h3>
+          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Hong Kong</p>
+          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Taipei</p>
+        </div>
+      </div>
+
+      <!-- London clock -->
+      <div class="flex gap-8 flex-wrap items-start max-md:gap-5">
+        <div id="clock-container--london" class="flex flex-col items-center justify-center">
+          <div class="flex justify-center items-center w-[6.3762rem] h-[6.3762rem] relative">
+            <svg class="w-full h-full" width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <Fragment set:html={clockSvgPaths} />
+            </svg>
+          </div>
+          <p class="text-white mt-3 mb-0 text-lg leading-[2.375rem] max-md:text-base">--:--</p>
+        </div>
+        <div class="flex flex-col gap-0">
+          <h3 class="text-white m-0 text-lg font-semibold leading-[2.375rem] max-md:text-base max-md:leading-[1.8rem]">Skymakers</h3>
+          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">London</p>
+          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Manchester</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open Source bar -->
+  <div class="bg-[#cfeaff] rounded-lg px-8 py-5 flex items-center justify-between max-md:px-6 max-md:py-4">
+    <a href="/open-source" class="no-underline flex-1">
+      <span class="text-black text-lg font-bold max-md:text-base">We 😻 Open Source!</span>
+    </a>
+    <a href="/open-source" class="text-black text-lg font-bold no-underline transition-opacity hover:opacity-60 max-md:text-base" aria-hidden="true">→</a>
+  </div>
+
+  <!-- Copyright -->
+  <p class="text-center text-black/40 text-sm mt-3 mb-0">Oursky Ltd. © {currentYear}</p>
+
+</footer>
+
+<script>
+  const HKTimezone = "Asia/Hong_Kong";
+  const LondonTimezone = "Europe/London";
+  const HKClock = document.getElementById("clock-container--hk");
+  const LondonClock = document.getElementById("clock-container--london");
+
+  function setClock(clockElement: HTMLElement | null, currentDate: Date, timeZone: string) {
+    if (!clockElement) return;
+    const fmt = new Intl.DateTimeFormat('en-HK', {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+      timeZone
+    });
+    const parts = fmt.formatToParts(currentDate);
+    const map: Record<string, string> = {};
+    parts.forEach(p => map[p.type] = p.value);
+
+    const minuteHand = clockElement.querySelector<SVGPathElement>(".clock__hand--minute");
+    const hourHand = clockElement.querySelector<SVGPathElement>(".clock__hand--hour");
+    const timeDisplay = clockElement.querySelector("p");
+
+    const minutes = parseInt(map["minute"] ?? "0");
+    const hours = parseInt(map["hour"] ?? "0");
+    const dayPeriod = map["dayPeriod"] ?? "";
+
+    const minutesRatio = minutes / 60;
+    const hoursRatio = (minutesRatio + hours) / 12;
+
+    if (timeDisplay) timeDisplay.textContent = `${hours}:${String(minutes).padStart(2,'0')}${dayPeriod}`;
+    if (minuteHand) minuteHand.setAttribute("transform", `rotate(${minutesRatio * 360}, 51.6928, 51.0082)`);
+    if (hourHand) hourHand.setAttribute("transform", `rotate(${hoursRatio * 360}, 51.6928, 51.0082)`);
+  }
+
+  const now = new Date();
+  setClock(HKClock, now, HKTimezone);
+  setClock(LondonClock, now, LondonTimezone);
+
+  let lastMinute = now.getUTCMinutes();
+  setInterval(() => {
+    const d = new Date();
+    if (d.getUTCMinutes() === lastMinute) return;
+    lastMinute = d.getUTCMinutes();
+    setClock(HKClock, d, HKTimezone);
+    setClock(LondonClock, d, LondonTimezone);
+  }, 1000);
+</script>

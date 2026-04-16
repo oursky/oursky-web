@@ -1,0 +1,51 @@
+---
+const logos = [
+  { src: '/images/swire.png', srcset: '/images/swire-p-500.png 500w, /images/swire.png 1667w', alt: 'Swire' },
+  { src: '/images/mtr.png', srcset: '/images/mtr-p-500.png 500w, /images/mtr.png 1044w', alt: 'MTR' },
+  { src: '/images/welab.png', alt: 'WeLab' },
+  { src: '/images/asos.png', srcset: '/images/asos-p-500.png 500w, /images/asos.png 3428w', alt: 'ASOS' },
+  { src: '/images/axiata.png', alt: 'Axiata' },
+  { src: '/images/pp.png', alt: 'Pacific Place' },
+  { src: '/images/Socket_Mobile_Logo-1536x572.png', srcset: '/images/Socket_Mobile_Logo-1536x572-p-500.png 500w, /images/Socket_Mobile_Logo-1536x572.png 1536w', alt: 'Socket Mobile' },
+  { src: '/images/reuters.png', srcset: '/images/reuters-p-500.png 500w, /images/reuters.png 754w', alt: 'Reuters' },
+  { src: '/images/tatacommunicationslogo-1024x205.png', srcset: '/images/tatacommunicationslogo-1024x205-p-500.png 500w, /images/tatacommunicationslogo-1024x205.png 1024w', alt: 'Tata Communications' },
+  { src: '/images/hktdc.png', srcset: '/images/hktdc-p-500.png 500w, /images/hktdc.png 874w', alt: 'HKTDC' },
+  { src: '/images/milwaukee.png', srcset: '/images/milwaukee-p-500.png 500w, /images/milwaukee.png 1914w', alt: 'Milwaukee' },
+  { src: '/images/sc.png', srcset: '/images/sc-p-500.png 500w, /images/sc.png 1250w', alt: 'Standard Chartered' },
+  { src: '/images/philips.svg.png', srcset: '/images/philips.svg-p-500.png 500w, /images/philips.svg.png 1680w', alt: 'Philips' },
+  { src: '/images/likecoin.png', srcset: '/images/likecoin-p-500.png 500w, /images/likecoin.png 986w', alt: 'LikeCoin' },
+  { src: '/images/k11.png', srcset: '/images/k11-p-500.png 500w, /images/k11.png 752w', alt: 'K11' },
+  { src: '/images/wilsonparking_logo4x.png', srcset: '/images/wilsonparking_logo4x-p-500.png 500w, /images/wilsonparking_logo4x.png 768w', alt: 'Wilson Parking' },
+  { src: '/images/the-club-logo.png', srcset: '/images/the-club-logo-p-500.png 500w, /images/the-club-logo.png 506w', alt: 'The Club' },
+  { src: '/images/hkt.png', srcset: '/images/hkt-p-500.png 500w, /images/hkt.png 1547w', alt: 'HKT' },
+  { src: '/images/smartone.svg.png', srcset: '/images/smartone.svg-p-500.png 500w, /images/smartone.svg.png 2560w', alt: 'SmarTone' },
+  { src: '/images/te.png', srcset: '/images/te-p-500.png 500w, /images/te.png 675w', alt: 'TE Connectivity' },
+  { src: '/images/cornerstone.png', srcset: '/images/cornerstone-p-500.png 500w, /images/cornerstone.png 1200w', alt: 'Cornerstone' },
+  { src: '/images/hlia.png', srcset: '/images/hlia-p-500.png 500w, /images/hlia.png 836w', alt: 'HLIA' },
+];
+---
+
+<section
+  class="bg-[#181818] rounded-t-[40px] w-full min-h-[300px] -mb-[50px] py-20 overflow-hidden max-md:py-12 max-md:pb-16 max-md:rounded-t-[32px]"
+  aria-labelledby="clients-heading"
+>
+  <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-md:px-5">
+    <div class="flex flex-col justify-center items-center w-full">
+      <h2 id="clients-heading" class="text-white text-[1.8rem] font-medium leading-8 mb-4 text-center">
+        Trusted by Leading Brands
+      </h2>
+      <div class="grid grid-cols-4 gap-[60px] place-items-center w-full mt-12 mb-12 max-md:grid-cols-2 max-md:gap-8">
+        {logos.map(logo => (
+          <img
+            src={logo.src}
+            srcset={logo.srcset}
+            sizes="(max-width: 991px) 50vw, 25vw"
+            alt={logo.alt}
+            loading="lazy"
+            class="object-contain w-full max-h-20 py-2.5 brightness-0 invert opacity-75 max-md:max-h-[50px]"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

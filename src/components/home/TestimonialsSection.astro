@@ -1,0 +1,99 @@
+---
+const testimonials = [
+  {
+    avatar: '/images/1616016767594.jpeg',
+    avatarAlt: 'Chris Toy',
+    quote: '"We worked with Oursky on multiple MVPs of our idea and and iterated product through our multi-million venture capital raise. Great job in handling backend refactoring and scalability. Seamless communication (we\'re in SF). Making HK proud."',
+    footer: 'Chris Toy, Founder of Bindle and MarketerHire',
+    link: 'https://www.linkedin.com/in/christoy',
+    linkText: 'Chris Toy',
+  },
+  {
+    avatar: '/images/club-app-icon-round-corner.png',
+    avatarAlt: 'Joel Tse',
+    quote: '"I partnered with Oursky for our mobile app development and were impressed by their high-quality delivery. Their team provided expert advice and was highly responsible, consistently meeting deadlines with clear communication. I highly recommend Oursky for their professionalism and commitment to client satisfaction."',
+    footer: 'Joel Tse, Senior Product Manager, Club HKT',
+    link: 'https://hk.linkedin.com/in/joel-tse-hk',
+    linkText: 'Joel Tse',
+  },
+  {
+    avatar: '/images/hugh-bell.webp',
+    avatarAlt: 'Hugh Bell',
+    quote: '"Simply the best dev shop I have worked with.  No need to fly to Silicon Valley, when SV knowledge & approach is right here in Oursky"',
+    footer: 'Hugh Bell, Founder of Cococolors',
+    link: 'https://www.linkedin.com/in/christoy',
+    linkText: 'Hugh Bell, Founder of Cococolors',
+  },
+  {
+    avatar: '/images/Becky-Pate.webp',
+    avatarAlt: 'Becky Pate',
+    quote: '"Oursky has been great to work with. They provided accurate estimates on the work required and always delivered on time despite the time difference and location. The cross-team communication was always effective. Their organized approach to the product development and on-hand support when issues arose were brilliant and I\'d definitely recommend and work with them again."',
+    footer: 'Becky Pate, Senior Product Manager, ASOS',
+    link: 'https://www.linkedin.com/in/christoy',
+    linkText: 'Becky Pate, Senior Product Manager, ASOS',
+  },
+  {
+    avatar: '/images/PhoebePoon.JPG',
+    avatarAlt: 'Phoebe Poon',
+    quote: '"I had the pleasure of working with Oursky. Oursky\'s team provided valuable insights and recommendations for our blockchain module, and their expertise was evident in the high-quality work they delivered. They went above and beyond to ensure our project\'s success."',
+    footer: 'Phoebe Poon, Co-founder & CEO of Liker Land',
+    link: 'https://www.linkedin.com/in/christoy',
+    linkText: 'Phoebe Poon, Co-founder & CEO of Liker Land',
+  },
+];
+---
+
+<section class="flex flex-col justify-center items-start w-full overflow-hidden" aria-label="Testimonials">
+  <div class="w-full mt-[120px] mb-[60px] pt-[60px] relative block max-[991px]:mt-12 max-[991px]:pt-8">
+    <!-- Complex symmetric padding uses CSS (max/calc combo can't be expressed in Tailwind) -->
+    <ul class="swiper-test flex justify-start items-stretch overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] list-none m-0 gap-0" role="list">
+      {testimonials.map(t => (
+        <li class="snap-start shrink-0 w-80 min-w-80 max-w-80 px-2 box-border max-[991px]:w-[280px] max-[991px]:min-w-[280px]" role="listitem">
+          <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+            <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
+              <img
+                src={t.avatar}
+                alt={t.avatarAlt}
+                loading="lazy"
+                class="rounded-full w-full h-full object-cover block"
+              />
+            </div>
+            <div class="flex flex-col flex-1">
+              <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-[1.4rem] flex-1">
+                {t.quote}
+              </blockquote>
+              <p class="mt-9 mb-0 text-[0.8rem] font-black leading-[1.2rem]">
+                <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
+                  {t.linkText}
+                </a>
+                {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
+              </p>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  /* Complex max/calc padding can't be expressed in Tailwind */
+  .swiper-test {
+    padding-left: max(calc((100vw - 1360px) / 2), 2.5rem);
+    padding-right: max(calc((100vw - 1360px) / 2), 2.5rem);
+    scroll-padding: max(calc((100vw - 1360px) / 2), 2.5rem);
+  }
+
+  /* Pseudo-element — requires CSS */
+  .swiper-test::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    .swiper-test {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      scroll-padding: 1.25rem;
+    }
+  }
+</style>

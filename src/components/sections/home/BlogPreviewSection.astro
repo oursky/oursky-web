@@ -1,0 +1,131 @@
+---
+/**
+ * BlogPreviewSection — Horizontal-scroll blog cards on homepage.
+ *
+ * Webflow: .section__home__lastsection > blogscroll container
+ * Visual: "Blog" pill top-left, "View All →" link top-right,
+ *   horizontal scroll strip of blog cards.
+ */
+import { getCollection } from 'astro:content';
+import SectionBadge from '../../ui/SectionBadge.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const latestPosts = allPosts.slice(0, 6);
+---
+
+<div class="flex items-center justify-between px-10 pt-10 pb-4 max-w-[1360px] mx-auto w-full max-md:px-5 max-md:pt-8 max-md:pb-3">
+  <SectionBadge label="Blog" />
+  <SectionBadge label="View All ➞" href="/blog" variant="viewall" />
+</div>
+
+<section class="blog-section relative px-10 pb-10 max-md:px-5 max-md:pb-8" aria-label="oursky blogs">
+  <div class="overflow-hidden">
+    {latestPosts.length === 0 ? (
+      <p class="p-8 text-text-muted">Blog posts coming soon.</p>
+    ) : (
+      <div class="overflow-hidden">
+        <ul
+          class="blog-card-list flex gap-5 overflow-x-auto overflow-y-visible snap-x snap-mandatory [scrollbar-width:none] list-none py-2 pb-4 m-0"
+          role="list"
+        >
+          {latestPosts.map((post) => (
+            <li class="snap-start shrink-0 grow-0 basis-72 w-72 min-w-72 flex flex-col gap-2 max-md:w-56 max-md:min-w-56 max-md:basis-56">
+              <a
+                href={`/blogs/${post.id}`}
+                class="group flex flex-col gap-2 no-underline rounded-md overflow-hidden bg-surface pb-3 transition-all hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)]"
+              >
+                <h3 class="text-xs font-bold text-text-muted uppercase tracking-[0.06em] mx-3.5 mt-3 truncate">
+                  {post.data.category}
+                </h3>
+                <div class="w-full aspect-[16/10] overflow-hidden bg-muted">
+                  {post.data.image ? (
+                    <img
+                      src={post.data.image}
+                      alt={post.data.imageAlt ?? post.data.title}
+                      class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
+                      loading="lazy"
+                      width="320"
+                      height="200"
+                    />
+                  ) : (
+                    <div class="w-full h-full bg-gradient-to-br from-muted to-accent" aria-hidden="true" />
+                  )}
+                </div>
+                <h1 class="text-sm font-bold text-text leading-[1.4] mx-3.5 line-clamp-3 group-hover:text-primary">
+                  {post.data.title}
+                </h1>
+              </a>
+              <div class="flex flex-wrap gap-1.5 px-1">
+                <a href={`/blog-category/${post.data.category}`} class="no-underline group/pill">
+                  <div class="inline-flex items-center px-3 py-1 bg-muted rounded-full text-[0.7rem] font-semibold text-text uppercase tracking-[0.05em] transition-colors group-hover/pill:bg-accent">
+                    {post.data.category}
+                  </div>
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+
+  <button
+    class="blog-btn blog-btn--left absolute top-1/2 -translate-y-1/2 left-0 w-12 h-12 rounded-full bg-black border-0 cursor-pointer flex items-center justify-center opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+    aria-label="Scroll left"
+    type="button"
+  >
+    <span class="flex items-center justify-center" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" style="height:2.875rem;width:1.562rem;fill:white" aria-hidden="true">
+        <path d="M34.5 239L228.9 44.7c9.4-9.4 24.6-9.4 33.9 0l22.7 22.7c9.4 9.4 9.4 24.5 0 33.9L131.5 256l154 154.8c9.3 9.4 9.3 24.5 0 33.9l-22.7 22.7c-9.4 9.4-24.6 9.4-33.9 0L34.5 273c-9.4-9.4-9.4-24.6 0-33.9z"/>
+      </svg>
+    </span>
+  </button>
+  <button
+    class="blog-btn blog-btn--right absolute top-1/2 -translate-y-1/2 right-0 w-12 h-12 rounded-full bg-black border-0 cursor-pointer flex items-center justify-center opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+    aria-label="Scroll right"
+    type="button"
+  >
+    <span class="flex items-center justify-center" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" style="height:2.875rem;width:1.562rem;fill:white" aria-hidden="true">
+        <path d="M285.5 273L91.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9L188.5 256 34.5 101.3c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L285.5 239c9.4 9.4 9.4 24.6 0 33.9z"/>
+      </svg>
+    </span>
+  </button>
+</section>
+
+<style>
+  .blog-card-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-section:hover .blog-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .blog-section:hover .blog-btn:hover {
+    opacity: 0.8;
+  }
+
+  .blog-btn:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  const leftBtn = document.querySelector('.blog-btn--left');
+  const rightBtn = document.querySelector('.blog-btn--right');
+  const list = document.querySelector('.blog-card-list') as HTMLElement | null;
+
+  const SCROLL_AMOUNT = 300;
+
+  leftBtn?.addEventListener('click', () => {
+    list?.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+  });
+
+  rightBtn?.addEventListener('click', () => {
+    list?.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+  });
+</script>

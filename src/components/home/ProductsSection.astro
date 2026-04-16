@@ -1,0 +1,67 @@
+---
+const products = [
+  {
+    href: 'https://formx.ai',
+    icon: '/images/fx-icon.png',
+    icon500: '/images/fx-icon-p-500.png',
+    name: 'FormX',
+    desc: 'Automate Document Workflow\nwith AI Agents',
+  },
+  {
+    href: 'https://authgear.com',
+    icon: '/images/authgear-icon.png',
+    icon500: '/images/authgear-icon-p-500.png',
+    name: 'Authgear',
+    desc: 'Secure Single Sign On for\nFrontline Workers & Customers',
+  },
+];
+---
+
+<!-- Background gradient + SVG wireframe pattern must stay in CSS -->
+<section class="products-section flex flex-col justify-start items-center self-center w-full" aria-labelledby="products-heading">
+  <div class="flex flex-col justify-start items-center w-full max-w-[1360px] mx-auto box-border px-10 pb-[220px] max-md:px-5 max-md:pb-[120px]">
+    <section class="flex flex-col items-center mt-[60px] w-full">
+      <h2 id="products-heading" class="text-black text-3xl font-semibold leading-[3.5rem] mb-4">Our Products</h2>
+      <div class="flex flex-row justify-center items-stretch gap-5 w-full max-md:flex-col max-md:items-center max-md:gap-12">
+        {products.map(p => (
+          <a
+            href={p.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col flex-1 justify-between items-center mt-12 no-underline text-black max-md:mt-0"
+          >
+            <div class="flex flex-col justify-start items-center">
+              <img
+                src={p.icon}
+                srcset={`${p.icon500} 500w, ${p.icon} 800w`}
+                sizes="(max-width: 800px) 100vw, 800px"
+                alt={p.name}
+                loading="lazy"
+                class="w-[260px] block max-md:w-[180px]"
+              />
+              <h3 class="text-2xl font-semibold leading-[42px] mt-2 mb-1">{p.name}</h3>
+              <p class="text-center text-lg font-normal leading-8 m-0">
+                {p.desc.split('\n').map((line, i, arr) => (
+                  <Fragment>{line}{i < arr.length - 1 && <br />}</Fragment>
+                ))}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</section>
+
+<style>
+  /* Multi-layer background (gradient fade over SVG wireframe) — no Tailwind equivalent */
+  .products-section {
+    background-color: #f2f2f2;
+    background-image:
+      linear-gradient(var(--color-surface) 43%, rgba(255, 255, 255, 0) 91%),
+      url('/images/os-w-2-1.svg');
+    background-position: 0 0, 50% 100%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 300%;
+  }
+</style>

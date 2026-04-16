@@ -1,0 +1,365 @@
+---
+/**
+ * Header — floating pill navigation (Webflow-style).
+ *
+ * All breakpoints: horizontal logo + nav pill + contact (no hamburger).
+ * Below md: merged nav pill — logo chip inside nav replaces Home + separate logo pill (ref: oursky.com).
+ * Below md: Home + Blog nav links hidden (narrowHidden); Blog reappears from md up with the full list.
+ * Below md: nav pill + contact are `justify-center` as one row; contact height matches nav pill.
+ * Below lg: compact type; Contact icon-only until lg.
+ * md–lg: nav pill absolutely centered in the header (same geometry as desktop).
+ * lg+: larger type; Contact shows label.
+ *
+ * `variant="home-hero"`: inside homepage hero with hide-on-scroll-down.
+ */
+import { mainNav, ctaLink } from '../../data/navigation';
+
+interface Props {
+  variant?: 'default' | 'home-hero';
+}
+
+const { variant = 'default' } = Astro.props;
+const isHomeHero = variant === 'home-hero';
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<div
+  id="site-header"
+  class:list={['header-wrapper', { 'header-wrapper--home-hero': isHomeHero }]}
+  data-header-variant={variant}
+>
+  <header
+    class="header relative flex w-full max-w-full items-center justify-between gap-1 max-md:justify-center max-md:gap-2 sm:gap-2 md:max-w-none mx-auto pointer-events-auto"
+  >
+    <!-- Logo pill (tablet+ — Webflow hides separate header icon below md) -->
+    <a
+      href="/"
+      class="pill logo-pill relative z-[2] mr-2 hidden flex-none items-center justify-center no-underline sm:mr-4 md:flex lg:mr-5"
+      aria-label="Oursky home"
+    >
+      <img
+        src="/images/oursky-logo.svg"
+        alt="Oursky"
+        width="80"
+        height="36"
+        class="block h-6 w-auto max-w-full object-contain sm:h-7 lg:h-8"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+      />
+      <span class="text-lg font-bold text-black" style="display:none">Oursky</span>
+    </a>
+
+    <!-- Nav: centered in remaining space <md; absolutely centered md+ (tablet + desktop) -->
+    <div
+      class="header__nav-center relative z-[1] flex min-w-0 flex-1 justify-center px-0.5 max-md:max-w-[min(100%,22rem)] max-md:flex-none md:pointer-events-none md:absolute md:inset-x-0 md:top-1/2 md:z-[1] md:flex md:w-full md:max-w-none md:flex-none md:-translate-y-1/2 md:justify-center md:px-0"
+    >
+      <nav
+        class="pill nav-pill flex max-w-full flex-none gap-0.5 overflow-x-auto px-1 py-0.5 sm:gap-1 sm:px-1.5 sm:py-1 md:pointer-events-auto lg:gap-1 lg:p-3"
+        aria-label="Main navigation"
+      >
+        <!-- Phone: logo inside nav bar replaces Home (ref: Webflow .navbar__icon) -->
+        <a
+          href="/"
+          class:list={[
+            'nav-pill__brand md:hidden mr-0.5 flex shrink-0 items-center justify-center rounded-full no-underline transition-transform duration-300',
+            { 'nav-pill__brand--active': isActive('/') },
+          ]}
+          aria-label="Oursky home"
+          aria-current={isActive('/') ? 'page' : undefined}
+        >
+          <img
+            src={isActive('/') ? '/images/oursky-logo-white.svg' : '/images/oursky-logo.svg'}
+            alt=""
+            width="50"
+            height="11"
+            class="nav-pill__brand-img pointer-events-none block h-[0.68rem] w-auto max-w-[3.4rem] object-contain"
+            aria-hidden="true"
+          />
+        </a>
+        {mainNav.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'nav-link flex h-full shrink-0 items-center rounded-full px-1.5 py-0.5 text-xs font-medium leading-tight text-black no-underline whitespace-nowrap transition-transform duration-300 sm:px-2 sm:text-sm sm:leading-snug lg:px-3 lg:text-lg lg:leading-9',
+              {
+                'nav-link--active text-white': isActive(link.href),
+                'nav-link--hide-below-md': link.narrowHidden,
+              },
+            ]}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <!-- Contact: icon-only <lg; label lg+ -->
+    <a
+      href={ctaLink.href}
+      class="pill contact-pill relative z-[2] flex flex-none items-center justify-center rounded-full no-underline text-black lg:min-h-[4.25rem] lg:px-[3.125rem] lg:py-4 lg:text-lg lg:font-semibold"
+      aria-label={ctaLink.label}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 16"
+        fill="none"
+        class="h-3.5 w-4 shrink-0 sm:h-4 sm:w-5 lg:hidden"
+        aria-hidden="true"
+      >
+        <path
+          d="M2.5 2.64011C2.14844 2.64011 1.875 2.95261 1.875 3.26511V4.16354L8.59375 9.67136C9.41406 10.3354 10.5469 10.3354 11.3672 9.67136L18.125 4.16354V3.26511C18.125 2.95261 17.8125 2.64011 17.5 2.64011H2.5ZM1.875 6.58542V13.2651C1.875 13.6167 2.14844 13.8901 2.5 13.8901H17.5C17.8125 13.8901 18.125 13.6167 18.125 13.2651V6.58542L12.5781 11.1167C11.0547 12.3667 8.90625 12.3667 7.42188 11.1167L1.875 6.58542ZM0 3.26511C0 1.89792 1.09375 0.765106 2.5 0.765106H17.5C18.8672 0.765106 20 1.89792 20 3.26511V13.2651C20 14.6714 18.8672 15.7651 17.5 15.7651H2.5C1.09375 15.7651 0 14.6714 0 13.2651V3.26511Z"
+          fill="currentColor"
+        />
+      </svg>
+      <span class="hidden lg:inline">{ctaLink.label}</span>
+    </a>
+  </header>
+</div>
+
+<script>
+  const headerRoot = document.getElementById('site-header');
+
+  if (headerRoot?.dataset.headerVariant === 'home-hero') {
+    let lastY = window.scrollY;
+    const deltaThreshold = 6;
+    const topReveal = 12;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y <= topReveal) {
+        headerRoot.classList.remove('header-wrapper--scroll-hidden');
+      } else if (y > lastY + deltaThreshold) {
+        headerRoot.classList.add('header-wrapper--scroll-hidden');
+      } else if (y < lastY - deltaThreshold) {
+        headerRoot.classList.remove('header-wrapper--scroll-hidden');
+      }
+      lastY = y;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>
+
+<style>
+  .header-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    padding: 1rem 1.25rem;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  }
+
+  .header-wrapper--home-hero {
+    position: relative;
+    top: auto;
+    z-index: 1;
+    /* Tight top band inside hero card (ref: small vertical gap above pills) */
+    padding-top: clamp(0.5rem, 2vw, 1rem);
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .header-wrapper {
+      padding: 1.25rem;
+    }
+
+    /* Wrapper adds ~40px rail strip; keep in-card band slightly tighter than default header */
+    .header-wrapper--home-hero {
+      padding-top: 1rem;
+    }
+  }
+
+  .header-wrapper--home-hero.header-wrapper--scroll-hidden {
+    transform: translateY(calc(-100% - 0.5rem));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header {
+    max-width: 78.75rem;
+  }
+
+  /* Tablet + desktop: nav pill true center of header (not “middle of leftover flex”) */
+  @media (min-width: 768px) {
+    .header {
+      position: relative;
+      max-width: none;
+    }
+
+    .nav-pill {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-pill,
+    .contact-pill {
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-pill {
+      z-index: 1;
+    }
+  }
+
+  .pill {
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 9999px;
+    height: 4.25rem;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .logo-pill,
+  .nav-pill {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #eeeeee;
+  }
+
+  .contact-pill {
+    background-color: var(--color-primary-dark);
+    border: 1px solid transparent;
+  }
+
+  .logo-pill:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+  }
+
+  .contact-pill:hover {
+    transform: scale(1.05);
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+  }
+
+  .logo-pill {
+    padding: 1.0625rem 1.375rem;
+    min-width: 7.75rem;
+  }
+
+  @media (max-width: 1023px) {
+    .header .logo-pill.pill {
+      height: auto;
+      min-height: 2.5rem;
+      max-height: 2.625rem;
+      min-width: 0;
+      width: auto;
+      max-width: 5.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+
+  .nav-pill {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    align-items: center;
+  }
+
+  .nav-pill::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* In-nav logo chip (phone) — stretch vertically inside compact nav pill */
+  .nav-pill__brand {
+    box-sizing: border-box;
+    min-width: 0;
+    align-self: stretch;
+    padding: 0.32rem 0.5rem;
+  }
+
+  .nav-pill__brand:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-pill__brand--active {
+    background-image: radial-gradient(circle, #0b40ffc4, #0022ffc9);
+    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.2), 0 2px 10px rgba(0, 0, 0, 0.18);
+  }
+
+  .nav-pill__brand--active:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-link--active {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: radial-gradient(circle, #0b40ffc4, #0022ffc9);
+    box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.2), 0 3px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link:hover,
+  .nav-link--active:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 1023px) {
+    .header .nav-pill.pill {
+      height: auto;
+      min-height: 2.5rem;
+      max-height: 2.625rem;
+      /* Stretch row children so active (blue) nav links match full pill height — tablet + phone */
+      align-items: stretch;
+    }
+
+    .header .nav-pill .nav-link {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding-top: 0.28rem;
+      padding-bottom: 0.28rem;
+    }
+
+    .header .contact-pill.pill {
+      height: 2.5rem;
+      width: 2.5rem;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    /*
+     * Must beat `.header .nav-pill .nav-link { display: flex }` (max-width 1023px),
+     * otherwise Home/Blog stay visible on phones next to the in-nav logo chip.
+     */
+    .header .nav-pill .nav-link.nav-link--hide-below-md {
+      display: none;
+    }
+
+    /* Nav + contact as one centered group; contact height matches nav pill */
+    .header .contact-pill.pill {
+      height: 2.625rem;
+      width: 2.625rem;
+      min-width: 2.625rem;
+      min-height: 2.625rem;
+      max-height: 2.625rem;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .nav-pill__brand {
+      padding: 0.22rem 0.38rem;
+    }
+
+    .header-wrapper {
+      padding: 0.5rem 0.65rem;
+    }
+
+    .header-wrapper--home-hero {
+      padding-top: 0.5rem;
+    }
+
+  }
+</style>

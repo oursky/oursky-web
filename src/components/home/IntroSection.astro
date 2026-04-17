@@ -3,7 +3,7 @@ import PillButton from '../ui/PillButton.astro';
 ---
 
 <section
-  class="flex flex-row flex-wrap items-center justify-between gap-10 bg-[#f2f2f2] mt-[60px] mb-[100px] w-full text-[28px] leading-10 box-border max-md:flex-col max-md:items-start max-md:mt-8 max-md:mb-12 max-md:text-lg max-md:leading-7"
+  class="intro-section-home scroll-reveal-group flex w-full flex-col items-start gap-10 bg-[#f2f2f2] text-[28px] leading-10 box-border mt-[60px] mb-[100px] max-md:mt-8 max-md:mb-12 max-md:px-[var(--home-rail-gutter)] max-md:text-lg max-md:leading-7 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between"
   aria-label="Introduction"
 >
   <img
@@ -11,9 +11,10 @@ import PillButton from '../ui/PillButton.astro';
     loading="lazy"
     alt=""
     aria-hidden="true"
-    class="max-w-[320px] shrink-0 max-[991px]:max-w-[200px] max-md:max-w-[140px]"
+    class="scroll-reveal-item max-w-[320px] shrink-0 max-[991px]:max-w-[200px] max-md:max-w-[140px]"
+    style="--sr-delay: 0ms"
   />
-  <p class="mb-0 flex-1">
+  <p class="scroll-reveal-item mb-0 w-full lg:flex-1" style="--sr-delay: 75ms">
     <span class="font-semibold">Welcome to Oursky</span>
     <span class="inline max-md:hidden">&nbsp;⎯⎯⎯⎯⎯&nbsp;</span>
     <span class="hidden max-md:inline">&nbsp;⎯⎯⎯&nbsp;</span>Across Hong Kong, London, Taipei, Tokyo, and Canada, our talented and
@@ -21,5 +22,7 @@ import PillButton from '../ui/PillButton.astro';
     to help you craft the unique experience with excellent user experiences
     and cutting-edge technologies.
   </p>
-  <PillButton href="/about" label="Meet The Team" variant="secondary" />
+  <span class="scroll-reveal-item self-start shrink-0" style="--sr-delay: 150ms">
+    <PillButton href="/about" label="Meet The Team" variant="secondary" />
+  </span>
 </section>

@@ -2,9 +2,10 @@
 name: oursky-webflow-page-rebuild
 description: >
   Step-by-step workflow for rebuilding an Oursky.com Webflow page into Astro 6.
-  Based on the real experience of rebuilding the homepage (Phase 3a).
-  Covers source analysis, asset migration, component structure, CSS pitfalls,
-  debug patterns, and build verification.
+  Based on the refined homepage: Tailwind-first sections, shared rail tokens,
+  Header.astro (sticky vs fixed home, scroll-direction nav), and global.css
+  scroll-reveal patterns. Covers source analysis, asset migration, component
+  structure, CSS pitfalls, debug patterns, and build verification.
   Use for Phase 3b (remaining marketing pages) and any future page additions.
 ---
 
@@ -19,9 +20,11 @@ Distilled from the real experience of rebuilding the homepage. Follow this top t
 1. `docs/phase1-handoff.md` — stack, URL parity table, collection schemas
 2. `docs/phase2-handoff.md` — design tokens, Borna font, Header/Footer, `navigation.ts`
 3. `docs/phase3-handoff.md` — homepage recap, pending pages list
-4. `src/layouts/BaseLayout.astro` — props, `<main>` wrapping rule (never add `<main>` inside pages)
-5. `src/styles/global.css` — `@theme` tokens
-6. `src/data/navigation.ts` — `mainNav`, `ctaLink`, `footerSections`
+4. `src/layouts/BaseLayout.astro` — props, `bodyClass`, `<main>` wrapping rule (never add `<main>` inside pages)
+5. `src/styles/global.css` — `@theme` tokens, `:root` rail variables, `body.page--home` / `html:has`, scroll-reveal utilities
+6. `src/data/navigation.ts` — `mainNav`, `ctaLink`, `footerSections`, `narrowHidden`
+7. `src/components/layout/Header.astro` — floating pill nav, home vs inner-page positioning, scroll retract script
+8. `src/pages/index.astro` — home shell (`home-page`, `home-hero-wrapper`, last section), scroll-reveal observer (copy pattern to other marketing pages as needed)
 
 ---
 
@@ -123,7 +126,7 @@ Each section `.astro` file:
 - Has `aria-label` or `aria-labelledby` on `<section>` elements
 - Uses semantic HTML (`<section>`, `<h2>`, `<ul>`, `<article>`, `<blockquote>`)
 
-The page file (`src/pages/<slug>.astro`) stays thin — only `BaseLayout` + imports. No logic.
+The page file (`src/pages/<slug>.astro`) stays thin — **`BaseLayout` + imports** for most routes. **`index.astro` is the exception:** it may hold **page-only** `<script>` (scroll-reveal observer) and `<style>` (hero / last-section wrappers) because those glue multiple sections and are not reused elsewhere (see §4b, §5).
 
 ### BaseLayout rule
 
@@ -200,7 +203,64 @@ Put it in `components/<page-slug>/` when:
 
 ---
 
+## 4b. Site header, rail keylines, and `page--home`
+
+The live homepage keeps **one horizontal rail** (max width and gutters aligned with the Webflow `.content-container`) across the hero video card, header, and lower sections. Implementation is split: **Tailwind** on the header chrome, **CSS variables** for shared keylines, **scoped `<style>`** in `Header.astro` for glass pills, absolute nav centering, and scroll-retract motion.
+
+### Header is global — never duplicate in pages
+
+`BaseLayout.astro` renders `<Header />` once above `<main>`. Pages only influence the header via **`bodyClass`** (and global CSS that targets `body`).
+
+### `bodyClass="page--home"` (home only)
+
+Pass this from `src/pages/index.astro` (already wired). Effects:
+
+- **`global.css`**: `body.page--home { position: relative; }` so `position: fixed` on the header stacks correctly; `html:has(body.page--home) { overflow-x: clip; }` contains 3D / wide content.
+- **`Header.astro`**: `:global(body.page--home) .header-wrapper` switches the bar from **sticky** (default, inner pages) to **fixed** over the hero (`z-index: 20`), so it stays pinned while the hero scrolls away.
+
+Inner marketing pages omit `bodyClass`; the header stays **sticky** with the grey strip rhythm from `--site-rail-strip-above-hero`.
+
+### Rail tokens (`:root` in `global.css`)
+
+| Variable | Role |
+|---|---|
+| `--home-rail-max` | Max content width (1360px), matches Webflow rail |
+| `--home-rail-gutter` | Horizontal padding for sections / hero wrapper |
+| `--home-hero-header-inline-pad` | Extra horizontal pad so the header pills line up with the hero card inset |
+| `--site-rail-strip-above-hero` | Grey strip height above the hero card (responsive steps) |
+
+Sections and `index.astro` shells combine `max-width: var(--home-rail-max)` with `padding-left/right: var(--home-rail-gutter)` (or Tailwind where the same numbers are applied via arbitrary values). **Do not** hardcode one-off 1360/2.5rem pairs in new pages without checking these variables first.
+
+### Scroll-direction nav hide (tablet/desktop)
+
+`Header.astro` includes a small client script on `#site-header`:
+
+- From **`min-width: 768px`**, when the user scrolls **down**, the centered nav pill **slides up and fades** (`#site-header.site-header--nav-retracted .header__nav-center--desktop`).
+- Near the top (`scrollY` within ~40px) or on **scroll up**, the nav returns.
+- **Below 768px** the retract behavior is disabled (whole bar stays visible).
+- **`prefers-reduced-motion: reduce`**: retract is disabled; nav stays visible.
+- When retracted, the nav wrapper gets **`aria-hidden="true"`** (logo + contact remain usable).
+
+CSS for the transition uses **`cubic-bezier` + transform + opacity** in the component `<style>` block — not Tailwind — because it is tightly coupled to the DOM hooks above.
+
+### Navigation data
+
+`src/data/navigation.ts`: **`narrowHidden`** drops links (e.g. Home, Blog) on narrow widths; the in-nav logo chip (`nav-pill__brand`) replaces the separate logo pill below `md`. Match Webflow breakpoints when changing visibility.
+
+---
+
 ## 5. Writing Component Styles — Tailwind First
+
+### Where styles live (refined homepage convention)
+
+| Layer | Use for |
+|---|---|
+| **Tailwind in section `.astro` markup** | Layout, flex/grid, spacing, typography, colors from `@theme`, responsive `md:` / `max-md:` / arbitrary breakpoints, most of each homepage section |
+| **`src/styles/global.css`** | `@theme` and `@font-face`, **`:root` rail variables**, `body.page--home` rules, **shared animation systems** (e.g. `.scroll-reveal*`), `.prose`, anything reused across many pages |
+| **Scoped `<style>` in `Header.astro`** | Frosted pill surfaces (`backdrop-filter`), absolute centering of the nav pill on tablet+, retracted-state transforms, scrollbar hiding on horizontal nav |
+| **Scoped `<style>` in `src/pages/index.astro`** | **Page-only shells** that tie sections together (`.home-page`, `.home-hero-wrapper`, `.section__home__lastsection`, `.home-lower-content`) using `--home-rail-*` — not worth a component until a second route needs the same wrapper |
+
+**Bias:** express new section UI with **Tailwind classes in the template**; add scoped CSS only when Tailwind is awkward (see table in §5 “What stays in a `<style>` block”). Prefer **one** global definition for cross-page patterns (scroll reveal, prose) instead of copying `<style>` into every section.
 
 ### Default: Tailwind utility classes in the HTML markup
 
@@ -280,6 +340,7 @@ Use a `<style>` block **only** for these cases:
 | `backdrop-filter` (use `backdrop-blur-*` if standard blur) | `backdrop-filter: blur(7px)` |
 | `repeating-linear-gradient` decoration | wireframe grid patterns |
 | `transform-origin` | non-center transform origins |
+| Site header pill glass + scroll-retract | Keep in `Header.astro` — see **§4b** (do not split across random section files) |
 
 When you do use a `<style>` block, write plain CSS values (no `var(--token, fallback)` fallbacks — the fallbacks are unnecessary since `@theme` always resolves the tokens):
 ```css
@@ -315,6 +376,24 @@ When you do use a `<style>` block, write plain CSS values (no `var(--token, fall
 | Card hover lift | `transition-all hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)]` |
 | Image zoom on card hover | `group` on `<a>`, `group-hover:scale-[1.04]` on `<img>` |
 | Text color change on hover | `group` on parent, `group-hover:text-primary` on child |
+
+### Scroll-driven section reveals (homepage pattern)
+
+The refined home replaces static-only sections with a **lightweight IntersectionObserver** pattern (not Webflow IX2). This is intentional, small JS, and respects reduced motion.
+
+**CSS (global — do not reimplement with Tailwind arbitrary utilities):** in `src/styles/global.css`, classes `.scroll-reveal`, `.scroll-reveal--visible`, `.scroll-reveal-group`, `.scroll-reveal-item`, `.scroll-reveal-group--visible` define opacity + `translate3d` transitions and stagger via **`--sr-delay`** on items.
+
+**JS wiring:** `src/pages/index.astro` wraps the home main content in a root with class **`home-page`** and runs a script that:
+
+1. Selects `.home-page .scroll-reveal` and `.home-page .scroll-reveal-group`
+2. If `prefers-reduced-motion: reduce`, adds visible classes immediately
+3. Otherwise uses **`IntersectionObserver`** (`rootMargin: '0px 0px -5% 0px'`, `threshold: 0.05`), toggles visibility classes once, then **`unobserve`**
+
+**Markup:** Put **`scroll-reveal-group`** on a section (or block); children that should stagger use **`scroll-reveal-item`** with optional `style="--sr-delay: 80ms"`. The homepage sections (`IntroSection`, `WorksPreviewSection`, `ProductsSection`, etc.) follow this pattern.
+
+**Other routes (Phase 3b):** reuse the same class names from `global.css`. Either copy the observer into each page that needs reveals (scoped under a page wrapper class like `home-page`) or extract a tiny shared script later — keep the **observer scope** limited to the page wrapper so blog MDX / other layouts are unaffected.
+
+**Smooth scrolling:** `html { scroll-behavior: smooth; }` is already set in `global.css` for in-page anchors; do not add redundant per-section JS unless product asks for offset headers.
 
 ### 3D transforms and overflow
 
@@ -412,7 +491,10 @@ document.querySelector('.blog-card-list__button--right').addEventListener('click
 The export removes video on Android/mobile and shows a static image instead. Omit for now (Phase 4 mobile optimization).
 
 ### Webflow interactions (`data-w-id`)
-Elements with `data-w-id` use Webflow's IX2 animation engine (scroll reveal, hover effects). These do NOT need to be replicated in Phase 3 — implement static versions. The animations can be added later with CSS or a lightweight library.
+Elements with `data-w-id` use Webflow's IX2 animation engine. **Do not** try to reproduce IX2 in Astro. For the **homepage**, we already ship a **small subset** of scroll feel: **global.css scroll-reveal classes** + **IntersectionObserver in `index.astro`**, plus **header scroll-direction hide** in `Header.astro`. Other pages: static-first unless you add the same observer pattern deliberately.
+
+### Header scroll behavior (summary)
+See **§4b**. This is client JS + scoped CSS in `Header.astro`, not Webflow export scripts.
 
 ---
 
@@ -450,6 +532,7 @@ Example for the homepage:
 <BaseLayout
   title="Oursky - Build it right the First Time"
   description="We are a developer-led software agency comprising a diverse team of experts who work with startups and enterprises to create award-winning digital experiences and fast-track digital transformation."
+  bodyClass="page--home"
 >
 ```
 
@@ -481,5 +564,5 @@ Baseline: **26 pages** after Phase 3a. Each new page adds 1.
 - Downloading Webflow CDN images to `public/` (Phase 4)
 - JSON-LD structured data (Phase 2 next steps)
 - Contact form backend
-- Webflow IX2 scroll animations
+- Full **Webflow IX2** parity (complex timelines, CMS-driven interactions) — the homepage uses **targeted** CSS + minimal JS instead; do not import IX2
 - DNS cutover (Phase 5)

@@ -43,57 +43,139 @@ const testimonials = [
 ];
 ---
 
-<section class="flex flex-col justify-center items-start w-full overflow-hidden" aria-label="Testimonials">
+<section
+  class="scroll-reveal-group flex flex-col justify-center items-start w-full overflow-hidden"
+  aria-label="Testimonials"
+>
   <div class="w-full mt-[120px] mb-[60px] pt-[60px] relative block max-[991px]:mt-12 max-[991px]:pt-8">
-    <!-- Complex symmetric padding uses CSS (max/calc combo can't be expressed in Tailwind) -->
-    <ul class="swiper-test flex justify-start items-stretch overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] list-none m-0 gap-0" role="list">
-      {testimonials.map(t => (
-        <li class="snap-start shrink-0 w-80 min-w-80 max-w-80 px-2 box-border max-[991px]:w-[280px] max-[991px]:min-w-[280px]" role="listitem">
-          <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-            <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
-              <img
-                src={t.avatar}
-                alt={t.avatarAlt}
-                loading="lazy"
-                class="rounded-full w-full h-full object-cover block"
-              />
-            </div>
-            <div class="flex flex-col flex-1">
-              <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-[1.4rem] flex-1">
-                {t.quote}
-              </blockquote>
-              <p class="mt-9 mb-0 text-[0.8rem] font-black leading-[1.2rem]">
-                <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
-                  {t.linkText}
-                </a>
-                {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
-              </p>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div class="testimonials-marquee">
+      <div class="testimonials-marquee__track">
+        <div class="testimonials-marquee__set">
+          {testimonials.map((t) => (
+            <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-[991px]:w-[280px] max-[991px]:min-w-[280px]">
+              <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+                <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
+                  <img
+                    src={t.avatar}
+                    alt={t.avatarAlt}
+                    loading="lazy"
+                    class="rounded-full w-full h-full object-cover block"
+                  />
+                </div>
+                <div class="flex flex-col flex-1">
+                  <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-[1.4rem] flex-1">
+                    {t.quote}
+                  </blockquote>
+                  <p class="mt-9 mb-0 text-[0.8rem] font-black leading-[1.2rem]">
+                    <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
+                      {t.linkText}
+                    </a>
+                    {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="testimonials-marquee__set" aria-hidden="true" inert>
+          {testimonials.map((t) => (
+            <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-[991px]:w-[280px] max-[991px]:min-w-[280px]">
+              <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+                <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
+                  <img src={t.avatar} alt="" loading="lazy" class="rounded-full w-full h-full object-cover block" />
+                </div>
+                <div class="flex flex-col flex-1">
+                  <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-[1.4rem] flex-1">
+                    {t.quote}
+                  </blockquote>
+                  <p class="mt-9 mb-0 text-[0.8rem] font-black leading-[1.2rem]">
+                    <a href={t.link} tabindex="-1" class="pointer-events-none text-text underline">
+                      {t.linkText}
+                    </a>
+                    {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <style>
-  /* Complex max/calc padding can't be expressed in Tailwind */
-  .swiper-test {
-    padding-left: max(calc((100vw - 1360px) / 2), 2.5rem);
-    padding-right: max(calc((100vw - 1360px) / 2), 2.5rem);
-    scroll-padding: max(calc((100vw - 1360px) / 2), 2.5rem);
+  .testimonials-marquee {
+    width: 100%;
+    overflow: hidden;
   }
 
-  /* Pseudo-element — requires CSS */
-  .swiper-test::-webkit-scrollbar {
-    display: none;
+  .testimonials-marquee__track {
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: testimonials-marquee-scroll 80s linear infinite;
   }
 
-  @media (max-width: 991px) {
-    .swiper-test {
+  /*
+   * Two identical flex rows; trailing padding on each matches gap so the loop seam
+   * lines up with spacing between cards (translateX(-50%) = exactly one row width).
+   */
+  .testimonials-marquee__set {
+    display: flex;
+    flex-shrink: 0;
+    align-items: stretch;
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  @keyframes testimonials-marquee-scroll {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .testimonials-marquee:hover .testimonials-marquee__track,
+  .testimonials-marquee:focus-within .testimonials-marquee__track {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonials-marquee__track {
+      animation: none;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding-left: max(calc((100% - 1360px) / 2), 2.5rem);
+      padding-right: max(calc((100% - 1360px) / 2), 2.5rem);
+      scroll-padding-left: max(calc((100% - 1360px) / 2), 2.5rem);
+      box-sizing: border-box;
+    }
+
+    .testimonials-marquee__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonials-marquee__set {
+      padding-right: 0;
+    }
+
+    .testimonials-marquee__set[aria-hidden='true'] {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) and (max-width: 991px) {
+    .testimonials-marquee__track {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
-      scroll-padding: 1.25rem;
+      scroll-padding-left: 1.25rem;
     }
   }
 </style>

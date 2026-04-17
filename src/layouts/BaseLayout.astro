@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
@@ -16,8 +17,8 @@ interface Props {
   ogType?: 'website' | 'article';
   /** Whether to add noindex (drafts, utility pages) */
   noindex?: boolean;
-  /** When true, skip the global sticky header (e.g. homepage renders it inside the hero). */
-  omitSiteHeader?: boolean;
+  /** Optional body class (e.g. `page--home` for absolute header over hero). */
+  bodyClass?: string;
 }
 
 const {
@@ -27,7 +28,7 @@ const {
   ogImage = '/images/og-default.png',
   ogType = 'website',
   noindex = false,
-  omitSiteHeader = false,
+  bodyClass,
 } = Astro.props;
 
 const siteUrl = (import.meta.env.SITE ?? 'https://www.oursky.com').replace(/\/$/, '');
@@ -43,6 +44,7 @@ const absoluteOgImage = ogImage.startsWith('http')
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <ClientRouter />
 
     <!-- Primary SEO -->
     <title>{fullTitle}</title>
@@ -73,9 +75,9 @@ const absoluteOgImage = ogImage.startsWith('http')
     <link rel="preload" href="/fonts/borna-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/borna-medium.woff2" as="font" type="font/woff2" crossorigin />
   </head>
-  <body>
-    {!omitSiteHeader && <Header />}
-    <main>
+  <body class:list={[bodyClass].filter(Boolean)}>
+    <Header />
+    <main class="min-w-0 max-w-full">
       <slot />
     </main>
     <Footer />

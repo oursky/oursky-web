@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/layout/Header.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import IntroSection from '../components/home/IntroSection.astro';
 import WorksPreviewSection from '../components/home/WorksPreviewSection.astro';
@@ -15,68 +14,54 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
 <BaseLayout
   title="Oursky - Build it right the First Time"
   description="We are a developer-led software agency comprising a diverse team of experts who work with startups and enterprises to create award-winning digital experiences and fast-track digital transformation."
-  omitSiteHeader
+  bodyClass="page--home"
 >
   <!--
     Single horizontal rail: same max-width + gutters as Webflow .content-container (1360 / 2.5rem).
-    Child sections inherit --home-rail-* for alignment with the hero video card edges.
+    Rail tokens live on :root (global.css); sections align with the hero video card edges.
   -->
-  <div class="home-page">
+  <div class="home-page min-w-0 overflow-x-clip">
     <!--
       Wraps hero + intro: light gray background, max-width 1360px, centered.
       The hero card (border-radius 48px) fills the rail content box.
     -->
     <div class="home-hero-wrapper">
-      <HeroSection>
-        <Header slot="header" variant="home-hero" />
-      </HeroSection>
-      <div class="scroll-reveal w-full">
-        <IntroSection />
-      </div>
+      <HeroSection />
+      <IntroSection />
     </div>
 
     <!-- Full-width section backgrounds; inner rails use --home-rail-* -->
-    <div class="scroll-reveal w-full">
-      <WorksPreviewSection />
-    </div>
-    <div class="scroll-reveal w-full">
-      <ProductsSection />
-    </div>
-    <div class="scroll-reveal w-full">
-      <ClientLogosSection />
-    </div>
-    <div class="scroll-reveal w-full">
-      <TestimonialsSection />
-    </div>
+    <WorksPreviewSection />
+    <ProductsSection />
+    <ClientLogosSection />
+    <TestimonialsSection />
 
     <!--
       .section__home__lastsection: light (#f7f7f7) rounded-top section containing
       the blog scroll, action cards, and contact form.
     -->
     <section class="section__home__lastsection">
-      <div class="home-lower-blogscroll scroll-reveal w-full">
+      <div class="home-lower-blogscroll w-full">
         <BlogPreviewSection />
       </div>
 
       <div class="home-lower-content">
-        <div class="scroll-reveal w-full">
-          <ActionCardsSection />
-        </div>
-        <div class="scroll-reveal w-full">
-          <ContactCtaSection />
-        </div>
+        <ActionCardsSection />
+        <ContactCtaSection />
       </div>
     </section>
   </div>
 
   <script>
     function initHomeScrollReveal() {
-      const nodes = document.querySelectorAll('.home-page .scroll-reveal');
-      if (!nodes.length) return;
+      const singles = document.querySelectorAll('.home-page .scroll-reveal');
+      const groups = document.querySelectorAll('.home-page .scroll-reveal-group');
+      if (!singles.length && !groups.length) return;
 
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (reduce) {
-        nodes.forEach((el) => el.classList.add('scroll-reveal--visible'));
+        singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+        groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
         return;
       }
 
@@ -84,14 +69,20 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
         (entries, observer) => {
           for (const entry of entries) {
             if (!entry.isIntersecting) continue;
-            entry.target.classList.add('scroll-reveal--visible');
-            observer.unobserve(entry.target);
+            const t = entry.target;
+            if (t.classList.contains('scroll-reveal-group')) {
+              t.classList.add('scroll-reveal-group--visible');
+            } else {
+              t.classList.add('scroll-reveal--visible');
+            }
+            observer.unobserve(t);
           }
         },
-        { root: null, rootMargin: '0px 0px -6% 0px', threshold: 0.06 }
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
       );
 
-      nodes.forEach((el) => io.observe(el));
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
     }
 
     if (document.readyState === 'loading') {
@@ -103,17 +94,6 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
 </BaseLayout>
 
 <style>
-  .home-page {
-    --home-rail-max: 1360px;
-    --home-rail-gutter: 2.5rem;
-  }
-
-  @media (max-width: 767px) {
-    .home-page {
-      --home-rail-gutter: 1.25rem;
-    }
-  }
-
   /*
    * Hero wrapper: same horizontal rail as Works / Products / blog / lower content.
    */
@@ -188,9 +168,14 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
   }
 
   @media (max-width: 767px) {
+    /* Hero: edge-to-edge; intro below keeps rail gutters */
     .home-hero-wrapper {
-      padding-top: 0.75rem;
+      max-width: none;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
+
     .home-lower-content {
       padding-bottom: 1.5rem;
       gap: 1.5rem;

@@ -10,16 +10,14 @@
  * md–lg: nav pill absolutely centered in the header (same geometry as desktop).
  * lg+: larger type; Contact shows label.
  *
- * `variant="home-hero"`: inside homepage hero with hide-on-scroll-down.
+ * Homepage: `body.page--home` uses a fixed bar over the hero (pinned while scrolling).
+ * Large desktop (all routes): header rail matches content (`--home-rail-max` + gutter), same as home hero.
+ *
+ * Scroll (md+, matches live oursky.com): scrolling down hides the center nav pill (slides up +
+ * fades); logo + contact stay put. Scrolling up near the top restores the nav. Mobile (< md):
+ * whole header stays pinned; nav does not hide. Respects `prefers-reduced-motion`.
  */
 import { mainNav, ctaLink } from '../../data/navigation';
-
-interface Props {
-  variant?: 'default' | 'home-hero';
-}
-
-const { variant = 'default' } = Astro.props;
-const isHomeHero = variant === 'home-hero';
 
 const currentPath = Astro.url.pathname;
 
@@ -29,11 +27,7 @@ function isActive(href: string): boolean {
 }
 ---
 
-<div
-  id="site-header"
-  class:list={['header-wrapper', { 'header-wrapper--home-hero': isHomeHero }]}
-  data-header-variant={variant}
->
+<div id="site-header" class="header-wrapper">
   <header
     class="header relative flex w-full max-w-full items-center justify-between gap-1 max-md:justify-center max-md:gap-2 sm:gap-2 md:max-w-none mx-auto pointer-events-auto"
   >
@@ -54,12 +48,12 @@ function isActive(href: string): boolean {
       <span class="text-lg font-bold text-black" style="display:none">Oursky</span>
     </a>
 
-    <!-- Nav: centered in remaining space <md; absolutely centered md+ (tablet + desktop) -->
+    <!-- Nav: centered in remaining space <md; absolutely centered md+ (tablet + desktop). Retracts on scroll down at md+. -->
     <div
-      class="header__nav-center relative z-[1] flex min-w-0 flex-1 justify-center px-0.5 max-md:max-w-[min(100%,22rem)] max-md:flex-none md:pointer-events-none md:absolute md:inset-x-0 md:top-1/2 md:z-[1] md:flex md:w-full md:max-w-none md:flex-none md:-translate-y-1/2 md:justify-center md:px-0"
+      class="header__nav-center header__nav-center--desktop relative z-[1] flex min-w-0 flex-1 justify-center px-0.5 max-md:max-w-[min(100%,26rem)] max-md:flex-none md:pointer-events-none md:absolute md:inset-x-0 md:top-1/2 md:z-[1] md:flex md:w-full md:max-w-none md:flex-none md:-translate-y-1/2 md:justify-center md:px-0"
     >
       <nav
-        class="pill nav-pill flex max-w-full flex-none gap-0.5 overflow-x-auto px-1 py-0.5 sm:gap-1 sm:px-1.5 sm:py-1 md:pointer-events-auto lg:gap-1 lg:p-3"
+        class="pill nav-pill flex max-w-full flex-none gap-0.5 overflow-x-auto px-1 py-0.5 max-md:gap-1 sm:gap-1 sm:px-1.5 sm:py-1 md:pointer-events-auto lg:gap-1 lg:p-3"
         aria-label="Main navigation"
       >
         <!-- Phone: logo inside nav bar replaces Home (ref: Webflow .navbar__icon) -->
@@ -123,76 +117,151 @@ function isActive(href: string): boolean {
 </div>
 
 <script>
-  const headerRoot = document.getElementById('site-header');
+  (() => {
+    const headerEl = document.getElementById('site-header');
+    if (!(headerEl instanceof HTMLElement)) return;
+    const navCenter = headerEl.querySelector('.header__nav-center--desktop');
+    if (!(navCenter instanceof HTMLElement)) return;
 
-  if (headerRoot?.dataset.headerVariant === 'home-hero') {
+    const header = headerEl;
+    const nav = navCenter;
+
+    const mqDesktopNav = window.matchMedia('(min-width: 768px)');
+    const mqReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
     let lastY = window.scrollY;
-    const deltaThreshold = 6;
-    const topReveal = 12;
+    const scrollDownThreshold = 10;
+    const scrollUpThreshold = 6;
+    const topRevealPx = 40;
 
-    const onScroll = () => {
+    /** @param {boolean} retracted */
+    function setNavRetracted(retracted) {
+      header.classList.toggle('site-header--nav-retracted', retracted);
+      if (retracted) {
+        nav.setAttribute('aria-hidden', 'true');
+      } else {
+        nav.removeAttribute('aria-hidden');
+      }
+    }
+
+    function onScroll() {
+      if (!mqDesktopNav.matches || mqReduceMotion.matches) {
+        setNavRetracted(false);
+        lastY = window.scrollY;
+        return;
+      }
       const y = window.scrollY;
-      if (y <= topReveal) {
-        headerRoot.classList.remove('header-wrapper--scroll-hidden');
-      } else if (y > lastY + deltaThreshold) {
-        headerRoot.classList.add('header-wrapper--scroll-hidden');
-      } else if (y < lastY - deltaThreshold) {
-        headerRoot.classList.remove('header-wrapper--scroll-hidden');
+      if (y <= topRevealPx) {
+        setNavRetracted(false);
+      } else if (y > lastY + scrollDownThreshold) {
+        setNavRetracted(true);
+      } else if (y < lastY - scrollUpThreshold) {
+        setNavRetracted(false);
       }
       lastY = y;
-    };
+    }
+
+    function onMqChange() {
+      if (!mqDesktopNav.matches || mqReduceMotion.matches) setNavRetracted(false);
+    }
 
     window.addEventListener('scroll', onScroll, { passive: true });
-  }
+    mqDesktopNav.addEventListener('change', onMqChange);
+    mqReduceMotion.addEventListener('change', onMqChange);
+    onScroll();
+  })();
 </script>
 
 <style>
+  /* Shared vertical rhythm with home hero header; horizontal matches viewport keylines */
   .header-wrapper {
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 8;
-    padding: 1rem 1.25rem;
-    pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
-  }
-
-  .header-wrapper--home-hero {
-    position: relative;
-    top: auto;
-    z-index: 1;
-    /* Tight top band inside hero card (ref: small vertical gap above pills) */
-    padding-top: clamp(0.5rem, 2vw, 1rem);
+    overflow-x: clip;
+    /* Grey strip + in-card band — matches home visual rhythm */
+    padding-top: calc(var(--site-rail-strip-above-hero) + clamp(0.5rem, 2vw, 1rem));
     padding-bottom: 0;
+    padding-left: calc(var(--home-rail-gutter) + var(--home-hero-header-inline-pad));
+    padding-right: calc(var(--home-rail-gutter) + var(--home-hero-header-inline-pad));
+    pointer-events: none;
   }
 
+  /* Home: fixed over hero — pinned while scrolling (mobile + tablet: full width) */
+  :global(body.page--home) .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+  }
+
+  /*
+   * Large desktop (all pages): centered bar to `--home-rail-max`.
+   * Horizontal pad = rail gutter + in-card inset (extra side margin vs gutter-only).
+   */
   @media (min-width: 1024px) {
     .header-wrapper {
-      padding: 1.25rem;
-    }
-
-    /* Wrapper adds ~40px rail strip; keep in-card band slightly tighter than default header */
-    .header-wrapper--home-hero {
-      padding-top: 1rem;
+      left: auto;
+      right: auto;
+      max-width: var(--home-rail-max);
+      width: min(100%, var(--home-rail-max));
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: calc(var(--home-rail-gutter) + var(--home-hero-header-inline-pad));
+      padding-right: calc(var(--home-rail-gutter) + var(--home-hero-header-inline-pad));
+      padding-top: calc(var(--site-rail-strip-above-hero) + 1rem);
+      box-sizing: border-box;
     }
   }
 
-  .header-wrapper--home-hero.header-wrapper--scroll-hidden {
-    transform: translateY(calc(-100% - 0.5rem));
-    opacity: 0;
-    pointer-events: none;
+  /* Tablet/desktop: center nav slides up when scrolling down (see scroll script) */
+  @media (min-width: 768px) {
+    .header__nav-center--desktop {
+      transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.4s ease;
+    }
+
+    #site-header.site-header--nav-retracted .header__nav-center--desktop {
+      transform: translateY(calc(-50% - 11rem));
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #site-header.site-header--nav-retracted .header__nav-center--desktop {
+      transform: none;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) and (min-width: 768px) {
+    #site-header.site-header--nav-retracted .header__nav-center--desktop {
+      transform: translateY(-50%);
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   .header {
-    max-width: 78.75rem;
+    width: 100%;
+    max-width: var(--home-rail-max);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Tablet + desktop: nav pill true center of header (not “middle of leftover flex”) */
   @media (min-width: 768px) {
     .header {
       position: relative;
-      max-width: none;
+      max-width: var(--home-rail-max);
+      /* Keep wide nav + transforms from widening the document (horizontal scroll) */
+      overflow-x: clip;
     }
 
     .nav-pill {
@@ -200,6 +269,9 @@ function isActive(href: string): boolean {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      box-sizing: border-box;
+      max-width: 100%;
+      min-width: 0;
     }
 
     .logo-pill,
@@ -354,12 +426,8 @@ function isActive(href: string): boolean {
     }
 
     .header-wrapper {
-      padding: 0.5rem 0.65rem;
+      padding-top: calc(var(--site-rail-strip-above-hero) + 0.5rem);
+      padding-bottom: 0.5rem;
     }
-
-    .header-wrapper--home-hero {
-      padding-top: 0.5rem;
-    }
-
   }
 </style>

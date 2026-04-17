@@ -26,23 +26,24 @@ const logos = [
 ---
 
 <section
-  class="bg-[#181818] rounded-t-[40px] w-full min-h-[300px] -mb-[50px] py-20 overflow-hidden max-md:py-12 max-md:pb-16 max-md:rounded-t-[32px]"
+  class="scroll-reveal-group bg-[#181818] rounded-t-[40px] w-full min-h-[300px] -mb-[50px] py-20 overflow-hidden max-md:py-12 max-md:pb-16 max-md:rounded-t-[32px]"
   aria-labelledby="clients-heading"
 >
   <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-md:px-5">
     <div class="flex flex-col justify-center items-center w-full">
-      <h2 id="clients-heading" class="text-white text-[1.8rem] font-medium leading-8 mb-4 text-center">
+      <h2 id="clients-heading" class="scroll-reveal-item text-white text-[1.8rem] font-medium leading-8 mb-4 text-center" style="--sr-delay: 0ms">
         Trusted by Leading Brands
       </h2>
       <div class="grid grid-cols-4 gap-[60px] place-items-center w-full mt-12 mb-12 max-md:grid-cols-2 max-md:gap-8">
-        {logos.map(logo => (
+        {logos.map((logo, i) => (
           <img
             src={logo.src}
             srcset={logo.srcset}
             sizes="(max-width: 991px) 50vw, 25vw"
             alt={logo.alt}
             loading="lazy"
-            class="object-contain w-full max-h-20 py-2.5 brightness-0 invert opacity-75 max-md:max-h-[50px]"
+            class="scroll-reveal-item object-contain w-full max-h-20 py-2.5 brightness-0 invert opacity-75 max-md:max-h-[50px]"
+            style={`--sr-delay: ${40 + Math.min(i, 11) * 28}ms`}
           />
         ))}
       </div>

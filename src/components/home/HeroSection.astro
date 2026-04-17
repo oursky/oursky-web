@@ -3,12 +3,7 @@
 
 <!-- Mirrors Webflow .hero-banner-static: light beige card, video at bottom, gradient headline -->
 <div class="hero-banner-static flex flex-col justify-start items-stretch w-full relative overflow-hidden bg-[#e6e5e3] rounded-xl">
-  <!-- In-flow header slot reserves nav height so caption aligns above the video -->
-  <div class="relative z-[15] shrink-0 w-full">
-    <slot name="header" />
-  </div>
-
-  <!-- Caption: gradient headline + subtitle -->
+  <!-- Caption: gradient headline + subtitle (site header overlays this card on home) -->
   <div class="hero-caption z-[5] w-full max-w-[90%] relative text-center mx-auto max-md:max-w-[95%]">
     <!-- Gradient text requires -webkit-background-clip which stays in CSS -->
     <h1 class="hero-h1 font-[Borna,sans-serif] font-medium mb-0">
@@ -56,6 +51,11 @@
   .hero-caption {
     padding-top: clamp(0.65rem, 1.75vw, 1.35rem);
     padding-bottom: clamp(0.75rem, 1.75vw, 1.5rem);
+  }
+
+  /* Home: global header is absolutely positioned over the card — reserve vertical band */
+  :global(body.page--home) .hero-caption {
+    padding-top: clamp(3.1rem, 15vw, 4.75rem);
   }
 
   /*
@@ -113,6 +113,10 @@
       padding-bottom: clamp(1rem, 1.5vw, 1.75rem);
     }
 
+    :global(body.page--home) .hero-caption {
+      padding-top: clamp(3.35rem, 7vw, 5.1rem);
+    }
+
     .hero-video-root {
       min-height: clamp(400px, 52vh, 640px);
     }
@@ -132,6 +136,10 @@
       padding-top: clamp(0.5rem, 1.5vw, 1.25rem);
       padding-bottom: clamp(0.65rem, 1.5vw, 1.35rem);
     }
+
+    :global(body.page--home) .hero-caption {
+      padding-top: clamp(3rem, 11vw, 4.35rem);
+    }
     .hero-h1 { font-size: 3.5rem; line-height: 3.75rem; }
     .hero-subtitle { font-size: 1.75rem; line-height: 2.25rem; }
     .hero-gradient { height: 200px; }
@@ -144,9 +152,18 @@
       height: min(92vh, 720px);
       max-height: none;
     }
+
+    /* Full-bleed top/sides; keep bottom corners like other home cards */
+    :global(body.page--home) .hero-banner-static {
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
     .hero-caption {
       padding-top: clamp(0.45rem, 2vw, 1rem);
       padding-bottom: 0.85rem;
+    }
+
+    :global(body.page--home) .hero-caption {
+      padding-top: clamp(4rem, 22vw, 5.75rem);
     }
     .hero-h1 { font-size: var(--text-hero-secondary); line-height: 2.75rem; white-space: normal; }
     .hero-subtitle { font-size: var(--text-lg); line-height: 1.75rem; white-space: normal; }

@@ -2,25 +2,35 @@
 ---
 
 <!-- Blue gradient section with rounded top corners and 3D card transforms -->
-<section class="works-section w-full min-h-[500px] py-20 pb-[120px] max-md:py-12 max-md:pb-16" aria-labelledby="works-heading">
+<section class="works-section scroll-reveal-group w-full min-h-[500px] py-20 pb-[120px] max-md:py-12 max-md:pb-16" aria-labelledby="works-heading">
   <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-[991px]:flex-col max-[991px]:gap-8 max-md:px-5">
     <!-- Text column -->
     <div class="flex flex-col justify-center items-start w-1/2 max-[991px]:w-full">
-      <h2 id="works-heading" class="text-white text-3xl font-semibold leading-[3.5rem] mb-4">Our Works</h2>
-      <p class="text-white text-[1.6rem] font-normal leading-8 mb-6 max-md:text-lg max-md:leading-[1.65rem]">
+      <h2 id="works-heading" class="scroll-reveal-item text-white text-3xl font-semibold leading-[3.5rem] mb-4" style="--sr-delay: 0ms">
+        Our Works
+      </h2>
+      <p
+        class="scroll-reveal-item text-white text-[1.6rem] font-normal leading-8 mb-6 max-md:text-lg max-md:leading-[1.65rem]"
+        style="--sr-delay: 70ms"
+      >
         We develop and design mobile and web apps, or native softwares for our clients,
         from Apple App of the Years startups to NASDAQ listed enterprises.
       </p>
       <a
         href="/works"
-        class="inline-block no-underline text-white border border-white rounded-[6.25rem] px-[3.125rem] py-4 text-lg font-medium leading-9 my-2.5 hover:opacity-60 transition-opacity"
+        class="scroll-reveal-item inline-block no-underline text-white border border-white rounded-[6.25rem] px-[3.125rem] py-4 text-lg font-medium leading-9 my-2.5 hover:opacity-60 transition-opacity"
+        style="--sr-delay: 140ms"
       >
         View Our Works
       </a>
     </div>
 
     <!-- 3D card stack — transforms require CSS -->
-    <div class="flex justify-center items-center w-1/2 text-center max-[991px]:w-full max-[991px]:h-[340px] max-md:h-[260px]" aria-hidden="true">
+    <div
+      class="scroll-reveal-item flex justify-center items-center w-1/2 text-center max-[991px]:w-full max-[991px]:h-[340px] max-md:h-[260px]"
+      style="--sr-delay: 200ms"
+      aria-hidden="true"
+    >
       <div class="works-cardwrap">
         <div class="works-card works-card--1"></div>
         <div class="works-card works-card--2"></div>
@@ -38,6 +48,8 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     clip-path: inset(0 0 0 0 round 40px 40px 0 0);
+    /* 3D card transforms use large translate(); visible overflow widens the whole page */
+    overflow-x: clip;
   }
 
   @media (max-width: 767px) {
@@ -47,7 +59,7 @@
     }
   }
 
-  /* 3D card container */
+  /* 3D card container (overflow clipped at .works-section so transforms don’t widen the page) */
   .works-cardwrap {
     aspect-ratio: 2 / 3;
     width: 280px;

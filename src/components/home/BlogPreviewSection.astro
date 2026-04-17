@@ -14,23 +14,30 @@ allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const latestPosts = allPosts.slice(0, 6);
 ---
 
-<div class="flex items-center justify-between px-10 pt-10 pb-4 w-full max-md:px-5 max-md:pt-8 max-md:pb-3">
-  <SectionBadge label="Blog" />
-  <SectionBadge label="View All ➞" href="/blog" variant="viewall" />
-</div>
+<div class="scroll-reveal-group w-full">
+  <div
+    class="scroll-reveal-item flex items-center justify-between px-10 pt-10 pb-4 w-full max-md:px-5 max-md:pt-8 max-md:pb-3"
+    style="--sr-delay: 0ms"
+  >
+    <SectionBadge label="Blog" />
+    <SectionBadge label="View All ➞" href="/blog" variant="viewall" />
+  </div>
 
-<section class="blog-section relative px-10 pb-10 max-md:px-5 max-md:pb-8" aria-label="oursky blogs">
+  <section class="blog-section relative px-10 pb-10 max-md:px-5 max-md:pb-8" aria-label="oursky blogs">
   <div class="overflow-hidden">
     {latestPosts.length === 0 ? (
-      <p class="p-8 text-text-muted">Blog posts coming soon.</p>
+      <p class="scroll-reveal-item p-8 text-text-muted" style="--sr-delay: 40ms">Blog posts coming soon.</p>
     ) : (
       <div class="overflow-hidden">
         <ul
           class="blog-card-list flex gap-5 overflow-x-auto overflow-y-visible snap-x snap-mandatory [scrollbar-width:none] list-none py-2 pb-4 m-0"
           role="list"
         >
-          {latestPosts.map((post) => (
-            <li class="snap-start shrink-0 grow-0 basis-72 w-72 min-w-72 flex flex-col gap-2 max-md:w-56 max-md:min-w-56 max-md:basis-56">
+          {latestPosts.map((post, i) => (
+            <li
+              class="scroll-reveal-item snap-start shrink-0 grow-0 basis-72 w-72 min-w-72 flex flex-col gap-2 max-md:w-56 max-md:min-w-56 max-md:basis-56"
+              style={`--sr-delay: ${45 + i * 48}ms`}
+            >
               <a
                 href={`/blogs/${post.id}`}
                 class="group flex flex-col gap-2 no-underline rounded-md overflow-hidden bg-surface pb-3 transition-all hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)]"
@@ -97,6 +104,7 @@ const latestPosts = allPosts.slice(0, 6);
     </span>
   </button>
 </section>
+</div>
 
 <style>
   /* Pseudo-element — requires CSS */

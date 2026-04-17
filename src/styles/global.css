@@ -170,6 +170,41 @@
   --hero-min-height: 31.25rem;  /* 500px */
 }
 
+/*
+ * Site header rail — below lg: gutter + in-card pad; lg+ matches content rail (see Header.astro).
+ */
+:root {
+  --home-rail-max: 1360px;
+  --home-rail-gutter: 2.5rem;
+  --home-hero-header-inline-pad: 1.25rem;
+  /* Grey strip above hero card on home — added to sticky header on inner pages */
+  --site-rail-strip-above-hero: 1rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --site-rail-strip-above-hero: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --home-rail-gutter: 1.25rem;
+    --home-hero-header-inline-pad: 0.65rem;
+    --site-rail-strip-above-hero: 0.75rem;
+  }
+}
+
+/* Home: positioned ancestor so the header’s `position: fixed` / stacking context behaves */
+body.page--home {
+  position: relative;
+}
+
+/* Belt-and-suspenders: kill stray horizontal scroll (3D transforms, 100vw quirks, etc.) */
+html:has(body.page--home) {
+  overflow-x: clip;
+}
+
 /* ── Base resets ─────────────────────────────────────── */
 *,
 *::before,
@@ -212,8 +247,11 @@ body {
   max-width: 100%;
 }
 
-/* ── Scroll-driven section reveals (homepage, marketing pages) ──
-   Subtle fade + lift when blocks enter the viewport; respects reduced motion.
+/* ── Scroll-driven reveals (homepage, marketing pages) ──
+   - .scroll-reveal: single element fades in when observed.
+   - .scroll-reveal-group: when observed, children .scroll-reveal-item stagger in
+     using --sr-delay (e.g. style="--sr-delay: 80ms").
+   Respects prefers-reduced-motion.
 ────────────────────────────────────────────────────────────────── */
 .scroll-reveal {
   opacity: 0;
@@ -228,8 +266,28 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+.scroll-reveal-group .scroll-reveal-item {
+  opacity: 0;
+  transform: translate3d(0, 1.25rem, 0);
+  transition:
+    opacity 0.68s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--sr-delay, 0ms);
+}
+
+.scroll-reveal-group--visible .scroll-reveal-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-reveal-group .scroll-reveal-item {
     opacity: 1;
     transform: none;
     transition: none;

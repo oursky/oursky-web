@@ -122,6 +122,20 @@
   --text-2xl:  2rem;       /* 32px — Heading / Heading 2 (font-size: 2rem) */
   --text-3xl:  3rem;       /* 48px — page-title-heading, section titles */
   --text-4xl:  3.25rem;    /* 52px — hero */
+  --text-5xl:  4rem;       /* 64px — inner page hero titles (About, Services, Products) */
+  --text-6xl:  4.5rem;     /* 72px — large display text (OurValue section) */
+  --text-xl-plus: 1.75rem; /* 28px — between xl and 2xl (intro body, tech tabs) */
+
+  /* ── Line heights ────────────────────────────────────
+     Named line heights paired with type scale above
+  ────────────────────────────────────────────────────── */
+  --leading-hero:    5rem;    /* 80px — paired with text-5xl page titles */
+  --leading-hero-sm: 3rem;    /* 48px — text-5xl at tablet/mobile */
+  --leading-section: 3.5rem;  /* 56px — section card headings (text-3xl) */
+  --leading-desc:    2.5rem;  /* 40px — hero description paragraphs (text-2xl) */
+  --leading-desc-sm: 1.75rem; /* 28px — hero description at mobile (text-lg) */
+  --leading-footer:  2.375rem; /* 38px — footer clock labels and city names */
+  --leading-snug:    1.4rem;   /* 22.4px — compact body/card text */
 
   /* Font weights (confirmed via style_tool) */
   --font-weight-body:    400;
@@ -132,9 +146,14 @@
   /* ── Spacing / Layout ────────────────────────────────
      Source: padding/margin values in Webflow CSS
   ────────────────────────────────────────────────────── */
-  --spacing-page-x:     1.25rem;   /* mobile: 20px (from .header padding) */
-  --spacing-page-x-lg:  2.5rem;    /* desktop: 40px (from .footer padding) */
+  --spacing-page-x:          1.25rem;   /* mobile: 20px (from .header padding) */
+  --spacing-page-x-lg:       2.5rem;    /* desktop: 40px (from .footer padding) */
+  --spacing-page-top:        13.5rem;   /* 216px — inner page container top (desktop) */
+  --spacing-page-top-tablet: 7.37rem;   /* 118px — inner page container top (tablet) */
+  --spacing-section:         3.75rem;   /* 60px  — section vertical spacing unit */
+  --spacing-section-lg:      7.5rem;    /* 120px — section vertical spacing large */
   --max-w-content:      78.75rem;  /* 1260px (from .header-container max-width) */
+  --max-w-hero-desc:    63.25rem;  /* 1012px — hero description container */
 
   /* Nav pill dimensions (from .navbar-container, .header__icon) */
   --nav-height:         4.25rem;   /* 68px */
@@ -148,9 +167,40 @@
   --radius-xl:    3rem;       /* 48px — hero-banner-static */
   --radius-full:  9999px;     /* pill */
 
+  /* ── Webflow section card palette ───────────────────
+     Background colors for full-bleed section cards.
+     Source: oursky-com-2023.webflow.css section rules
+  ────────────────────────────────────────────────────── */
+  --color-section-blue:       #2064e8;  /* dev services / featured card blue */
+  --color-section-blue-dark:  #0c53df;  /* why oursky card / active-tab highlight */
+  --color-section-blue-light: #eff6fa;  /* CTA "let's talk" card, very light blue */
+  --color-section-gray-blue:  #dde2ec;  /* motto card light blue-gray */
+  --color-section-warm-gray:  #a19d96;  /* design services warm gray */
+
+  /* ── Homepage section palette ───────────────────────
+     Background colors unique to home-page sections.
+  ────────────────────────────────────────────────────── */
+  --color-newsletter-blue:    #1a4fff;  /* newsletter card bg */
+  --color-social-dark:        #2c2c2c;  /* social links card bg */
+  --color-logos-dark:         #181818;  /* client logos dark strip */
+  --color-hero-beige:         #ecebe7;  /* hero card outer beige */
+  --color-hero-beige-light:   #e6e5e3;  /* hero card inner lighter beige */
+  --color-bg-hero:            #f2f2f2;  /* hero wrapper / home top strip */
+  --color-bg-section-light:   #f7f7f7;  /* home last section background */
+
+  /* ── UI interactive ──────────────────────────────────
+  ────────────────────────────────────────────────────── */
+  --color-border-mid:         #a3a3a3;  /* mid-tone borders (tech stack, tabs) */
+  --color-link-on-dark:       #ffff00;  /* linked text on blue or dark bg */
+
   /* ── Hero / Page gradients ───────────────────────────
      Source: hero-banner__caption__primary (style_tool)
   ────────────────────────────────────────────────────── */
+
+  /* Page title gradient — blue gradient text used on all inner page heroes */
+  --color-page-title-from:    #2f76ff;
+  --color-page-title-to:      #054cd6;
+  --gradient-page-title: linear-gradient(93deg, #2f76ff 5.4%, #054cd6 91.42%);
 
   /* Hero heading gradient — the blue gradient text on Home page */
   --gradient-hero-text: linear-gradient(

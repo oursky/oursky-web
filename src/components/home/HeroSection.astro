@@ -2,7 +2,7 @@
 ---
 
 <!-- Mirrors Webflow .hero-banner-static: light beige card, video at bottom, gradient headline -->
-<div class="hero-banner-static flex flex-col justify-start items-stretch w-full relative overflow-hidden bg-[#e6e5e3] rounded-xl">
+<div class="hero-banner-static flex flex-col justify-start items-stretch w-full relative overflow-hidden bg-hero-beige-light rounded-xl">
   <!-- Caption: gradient headline + subtitle (site header overlays this card on home) -->
   <div class="hero-caption z-[5] w-full max-w-[90%] relative text-center mx-auto max-md:max-w-[95%]">
     <!-- Gradient text requires -webkit-background-clip which stays in CSS -->
@@ -15,8 +15,8 @@
   </div>
 
   <!-- Video block anchored to bottom of hero -->
-  <div class="absolute inset-0 z-0 bg-[#ecebe7] w-full h-full overflow-hidden" aria-hidden="true">
-    <div class="absolute inset-auto left-0 right-0 bottom-0 w-full">
+  <div class="absolute inset-0 z-0 bg-hero-beige w-full h-full overflow-hidden" aria-hidden="true">
+    <div id="hero-parallax-layer" class="absolute inset-auto left-0 right-0 bottom-0 w-full">
       <div class="hero-video-root relative z-0 w-full overflow-hidden">
         <video
           class="absolute inset-0 w-full h-full object-cover object-center block"
@@ -106,6 +106,10 @@
     inset: -1px 0 auto;
   }
 
+  #hero-parallax-layer {
+    will-change: transform;
+  }
+
   /* Desktop: headline block close under nav; taller video slice */
   @media (min-width: 1024px) {
     .hero-caption {
@@ -127,7 +131,7 @@
   }
 
   /* Tablet — Webflow uses ~820px hero height in991 breakpoint for static hero */
-  @media (max-width: 991px) {
+  @media (max-width: 1023px) {
     .hero-banner-static {
       height: max(480px, min(105vh, 820px));
       max-height: 820px;
@@ -171,3 +175,23 @@
     .hero-gradient { height: 180px; }
   }
 </style>
+
+<script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const layer = document.getElementById('hero-parallax-layer');
+    if (!layer) return;
+
+    const FACTOR = 0.35;
+    let raf = 0;
+
+    function update() {
+      layer.style.transform = `translateY(${window.scrollY * FACTOR}px)`;
+      raf = 0;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    }, { passive: true });
+  })();
+</script>

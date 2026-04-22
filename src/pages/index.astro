@@ -25,7 +25,7 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
       Wraps hero + intro: light gray background, max-width 1360px, centered.
       The hero card (border-radius 48px) fills the rail content box.
     -->
-    <div class="home-hero-wrapper">
+    <div class="bg-bg-hero flex flex-col items-stretch w-full max-w-[var(--home-rail-max)] mx-auto pt-4 px-[var(--home-rail-gutter)] gap-0 overflow-visible box-border lg:pt-10 max-md:max-w-none max-md:p-0">
       <HeroSection />
       <IntroSection />
     </div>
@@ -37,15 +37,15 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
     <TestimonialsSection />
 
     <!--
-      .section__home__lastsection: light (#f7f7f7) rounded-top section containing
+      Last section: light gray (#f7f7f7) rounded-top section containing
       the blog scroll, action cards, and contact form.
     -->
-    <section class="section__home__lastsection">
-      <div class="home-lower-blogscroll w-full">
+    <section class="bg-bg-section-light rounded-t-[40px] flex flex-col justify-center items-center w-full overflow-hidden p-0">
+      <div class="w-full max-w-[var(--home-rail-max)] mx-auto box-border">
         <BlogPreviewSection />
       </div>
 
-      <div class="home-lower-content">
+      <div class="w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] pb-8 bg-bg-section-light rounded-t-[40px] flex flex-col gap-8 box-border max-md:pb-6 max-md:gap-6">
         <ActionCardsSection />
         <ContactCtaSection />
       </div>
@@ -85,100 +85,6 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
       groups.forEach((el) => io.observe(el));
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initHomeScrollReveal, { once: true });
-    } else {
-      initHomeScrollReveal();
-    }
+    document.addEventListener('astro:page-load', initHomeScrollReveal);
   </script>
 </BaseLayout>
-
-<style>
-  /*
-   * Hero wrapper: same horizontal rail as Works / Products / blog / lower content.
-   */
-  .home-hero-wrapper {
-    background-color: #f2f2f2; /* Webflow hero section bg — close to --color-bg but intentionally distinct */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    max-width: var(--home-rail-max);
-    margin-left: auto;
-    margin-right: auto;
-    /* Narrow grey strip above the rounded card (about one header band). */
-    padding-top: 1rem;
-    padding-left: var(--home-rail-gutter);
-    padding-right: var(--home-rail-gutter);
-    gap: 0;
-    overflow: visible;
-    box-sizing: border-box;
-  }
-
-  /*
-   * Last section: light gray (#f7f7f7), top-left/right border-radius 40px,
-   * stacks blog scroll + lower content column.
-   */
-  .section__home__lastsection {
-    background-color: #f7f7f7; /* Webflow last-section bg — no exact token */
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  /* Action cards + contact: same rail as hero video card */
-  .home-lower-content {
-    width: 100%;
-    max-width: var(--home-rail-max);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--home-rail-gutter);
-    padding-right: var(--home-rail-gutter);
-    padding-bottom: 2rem;
-    background-color: #f7f7f7;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    /* Same step between action row → contact → space before footer (incl. open-source block below) */
-    gap: 2rem;
-    box-sizing: border-box;
-  }
-
-  /* Blog block: same max width as hero; horizontal gutters in BlogPreviewSection. */
-  .home-lower-blogscroll {
-    width: 100%;
-    max-width: var(--home-rail-max);
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-  }
-
-  /* ~40px grey strip above hero card on large screens (ref live home / DOM top rhythm) */
-  @media (min-width: 1024px) {
-    .home-hero-wrapper {
-      padding-top: 2.5rem;
-    }
-  }
-
-  @media (max-width: 767px) {
-    /* Hero: edge-to-edge; intro below keeps rail gutters */
-    .home-hero-wrapper {
-      max-width: none;
-      padding-top: 0;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .home-lower-content {
-      padding-bottom: 1.5rem;
-      gap: 1.5rem;
-    }
-  }
-</style>

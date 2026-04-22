@@ -2,10 +2,10 @@
 ---
 
 <!-- Blue gradient section with rounded top corners and 3D card transforms -->
-<section class="works-section scroll-reveal-group w-full min-h-[500px] py-20 pb-[120px] max-md:py-12 max-md:pb-16" aria-labelledby="works-heading">
-  <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-[991px]:flex-col max-[991px]:gap-8 max-md:px-5">
+<section class="works-section scroll-reveal-group w-full min-h-[500px] py-20 pb-section-lg max-md:py-12 max-md:pb-16" aria-labelledby="works-heading">
+  <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-lg:flex-col max-lg:gap-8 max-md:px-5">
     <!-- Text column -->
-    <div class="flex flex-col justify-center items-start w-1/2 max-[991px]:w-full">
+    <div class="flex flex-col justify-center items-start w-1/2 max-lg:w-full">
       <h2 id="works-heading" class="scroll-reveal-item text-white text-3xl font-semibold leading-[3.5rem] mb-4" style="--sr-delay: 0ms">
         Our Works
       </h2>
@@ -27,7 +27,7 @@
 
     <!-- 3D card stack — transforms require CSS -->
     <div
-      class="scroll-reveal-item flex justify-center items-center w-1/2 text-center max-[991px]:w-full max-[991px]:h-[340px] max-md:h-[260px]"
+      class="scroll-reveal-item flex justify-center items-center w-1/2 text-center max-lg:w-full max-lg:h-[340px] max-md:h-[260px]"
       style="--sr-delay: 200ms"
       aria-hidden="true"
     >
@@ -65,6 +65,7 @@
     width: 280px;
     position: relative;
     overflow: visible;
+    will-change: transform;
   }
 
   /* Shared card base — 3D transform-style required for perspective */
@@ -111,3 +112,29 @@
     .works-card--3 { transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(140px, 240px); }
   }
 </style>
+
+<script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const section = document.querySelector('.works-section');
+    const cardwrap = section?.querySelector('.works-cardwrap');
+    if (!section || !cardwrap) return;
+
+    const FACTOR = 0.12;
+    let raf = 0;
+
+    function update() {
+      const rect = section.getBoundingClientRect();
+      // offset is positive when section is below viewport center, negative when above
+      const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * FACTOR;
+      cardwrap.style.transform = `translateY(${-offset}px)`;
+      raf = 0;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    }, { passive: true });
+
+    update();
+  })();
+</script>

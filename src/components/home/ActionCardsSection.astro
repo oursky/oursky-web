@@ -22,7 +22,7 @@ const socialLinks = [
 
 <div class="scroll-reveal-group grid grid-cols-2 max-md:grid-cols-1 gap-5 pt-10 w-full">
   <!-- Left card: Newsletter -->
-  <div class="rounded-lg p-8 flex flex-col gap-6 bg-[#1a4fff]">
+  <div class="rounded-lg p-8 flex flex-col gap-6 bg-newsletter-blue">
     <p class="scroll-reveal-item text-xl font-bold text-white leading-tight m-0" style="--sr-delay: 0ms">Get updates and tips from the team</p>
     <form class="scroll-reveal-item flex gap-3 flex-wrap" style="--sr-delay: 55ms" action="#" method="post" onsubmit="return false">
       <label for="newsletter-email" class="sr-only">Your Email</label>
@@ -37,7 +37,7 @@ const socialLinks = [
       />
       <button
         type="submit"
-        class="flex-none px-6 py-3 rounded-full border-2 border-white/70 bg-transparent text-white text-sm font-semibold cursor-pointer hover:bg-white hover:text-[#1a4fff] hover:border-white transition-all"
+        class="flex-none px-6 py-3 rounded-full border-2 border-white/70 bg-transparent text-white text-sm font-semibold cursor-pointer hover:bg-white hover:text-newsletter-blue hover:border-white transition-all"
       >
         Subscribe
       </button>
@@ -45,7 +45,7 @@ const socialLinks = [
   </div>
 
   <!-- Right card: Follow Us -->
-  <div class="rounded-lg p-8 flex flex-col gap-6 bg-[#2c2c2c]">
+  <div class="rounded-lg p-8 flex flex-col gap-6 bg-social-dark">
     <p class="scroll-reveal-item text-xl font-bold text-white m-0" style="--sr-delay: 110ms">Follow Us</p>
     <div class="scroll-reveal-item flex gap-5 items-center flex-wrap" style="--sr-delay: 175ms" aria-label="Social media links">
       {socialLinks.map((s) => (

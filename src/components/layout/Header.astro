@@ -53,7 +53,7 @@ function isActive(href: string): boolean {
       class="header__nav-center header__nav-center--desktop relative z-[1] flex min-w-0 flex-1 justify-center px-0.5 max-md:max-w-[min(100%,26rem)] max-md:flex-none md:pointer-events-none md:absolute md:inset-x-0 md:top-1/2 md:z-[1] md:flex md:w-full md:max-w-none md:flex-none md:-translate-y-1/2 md:justify-center md:px-0"
     >
       <nav
-        class="pill nav-pill flex max-w-full flex-none gap-0.5 overflow-x-auto px-1 py-0.5 max-md:gap-1 sm:gap-1 sm:px-1.5 sm:py-1 md:pointer-events-auto lg:gap-1 lg:p-3"
+        class="pill nav-pill flex max-w-full flex-none gap-0.5 overflow-x-auto px-1 py-0.5 max-md:gap-1 sm:gap-1 sm:px-1.5 sm:py-1 md:pointer-events-auto lg:gap-1 lg:px-3 lg:py-2"
         aria-label="Main navigation"
       >
         <!-- Phone: logo inside nav bar replaces Home (ref: Webflow .navbar__icon) -->
@@ -296,7 +296,7 @@ function isActive(href: string): boolean {
   .logo-pill,
   .nav-pill {
     background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #eeeeee;
+    border: 1px solid var(--color-border);
   }
 
   .contact-pill {
@@ -306,7 +306,7 @@ function isActive(href: string): boolean {
 
   .logo-pill:hover {
     transform: scale(1.05);
-    background-color: #fff;
+    background-color: var(--color-brand-white);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
   }
 
@@ -323,9 +323,7 @@ function isActive(href: string): boolean {
 
   @media (max-width: 1023px) {
     .header .logo-pill.pill {
-      height: auto;
-      min-height: 2.5rem;
-      max-height: 2.625rem;
+      height: 3rem;
       min-width: 0;
       width: auto;
       max-width: 5.75rem;
@@ -336,7 +334,7 @@ function isActive(href: string): boolean {
   .nav-pill {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    align-items: center;
+    align-items: stretch;
   }
 
   .nav-pill::-webkit-scrollbar {
@@ -356,7 +354,7 @@ function isActive(href: string): boolean {
   }
 
   .nav-pill__brand--active {
-    background-image: radial-gradient(circle, #0b40ffc4, #0022ffc9);
+    background-image: radial-gradient(circle, var(--color-nav-active-from), var(--color-nav-active-to));
     box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.2), 0 2px 10px rgba(0, 0, 0, 0.18);
   }
 
@@ -366,7 +364,7 @@ function isActive(href: string): boolean {
 
   .nav-link--active {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    background-image: radial-gradient(circle, #0b40ffc4, #0022ffc9);
+    background-image: radial-gradient(circle, var(--color-nav-active-from), var(--color-nav-active-to));
     box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.2), 0 3px 14px rgba(0, 0, 0, 0.2);
   }
 
@@ -377,9 +375,7 @@ function isActive(href: string): boolean {
 
   @media (max-width: 1023px) {
     .header .nav-pill.pill {
-      height: auto;
-      min-height: 2.5rem;
-      max-height: 2.625rem;
+      height: 3rem;
       /* Stretch row children so active (blue) nav links match full pill height — tablet + phone */
       align-items: stretch;
     }
@@ -388,15 +384,16 @@ function isActive(href: string): boolean {
       display: flex;
       align-items: center;
       box-sizing: border-box;
+      height: auto;
       padding-top: 0.28rem;
       padding-bottom: 0.28rem;
     }
 
     .header .contact-pill.pill {
-      height: 2.5rem;
-      width: 2.5rem;
-      min-width: 2.5rem;
-      min-height: 2.5rem;
+      height: 3rem;
+      width: 3rem;
+      min-width: 3rem;
+      min-height: 3rem;
       padding: 0;
     }
   }
@@ -410,19 +407,40 @@ function isActive(href: string): boolean {
       display: none;
     }
 
+    /*
+     * @media here (not max-md: inline classes) because these rules use complex selectors
+     * (.header .nav-pill.pill) that need specificity — can't be expressed as Tailwind utilities.
+     * 767px = Tailwind md boundary.
+     */
+    .header .nav-pill.pill {
+      min-height: 3rem;
+      max-height: 3rem;
+      align-items: center;
+    }
+
+    /* Active (blue) highlight pill fixed at 32px so it floats inside the taller nav pill */
+    .header .nav-pill .nav-link {
+      height: 32px;
+      align-self: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     /* Nav + contact as one centered group; contact height matches nav pill */
     .header .contact-pill.pill {
-      height: 2.625rem;
-      width: 2.625rem;
-      min-width: 2.625rem;
-      min-height: 2.625rem;
-      max-height: 2.625rem;
+      height: 3rem;
+      width: 3rem;
+      min-width: 3rem;
+      min-height: 3rem;
+      max-height: 3rem;
       flex-shrink: 0;
       align-self: center;
     }
 
     .nav-pill__brand {
-      padding: 0.22rem 0.38rem;
+      height: 32px;
+      align-self: center;
+      padding: 0.25rem 0.45rem;
     }
 
     .header-wrapper {

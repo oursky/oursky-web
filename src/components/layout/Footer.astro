@@ -32,7 +32,7 @@ const clockSvgPaths = `
 <footer class="w-full max-w-[1360px] mx-auto px-10 pb-10 box-border max-md:px-5 max-md:pb-5">
 
   <!-- Dark card: logo + clocks -->
-  <div class="bg-black rounded-lg flex justify-between items-center px-10 py-12 pb-16 gap-8 mb-8 max-[991px]:flex-col max-[991px]:items-start max-[991px]:px-8 max-[991px]:py-10 max-md:px-6 max-md:py-8 max-md:mb-6">
+  <div class="bg-black rounded-lg flex justify-between items-center px-10 py-12 pb-16 gap-8 mb-8 max-lg:flex-col max-lg:items-start max-lg:px-8 max-lg:py-10 max-md:px-6 max-md:py-8 max-md:mb-6">
     <!-- Left: OURSKY logo + "We are hiring!" -->
     <div class="flex flex-col gap-3 justify-between shrink-0">
       <div class="flex items-center gap-2 pr-10">
@@ -45,14 +45,14 @@ const clockSvgPaths = `
             class="w-40 block h-auto"
             onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
           />
-          <span class="text-[1.75rem] font-black text-white tracking-[-0.02em]" style="display:none">OURSKY</span>
+          <span class="text-xl-plus font-black text-white tracking-[-0.02em]" style="display:none">OURSKY</span>
         </a>
       </div>
       <a
         href="https://jobs.oursky.com"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1 text-[#ffbb55] text-lg font-bold leading-[2.375rem] no-underline transition-opacity hover:opacity-60"
+        class="inline-flex items-center gap-1 text-primary-dark text-lg font-bold leading-footer no-underline transition-opacity hover:opacity-60"
       >
         We are hiring!
         <span class="font-bold" aria-hidden="true">→</span>
@@ -60,7 +60,7 @@ const clockSvgPaths = `
     </div>
 
     <!-- Right: two live clocks -->
-    <div class="flex gap-12 items-start max-[991px]:gap-8 max-md:flex-col max-md:gap-6">
+    <div class="flex gap-12 items-start max-lg:gap-8 max-md:flex-col max-md:gap-6">
       <!-- HK clock -->
       <div class="flex gap-8 flex-wrap items-start max-md:gap-5">
         <div id="clock-container--hk" class="flex flex-col items-center justify-center">
@@ -69,12 +69,12 @@ const clockSvgPaths = `
               <Fragment set:html={clockSvgPaths} />
             </svg>
           </div>
-          <p class="text-white mt-3 mb-0 text-lg leading-[2.375rem] max-md:text-base">--:--</p>
+          <p class="text-white mt-3 mb-0 text-lg leading-footer max-md:text-base">--:--</p>
         </div>
         <div class="flex flex-col gap-0">
-          <h3 class="text-white m-0 text-lg font-semibold leading-[2.375rem] max-md:text-base max-md:leading-[1.8rem]">Oursky</h3>
-          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Hong Kong</p>
-          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Taipei</p>
+          <h3 class="text-white m-0 text-lg font-semibold leading-footer max-md:text-base max-md:leading-[1.8rem]">Oursky</h3>
+          <p class="text-white m-0 text-lg leading-footer opacity-80 max-md:text-base max-md:leading-[1.8rem]">Hong Kong</p>
+          <p class="text-white m-0 text-lg leading-footer opacity-80 max-md:text-base max-md:leading-[1.8rem]">Taipei</p>
         </div>
       </div>
 
@@ -86,19 +86,19 @@ const clockSvgPaths = `
               <Fragment set:html={clockSvgPaths} />
             </svg>
           </div>
-          <p class="text-white mt-3 mb-0 text-lg leading-[2.375rem] max-md:text-base">--:--</p>
+          <p class="text-white mt-3 mb-0 text-lg leading-footer max-md:text-base">--:--</p>
         </div>
         <div class="flex flex-col gap-0">
-          <h3 class="text-white m-0 text-lg font-semibold leading-[2.375rem] max-md:text-base max-md:leading-[1.8rem]">Skymakers</h3>
-          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">London</p>
-          <p class="text-white m-0 text-lg leading-[2.375rem] opacity-80 max-md:text-base max-md:leading-[1.8rem]">Manchester</p>
+          <h3 class="text-white m-0 text-lg font-semibold leading-footer max-md:text-base max-md:leading-[1.8rem]">Skymakers</h3>
+          <p class="text-white m-0 text-lg leading-footer opacity-80 max-md:text-base max-md:leading-[1.8rem]">London</p>
+          <p class="text-white m-0 text-lg leading-footer opacity-80 max-md:text-base max-md:leading-[1.8rem]">Manchester</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Open Source bar -->
-  <div class="bg-[#cfeaff] rounded-lg px-8 py-5 flex items-center justify-between max-md:px-6 max-md:py-4">
+  <div class="bg-footer-opensource rounded-lg px-8 py-5 flex items-center justify-between max-md:px-6 max-md:py-4">
     <a href="/open-source" class="no-underline flex-1">
       <span class="text-black text-lg font-bold max-md:text-base">We 😻 Open Source!</span>
     </a>

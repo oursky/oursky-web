@@ -2,11 +2,13 @@
 name: oursky-webflow-page-rebuild
 description: >
   Step-by-step workflow for rebuilding an Oursky.com Webflow page into Astro 6.
-  Based on the refined homepage: Tailwind-first sections, shared rail tokens,
-  Header.astro (sticky vs fixed home, scroll-direction nav), and global.css
-  scroll-reveal patterns. Covers source analysis, asset migration, component
-  structure, CSS pitfalls, debug patterns, and build verification.
-  Use for Phase 3b (remaining marketing pages) and any future page additions.
+  Tailwind-first sections; standard max-lg/max-md/max-sm breakpoints; @theme
+  design tokens for all colors, text sizes, leading, and spacing; Font Awesome
+  Pro 6.5.1 SVGs inlined into components; Header.astro (sticky vs fixed home,
+  scroll-direction nav); global.css scroll-reveal patterns. Covers source
+  analysis, asset migration, component structure, CSS pitfalls, debug patterns,
+  and build verification. Use for Phase 3b (remaining marketing pages) and any
+  future page additions.
 ---
 
 # Oursky Webflow → Astro Page Rebuild Skill
@@ -25,6 +27,8 @@ Distilled from the real experience of rebuilding the homepage. Follow this top t
 6. `src/data/navigation.ts` — `mainNav`, `ctaLink`, `footerSections`, `narrowHidden`
 7. `src/components/layout/Header.astro` — floating pill nav, home vs inner-page positioning, scroll retract script
 8. `src/pages/index.astro` — home shell (`home-page`, `home-hero-wrapper`, last section), scroll-reveal observer (copy pattern to other marketing pages as needed)
+9. `src/components/home/ActionCardsSection.astro` — reference example of the Tailwind-first section pattern: Tailwind classes for all layout/color/spacing, `<style>` block only for gradient text
+10. `src/components/home/IntroSection.astro` — reference example of a simpler Tailwind-first section with scroll-reveal markup (`scroll-reveal-group`, `scroll-reveal-item`, `--sr-delay`)
 
 ---
 
@@ -41,6 +45,14 @@ ref/oursky-com-2023.webflow/
 ```
 
 **Always read both `index.html` AND `oursky-com-2023.webflow.css` for the target page** before writing any Astro code. The HTML gives structure; the CSS gives exact values (colors, sizes, transforms, gradients).
+
+**Cross-reference both files for every section that contains images.** Webflow frequently applies a CSS `background-image` to a card element *and* places a separate `<img>` child inside it. Reading only the CSS misses the `<img>`; reading only the HTML misses the background fill. For each section:
+
+1. Find every `<img>` tag in the ref HTML for that section
+2. Find every `background-image` rule for the same card/container class in the CSS
+3. If both exist on the same element, decide which layer(s) to port — check the live site to confirm which is the primary visible photo
+
+Porting only one layer when both exist produces broken output (e.g. dark blank cards when only the background fill is ported but the foreground `<img>` is missed).
 
 > ⚠️ `ref/` is temporary and will be deleted. Never reference it from code — copy assets to `public/` first.
 
@@ -86,6 +98,17 @@ Key things to extract for each section:
 - CSS transforms (especially 3D: `rotateX`, `rotateZ`, `translate`, `transform-style`)
 - `overflow` values
 - Responsive breakpoints (`@media` rules at end of file, often lines 4000+)
+
+### ⚠️ Webflow dual-layer image pattern
+
+Webflow often places a CSS `background-image` on a card element **and** a separate `<img>` child inside it. They are not interchangeable:
+
+| Layer | CSS location | Visually |
+|---|---|---|
+| Card fill | `background-image` on `.card` | Full-bleed behind everything |
+| Portrait photo | `<img class="people__img">` with `border-radius: 1000px` | Circular foreground image |
+
+**Porting only the background produces dark/blank cards.** When you see `background-image` on a card class in the CSS, immediately check whether there is also an `<img>` inside that card in the HTML. If so, the `<img>` is likely the primary visible photo; decide which layer(s) to carry over based on what the live site actually shows.
 
 ---
 
@@ -281,44 +304,109 @@ CSS for the transition uses **`cubic-bezier` + transform + opacity** in the comp
 
 **Token → Tailwind class mapping** (from `src/styles/global.css @theme`):
 
+#### Colors
+
 | Design intent | Tailwind class | Value |
 |---|---|---|
 | White text / fill | `text-white` / `bg-white` | `#ffffff` |
 | Black text / fill | `text-black` / `bg-black` | `#000000` |
-| Body text color | `text-text` | `#333333` |
+| Body text | `text-text` | `#333333` |
 | Muted / secondary text | `text-text-muted` | `#726f70` |
 | Amber accent | `text-primary` / `bg-primary` | `#e29f34` |
 | Amber CTA (brighter) | `text-primary-dark` / `bg-primary-dark` | `#ffbb55` |
 | Card surface white | `bg-surface` | `#ffffff` |
+| Page background | `bg-bg` | `#f3f3f3` |
+| Hero strip background | `bg-bg-hero` | `#f2f2f2` |
+| Last-section background | `bg-bg-section-light` | `#f7f7f7` |
 | Muted bg / placeholder | `bg-muted` | `#ececec` |
 | Accent gray | `bg-accent` | `#d9d9d9` |
 | Input bg | `bg-input` | `#f1f1f1` |
 | Border color | `border-border` | `#eeeeee` |
-| Small text 12px | `text-xs` | `0.75rem` |
-| Body text 14px | `text-sm` | `0.875rem` |
+| Mid-tone borders | `border-border-mid` | `#a3a3a3` |
+| Dev services blue | `bg-section-blue` | `#2064e8` |
+| Why Oursky blue (darker) | `bg-section-blue-dark` | `#0c53df` |
+| CTA card light blue | `bg-section-blue-light` | `#eff6fa` |
+| Motto card gray-blue | `bg-section-gray-blue` | `#dde2ec` |
+| Design services warm gray | `bg-section-warm-gray` | `#a19d96` |
+| Newsletter card blue | `bg-newsletter-blue` | `#1a4fff` |
+| Social links dark | `bg-social-dark` | `#2c2c2c` |
+| Client logos dark | `bg-logos-dark` | `#181818` |
+| Hero outer beige | `bg-hero-beige` | `#ecebe7` |
+| Hero inner beige | `bg-hero-beige-light` | `#e6e5e3` |
+| Open source bar | `bg-footer-opensource` | `#cfeaff` |
+| Footer background | `bg-footer-bg` | `#000000` |
+| Footer accent amber | `text-footer-accent` | `#ffbb55` |
+| Link on dark bg | `text-link-on-dark` | `#ffff00` |
+
+**Intentional one-offs** (these values have no `@theme` token — use arbitrary Tailwind):
+```astro
+bg-[#00aeff]   <!-- works section hero gradient base -->
+```
+
+> **Rule:** reach for a color token first. If none exists and the value appears only once across the whole codebase, use an arbitrary value. If it appears 2+ times, add a token to `global.css @theme` instead.
+
+#### Typography — text size
+
+| Design intent | Tailwind class | Value |
+|---|---|---|
+| Small label / tag 12px | `text-xs` | `0.75rem` |
+| Body base 14px | `text-sm` | `0.875rem` |
 | Base text 16px | `text-base` | `1rem` |
 | Large text 20px | `text-lg` | `1.25rem` |
 | XL text 24px | `text-xl` | `1.5rem` |
-| 2XL text 32px | `text-2xl` | `2rem` |
-| 3XL text 48px | `text-3xl` | `3rem` |
+| Between xl and 2xl 28px | `text-xl-plus` | `1.75rem` |
+| 2XL 32px | `text-2xl` | `2rem` |
+| 3XL section title 48px | `text-3xl` | `3rem` |
+| 4XL 52px hero | `text-4xl` | `3.25rem` |
+| Inner page hero title 64px | `text-5xl` | `4rem` |
+| Large display text 72px | `text-6xl` | `4.5rem` |
+| Hero heading 80px | `text-hero-primary` | `5rem` |
+| Hero subtitle 40px | `text-hero-secondary` | `2.5rem` |
+
+#### Typography — font weight
+
+| Design intent | Tailwind class | Value |
+|---|---|---|
 | Normal weight | `font-normal` | `400` |
 | Medium weight | `font-medium` | `500` |
 | Semibold weight | `font-semibold` | `600` |
+| Bold weight | `font-bold` | `700` |
 | Black / heading weight | `font-black` | `900` |
-| Small radius 6px | `rounded-sm` | `0.375rem` |
-| Card radius 12px | `rounded-md` | `0.75rem` |
-| Large card radius 24px | `rounded-lg` | `1.5rem` |
-| Hero card radius 48px | `rounded-xl` | `3rem` |
-| Pill radius | `rounded-full` | `9999px` |
 
-**Hardcoded Webflow-specific colors** (no token — use arbitrary values):
-```astro
-bg-[#e6e5e3]   <!-- hero beige -->
-bg-[#181818]   <!-- client logos dark -->
-bg-[#1a4fff]   <!-- newsletter blue -->
-bg-[#00aeff]   <!-- works section base -->
-bg-[#2c2c2c]   <!-- social card dark -->
-```
+#### Typography — line height
+
+| Design intent | Tailwind class | Value |
+|---|---|---|
+| Compact body / card text | `leading-snug` | `1.4rem` (22.4px) |
+| Footer clock labels | `leading-footer` | `2.375rem` (38px) |
+| Hero description | `leading-desc` | `2.5rem` (40px) |
+| Hero description at mobile | `leading-desc-sm` | `1.75rem` (28px) |
+| Section card headings | `leading-section` | `3.5rem` (56px) |
+| Inner page hero at tablet | `leading-hero-sm` | `3rem` (48px) |
+| Hero heading | `leading-hero` | `5rem` (80px) |
+
+#### Spacing
+
+| Design intent | Tailwind class | Value |
+|---|---|---|
+| Section vertical spacing 60px | `mt-section` / `mb-section` / `pt-section` / `pb-section` | `3.75rem` |
+| Section large spacing 120px | `mt-section-lg` / `pb-section-lg` etc. | `7.5rem` |
+| Inner page container top (desktop) | `pt-page-top` | `13.5rem` |
+| Inner page container top (tablet) | `pt-page-top-tablet` | `7.37rem` |
+| Mobile horizontal gutter | `px-page-x` | `1.25rem` |
+| Desktop horizontal gutter | `px-page-x-lg` | `2.5rem` |
+
+#### Border radius
+
+| Design intent | Tailwind class | Value |
+|---|---|---|
+| Small 6px | `rounded-sm` | `0.375rem` |
+| Card / thumbnail 12px | `rounded-md` | `0.75rem` |
+| Large card / footer 24px | `rounded-lg` | `1.5rem` |
+| Hero banner 48px | `rounded-xl` | `3rem` |
+| Pill | `rounded-full` | `9999px` |
+
+> **Rule on arbitrary values:** if a rem/px value maps to an existing token, always use the token class. If it maps to a Tailwind default (e.g. `leading-8` = `2rem`), use the default. Only use `text-[…]` / `leading-[…]` / `mt-[…]` etc. when there is genuinely no matching token or default.
 
 ### What stays in a `<style>` block (cannot do in Tailwind)
 
@@ -353,13 +441,48 @@ When you do use a `<style>` block, write plain CSS values (no `var(--token, fall
 
 ### Tailwind responsive breakpoints
 
-| CSS media query | Tailwind equivalent |
-|---|---|
-| `@media (max-width: 767px)` | `max-md:` |
-| `@media (max-width: 1023px)` | `max-lg:` |
-| `@media (max-width: 991px)` | `max-[991px]:` |
-| `@media (min-width: 768px)` | `md:` |
-| `@media (min-width: 1024px)` | `lg:` |
+**All responsive changes go on the HTML element as Tailwind variant classes** — not in a `<style>` block.
+
+```astro
+<!-- ✅ Responsive via Tailwind variants -->
+<h1 class="text-5xl leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">…</h1>
+
+<!-- ❌ Do not add @media to a style block just for responsive layout -->
+<h1 class="page-title">…</h1>
+<style>
+  .page-title { font-size: 4rem; }
+  @media (max-width: 767px) { .page-title { font-size: 2.5rem; } }
+</style>
+```
+
+**Standard named breakpoints to use:**
+
+| Tailwind class | CSS equivalent | Use for |
+|---|---|---|
+| `max-sm:` | `max-width: 639px` | Small mobile only |
+| `max-md:` | `max-width: 767px` | Mobile layout |
+| `max-lg:` | `max-width: 1023px` | Tablet + mobile layout |
+| `md:` | `min-width: 768px` | Tablet and up |
+| `lg:` | `min-width: 1024px` | Desktop only |
+
+**Map Webflow's `991px` breakpoint to `max-lg:` (1023px).** The visual difference is negligible and keeps the codebase on one consistent scale.
+
+**When is `@media` inside a `<style>` block legitimate?**  
+Only when the style block is already justified (e.g. a keyframe animation, `prefers-reduced-motion` override, or complex selector) *and* that same CSS rule needs to vary by viewport. The canonical example in this codebase is `TestimonialsSection.astro`, where the marquee animation is replaced by an accessible scroll container at narrow widths:
+
+```css
+/* Legitimate — already in a style block for keyframes; @media changes the animation */
+@keyframes testimonials-marquee-scroll { … }
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-marquee__track { animation: none; overflow-x: auto; … }
+}
+@media (prefers-reduced-motion: reduce) and (max-width: 1023px) {
+  .testimonials-marquee__track { padding-left: 1.25rem; … }
+}
+```
+
+If such a `@media` is needed, use the same pixel values as the Tailwind named breakpoints (1023 / 767 / 639px). Never use Webflow's `991px`.
 
 ### Common Tailwind patterns for Webflow layouts
 
@@ -498,7 +621,274 @@ See **§4b**. This is client JS + scoped CSS in `Header.astro`, not Webflow expo
 
 ---
 
-## 9. URL Parity
+## 9. Icons — Font Awesome Pro 6.5.1
+
+The Webflow export used **Font Awesome Pro** icons. We now have the FA Pro 6.5.1 desktop kit under `ref/fontawesome-pro-6.5.1-desktop/` (temporary — will be deleted).
+
+> ⚠️ **Never reference `ref/` from code.** Copy the SVG content (not the file) into your component.
+
+### Available style variants
+
+```
+ref/fontawesome-pro-6.5.1-desktop/svgs/
+  solid/      ← filled; use for UI icons and decorative icons
+  regular/    ← medium weight; use when solid feels too heavy
+  light/      ← thinnest; use sparingly for large display icons
+  brands/     ← social/brand logos (GitHub, LinkedIn, X, etc.)
+```
+
+**Default: `solid/`** unless the design calls for a lighter weight.
+
+### Do you need the 6.5.1 folder?
+
+**No, not for any icon that already appears in the Webflow HTML export.**
+
+Webflow inlines FA Pro paths directly into the HTML (at version 6.6.0 or 6.7.2). Those paths differ slightly from the 6.5.1 ref files. Using the ref file for an icon that's already in the HTML gives you subtly wrong geometry.
+
+| Situation | Where to get the path |
+|---|---|
+| Icon already embedded in a Webflow `.html` file | Copy `<path d="..."/>` from the HTML — not from ref |
+| New icon needed that doesn't appear in any Webflow page | Read from `ref/fontawesome-pro-6.5.1-desktop/svgs/<style>/<name>.svg` |
+
+The 6.5.1 folder is **browse-only** for this project — use it to find icon names and check what exists. The actual path data comes from the Webflow HTML.
+
+### Font-mode icons (services page) — how to identify them
+
+The services page (`services.html`) renders icons using a webfont (`<span class="font-fa">`). The unicode characters that select the glyph are embedded in the HTML as raw bytes but **are invisible in text editors** (private-use area, e.g. `U+E5EB`). Do NOT try to read them with a text tool — use the binary extraction method below.
+
+**⚠️ Do not use a browser or curl to get these.** The live site renders the same empty-looking spans; the visible glyph is painted entirely by the font renderer and has no representation in the DOM source.
+
+#### Extracting font-mode icon names (one-time, already done for services page)
+
+```bash
+pip3 install fonttools brotli   # only needed once
+
+python3 << 'EOF'
+import json, re
+from fontTools.ttLib import TTFont
+
+# 1. Build unicode→name map from FA metadata
+with open("ref/fontawesome-pro-6.5.1-desktop/metadata/icons.json") as f:
+    icons = json.load(f)
+unicode_to_name = {data["unicode"].upper(): name for name, data in icons.items() if data.get("unicode")}
+
+# 2. Read the Webflow HTML as bytes (text tools won't show the chars)
+with open("ref/oursky-com-2023.webflow/services.html", "rb") as f:
+    content = f.read()
+
+# 3. Decode each font-fa span's embedded codepoint
+for match in re.finditer(b'font-fa[^<]*>', content):
+    trailing = content[match.end():match.end()+4]
+    char = trailing.decode("utf-8", errors="replace")[0]
+    cp = ord(char)
+    if cp > 0x007E:   # ignore plain ASCII
+        hex_str = f"{cp:04X}"
+        print(f"U+{hex_str}  {unicode_to_name.get(hex_str, '<unknown>')}")
+EOF
+```
+
+Icon names come back in DOM order (matches the visual top-to-bottom order on the page). Cross-reference with the section headings in the HTML to confirm which name belongs to which card.
+
+### Workflow
+
+**For icons already in Webflow HTML (inline SVG):**
+1. Find the `<svg>` element in the relevant Webflow `.html` file
+2. Copy the `<path d="..."/>` content — strip the `<!--! Font Awesome Pro ... -->` comment
+3. Wrap in `<svg xmlns="..." viewBox="..." width="32" height="32" fill="currentColor" aria-hidden="true">...</svg>`
+
+**For font-mode icons (services page and similar):**
+1. Run the binary extraction script above to get the icon name for each span
+2. Fetch the path from `ref/fontawesome-pro-6.5.1-desktop/svgs/sharp-light/<name>.svg`
+3. Inline with `width="32" height="32" fill="currentColor" aria-hidden="true"`
+
+**For new icons not in any Webflow HTML:**
+1. Browse `ref/fontawesome-pro-6.5.1-desktop/svgs/sharp-light/` to find the right icon
+2. Read the file to get the SVG markup
+3. Inline it into the component with `width="32" height="32" fill="currentColor" aria-hidden="true"`
+
+### Pattern — inline SVG in component
+
+FA Pro icons use `fill` not `stroke`. Add `fill="currentColor"` (or omit — FA paths default fill to the current color context). Control color via the parent's `text-*` class.
+
+```astro
+---
+const items = [
+  {
+    title: 'Agile Development',
+    // Copied from ref/fontawesome-pro-6.5.1-desktop/svgs/solid/bolt.svg
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="currentColor" aria-hidden="true">
+      <path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/>
+    </svg>`,
+    description: '...',
+  },
+];
+---
+
+<!-- Render icon — parent text-* sets fill color -->
+<div class="text-white" set:html={item.icon} />
+```
+
+### Sizing
+
+FA Pro icons have a variable `viewBox` (not always `0 0 24 24`). Always set explicit `width` and `height` on the `<svg>` element to control render size — do not rely on the viewBox dimensions.
+
+| Use case | `width` / `height` |
+|---|---|
+| Inline UI icon | `20` / `20` |
+| Card / feature icon | `32` / `32` |
+| Large display icon | `48` / `48` |
+
+### Finding icon names
+
+```bash
+# Search available icons
+ls ref/fontawesome-pro-6.5.1-desktop/svgs/solid/ | grep "arrow"
+ls ref/fontawesome-pro-6.5.1-desktop/svgs/brands/ | grep "github"
+```
+
+Metadata index (icon names, search terms, categories):
+```
+ref/fontawesome-pro-6.5.1-desktop/metadata/icons.json
+ref/fontawesome-pro-6.5.1-desktop/metadata/categories.yml
+```
+
+### Exact icon map — every FA icon used on oursky.com
+
+> **Priority rule:** Webflow already inlines the FA Pro paths directly into the HTML. For every icon below that is already embedded, **copy the `<path>` from the Webflow HTML page** — not from the ref SVG file. The ref 6.5.1 files have slightly different path data (different version). Use the ref files only when you need an icon that doesn't already appear in any Webflow HTML page.
+
+#### index.html + detail_blogs.html — Blog carousel scroll buttons
+
+| Placement | FA icon name | Ref file | Color | Note |
+|---|---|---|---|---|
+| Blog scroll ← | `chevron-left` | `solid/chevron-left.svg` | `white` (fill) | Already inline in HTML |
+| Blog scroll → | `chevron-right` | `solid/chevron-right.svg` | `white` (fill) | Already inline in HTML |
+
+#### about.html — Motto card icon (font-mode FA Sharp Light)
+
+| Placement | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| "All we care is the Code and UX" heading | U+E1A9 | `hand-horns` | `sharp-light/hand-horns.svg` |
+
+Rendered in `OurValueSection.astro` — `width="52" height="52"`, `fill="currentColor"` (black text context).
+
+#### about.html — Statistics section (6 icons, FA Pro 6.6.0)
+
+| Statistic label | FA icon name | Ref file | Fill color |
+|---|---|---|---|
+| 15+ Years of web/app experiences | `hexagon-check` | `solid/hexagon-check.svg` | `#39c086` |
+| 70+ Experts | `people-group` | `solid/people-group.svg` | `#146aff` |
+| 3+ Offices (UK · TW · HK · JP) | `location-smile` | `solid/location-smile.svg` | `#40afd4` |
+| 5m+ Single app with most users | `cloud-arrow-down` | `solid/cloud-arrow-down.svg` | `#2a97c6` |
+| 150+ Projects Shipped | `trophy` | `solid/trophy.svg` | `#2a4b83` |
+| 8+ Featured on AppStore / Play Store | `trophy-star` | `solid/trophy-star.svg` | `#e9a125` |
+
+All six are `height="48" width="48"` in Webflow. Copy paths from `ref/oursky-com-2023.webflow/about.html` lines 108–144.
+
+#### service/ai.html — Statistics section (FA Pro 6.7.2)
+
+| Statistic label | FA icon name | Ref file | Fill color | Note |
+|---|---|---|---|---|
+| Years of Proven AI expertise | `shield-check` | `solid/shield-check.svg` | `#18CAAA` | Path differs from 6.5.1; copy from HTML |
+
+Other icons in that section are custom SVGs (cloud-download, star/sparkle) — not FA Pro.
+
+#### service/ui-ux-design.html — Statistics section
+
+| Statistic label | FA icon name | Ref file | Fill color |
+|---|---|---|---|
+| (desktop/screen icon) | `display` or `desktop` | `solid/display.svg` | `#1964e6` |
+
+Other icons in that section are custom SVGs — not FA Pro.
+
+#### services.html — Font-mode FA Sharp Light icons (U+xxxx already decoded)
+
+All icons use `sharp-light/` style. Paths come from `ref/fontawesome-pro-6.5.1-desktop/svgs/sharp-light/`.
+
+**Development section (blue card):**
+
+| Section title | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| Software Development | U+E5EB | `gear-complex-code` | `sharp-light/gear-complex-code.svg` |
+| Backend and Microservice Development | U+F233 | `server` | `sharp-light/server.svg` |
+| Artificial Intelligence | U+F2DB | `microchip` | `sharp-light/microchip.svg` |
+
+**Development methodologies (below blue card):**
+
+| Section title | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| Code quality | U+F121 | `code` | `sharp-light/code.svg` |
+| Agile development | U+E4BB | `arrows-spin` | `sharp-light/arrows-spin.svg` |
+| Active communication | U+F0AE | `list-check` | `sharp-light/list-check.svg` |
+| Quality assurance | U+F316 | `file-check` | `sharp-light/file-check.svg` |
+
+**UI/UX Design methodologies:**
+
+| Section title | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| User-centric design | U+F4FC | `user-check` | `sharp-light/user-check.svg` |
+| Usability testing | U+E03E | `telescope` | `sharp-light/telescope.svg` |
+| Lean startup | U+E027 | `rocket-launch` | `sharp-light/rocket-launch.svg` |
+
+#### service/ai.html — Font-mode FA Sharp Light icons (not yet built)
+
+| Placement | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| Stat 1 | U+E027 | `rocket-launch` | `sharp-light/rocket-launch.svg` |
+| Stat 2 | U+F76C | `cloud-bolt` | `sharp-light/cloud-bolt.svg` |
+| Stat 3 | U+E1EC | `microchip-ai` | `sharp-light/microchip-ai.svg` |
+| Methodology: Code quality | U+F121 | `code` | `sharp-light/code.svg` |
+| Methodology: Design process | U+F5AE | `pen-ruler` | `sharp-light/pen-ruler.svg` |
+| Methodology: Active communication | U+F0AE | `list-check` | `sharp-light/list-check.svg` |
+| Methodology: QA | U+F316 | `file-check` | `sharp-light/file-check.svg` |
+
+#### service/software-development.html — Font-mode FA Sharp Light icons (not yet built)
+
+| Placement | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| Stat 1 | U+F0FB | `jet-fighter` | `sharp-light/jet-fighter.svg` |
+| Stat 2 | U+F0C0 | `users` | `sharp-light/users.svg` |
+| Stat 3 | U+F2F1 | `rotate` | `sharp-light/rotate.svg` |
+| Methodology: Code quality | U+F121 | `code` | `sharp-light/code.svg` |
+| Methodology: Design process | U+F5AE | `pen-ruler` | `sharp-light/pen-ruler.svg` |
+| Methodology: Active communication | U+F0AE | `list-check` | `sharp-light/list-check.svg` |
+| Methodology: QA | U+F316 | `file-check` | `sharp-light/file-check.svg` |
+
+#### service/ui-ux-design.html — Font-mode FA Sharp Light icons (not yet built)
+
+| Placement | Unicode | FA icon name | Ref file |
+|---|---|---|---|
+| Stat 1 | U+E595 | `users-viewfinder` | `sharp-light/users-viewfinder.svg` |
+| Stat 2 | U+F4BC | `hand-heart` | `sharp-light/hand-heart.svg` |
+| Stat 3 | U+F2F1 | `rotate` | `sharp-light/rotate.svg` |
+| Process step 1–6 | U+E0EE–U+E0F3 | `circle-1` … `circle-6` | `sharp-light/circle-1.svg` … |
+| Methodology: Code quality | U+F121 | `code` | `sharp-light/code.svg` |
+| Methodology: Design process | U+F5AE | `pen-ruler` | `sharp-light/pen-ruler.svg` |
+| Methodology: Active communication | U+F0AE | `list-check` | `sharp-light/list-check.svg` |
+| Methodology: QA | U+F316 | `file-check` | `sharp-light/file-check.svg` |
+
+### Common icon → file mapping (additional icons for new pages)
+
+| Design intent | FA Pro file |
+|---|---|
+| Arrow right / CTA | `solid/arrow-right.svg` |
+| Checkmark / verified | `solid/check.svg` / `solid/circle-check.svg` |
+| Code / development | `solid/code.svg` / `solid/brackets-curly.svg` |
+| Design / paintbrush | `solid/paintbrush.svg` |
+| Rocket / launch | `solid/rocket.svg` |
+| Users / team | `solid/users.svg` |
+| Chart / analytics | `solid/chart-line.svg` |
+| Globe | `solid/globe.svg` |
+| Envelope / email | `solid/envelope.svg` |
+| Map pin / location | `solid/location-dot.svg` |
+| GitHub | `brands/github.svg` |
+| LinkedIn | `brands/linkedin-in.svg` |
+| X (Twitter) | `brands/x-twitter.svg` |
+| Instagram | `brands/instagram.svg` |
+| YouTube | `brands/youtube.svg` |
+
+---
+
+## 11. URL Parity
 
 All URLs match Webflow exactly. Never change them. From `docs/phase1-handoff.md`:
 
@@ -516,7 +906,7 @@ All URLs match Webflow exactly. Never change them. From `docs/phase1-handoff.md`
 
 ---
 
-## 10. SEO — BaseLayout Props
+## 12. SEO — BaseLayout Props
 
 Always copy `seoTitle` and `seoDesc` **verbatim** from `exports/webflow/pages-metadata.json` for the page being rebuilt. Do not shorten or paraphrase.
 
@@ -545,20 +935,39 @@ Rules:
 
 ---
 
-## 11. Build Verification
+## 13. Build Verification + Visual Check
 
-After every page:
+After every page, two steps are both required — build passing is not enough on its own.
+
+### Step 1 — Build
 ```bash
 npm run build
 ```
+Must pass with **zero TypeScript/Astro errors**. Warnings about missing images are acceptable (Phase 4 image migration). Baseline: **26 pages** after Phase 3a. Each new page adds 1.
 
-Must pass with **zero TypeScript/Astro errors**. Warnings about missing images are acceptable (Phase 4 image migration).
+### Step 2 — Visual comparison against the live Webflow site *(mandatory)*
 
-Baseline: **26 pages** after Phase 3a. Each new page adds 1.
+A clean build only proves the code compiled. It does **not** prove the page looks correct. After every section is built:
+
+1. Open `http://localhost:4321/<slug>` in the browser
+2. Open `https://www.oursky.com/<slug>` alongside it
+3. Scroll through both side-by-side and check:
+   - Every image is visible (not blank, broken, or missing)
+   - Section order matches Webflow
+   - Background colors, rounded corners, and spacing match
+   - Typography (size, weight, color) matches
+   - Layout at tablet (~768px) and mobile (~375px) matches
+
+**Images are the most common failure point.** For every section that contains photos:
+- Confirm `<img>` elements render (not just background-image fills)
+- Confirm circular crops (`border-radius: 9999px`) are applied where Webflow uses them
+- Confirm background-image fills are visible when they are the intended visual layer
+
+> The `PeopleSection` bug (2026-04-22) is the canonical example of why this step is not optional: the build was clean, but the cards were dark and blank because the foreground `<img>` elements were never ported — only the CSS `background-image` was. A 10-second visual comparison would have caught it immediately.
 
 ---
 
-## 12. What's Out of Scope (Phase 3)
+## 14. What's Out of Scope (Phase 3)
 
 - Blog post / works body content (full HTML → MDX is Phase 4)
 - Downloading Webflow CDN images to `public/` (Phase 4)

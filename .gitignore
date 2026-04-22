@@ -39,3 +39,12 @@ Thumbs.db
 # Local test / scratch
 scratch/
 tmp/
+
+# Team-shared AI/editor guidance — keep tracked (CLAUDE.md, .cursor/skills/, .cursor/rules/).
+# Do not add broad ignores for `.cursor/` or `CLAUDE.md` here.
+
+# Font Awesome Pro desktop bundle (local reference only; large / license-sensitive)
+ref/fontawesome-pro-6.5.1-desktop/
+
+# Machine-local Claude Code launcher config
+.claude/launch.json

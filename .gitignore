@@ -46,5 +46,8 @@ tmp/
 # Font Awesome Pro desktop bundle (local reference only; large / license-sensitive)
 ref/fontawesome-pro-6.5.1-desktop/
 
+# Full Webflow static export (local reference only; obtain from Designer or team archive)
+ref/oursky-com-2023.webflow/
+
 # Machine-local Claude Code launcher config
 .claude/launch.json

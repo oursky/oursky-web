@@ -34,7 +34,7 @@ Distilled from the real experience of rebuilding the homepage. Follow this top t
 
 ## 1. Source of Truth: Webflow Export in `ref/`
 
-The `ref/oursky-com-2023.webflow/` folder contains the full Webflow export:
+**Prerequisite:** This export is **not** in git (see `.gitignore`). Before rebuilding any page, unpack the full static Webflow export so this path exists locally—use the team’s shared archive or export from Webflow Designer. Expected layout:
 
 ```
 ref/oursky-com-2023.webflow/

@@ -1,7 +1,7 @@
 # Phase 3 Handoff — Oursky.com Webflow → Astro Migration
 
-**Date:** 2026-04-15 (updated 2026-04-16)  
-**Status:** ✅ Phase 3a Complete + post-3a polish done — 26 pages build successfully, ready for Phase 3b
+**Date:** 2026-04-15 (updated 2026-04-21)  
+**Status:** 🔄 Phase 3b In Progress — 29 pages build successfully
 
 ---
 
@@ -126,22 +126,133 @@ The `SKILL.md` §4 was updated to document this structure and rules for future p
 
 ---
 
+## Phase 3b Polish (completed 2026-04-21)
+
+A codebase-wide audit and cleanup pass applied after the initial 3 pages (contact, about, services) were built.
+
+### Conventions Established
+
+| Convention | Rule |
+|---|---|
+| **Responsive breakpoints** | Always use standard named Tailwind breakpoints: `max-lg:` (≤1023px), `max-md:` (≤767px), `max-sm:` (≤639px). Never use arbitrary `max-[991px]:` etc. `@media` in style blocks must use matching pixel values: 1023px / 767px / 639px. |
+| **Style blocks** | Only for: gradient text (`-webkit-background-clip`), `clamp()`, 3D transforms, `perspective`, `backdrop-filter`, `cubic-bezier` keyframes, `clip-path`, `::placeholder`/`::scrollbar` pseudo-elements, `nth-child`. Everything else → inline Tailwind. |
+| **Color tokens** | All colors from `@theme` via Tailwind classes. No hardcoded hex in class attributes. Only genuine one-offs with no token use arbitrary values. |
+| **Type scale tokens** | `text-xs` through `text-6xl`, `text-hero-primary/secondary`, `text-xl-plus`. No arbitrary `text-[1.75rem]` etc. |
+| **Leading tokens** | `leading-snug`, `leading-footer`, `leading-desc`, `leading-desc-sm`, `leading-section`, `leading-hero-sm`, `leading-hero`. No arbitrary `leading-[Xrem]`. |
+| **Spacing tokens** | `mt-section` / `pb-section-lg` etc. for 60px/120px vertical rhythm. `pt-page-top` / `pt-page-top-tablet` for inner page top padding. |
+| **Icons** | Heroicons outline SVGs inlined as strings in data arrays, rendered via `set:html`. No Font Awesome (stripped from Webflow export). |
+
+### New Tokens Added to `src/styles/global.css`
+
+| Token | Value | Purpose |
+|---|---|---|
+| `--text-5xl` | `4rem` | Inner page hero titles |
+| `--text-6xl` | `4.5rem` | Large display (OurValue motto) |
+| `--text-xl-plus` | `1.75rem` | Between xl and 2xl (intro, tabs) |
+| `--leading-hero` | `5rem` | Hero heading paired with text-5xl/hero-primary |
+| `--leading-hero-sm` | `3rem` | Same at tablet/mobile |
+| `--leading-section` | `3.5rem` | Section card headings (text-3xl) |
+| `--leading-desc` | `2.5rem` | Hero description paragraphs |
+| `--leading-desc-sm` | `1.75rem` | Hero description at mobile |
+| `--leading-footer` | `2.375rem` | Footer clock labels and city names |
+| `--leading-snug` | `1.4rem` | Compact body/card text |
+| `--spacing-section` | `3.75rem` | 60px section vertical spacing unit |
+| `--spacing-section-lg` | `7.5rem` | 120px section vertical spacing large |
+| `--spacing-page-top` | `13.5rem` | Inner page container top (desktop) |
+| `--spacing-page-top-tablet` | `7.37rem` | Inner page container top (tablet) |
+| `--max-w-hero-desc` | `63.25rem` | Hero description container max-width |
+| `--color-bg-hero` | `#f2f2f2` | Hero wrapper / home top strip |
+| `--color-bg-section-light` | `#f7f7f7` | Home last section background |
+| `--color-border-mid` | `#a3a3a3` | Mid-tone borders (tech stack, tabs) |
+| `--color-link-on-dark` | `#ffff00` | Linked text on blue / dark bg |
+
+### Files Updated (Token Cleanup)
+
+| File | Changes |
+|---|---|
+| `src/pages/index.astro` | Style block removed; all CSS → inline Tailwind |
+| `src/pages/contact.astro` | Style block removed |
+| `src/pages/about.astro` | Style block removed |
+| `src/pages/services.astro` | Style block removed |
+| `src/components/about/OurValueSection.astro` | `text-[72px]` → `text-6xl`, `leading-[80px]` → `leading-hero` |
+| `src/components/about/PeopleSection.astro` | `leading-[1.4rem]` → `leading-snug`, `max-[991px]:` → `max-lg:` |
+| `src/components/about/WhatWeDoSection.astro` | `text-[1.75rem]` → `text-xl-plus`, `leading-[2.5rem]` → `leading-desc` |
+| `src/components/services/DesignServicesSection.astro` | `text-[1.2rem]` → `text-lg`, `leading-[1.4rem]` → `leading-snug`; style block removed |
+| `src/components/services/DevelopmentServicesSection.astro` | Style block removed; Heroicons icons added to service + methodology cards |
+| `src/components/services/ServicesHeroSection.astro` | Token classes applied; arbitrary px → tokens |
+| `src/components/services/TechStackSection.astro` | `text-[1.75rem]` → `text-xl-plus` |
+| `src/components/about/AboutHeroSection.astro` | Token classes applied |
+| `src/components/products/ProductsHeroSection.astro` | Style block reduced to gradient text only |
+| `src/components/products/ProductCardsSection.astro` | `@media` block removed; responsive → inline |
+| `src/components/layout/Footer.astro` | `text-[1.75rem]` → `text-xl-plus`, `leading-[2.375rem]` → `leading-footer` |
+| `src/components/home/TestimonialsSection.astro` | `mt-[120px]` → `mt-section-lg`, `pt/mb-[60px]` → `pt/mb-section`, `leading-[1.4rem]` → `leading-snug`, `text-[0.8rem]` → `text-xs` |
+| `src/components/home/IntroSection.astro` | `text-[28px]` → `text-xl-plus`, `mt-[60px]` → `mt-section` |
+| `src/components/home/ProductsSection.astro` | `pb-[120px]` → `pb-section-lg`, `mt-[60px]` → `mt-section` |
+| `src/components/home/WorksPreviewSection.astro` | `pb-[120px]` → `pb-section-lg` |
+| `src/components/home/BlogPreviewSection.astro` (both copies) | `text-[0.7rem]` → `text-xs` |
+
+### SKILL.md Updates
+
+- §5: Expanded token → Tailwind class tables (colors, type scale, leading, spacing, radius)
+- §5: Breakpoints section rewritten — standard named breakpoints required; maps Webflow 991px → `max-lg:`; `@media` must use matching px values
+- §5: Color rules updated — all tokens listed; intentional one-offs documented
+- §9 (new): Heroicons guide — FA Pro replacement, `set:html` pattern, size defaults, icon mapping table
+- Sections renumbered: old §9–§12 → new §11–§14
+- Description updated in frontmatter
+
+---
+
 ## Phase 3b — Remaining Pages (Use the skill)
 
 **Prerequisite skill:** `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md` — read it first.
 
 Priority order from `docs/phase2-handoff.md`:
 
-| Page | Webflow page ID | Status |
-|---|---|---|
-| `/about` | `654dc0d170a7624572225216` | Pending |
-| `/services` | `654dca00f7ddbbf98ffc9862` | Pending |
-| `/service/software-development` | `66f3e0b4442ebaa706ec9f2d` | Pending |
-| `/service/ui-ux-design` | `66f45af96a746027f5fd224b` | Pending |
-| `/service/ai` | `6854baa7b030e17f1e2bcd5f` | Pending |
-| `/products` | `654dca3c0e169ca747a21219` | Pending |
-| `/contact` | `654dca55f5bb0633400ded52` | Pending |
-| `/open-source` | `6630a9ba0322d5a4207257b5` | Pending |
+| Page | Webflow page ID | Status | Notes |
+|---|---|---|---|
+| `/contact` | `654dca55f5bb0633400ded52` | ✅ Done | WorkWithUsSection, FindUsSection, reuses ActionCardsSection |
+| `/about` | `654dc0d170a7624572225216` | ✅ Done | AboutHeroSection, OurValueSection (stats+counter), WhatWeDoSection, PeopleSection |
+| `/services` | `654dca00f7ddbbf98ffc9862` | ✅ Done | ServicesHeroSection, DevelopmentServicesSection (3 cols), DesignServicesSection, TechStackSection (5 tabs), ServiceLetsTalkSection |
+| `/products` | `654dca3c0e169ca747a21219` | ⏭ Skipped | No standalone route exists or is linked — products live in homepage `ProductsSection.astro` only |
+| `/open-source` | `6630a9ba0322d5a4207257b5` | ⏳ Pending | |
+| `/service/software-development` | `66f3e0b4442ebaa706ec9f2d` | ⏳ Pending | |
+| `/service/ui-ux-design` | `66f45af96a746027f5fd224b` | ⏳ Pending | |
+| `/service/ai` | `6854baa7b030e17f1e2bcd5f` | ⏳ Pending | Ref HTML may not exist (newer page) |
+
+**Build count:** 26 baseline → 29 pages after contact + about + services.
+
+### New Files Created (Phase 3b so far)
+
+```
+src/
+  pages/
+    contact.astro                           ✅
+    about.astro                             ✅
+    services.astro                          ✅
+  components/
+    contact/
+      WorkWithUsSection.astro               ✅ — form + email alt
+      FindUsSection.astro                   ✅ — offices (HK/TW + UK/JP)
+    about/
+      AboutHeroSection.astro                ✅ — gradient blue title
+      OurValueSection.astro                 ✅ — motto+why cards + 6-stat grid with animated counters
+      WhatWeDoSection.astro                 ✅ — statement + "Let's Talk" CTA
+      PeopleSection.astro                   ✅ — 7-person team card grid (CSS bg-image overlay)
+    services/
+      ServicesHeroSection.astro             ✅ — gradient blue title
+      DevelopmentServicesSection.astro      ✅ — blue card 3-col + 4 methodology items
+      DesignServicesSection.astro           ✅ — tan card + 3 methodology items
+      TechStackSection.astro                ✅ — bordered card, 5 tab groups (JS toggle)
+      ServiceLetsTalkSection.astro          ✅ — light blue CTA card
+```
+
+### Assets Migrated (Phase 3b so far)
+
+Team photos: `IMG_4131.jpeg`, `sailing.jpeg`, `IMG_4749_Original.jpg`, `frank-3.png`, `frank.png`, `joyz.png`, `may-yeung-photo-m.jpg`, `IMG_6107.jpeg`
+
+Service images: `development-service.webp`, `design-service.webp`
+
+Tech stack logos: `react-native.webp`, `flutter.webp`, `kotlin.png`, `swift.webp`, `graphql.png`, `ionic.webp`, `tailwindcss.png`, `reactjs.svg`, `typescript.webp`, `vite.png`, `storybook.svg`, `k8s.png`, `openai.png`, `helm.png`, `prometheusio.svg`, `terraform.png`, `kubeflow.svg`, `dotnet.png`, `golang.png`, `rails.png`, `python.png`, `fastapi.png`, `celery.png`, `langchain.png`, `github-actions.png`, `gnupg.png`
 
 Per page workflow:
 1. Read `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md` first

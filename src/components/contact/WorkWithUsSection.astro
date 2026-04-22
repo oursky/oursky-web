@@ -1,0 +1,37 @@
+---
+/**
+ * WorkWithUsSection — Contact page hero form area.
+ *
+ * Webflow ref: .work-with-us-section / .work-with-us
+ * Desktop: large inner horizontal padding (7.5rem) centres the form in the rail.
+ * Mobile: padding collapses to 0.
+ */
+import ContactForm from '../ui/ContactForm.astro';
+---
+
+<section class="scroll-reveal-group w-full" aria-label="Contact us">
+  <div class="flex flex-col gap-[3.94rem] px-[7.5rem] max-md:px-0">
+    <h1
+      class="scroll-reveal-item text-3xl font-black text-center text-black leading-section m-0"
+      style="--sr-delay: 0ms"
+    >
+      Work with us
+    </h1>
+    <p
+      class="scroll-reveal-item text-2xl font-normal text-center text-text leading-10 m-0"
+      style="--sr-delay: 60ms"
+    >
+      Let's build it!
+    </p>
+    <div class="scroll-reveal-item" style="--sr-delay: 120ms">
+      <ContactForm />
+    </div>
+    <p
+      class="scroll-reveal-item text-lg font-normal text-center text-black leading-9 m-0"
+      style="--sr-delay: 180ms"
+    >
+      or contact us via <a href="mailto:hello@oursky.com" class="text-primary hover:underline">hello@oursky.com</a>.<br />
+      ❤️ We aim to get back to you in about 2 business days.
+    </p>
+  </div>
+</section>

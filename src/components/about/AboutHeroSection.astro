@@ -1,0 +1,67 @@
+---
+/**
+ * AboutHeroSection — Page title + description + Spline 3D animation.
+ *
+ * Webflow ref: .page-title-section (about variant)
+ * Title: gradient blue text (4rem/600). Description: 2rem/500.
+ * Spline scene loaded via @splinetool/viewer web component (CDN).
+ * Container: aspect-ratio 1360/762, padding-left 43% to right-anchor the scene.
+ */
+---
+
+<section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label="About Oursky">
+  <div class="ml-5 max-w-[80%] max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
+    <h1 class="about-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">About Oursky</h1>
+  </div>
+  <div class="scroll-reveal-item max-w-hero-desc" style="--sr-delay: 80ms">
+    <p class="m-0 pl-5 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm max-md:pl-0">
+      We are a team of engineers, designers and product specialists who build user-centered digital products.
+      Since 2009, Oursky has helped global brands and fast-growing startups create scalable software, intuitive
+      apps and secure platforms through engineering excellence and thoughtful design.
+    </p>
+  </div>
+
+  <!-- Spline 3D animation — right-anchored via padding-left -->
+  <div class="spline-container scroll-reveal-item w-full" style="--sr-delay: 120ms" aria-hidden="true">
+    <spline-viewer
+      url="https://prod.spline.design/z5QsHoaY32POe1Gx/scene.splinecode"
+      loading="lazy"
+      class="block w-full h-full"
+    ></spline-viewer>
+  </div>
+</section>
+
+<!-- Load Spline viewer web component from CDN -->
+<script is:inline type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+
+<style>
+  .about-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /*
+   * Right-anchor the Spline scene.
+   * Webflow used 43% on a full-bleed container; here the section sits inside
+   * the page rail (with gutters), so 35% gives the viewer comparable width.
+   */
+  .spline-container {
+    height: 520px;
+    padding-left: 35%;
+  }
+
+  spline-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .spline-container {
+      height: 280px;
+      padding-left: 20%;
+    }
+  }
+</style>

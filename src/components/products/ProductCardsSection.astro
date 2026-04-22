@@ -1,0 +1,122 @@
+---
+const products = [
+  {
+    href: 'https://www.formx.ai/',
+    name: 'FormX',
+    subtitle: 'Flagship Product',
+    description: 'Extract structured data from mobile captured documents with AI.',
+    image: '/images/formx-productcard.png',
+    bgClass: 'product-card--formx',
+  },
+  {
+    href: 'https://www.authgear.com/',
+    name: 'Authgear',
+    subtitle: 'Flagship Product',
+    description: 'Secure auth and identity solutions for your users and frontline workers',
+    image: '/images/authgearcard.png',
+    bgClass: 'product-card--authgear',
+  },
+];
+---
+
+<section class="product-cards-section w-full scroll-reveal-group" aria-label="Our products">
+  <div class="product-cards max-md:flex-col">
+    {products.map((p, i) => (
+      <a
+        href={p.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={['product-card scroll-reveal-item', p.bgClass]}
+        style={`--sr-delay: ${i * 80}ms`}
+      >
+        <div class="product-card__header">
+          <h3 class="product-card__title max-md:text-[1.4rem]">{p.name}</h3>
+          <h5 class="product-card__subtitle max-md:text-[1rem]">{p.subtitle}</h5>
+        </div>
+        <p class="product-card__desc max-md:text-[1.1rem]">{p.description}</p>
+        <div class="product-card__img-container">
+          <img src={p.image} alt={p.name} class="product-card__img" loading="lazy" />
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .product-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .product-card {
+    flex: 1;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 11px 15px 8px rgba(0, 0, 0, 0.24);
+  }
+
+  .product-card--formx {
+    background-color: #56cdd4;
+  }
+
+  .product-card--formx:hover {
+    transform: scale(1.015);
+  }
+
+  .product-card--authgear {
+    background-color: #2864ff;
+  }
+
+  .product-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.11rem 2.66rem 0;
+  }
+
+  .product-card__title {
+    margin: 0;
+    color: var(--color-brand-white);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+
+  .product-card__subtitle {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.375rem;
+  }
+
+  .product-card__desc {
+    margin: 1.58rem 2.66rem 2.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+
+  .product-card__img-container {
+    width: 100%;
+    flex: 1;
+    aspect-ratio: 666 / 560;
+    overflow: hidden;
+  }
+
+  .product-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+</style>

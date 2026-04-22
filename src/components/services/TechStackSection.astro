@@ -1,0 +1,145 @@
+---
+const tabs = [
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    images: [
+      { src: '/images/react-native.webp', alt: 'React Native' },
+      { src: '/images/flutter.webp', alt: 'Flutter' },
+      { src: '/images/kotlin.png', alt: 'Kotlin' },
+      { src: '/images/swift.webp', alt: 'Swift' },
+      { src: '/images/graphql.png', alt: 'GraphQL' },
+      { src: '/images/ionic.webp', alt: 'Ionic' },
+    ],
+  },
+  {
+    id: 'web',
+    label: 'Web',
+    images: [
+      { src: '/images/tailwindcss.png', alt: 'Tailwind CSS' },
+      { src: '/images/reactjs.svg', alt: 'React' },
+      { src: '/images/typescript.webp', alt: 'TypeScript' },
+      { src: '/images/vite.png', alt: 'Vite' },
+      { src: '/images/storybook.svg', alt: 'Storybook' },
+    ],
+  },
+  {
+    id: 'cloud',
+    label: 'Cloud',
+    images: [
+      { src: '/images/k8s.png', alt: 'Kubernetes' },
+      { src: '/images/openai.png', alt: 'OpenAI' },
+      { src: '/images/helm.png', alt: 'Helm' },
+      { src: '/images/prometheusio.svg', alt: 'Prometheus' },
+      { src: '/images/terraform.png', alt: 'Terraform' },
+      { src: '/images/kubeflow.svg', alt: 'Kubeflow' },
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Back End and Micro-services',
+    images: [
+      { src: '/images/dotnet.png', alt: '.NET' },
+      { src: '/images/golang.png', alt: 'Go' },
+      { src: '/images/rails.png', alt: 'Rails' },
+      { src: '/images/python.png', alt: 'Python' },
+      { src: '/images/fastapi.png', alt: 'FastAPI' },
+      { src: '/images/celery.png', alt: 'Celery' },
+      { src: '/images/langchain.png', alt: 'LangChain' },
+    ],
+  },
+  {
+    id: 'cicd',
+    label: 'CI/CD & DevOps',
+    images: [
+      { src: null, alt: 'Makefile', text: 'Makefile' },
+      { src: '/images/github-actions.png', alt: 'GitHub Actions' },
+      { src: '/images/gnupg.png', alt: 'GnuPG' },
+      { src: null, alt: 'Blackbox', text: 'Blackbox' },
+    ],
+  },
+];
+---
+
+<section class="w-full scroll-reveal-group" aria-label="Our tech stack">
+  <div class="border border-border-mid rounded-lg px-[2.44rem] py-[2.81rem] flex flex-col gap-[3.81rem] scroll-reveal-item" style="--sr-delay: 0ms">
+    <h2 class="m-0 text-3xl font-black leading-section text-black max-sm:text-2xl max-sm:leading-desc">Our Tech Stack</h2>
+    <div id="tech-stack-tabs">
+      <div class="flex flex-wrap gap-6" role="tablist">
+        {tabs.map((tab, i) => (
+          <button
+            class:list={['tech-stack__tab-btn', 'bg-transparent', 'border', 'border-border-mid', 'rounded-full', 'px-6', 'py-3', 'text-xl-plus', 'leading-[1.875rem]', 'cursor-pointer', 'text-black', 'transition-opacity', 'duration-200', 'hover:opacity-60', 'max-sm:text-lg', { active: i === 0 }]}
+            data-tab={tab.id}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`tech-tab-panel-${tab.id}`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+      <div>
+        {tabs.map((tab, i) => (
+          <div
+            id={`tech-tab-panel-${tab.id}`}
+            class:list={['tech-stack__pane', { active: i === 0 }]}
+            role="tabpanel"
+            aria-label={tab.label}
+          >
+            <div class="flex flex-wrap gap-3 row-gap-4">
+              {tab.images.map((img) => (
+                <div class="flex justify-center items-center max-w-[12.5rem] h-28">
+                  {img.src
+                    ? <img src={img.src} alt={img.alt} class="object-contain h-full" loading="lazy" />
+                    : <span class="text-lg font-medium text-black">{img.text}</span>
+                  }
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initTechStackTabs() {
+    const container = document.getElementById('tech-stack-tabs');
+    if (!container) return;
+    const buttons = container.querySelectorAll<HTMLButtonElement>('.tech-stack__tab-btn');
+    const panes = container.querySelectorAll<HTMLElement>('.tech-stack__pane');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        buttons.forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        panes.forEach((p) => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        container.querySelector(`#tech-tab-panel-${target}`)?.classList.add('active');
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTechStackTabs, { once: true });
+  } else {
+    initTechStackTabs();
+  }
+</script>
+
+<style>
+  .tech-stack__tab-btn.active {
+    color: var(--color-section-blue-dark);
+    border-color: var(--color-section-blue-dark);
+  }
+
+  .tech-stack__pane {
+    display: none;
+  }
+
+  .tech-stack__pane.active {
+    display: block;
+  }
+</style>

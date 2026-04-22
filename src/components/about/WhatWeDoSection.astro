@@ -1,0 +1,21 @@
+---
+/**
+ * WhatWeDoSection — "We don't just build apps." statement + CTA.
+ *
+ * Webflow ref: .what-we-do-section / .what-we-do__container
+ * Flex row: large statement text left + "Let's Talk" button right.
+ */
+import PillButton from '../ui/PillButton.astro';
+---
+
+<section class="scroll-reveal-group w-full" aria-label="What we do">
+  <div class="flex flex-row items-start gap-6 max-md:flex-col">
+    <p class="scroll-reveal-item m-0 text-xl-plus leading-desc flex-1 max-md:text-xl max-md:leading-8" style="--sr-delay: 0ms">
+      <strong>We don't just build apps.</strong>
+      <span> ⎯⎯⎯ </span>Oursky creates digital experiences that help our partners succeed in today's fast-paced business landscape.
+    </p>
+    <div class="scroll-reveal-item shrink-0 pt-1" style="--sr-delay: 80ms">
+      <PillButton href="/contact" label="Let's Talk" variant="primary" />
+    </div>
+  </div>
+</section>

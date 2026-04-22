@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutHeroSection from '../components/about/AboutHeroSection.astro';
+import OurValueSection from '../components/about/OurValueSection.astro';
+import WhatWeDoSection from '../components/about/WhatWeDoSection.astro';
+import PeopleSection from '../components/about/PeopleSection.astro';
+---
+
+<BaseLayout
+  title="Oursky - About"
+  description="We don't just build apps; Oursky creates digital experiences that help our partners succeed."
+>
+  <div class="about-page">
+    <div class="flex flex-col gap-[3.75rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 box-border max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12">
+      <AboutHeroSection />
+      <OurValueSection />
+      <WhatWeDoSection />
+      <PeopleSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initAboutPage() {
+    // Scroll-reveal observer scoped to .about-page
+    const singles = document.querySelectorAll('.about-page .scroll-reveal');
+    const groups = document.querySelectorAll('.about-page .scroll-reveal-group');
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            if (t.classList.contains('scroll-reveal-group')) {
+              t.classList.add('scroll-reveal-group--visible');
+            } else {
+              t.classList.add('scroll-reveal--visible');
+            }
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+
+    // Counter animation for statistics
+    if (reduce) return;
+    const statsContainer = document.querySelector('.statistics-container');
+    if (!statsContainer) return;
+    const statNumbers = statsContainer.querySelectorAll('.statistics__number[data-count]');
+
+    function formatCount(n: number) {
+      if (n >= 1_000_000) return `${n % 1_000_000 === 0 ? n / 1_000_000 : (n / 1_000_000).toFixed(1)}m+`;
+      if (n >= 1_000)     return `${n % 1_000 === 0     ? n / 1_000     : (n / 1_000).toFixed(1)}k+`;
+      return `${n}+`;
+    }
+
+    function runCounters() {
+      const start = performance.now();
+      const duration = 2000;
+      function tick(now: number) {
+        const t = Math.min((now - start) / duration, 1);
+        const ease = t * t * (3 - 2 * t);
+        statNumbers.forEach((el) => {
+          const target = parseInt(el.getAttribute('data-count') || '0', 10);
+          (el as HTMLElement).innerText = formatCount(Math.floor(target * ease));
+        });
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          statsObserver.disconnect();
+          runCounters();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    statsObserver.observe(statsContainer);
+  }
+
+  document.addEventListener('astro:page-load', initAboutPage);
+</script>
+

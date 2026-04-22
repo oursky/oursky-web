@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WorkWithUsSection from '../components/contact/WorkWithUsSection.astro';
+import FindUsSection from '../components/contact/FindUsSection.astro';
+import ActionCardsSection from '../components/home/ActionCardsSection.astro';
+---
+
+<BaseLayout
+  title="Oursky - Contact us"
+  description="Work with us - Let's build it!"
+>
+  <div class="contact-page">
+    <div class="flex flex-col gap-[3.94rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 box-border max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12">
+      <WorkWithUsSection />
+      <hr class="bg-accent border-none w-full h-px m-0" aria-hidden="true" />
+      <FindUsSection />
+      <hr class="bg-accent border-none w-full h-px m-0 max-md:hidden" aria-hidden="true" />
+      <ActionCardsSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initContactScrollReveal() {
+    const singles = document.querySelectorAll('.contact-page .scroll-reveal');
+    const groups = document.querySelectorAll('.contact-page .scroll-reveal-group');
+    if (!singles.length && !groups.length) return;
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries, observer) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const t = entry.target;
+          if (t.classList.contains('scroll-reveal-group')) {
+            t.classList.add('scroll-reveal-group--visible');
+          } else {
+            t.classList.add('scroll-reveal--visible');
+          }
+          observer.unobserve(t);
+        }
+      },
+      { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+    );
+
+    singles.forEach((el) => io.observe(el));
+    groups.forEach((el) => io.observe(el));
+  }
+
+  document.addEventListener('astro:page-load', initContactScrollReveal);
+</script>

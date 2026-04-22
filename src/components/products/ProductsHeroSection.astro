@@ -1,0 +1,22 @@
+---
+---
+
+<section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label="Products hero">
+  <div class="scroll-reveal-item" style="--sr-delay: 0ms">
+    <h1 class="products-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">PRODUCTS</h1>
+  </div>
+  <div class="max-w-hero-desc pl-5 scroll-reveal-item max-md:pl-0" style="--sr-delay: 80ms">
+    <p class="m-0 text-2xl font-medium leading-desc text-brand-black max-md:text-lg max-md:leading-desc-sm">By developers, for developers</p>
+    <p class="mt-2 mb-0 text-lg leading-desc-sm text-brand-black">We engineer cutting-edge SaaS solutions for clients and developers globally.</p>
+  </div>
+</section>
+
+<style>
+  /* Gradient text — requires vendor-prefixed background-clip; no Tailwind equivalent */
+  .products-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

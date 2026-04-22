@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicesHeroSection from '../components/services/ServicesHeroSection.astro';
+import DevelopmentServicesSection from '../components/services/DevelopmentServicesSection.astro';
+import DesignServicesSection from '../components/services/DesignServicesSection.astro';
+import TechStackSection from '../components/services/TechStackSection.astro';
+import ServiceLetsTalkSection from '../components/services/ServiceLetsTalkSection.astro';
+---
+
+<BaseLayout
+  title="Oursky - Services"
+  description="We craft digital products that users love, from conception to launch."
+>
+  <div class="services-page">
+    <div class="flex flex-col gap-[2.88rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 box-border max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12">
+      <ServicesHeroSection />
+      <DevelopmentServicesSection />
+      <DesignServicesSection />
+      <TechStackSection />
+      <ServiceLetsTalkSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initServicesPage() {
+    const singles = document.querySelectorAll('.services-page .scroll-reveal');
+    const groups = document.querySelectorAll('.services-page .scroll-reveal-group');
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            if (t.classList.contains('scroll-reveal-group')) {
+              t.classList.add('scroll-reveal-group--visible');
+            } else {
+              t.classList.add('scroll-reveal--visible');
+            }
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+
+  document.addEventListener('astro:page-load', initServicesPage);
+</script>
+

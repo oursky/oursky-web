@@ -36,16 +36,16 @@ const clockSvgPaths = `
     <!-- Left: OURSKY logo + "We are hiring!" -->
     <div class="flex flex-col gap-3 justify-between shrink-0">
       <div class="flex items-center gap-2 pr-10">
-        <a href="/" class="inline-block no-underline" aria-label="Oursky home">
+        <a id="footer-logo-link" href="/" class="inline-flex items-center gap-2 no-underline" aria-label="Oursky home">
+          <div id="footer-logo-lottie" class="w-20 h-20 shrink-0" aria-hidden="true"></div>
           <img
             src="/images/oursky-logo-footer.svg"
             alt="Oursky"
-            width="160"
-            height="64"
-            class="w-40 block h-auto"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+            width="141"
+            height="30"
+            class="block h-auto"
+            style="width: 10rem"
           />
-          <span class="text-xl-plus font-black text-white tracking-[-0.02em]" style="display:none">OURSKY</span>
         </a>
       </div>
       <a
@@ -113,8 +113,6 @@ const clockSvgPaths = `
 <script>
   const HKTimezone = "Asia/Hong_Kong";
   const LondonTimezone = "Europe/London";
-  const HKClock = document.getElementById("clock-container--hk");
-  const LondonClock = document.getElementById("clock-container--london");
 
   function setClock(clockElement: HTMLElement | null, currentDate: Date, timeZone: string) {
     if (!clockElement) return;
@@ -144,16 +142,74 @@ const clockSvgPaths = `
     if (hourHand) hourHand.setAttribute("transform", `rotate(${hoursRatio * 360}, 51.6928, 51.0082)`);
   }
 
-  const now = new Date();
-  setClock(HKClock, now, HKTimezone);
-  setClock(LondonClock, now, LondonTimezone);
+  let intervalId: ReturnType<typeof setInterval> | undefined;
 
-  let lastMinute = now.getUTCMinutes();
-  setInterval(() => {
-    const d = new Date();
-    if (d.getUTCMinutes() === lastMinute) return;
-    lastMinute = d.getUTCMinutes();
-    setClock(HKClock, d, HKTimezone);
-    setClock(LondonClock, d, LondonTimezone);
-  }, 1000);
+  function initClocks() {
+    clearInterval(intervalId);
+    const HKClock = document.getElementById("clock-container--hk");
+    const LondonClock = document.getElementById("clock-container--london");
+
+    const now = new Date();
+    setClock(HKClock, now, HKTimezone);
+    setClock(LondonClock, now, LondonTimezone);
+
+    let lastMinute = now.getUTCMinutes();
+    intervalId = setInterval(() => {
+      const d = new Date();
+      if (d.getUTCMinutes() === lastMinute) return;
+      lastMinute = d.getUTCMinutes();
+      setClock(document.getElementById("clock-container--hk"), d, HKTimezone);
+      setClock(document.getElementById("clock-container--london"), d, LondonTimezone);
+    }, 1000);
+  }
+
+  // astro:page-load fires on initial load and after every View Transition navigation
+  document.addEventListener("astro:page-load", initClocks);
+</script>
+
+<script>
+  import lottie from 'lottie-web';
+
+  let logoAnim: ReturnType<typeof lottie.loadAnimation> | null = null;
+  let logoObserver: IntersectionObserver | null = null;
+
+  function initLogoLottie() {
+    const container = document.getElementById('footer-logo-lottie');
+    if (!container) return;
+    if (logoObserver) {
+      logoObserver.disconnect();
+      logoObserver = null;
+    }
+    if (logoAnim) {
+      logoAnim.destroy();
+      logoAnim = null;
+    }
+    logoAnim = lottie.loadAnimation({
+      container,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/oursky-logo-footer.json',
+    });
+
+    if (!logoAnim) return;
+    const anim = logoAnim;
+    let hasPlayed = false;
+
+    logoObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting || hasPlayed) continue;
+          hasPlayed = true;
+          anim.play();
+          logoObserver?.disconnect();
+          logoObserver = null;
+        }
+      },
+      { threshold: 0.25 }
+    );
+    logoObserver.observe(container);
+  }
+
+  document.addEventListener('astro:page-load', initLogoLottie);
 </script>

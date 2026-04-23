@@ -1,7 +1,7 @@
 # Phase 3 Handoff — Oursky.com Webflow → Astro Migration
 
-**Date:** 2026-04-15 (updated 2026-04-21)  
-**Status:** 🔄 Phase 3b In Progress — 29 pages build successfully
+**Date:** 2026-04-15 (updated 2026-04-23)  
+**Status:** ✅ Phase 3b Complete — 34 pages build successfully
 
 ---
 
@@ -202,6 +202,47 @@ A codebase-wide audit and cleanup pass applied after the initial 3 pages (contac
 
 ---
 
+## Phase 3b Polish — Round 2 (2026-04-22–23)
+
+### Bug Fixes
+
+| Bug | Root cause | Fix |
+|---|---|---|
+| **Pages blank after View Transitions navigation** | `DOMContentLoaded` fires once per hard load; ES module scripts are cached by the browser — not re-run on Astro `ClientRouter` navigation. `scroll-reveal-group` elements stayed at `opacity: 0` on second visit. | Replaced `DOMContentLoaded` + `readyState` guard with `document.addEventListener('astro:page-load', init)` in all four pages: `index.astro`, `services.astro`, `about.astro`, `contact.astro`. `astro:page-load` fires after every navigation including View Transitions. |
+| **About page Spline animation cropped** | `aspect-ratio: 1360/762` on container conflicted with fixed `height: 520px` on `<spline-viewer>`. Padding-left was 43% (calibrated for Webflow's full-bleed container) but our page has rail gutters, making viewer too narrow. | Removed `aspect-ratio`, switched to `height: 520px` on container, reduced `padding-left` to 35% (gives ~780px viewer width, matching Webflow's ~775px). Mobile: `height: 280px; padding-left: 20%`. |
+
+### Header Polish
+
+| Change | Detail |
+|---|---|
+| **Parallax on hero video** | Added `id="hero-parallax-layer"` + `will-change: transform` + rAF-throttled `translateY(scrollY × 0.35)` scroll script. Respects `prefers-reduced-motion`. |
+| **Parallax on Works cards** | Added section-relative offset parallax (factor 0.12) to `.works-cardwrap` in `WorksPreviewSection.astro`. |
+| **Active nav pill height (desktop)** | Changed `align-items: center` → `align-items: stretch` on `.nav-pill` CSS. Changed `lg:p-3` → `lg:px-3 lg:py-2` on nav element. Active link fills pill height instead of sizing from content+padding. |
+| **Tablet/mobile pill height parity** | Changed all three pills (logo, nav, contact) to explicit `height: 3rem` at `max-width: 1023px`. Previously used `height: auto; min-height/max-height` which flexbox `align-items: center` ignores — causing rendered height ~36px instead of 48px. |
+| **Nav-link overflow fix at tablet** | Added `height: auto` to `.header .nav-pill .nav-link` in `@media (max-width: 1023px)`. `h-full = height: 100%` (full pill height) overrides `align-items: stretch` in CSS spec — item was rendering at 3rem and overflowing the nav pill's padding area. Only visible on pages with an active link (blue gradient). |
+
+### Header CSS Justified Rules (reference)
+
+The `Header.astro` style block is intentional — every rule has a reason Tailwind can't express:
+
+| Rule | Why CSS |
+|---|---|
+| `backdrop-filter` + `-webkit-backdrop-filter` | Tailwind `backdrop-blur-sm` omits `-webkit-` prefix (Safari still needs it) |
+| `transition: … cubic-bezier(…)` | Tailwind uses fixed easing functions; specific curves can't be expressed as utilities |
+| `padding: calc(var(--token) + clamp(…))` | Tailwind can't compose CSS custom properties with `clamp()` |
+| `:global(body.page--home) .header-wrapper` | Cross-component ancestor selector — can't target ancestor from child in Tailwind |
+| `max-width: var(--home-rail-max)` | Non-Tailwind token; `w-[var(…)]` is fragile and non-idiomatic |
+| Nav retract animation compound selector | JS toggles class on `#site-header`; descendant selector targets nav. No Tailwind mechanism for JS-toggled ancestor state. |
+| `.header .nav-pill.pill { height }` overrides | Astro scoped style = specificity 0,2,0. Tailwind utility = 0,1,0. Compound selector needed to beat `.pill { height: 4.25rem }`. |
+| `scrollbar-width: none` + `::-webkit-scrollbar` | Non-standard property + pseudo-element |
+| `radial-gradient` active states | Two-stop gradient with CSS variables + multi-layer `inset`+`offset` box-shadow |
+
+### Why `@media (max-width: 767px)` in style blocks (not `max-md:`)
+
+Astro scopes `<style>` blocks by appending `[data-astro-cid-xxx]` to every selector, giving rules specificity `0,2,0` (class + CID attribute). Tailwind utilities are only `0,1,0`. When a CSS rule needs to beat a Tailwind utility — e.g. `.header .nav-pill.pill { height }` overriding `h-full` — it must stay in CSS. The `@media` block follows because you can't mix CSS-block specificity with Tailwind responsive prefixes. `767px` matches Tailwind's `md` boundary exactly.
+
+---
+
 ## Phase 3b — Remaining Pages (Use the skill)
 
 **Prerequisite skill:** `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md` — read it first.
@@ -213,13 +254,13 @@ Priority order from `docs/phase2-handoff.md`:
 | `/contact` | `654dca55f5bb0633400ded52` | ✅ Done | WorkWithUsSection, FindUsSection, reuses ActionCardsSection |
 | `/about` | `654dc0d170a7624572225216` | ✅ Done | AboutHeroSection, OurValueSection (stats+counter), WhatWeDoSection, PeopleSection |
 | `/services` | `654dca00f7ddbbf98ffc9862` | ✅ Done | ServicesHeroSection, DevelopmentServicesSection (3 cols), DesignServicesSection, TechStackSection (5 tabs), ServiceLetsTalkSection |
-| `/products` | `654dca3c0e169ca747a21219` | ⏭ Skipped | No standalone route exists or is linked — products live in homepage `ProductsSection.astro` only |
-| `/open-source` | `6630a9ba0322d5a4207257b5` | ⏳ Pending | |
-| `/service/software-development` | `66f3e0b4442ebaa706ec9f2d` | ⏳ Pending | |
-| `/service/ui-ux-design` | `66f45af96a746027f5fd224b` | ⏳ Pending | |
-| `/service/ai` | `6854baa7b030e17f1e2bcd5f` | ⏳ Pending | Ref HTML may not exist (newer page) |
+| `/products` | `654dca3c0e169ca747a21219` | ✅ Done | Hero + FormX/Authgear featured cards; reuses existing `ProductsHeroSection` + `ProductCardsSection` components |
+| `/open-source` | `6630a9ba0322d5a4207257b5` | ✅ Done | Hero + rich text content (Kubernetes/CI, Web/Mobile, Other Tools) |
+| `/service/software-development` | `66f3e0b4442ebaa706ec9f2d` | ✅ Done | Hero + blue intro card + 3 process items + stats + circles + methodologies + TechStack |
+| `/service/ui-ux-design` | `66f45af96a746027f5fd224b` | ✅ Done | Hero + blue intro card + 3 approach items + stats + 6-step design process + methodologies |
+| `/service/ai` | `6854baa7b030e17f1e2bcd5f` | ✅ Done | Hero + dark-blue intro card + 3 AI approach items + stats + AI Products + circles + methodologies + TechStack |
 
-**Build count:** 26 baseline → 29 pages after contact + about + services.
+**Build count:** 26 baseline → 29 pages after contact + about + services → 33 pages after open-source + 3 service inner pages → 34 pages after /products.
 
 ### New Files Created (Phase 3b so far)
 
@@ -244,6 +285,16 @@ src/
       DesignServicesSection.astro           ✅ — tan card + 3 methodology items
       TechStackSection.astro                ✅ — bordered card, 5 tab groups (JS toggle)
       ServiceLetsTalkSection.astro          ✅ — light blue CTA card
+    service/
+      ServiceInnerHeroSection.astro         ✅ — gradient title + subtitle (shared hero for service inner pages)
+      ServiceStatisticsSection.astro        ✅ — 3-col icon/number/label stats grid with animated counters
+      ServiceCirclesSection.astro           ✅ — dark Venn "Customer / Your Software / Oursky" diagram
+      ServiceSharedMethodologies.astro      ✅ — 4 "why Oursky" cards (best devs, UX, PM, quality)
+      SoftwareDevContent.astro              ✅ — all sections for /service/software-development
+      UIUXContent.astro                     ✅ — all sections for /service/ui-ux-design
+      AIContent.astro                       ✅ — all sections for /service/ai
+  open-source/
+    OpenSourceContentSection.astro          ✅ — rich text with GitHub links, 3 tool category headings
 ```
 
 ### Assets Migrated (Phase 3b so far)

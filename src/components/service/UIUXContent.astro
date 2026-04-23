@@ -1,0 +1,140 @@
+---
+/**
+ * UIUXContent — Main content for /service/ui-ux-design.
+ * Webflow ref: .development-services-section (service/ui-ux-design.html)
+ * Sections: blue intro card, 3 approach items, statistics, design process dark card, shared methodologies.
+ */
+import ServiceStatisticsSection from './ServiceStatisticsSection.astro';
+import ServiceSharedMethodologies from './ServiceSharedMethodologies.astro';
+
+const approachItems = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M0 0V16 128v16H32V128 32h96 16V0H128 16 0zM640 0H624 512 496V32h16 96v96 16h32V128 16 0zM16 512H128h16V480H128 32V384 368H0v16V496v16H16zm624 0V496 384 368H608v16 96H512 496v32h16H624h16zM159.8 176a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zm64 0a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM288 192a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm96 0a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm80.2-32a16 16 0 1 1 0 32 16 16 0 1 1 0-32zm0 64a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM129.4 336l14.4-48h46.5l3.4-10.1 7.3-21.9H120L96 336h33.4zm366.8-48l14.4 48H544l-24-80H439.1l7.3 21.9 3.4 10.1h46.5zM224 288l-21.3 64L192 384h33.7H414.3 448l-10.7-32L416 288H224zm23.1 32H392.9l10.7 32H236.4l10.7-32z"/></svg>`,
+    title: 'User-Driven Development',
+    body: 'We have over 10+ years of experience in agile software development, enabling us to design, build, and deliver projects on time. Oursky empowers you with the flexibility to reprioritize user stories and recalibrate resources according to real user feedback.',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M208 0h16 80 16l0 16 0 16h64 16V48 96h0 64 16v16V336c0 97.2-78.8 176-176 176l0 0h-8.5c-65.8 0-128.9-26.1-175.4-72.6L16.4 335.6 4.7 323.9 0 319.2v-6.6V279.4v-6.6l4.7-4.7 40-40L56 216.8l11.3 11.3 28.3 28.3L128 288.8V48 32h16 64V16 0zM368 128V112 64H320V80 240v16H288V240 80 64h0l0-16 0-16H240V48 240v16H208V240 64H160V304v6.6l-4.7 4.7L143.6 327l-11.3 11.3L121 327 73 279l-17-17-24 24v19.9l7 7L142.8 416.7c40.5 40.5 95.4 63.3 152.7 63.3H304l0 0c79.5 0 144-64.5 144-144V128H400V240v16H368V240 128h0zM266.1 328.5l-5.2-4.8c-4.3-4-10-6.3-15.9-6.3h-3.5c-10.9 0-19.8 8.9-19.8 19.8c0 5.5 2.3 10.7 6.3 14.4l60 56.1 60-56.1c4-3.7 6.3-9 6.3-14.4c0-10.9-8.9-19.8-19.8-19.8H331c-5.9 0-11.6 2.2-15.9 6.3l-5.2 4.8L288 348.9l-21.9-20.4zm-76.4 8.7c0-28.6 23.2-51.8 51.8-51.8H245c14 0 27.5 5.3 37.8 14.9l5.2 4.8 5.2-4.8c10.3-9.6 23.8-14.9 37.8-14.9h3.5c28.6 0 51.8 23.2 51.8 51.8c0 14.3-5.9 28-16.4 37.8l-70.9 66.4L288 451.5l-10.9-10.2-70.9-66.4c-10.5-9.8-16.4-23.5-16.4-37.8z"/></svg>`,
+    title: 'Empathy Approach',
+    body: "We don't just work with a list of cold requirements. We help at every step — from user stories, wireframes, and user flows to mockups. Our process is deeply ingrained in user journeys and understanding the pain points to ensure the best user experience.",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M429.1 288C414 369.9 342.3 432 256 432c-52.7 0-99.9-23.1-132.2-59.8l37.6-37.6L184 312l-22.6-22.6L160 288H64 32v32 96l1.4 1.4L56 440l22.6-22.6 22.5-22.5C139.2 437.3 194.5 464 256 464c104 0 190.2-76.3 205.6-176H429.1zM410.9 117.1C372.8 74.7 317.5 48 256 48C152 48 65.8 124.3 50.4 224H82.9C97.9 142.1 169.7 80 256 80c52.7 0 99.9 23.1 132.2 59.8l-37.6 37.6L328 200l22.6 22.6L352 224h96 32V192 96l-1.4-1.4L456 72 433.4 94.6l-22.5 22.5zM130.7 320L64 386.7V320h66.7zM448 192H381.3L448 125.3V192z"/></svg>`,
+    title: 'Iterative UI/UX',
+    body: "Oursky embraces iteration. We work on features that are most relevant to users. Our iterative process means understanding and validating your ideas, reducing unnecessary barriers, then quickly delivering the most valuable features without overspending resources.",
+  },
+];
+
+const designProcess = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM196.9 197.3L240 168.6V352H192 176v32h16 64 64 16V352H320 272V144 128H256h-8-4.8l-4 2.7L184 167.4v38.5l12.9-8.6z"/></svg>`,
+    title: 'Customer Insight',
+    bullets: 'Understand business goals\nIdentify functional requirements\nResearch and discovery\nCompetitor analysis\nMetrics and benchmarks',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm-3.9-352H257c26 0 47 21 47 47c0 12-4.6 23.5-12.8 32.2L176 361.7V384H352V352H229l85.5-90.8c10.1-10.7 16.9-23.9 19.8-38.2l1.6-16c0-43.6-35.4-79-79-79h-4.9c-22.2 0-43.6 8.8-59.3 24.6L169.4 176 192 198.6l23.4-23.4c9.7-9.7 22.9-15.2 36.7-15.2z"/></svg>`,
+    title: 'Experience Mapping',
+    bullets: 'Personas, use stories, and story maps\nBusiness process modeling\nCustomer journey and experience mapping\nBlueprint development',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm80-360.6V128H320 176 160v32h16H276.7l-79.2 67.9-5.6 4.8v23.4l16.1-.1 63.5-.3c26.7-.1 48.4 21.5 48.4 48.2c0 26.6-21.6 48.2-48.2 48.2h-36c-17.5 0-34-8.2-44.5-22.2l-2.5-3.4-9.6-12.8-25.6 19.2 9.6 12.8 2.5 3.4c16.5 22.1 42.5 35 70.1 35h36c44.3 0 80.2-35.9 80.2-80.2c0-44.4-36.1-80.4-80.6-80.2l-19.9 .1 78.9-67.6 5.6-4.8z"/></svg>`,
+    title: 'Ideation and Strategy',
+    bullets: 'Product or service roadmap\nMessaging, positioning, and narratives\nGo-to-market strategies\nAI quick sketch generation',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM145.1 298.1L136.4 320H160 288v48 16h32V368 320h16 16V288H336 320V208 192H288v16 80H183.6l63.2-158.1 .8-1.9H213.2l-68 170.1z"/></svg>`,
+    title: 'Design',
+    bullets: 'Wireframing\nUI and interaction designs\nStoryboarding, concept sketch, and narratives\nSystem and process flow\nInformation architecture',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM208 128H195.5l-3 12.1-24 96L164 254.1l18.4 1.9 98.8 10c22.1 2.2 38.8 20.8 38.8 42.9c0 23.8-19.3 43.2-43.2 43.2h-44c-16.8 0-32.4-8.3-41.8-22.3l-1.8-2.7-8.9-13.3-26.6 17.8 8.9 13.3 1.8 2.7c15.3 22.8 40.9 36.4 68.3 36.4h44c41.5 0 75.2-33.7 75.2-75.2c0-38.6-29.2-70.9-67.6-74.8L204 225.9 220.5 160H320h16V128H320 208z"/></svg>`,
+    title: 'Visualization and Prototypes',
+    bullets: 'Interactive prototypes\nIntegration with brand identity\nGraphics and illustrations\nDesign System and Components Library',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM192.7 208.3C171.7 229.5 160 258.2 160 288c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-.8 0-1.6 0-2.4 0l61.8-62.8 1.2-1.2H271.7l-79 80.3zM320 288a64 64 0 1 1 -128 0 64 64 0 1 1 128 0z"/></svg>`,
+    title: 'Implementation and Handover',
+    bullets: 'Finalize deliverables\nTechnology integration and verification\nDesign specifications\nStorybook service integration',
+  },
+];
+
+const stats = [
+  {
+    icon: `<svg width="60" height="49" viewBox="0 0 60 49" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13.5 42.0846C6 42.0846 0 36.0846 0 28.5846C0 22.7721 3.75 17.7096 9 15.9283C9 15.6471 9 15.3658 9 15.0846C9 6.83459 15.6562 0.0845947 24 0.0845947C29.5312 0.0845947 34.4062 3.17834 36.9375 7.67834C38.3438 6.64709 40.125 6.08459 42 6.08459C46.9688 6.08459 51 10.1158 51 15.0846C51 16.3033 50.7188 17.3346 50.3438 18.3658C55.875 19.4908 60 24.3658 60 30.0846C60 36.7408 54.5625 42.0846 48 42.0846H13.5ZM20.9062 26.4283L28.4062 33.9283C29.25 34.8658 30.6562 34.8658 31.5 33.9283L39 26.4283C39.9375 25.5846 39.9375 24.1783 39 23.3346C38.1562 22.3971 36.75 22.3971 35.9062 23.3346L32.25 26.9908V14.3346C32.25 13.1158 31.2188 12.0846 30 12.0846C28.6875 12.0846 27.75 13.1158 27.75 14.3346V26.9908L24.0938 23.3346C23.1562 22.3971 21.75 22.3971 20.9062 23.3346C19.9688 24.1783 19.9688 25.5846 20.9062 26.4283Z" fill="#26BACE"/></svg>`,
+    number: '5m+',
+    dataCount: 5000000,
+    title: 'Single app with <br/>most users',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" height="49" width="49" viewBox="0 0 576 512" aria-hidden="true"><path fill="#1964e6" d="M64 64l0 32 16 0 16 0 0-16 0-16L64 64zm0 64l-32 0 0-32 0-32 0-32 32 0 32 0 32 0 0 32 320 0 0-32 32 0 32 0 32 0 0 32 0 32 0 32-32 0 0 256 32 0 0 32 0 32 0 32-32 0-32 0-32 0 0-32-320 0 0 32-32 0-32 0-32 0 0-32 0-32 0-32 32 0 0-256zM96 448l0-16 0-16-16 0-16 0 0 32 32 0zm32-32l320 0 0-16 0-16 16 0 16 0 0-256-16 0-16 0 0-16 0-16L128 96l0 16 0 16-16 0-16 0 0 256 16 0 16 0 0 16 0 16zm0-288l0 16 0 128 0 16 16 0 160 0 16 0 0-16 0-128 0-16-16 0-160 0-16 0zM448 384l-16 0-160 0-16 0 0-16 0-32 0-16 32 0 0 16 0 16 128 0 0-96-48 0-16 0 0-32 16 0 64 0 16 0 0 16 0 128 0 16zm32 64l32 0 0-32-16 0-16 0 0 16 0 16zm0-384l0 16 0 16 16 0 16 0 0-32-32 0zM160 160l128 0 0 96-128 0 0-96z"/></svg>`,
+    number: '120+',
+    dataCount: 120,
+    title: 'Software Designed',
+  },
+  {
+    icon: `<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M31.4688 14.4283L30.25 9.83459L25.6562 8.61584C25.2812 8.42834 25 8.05334 25 7.58459C25 7.20959 25.2812 6.83459 25.6562 6.64709L30.25 5.33459L31.4688 0.834595C31.6562 0.459595 32.0312 0.0845947 32.5 0.0845947C32.875 0.0845947 33.25 0.459595 33.4375 0.834595L34.75 5.33459L39.25 6.64709C39.625 6.83459 40 7.20959 40 7.58459C40 8.05334 39.625 8.42834 39.25 8.61584L34.75 9.83459L33.4375 14.4283C33.25 14.8033 32.875 15.0846 32.5 15.0846C32.0312 15.0846 31.6562 14.8033 31.4688 14.4283ZM20.9688 14.8971L25.2812 23.7096L35.0312 25.1158C36.8125 25.3971 37.5625 27.6471 36.25 28.9596L29.2188 35.8033L30.9062 45.4596C31.1875 47.3346 29.3125 48.7408 27.625 47.8971L18.9062 43.3033L10.2812 47.8971C8.59375 48.7408 6.71875 47.3346 7 45.4596L8.6875 35.8033L1.65625 28.9596C0.34375 27.6471 1 25.3971 2.875 25.1158L12.625 23.7096L16.9375 14.8971C17.7812 13.2096 20.125 13.2096 20.9688 14.8971ZM41.125 22.9596L37.5625 21.9283C37.1875 21.8346 37 21.4596 37 21.0846C37 20.8033 37.1875 20.4283 37.5625 20.3346L41.125 19.3033L42.1562 15.7408C42.25 15.3658 42.625 15.0846 43 15.0846C43.2812 15.0846 43.6562 15.3658 43.75 15.7408L44.7812 19.3033L48.3438 20.3346C48.7188 20.4283 49 20.8033 49 21.0846C49 21.4596 48.7188 21.8346 48.3438 21.9283L44.7812 22.9596L43.75 26.5221C43.6562 26.8971 43.2812 27.0846 43 27.0846C42.625 27.0846 42.25 26.8971 42.1562 26.5221L41.125 22.9596Z" fill="#FBBC05"/></svg>`,
+    number: '3+',
+    dataCount: 3,
+    title: 'Best of Apple Awards',
+  },
+];
+---
+
+<div class="flex flex-col gap-[3.75rem]">
+  <!-- Blue intro card -->
+  <section class="scroll-reveal-group w-full" aria-label="About our UI/UX design">
+    <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
+      <div class="w-[28%] shrink-0 aspect-square rounded-full bg-white flex justify-center items-center max-lg:w-32 max-sm:w-24">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="80" height="80" fill="#1f64e8" aria-hidden="true"><path d="M368 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V48c0 .4 0 .8 .1 1.2L307.8 73.5c-4.3-1.6-8.9-2.5-13.8-2.5c-11.5 0-21.8 4.6-29.3 12l-8 8c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l8-8c7.4-7.4 17.7-10.8 28-9.5l20.6 2.6c7.4 16.1 11.4 33.9 11.4 52.6c0 50.1-28.5 93.6-70.3 115.2c-1.1 .6-2.2 1.2-3.2 1.8l0 0C261.7 304.3 240 334 240 368v16c0 35.3 28.7 64 64 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16 7.2-16 16s7.2 16 16 16h80c26.5 0 48-21.5 48-48s-21.5-48-48-48H304c-17.7 0-32-14.3-32-32V368c0-20.5 13.9-38.2 33.3-48.9l3-1.7c50.8-28.2 85.1-82.1 85.1-143.4c0-19.2-3.3-37.6-9.3-54.7l17.5 2.2c3.6 17.4 5.5 35.5 5.5 54c0 50.4-14.8 97.4-40.4 136.9l16.6 10.6C411.6 280.2 432 234.5 432 184c0-19.1-2.4-37.7-6.9-55.5L448 131c17.7 0 32-14.3 32-32s-14.3-32-32-32l-80 0 0-35zM160 96a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128zM96 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32 64a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm32 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
+      </div>
+      <div class="flex-1 scroll-reveal-item" style="--sr-delay: 80ms">
+        <p class="m-0 text-white text-lg leading-8">
+          User experience (UX) is about the interaction between you and your customers. Our design process involves
+          understanding your audience and researching the user preferences, digital habits, and behaviors to map out
+          user journeys and create user personas and scenarios. Apart from visualizing UX flows and architectures,
+          we also advise on the technologies available for your project (including their trade-offs) to anticipate
+          and clear development bottlenecks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach items -->
+  <section class="scroll-reveal-group w-full" aria-label="Our design approach">
+    <div class="flex flex-wrap gap-8 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 0ms">
+      {approachItems.map((item) => (
+        <div class="flex-1 min-w-[200px] max-sm:min-w-0 flex flex-col gap-3">
+          <div class="text-black" set:html={item.icon} />
+          <h3 class="m-0 text-lg font-bold text-black leading-6">{item.title}</h3>
+          <p class="m-0 text-base leading-[1.2rem] text-black">{item.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <ServiceStatisticsSection stats={stats} />
+
+  <!-- Dark design process section -->
+  <section class="scroll-reveal-group w-full" aria-label="How we turn ideas into digital products">
+    <div class="bg-[#232833] rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-col gap-10 scroll-reveal-item" style="--sr-delay: 0ms">
+      <p class="m-0 text-white text-2xl font-bold text-center leading-10">How we turn ideas into a complete digital product</p>
+      <div class="design-process-grid grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 scroll-reveal-item" style="--sr-delay: 80ms">
+        {designProcess.map((step) => (
+          <div class="flex flex-col items-center gap-2 text-center text-white">
+            <div set:html={step.icon} />
+            <h3 class="m-0 text-base font-bold leading-5">{step.title}</h3>
+            <p class="m-0 text-[11px] leading-[14px] opacity-80">
+              {step.bullets.split('\n').map((line, j, arr) => (
+                <span>{line}{j < arr.length - 1 && <br />}</span>
+              ))}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared "why Oursky" methodologies -->
+  <ServiceSharedMethodologies />
+</div>

@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductsHeroSection from '../components/products/ProductsHeroSection.astro';
+import ProductCardsSection from '../components/products/ProductCardsSection.astro';
+---
+
+<BaseLayout
+  title="Oursky - Products"
+  description="By developers, for developers - We engineer cutting-edge SaaS solutions for clients and developers globally."
+>
+  <div class="products-page">
+    <div class="flex flex-col gap-[3.75rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 box-border max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12">
+      <ProductsHeroSection />
+      <ProductCardsSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initPage() {
+    const root = document.querySelector('.products-page');
+    if (!root) return;
+
+    const singles = root.querySelectorAll('.scroll-reveal');
+    const groups = root.querySelectorAll('.scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(t.classList.contains('scroll-reveal-group') ? 'scroll-reveal-group--visible' : 'scroll-reveal--visible');
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+
+  document.addEventListener('astro:page-load', initPage);
+</script>

@@ -1,0 +1,72 @@
+---
+/**
+ * ServiceCirclesSection — Dark "Create amazing software together!" Venn diagram.
+ * Webflow ref: .service-introduction--dark (inner page variant)
+ * Used by /service/software-development and /service/ai.
+ */
+---
+
+<section class="scroll-reveal-group w-full" aria-label="How we work together">
+  <div class="bg-[#232833] rounded-lg px-8 py-[2.8rem] flex flex-col items-center gap-10 scroll-reveal-item" style="--sr-delay: 0ms">
+    <p class="m-0 text-white text-2xl font-bold text-center leading-10">Create amazing software together!</p>
+
+    <div class="circles-wrap w-full flex flex-row gap-2 max-md:flex-col max-md:items-center scroll-reveal-item" style="--sr-delay: 80ms">
+      <div class="flex-1 flex justify-center items-center">
+        <div class="circle-l aspect-square w-full rounded-full bg-[#a18f72cc] flex justify-center items-center text-center text-white p-6">
+          <div class="text-sm leading-snug">
+            <strong class="text-base block mb-1">Customer</strong>
+            Budget<br />Product Backlog<br />Domain Knowledge<br />Business Development<br />Feature Requests
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center items-center">
+        <div class="circle-c aspect-square w-full rounded-full bg-[#353d50] flex justify-center items-center text-center text-white p-6">
+          <div class="text-base font-medium leading-snug">Your Software</div>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center items-center">
+        <div class="circle-r aspect-square w-full rounded-full bg-[#027deecc] flex justify-center items-center text-center text-white p-6">
+          <div class="text-sm leading-snug">
+            <strong class="text-base block mb-1">Oursky</strong>
+            Product and UI/UX Design<br />Architecture<br />Development<br />Infrastructure<br />Maintenance
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .circles-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .circle-l {
+    transform: translate(80px) scale(0.8);
+  }
+
+  .circle-r {
+    transform: translate(-80px) scale(0.8);
+  }
+
+  @media (max-width: 1023px) {
+    .circle-l {
+      transform: translate(40px) scale(0.8);
+    }
+    .circle-r {
+      transform: translate(-40px) scale(0.8);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .circles-wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+    .circle-l,
+    .circle-r {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+/**
+ * ServiceSharedMethodologies — 4-card "why Oursky" grid repeated on all service inner pages.
+ * Webflow ref: .service-methodology__row.noborder.gap (4 × .innerpage.md-half items)
+ * Identical content across /service/software-development, /service/ui-ux-design, /service/ai.
+ */
+const methodologies = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M381.5 4l-4.7 15.3-144 464L228 498.5l30.6 9.5 4.7-15.3 144-464L412 13.5 381.5 4zM160.7 105.4l-11.7 11L13 244.4 .7 256 13 267.7l136 128 11.7 11 21.9-23.3-11.7-11L47.3 256 171 139.6l11.7-11-21.9-23.3zm296.7 23.9l12 10.6c27.8 24.7 47.5 44 67.4 63.5l0 0c16.8 16.4 33.7 32.9 55.5 52.8L469 372.3l-11.7 11 21.9 23.3 11.7-11 136-128 12.7-12L626.6 244c-27.8-24.7-47.5-44-67.4-63.5l0 0C539.2 161 519 141.3 490.6 116l-12-10.6-21.3 23.9z"/></svg>`,
+    title: 'We have the best developers in town!',
+    body: `Every year, we only hire one to two developers out of 300 applicants. Our developers write every line of code with quality and maintainability in mind. We encourage our developers to experiment with new tools and technologies and share their expertise to fellow Ourskyers through regular sharing sessions, workshops, and the <a href="/blog" class="underline text-blue-600 hover:text-blue-800">Our blog</a>.`,
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M150.6 22.6L128 0 105.4 22.6 22.6 105.4 0 128l22.6 22.6 82.7 82.7L128 210.7 45.2 128 128 45.3l30.1 30.1-25.4 25.4L121.4 112 144 134.6l11.3-11.3 25.4-25.4L210.7 128l22.6-22.6L150.6 22.6zM361.4 489.4L384 512l22.6-22.6 82.7-82.7L512 384l-22.6-22.6-82.7-82.7L384 301.3l30.1 30.1-25.4 25.4L377.4 368 400 390.6l11.3-11.3 25.4-25.4L466.7 384 384 466.7 301.2 384l-22.6 22.6 82.7 82.7zM6.8 478L0 512l34-6.8L160 480 489.4 150.6 512 128l-22.6-22.6L406.6 22.6 384 0 361.4 22.6 32 352 6.8 478zm34-6.8L61.5 367.8 315.3 113.9l82.7 82.7L144.2 450.5 40.8 471.2zM466.7 128l-46.1 46.1L337.9 91.3 384 45.3 466.7 128z"/></svg>`,
+    title: 'We deliver great user experience.',
+    body: `User experience (UX) is the soul of your app — but to have great UX, you first need a great design. Our designers adopt user-centric principles and factor in technical considerations (and limitations) when designing the UI/UX to ensure it'll work on the devices you created it for. A great UI design also helps you to visualize your idea before development begins.`,
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M156.3 58.2L166.5 46 142 25.5 131.7 37.8 62.9 120.3 27.3 84.7 16 73.4-6.6 96 4.7 107.3l48 48 12.4 12.4 11.2-13.5 80-96zm0 160L166.5 206 142 185.5l-10.2 12.3L62.9 280.3 27.3 244.7 16 233.4-6.6 256 4.7 267.3l48 48 12.4 12.4 11.2-13.5 80-96zM192 80v32h16H496h16V80H496 208 192zm0 160v32h16H496h16V240H496 208 192zM160 400v32h16H496h16V400H496 176 160zM96 416a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>`,
+    title: 'Our project management team got your back!',
+    body: `Oursky's project managers and product owners are more than just a contact point between you and Oursky. They don't just manage timetables — they will guide you throughout the software development life cycle. They will help you identify the right user personas, plan a project roadmap, and strike the balance between user experience, technical feasibility, time, and costs.`,
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M32 480V32H192V176v16h16H352V480H32zM224 37.3L346.7 160H224V37.3zM232 0H32 0V32 480v32H32 352h32V480 152L232 0zm51.3 294l11.3-11.3L272 260l-11.3 11.3-95.4 95.4-42-42L112 313.4 89.4 336l11.3 11.3L154 400.6 165.3 412l11.3-11.3L283.3 294z"/></svg>`,
+    title: 'We ensure only quality software.',
+    body: `Oursky's QA plays a vital role in ensuring the quality of your digital product. Led by our QA managers, we conduct exploratory or scripted tests whenever a new test build is out. We make sure that our engineering culture and excellence are built into every digital product we create.`,
+  },
+];
+---
+
+<section class="scroll-reveal-group w-full" aria-label="Why Oursky">
+  <div class="flex flex-wrap gap-10 max-lg:gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
+    {methodologies.map((m) => (
+      <div class="shared-method-card flex-none w-[calc(50%-1.25rem)] max-lg:w-[calc(50%-0.75rem)] max-sm:w-full flex flex-col gap-3">
+        <div class="text-black" set:html={m.icon} />
+        <h3 class="m-0 text-lg font-bold text-black leading-6">{m.title}</h3>
+        <p class="m-0 text-base leading-[1.2rem] text-black" set:html={m.body} />
+      </div>
+    ))}
+  </div>
+</section>

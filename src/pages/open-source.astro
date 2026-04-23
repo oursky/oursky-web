@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OpenSourceContentSection from '../components/open-source/OpenSourceContentSection.astro';
+---
+
+<BaseLayout
+  title="Open Source"
+  description="By developers, for developers - We engineer cutting-edge SaaS solutions for clients and developers globally."
+>
+  <div class="open-source-page">
+    <div class="flex flex-col gap-6 w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] box-border max-lg:pt-page-top-tablet">
+      <section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label="Open Source">
+        <div class="ml-5 max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
+          <h1 class="open-source-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">Open Source</h1>
+        </div>
+        <div class="max-w-hero-desc scroll-reveal-item" style="--sr-delay: 80ms">
+          <p class="m-0 pl-5 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm max-md:pl-0">We 😻 Open Source</p>
+        </div>
+      </section>
+      <OpenSourceContentSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initOpenSourcePage() {
+    const singles = document.querySelectorAll('.open-source-page .scroll-reveal');
+    const groups = document.querySelectorAll('.open-source-page .scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+      return;
+    }
+    if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(t.classList.contains('scroll-reveal-group') ? 'scroll-reveal-group--visible' : 'scroll-reveal--visible');
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+  document.addEventListener('astro:page-load', initOpenSourcePage);
+</script>
+
+<style>
+  .open-source-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

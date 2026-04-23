@@ -1,0 +1,30 @@
+---
+/**
+ * ServiceInnerHeroSection — Shared hero for /service/* inner pages.
+ * Webflow ref: .page-title-section (service inner page variant)
+ * Same gradient text as AboutHeroSection / ServicesHeroSection.
+ */
+interface Props {
+  title: string;
+  subtitle: string;
+}
+const { title, subtitle } = Astro.props;
+---
+
+<section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label={title}>
+  <div class="ml-5 max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
+    <h1 class="service-inner-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">{title}</h1>
+  </div>
+  <div class="max-w-hero-desc scroll-reveal-item" style="--sr-delay: 80ms">
+    <p class="m-0 pl-5 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm max-md:pl-0" set:html={subtitle} />
+  </div>
+</section>
+
+<style>
+  .service-inner-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

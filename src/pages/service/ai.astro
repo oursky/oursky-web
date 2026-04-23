@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceInnerHeroSection from '../../components/service/ServiceInnerHeroSection.astro';
+import AIContent from '../../components/service/AIContent.astro';
+import TechStackSection from '../../components/services/TechStackSection.astro';
+import ServiceLetsTalkSection from '../../components/services/ServiceLetsTalkSection.astro';
+---
+
+<BaseLayout
+  title="AI - Digital Software Design and Development with AI"
+  description="Top Mobile App and Customized Software Developers located in Hong Kong. We craft digital products that users love, from conception to launch. Mobile App, Web App Microservices and Backend Development, Machine Learning, UI/UX Design."
+>
+  <div class="ai-page">
+    <div class="flex flex-col gap-[3.75rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 box-border max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12">
+      <ServiceInnerHeroSection
+        title="we work with AI"
+        subtitle="<strong>Accelerate and Supercharge software development with AI</strong>"
+      />
+      <AIContent />
+      <TechStackSection />
+      <ServiceLetsTalkSection />
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initPage() {
+    const root = document.querySelector('.ai-page');
+    if (!root) return;
+
+    const singles = root.querySelectorAll('.scroll-reveal');
+    const groups = root.querySelectorAll('.scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(t.classList.contains('scroll-reveal-group') ? 'scroll-reveal-group--visible' : 'scroll-reveal--visible');
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+
+    if (reduce) return;
+    const statsContainer = root.querySelector('.statistics-container');
+    if (!statsContainer) return;
+    const statNumbers = statsContainer.querySelectorAll('.statistics__number[data-count]');
+
+    function formatCount(n: number) {
+      if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace('.0', '')}m+`;
+      if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace('.0', '')}k+`;
+      return `${n}+`;
+    }
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        statsObserver.disconnect();
+        const start = performance.now();
+        const duration = 2000;
+        function tick(now: number) {
+          const t = Math.min((now - start) / duration, 1);
+          const ease = t * t * (3 - 2 * t);
+          statNumbers.forEach((el) => {
+            const target = parseInt(el.getAttribute('data-count') || '0', 10);
+            (el as HTMLElement).innerText = formatCount(Math.floor(target * ease));
+          });
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      },
+      { threshold: 0.1 }
+    );
+    statsObserver.observe(statsContainer);
+  }
+
+  document.addEventListener('astro:page-load', initPage);
+</script>

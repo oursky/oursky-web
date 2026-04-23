@@ -1,0 +1,127 @@
+---
+/**
+ * AIContent — Main content for /service/ai.
+ * Webflow ref: .development-services-section.ai (service/ai.html)
+ * Sections: dark-blue intro card, 3 AI approach items, statistics, AI products, circles, shared methodologies.
+ */
+import ServiceStatisticsSection from './ServiceStatisticsSection.astro';
+import ServiceCirclesSection from './ServiceCirclesSection.astro';
+import ServiceSharedMethodologies from './ServiceSharedMethodologies.astro';
+
+const approachItems = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M219.3 292.7c-10-10-21.4-18.1-33.8-24.1C217.8 137.7 276.6 78.5 332.6 52.2c50.3-23.6 103.3-23 143.1-15.9c7 39.8 7.7 92.8-15.9 143.1c-26.3 55.9-85.5 114.8-216.4 147.1c-6-12.4-14.1-23.9-24.1-33.8zM256 381.3c0-8.2-.8-16.3-2.4-24.3c37.8-9.5 70.4-21.3 98.4-34.7v91.9l-96 48 0-80.9zM384 424V305C527.5 217.9 520.4 80.2 502.7 9.3C431.8-8.4 294.1-15.5 207.1 128H88 78.1l-4.4 8.8-64 128L-1.9 288H24 130.7c24.7 0 48.5 9.8 65.9 27.3s27.3 41.2 27.3 65.9L224 488l0 25.9 23.2-11.6 128-64 8.8-4.4V424zM155 258.4c-7.9-1.6-16.1-2.4-24.3-2.4H49.9l48-96h91.9c-13.5 28-25.2 60.5-34.7 98.4zm-11.2 189c-16.6 16.6-48.4 26.1-82.7 30.2c-10.4 1.2-20.3 1.9-28.9 2.2c.3-8.6 1-18.5 2.2-28.9c4.1-34.3 13.6-66.2 30.2-82.7c21.9-21.9 57.4-21.9 79.3 0s21.9 57.4 0 79.3zM166.5 470c34.4-34.4 34.4-90.1 0-124.5s-90.1-34.4-124.5 0C-7.5 395 .5 511.5 .5 511.5s116.5 8 166-41.5zM392 144a24 24 0 1 1 -48 0 24 24 0 1 1 48 0zM368 88a56 56 0 1 0 0 112 56 56 0 1 0 0-112z"/></svg>`,
+    title: 'Rapid Prototyping: Idea to Demo in Hours',
+    body: 'Our Project Managers and Designers use AI-powered prototyping tools to quickly transform concepts into interactive demos, often within hours. This efficient process enables clients to visualize solutions, refine requirements, and make informed decisions early. AI drives the speed, while our team\'s expertise in design thinking and user-centric development ensures clarity and direction.',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M384 128v32h32c35.3 0 64 28.7 64 64v64H416 400v16h0v16h16 64 32V288 224c0-53-43-96-96-96c0-53-43-96-96-96c-19.3 0-37.3 5.7-52.4 15.5C247.3 18.8 213.9 0 176 0C114.1 0 64 50.1 64 112v21.5C26.7 146.6 0 182.2 0 224v64 32H32 96h52.1l32-32H96 32V224c0-27.8 17.8-51.6 42.7-60.4L96 156.1V133.5 112c0-44.2 35.8-80 80-80c27 0 50.9 13.4 65.5 34l17.8 25.2 25.9-16.9c10-6.5 22-10.3 34.9-10.3c35.3 0 64 28.7 64 64zm-88 96h-6.6l-4.7 4.7-136 136-4.7 4.7V376v8 16h16 45.6l-13.4 93.7L189.6 512H208h8 6.6l4.7-4.7 136-136 4.7-4.7V360v-8V336H352 306.4l13.4-93.7 2.6-18.3H304h-8zM190.6 368l92.1-92.1-10.5 73.8L269.6 368H288h33.4l-92.1 92.1 10.5-73.8 2.6-18.3H224 190.6z"/></svg>`,
+    title: 'Skytest.ai: Smarter Automated Testing',
+    body: 'With Skytest.ai, our AI-driven bots automate regression and end-to-end testing, adapting to changes in UI and APIs so issues are detected before they reach production. However, it\'s our QA specialists who design the right test coverage, interpret reports, and ensure that automated tests align with your most critical business needs.',
+    link: { href: 'https://skytest.ai/', text: 'Skytest.ai' },
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M176 0V16 64h64V16 0h32V16 64h64V16 0h32V16 64h48 32V96v48h48 16v32H496 448v64h48 16v32H496 448v64h48 16v32H496 448v48 32H416 368v48 16H336V496 448H272v48 16H240V496 448H176v48 16H144V496 448H96 64V416 368H16 0V336H16 64V272H16 0V240H16 64V176H16 0V144H16 64V96 64H96h48V16 0h32zM416 96H96V416H416V96zm-96 80h32v16V320v16H320V320 192 176zM135.9 336l2.2-5.7L160 272.8V272h.3l32.7-85.7L197 176h22l3.9 10.3L255.7 272h.3v.8l21.9 57.5 2.2 5.7H245.9l-12.2-32H182.3l-12.2 32H135.9zM208 236.8L194.6 272h26.9L208 236.8z"/></svg>`,
+    title: 'AI-Assisted Coding',
+    body: "Our developers leverage AI coding assistants to enhance productivity, accelerating code writing, review, and optimization. However, robust applications demand more than code generation. Our engineers ensure every line adheres to Oursky's rigorous standards for quality, security, and maintainability.",
+  },
+];
+
+const stats = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48" fill="#18CAAA" aria-hidden="true"><path d="M64.1 126L256 51.5 448 126c1 43.5-6.9 106.9-33.8 168.8C385.9 359.7 337.1 422.4 256 459.6c-81.1-37.1-129.9-99.9-158.1-164.8C71 232.9 63.1 169.5 64.1 126zm431.4-13l-1.2-20.5L475.1 85 267.6 4.5 256 0 244.4 4.5 36.9 85 17.8 92.5 16.6 113c-2.9 49.9 4.9 126.3 37.3 200.9c32.7 75.2 91 150 189.4 192.6L256 512l12.7-5.5c98.4-42.6 156.7-117.3 189.4-192.6c32.4-74.7 40.2-151 37.3-200.9zM369 209l17-17L352 158.1l-17 17-111 111-47-47-17-17L126.1 256l17 17 64 64 17 17 17-17L369 209z"/></svg>`,
+    number: '10+',
+    dataCount: 10,
+    title: 'Years of Proven <br/>AI expertise',
+  },
+  {
+    icon: `<svg width="56" height="49" viewBox="0 0 56 49" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19 3.08459C19 1.49084 20.3125 0.0845947 22 0.0845947H34C35.5938 0.0845947 37 1.49084 37 3.08459V6.08459H41.5C43.9375 6.08459 46 8.14709 46 10.5846V22.5846L50.125 23.9908C52.2812 24.7408 52.8438 27.5533 51.1562 29.0533L41.6875 37.7721C40.1875 38.6158 38.5 39.1783 37 39.1783C35.125 39.1783 33.1562 38.4283 31.375 37.3033C29.3125 35.8033 26.5938 35.8033 24.5312 37.3033C22.9375 38.3346 20.9688 39.1783 18.9062 39.1783C17.4062 39.1783 15.7188 38.6158 14.2188 37.7721L4.75 29.0533C3.0625 27.5533 3.625 24.7408 5.78125 23.9908L10 22.5846V10.5846C10 8.14709 11.9688 6.08459 14.5 6.08459H19V3.08459ZM16 20.6158L26.0312 17.2408C27.25 16.8658 28.6562 16.8658 29.875 17.2408L40 20.6158V12.0846H16V20.6158ZM29.6875 39.6471C31.8438 41.1471 34.375 42.0846 37 42.0846C39.4375 42.0846 42.1562 41.1471 44.2188 39.6471C45.3438 38.8971 46.8438 38.9908 47.875 39.8346C49.2812 40.9596 50.9688 41.8033 52.6562 42.1783C54.25 42.5533 55.2812 44.1471 54.9062 45.8346C54.5312 47.4283 52.8438 48.4596 51.25 48.0846C49 47.5221 47.0312 46.4908 45.8125 45.7408C43.0938 47.1471 40.0938 48.0846 37 48.0846C34 48.0846 31.2812 47.2408 29.4062 46.3971C28.8438 46.1158 28.375 45.8346 28 45.6471C27.5312 45.8346 27.0625 46.1158 26.5 46.3971C24.625 47.2408 21.9062 48.0846 19 48.0846C15.9062 48.0846 12.8125 47.1471 10.0938 45.7408C8.875 46.4908 6.90625 47.5221 4.65625 48.0846C3.0625 48.4596 1.375 47.4283 1 45.8346C0.625 44.2408 1.65625 42.5533 3.25 42.1783C4.9375 41.8033 6.71875 40.9596 8.03125 39.8346C9.0625 38.9908 10.5625 38.8971 11.6875 39.6471C13.75 41.1471 16.4688 42.0846 19 42.0846C21.5312 42.0846 24.1562 41.1471 26.2188 39.6471C27.25 38.8971 28.6562 38.8971 29.6875 39.6471Z" fill="#8381DD"/></svg>`,
+    number: '50+',
+    dataCount: 50,
+    title: 'Products shipped with deep knowledge in software architecture and design',
+  },
+  {
+    icon: `<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M31.4688 14.4283L30.25 9.83459L25.6562 8.61584C25.2812 8.42834 25 8.05334 25 7.58459C25 7.20959 25.2812 6.83459 25.6562 6.64709L30.25 5.33459L31.4688 0.834595C31.6562 0.459595 32.0312 0.0845947 32.5 0.0845947C32.875 0.0845947 33.25 0.459595 33.4375 0.834595L34.75 5.33459L39.25 6.64709C39.625 6.83459 40 7.20959 40 7.58459C40 8.05334 39.625 8.42834 39.25 8.61584L34.75 9.83459L33.4375 14.4283C33.25 14.8033 32.875 15.0846 32.5 15.0846C32.0312 15.0846 31.6562 14.8033 31.4688 14.4283ZM20.9688 14.8971L25.2812 23.7096L35.0312 25.1158C36.8125 25.3971 37.5625 27.6471 36.25 28.9596L29.2188 35.8033L30.9062 45.4596C31.1875 47.3346 29.3125 48.7408 27.625 47.8971L18.9062 43.3033L10.2812 47.8971C8.59375 48.7408 6.71875 47.3346 7 45.4596L8.6875 35.8033L1.65625 28.9596C0.34375 27.6471 1 25.3971 2.875 25.1158L12.625 23.7096L16.9375 14.8971C17.7812 13.2096 20.125 13.2096 20.9688 14.8971ZM41.125 22.9596L37.5625 21.9283C37.1875 21.8346 37 21.4596 37 21.0846C37 20.8033 37.1875 20.4283 37.5625 20.3346L41.125 19.3033L42.1562 15.7408C42.25 15.3658 42.625 15.0846 43 15.0846C43.2812 15.0846 43.6562 15.3658 43.75 15.7408L44.7812 19.3033L48.3438 20.3346C48.7188 20.4283 49 20.8033 49 21.0846C49 21.4596 48.7188 21.8346 48.3438 21.9283L44.7812 22.9596L43.75 26.5221C43.6562 26.8971 43.2812 27.0846 43 27.0846C42.625 27.0846 42.25 26.8971 42.1562 26.5221L41.125 22.9596Z" fill="#FBBC05"/></svg>`,
+    number: '40+',
+    dataCount: 40,
+    title: 'Skilled professionals who guide, review, and optimize deliverables',
+  },
+];
+---
+
+<div class="flex flex-col gap-[3.75rem]">
+  <!-- Dark-blue intro card -->
+  <section class="scroll-reveal-group w-full" aria-label="About our AI services">
+    <div class="bg-[#282d49] rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
+      <div class="w-[28%] shrink-0 flex justify-center max-lg:w-32 max-sm:w-24">
+        <img
+          src="/images/Icon-iOS-Default-1024x10242x.png"
+          alt="Oursky AI"
+          class="w-full object-contain max-lg:w-32 max-sm:w-24"
+          loading="lazy"
+        />
+      </div>
+      <div class="flex-1 scroll-reveal-item" style="--sr-delay: 80ms">
+        <p class="m-0 text-white text-lg leading-8">
+          Oursky has refined AI capabilities for over a decade, delivering solutions like{' '}
+          <a href="https://formx.ai/" target="_blank" rel="noopener noreferrer" class="text-yellow-300 underline">FormX</a>{' '}
+          for document automation and integrating{' '}
+          <a href="https://skytest.ai/" target="_blank" rel="noopener noreferrer" class="text-yellow-300 underline">Skytest.ai</a>{' '}
+          into delivery pipelines to address real business challenges.
+        </p>
+        <p class="mt-4 mb-0 text-white text-lg leading-8 font-bold">AI Accelerates—But Expertise Unlocks the Value</p>
+        <p class="mt-2 mb-0 text-white text-lg leading-8">
+          Our distinction lies in combining AI with human expertise. Our professionals understand that effective AI
+          use goes beyond automation—it requires strategic questioning, precise tool selection, and rigorous quality
+          assurance. AI accelerates software delivery, but our engineers, designers, and QA specialists ensure its
+          value through their insight and judgment. Their expertise guarantees robust, secure, and production-ready
+          solutions, making AI a powerful tool guided by human intelligence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI approach items -->
+  <section class="scroll-reveal-group w-full" aria-label="How our experts work with AI">
+    <div class="flex flex-col gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
+      <h2 class="m-0 text-2xl font-black text-black leading-[2.25rem]">How our experts work with AI</h2>
+      <div class="flex flex-wrap gap-8 max-sm:flex-col">
+        {approachItems.map((item) => (
+          <div class="flex-1 min-w-[200px] max-sm:min-w-0 flex flex-col gap-3">
+            <div class="text-black" set:html={item.icon} />
+            <h3 class="m-0 text-lg font-bold text-black leading-6">{item.title}</h3>
+            <p class="m-0 text-base leading-[1.2rem] text-black">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <ServiceStatisticsSection stats={stats} />
+
+  <!-- AI Products -->
+  <section class="scroll-reveal-group w-full" aria-label="Our AI products">
+    <div class="flex flex-col gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
+      <h2 class="m-0 text-2xl font-black text-black text-center leading-[2.25rem]">Our Products leveraging the Power of AI</h2>
+      <div class="flex flex-row gap-8 justify-center max-sm:flex-col max-sm:items-center scroll-reveal-item" style="--sr-delay: 80ms">
+        <a href="https://formx.ai/" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black hover:opacity-80 transition-opacity">
+          <img src="/images/fx-icon.png" alt="FormX" class="w-[260px] object-contain" loading="lazy" />
+          <h3 class="m-0 text-[2rem] font-semibold leading-[2.625rem]">FormX</h3>
+          <p class="m-0 text-lg text-center leading-8">Automate Data Processing with AI</p>
+        </a>
+        <a href="https://skytest.ai/" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black hover:opacity-80 transition-opacity">
+          <img src="/images/skytest-icon.png" alt="Skytest.ai" class="w-[260px] object-contain" loading="lazy" />
+          <h3 class="m-0 text-[2rem] font-semibold leading-[2.625rem]">Skytest.ai</h3>
+          <p class="m-0 text-lg text-center leading-8">Enterprise-Grade E2E Testing<br />at a Fraction of the Cost</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark circles section -->
+  <ServiceCirclesSection />
+
+  <!-- Shared "why Oursky" methodologies -->
+  <ServiceSharedMethodologies />
+</div>

@@ -1,0 +1,29 @@
+---
+/**
+ * ServiceStatisticsSection — 3-column statistics grid for /service/* inner pages.
+ * Webflow ref: .statistics-container
+ * Animated counters driven by data-count attribute and IntersectionObserver in the page script.
+ */
+interface Stat {
+  icon: string;
+  number: string;
+  dataCount: number;
+  title: string;
+}
+interface Props {
+  stats: Stat[];
+}
+const { stats } = Astro.props;
+---
+
+<section class="scroll-reveal w-full" aria-label="Statistics">
+  <div class="statistics-container grid grid-cols-3 gap-y-[3.75rem] p-10 max-lg:grid-cols-1 max-lg:gap-y-12">
+    {stats.map((stat) => (
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="flex justify-center items-center" set:html={stat.icon} />
+        <p class="statistics__number m-0 text-[2.625rem] font-medium leading-[3.75rem] text-black" data-count={stat.dataCount}>{stat.number}</p>
+        <p class="m-0 text-lg font-normal leading-6 text-black" set:html={stat.title} />
+      </div>
+    ))}
+  </div>
+</section>

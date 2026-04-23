@@ -2,7 +2,7 @@
 /**
  * generate-blog-stubs.mjs
  *
- * Converts exports/webflow/blogs-metadata.json → src/content/blog/<slug>.mdx
+ * Converts exports/webflow/blogs-metadata.json → src/content/blog/<slug>.md
  *
  * Each generated file has:
  *  - Full frontmatter from the Webflow export (metadata only — no body content)
@@ -50,10 +50,10 @@ let processed = 0;
 for (const post of posts) {
   if (processed >= LIMIT) break;
 
-  const outFile = path.join(outDir, `${post.slug}.mdx`);
+  const outFile = path.join(outDir, `${post.slug}.md`);
 
   if (fs.existsSync(outFile) && !FORCE) {
-    console.log(`skip  ${post.slug}.mdx  (already exists; use --force to overwrite)`);
+    console.log(`skip  ${post.slug}.md  (already exists; use --force to overwrite)`);
     skipped++;
     continue;
   }
@@ -83,7 +83,7 @@ for (const post of posts) {
     `webflowId: ${yamlStr(post.id)}`,
     `---`,
     ``,
-    `{/* TODO Phase 4: fetch and convert body content from Webflow CMS */}`,
+    `<!-- TODO Phase 4: fetch and convert body content from Webflow CMS -->`,
     ``,
     `Body content will be imported from Webflow CMS in Phase 4.`,
     ``,
@@ -92,10 +92,10 @@ for (const post of posts) {
   const content = lines.join('\n');
 
   if (DRY_RUN) {
-    console.log(`\n--- ${post.slug}.mdx ---\n${content}`);
+    console.log(`\n--- ${post.slug}.md ---\n${content}`);
   } else {
     fs.writeFileSync(outFile, content, 'utf8');
-    console.log(`write ${post.slug}.mdx`);
+    console.log(`write ${post.slug}.md`);
     written++;
   }
   processed++;

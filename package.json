@@ -12,7 +12,8 @@
     "astro": "astro",
     "generate:works": "node scripts/generate-works-stubs.mjs",
     "generate:blog-stubs": "node scripts/generate-blog-stubs.mjs",
-    "generate:blog-stubs:all": "node scripts/generate-blog-stubs.mjs --force"
+    "generate:blog-stubs:all": "node scripts/generate-blog-stubs.mjs --force",
+    "import:webflow-mcp": "node scripts/import-webflow-mcp-dumps.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
@@ -25,7 +26,8 @@
     "lottie-web": "^5.13.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "turndown": "^7.2.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",

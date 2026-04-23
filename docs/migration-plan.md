@@ -14,7 +14,7 @@ Plain Vite + React produces a single-page app, which is poor for SEO. Next.js wi
 
 - Built on Vite — fast DX and build times
 - Static-first by default — generates clean HTML per page, zero JS unless opted in (islands architecture)
-- Native Content Collections with MDX — type-safe, schema-validated, ideal for AI-agent-managed content
+- Native Content Collections with Markdown (and optional MDX where needed) — type-safe, schema-validated, ideal for AI-agent-managed content
 - `@astrojs/sitemap` and proper `<head>` meta support out of the box
 - React islands available for interactive components (nav mobile menu, contact form) without shipping React to every page
 
@@ -24,7 +24,7 @@ Design tokens are defined in `src/styles/global.css` under `@theme` and extracte
 
 ### Content: File-based, no headless CMS
 
-Blog posts, works/case studies, and categories live as MDX/JSON files in `src/content/`. An AI agent adds or edits posts by committing files, triggering a rebuild and deploy. This replaces the Strapi + Next.js pattern used in `authgear-web` with a simpler, no-server approach.
+Blog posts (one `.md` file per post), works/case studies, and categories live under `src/content/`. An AI agent adds or edits posts by committing files, triggering a rebuild and deploy. This replaces the Strapi + Next.js pattern used in `authgear-web` with a simpler, no-server approach.
 
 ### Webflow migration approach: MCP extraction + reference, not HTML export
 
@@ -66,7 +66,7 @@ oursky-web/
 ├── src/
 │   ├── content.config.ts         # Astro 6 content collection schemas
 │   ├── content/
-│   │   ├── blog/                 # MDX blog posts (AI-agent managed, 138 target)
+│   │   ├── blog/                 # One .md file per post (AI-agent managed, 138 target); template: docs/templates/blog-post.md
 │   │   ├── works/                # MDX case studies (AI-agent managed, 8 items)
 │   │   └── categories/           # JSON blog categories (13 items)
 │   ├── layouts/
@@ -102,9 +102,11 @@ oursky-web/
 │   ├── migration-plan.md         # This file
 │   ├── phase1-handoff.md
 │   ├── phase2-handoff.md
-│   └── phase3-handoff.md
+│   ├── phase3-handoff.md
+│   └── templates/
+│       └── blog-post.md          # Copy-paste template for new `src/content/blog/<slug>.md` posts
 ├── scripts/
-│   ├── generate-blog-stubs.mjs   # Converts Webflow blog export → MDX stubs
+│   ├── generate-blog-stubs.mjs   # Converts Webflow blog export → .md stubs
 │   └── generate-works-stubs.mjs  # Converts Webflow works export → MDX stubs
 ├── .cursor/skills/oursky-webflow-page-rebuild/SKILL.md
 ├── astro.config.mjs
@@ -128,7 +130,9 @@ oursky-web/
 
 All dynamic content lives as files in `src/content/`. An AI agent creates or edits files, commits, and pushes — a CI/CD rebuild deploys the change.
 
-### Blog posts — `src/content/blog/*.mdx`
+### Blog posts — `src/content/blog/<slug>.md`
+
+Each post is a single Markdown file with YAML frontmatter (see `docs/templates/blog-post.md` for a starter). The content collection also accepts `.mdx` if a post needs embedded components. Same general pattern as **formx.ai** (`src/content/blog/*.md` with frontmatter, listings sorted by date).
 
 ```yaml
 ---
@@ -141,6 +145,8 @@ image: "/images/blog/build-it-right.jpg"
 draft: false
 ---
 ```
+
+After the `---` delimiter, the body is standard GitHub-flavored Markdown.
 
 ### Works / Case Studies — `src/content/works/*.mdx`
 
@@ -185,7 +191,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 
 - Scaffold Astro 6 with Tailwind v4, MDX, React, sitemap
 - Extract Webflow site structure, page metadata, and all 3 CMS collections via MCP Data API
-- Generate MDX stubs for all 138 blog posts and 8 works items; import 13 categories as JSON
+- Generate Markdown (`.md`) stubs for all 138 blog posts and MDX stubs for 8 works items; import 13 categories as JSON
 - Establish URL conventions (all match Webflow — no redirects needed)
 
 ### Phase 2: Design system and layout shell
@@ -201,9 +207,10 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 - 3a: Homepage — `index.astro` + all home sections + shared UI components + reusable page-rebuild skill
 - 3b: `/about`, `/services`, `/service/*`, `/products`, `/contact`, `/open-sourcese`
 
-### Phase 4: Full content migration
+### Phase 4: Full content migration (in progress)
 
-- Re-fetch 138 blog post HTML bodies from Webflow API; convert to MDX; set `draft: false`
+- Re-fetch 138 blog post HTML bodies from Webflow API; convert to **Markdown** (`.md` in `src/content/blog/`); set `draft: false` per post when the body is complete
+- New posts: copy `docs/templates/blog-post.md` → `src/content/blog/<slug>.md` and fill frontmatter + body
 - Fetch rich body content for 8 works; complete MDX case studies
 - Download and migrate all CDN images to `public/images/`
 - Audit category mapping; verify all blog post slugs and author fields
@@ -227,8 +234,8 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 | 1 Setup + extraction           | Done             | `docs/phase1-handoff.md`                                                                                    |
 | 2 Design system + layout shell | Done             | `docs/phase2-handoff.md`                                                                                    |
 | 3a Homepage rebuild            | Done             | `docs/phase3-handoff.md`                                                                                    |
-| 3b Remaining pages             | **In progress**  | `/about`, `/services`, `/service/`*, `/products`, `/contact`, `/open-source` — see `docs/phase3-handoff.md` |
-| 4 Full content migration       | Partially scoped | Blog bodies, works bodies, images — see `docs/phase1-handoff.md`                                            |
+| 3b Remaining pages             | Done             | 34 pages — see `docs/phase3-handoff.md`                                                                     |
+| 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works MDX, 13 categories; optional image download + JSON-LD remain |
 | 5 Deploy + cutover             | Not started      |                                                                                                             |
 
 

@@ -3,8 +3,9 @@ import { glob } from 'astro/loaders';
 import { z } from 'zod';
 
 // ─── Blog Posts ───────────────────────────────────────────────────────────────
-// Maps to src/content/blog/*.mdx
-// URL pattern: /blog/[slug]
+// One file per post: src/content/blog/<slug>.md (Markdown; .mdx optional for edge cases)
+// New-post template: docs/templates/blog-post.md
+// URL pattern: /blogs/<slug>
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
   schema: z.object({

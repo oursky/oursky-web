@@ -152,8 +152,8 @@
   --spacing-page-top-tablet: 7.37rem;   /* 118px — inner page container top (tablet) */
   --spacing-section:         3.75rem;   /* 60px  — section vertical spacing unit */
   --spacing-section-lg:      7.5rem;    /* 120px — section vertical spacing large */
-  --max-w-content:      78.75rem;  /* 1260px (from .header-container max-width) */
-  --max-w-hero-desc:    63.25rem;  /* 1012px — hero description container */
+  --max-w-content:           78.75rem;  /* 1260px (from .header-container max-width) */
+  --max-width-hero-desc:     63.25rem;  /* 1012px — hero description container */
 
   /* Nav pill dimensions (from .navbar-container, .header__icon) */
   --nav-height:         4.25rem;   /* 68px */
@@ -173,15 +173,15 @@
   ────────────────────────────────────────────────────── */
   --color-section-blue:       #2064e8;  /* dev services / featured card blue */
   --color-section-blue-dark:  #0c53df;  /* why oursky card / active-tab highlight */
-  --color-section-blue-light: #eff6fa;  /* CTA "let's talk" card, very light blue */
+  --color-section-blue-light: #dbeaf5;  /* CTA "let's talk" card, light blue (bumped from #eff6fa for contrast vs page bg #f3f3f3) */
   --color-section-gray-blue:  #dde2ec;  /* motto card light blue-gray */
   --color-section-warm-gray:  #a19d96;  /* design services warm gray */
 
   /* ── Homepage section palette ───────────────────────
      Background colors unique to home-page sections.
   ────────────────────────────────────────────────────── */
-  --color-newsletter-blue:    #1a4fff;  /* newsletter card bg */
-  --color-social-dark:        #2c2c2c;  /* social links card bg */
+  --color-newsletter-blue:    #0b53df;  /* newsletter card bg */
+  --color-social-dark:        #24323d;  /* social links card bg */
   --color-logos-dark:         #181818;  /* client logos dark strip */
   --color-hero-beige:         #ecebe7;  /* hero card outer beige */
   --color-hero-beige-light:   #e6e5e3;  /* hero card inner lighter beige */
@@ -278,23 +278,128 @@ body {
   line-height: 1.43; /* 20px / 14px */
 }
 
-/* ── Prose (MDX content) ─────────────────────────────── */
+/* Home: last full-width block uses --color-bg-section-light; footer should match, full-bleed. */
+body.page--home .site-footer {
+  background-color: var(--color-bg-section-light);
+}
+
+/* ── Prose (MDX content) ───────────────────────────────
+   Values match live oursky.com blog/works bodies:
+   p: 20px / 400 / 32px lh / black
+   li: 20px / 400 / 24px lh / #333
+   h2: 32px / 900 / 38.4px lh / black
+   h3: 25.6px / 900 / 32px lh / black
+   a: #0b53df (newsletter-blue)
+   strong: 700 / #333
+────────────────────────────────────────────────────────── */
+.prose {
+  font-size: 1.25rem;        /* 20px */
+  font-weight: 400;
+  line-height: 2rem;         /* 32px */
+  color: #000;
+}
+
+.prose > * + * {
+  margin-top: 1.5em;
+}
+
+.prose p {
+  margin: 0 0 1.25em;
+  color: #000;
+  font-weight: 400;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
 .prose h4 {
+  font-weight: 900;
+  line-height: 1.2;
+  color: #000;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose h1 { font-size: 2.5rem; }         /* 40px */
+.prose h2 { font-size: 2rem; }           /* 32px */
+.prose h3 { font-size: 1.6rem; }         /* 25.6px */
+.prose h4 { font-size: 1.25rem; }        /* 20px */
+
+.prose ul {
+  list-style: disc;
+  margin: 0 0 1.25em;
+  padding-left: 1.5em;
+  color: var(--color-text);
+}
+
+.prose ol {
+  list-style: decimal;
+  margin: 0 0 1.25em;
+  padding-left: 1.5em;
+  color: var(--color-text);
+}
+
+.prose ul ul {
+  list-style: circle;
+}
+
+.prose ol ol {
+  list-style: lower-alpha;
+}
+
+.prose li {
+  margin: 0.5em 0;
+  font-weight: 400;
+  line-height: 1.5rem;       /* 24px */
+  color: var(--color-text);  /* #333 */
+}
+
+.prose strong,
+.prose b {
   font-weight: 700;
-  line-height: 1.25;
+  color: var(--color-text);  /* #333 */
+}
+
+.prose blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.25em;
+  border-left: 4px solid var(--color-border-mid);
+  color: var(--color-text-muted);
+  font-style: italic;
 }
 
 .prose a {
-  color: var(--color-primary);
+  color: var(--color-newsletter-blue);  /* #0b53df */
   text-decoration: underline;
 }
 
 .prose img {
   border-radius: var(--radius-md);
   max-width: 100%;
+  margin: 1.5em 0;
+}
+
+.prose code {
+  font-size: 0.9em;
+  background: var(--color-muted);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+
+.prose pre {
+  margin: 1.5em 0;
+  padding: 1em 1.25em;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
 }
 
 /* ── Scroll-driven reveals (homepage, marketing pages) ──

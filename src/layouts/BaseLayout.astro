@@ -25,6 +25,8 @@ interface Props {
   noindex?: boolean;
   /** Optional body class (e.g. `page--home` for absolute header over hero). */
   bodyClass?: string;
+  /** Additional schema.org JSON-LD nodes to emit alongside the default Organization + WebSite. */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -38,10 +40,30 @@ const {
   twitterCard = 'summary_large_image',
   noindex = false,
   bodyClass,
+  jsonLd,
 } = Astro.props;
 
 const siteUrl = (import.meta.env.SITE ?? 'https://www.oursky.com').replace(/\/$/, '');
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'Oursky',
+  url: `${siteUrl}/`,
+  logo: `${siteUrl}/images/og-default.png`,
+};
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: `${siteUrl}/`,
+  name: 'Oursky',
+  publisher: { '@id': `${siteUrl}/#organization` },
+  inLanguage: 'en',
+};
+const extraSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const fullTitle = title === 'Oursky' ? title : `${title} | Oursky`;
 const socialTitle =
   ogTitle === undefined || ogTitle.length === 0
@@ -83,13 +105,20 @@ const absoluteOgImage = ogImage.startsWith('http')
     <meta name="twitter:image" content={absoluteOgImage} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Borna Webfont is self-hosted via @font-face in global.css -->
     <!-- Preload the most-used weights for faster LCP -->
     <link rel="preload" href="/fonts/borna-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/borna-medium.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteSchema)} />
+    {extraSchemas.map((schema) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body class:list={[bodyClass].filter(Boolean)}>
     <Header />

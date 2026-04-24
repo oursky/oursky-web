@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ServiceLetsTalkSection from '../components/services/ServiceLetsTalkSection.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -14,7 +15,7 @@ const { title, description, heroImage, heroImageAlt, testimonial } = work.data;
   <article class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] max-lg:pt-page-top-tablet box-border">
 
     <!-- Page title: blue gradient "case study" + description -->
-    <section class="flex flex-col items-start gap-6 mb-[4.63rem]" aria-label="Case study hero">
+    <section class="max-w-[67.5rem] mx-auto w-full flex flex-col items-start gap-6 mb-[4.63rem]" aria-label="Case study hero">
       <div class="ml-5 max-w-[80%] max-sm:ml-0">
         <h1 class="case-study__page-title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">
           Case Study
@@ -29,14 +30,14 @@ const { title, description, heroImage, heroImageAlt, testimonial } = work.data;
 
     <!-- Summary (the description from frontmatter) -->
     {description && (
-      <h2 class="self-start max-w-[63.2365rem] px-5 m-0 mt-[4.63rem] mb-10 text-[3rem] font-semibold leading-[3.5rem] text-black max-md:text-3xl max-md:leading-10 max-md:px-0">
+      <h2 class="max-w-[67.5rem] mx-auto w-full px-5 m-0 mt-[4.63rem] mb-10 text-[2rem] font-bold leading-footer text-black max-md:px-0">
         {description}
       </h2>
     )}
 
     <!-- Banner image -->
     {heroImage && (
-      <div class="w-full rounded-[20px] overflow-hidden mt-10">
+      <div class="max-w-[67.5rem] mx-auto w-full rounded-[20px] overflow-hidden mt-10">
         <img
           src={heroImage}
           alt={heroImageAlt ?? title}
@@ -46,32 +47,35 @@ const { title, description, heroImage, heroImageAlt, testimonial } = work.data;
       </div>
     )}
 
-    <!-- Body content -->
-    <div class="prose max-w-none px-5 py-16 max-md:px-0">
-      <slot />
+    <!-- Body content — same 67.5rem column + horizontal padding as description h2 -->
+    <div class="max-w-[67.5rem] mx-auto w-full px-5 py-16 max-md:px-0">
+      <div class="prose w-full max-w-none">
+        <slot />
+      </div>
     </div>
 
-    <!-- Testimonial -->
+    <!-- Testimonial — same column as description + body -->
     {testimonial && (
-      <blockquote class="mt-16 border-l-4 border-primary pl-6 py-2 mx-5 max-md:mx-0">
-        <p class="text-2xl font-medium leading-relaxed text-text">
-          &ldquo;{testimonial.quote}&rdquo;
-        </p>
-        <footer class="mt-4">
-          <cite class="not-italic font-semibold">{testimonial.author}</cite>
-          {testimonial.role && (
-            <span class="text-text-muted ml-2">— {testimonial.role}</span>
-          )}
-        </footer>
-      </blockquote>
+      <div class="max-w-[67.5rem] mx-auto w-full px-5 max-md:px-0 mt-16">
+        <blockquote class="m-0 border-l-4 border-primary pl-6 py-2">
+          <p class="text-2xl font-medium leading-relaxed text-text">
+            &ldquo;{testimonial.quote}&rdquo;
+          </p>
+          <footer class="mt-4">
+            <cite class="not-italic font-semibold">{testimonial.author}</cite>
+            {testimonial.role && (
+              <span class="text-text-muted ml-2">— {testimonial.role}</span>
+            )}
+          </footer>
+        </blockquote>
+      </div>
     )}
 
-    <div class="border-t border-border py-8 mt-16">
-      <a href="/works" class="text-primary hover:underline font-medium">
-        &larr; All Works
-      </a>
-    </div>
   </article>
+
+  <div class="max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] mt-16 pb-16 box-border">
+    <ServiceLetsTalkSection />
+  </div>
 </BaseLayout>
 
 <style>

@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
+import RelatedBlogSection from '../components/blog/RelatedBlogSection.astro';
+import ServiceLetsTalkSection from '../components/services/ServiceLetsTalkSection.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -11,10 +13,8 @@ const { post } = Astro.props;
 const {
   title,
   description,
-  pubDate,
   author,
   image,
-  imageAlt,
   categories,
   ogTitle,
   ogDescription,
@@ -33,11 +33,12 @@ const resolvedCanonical = canonicalUrl
 const allCategories = await getCollection('categories');
 const categoryNameBySlug = new Map(allCategories.map((c) => [c.data.slug, c.data.name]));
 
-const formattedDate = pubDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const postUrl = `${siteUrl}/blogs/${post.id}`;
+const encodedUrl = encodeURIComponent(postUrl);
+const encodedTitle = encodeURIComponent(title);
+const shareFacebook = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+const shareX = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+const shareLinkedIn = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`;
 ---
 
 <BaseLayout
@@ -51,7 +52,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   twitterCard={twitterCard}
 >
   <article class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
-    <header class="mb-10">
+    <header class="mb-10 max-w-[67.5rem] mx-auto w-full">
       <div class="ml-5 max-sm:ml-0">
         <p class="blog-badge inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">Blog</p>
       </div>
@@ -67,33 +68,66 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
         ))}
       </div>
       <p class="ml-5 max-sm:ml-0 text-sm text-text-muted m-0">
-        {formattedDate} &middot; {author}
+        {author}
       </p>
     </header>
 
-    {
-      image && (
-        <figure class="mb-10">
-          <img
-            src={image}
-            alt={imageAlt ?? title}
-            class="w-full rounded-lg object-cover"
-            loading="eager"
-          />
-        </figure>
-      )
-    }
+    <div class="flex gap-10 max-w-[67.5rem] mx-auto w-full max-lg:flex-col max-lg:items-start max-lg:gap-6">
+      <div class="prose prose-lg max-w-[60rem] flex-1 min-w-0 px-5 max-sm:px-0">
+        <slot />
+      </div>
 
-    <div class="prose prose-lg max-w-none">
-      <slot />
+      <aside class="shrink-0 w-20 max-lg:w-full max-lg:order-first" aria-label="Share this post">
+        <div class="sticky top-[30vh] flex flex-col items-center gap-3 max-lg:static max-lg:flex-row max-lg:justify-start max-lg:gap-4">
+          <span class="text-sm font-semibold text-black">Share</span>
+          <div class="flex flex-col gap-3 max-lg:flex-row">
+            <a
+              href={shareFacebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Share on Facebook"
+              aria-label="Share on Facebook"
+              class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-80 no-underline"
+            >
+              <svg aria-hidden="true" viewBox="0 0 320 512" class="h-4 w-4 fill-current">
+                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+              </svg>
+            </a>
+            <a
+              href={shareX}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Share on X"
+              aria-label="Share on X"
+              class="w-8 h-8 rounded-md bg-black text-white flex items-center justify-center transition-opacity hover:opacity-80 no-underline"
+            >
+              <svg aria-hidden="true" viewBox="0 0 512 512" class="h-[0.85rem] w-[0.85rem] fill-current">
+                <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+              </svg>
+            </a>
+            <a
+              href={shareLinkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Share on LinkedIn"
+              aria-label="Share on LinkedIn"
+              class="w-8 h-8 rounded-md bg-black text-white flex items-center justify-center transition-opacity hover:opacity-80 no-underline"
+            >
+              <svg aria-hidden="true" viewBox="0 0 448 512" class="h-4 w-4 fill-current">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
     </div>
 
-    <footer class="mt-16 pt-8 border-t border-border">
-      <a href="/blog" class="text-primary hover:underline font-medium">
-        &larr; Back to Blog
-      </a>
-    </footer>
   </article>
+
+  <div class="max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] mt-16 pb-16 box-border">
+    <RelatedBlogSection currentSlug={post.id} />
+    <ServiceLetsTalkSection />
+  </div>
 </BaseLayout>
 
 <style>

@@ -20,7 +20,7 @@ works.sort((a, b) => a.data.order - b.data.order);
 
       <!-- Hero -->
       <section class="scroll-reveal-group w-full" aria-label="Works hero">
-        <div class="ml-5 mb-5 scroll-reveal-item" style="--sr-delay: 0ms">
+        <div class="ml-5 max-md:ml-0 mb-5 scroll-reveal-item" style="--sr-delay: 0ms">
           <h1 class="works-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">
             We create software and digital products that support real business growth
           </h1>
@@ -49,12 +49,12 @@ works.sort((a, b) => a.data.order - b.data.order);
                     style={`background-color: ${bg};`}
                   >
                     <!-- Title + description -->
-                    <div class="mt-[3.11rem] mx-[2.66rem]">
+                    <div class="mt-[3.11rem] mx-[2.66rem] max-md:mt-7 max-md:mx-5">
                       <h2 class="m-0 text-[1.8rem] font-semibold leading-8 text-white">
                         {work.data.title}
                       </h2>
                     </div>
-                    <p class="mx-[2.66rem] mt-[1.58rem] mb-[2.8rem] m-0 text-[1.4rem] leading-[1.6rem] text-white/80">
+                    <p class="mx-[2.66rem] mt-[1.58rem] mb-[2.8rem] m-0 text-[1.4rem] leading-[1.6rem] text-white/80 max-md:mx-5 max-md:mt-3 max-md:mb-5">
                       {work.data.description}
                     </p>
                     <!-- Image fills remaining space -->

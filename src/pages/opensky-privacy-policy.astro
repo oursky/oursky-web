@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="OpenSky Privacy Policy"
+  description="Privacy Policy for OpenSky app"
+  noindex={true}
+>
+  <div class="opensky-page">
+    <div class="flex flex-col gap-6 w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] box-border max-lg:pt-page-top-tablet">
+
+      <!-- Page hero: gradient title + subtitle -->
+      <section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label="OpenSky Privacy Policy">
+        <div class="ml-5 max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
+          <h1 class="opensky-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">OpenSky</h1>
+        </div>
+        <div class="max-w-hero-desc scroll-reveal-item" style="--sr-delay: 80ms">
+          <p class="m-0 pl-5 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm max-md:pl-0">Privacy Policy</p>
+        </div>
+      </section>
+
+      <!-- Policy content -->
+      <div class="scroll-reveal-item w-full max-w-[63.75rem] mx-auto mt-[3.75rem] mb-[3.75rem] px-5 max-lg:px-0" style="--sr-delay: 160ms">
+        <div class="text-2xl leading-loose text-text prose prose-2xl max-w-none">
+          <p>OpenSky is an internal-use mobile application developed by Oursky Ltd. This Privacy Policy explains how we handle user information when using the app.</p>
+
+          <p><strong>1. User Authentication</strong><br>
+          To access OpenSky, users must log in using a username and password. These credentials are issued internally by Oursky Ltd and are intended for use by authorized staff only.</p>
+
+          <p><strong>2. Data Collection</strong><br>
+          OpenSky does <strong>not</strong> collect, store, or transmit any personal or usage data beyond the login credentials required for authentication. No additional personal information, location data, or device identifiers are collected.</p>
+
+          <p><strong>3. Data Usage</strong><br>
+          The login information is used solely to verify user identity and provide access to the app's features. OpenSky does not use your data for analytics, marketing, or any third-party services.</p>
+
+          <p><strong>4. Data Storage and Security</strong><br>
+          User credentials are securely handled and stored according to internal IT and security policies. Unauthorized access is strictly prohibited.</p>
+
+          <p><strong>5. Changes to This Policy</strong><br>
+          We may update this Privacy Policy from time to time. Any changes will be communicated through internal channels.</p>
+
+          <p><strong>6. Contact</strong><br>
+          For any questions about this policy or the app, please contact:<br>
+          <strong>Oursky Ltd</strong><br>
+          Email: <a href="mailto:hello@oursky.com">hello@oursky.com</a><br>
+          Website: <a href="https://www.oursky.com">https://www.oursky.com</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  function initOpenskyPage() {
+    const singles = document.querySelectorAll('.opensky-page .scroll-reveal');
+    const groups = document.querySelectorAll('.opensky-page .scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+      return;
+    }
+    if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(t.classList.contains('scroll-reveal-group') ? 'scroll-reveal-group--visible' : 'scroll-reveal--visible');
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+  document.addEventListener('astro:page-load', initOpenskyPage);
+</script>
+
+<style>
+  .opensky-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

@@ -68,7 +68,7 @@ for (const post of posts) {
   }
   if (categorySlugs.length === 0) categorySlugs.push('development');
 
-  // Sanitize pubDate
+  // YYYY-MM-DD only (no time) for frontmatter `pubDate`
   const pubDate = post.lastPublished
     ? new Date(post.lastPublished).toISOString().split('T')[0]
     : '2024-01-01';

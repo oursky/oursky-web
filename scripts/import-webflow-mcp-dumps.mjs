@@ -166,6 +166,7 @@ for (const it of allPosts) {
     typeof displayCatRaw === 'string' && displayCatRaw.trim() !== '' ? displayCatRaw.trim() : undefined;
 
   const desc = (fd['meta-description'] || '').trim() || fd.name;
+  // `pubDate` in content is YYYY-MM-DD only (no time).
   const pub = it.lastPublished ? it.lastPublished.split('T')[0] : '2024-01-01';
   const author = (fd.author || 'Oursky Team').trim() || 'Oursky Team';
   const thumb = fd.thumbnail;

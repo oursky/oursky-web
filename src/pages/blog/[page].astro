@@ -4,9 +4,23 @@ import BlogPostList from '../../components/blog/BlogPostList.astro';
 import BlogPagination from '../../components/blog/BlogPagination.astro';
 import { BLOG_POSTS_PER_PAGE, getSortedPublishedPosts } from '../../data/blog-paging';
 
+export async function getStaticPaths() {
+  const allPosts = await getSortedPublishedPosts();
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / BLOG_POSTS_PER_PAGE));
+  if (totalPages <= 1) {
+    return [];
+  }
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    params: { page: String(i + 2) },
+  }));
+}
+
+const pageParam = Astro.params.page;
+const currentPage = Math.max(2, parseInt(String(pageParam), 10) || 2);
 const allPosts = await getSortedPublishedPosts();
 const totalPages = Math.max(1, Math.ceil(allPosts.length / BLOG_POSTS_PER_PAGE));
-const pagePosts = allPosts.slice(0, BLOG_POSTS_PER_PAGE);
+const start = (currentPage - 1) * BLOG_POSTS_PER_PAGE;
+const pagePosts = allPosts.slice(start, start + BLOG_POSTS_PER_PAGE);
 ---
 
 <BaseLayout
@@ -20,12 +34,12 @@ const pagePosts = allPosts.slice(0, BLOG_POSTS_PER_PAGE);
       </div>
       <p class="ml-5 max-sm:ml-0 text-xl text-black m-0">
         Our latest news and insights
+        {totalPages > 1 && <span class="text-text-muted"> (page {currentPage} of {totalPages})</span>}
       </p>
     </header>
 
-    {allPosts.length === 0 && <p class="text-text-muted">Posts are being imported — check back soon.</p>}
-    {allPosts.length > 0 && <BlogPostList posts={pagePosts} />}
-    {allPosts.length > 0 && <BlogPagination currentPage={1} totalPages={totalPages} />}
+    <BlogPostList posts={pagePosts} />
+    <BlogPagination currentPage={currentPage} totalPages={totalPages} />
   </main>
 </BaseLayout>
 

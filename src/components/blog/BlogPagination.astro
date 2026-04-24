@@ -1,0 +1,64 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+}
+
+const { currentPage, totalPages } = Astro.props;
+const href = (n: number) => (n <= 1 ? '/blog' : `/blog/${n}`);
+---
+
+{totalPages >= 2 && (
+<nav
+  class="mt-12 flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+  aria-label="Blog pagination"
+>
+  {
+    currentPage > 1 && (
+      <a
+        href={href(currentPage - 1)}
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-primary border border-border rounded-md hover:bg-muted no-underline transition-colors"
+        rel="prev"
+      >
+        &larr; Previous
+      </a>
+    )
+  }
+
+  <ol class="flex flex-wrap items-center justify-center gap-1.5 list-none p-0 m-0" role="list">
+    {
+      Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+        <li role="listitem">
+          {n === currentPage ? (
+            <span
+              class="inline-flex min-w-[2.5rem] justify-center px-3 py-2 text-sm font-semibold text-black bg-muted rounded-md"
+              aria-current="page"
+            >
+              {n}
+            </span>
+          ) : (
+            <a
+              href={href(n)}
+              class="inline-flex min-w-[2.5rem] justify-center px-3 py-2 text-sm font-medium text-text-muted no-underline rounded-md hover:bg-muted hover:text-primary transition-colors"
+            >
+              {n}
+            </a>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+
+  {
+    currentPage < totalPages && (
+      <a
+        href={href(currentPage + 1)}
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-primary border border-border rounded-md hover:bg-muted no-underline transition-colors"
+        rel="next"
+      >
+        Next &rarr;
+      </a>
+    )
+  }
+</nav>
+)}

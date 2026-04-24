@@ -3,8 +3,10 @@ title: "How we figured out period leave without a single meeting"
 description: "How we figured out period leave without a single meeting"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994c830615a7e0ea6f225a_1s0LCbddq8T4VN4kXtt9r2g.jpeg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/b74d7cbb66_67994c830615a7e0ea6f225a_1s0LCbddq8T4VN4kXtt9r2g.jpeg"
 draft: false
 webflowId: "67994c9ec94bf5d11729a93b"
 ---
@@ -17,7 +19,7 @@ Also, our “solution” evolved organically. When I asked everyone how it start
 
 > **The company’s period leave: none.**
 
-![Mailboxes](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994c8efe20b33f4be45398_1s0LCbddq8T4VN4kXtt9r2g.jpeg)
+![Mailboxes](/images/blogs/724ac904f9_67994c8efe20b33f4be45398_1s0LCbddq8T4VN4kXtt9r2g.jpeg)
 
 Photo by Mathyas Kurmann via [Unsplash](https://unsplash.com/search/mailbox?photo=fb7yNPbT0l8)
 
@@ -37,7 +39,7 @@ Our simple solution evolved out of another company practice: morning e-mail noti
 
 ## Team culture saves awkward conversations.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994c8f974cebaa3ee00936_1dx0EGng9MGCbz81X9gx3GQ.jpeg)
+![](/images/blogs/0de3307762_67994c8f974cebaa3ee00936_1dx0EGng9MGCbz81X9gx3GQ.jpeg)
 
 Photo by Les Anderson via [Unsplash](https://unsplash.com/search/conversation?photo=AI-ATTbj3rs)
 
@@ -50,6 +52,8 @@ Our perspectives shaped the company’s approach to self-management — cont
 ## No asshole rule.
 
 When a team grows from 3 guys to having 1:4 female team members (who occupy every team and seniority), we quickly learned that for some people, their time of the month feels like this:
+
+<iframe src="https://giphy.com/embed/za2RiAGIvCzjq" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 [via GIPHY](https://giphy.com/gifs/education-teaching-kanye-west-gif-za2RiAGIvCzjq)
 
@@ -87,7 +91,7 @@ It makes things easier for team members to casually introduce ideas (i.e. via ou
 
 ## Tips for tech companies to encourage female developers.
 
-![Grace Hopper, one of the first programmers](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994c8eff9dc23d3bfb925e_1RyS6bFY-8EF_MM3S0NGq3A.jpeg)
+![Grace Hopper, one of the first programmers](/images/blogs/6501cc6903_67994c8eff9dc23d3bfb925e_1RyS6bFY-8EF_MM3S0NGq3A.jpeg)
 
 Grace Hopper, one of the first programmers of the Harvard Mark I computer and invented COBOL (source: [Wikipedia](https://en.wikipedia.org/wiki/Grace_Hopper))
 

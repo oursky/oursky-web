@@ -3,13 +3,15 @@ title: "Kubernetes Security – Network Encryption between k8s Deployments and I
 description: "Kubernetes Security – Network Encryption between k8s Deployments and Ingress"
 pubDate: 2025-01-28
 author: "Elliot Wong"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994411273bada74a6294a3_nazarizal-mohammad-ANAGcyPUVwk-unsplash-scaled.jpg"
+categories:
+  - "engineering"
+displayCategory: "Opensource"
+image: "/images/blogs/98f61854df_67994411273bada74a6294a3_nazarizal-mohammad-ANAGcyPUVwk-unsplash-scaled.jpg"
 draft: false
 webflowId: "679944a1d01fe4ac5d506f92"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799441af9deac5f8d13772d_nazarizal-mohammad-ANAGcyPUVwk-unsplash-1160x928.jpeg)
+![](/images/blogs/ff238372dc_6799441af9deac5f8d13772d_nazarizal-mohammad-ANAGcyPUVwk-unsplash-1160x928.jpeg)
 
 **By Calvin**
 
@@ -21,7 +23,7 @@ This a quick how-to guide on hardening a k8s application by enforcing secure com
 
 **Some caveats:** Managing a Kubernetes cluster itself is complex enough, and securing it can be convoluted. This will add another layer of complexity, so consider what your actual requirements are and conduct risk assessments. Not all projects require this level of security.
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679944a0d01fe4ac5d506f63_6799445b8e20e6a672bda43a_SCR-20250128-sdvk.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/b6e570f35a_679944a0d01fe4ac5d506f63_6799445b8e20e6a672bda43a_SCR-20250128-sdvk.png)
 
 _A simple visualization of traffic between Ingress and back end_ services
 
@@ -49,7 +51,7 @@ You can install a service mesh like [Linkerd](https://linkerd.io/2/features/auto
 *   Basic understandings on Kubernetes and how it achieves container orchestration are also required.
 *   You have the fundamentals like “https vs http” or “TLS vs SSL” and know how to generate a self-signed [certificate](https://kubernetes.io/docs/concepts/cluster-administration/certificates/).
 
-![Kubernetes Security via Application-level Network Encrpytion](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799441a1d0a449b567d9fec_photo-1550751827-4bd374c3f58b.jpeg)
+![Kubernetes Security via Application-level Network Encrpytion](/images/blogs/6c6f1c6cd1_6799441a1d0a449b567d9fec_photo-1550751827-4bd374c3f58b.jpeg)
 
 PHOTO BY [Adi Goldstein](https://unsplash.com/@adigold1) ON [UNSPLASH](https://unsplash.com/)
 

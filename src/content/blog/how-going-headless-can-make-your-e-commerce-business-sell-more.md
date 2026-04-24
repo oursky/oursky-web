@@ -3,8 +3,10 @@ title: "How Going Headless can Make Your E-Commerce Business Sell More"
 description: "Going headless can make your e-commerce business enhance user experience, pave ways for mobile app development, and add new capabilities to your team."
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31fddf5365dd0060b0f10_blake-wisz-Xn5FbEM9564-unsplash-1160x669.jpg"
+categories:
+  - "development"
+displayCategory: "E-COMMERCE"
+image: "/images/blogs/0e55a5d88a_66e31fddf5365dd0060b0f10_blake-wisz-Xn5FbEM9564-unsplash-1160x669.jpg"
 draft: false
 webflowId: "66e3204f459b7d49daa70a6a"
 ---
@@ -17,7 +19,7 @@ Now imagine being a startup or a small company faced with the many possible chan
 
 But what if all you needed was to build one store? And this one store could be in all the locations at once with a changing facade to match every new location and community. In the physical world, this would defy the laws of physics. But in e-commerce, it’s quite like something that’s taking over the game and it’s called headless commerce.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31ffd1bff1a3902a530d8_blake-wisz-Xn5FbEM9564-unsplash-1160x669.jpeg)
+![](/images/blogs/c5b909cc09_66e31ffd1bff1a3902a530d8_blake-wisz-Xn5FbEM9564-unsplash-1160x669.jpeg)
 
 PHOTO BY BLAKE WISZ ON UNSPLASH
 
@@ -37,11 +39,11 @@ And it couldn’t have come at a better moment in time. According to BigCommerce
 
 ‍
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3204f459b7d49daa709f7_66e320238b4efef57d734eae_Screenshot%25202024-09-13%2520at%25201.08.33%25E2%2580%25AFAM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/3591394567_66e3204f459b7d49daa709f7_66e320238b4efef57d734eae_Screenshot%202024-09-13%20at%201.08.33%E2%80%AFAM.png)
 
 ‍
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31ffda89c698b6d8ce04f_Picture1.png)
+![](/images/blogs/2f0f3dd91c_66e31ffda89c698b6d8ce04f_Picture1.png)
 
 AN OVERVIEW OF HOW THE HEADLESS APPROACH IS IMPLEMENTED USING REACTJS AND MAGENTO’S [PWA STUDIO](https://magento.com/products/magento-commerce/pwa)
 

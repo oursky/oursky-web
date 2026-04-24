@@ -3,8 +3,11 @@ title: "Building an Agile Testing Workflow in Startup"
 description: "Agile methodology has been a trend in software industry in the recent years. Publishing speedy new releases with high quality is the goal of all product teams. We would like to introduce a model of QA Workflow for specifically small-scale startup scrum teams, where all one-man testing team gets started from."
 pubDate: 2025-01-28
 author: "Joy Ng"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30303e992404f6e423c3c_pexels-picjumbocom-210661-1160x773.jpg"
+categories:
+  - "development"
+  - "product-management"
+displayCategory: "QA IN SCRUM METHODOLOGY"
+image: "/images/blogs/75659f176e_66e30303e992404f6e423c3c_pexels-picjumbocom-210661-1160x773.jpg"
 draft: false
 webflowId: "66e30356c5577b9b8ea33b41"
 ---
@@ -88,7 +91,7 @@ Coming to the end of a milestone after several sprints of work, a final check on
 3.  When everything looks good and submitted to app store, it’s time for a release party 🎉
 4.  ‍
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e302ccbf76331a3fa065c3_Small-scale-agile-workflow.png)
+![](/images/blogs/76bc5de65d_66e302ccbf76331a3fa065c3_Small-scale-agile-workflow.png)
 
 A SAMPLE WORKFLOW CHART FOR STARTUP AGILE TEAM
 
@@ -102,7 +105,7 @@ Last but not least, we would also like to share you a sample of an Issue Report 
 
 ‍
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e302ccbb0653993a38b9b9_issue_report-1160x1276.png)
+![](/images/blogs/ef730cab6f_66e302ccbb0653993a38b9b9_issue_report-1160x1276.png)
 
 HTTPS://GITHUB.COM/AUTHGEAR/AUTHGEAR-SERVER/ISSUES/2537
 

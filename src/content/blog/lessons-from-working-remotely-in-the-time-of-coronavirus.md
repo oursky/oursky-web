@@ -3,8 +3,10 @@ title: "Lessons from Working Remotely in the Time of Coronavirus"
 description: "Lessons from Working Remotely in the Time of Coronavirus"
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954b493bdb1ce79ffdab3_bench-accounting-8D2k7a3wMKQ-unsplash-scaled.jpg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/1572dad99e_679954b493bdb1ce79ffdab3_bench-accounting-8D2k7a3wMKQ-unsplash-scaled.jpg"
 draft: false
 webflowId: "679954c5ff9dc23d3b0409a3"
 ---
@@ -15,7 +17,7 @@ The novel coronavirus pandemic is teaching people all around the world hard less
 
 But despite the comforts of working remotely, we are all learning to adapt to what can be an inevitable norm for everyone. Moving work from an office environment to the virtual world can be new (and distracting and stressful) to many, and this can be a challenge, even for us. In the past, we only had about one or two team members who dials in for our meetings. Now, everyone has to rely on Zoom for meetings. Before, the team is huddled in a laptop to discuss codes — now, we need to resort to Slack or our online channels for technical discussions, and things can get lost in translation.
 
-![Lessons Working Remotely in the Time of Coronavirus](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954acef69509e8dc56f3b_bench-accounting-8D2k7a3wMKQ-unsplash-1160x773.jpeg)
+![Lessons Working Remotely in the Time of Coronavirus](/images/blogs/a213d7b018_679954acef69509e8dc56f3b_bench-accounting-8D2k7a3wMKQ-unsplash-1160x773.jpeg)
 
 Photo by [Bench Accounting](https://unsplash.com/@benchaccounting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -25,19 +27,19 @@ I’ve jotted down what I’ve experienced so far while working remotely. I can 
 
 Since people can no longer discuss work face to face, we are seeing more discussions on our Slack and Basecamp channels. A good thing about written discussions is that they are naturally documented, and over time, a knowledge base can be created out of them. We are currently looking for better ways to organize all these written discussions. Some suggested creating an internal forum, but we are still exploring options that will work best for us.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954ab8efc312cbdfa7a28_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-1-1160x157.png)
+![](/images/blogs/3bc5cf5577_679954ab8efc312cbdfa7a28_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-1-1160x157.png)
 
 Developers discussing Flutter
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954acef69509e8dc56f35_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-2-1160x225.png)
+![](/images/blogs/78ac23a151_679954acef69509e8dc56f35_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-2-1160x225.png)
 
 A C++-related discussion that drew 106 replies
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954acef50e0706c2eb6bd_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-3-1160x183.png)
+![](/images/blogs/a7beae834f_679954acef50e0706c2eb6bd_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-3-1160x183.png)
 
 Sharing a Javascript (JS) toolchain
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954abbd7ccbd8a87985ca_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-4-1160x91.png)
+![](/images/blogs/7c2bc52f73_679954abbd7ccbd8a87985ca_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-4-1160x91.png)
 
 Asking a question about Google Cloud Platform (GCP) and k8s
 
@@ -60,7 +62,7 @@ Even though we are a remote work-friendly company, many of us haven’t experien
 
 I enjoy working remotely a lot. There are fewer distractions and it improves my efficiency at work. But at the same time, I also miss going to the office and having fun with my colleagues. At the office, we celebrate everyone’s birthday and hang out for team dinner every month. Instead of cancelling all these social moments, we moved them online!
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954acd42e2f08f1850035_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-5-1160x805.png)
+![](/images/blogs/0139d0ff9b_679954acd42e2f08f1850035_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-5-1160x805.png)
 
 We celebrated May’s birthday on Zoom
 

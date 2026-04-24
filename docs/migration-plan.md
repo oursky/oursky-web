@@ -67,7 +67,7 @@ oursky-web/
 │   ├── content.config.ts         # Astro 6 content collection schemas
 │   ├── content/
 │   │   ├── blog/                 # One .md file per post (AI-agent managed, 138 target); template: docs/templates/blog-post.md
-│   │   ├── works/                # MDX case studies (AI-agent managed, 8 items)
+│   │   ├── works/                # Case studies as Markdown (AI-agent managed, 8 items; `.mdx` optional)
 │   │   └── categories/           # JSON blog categories (13 items)
 │   ├── layouts/
 │   │   ├── BaseLayout.astro      # HTML shell, meta/OG/Twitter, canonical, fonts
@@ -107,7 +107,7 @@ oursky-web/
 │       └── blog-post.md          # Copy-paste template for new `src/content/blog/<slug>.md` posts
 ├── scripts/
 │   ├── generate-blog-stubs.mjs   # Converts Webflow blog export → .md stubs
-│   └── generate-works-stubs.mjs  # Converts Webflow works export → MDX stubs
+│   └── generate-works-stubs.mjs  # Converts Webflow works export → `.md` stubs
 ├── .cursor/skills/oursky-webflow-page-rebuild/SKILL.md
 ├── astro.config.mjs
 └── .env.example                  # WEBFLOW_API_TOKEN, PLAUSIBLE_DOMAIN, PUBLIC_SITE_URL
@@ -140,15 +140,18 @@ title: "Build it right the First Time"
 description: "How engineering excellence drives product success"
 pubDate: 2026-04-15
 author: "Oursky Team"
-category: "engineering"   # must match a filename stem in src/content/categories/
+categories:
+  - "engineering"   # each slug has src/content/categories/<slug>.json
+excerpt: "One-line card blurb (optional; description remains primary SEO text)."
+# Optional share overrides: ogTitle, ogDescription, ogImage, canonicalUrl, twitterCard — see docs/templates/blog-post.md
 image: "/images/blog/build-it-right.jpg"
 draft: false
 ---
 ```
 
-After the `---` delimiter, the body is standard GitHub-flavored Markdown.
+After the `---` delimiter, the body is standard GitHub-flavored Markdown. Full field list: `src/content.config.ts` (collection `blog`) and `docs/phase1-handoff.md` §3a.
 
-### Works / Case Studies — `src/content/works/*.mdx`
+### Works / Case Studies — `src/content/works/*.{md,mdx}` (on-disk files are `.md`; `.mdx` remains supported)
 
 Frontmatter holds structured metadata; MDX body holds rich sections, screenshots, and testimonials.
 
@@ -191,7 +194,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 
 - Scaffold Astro 6 with Tailwind v4, MDX, React, sitemap
 - Extract Webflow site structure, page metadata, and all 3 CMS collections via MCP Data API
-- Generate Markdown (`.md`) stubs for all 138 blog posts and MDX stubs for 8 works items; import 13 categories as JSON
+- Generate Markdown (`.md`) stubs for all 138 blog posts and 8 works items; import 13 categories as JSON
 - Establish URL conventions (all match Webflow — no redirects needed)
 
 ### Phase 2: Design system and layout shell
@@ -211,7 +214,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 
 - Re-fetch 138 blog post HTML bodies from Webflow API; convert to **Markdown** (`.md` in `src/content/blog/`); set `draft: false` per post when the body is complete
 - New posts: copy `docs/templates/blog-post.md` → `src/content/blog/<slug>.md` and fill frontmatter + body
-- Fetch rich body content for 8 works; complete MDX case studies
+- Fetch rich body content for 8 works; complete case-study Markdown
 - Download and migrate all CDN images to `public/images/`
 - Audit category mapping; verify all blog post slugs and author fields
 - Test AI agent workflow: create/edit a post, verify build + deploy
@@ -235,7 +238,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 | 2 Design system + layout shell | Done             | `docs/phase2-handoff.md`                                                                                    |
 | 3a Homepage rebuild            | Done             | `docs/phase3-handoff.md`                                                                                    |
 | 3b Remaining pages             | Done             | 34 pages — see `docs/phase3-handoff.md`                                                                     |
-| 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works MDX, 13 categories; optional image download + JSON-LD remain |
+| 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works `.md`, 13 categories; optional image download + JSON-LD remain |
 | 5 Deploy + cutover             | Not started      |                                                                                                             |
 
 

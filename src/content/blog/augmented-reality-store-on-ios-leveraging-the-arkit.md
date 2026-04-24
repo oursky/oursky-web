@@ -3,13 +3,15 @@ title: "Augmented Reality Store on iOS: Leveraging the ARKit"
 description: "Augmented Reality Store on iOS: Leveraging the ARKit"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994053c0359ca570108331_monica-silva-144544-1024x681.jpg"
+categories:
+  - "engineering"
+displayCategory: "Augmented Reality"
+image: "/images/blogs/9123ab46a9_67994053c0359ca570108331_monica-silva-144544-1024x681.jpg"
 draft: false
 webflowId: "6799407a476c3cb2a8881468"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799406353e5a1d6a9fedff2_monica-silva-144544.jpeg)
+![](/images/blogs/98724e9399_6799406353e5a1d6a9fedff2_monica-silva-144544.jpeg)
 
 Photo by Monica Silva on Unsplash
 
@@ -43,13 +45,15 @@ As we’ve mentioned, our first mini project was a catalog that turns markers in
 *   If the QR code is recognized, the corresponding 3D object is downloaded.
 *   Render the 3D object with ARKit on a surface with its own dimension from 3D object. User can move the object freely in the camera.
 
-![Augmented reality iOS 11](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679940631bafd9f5adb29d15_arcms-system.001-1024x768.jpeg)
+![Augmented reality iOS 11](/images/blogs/eaf1b5cf71_679940631bafd9f5adb29d15_arcms-system.001-1024x768.jpeg)
 
 With ARKit, we only need a CMS, QR Code reader, and stickers to begin playing with AR.
 
 AR is no longer just 2D stickers placed on faces. Now, real objects can turn into virtual objects and interact inside the augmented reality scene just from a smartphone. Since the app is embedded with a store system, it is easy to recognize new markers and displaying new objects dynamically. For example, when you scan a new QR code marker, you can discover a new Pokemon.
 
 _Check out the link for the AR App demo!_
+
+<iframe src="https://streamable.com/s/ouw2d/uhohrg" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 ## Implementing with ARKit
 
@@ -62,7 +66,7 @@ _Check out the link for the AR App demo!_
 
 ## What’s special about ARKit?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799406338bb3b02c881abbe_1*kn24j6a4FQ9K8SjoqJvhCA.png)
+![](/images/blogs/6cfe546e09_6799406338bb3b02c881abbe_1_kn24j6a4FQ9K8SjoqJvhCA.png)
 
 ARKit is groundbreaking in its attention to real life details and ability to capture 2D camera information and match it with 3D objects that are rendered.
 

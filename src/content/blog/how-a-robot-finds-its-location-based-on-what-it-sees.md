@@ -3,8 +3,10 @@ title: "How a robot finds its location based on what it ‘sees’"
 description: "Discussing visual odometry and how a robot takes in visual information to process and then locate itself in a map."
 pubDate: 2024-09-16
 author: "Jason Wu"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3476597727d587309aabb_leah-han-170866-768x1024.jpg"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/c82a5689f9_66e3476597727d587309aabb_leah-han-170866-768x1024.jpg"
 draft: false
 webflowId: "66e3477fccc23d445438d294"
 ---
@@ -37,7 +39,7 @@ Let’s start with how we as humans locate ourselves. We would first look around
 
 \[caption id="" align="alignnone" width="1492"\]
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347426163c2b650f19836_1*MFeX4C1ZFioyn70wBsngmA.png)
+![](/images/blogs/3eb2b5a9a3_66e347426163c2b650f19836_1_MFeX4C1ZFioyn70wBsngmA.png)
 
 Map of Singapore has symbols\[/caption\]
 
@@ -74,7 +76,7 @@ An image feature has the same characteristic as landmark, it is a small region o
 
 \[caption id="" align="alignnone" width="800"\]
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742159215f0398f9cd1_1*elZIhYoCY06f9P907drbgQ.jpeg)
+![](/images/blogs/81e235886a_66e34742159215f0398f9cd1_1_elZIhYoCY06f9P907drbgQ.jpeg)
 
 The robot recognizes the differences that make this tower tand out.\[/caption\]
 
@@ -82,7 +84,7 @@ _Figure 3a. Eiffel Tower is an example of good landmark as it is unique and able
 
 \[caption id="" align="alignnone" width="900"\]
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742aaeffdb3b5459938_1*n2Ik7nIVWs_5wOCsv48QGA.jpeg)
+![](/images/blogs/1758e3f995_66e34742aaeffdb3b5459938_1_n2Ik7nIVWs_5wOCsv48QGA.jpeg)
 
 How would a robot register uniform houses?\[/caption\]
 
@@ -92,11 +94,11 @@ _Figure 3b. In contrast, houses in the estate are bad landmarks. Given only the 
 
 \[caption id="" align="alignnone" width="562"\]
 
-![Visual odometry](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742efb2cb8d74bfa5ab_1*jFapWOk4j_iyY0cKw7xWsg.png)
+![Visual odometry](/images/blogs/fd58a51149_66e34742efb2cb8d74bfa5ab_1_jFapWOk4j_iyY0cKw7xWsg.png)
 
 How does a robot see this?\[/caption\] \[caption id="" align="alignnone" width="561"\]
 
-![Visual odometry](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742d433098f07dee935_1*UNGI7_Kk7jQ3UH6Be-mVdQ.png)
+![Visual odometry](/images/blogs/4319893665_66e34742d433098f07dee935_1_UNGI7_Kk7jQ3UH6Be-mVdQ.png)
 
 Robot's way of differentiating an object.\[/caption\]
 
@@ -112,7 +114,7 @@ To engineer an image feature, we want to know two things:
 
 \[caption id="attachment\_515" align="alignnone" width="525"\]
 
-![live robot visualisation demo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3474208931a9e7f26b464_chima-oursky-visual-odometry-1024x841.jpeg)
+![live robot visualisation demo](/images/blogs/728da3d456_66e3474208931a9e7f26b464_chima-oursky-visual-odometry-1024x841.jpeg)
 
 Chima is one of Oursky's office cats.\[/caption\]
 
@@ -124,7 +126,7 @@ One of the ways to search for feature on an image is to look for a sharp change 
 
 \[caption id="attachment\_516" align="alignnone" width="600"\]
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3474526e49420a7efefd7_coffee-cat-oursky.jpeg)
+![](/images/blogs/c32c3d9acc_66e3474526e49420a7efefd7_coffee-cat-oursky.jpeg)
 
 Distinguishing contrasting colours.\[/caption\]
 
@@ -139,7 +141,7 @@ Similarly, if we move away from an object, some part of the object, say a spot, 
 
 Okay, now we know how to find image features and we can locate them in an image, what’s next? After detecting an image feature, we need to come up with a way to describe it, meaning record how the feature looks. The most straight forward way probably is, draw a 7x7 square centered at the image feature, and use those 49 pixel values inside the square as an descriptor of that feature. If we want the same object but with different color being described by the same (or at least similar) way, instead of storing the 7x7 image patch with all the RGB value, we could use the greyscale value \[²\].
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742cf9939c6d3b68e36_1-enBMScsG6sSuIJ9BFfKtnA.png)
+![](/images/blogs/ded7b1a2c9_66e34742cf9939c6d3b68e36_1-enBMScsG6sSuIJ9BFfKtnA.png)
 
   
 _Figure 7. Illustration shows how to describe an image feature using image patch. Basically we just need to crop a small area of image near the image feature (here is a 15x15 image patch), convert it to grey scale and store the pixel values in a pre-defined order (here is from left to top and from top to bottom.)_
@@ -148,7 +150,7 @@ Once we have crafted a descriptor for each image feature, we may start to think 
 
 We can do this by subtracting one descriptor from the other one (which is calculating 49 subtractions if we are using 7x7 image patch as descriptor), takes the absolute value\[³\] and then sum up the difference. We have a name for this — SAD (Sum of Absolute Difference).
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3474497082675c547230a_1-_IdkxlxVmFTYHNDzZGZhWA.png)
+![](/images/blogs/d40c7e4987_66e3474497082675c547230a_1-_IdkxlxVmFTYHNDzZGZhWA.png)
 
   
 _Figure 8. Illustration showing how SAD between 2 3x3 image patches are calculated. First the absolute difference is computed between pixels on the same location (they are having the same color), finally we just need to sum those differences up._
@@ -167,7 +169,7 @@ So each pixel of the gradient image is actually telling us how strongly a pixel 
 
 Once we know how to determine the orientation of an image, we could also do that on the image patch we used as image descriptor. Now, instead of just using the image patch, we use the rotated image patch for feature description. A rotated image patch means we pick the 7x7 image patch after we rotated the image to offset its orientation; say the computed orientation of an image patch is 15 degrees clockwise, we need to pre-rotated the image by 15 degrees counter-clockwise before picking image patch. By doing so, when we’re comparing two descriptors, we are comparing them in the same orientation.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34742b46f18b2c5b4df95_1-w2r_yC0aToagLxgac_8XRQ.png)
+![](/images/blogs/3fa5f14610_66e34742b46f18b2c5b4df95_1-w2r_yC0aToagLxgac_8XRQ.png)
 
   
 _Figure 9. The Illustration shows image patches of a normal Sydney opera house image and a rotated image located at the same image feature. If we compute SAD on these two patches, it will show large difference. However, let’s say we can detect the orientation of both images, i.e. we know that the image on the right is rotated 90 degrees clockwise, we can then pre-rotated the right image by 90 degrees counter-clockwise before taking the image patch. In that case, we will have 2 identical image patch on the same image feature._

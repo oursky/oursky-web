@@ -3,8 +3,10 @@ title: "Basic Open Graph techniques that optimize shared links on Facebook"
 description: "Basic Open Graph techniques that optimize shared links on Facebook"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679926163cdca49933e7e4c9_Screen-Shot-2015-07-14-at-8.webp"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/2658bb5a22_679926163cdca49933e7e4c9_Screen-Shot-2015-07-14-at-8.webp"
 draft: false
 webflowId: "6799261a4273ee79928878b5"
 ---
@@ -33,11 +35,11 @@ On Facebook, you might already notice some shared links are displayed in differe
 
 ###### FOMR 1 – IMAGE Grid on left
 
-![small-og-image-sample](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679925e1ba7b1c72b426724b_Screen-Shot-2015-07-14-at-8.06.35-pm.png)
+![small-og-image-sample](/images/blogs/d0a5553b66_679925e1ba7b1c72b426724b_Screen-Shot-2015-07-14-at-8.06.35-pm.png)
 
 ###### FORM2 – Top cover Image
 
-![large-og-image-sample](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679925e13a98e00baded4983_Screen-Shot-2015-07-14-at-8.06.21-pm.png)
+![large-og-image-sample](/images/blogs/d6b49dd3f6_679925e13a98e00baded4983_Screen-Shot-2015-07-14-at-8.06.21-pm.png)
 
 Research shows that a large cover image can positively affect the conversion rate of shared your post.  
 **You might now want to ask, why do these two posts are presented so differently?**  
@@ -66,7 +68,7 @@ _Note that, if you want to display an OG image, the minimum image size should be
 Do test out how Facebook interprets your Open Graph post! At any time, you can use this debug tool provided by Facebook.  
 [https://developers.facebook.com/tools/debug/](https://developers.facebook.com/tools/debug/)
 
-![og-debug-sample](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679925e10c0cbb9edb1b8942_Screen-Shot-2015-07-15-at-12.37.51-am-1024x341.png)
+![og-debug-sample](/images/blogs/952d08c48e_679925e10c0cbb9edb1b8942_Screen-Shot-2015-07-15-at-12.37.51-am-1024x341.png)
 
 ### **News Feed Image Generator to make your life easier**
 
@@ -74,7 +76,7 @@ Our editors are using a tool to generate standard News Feed Images. Select an im
 
 [http://newfeedimage.appspot.com/](http://newfeedimage.appspot.com/)
 
-![News Feed Generator Image](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679925e208f9d71df7e4bc62_Screen-Shot-2015-07-14-at-7.15.11-pm.png)
+![News Feed Generator Image](/images/blogs/780b298e5a_679925e208f9d71df7e4bc62_Screen-Shot-2015-07-14-at-7.15.11-pm.png)
 
 We’ve also made life-saver other tools for developers. Check them out and share with your friends.
 

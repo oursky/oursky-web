@@ -3,13 +3,15 @@ title: "How Secure is your Messaging App? 7 Questions and 4 Examples"
 description: "How Secure is your Messaging App? 7 Questions and 4 Examples"
 pubDate: 2025-01-28
 author: "Sam Elsley"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e3ca96b779450c37463_Untitled-design-1.png"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/c0032bed54_67994e3ca96b779450c37463_Untitled-design-1.png"
 draft: false
 webflowId: "67994e50d7c8c7edf285e719"
 ---
 
-![secure messaging apps](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e32518e430f41f9acea_Untitled-design-1.png)
+![secure messaging apps](/images/blogs/94ff22a761_67994e32518e430f41f9acea_Untitled-design-1.png)
 
 Chances are you use some sort of messaging service. How secure are your messages? Source: [Pavan Trikutam](https://unsplash.com/search/phone?photo=71CjSSB83Wo).
 
@@ -17,7 +19,7 @@ Support it or not, the collection and selling of information has emerged as one 
 
 What then makes for a secure messaging app? Let’s take a look at the [Electronic Frontier Foundation](https://www.eff.org/), the leading non-profit in “defending your rights in the digital realm”, and what they suggest considering before committing to a messaging service.
 
-![secure messaging app EFF](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e31a40b4f0f1fad982f_EFFS-7-QUESTIONS-TO-ASK-BEFORE-CHOOSING-A-MESSAGING-APP-1.png)
+![secure messaging app EFF](/images/blogs/818e5d4f50_67994e31a40b4f0f1fad982f_EFFS-7-QUESTIONS-TO-ASK-BEFORE-CHOOSING-A-MESSAGING-APP-1.png)
 
 What does all of this mean? Secure, private messages all the way from sender to receiver, security design open to public inspection, no way for your contacts to fake their identity, no ability for third parties including the developer and law enforcement to decrypt messages (even the [FBI couldn’t crack Apple’s encryption](https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute)). These are just a few checkmarks to the questions above. For a much more detailed explanation of these points, head over to [EFF’s official site.](https://www.eff.org/node/82654)
 
@@ -25,7 +27,7 @@ Now for some real-life case studies. With the above information in mind, we took
 
 ## [**Facebook Messenger**](https://www.messenger.com/)
 
-![secure messaging app](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e319e5bbde3d2272850_Untitled-design-2.png)
+![secure messaging app](/images/blogs/1cfa81d0f0_67994e319e5bbde3d2272850_Untitled-design-2.png)
 
 For a company notorious for data collection, Secret Conversations is a huge step in the right direction. Source: [App Store](https://itunes.apple.com/ca/app/messenger/id454638411?mt=8).
 
@@ -43,7 +45,7 @@ One downside to Messenger’s Secret Conversations is its annoying opt-in requir
 
 ## [**Whatsapp**](https://www.whatsapp.com/)
 
-![secure messaging apps](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e31a81f96c1ee8b49d9_Untitled-design-3.png)
+![secure messaging apps](/images/blogs/fe9f352825_67994e31a81f96c1ee8b49d9_Untitled-design-3.png)
 
 One of the OGs in secure messaging, the question now is whether or not Whatsapp will stick to its promise. Source: [App Store](https://itunes.apple.com/ca/app/whatsapp-messenger/id310633997?mt=8&ign-mpt=uo%3D2).
 
@@ -59,7 +61,7 @@ Whatsapp’s greatest potential flaw lies in its ownership. Since 2014, it has b
 
 ## [**Telegram**](https://telegram.org/)
 
-![secure messaging apps](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e3123af1a9d6bd08ae2_Untitled-design-4.png)
+![secure messaging apps](/images/blogs/79a619355f_67994e3123af1a9d6bd08ae2_Untitled-design-4.png)
 
 Secure and developer friendly! Or at least developer friendly…. Source: [App Store](https://itunes.apple.com/ca/app/telegram-messenger/id686449807?mt=8).
 
@@ -77,7 +79,7 @@ Unlike Messenger or Whatsapp, which use the proven Open Whisper Systems-develope
 
 ## [**Signal by Open Whisper Systems**](https://whispersystems.org/)
 
-![signal open whisper systems](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e32f80d7a7970dfbec8_Screen-Shot-2017-01-09-at-10.03.47-AM.png)
+![signal open whisper systems](/images/blogs/d699aac88f_67994e32f80d7a7970dfbec8_Screen-Shot-2017-01-09-at-10.03.47-AM.png)
 
 Signal was formerly called TextSecure and RedPhone Source: [Android Play Store](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
 
@@ -97,7 +99,7 @@ Also, the Signal Protocol does not offer anonymity preservation and requires ser
 
 ## **Which ones qualify as a secure messaging app to EFF?**
 
-![EFF electronic frontier foundation scorecard](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e32f80d7a7970dfbecb_Screen-Shot-2017-01-09-at-8.50.29-AM.png)
+![EFF electronic frontier foundation scorecard](/images/blogs/db15be09ff_67994e32f80d7a7970dfbecb_Screen-Shot-2017-01-09-at-8.50.29-AM.png)
 
 Electronic Frontier Foundation’s [handy score card](https://www.eff.org/node/82654) for secure apps
 

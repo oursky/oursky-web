@@ -3,13 +3,15 @@ title: "5 Ways Dev Shops Demonstrate Quality to Clients (from one that’s scree
 description: "5 Ways Dev Shops Demonstrate Quality to Clients (from one that’s screened 400+ inquiries last year)"
 pubDate: 2025-01-28
 author: "Oursky"
-category: "project-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952bca40b4f0f1fb2b7dd_annie-spratt-604126-unsplash-768x504.jpg"
+categories:
+  - "project-management"
+displayCategory: "Guides for Outsourcing"
+image: "/images/blogs/f69e95d49a_679952bca40b4f0f1fb2b7dd_annie-spratt-604126-unsplash-768x504.jpg"
 draft: false
 webflowId: "679952d0f86d88345199c092"
 ---
 
-![Photo by Annie Spratt on Unsplash](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952b574e0389b4b45177d_annie-spratt-604126-unsplash-720x472.jpeg)
+![Photo by Annie Spratt on Unsplash](/images/blogs/dfffa9271a_679952b574e0389b4b45177d_annie-spratt-604126-unsplash-720x472.jpeg)
 
 While offshore development or outsourcing IT services may be a practical solution for startups and enterprises alike, how do high quality dev shops actually prove their value?
 

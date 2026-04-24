@@ -2,7 +2,7 @@
 /**
  * generate-works-stubs.mjs
  *
- * Converts exports/webflow/works-metadata.json → src/content/works/<slug>.mdx
+ * Converts exports/webflow/works-metadata.json → src/content/works/<slug>.md
  *
  * Each generated file has:
  *  - Full frontmatter from the Webflow export
@@ -33,10 +33,10 @@ let written = 0;
 let skipped = 0;
 
 for (const item of works) {
-  const outFile = path.join(outDir, `${item.slug}.mdx`);
+  const outFile = path.join(outDir, `${item.slug}.md`);
 
   if (fs.existsSync(outFile) && !FORCE) {
-    console.log(`skip  ${item.slug}.mdx  (already exists; use --force to overwrite)`);
+    console.log(`skip  ${item.slug}.md  (already exists; use --force to overwrite)`);
     skipped++;
     continue;
   }
@@ -70,10 +70,10 @@ for (const item of works) {
   const content = lines.join('\n');
 
   if (DRY_RUN) {
-    console.log(`\n--- ${item.slug}.mdx ---\n${content}`);
+    console.log(`\n--- ${item.slug}.md ---\n${content}`);
   } else {
     fs.writeFileSync(outFile, content, 'utf8');
-    console.log(`write ${item.slug}.mdx`);
+    console.log(`write ${item.slug}.md`);
     written++;
   }
 }

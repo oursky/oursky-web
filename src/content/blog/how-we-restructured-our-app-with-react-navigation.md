@@ -3,13 +3,15 @@ title: "How we restructured our app with React Navigation"
 description: "How we restructured our app with React Navigation"
 pubDate: 2025-01-28
 author: "YInYin Chiu"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993fa638bb3b02c880bebe_giphy.gif"
+categories:
+  - "code"
+displayCategory: "React Native"
+image: "/images/blogs/5220c46fe6_67993fa638bb3b02c880bebe_giphy.gif"
 draft: false
 webflowId: "67993fe1bf8f21608a694882"
 ---
 
-![React Navigation](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993f965a814b5f21b472a2_giphy.gif)
+![React Navigation](/images/blogs/7f7f8b29a7_67993f965a814b5f21b472a2_giphy.gif)
 
 [React Navigation](https://reactnavigation.org/), is a new navigation package for React Native that justified restructuring our entire app to incorporate this new implementation. Why is [React Navigation](https://reactnavigation.org/) important?
 

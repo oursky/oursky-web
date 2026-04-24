@@ -3,13 +3,15 @@ title: "How I built a Kubernetes cluster so my coworkers could deploy apps faste
 description: "How I built a Kubernetes cluster so my coworkers could deploy apps faster"
 pubDate: 2025-01-28
 author: "CHEUNGPAT"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993f238bd1b37b3ce9ed94_1tTK6pwJc63dSpVzGImKEvQ.png"
+categories:
+  - "engineering"
+displayCategory: "Devops"
+image: "/images/blogs/13afc501ec_67993f238bd1b37b3ce9ed94_1tTK6pwJc63dSpVzGImKEvQ.png"
 draft: false
 webflowId: "67993f663451eeb69b95372b"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993f2d240ba8d13d57cb02_1tTK6pwJc63dSpVzGImKEvQ.png)
+![](/images/blogs/649efcf1e4_67993f2d240ba8d13d57cb02_1tTK6pwJc63dSpVzGImKEvQ.png)
 
 Kubernetes x GitHub
 

@@ -3,15 +3,17 @@ title: "7 Great Ways to Learn Code for Womens Entrepreneurship Day"
 description: "A list of coding resources founded by women to help aspiring female developers learn code in celebration of Women Entrepreneurship Day."
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3106a890bd45d95615689_Aleks-Dorohovich.jpg"
+categories:
+  - "culture"
+displayCategory: "CULTURE"
+image: "/images/blogs/aa622e4aa6_66e3106a890bd45d95615689_Aleks-Dorohovich.jpg"
 draft: false
 webflowId: "66e310f4e154677cd3115338"
 ---
 
 The tech industry is one of the fastest growing industries, but only [28% of proprietary software jobs are held by women](https://www.themuse.com/advice/the-latest-stats-on-women-in-tech). The industry is slowly changing, and diversity initiatives are supporting women to get jobs and rise in company ranks. At Oursky, we have women across all our teams and leadership whom have helped [shape our inclusive company policies](http://blog.oursky.com/2016/09/29/period-leave-female-developers-tech/). For [Women Entrepreneurship Day](http://womenseday.org/) (Twitter #choosewomen), we wanted to share the awesome organizations — founded by women! — that help women and girls take off as awesome developers.
 
-![kiki's delivery service](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310beba96c77fe5d6beac_kiki.gif)
+![kiki's delivery service](/images/blogs/d966b336c5_66e310beba96c77fe5d6beac_kiki.gif)
 
 IMAGE COURTESY OF [GIRL GETTING HER GEEK ON](https://girlgettinggeeky.wordpress.com/2016/04/26/why-my-future-children-will-watch-more-ghibli-than-disney/)
 
@@ -23,7 +25,7 @@ With a mission to increase female representation in tech, [Hackbright Academy](h
 
 ## 2\. First Code Academy
 
-![Coding for all kids!](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310beaf7b05d3d9938231_first-code-academy.png)
+![Coding for all kids!](/images/blogs/f0da7e823c_66e310beaf7b05d3d9938231_first-code-academy.png)
 
 CODING FOR ALL KIDS!
 
@@ -33,7 +35,7 @@ A previous growth hacker for Buffer and Mentor for Hackbright Academy, founder M
 
 ## 3\. Girls Who Code
 
-![Girls Who Code](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310bef063b66d98eb388f_girlswhocode.png)
+![Girls Who Code](/images/blogs/63210b1331_66e310bef063b66d98eb388f_girlswhocode.png)
 
 GIRLS WHO CODE ALSO HAS A VERY DIVERSE TEAM OF TEACHERS.
 
@@ -43,7 +45,7 @@ GIRLS WHO CODE ALSO HAS A VERY DIVERSE TEAM OF TEACHERS.
 
 ## 4\. Skillcrush
 
-![Skillcrush's unique value proposition is a bootcamp tied to a career switch.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310be3fbe943765c10b27_skillcrush.png)
+![Skillcrush's unique value proposition is a bootcamp tied to a career switch.](/images/blogs/57945dfcff_66e310be3fbe943765c10b27_skillcrush.png)
 
 SKILLCRUSH’S UNIQUE VALUE PROPOSITION IS A BOOT CAMP TIED TO A CAREER SWITCH.
 
@@ -53,7 +55,7 @@ Offering many resources and classes to learn various languages of coding, [Skill
 
 ## 5\. Girl Develop It
 
-![girl develop it](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310beae6b0675ca0100f7_girldevelopit.png)
+![girl develop it](/images/blogs/a8f913e1e5_66e310beae6b0675ca0100f7_girldevelopit.png)
 
 GIRL DEVELOP IT
 
@@ -63,7 +65,7 @@ This New York City-based organization was founded by Vanessa Hurst and Sara Chip
 
 ## 6\. Learn to Code With Me
 
-![learn to code with me](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310be3e4d4f4e8f85782b_learntocodewithme.png)
+![learn to code with me](/images/blogs/6dd404e822_66e310be3e4d4f4e8f85782b_learntocodewithme.png)
 
 LEARN TO CODE WITH ME BEGAN AS NOTES FROM A SELF-TAUGHT PROGRAMMER AND NOW FEATURES INTERVIEWS FROM INDUSTRY LEADERS.
 
@@ -73,7 +75,7 @@ LEARN TO CODE WITH ME BEGAN AS NOTES FROM A SELF-TAUGHT PROGRAMMER AND NOW FEATU
 
 ## 7\. Women’s Coding Collective
 
-![women's coding collective](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310bedc0e9717df427cd2_Womens-Coding-Collective.png)
+![women's coding collective](/images/blogs/8df9cd4f1f_66e310bedc0e9717df427cd2_Womens-Coding-Collective.png)
 
 WOMEN’S CODING COLLECTIVE
 
@@ -83,7 +85,7 @@ The [Women’s Coding Collective](https://thewcc.com/) is a web-development comm
 
 These are just a few places on our list, and there are so much more out there. We know it might seem like a lot of work to leave recommendations because you’re like the women who founded these organisations.
 
-![badass woman](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e310be21fae0b682b921f3_giphy.gif)
+![badass woman](/images/blogs/03c1e77569_66e310be21fae0b682b921f3_giphy.gif)
 
 IMAGE COURTESY OF [GIPHY](http://i.giphy.com/lu9rDMVv9XK92.gif)
 

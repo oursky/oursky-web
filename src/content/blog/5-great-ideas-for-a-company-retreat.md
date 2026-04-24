@@ -3,13 +3,15 @@ title: "5 Great Ideas for a Company Retreat"
 description: "5 Great Ideas for a Company Retreat"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679948fd55c9627e91a8fea5_retreat.png"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/b86439b857_679948fd55c9627e91a8fea5_retreat.png"
 draft: false
 webflowId: "67994919f80d7a7970da6369"
 ---
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994919f80d7a7970da6313_679948fd55c9627e91a8fea5_retreat.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/689a8f931c_67994919f80d7a7970da6313_679948fd55c9627e91a8fea5_retreat.png)
 
 ‍
 

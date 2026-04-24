@@ -3,8 +3,10 @@ title: "FormExtractor: Artificial Intelligence (AI) in Business Process"
 description: "FormExtractor: Artificial Intelligence (AI) in Business Process"
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799547d223c893cb17ebc4b_campaign-creators-774sCXD0dDU-unsplash-scaled.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Machine Learning and AI"
+image: "/images/blogs/0d5bc7d8bf_6799547d223c893cb17ebc4b_campaign-creators-774sCXD0dDU-unsplash-scaled.jpg"
 draft: false
 webflowId: "67995493ff9dc23d3b03e275"
 ---
@@ -30,7 +32,7 @@ The same advantages can be seen to insurance and financial services companies. A
 
 These challenges are what Oursky had in mind when creating FormExtractor, an AI- and optical character recognition-powered (OCR) technology for automatically capturing and entering data. Businesses looking to digitalize the data they collect and use for other applications can use FormExtractor as part of their business process automation strategies. In the same vein, customers can enjoy more seamless interactions with the companies they do business with.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995473ee3eb76d092d1891_campaign-creators-774sCXD0dDU-unsplash-1160x773.jpeg)
+![](/images/blogs/f326e85035_67995473ee3eb76d092d1891_campaign-creators-774sCXD0dDU-unsplash-1160x773.jpeg)
 
 Photo by [Campaign Creators](https://unsplash.com/@campaign_creators?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -57,7 +59,7 @@ Here are some of FormExtractor’s capabilities:
 
 **Multiple OCR engine support.** FormExtractor currently supports [Google Vision APIs](https://cloud.google.com/vision/docs), [Azure Computer Vision OCR](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/), and [Tesseract](https://github.com/tesseract-ocr/tesseract/). Our recommendation is to use whichever is more accurate.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995473d7eea6403ab840b2_claudio-schwarz-purzlbaum-wMgW6bjjzZU-unsplash-1160x773.jpeg)
+![](/images/blogs/64a26f7724_67995473d7eea6403ab840b2_claudio-schwarz-purzlbaum-wMgW6bjjzZU-unsplash-1160x773.jpeg)
 
 Photo by [🇨🇭 Claudio Schwarz | @purzlbaum](https://unsplash.com/@purzlbaum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

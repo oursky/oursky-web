@@ -11,7 +11,7 @@
 | --- | --- | --- |
 | **Blogs** collection (`blog-content` Rich Text, + metadata) | `src/content/blog/<slug>.md` | 138 |
 | **Blog categories** | `src/content/categories/<slug>.json` | 13 |
-| **Works** (`project-details` Rich Text, + `works-metadata.json` fields) | `src/content/works/<slug>.mdx` | 8 |
+| **Works** (`project-details` Rich Text, + `works-metadata.json` fields) | `src/content/works/<slug>.md` | 8 |
 
 - Local seed post `hello-world.md` was **removed** (not present in Webflow).
 - Thumbnail / case-study image URLs in frontmatter point at **Webflow / CDN** hosts until optional Phase 4b (download to `public/images/`).
@@ -47,7 +47,7 @@
 
 - **Remote images:** Hero/thumbnail/blog images still use `cdn.prod.website-files.com` / `uploads-ssl.webflow.com` URLs. Optional: script or manual pass to copy into `public/images/blog/` and `public/images/works/` and rewrite frontmatter paths.
 - **MD fidelity:** `turndown` does not perfectly match Webflow’s richtext (e.g. some figures, nested styling). Review high-traffic posts and tweak Markdown or use MDX for rare posts if needed.
-- **Works as `.mdx`:** Bodies are Markdown from HTML; if MDX ever errors on a `{` character, escape or use a small wrapper—current build passes.
+- **Works as `.md`:** Bodies are GitHub-flavored Markdown (same as blog). The content collection also accepts `.mdx` for a one-off case study that needs embedded components. If you use `.mdx` and a raw `{` in copy trips the parser, escape it or use an HTML entity.
 - **SEO / JSON-LD** for articles (structured data) remains a cross-phase follow-up (see `migration-plan.md`).
 - **Phase 5:** Deploy, cutover, redirects, Plausible, DNS.
 

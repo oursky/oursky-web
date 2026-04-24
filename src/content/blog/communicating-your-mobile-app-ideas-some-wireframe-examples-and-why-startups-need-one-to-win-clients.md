@@ -3,8 +3,10 @@ title: "Communicating Your Mobile App Ideas: Some Wireframe Examples and Why Sta
 description: "Communicating Your Mobile App Ideas: Some Wireframe Examples and Why Startups Need One to Win Clients"
 pubDate: 2025-01-28
 author: "Sam Elsley"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579924471ad9df7825ab_halacious-tZc3vjPCk-Q-unsplash-scaled.jpg"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/ba04421287_6799579924471ad9df7825ab_halacious-tZc3vjPCk-Q-unsplash-scaled.jpg"
 draft: false
 webflowId: "679957b1737fb78978284b83"
 ---
@@ -15,7 +17,7 @@ Some caveats: For pitching app ideas to investors, we recommend that you create 
 
 Wireframing is something we do for our own digital products. For example, we created a wireframe for the dashboard of [Authgear](https://www.authgear.com/), our authentication as a service. At the time, our product manager (PM) wanted to assess the technical feasibility of the features we want to include in [Authgear](https://www.authgear.com/)’s dashboard. Our PM worked on quickly creating a wireframe for the dashboard before even reaching out to designers to create a full-blown mockup. That way, he saved development time and resources that could’ve been otherwise used to other projects.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579032becf2b5615f4bf_halacious-tZc3vjPCk-Q-unsplash-1160x773.jpeg)
+![](/images/blogs/b0a3e8647e_6799579032becf2b5615f4bf_halacious-tZc3vjPCk-Q-unsplash-1160x773.jpeg)
 
 Photo by [Halacious](https://unsplash.com/@halacious?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/prototype?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -57,39 +59,39 @@ To put it simply, wireframing may not focus on specific details like the button 
 
 To give you a better idea of what wireframing is, below are wireframe examples we’ve created for various clients and side projects, including a mobile app wireframe:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995790fe5316706797179f_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-1-1160x341.jpeg)
+![](/images/blogs/d1f9bbf1ec_67995790fe5316706797179f_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.jpeg)
 
 A wireframe example that we created for our very own [Authgear](https://www.authgear.com/), oursky’s authentication as a service for web and mobile apps
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579202dbb8325ebc4d17_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-2-1160x494.png)
+![](/images/blogs/e95d552e47_6799579202dbb8325ebc4d17_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A mobile app wireframe for one of our side projects, [Sans Sugar](https://blog.oursky.com/2017/11/24/minimum-viable-product-iphone-x-ui-wireframe/)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579173409f4af626c314_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-3.png)
+![](/images/blogs/267deaffcc_6799579173409f4af626c314_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A sample wireframe for our award-winning iOS music app, [Jamn PLAYER](https://www.oursky.com/cases/jamnplayer/)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579173409f4af626c317_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-4.png)
+![](/images/blogs/d89c9a979b_6799579173409f4af626c317_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A [low-fidelity wireframe](https://blog.oursky.com/2018/03/27/checkcheckcin-ios-app/) we created for one of our apps, [CheckCheckCin](https://www.oursky.com/cases/checkcheckcin/)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995791dc7b3366510d9482_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-5.png)
+![](/images/blogs/a003167f88_67995791dc7b3366510d9482_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A wireframe we drew by hand for one of our [cloud-based, open-source tool](https://www.oursky.com/microservices/)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995791aaae6351616d060a_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-6-1160x645.png)
+![](/images/blogs/8fae8887b6_67995791aaae6351616d060a_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A [basic wireframe template](https://blog.oursky.com/2016/09/06/oursky-website-design-transparency/) we made using Adobe Illustrator
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-7.png)
+![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A wireframe example we did using Sketch and Invision, visualizing the app’s ‘find friends,’ user profile, livestreaming, and user setting features
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799579158b328b61e626775_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-8-1160x483.png)
+![](/images/blogs/8f31500a5a_6799579158b328b61e626775_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 A sample wireframe visualizing the app’s geolocation features
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995791d78eb40361ab28a9_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-9-1160x329.png)
+![](/images/blogs/feb8c3f5c9_67995791d78eb40361ab28a9_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
 Difference between wireframe, mockup, and prototype
 

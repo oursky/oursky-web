@@ -3,8 +3,12 @@ title: "5 Questions to Ask Agencies Before Outsourcing Software Development"
 description: "5 Questions to Ask Agencies Before Outsourcing Software Development"
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/658006431e8318870c77ab3c_Outsourcing.jpeg"
+categories:
+  - "ui-design"
+  - "development"
+displayCategory: "GUIDES FOR OUTSOURCING"
+image: "/images/blogs/59c10773fe_658006431e8318870c77ab3c_Outsourcing.jpeg"
+featured: 3
 draft: false
 webflowId: "6580064e62633c1f4fb330ec"
 ---
@@ -17,7 +21,7 @@ Whether we get the job or not, we want clients to choose the most suitable softw
 
 ‍
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66d5507203c034e9f550e79b_charles-deluvio-Lks7vei-eAg-unsplash-1160x773.jpeg)
+![](/images/blogs/d1e9633819_66d5507203c034e9f550e79b_charles-deluvio-Lks7vei-eAg-unsplash-1160x773.jpeg)
 
 PHOTO BY [CHARLES DELUVIO](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/photos/5fNmWej4tAA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

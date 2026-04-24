@@ -3,13 +3,15 @@ title: "What can TensorFlow really do? Some business applications"
 description: "What can TensorFlow really do? Some business applications"
 pubDate: 2025-01-28
 author: "Athena Lam"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799525493bdb1ce79fd97ef_xIp6NSz.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Machine Learning and AI"
+image: "/images/blogs/278184106d_6799525493bdb1ce79fd97ef_xIp6NSz.jpg"
 draft: false
 webflowId: "6799526c3d41623f5f3d80d3"
 ---
 
-![TensorFlow logo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524ca48dced294109882_xIp6NSz-720x405.jpeg)
+![TensorFlow logo](/images/blogs/91e20071c0_6799524ca48dced294109882_xIp6NSz-720x405.jpeg)
 
 _TL;DR: Google’s open-source TensorFlow library helps developers build computational graphs and contains free_ [_additional modules_](https://www.tensorflow.org/api_docs/python/tf/contrib) _that make AI/ML software development easier for consumer products and mobile apps. Developers require knowledge of Python or C++. This piece covers 3 common modules and possible business applications:_
 
@@ -35,7 +37,7 @@ In the next section, we’ll demystify the computational graph, which is essenti
 
 One of the most common terms heard in AI is neural networks. Neural networks are a type of computational graph. A computational graph is a directed graph where operations or variables can be nodes that feed into each other. Every node in the graph can, therefore, define a function of the variables. Most deep learning models, AI, and neural networks, are just math models. We can use computational graphs to represent and implement different maths models.
 
-![http://www.deepideas.net/deep-learning-from-scratch-ii-perceptrons/](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524c7b48cb88eccf0951_computational-graph-inputs.png)
+![http://www.deepideas.net/deep-learning-from-scratch-ii-perceptrons/](/images/blogs/1bf91b113e_6799524c7b48cb88eccf0951_computational-graph-inputs.png)
 
 Image Source: [Deep Learning from Scratch](http://www.deepideas.net/deep-learning-from-scratch-i-computational-graphs%3E%3C/a%3E%E2%80%9CDeep%20Ideas%3C/figcaption%3E%3C/figure%3E%3Cp%3EOne%20of%20the%20most%20common%20terms%20heard%20in%20AI%20is%20neural%20networks.%20Neural%20networks%20are%20a%20type%20of%20computational%20graph.%20A%20computational%20graph%20is%20a%20directed%20graph%20where%20operations%20or%20variables%20can%20be%20nodes%20that%20feed%20into%20each%20other.%20Every%20node%20in%20the%20graph%20can,%20therefore,%20define%20a%20function%20of%20the%20variables.%20%20Most%20deep%20learning%20models,%20AI,%20and%20neural%20networks,%20are%20just%20math%20models.%20We%20can%20use%20computational%20graphs%20to%20represent%20and%20implement%20different%20maths%20models.%3C/p%3E%3Cp%3EIf%20you%20have%20some%20memory%20of%20linear%20algebra%20and%20calculus,%20you%20should%20check%20out%20this%20great%20tutorial%20called%20%3Ca%20href=)
 
@@ -64,13 +66,13 @@ Below, we’ll list out some examples for commercial and consumer applications:
 
 ### **Convolutional Neural networks (CNN) and** [**Image Recognition**](https://www.tensorflow.org/tutorials/image_recognition)
 
-![AI face detection feature](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524ce5c70fc684f88b70_Oursky-Xmas-Party-Slides-1.jpeg)
+![AI face detection feature](/images/blogs/abbe09be1e_6799524ce5c70fc684f88b70_Oursky-Xmas-Party-Slides-1.jpeg)
 
 We used a [dilib](http://blog.dlib.net/2014/08/real-time-face-pose-estimation.html) for our [facial landmark detection](https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf) on a client app.
 
 One of the many applications for [CNNs](http://colah.github.io/posts/2014-07-Conv-Nets-Modular/) is to help machines recognize images and make them meaningful in a way that is intuitive to humans. For example, this means having a computer recognizing the coloured dots in an image combine to become a cake. In order to check accuracy, an AI can be trained on a training data where correct answers are already available. The CNN will learn to identify an image, check if it is correct, and improve its ability to make sense of the coloured clusters. But a true performance is giving AI a new dataset to see how it performs.
 
-![AI business application hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524ca75bd78e4bb15170_Oursky-Xmas-Party-Slides-2.jpeg)
+![AI business application hong kong](/images/blogs/6c5bb245c7_6799524ca75bd78e4bb15170_Oursky-Xmas-Party-Slides-2.jpeg)
 
 Oursky compared two machine learning libraries to help a client use image classification for inventory matching.
 
@@ -87,7 +89,7 @@ The benefits of starting early with AI/ML is that early adopters will have large
 
 ### Sequence-to-Sequence models and human language
 
-![sequence to sequence language](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524c3d41623f5f3d6206_tenorflow_cantonese_mini_english_Final.007.jpeg)
+![sequence to sequence language](/images/blogs/186583028e_6799524c3d41623f5f3d6206_tenorflow_cantonese_mini_english_Final.007.jpeg)
 
 Implementing TensorFlow’s Sequence-to-Sequence framework for chatbot conversation.
 
@@ -95,7 +97,7 @@ Sequence-to-Sequence (Seq2Seq) models use [recurrent neural networks](https://ww
 
 One interesting point is that we just need to feed in a raw word sequence and we can get back a word sequence output with mostly correct grammar (not perfect, but at least understandable). This means that seq2seq models can learn the language model from the training sample and implicitly learn it during training, which usually is not the case in traditional NLP where the language model needs to be explicitly taught.
 
-![artificial intelligence chatbot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799524cff9dc23d3b01c890_tenorflow_cantonese_mini_english_Final.015.jpeg)
+![artificial intelligence chatbot](/images/blogs/a11434e126_6799524cff9dc23d3b01c890_tenorflow_cantonese_mini_english_Final.015.jpeg)
 
 Oursky trained a [Cantonese chatbot](https://www.facebook.com/oursky.hk/posts/10155107424981485) from scratch using local forum data.
 

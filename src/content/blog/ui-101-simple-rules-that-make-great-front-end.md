@@ -3,8 +3,10 @@ title: "UI 101: Simple Rules that make great front-end"
 description: "UI 101: Simple Rules that make great front-end"
 pubDate: 2025-01-28
 author: "Frank Lam"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799267ef349eabfd48b59a7_UI-BASIC-1%20(1).jpg"
+categories:
+  - "ui-design"
+displayCategory: "UI 101"
+image: "/images/blogs/ff4dc49b80_6799267ef349eabfd48b59a7_UI-BASIC-1 (1).jpg"
 draft: false
 webflowId: "6799269763cf1df864a959c7"
 ---
@@ -13,7 +15,7 @@ We have many pixel lovers at Oursky. We strive for perfection in the UI design p
 
 Here we share our internal 101 guideline for developers, wish it will help more junior developer building Web like a Pro.
 
-![UI-BASIC-1](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679926641a1728a7b81c8e7d_UI-BASIC-1.jpeg)
+![UI-BASIC-1](/images/blogs/02aad79310_679926641a1728a7b81c8e7d_UI-BASIC-1.jpeg)
 
 Buttons lead your visitor around your page, you want them to be easy to notice and to read.
 
@@ -24,13 +26,13 @@ Buttons lead your visitor around your page, you want them to be easy to notice a
 *   **Create buttons that expand.** Apply a minimum width in case the label is very short. You want your buttons to stretch and expand (or shrink) to fit different screen sizes.
 *   **Include hover states.** If the style for the hover state is not already given in your template, add a [simple darken or lighten function](https://css-tricks.com/snippets/javascript/lighten-darken-color/). You want your viewer to see that they’re either about to click on something. Why? This subtle cue helps a user navigate your site.
 
-![UI-BASIC-2](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679926643cdca49933e82423_UI-BASIC-2.jpeg)
+![UI-BASIC-2](/images/blogs/2be70a174d_679926643cdca49933e82423_UI-BASIC-2.jpeg)
 
 \* **Icons should be vertical-centre aligned** in most cases to go with your labels. Do not take this for granted and check on multiple browsers (Chrome, Firefox, Safari, and even in-app browsing).\* **Give appropriate spacing between the icon and label.** Even though your prototype may look good, make sure your stylesheet renders spaces properly. People who start out usually put them too close to each other, so try giving 10% more space than your first choice.\* **Align in groups** (ie. label + text), but the labels should be centre-aligned on their own (for the same reasons mentioned above): `<a href="”#”">Run</a>`
 
 ### Typography
 
-![UI-BASIC-3](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992664208e42e86abe90ad_UI-BASIC-3.jpeg)
+![UI-BASIC-3](/images/blogs/d3def77853_67992664208e42e86abe90ad_UI-BASIC-3.jpeg)
 
 The typography of your site is the first sense of “voice” your visitor will see before the actual content. Most good designers are obsessed about typography, but (if your designer will accept it) consider whether they chose a universal font and what alternative font the site will be rendered in if a user doesn’t have it. Typography is also about spacing, which creates an overall character to your site _and helps people read your content._
 
@@ -73,7 +75,7 @@ Layout is knowing how to arrange the information on your page to guide user beha
 
 ##### JIGGLED TEXT WHEN USING CSS TRANSITION EFFECT
 
-![UI-Render-4](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992664208e42e86abe90b1_UI-Render-4.png)
+![UI-Render-4](/images/blogs/312f8e0905_67992664208e42e86abe90b1_UI-Render-4.png)
 
 \* Because of the text anti-aliasing problem in webkit, add specific anti-aliased text css for the text that are jiggled : `-webkit-font-smoothing: subpixel-antialiased;`
 

@@ -3,8 +3,10 @@ title: "Performing Exploratory Testing: Improving Your App with Crowdsourced QA"
 description: "Performing Exploratory Testing: Improving Your App with Crowdsourced QA"
 pubDate: 2025-01-28
 author: "Oursky"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679957d04779025b7e265017_1S-KcVsKM2Jui-dodKJUTUA.webp"
+categories:
+  - "qa"
+displayCategory: "Software QA"
+image: "/images/blogs/aefdbc7a06_679957d04779025b7e265017_1S-KcVsKM2Jui-dodKJUTUA.webp"
 draft: false
 webflowId: "679957e3fe53167067980e33"
 ---
@@ -29,7 +31,7 @@ Exploratory testing fits neatly into the agile software development life cycle a
 
 Unlike scripted testing, exploratory testing doesn’t restrict a QA tester to predefined checklists or instructions, and instead encourages flexibility in observing, evaluating, and reporting the digital product’s behaviors and issues.
 
-![Oursky tech working style](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679957c8063a385bb45c369c_1S-KcVsKM2Jui-dodKJUTUA.png)
+![Oursky tech working style](/images/blogs/226c554507_679957c8063a385bb45c369c_1S-KcVsKM2Jui-dodKJUTUA.png)
 
 A SNAPSHOT OF THE COMPONENTS THAT CONTRIBUTE TO SOFTWARE QUALITY ASSURANCE AT OURSKY
 
@@ -42,7 +44,7 @@ Exploratory tests usually come in for two scenarios in Oursky:
 *   **Scheduled by a project manager (PM) after a new build.** This is built into a project management process or workflow for an existing project.
 *   **Performed for a client with an existing digital product.** This could be part of our standalone software testing services when clients have digital products built by a third-party development team and would want us to review the existing codebase, make changes to the existing product, or take over the whole project.
 
-![skygear gitlab software qa testing](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679957c91400b35535238ac1_Oursky-Exploratory-Test-QA-Gitlab-Report-720x334.png)
+![skygear gitlab software qa testing](/images/blogs/6110e2e685_679957c91400b35535238ac1_Oursky-Exploratory-Test-QA-Gitlab-Report-720x334.png)
 
 A SCREENSHOT SHOWING HOW WE TRACK BUGS FOR OUR OWN PROJECTS, INCLUDING OUR OPEN-SOURCE SERVERLESS BACK END PLATFORM
 
@@ -61,7 +63,7 @@ The report has two main sections:
 
 Depending on the size of a product and quality of documentation, the review could take a few days to two weeks for huge projects.
 
-![code review service hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679957c8aaa47ef20a34bbea_Oursky-Exploratory-test-software-QA-720x314.png)
+![code review service hong kong](/images/blogs/7e1e2e23e1_679957c8aaa47ef20a34bbea_Oursky-Exploratory-test-software-QA-720x314.png)
 
 OURSKY’S EXPLORATORY TESTS DIVIDE ISSUES INTO MAJOR, MINOR, AND TRIVIAL BUGS.
 
@@ -109,7 +111,7 @@ For example, in one software testing case with a client, we had 100+ issues repo
 
 Since the severity of defects on different sections are clearly listed on the report, the PM can easily scan the document and further discuss with the client about fixing the major issues before proceeding to adding new features. This meeting may seem like a small step, but it is crucial because it prevents the development schedule from being delayed due to unknown major issues that may arise after all the planning is done. Of course, the client will also receive the full report and can take the report to meet with any [app vendors they choose](https://blog.oursky.com/2020/08/19/a-definitive-guide-for-startup-founders-to-choosing-software-development-agencies/).
 
-![gitlab ci software qa](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679957c809f41a233c80d2a8_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.37.37-PM-720x687.png)
+![gitlab ci software qa](/images/blogs/aefff3e273_679957c809f41a233c80d2a8_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.37.37-PM-720x687.png)
 
 ALL BUG REPORTS BY TESTERS SHOULD INCLUDE SCREENSHOTS AND DETAILED INSTRUCTIONS.
 

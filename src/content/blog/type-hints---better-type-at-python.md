@@ -3,8 +3,10 @@ title: "Type Hints - Better type at Python"
 description: "New Python Type hints offers type checking on to function parameters, return values, class attributes, as if it's a static typed language."
 pubDate: 2024-09-16
 author: "Rick Mak"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347f913eb0585f98ca7a5_type-hints-cover-150x150.gif"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/3858c2b873_66e347f913eb0585f98ca7a5_type-hints-cover-150x150.gif"
 draft: false
 webflowId: "66e34920e47fbd9c1711e790"
 ---
@@ -41,7 +43,7 @@ IDE like [PyCharm](https://www.jetbrains.com/pycharm/) can perform type checking
 
 \[caption id="attachment\_174" align="aligncenter" width="448"\]
 
-![pycharm](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347fccf9939c6d3b7320a_pycharm.png)
+![pycharm](/images/blogs/3a5da67d54_66e347fccf9939c6d3b7320a_pycharm.png)
 
 Warning on wrong type - PyCharm\[/caption\]
 
@@ -81,7 +83,7 @@ Since there's no effect on the compiled code, you won't get a faster nor slower 
 
 This might be concerned by Python-lovers. In [PEP-0484](https://www.python.org/dev/peps/pep-0484/), the authors put the following disclaimer to clam the over-reacted Python fans:
 
-![It should also be emphasized that Python will remain a dynamically typed language, and the authors have no desire to ever make type hints mandatory, even by convention.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347fc2c6a7b5ab60d9f8f_type-hints-disclaimer.png)
+![It should also be emphasized that Python will remain a dynamically typed language, and the authors have no desire to ever make type hints mandatory, even by convention.](/images/blogs/9d03069978_66e347fc2c6a7b5ab60d9f8f_type-hints-disclaimer.png)
 
 Those who worried about Python will be made static-typed can now relax :)
 

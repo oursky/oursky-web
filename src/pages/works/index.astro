@@ -1,60 +1,135 @@
 ---
+/**
+ * /works — Works listing page.
+ * Webflow ref: works.html (.page-title-section + .works-section + .action-section.action--works)
+ */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorkWithUsSection from '../../components/contact/WorkWithUsSection.astro';
 
 const works = await getCollection('works', ({ data }) => !data.draft);
 works.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout
-  title="Works"
-  description="A selection of our product work — mobile apps, web platforms, and digital experiences built for clients worldwide."
+  title="Oursky - Works"
+  description="We turn ideas into products - here are some of the digital products we've created for clients."
 >
-  <main class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
-    <header class="mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Our Work</h1>
-      <p class="text-xl text-[var(--color-brand-gray-700)] max-w-2xl">
-        We partner with ambitious teams to build products that stand the test of time.
-      </p>
-    </header>
+  <div class="works-page">
+    <div class="flex flex-col w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] max-lg:pt-page-top-tablet box-border">
 
-    {
-      works.length === 0 ? (
-        <p class="text-[var(--color-brand-gray-500)]">
-          Case studies are being imported — check back soon.
-        </p>
-      ) : (
-        <ul class="grid gap-10 lg:grid-cols-2">
-          {works.map((work) => {
-            const img = work.data.thumbnail ?? work.data.heroImage;
-            return (
-              <li>
-                <a href={`/works/${work.id}`} class="group block">
-                  {img && (
-                    <div class="overflow-hidden rounded-xl mb-5 aspect-video bg-[var(--color-brand-gray-100)]">
-                      <img
-                        src={img}
-                        alt={work.data.heroImageAlt ?? work.data.title}
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
+      <!-- Hero -->
+      <section class="scroll-reveal-group w-full" aria-label="Works hero">
+        <div class="ml-5 mb-5 scroll-reveal-item" style="--sr-delay: 0ms">
+          <h1 class="works-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">
+            We create software and digital products that support real business growth
+          </h1>
+        </div>
+        <div class="max-w-hero-desc pl-5 scroll-reveal-item max-md:pl-0" style="--sr-delay: 80ms">
+          <p class="m-0 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm">
+            Work we've delivered for companies across different industries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Works grid -->
+      <section class="scroll-reveal-group w-full mt-[4.36rem] mb-[6.83rem]" aria-label="Case studies">
+        {works.length === 0 ? (
+          <p class="text-text-muted text-lg">Case studies are being imported — check back soon.</p>
+        ) : (
+          <ul class="grid grid-cols-3 gap-5 list-none m-0 p-0 max-lg:grid-cols-2 max-md:grid-cols-1">
+            {works.map((work, i) => {
+              const img = work.data.thumbnail ?? work.data.heroImage;
+              const bg = work.data.bgColor ?? '#1e1e1e';
+              return (
+                <li class="scroll-reveal-item h-full" style={`--sr-delay: ${(i % 3) * 80}ms`}>
+                  <a
+                    href={`/works/${work.id}`}
+                    class="group flex flex-col h-full no-underline rounded-3xl overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.22)] transition-all duration-200"
+                    style={`background-color: ${bg};`}
+                  >
+                    <!-- Title + description -->
+                    <div class="mt-[3.11rem] mx-[2.66rem]">
+                      <h2 class="m-0 text-[1.8rem] font-semibold leading-8 text-white">
+                        {work.data.title}
+                      </h2>
                     </div>
-                  )}
-                  <p class="text-xs font-semibold uppercase tracking-wider text-[var(--color-brand-primary)] mb-2">
-                    {work.data.industry}
-                  </p>
-                  <h2 class="text-2xl font-bold leading-snug group-hover:text-[var(--color-brand-primary)] transition-colors">
-                    {work.data.title}
-                  </h2>
-                  <p class="text-[var(--color-brand-gray-700)] mt-2 leading-relaxed">
-                    {work.data.description}
-                  </p>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      )
-    }
-  </main>
+                    <p class="mx-[2.66rem] mt-[1.58rem] mb-[2.8rem] m-0 text-[1.4rem] leading-[1.6rem] text-white/80">
+                      {work.data.description}
+                    </p>
+                    <!-- Image fills remaining space -->
+                    {img && (
+                      <div class="w-full flex-1 min-h-[280px]">
+                        <img
+                          src={img}
+                          alt={work.data.heroImageAlt ?? work.data.title}
+                          class="w-full h-full object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
+
+      <!-- Contact for more case studies CTA -->
+      <div class="mt-section mb-[8.75rem] max-md:mb-section">
+        <WorkWithUsSection
+          title="Contact for more case studies"
+          subtitle="hello@oursky.com"
+        />
+      </div>
+
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  /* Gradient text — requires vendor-prefixed background-clip; no Tailwind equivalent */
+  .works-hero__title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>
+
+<script>
+  function initPage() {
+    const root = document.querySelector('.works-page');
+    if (!root) return;
+
+    const singles = root.querySelectorAll('.scroll-reveal');
+    const groups = root.querySelectorAll('.scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(
+              t.classList.contains('scroll-reveal-group')
+                ? 'scroll-reveal-group--visible'
+                : 'scroll-reveal--visible'
+            );
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+
+  document.addEventListener('astro:page-load', initPage);
+</script>

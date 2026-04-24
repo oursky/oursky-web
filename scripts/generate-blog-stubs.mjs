@@ -58,9 +58,15 @@ for (const post of posts) {
     continue;
   }
 
-  // Resolve category slug from Webflow tag IDs (use first match)
-  const categorySlug =
-    (post.categoryTags ?? []).map((id) => categoryById[id]).find(Boolean) ?? 'development';
+  const seen = new Set();
+  const categorySlugs = [];
+  for (const id of post.categoryTags ?? []) {
+    const s = categoryById[id];
+    if (!s || seen.has(s)) continue;
+    seen.add(s);
+    categorySlugs.push(s);
+  }
+  if (categorySlugs.length === 0) categorySlugs.push('development');
 
   // Sanitize pubDate
   const pubDate = post.lastPublished
@@ -73,7 +79,8 @@ for (const post of posts) {
     `description: ${yamlStr(post.metaDescription || '')}`,
     `pubDate: ${pubDate}`,
     `author: ${yamlStr(post.author || 'Oursky Team')}`,
-    `category: ${yamlStr(categorySlug)}`,
+    'categories:',
+    ...categorySlugs.map((s) => `  - ${yamlStr(s)}`),
   ];
 
   if (post.thumbnail) lines.push(`image: ${yamlStr(post.thumbnail)}`);

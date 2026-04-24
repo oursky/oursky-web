@@ -3,8 +3,10 @@ title: "Why You Should Talk to a Business Development Professional for Your Star
 description: "Why You Should Talk to a Business Development Professional for Your Startup"
 pubDate: 2025-01-28
 author: "Varya Nekhina"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799566058b328b61e60ffbb_varya-business-development-scaled.jpg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/65224ce63c_6799566058b328b61e60ffbb_varya-business-development-scaled.jpg"
 draft: false
 webflowId: "67995678d760b0c7d9d0f40d"
 ---
@@ -17,7 +19,7 @@ Recently, the Oursky team managed to pull off an event for startup founders. We 
 
 So what has these got to do with business development?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995656855eb8d4a019c8b1_varya-business-development-1160x870.jpeg)
+![](/images/blogs/8e54f0f860_67995656855eb8d4a019c8b1_varya-business-development-1160x870.jpeg)
 
 One of the events we helped organize in Taiwan for the startup community
 

@@ -3,8 +3,11 @@ title: "Customer Identity Management: Why and How to Implement Multifactor Authe
 description: "Multifactor authentication (MFA) is a must-have in customer identity management systems. Here's how you can implement MFA to your own app."
 pubDate: 2025-12-13
 author: "Oursky Team"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e303fdbf76331a3fa1bfd1_franck-DoWZMPZ-M9s-unsplash-1160x870.jpg"
+categories:
+  - "development"
+  - "authgear"
+displayCategory: "Multifactor authentication"
+image: "/images/blogs/67785e4e21_66e303fdbf76331a3fa1bfd1_franck-DoWZMPZ-M9s-unsplash-1160x870.jpg"
 draft: false
 webflowId: "66e3046b7077ba8363d54ebe"
 ---
@@ -19,7 +22,7 @@ This is just one of the many reasons why we created [Authgear](https://www.authg
 
 Let’s take a look at multifactor authentication, why businesses obviously need one — and what you need to consider when implementing your own customer identity management for a consumer-facing web or mobile app.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3041bb42bcc17bc4eb972_franck-DoWZMPZ-M9s-unsplash-1160x870.jpeg)
+![](/images/blogs/e100bb11e2_66e3041bb42bcc17bc4eb972_franck-DoWZMPZ-M9s-unsplash-1160x870.jpeg)
 
 PHOTO BY [FRANCK](https://unsplash.com/@franckinjapan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/s/photos/smartphone-security?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

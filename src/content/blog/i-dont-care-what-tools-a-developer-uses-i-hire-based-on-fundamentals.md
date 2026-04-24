@@ -3,13 +3,16 @@ title: "I don’t care what tools a developer uses. I hire based on fundamentals
 description: "I don’t care what tools a developer uses. I hire based on fundamentals."
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/65800e7bff2246883c213677_hiring-culture.jpeg"
+categories:
+  - "engineering"
+displayCategory: "ENGINEERING CULTURE"
+image: "/images/blogs/3f2ff601c2_65800e7bff2246883c213677_hiring-culture.jpeg"
+featured: 6
 draft: false
 webflowId: "65800e7e237f3fa05a22c0f2"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15c66a13a5b5bcf837a4d_scott-webb-208072-720x480.jpeg)
+![](/images/blogs/039f22fc7b_66e15c66a13a5b5bcf837a4d_scott-webb-208072-720x480.jpeg)
 
 PHOTO BY SCOTT WEBB ON UNSPLASH
 
@@ -29,7 +32,7 @@ Of course, our alumni have also moved on to Apple and Google, and we’re proud 
 
 ## The first thing you should look for in a developer
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15c661b59f04dc4eca297_15ap0MqBYVXj-rQheao9nyA.jpeg)
+![](/images/blogs/d807b0d7da_66e15c661b59f04dc4eca297_15ap0MqBYVXj-rQheao9nyA.jpeg)
 
 PHOTO BY FAUSTIN TUYAMBAZE VIA [UNSPLASH](https://unsplash.com/photos/32jpXPNlmqY)
 

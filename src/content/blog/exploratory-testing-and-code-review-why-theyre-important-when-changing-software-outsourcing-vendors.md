@@ -3,8 +3,11 @@ title: "Exploratory Testing and Code Review: Why They’re Important When Changi
 description: "Here's a real-life lesson on why exploratory testing and code review are important when you change or transition to a new software outsourcing vendor."
 pubDate: 2025-01-28
 author: "Roy Yuen"
-category: "product-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e306d03a8aa54db92c0811_pexels-kevin-ku-577585-1160x870.jpg"
+categories:
+  - "product-management"
+  - "qa"
+displayCategory: "QA TESTING"
+image: "/images/blogs/4ef67f00ae_66e306d03a8aa54db92c0811_pexels-kevin-ku-577585-1160x870.jpg"
 draft: false
 webflowId: "66e30716a9778b10dc4ceee5"
 ---
@@ -15,7 +18,7 @@ We always recommend conducting exploratory testing and source code review before
 
 Below, we’ll share some real-life examples and reasons why it’s important to do exploratory testing and code/software diagnosis on an existing digital product before making any changes.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e306f0f37ef51ac70945ac_pexels-kevin-ku-577585-1160x870.jpeg)
+![](/images/blogs/ff5511bb43_66e306f0f37ef51ac70945ac_pexels-kevin-ku-577585-1160x870.jpeg)
 
 PHOTO BY [**KEVIN KU**](https://www.pexels.com/@kevin-ku-92347?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) FROM [**PEXELS**](https://www.pexels.com/photo/coding-computer-data-depth-of-field-577585/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
@@ -91,7 +94,7 @@ Exploratory testing checks for bugs in the existing product (whether they’re m
 
 Exploratory testing is a staple in the software testing life cycle, and any competent agency that provides software development services should be able to conduct this to ensure the quality of their digital products.
 
-![code diagnostics hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e306f2b5be41f948ba8c19_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.38.02-PM-720x632.png)
+![code diagnostics hong kong](/images/blogs/4fb648f97a_66e306f2b5be41f948ba8c19_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.38.02-PM-720x632.png)
 
 ALL BUG REPORTS BY TESTERS INCLUDE SCREENSHOTS AND STEPS TO REPRODUCE THEM.
 
@@ -107,7 +110,7 @@ Each case of software diagnosis, code review, and exploratory testing will have 
 
 We also recommend best practices that reduce the chance for future errors, such as having database migration files so that changes to the database are automatically updated for the entire development team.
 
-![software codebase review hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e306f0789f1478a175e1be_Oursky-Exploratory-test-software-QA-screenshot.png)
+![software codebase review hong kong](/images/blogs/61c35c629a_66e306f0789f1478a175e1be_Oursky-Exploratory-test-software-QA-screenshot.png)
 
 WHEN PRIORITIZING BUG FIXES, ISSUES ARE DIVIDED INTO MAJOR, MINOR, AND TRIVIAL.
 

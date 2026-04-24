@@ -3,8 +3,10 @@ title: "From Ideas to Owning Source Codes: What Startups Need to Know Before Dev
 description: "We’ve collected frequently asked questions about application development that startup founders can use as a checklist when kick-starting app projects."
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3209b91727a9c954f6999_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpg"
+categories:
+  - "development"
+displayCategory: "Development"
+image: "/images/blogs/753cd6b70a_66e3209b91727a9c954f6999_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpg"
 draft: false
 webflowId: "66e32111a49e006c069bed55"
 ---
@@ -23,7 +25,7 @@ So if you want an “Uber” app for your industry, for example, be prepared to 
 
 The good news? That price can go down significantly depending on the [location/region](https://www.slideshare.net/accelerance/the-2018-guide-to-global-software-outsourcing-rates-87930700) of your developer. If you’re from the U.S. or Australia, outsourcing to a local or onshore developer will likely rack up higher fees. Offshore or [nearshore outsourcing](https://blog.oursky.com/2020/05/19/startups-and-enterprises-that-owe-their-success-from-outsourcing-software-development/) of app development are your best bet. For instance, highly-skilled developers in neighboring countries can be more cost-effective but also get the work done just as well.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e320b47f55069bf5424e8d_kevin-ku-aiyBwbrWWlo-unsplash-1160x871.jpeg)
+![](/images/blogs/8740ee26ad_66e320b47f55069bf5424e8d_kevin-ku-aiyBwbrWWlo-unsplash-1160x871.jpeg)
 
 PHOTO BY [KEVIN KU](https://unsplash.com/@ikukevk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -66,7 +68,7 @@ To do this, there are several options to consider and all of them can be technic
 *   If you’re open to newer technologies like [containerization](https://blog.oursky.com/2019/07/03/docker-use-cases/), break up your app into [microservices](https://blog.oursky.com/2019/04/03/microservices-glossary-terms/).
 *   With an integrated system in place, you can analyze information gathered by mobile apps. A good example is customer data collected and analyzed to understand customers’ purchasing patterns and create better marketing strategies.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e320b410ccc53f080ec4f2_agefis-qh-mar1Tzo8-unsplash-1160x893.jpeg)
+![](/images/blogs/b0fb95d561_66e320b410ccc53f080ec4f2_agefis-qh-mar1Tzo8-unsplash-1160x893.jpeg)
 
 PHOTO BY [AGEFIS](https://unsplash.com/@agefis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -150,7 +152,7 @@ Bug fixes involve a long process in several phases. As such, you will need a ded
 
 Your app maintenance system is a form of customer care and support. It should be an ongoing thing that’s alert and prompt to user preferences and problems. Furthermore, this system should be backed by a team that can handle and detect downtime.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e320b4946e3212d430fb37_thisisengineering-raeng-uyfohHiTxho-unsplash-1160x774.jpeg)
+![](/images/blogs/6389bda19d_66e320b4946e3212d430fb37_thisisengineering-raeng-uyfohHiTxho-unsplash-1160x774.jpeg)
 
 PHOTO BY [THISISENGINEERING RAENG](https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -178,7 +180,7 @@ Any agency prospect should have a good understanding of the nature of your busin
 *   As a business, you can’t afford delays. Choose an agency that can establish a project timeline with clear milestones for deliverables.
 *   The agency you work with should provide [excellent coders](https://blog.oursky.com/2018/01/03/tech-stack-update-key-factors/). That’s a given. However, they should also have expert user experience and user interface (UX/UI) designers. Ask for design mockups and prototypes during the proposal stage to see if they are capable of creating impressive design.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e320b47ae93e1a122272cd_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpeg)
+![](/images/blogs/e6defff1da_66e320b47ae93e1a122272cd_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpeg)
 
 PHOTO BY [RICCARDO ANNANDALE](https://unsplash.com/@pavement_special?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/s/photos/bulb-business?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

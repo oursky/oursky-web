@@ -3,8 +3,12 @@ title: "The New Era of E2E Test Automation: Faster, Cheaper, and More Accessible
 description: "Learn how to use AI tools to help create End-to-end (E2E) test automation, and create test scripts with Cursor AI"
 pubDate: 2025-01-28
 author: "Joyz Ng"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b17a8935e3e5cd466add_cover_img.png"
+categories:
+  - "qa"
+  - "machine-learning-and-ai"
+displayCategory: "Test Automation"
+image: "/images/blogs/6590ffe387_66e7b17a8935e3e5cd466add_cover_img.png"
+featured: 1
 draft: false
 webflowId: "66e7b89177d7d990d1fc049b"
 ---
@@ -19,7 +23,7 @@ One of the main hesitations in adopting E2E test automation has been the perceiv
 
 [Cursor](https://www.cursor.com/) is one of the tools that changes the way we approach coding and test automation. As an AI-powered code editor, it offers significant advantages over traditional tools like [Visual Studio Code](https://code.visualstudio.com/) and even surpasses the capabilities of [GitHub Copilot](https://github.com/features/copilot) in some areas like its powerful autocomplete. Cursor's intelligent code suggestions and automated refactoring capabilities make it a competitive handy asset for test automation engineers.
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc03a9_66e7b2518935e3e5cd473479_cursor.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/c09f4738f2_66e7b89077d7d990d1fc03a9_66e7b2518935e3e5cd473479_cursor.png)
 
 Cursor AI Code Editor
 
@@ -48,23 +52,23 @@ Let's walk through a practical example of how Cursor can help you create an E2E 
 9.  Use Cursor to add Allure report steps
 10.  Run the test script and generate the HTML report using Allure functions
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc0391_66e7b69313e49eb0913d4b42_Screenshot%25202024-09-15%2520at%25209.09.28%25E2%2580%25AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/620b837b1c_66e7b89077d7d990d1fc0391_66e7b69313e49eb0913d4b42_Screenshot%202024-09-15%20at%209.09.28%E2%80%AFPM.png)
 
 Ask AI how to install packages
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc03a3_66e7b78de5ee5f8722be0d5f_Screenshot%25202024-09-15%2520at%25209.14.05%25E2%2580%25AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/a89d459996_66e7b89077d7d990d1fc03a3_66e7b78de5ee5f8722be0d5f_Screenshot%202024-09-15%20at%209.14.05%E2%80%AFPM.png)
 
 Generate first script by Playwright Inspector
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc03ba_66e7b7ed297c80a6f1936aec_Screenshot%25202024-09-15%2520at%25209.17.31%25E2%2580%25AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/7437cfa916_66e7b89077d7d990d1fc03ba_66e7b7ed297c80a6f1936aec_Screenshot%202024-09-15%20at%209.17.31%E2%80%AFPM.png)
 
 Ask AI to refactor code
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc03a6_66e7b81967df6605bbb671ee_Screenshot%25202024-09-15%2520at%25209.24.18%25E2%2580%25AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/e14ae8f7b0_66e7b89077d7d990d1fc03a6_66e7b81967df6605bbb671ee_Screenshot%202024-09-15%20at%209.24.18%E2%80%AFPM.png)
 
 Ask AI to add allure report code
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e7b89077d7d990d1fc0394_66e7b87732f03348aa1172ed_pass_example.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/de6557eb50_66e7b89077d7d990d1fc0394_66e7b87732f03348aa1172ed_pass_example.png)
 
 Allure Report Sample
 

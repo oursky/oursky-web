@@ -3,13 +3,15 @@ title: "Interns Are Not Good Free Labor"
 description: "Interns are not cheap labour. In fact, they're more expensive than you think. So why did we hire interns? And how did they contribute to the company?"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3130946e57a7951527438_1HARd87fcKvAnMxeFExyOgw.jpeg"
+categories:
+  - "culture"
+displayCategory: "FOUNDERS LEARNING"
+image: "/images/blogs/c64c2a0a35_66e3130946e57a7951527438_1HARd87fcKvAnMxeFExyOgw.jpeg"
 draft: false
 webflowId: "66e31346dd35f44dc9db5986"
 ---
 
-![Dollar Sign](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31322e0884e5ff1f08754_1HARd87fcKvAnMxeFExyOgw-720x422.jpeg)
+![Dollar Sign](/images/blogs/b94f400cf0_66e31322e0884e5ff1f08754_1HARd87fcKvAnMxeFExyOgw-720x422.jpeg)
 
 PHOTO BY [JIMI FILIPOVSKI](https://unsplash.com/photos/8koEuSiR1zM) VIA UNSPLASH
 
@@ -29,7 +31,7 @@ In the 200+ candidates I interview annually, I look for good team members, and a
 
 ## Interns are not cheap labor. They are inexperienced labor.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31322fbeb775694edb3fd_1azAwNH7BZaJ3cSENoMvsDw.jpeg)
+![](/images/blogs/0378efe44c_66e31322fbeb775694edb3fd_1azAwNH7BZaJ3cSENoMvsDw.jpeg)
 
 PHOTO BY [RICARDO VIANA](https://unsplash.com/photos/-tYsPFKMm7g) VIA UNSPLASH
 
@@ -45,7 +47,7 @@ For our content team, this begins with research and editing pieces so that the t
 
 ## Stop asking “Do you have any questions?” They won’t, and that’s bad.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3132245a71ecd8dd55b45_11bp7kWs88QTBCqucIcKEiA.jpeg)
+![](/images/blogs/33da9343d3_66e3132245a71ecd8dd55b45_11bp7kWs88QTBCqucIcKEiA.jpeg)
 
 PHOTO BY [RAY HENNESSY](https://unsplash.com/photos/n6I2GT_Pij4) VIA UNSPLASH
 
@@ -61,7 +63,7 @@ One of our colleagues began asking this instead: “How would you proceed to sol
 
 ## Learning your assumptions.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3132231cff2f5db988424_1XRk6imEclPHJpGpM2CKPzQ.jpeg)
+![](/images/blogs/2ff7a4ef90_66e3132231cff2f5db988424_1XRk6imEclPHJpGpM2CKPzQ.jpeg)
 
 PHOTO BY [GLENN CARSTENS-PETERS](https://unsplash.com/photos/RLw-UC03Gwc) VIA UNSPLASH
 
@@ -91,7 +93,7 @@ In contrast, by paying our interns, we can set clear expectations for delivery s
 
 ## Give a 2x buffer time.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31322a10db7ebc0c21f8f_1F2x4vRvnz7Wlqhgr2Wweww.jpeg)
+![](/images/blogs/6e97aca083_66e31322a10db7ebc0c21f8f_1F2x4vRvnz7Wlqhgr2Wweww.jpeg)
 
 PHOTO BY [LOIC DJIM](https://unsplash.com/photos/ft0-Xu4nTvA) VIA UNSPLASH
 
@@ -105,7 +107,7 @@ Our editorial team still continues to write, but our staff can now focus on high
 
 ## Don’t just invest time, invest money, too.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e313223ceab0b1d64b318b_1ruBgMhwPHqeV2KipldEofQ.jpeg)
+![](/images/blogs/1ead221632_66e313223ceab0b1d64b318b_1ruBgMhwPHqeV2KipldEofQ.jpeg)
 
 PHOTO BY [LUCA ZANON](https://unsplash.com/photos/aViOQZzikVs) VIA UNSPLASH
 
@@ -123,7 +125,7 @@ Our company generally pays hourly because we prefer long-term relationships with
 
 ## What do coffee runs say about you?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3132200cae42b6154209b_191030B-FCCq-7zj4kandPA.jpeg)
+![](/images/blogs/dfc27683f5_66e3132200cae42b6154209b_191030B-FCCq-7zj4kandPA.jpeg)
 
 In a small and growing company, there are a million things to be done — including errands. But executing daily coffee and stationary runs is not an employable skill for your intern.
 
@@ -135,7 +137,7 @@ One easy principle is that you can ask an intern to do anything you would do, wh
 
 ## Get off your high horse.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3132288b9d959dc594421_1sF_WgBCvITzAYNZsDg1WGQ.jpeg)
+![](/images/blogs/e481b8d7e3_66e3132288b9d959dc594421_1sF_WgBCvITzAYNZsDg1WGQ.jpeg)
 
 PHOTO BY [CLARK YOUNG](https://unsplash.com/photos/DZqtE4IrBg0) VIA UNSPLASH
 

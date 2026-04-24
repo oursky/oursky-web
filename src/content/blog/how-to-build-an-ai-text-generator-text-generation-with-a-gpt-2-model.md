@@ -3,13 +3,15 @@ title: "How to Build an AI Text Generator: Text Generation with a GPT-2 Model"
 description: "How to Build an AI Text Generator: Text Generation with a GPT-2 Model"
 pubDate: 2025-01-28
 author: "Jason Wu"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799430118fcc7842c36cec5_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Artificial Intelligence"
+image: "/images/blogs/932be10e6f_6799430118fcc7842c36cec5_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648.jpg"
 draft: false
 webflowId: "679943e3c3544ff0a210b45a"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994321333a6b4a8942beed_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648-1160x519.jpeg)
+![](/images/blogs/fe5f73d071_67994321333a6b4a8942beed_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648-1160x519.jpeg)
 
 _We wrote this after the_ [_Oursky_](https://oursky.com/) [_Skylab.ai_](https://skylab.ai/) _team completed an AI content generator for a startup client, and we’d like to share our experience and journey._ From a corpus of stories with an aligned writing style, provided by our client, we trained a text generation model that outputs similar text pieces.
 
@@ -87,7 +89,7 @@ Instead of constructing all possible sentences, we could instead just track the 
   
 The decision tree figure below illustrates a case of generating a sentence with three words, starting with “I” with N = 2. This means we only track top-2 partial sentences.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679943216066ed24fbbb3a25_Article-Generation-and-GPT-2-Model-1-1160x284.png)
+![](/images/blogs/cbede1452c_679943216066ed24fbbb3a25_Article-Generation-and-GPT-2-Model-1-1160x284.png)
 
 Here, we first check P(w | “I”). Among all the possible words, the language model tells “eat” and “read” are the most probable next words. Hence, in the next step, we’ll only consider the trees of P(w | “I eat”) and P(w | “I read”) and ignore other possibilities like sentences that start with “I drink”.
 
@@ -149,7 +151,7 @@ Here, we’ll talk about how GPT-2 model works by building it piece by piece.
 
 First, let’s describe the input and output of the GPT-2 model. We’ll start small and seek to construct a sentence first.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679943218a6ab8453f411c44_Article-Generation-and-GPT-2-Model-2.png)
+![](/images/blogs/bf2e7ab10e_679943218a6ab8453f411c44_Article-Generation-and-GPT-2-Model-2.png)
 
 Given words in its [embedded form](https://en.wikipedia.org/wiki/Word_embedding), GPT-2 transforms the input word-embedding vector (blue ellipses) to the output word embedding (purple ellipses). This transformation would not change the dimension of the word embedding (although it could). Output word embedding is known as the hidden state.  
   
@@ -205,7 +207,7 @@ We should now know how output embedding is computed as the weighted sum of value
 
 What we’ve discussed so far is just the **attention layer** in GPT-2. This layer covers most of the details, as the rest of the GPT-2 model structure is just a replication of the attention layer.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679943213f5394ebd2efaec1_Article-Generation-and-GPT-2-Model-3.png)
+![](/images/blogs/cec9668b99_679943213f5394ebd2efaec1_Article-Generation-and-GPT-2-Model-3.png)
 
 Let’s continue our GPT-2 model construction journey. GPT-2 uses multiple attention layers. This is the so-called multi-head attention.  
   
@@ -217,7 +219,7 @@ The output word embeddings we got so far is actually not the final one. The outp
   
 These attention layers running in parallel together with the feedforward layer are grouped to a block called the **decoder block**1.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994321e01fff0ece9759b2_Article-Generation-and-GPT-2-Model-4.png)
+![](/images/blogs/349ba4acc8_67994321e01fff0ece9759b2_Article-Generation-and-GPT-2-Model-4.png)
 
 GPT-2 doesn’t just include one decoder block. There’s a chain of it. We choose the input word embedding and output word embedding to have the same dimensionality so that we could chain the decoder blocks.
 
@@ -334,11 +336,11 @@ The following is a code snippet of text generation using a pre-trained GPT-2 mod
 
 Thanks to jessevig’s [BertViz](https://github.com/jessevig/bertviz) tool, we can peek at how GPT-2 works by visualizing the attention values.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679943214c7c056e6eb49237_Article-Generation-and-GPT-2-Model-5-1160x950.png)
+![](/images/blogs/408abb1db5_679943214c7c056e6eb49237_Article-Generation-and-GPT-2-Model-5-1160x950.png)
 
 The figure above is a visualization of attention values on each decoder block (from top to bottom of the grid, with the first row as the first block). Each attention head (from left to right) of the GPT-2 small model takes “I disapprove of what you say, but” as input.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679943210a904779ac361d7e_Article-Generation-and-GPT-2-Model-6.png)
+![](/images/blogs/daf320f5b7_679943210a904779ac361d7e_Article-Generation-and-GPT-2-Model-6.png)
 
 On the left is a zoomed-in look at the 2nd block’s 6th attention head’s result.
 
@@ -444,7 +446,7 @@ Below are the reported σi and its visualization. The smaller the value, the dar
 
       `1.2249271, 0.311358` `], dtype`**`=`**`float32)`
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994321e60cb7aadb99855e_Article-Generation-and-GPT-2-Model-7.png)
+![](/images/blogs/c8efa94bb1_67994321e60cb7aadb99855e_Article-Generation-and-GPT-2-Model-7.png)
 
 From the figures above, we can now know that P( w | “I disapprove of what you say, but”) will be affected by the word “but” the most, followed by “what”, then “I”.
 

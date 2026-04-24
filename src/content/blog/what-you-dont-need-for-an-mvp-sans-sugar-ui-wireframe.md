@@ -3,25 +3,27 @@ title: "What you don’t need for an MVP: Sans Sugar UI Wireframe"
 description: "What you don’t need for an MVP: Sans Sugar UI Wireframe"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799510993bdb1ce79fbea1e_SnasSugar-Appicon-Preview.webp"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/a5dc261751_6799510993bdb1ce79fbea1e_SnasSugar-Appicon-Preview.webp"
 draft: false
 webflowId: "6799512154769870a1f32ef8"
 ---
 
-![iphone x mockup app design UI UX](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100697ab60b8f3a0256_SnasSugar-Appicon-Preview-720x354.png)
+![iphone x mockup app design UI UX](/images/blogs/e8d52964a5_67995100697ab60b8f3a0256_SnasSugar-Appicon-Preview-720x354.png)
 
 ## How we started our side project
 
 Here’s a first world problem: when you discover your company’s fridge is out of your favourite beverage. Our company’s been offering free drinks and snacks for years and recently we’ve switched to healthier drinks (replacing Coke with Coke Zero, juices with teas, and coconut water). Overall, was it helping? We had no way of knowing. Could we collect data to find out without doing OCD calorie tracking?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100f80d7a7970e282e0_oursky-startup-free-drinks-720x368.jpeg)
+![](/images/blogs/3a5c05e01b_67995100f80d7a7970e282e0_oursky-startup-free-drinks-720x368.jpeg)
 
 Some of the options in our company fridge.
 
 Diets have so many factors, but was there one thing we could reduce and make instant gains? Well, based on the recent [PBS report on the possible correlation with cancer, sugar](https://www.pbs.org/newshour/science/sugar-industry-withheld-possible-evidence-of-cancer-link-50-years-ago-researchers-say) was a good candidate. **So could we just have an app that would tell us if we were over or under the daily recommended sugar intake limit?**
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799510023af1a9d6bd3808f_startup-unlimited-alcohol-oursky-300x287.jpeg)
+![](/images/blogs/5745dcee18_6799510023af1a9d6bd3808f_startup-unlimited-alcohol-oursky-300x287.jpeg)
 
 What’s left at the end of a long week at Oursky
 
@@ -48,7 +50,7 @@ Always check to see if someone else has solved your problem already. We went to 
 
 ## Solving different problems
 
-![android UI calorie intake app](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100daa2fabb50333388_diet-app-UX-UI-.png)
+![android UI calorie intake app](/images/blogs/a29c0d45b6_67995100daa2fabb50333388_diet-app-UX-UI-.png)
 
 Above are three of the most popular calorie tracker apps: Lifesum, Yazio, and FatSecret.
 
@@ -64,7 +66,7 @@ The purpose of an MVP is to validate a user need. Because the MVP is barebones, 
 
 **Our hypothesis is that our target users (like us) want an interface that is easy to access, read, and input data.** Because the other tracker apps we looked at were based on three meals a day, a user is required to click through several screens or search for their food items.
 
-![Lifesum Yazio FatSecret comparison](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100aa572ea096838333_calorie-tracking-apps-android.png)
+![Lifesum Yazio FatSecret comparison](/images/blogs/7656c14ee2_67995100aa572ea096838333_calorie-tracking-apps-android.png)
 
 Android UI version for calorie tracking apps.
 
@@ -79,7 +81,7 @@ Because we relied on barcode scanning, we didn’t have to build our database fr
 
 **Below was our first wireframe:**
 
-![iOS wireframe sample](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100518e430f41fcde36_sanssugar-wireframe_original.jpeg)
+![iOS wireframe sample](/images/blogs/fbd003c686_67995100518e430f41fcde36_sanssugar-wireframe_original.jpeg)
 
 V1 of our Sans Sugar App Wireframe
 
@@ -98,7 +100,7 @@ The non-technical team members looked at the wireframe and gave feedback. Four c
 
 **Our V2 reflected these suggestions.**
 
-![UX UI ios 11 app design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951003ab5547d30721a49_ios-11-app-wireframe.png)
+![UX UI ios 11 app design](/images/blogs/f0dfa6948c_679951003ab5547d30721a49_ios-11-app-wireframe.png)
 
 Our Sans Sugar iOS 11 app V2 wireframe
 
@@ -110,7 +112,7 @@ These were the things we removed:
 2.  Additional gamification screens (could simplify the history screen to achieve the same result)
 3.  Settings and update info screens because they aren’t essential for an MVP
 
-![wireframe iterations mvp design thinking](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100be2d1859c0628e5d_sans-sugarv2.png)
+![wireframe iterations mvp design thinking](/images/blogs/167749c085_67995100be2d1859c0628e5d_sans-sugarv2.png)
 
 Simplify. Focus on user flow and main feature before moving to mockups.
 
@@ -123,7 +125,7 @@ We’ve rearranged our wireframe to make the flow more obvious than the first ve
 
 **This is Part 1 of our iOS MVP design and development series for our side project, Sans Sugar, a simple tracker for your daily sugar intake. Check out** [**Part 2: from wireframes to mockups**](https://blog.oursky.com/2017/12/11/mvp-ui-design-mockups-sans-sugar/).
 
-![sugar intake tracker design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951006fa34d27f8f9610f_SansSugar-appicon-1024-300x300.png)
+![sugar intake tracker design](/images/blogs/f05cba3026_679951006fa34d27f8f9610f_SansSugar-appicon-1024-300x300.png)
 
 The upcoming app logo!
 

@@ -3,15 +3,17 @@ title: "Why it’s Important to Work in a Company that Shares Your Values"
 description: "Why it’s Important to Work in a Company that Shares Your Values"
 pubDate: 2025-01-28
 author: "Varya Nekhina"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954e43f749d90525dd5ad_photo-1496115965489-21be7e6e59a0-e1587582578824.jpg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/7e7a0c8872_679954e43f749d90525dd5ad_photo-1496115965489-21be7e6e59a0-e1587582578824.jpg"
 draft: false
 webflowId: "679954f523af1a9d6bd7cfbe"
 ---
 
 As a new addition to the Oursky team, I’m immersing myself in its culture. It’s one thing when HR or your manager tells you about the workplace environment, but it’s totally different when you observe it with your own eyes. Some of my tenured colleagues have never worked in other companies before. I’ve experienced living in and working for different employers in Russia, Myanmar, and Taiwan, so I have multiple perspectives about working with people from different cultures. Whether you’re a developer, project manager, sales executive, business development executive, or a professional pursuing a career in software development (or any industry for that matter), it’s important to see if you will fit in with the company culture. I’m sharing my experience so that, hopefully, when you find yourself in a similar boat, you can bridge the gaps — and take action —  between corporate values and your own.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954db00afd2ad0ddc6fad_photo-1496115965489-21be7e6e59a0-e1587582578824-1160x789.jpeg)
+![](/images/blogs/9fd0f12599_679954db00afd2ad0ddc6fad_photo-1496115965489-21be7e6e59a0-e1587582578824-1160x789.jpeg)
 
 Photo by [Charles Deluvio](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -27,7 +29,7 @@ _But things were not what they seemed. The environment wasn’t conducive to cre
 
 _It came to blows when I was unjustly reprimanded for my appearance and ultimately had a conversation with HR about what was going on and what I was feeling. I understand that all companies have problems and emotions can run high in certain situations. When this happens, the most important part is how they are handled. The company responded to the gender discrimination I raised by starting an “investigation”. HR talked to my bosses and asked them to be kinder to me. Instead, they stopped talking to me. To say that I was shocked was an understatement. The whole package of problems was still there, only without the shouting. The professional ‘ghosting’ was bewildering. In the end, it was easier to get rid of the person who called them out._
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954db223c893cb17f1958_hannah-busing-Zyx1bK9mqmA-unsplash-1160x773.jpeg)
+![](/images/blogs/dc82b6f9f9_679954db223c893cb17f1958_hannah-busing-Zyx1bK9mqmA-unsplash-1160x773.jpeg)
 
 Photo by [Hannah Busing](https://unsplash.com/@hannahbusing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -46,7 +48,7 @@ Here are some red flags I experienced that might help you reflect on your curren
 *   There is neither feedback nor appreciation. Open and reciprocal communication is key to successful teamwork.
 *   Turnover is high. People leaving the team or a company constantly hiring for the same vacancies might be signs of internal problems.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e320b47ae93e1a122272cd_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpeg)
+![](/images/blogs/e6defff1da_66e320b47ae93e1a122272cd_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpeg)
 
 Photo by [Riccardo Annandale](https://unsplash.com/@pavement_special?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

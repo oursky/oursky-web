@@ -3,8 +3,10 @@ title: "Augmented Reality for the Web: Using WebAR to Speed Up Cross-Platform Mo
 description: "Augmented Reality for the Web: Using WebAR to Speed Up Cross-Platform Mobile Development"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799581f35d3af619f07a99e_AR-for-the-Web-Oursky-01-23-at-12.webp"
+categories:
+  - "development"
+displayCategory: "Augmented Reality (AR)"
+image: "/images/blogs/f23839898f_6799581f35d3af619f07a99e_AR-for-the-Web-Oursky-01-23-at-12.webp"
 draft: false
 webflowId: "67995835f0bb85751062bcfc"
 ---
@@ -31,6 +33,8 @@ Note that at the time when we created our AR demo, web browsers don’t natively
 
 ## How ARKit and ARCore Apps Pave the Way for Mobile Developers
 
+<iframe src="https://www.youtube.com/embed/y4bIcUv0lbU?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
 The video above is Google’s overview of showing Android users what they could potentially see through their smartphones powered by ARCore. While game developers have been able to develop AR experiences for years with the powerful Unreal or Unity game engines, web developers previously did not have similar tools to develop AR experiences for the web. Even mobile developers had to put together libraries or custom-build components to develop an app with AR features for smartphones.
 
 With [ARKit](https://developer.apple.com/arkit/) and [ARCore](https://developers.google.com/ar/), developers could create more interactive experiences for mobile apps because these frameworks packaged the essential features for AR that traditionally used to come separately:
@@ -43,6 +47,8 @@ These kits help developers create AR content by tracking information on the envi
 
 Both Apple and Google’s AR libraries can integrate easily into game engines and other libraries. However, they’re not yet available for all mobile devices. ARKit can be used with [Metal](https://developer.apple.com/metal/) and [SceneKit](https://developer.apple.com/scenekit/), but only iPad and iPhone models with Apple A9 processors can support ARKit. While ARCore was initially only available on Pixel and Samsung S8 in 2018, it has since [expanded](https://developers.google.com/ar/discover/supported-devices) to different device models.
 
+<iframe src="https://www.youtube.com/embed/aSKgJEt9l-0?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
 ## How Augmented Reality App Development Has Advanced in the Past Decade
 
 Augmented reality depends on these main components:
@@ -52,6 +58,10 @@ Augmented reality depends on these main components:
 *   A set of 3D objects that can interact with the environment in the camera
 *   A rendered view
 
+<iframe src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=https%3A%2F%2Ftwitter.com%2F%40iamdavidng&dnt=true&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=880744158423658497&lang=en&origin=https%3A%2F%2Fblog.oursky.com%2F2021%2F01%2F15%2Faugmented-reality-for-the-web-using-webar-to-speed-up-cross-platform-mobile-development%2F&sessionId=29bc2d49b07e224a4678380b1bedcc659a20d821&siteScreenName=oursky&theme=light&widgetsVersion=2615f7e52b7e0%3A1702314776716&width=550px" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
+<iframe src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=https%3A%2F%2Ftwitter.com%2F%40iamdavidng&dnt=true&embedId=twitter-widget-1&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=902565046152257536&lang=en&origin=https%3A%2F%2Fblog.oursky.com%2F2021%2F01%2F15%2Faugmented-reality-for-the-web-using-webar-to-speed-up-cross-platform-mobile-development%2F&sessionId=29bc2d49b07e224a4678380b1bedcc659a20d821&siteScreenName=oursky&theme=light&widgetsVersion=2615f7e52b7e0%3A1702314776716&width=550px" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
 Back in 2007, these four components were usually separate, making a full-featured AR application much more technically challenging. To build an augmented reality app, developers were required to be fully knowledgeable about all the components.
 
 In addition, the hardware couldn’t support an interactive experience. The first-generation iPhone was just introduced that time, which meant that most people would still be using a webcam attached to a desktop, which isn’t easy to move or interact with.
@@ -60,7 +70,7 @@ Fast forward to more than 10 years, and we’ve arrived at a mobile-first era wi
 
 However, ARKit and ARCore are native mobile experiences and are not available for the web directly. Developers would have to create an iOS and Android version for app demo projects, minimum viable products (MVP), and prototypes. By using WebAR, or web-based augmented reality, we can create an AR experience that users of any smartphone can see from a web browser.
 
-![AR for Web Hong Kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995804a3797722532e5b71_AR-for-the-Web-Oursky-01-23-at-12.04.27-PM.png)
+![AR for Web Hong Kong](/images/blogs/4d5da10a33_67995804a3797722532e5b71_AR-for-the-Web-Oursky-01-23-at-12.04.27-PM.png)
 
 We created an AR Christmas greeting in about a day!
 
@@ -68,7 +78,7 @@ We created an AR Christmas greeting in about a day!
 
 Augmented reality for the web, or WebAR, is simply another variation of technologies and tools that run augmented reality on web browsers. Our team worked with [three.ar.js](https://github.com/google-ar/three.ar.js?files=1), developed by Google, for tracking and [three.js](https://threejs.org/) for 3D objects. You can see the diagram below to see the layers that go into an AR experience.  
 
-![WebAR](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995804587163b0f8c42e1f_AR-for-the-Web-Oursky-01-23-at-12.14.57-PM.png)
+![WebAR](/images/blogs/bb12ba6a09_67995804587163b0f8c42e1f_AR-for-the-Web-Oursky-01-23-at-12.14.57-PM.png)
 
 HOW WebAR/AR FOR THE WEB WORKS
 
@@ -78,21 +88,23 @@ Creating the 3D objects is usually in the domain of artists and people who work 
 
 For our project, we used Adobe Fuse CC to turn our dancer into Ben, Oursky’s CEO.
 
-![AR app development agency](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995804aaa47ef20a34fbb2_AR-for-the-Web-Oursky-01-23-at-12.04.33-PM.png)
+![AR app development agency](/images/blogs/6838be3965_67995804aaa47ef20a34fbb2_AR-for-the-Web-Oursky-01-23-at-12.04.33-PM.png)
 
 WE QUICKLY CREATED A 3D MODEL USING TEMPLATES AND ADOBE FUSE CC.
 
 After the 3D object is created, we needed to load the objects we want in specific scenarios. In our case, we needed to give “Dancing Ben” a flat surface to share his dance moves on. With AR for the web, displaying the object on a designated type of mapped surface becomes as simple as a line of code as shown below:  
 
-![WEBARonARKit WEBARonARCore](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799580412b8bedd1b842815_AR-for-the-Web-Oursky-01-23-at-11.59.14-AM.png)
+![WEBARonARKit WEBARonARCore](/images/blogs/67e66e94c6_6799580412b8bedd1b842815_AR-for-the-Web-Oursky-01-23-at-11.59.14-AM.png)
 
 WebAR/AR FOR THE WEB HELPS DEVELOPERS FOCUS ON THEIR PRODUCT
 
 With AR for the web, we were able to focus mostly on modifying a template 3D object and choosing where it would be suitable to dance on. We didn’t have to get bogged down with important details, such as fine-tuning the accuracy of tracking. The result, our [Christmas Dancing Ben](https://www.facebook.com/oursky.hk/videos/10155105026696485/), was rendered from a compatible phone, like the iPhone X, on our custom browser.
 
-![AR app development hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995804fe53167067982ca6_AR-for-the-Web-Oursky-01-16-at-5.24.45-AM.png)
+![AR app development hong kong](/images/blogs/5ba53cedf9_67995804fe53167067982ca6_AR-for-the-Web-Oursky-01-16-at-5.24.45-AM.png)
 
 OURSKY’S CHRISTMAS AR APP SIDE PROJECT
+
+<iframe src="https://www.youtube.com/embed/CZLOMcfgbnI?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 # Why AR: Augmented Reality Examples and Business Use Cases
 
@@ -101,6 +113,8 @@ Augmented reality has limitless potential in what objects and information can in
 AR’s market potential is just starting to be realized as the tech industry further improve smartphone processors, cameras, and open-source developer tools. Brands can engage with customers beyond a single sales point. They can create helpful product previews, informative tools and guides, and entertaining brand experiences.
 
 If you’re looking for more business cases for AR, look no further than [Ikea’s app](https://www.wired.com/story/ikea-place-ar-kit-augmented-reality/) that gives an augmented reality shopping experience. Still want more examples? Check out this quick iOS 11 video:
+
+<iframe src="https://www.youtube.com/embed/Hjq-ATVqUx8?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en-US&autohide=2&wmode=transparent" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 Here are some of AR app examples and their real business use cases:
 

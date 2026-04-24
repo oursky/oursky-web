@@ -3,8 +3,11 @@ title: "Top 10 Mobile App UX Design Mistakes"
 description: "Our QA is always the first user of those client apps. Every time, it is a UX testing. Here's 10 mobile UX mistakes she came up with. Are you Familiar with?"
 pubDate: 2024-09-16
 author: "Joyz Ng"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349609847feb156298a34_lead-nuclear-power-human-error-homer-simpson-1-1024x680.jpg"
+categories:
+  - "qa"
+  - "ui-design"
+displayCategory: "User Experience"
+image: "/images/blogs/7f14b43b0f_66e349609847feb156298a34_lead-nuclear-power-human-error-homer-simpson-1-1024x680.jpg"
 draft: false
 webflowId: "66e3497eebe06c795cbc410f"
 ---
@@ -23,7 +26,7 @@ It's not the text's fault.
 
 It's the text field couldn't handle that.
 
-![Long text handling](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349447ef78a6fb0c82b98_full-text-message-ios.gif)
+![Long text handling](/images/blogs/21c13b5e4a_66e349447ef78a6fb0c82b98_full-text-message-ios.gif)
 
 Yet, there are ways to deal with that:
 
@@ -40,7 +43,7 @@ However at some time, users might need to take a step back to the previous page,
 
 \[caption id="attachment\_155" align="aligncenter" width="499"\]
 
-![Let me in, I need to go back out again](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349448ee82fc85464cfc5_let-me-in.png)
+![Let me in, I need to go back out again](/images/blogs/90702f81cd_66e349448ee82fc85464cfc5_let-me-in.png)
 
 I left my toy there\[/caption\]
 
@@ -56,7 +59,7 @@ Mind that!
 
 \[caption id="attachment\_156" align="aligncenter" width="500"\]
 
-![funny-emoji-balloon](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3494413eb0585f98dd87c_funny-emoji-balloon.jpeg)
+![funny-emoji-balloon](/images/blogs/c0f43c725d_66e3494413eb0585f98dd87c_funny-emoji-balloon.jpeg)
 
 Imagine if we missed all the emojis there...\[/caption\]
 
@@ -66,7 +69,7 @@ We all know users can be like [monkeys](https://en.wikipedia.org/wiki/Monkey_tes
 
 \[caption id="attachment\_157" align="aligncenter" width="500"\]
 
-![Monkey clicking the mouse](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34944ffb8af7ecd498e9b_monkey-clicks.gif)
+![Monkey clicking the mouse](/images/blogs/00af39a989_66e34944ffb8af7ecd498e9b_monkey-clicks.gif)
 
 The app should be able to pass the monkey test\[/caption\]
 
@@ -84,7 +87,7 @@ Provide visual hints that the app is still alive while it loads.
 
 \[caption id="attachment\_163" align="aligncenter" width="485"\]
 
-![its-loading-i-know](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349449a49a032bc6e40e5_its-loading-i-know.jpeg)
+![its-loading-i-know](/images/blogs/7a407ea5fe_66e349449a49a032bc6e40e5_its-loading-i-know.jpeg)
 
 so user know's we are still working for them...\[/caption\]
 
@@ -94,7 +97,7 @@ That's _confusing_ - we feel natural to receive feedback when we interact with a
 
 \[caption id="attachment\_159" align="aligncenter" width="449"\]
 
-![repeatedly-click](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34944aa35fe56a20a9408_repeatedly-click.gif)
+![repeatedly-click](/images/blogs/eb29640280_66e34944aa35fe56a20a9408_repeatedly-click.gif)
 
 if a click doesn't work, let's click again - customer's thought.\[/caption\]
 
@@ -106,7 +109,7 @@ Asking bad questions or provide confusing choices might cause a panic.
 
 \[caption id="attachment\_169" align="aligncenter" width="658"\]
 
-![Does the skip skip the "skip"?](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349446983c4e6a717347c_instagram-skips.png)
+![Does the skip skip the "skip"?](/images/blogs/24106fb92a_66e349446983c4e6a717347c_instagram-skips.png)
 
 image from useronboard.com\[/caption\]
 
@@ -118,7 +121,7 @@ It's common that users put their phones in different orientations when using the
 
 Changing orientation (e.g. from portrait to landscape) triggers a interface redraw, and most of the elements on the screen are relocated in different positions. That involves calculations. Often mistakes were made here, while your users will never stop rotating...rotating...rotating...
 
-![rotating-mobile-device](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34944aaeffdb3b5479775_rotating-mobile-device.gif)
+![rotating-mobile-device](/images/blogs/a19afec9c7_66e34944aaeffdb3b5479775_rotating-mobile-device.gif)
 
 ## 2\.  Fail to handle bad network connection
 
@@ -127,7 +130,7 @@ Handling no network connection issue is a common practice. They need it.
 
 Google did a nice job here on Chrome (to kill your time)
 
-![chrome-no-connection](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e349449a49a032bc6e40e2_chrome-no-connection.gif)
+![chrome-no-connection](/images/blogs/bb5ca88e78_66e349449a49a032bc6e40e2_chrome-no-connection.gif)
 
 ## 1\. Bad error message
 
@@ -137,7 +140,7 @@ That only leaves nothing but a frustrated user that never uses your app again.
 
 \[caption id="attachment\_158" align="aligncenter" width="600"\]
 
-![I-Have-No-Idea-What-I-am-Doing](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e34945bb04a889e9e1ea28_I-Have-No-Idea-What-I-am-Doing.jpeg)
+![I-Have-No-Idea-What-I-am-Doing](/images/blogs/bec3ad4fc5_66e34945bb04a889e9e1ea28_I-Have-No-Idea-What-I-am-Doing.jpeg)
 
 Anyone tell me what's that...\[/caption\]
 

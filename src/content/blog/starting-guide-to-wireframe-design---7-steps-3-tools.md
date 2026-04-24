@@ -3,8 +3,10 @@ title: "Starting Guide to Wireframe Design – 7 Steps & 3 Tools"
 description: "Starting Guide to Wireframe Design – 7 Steps & 3 Tools"
 pubDate: 2025-01-28
 author: "Jane C"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799483e826e17694ac815ed_1.jpg"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/aa3cdfde6c_6799483e826e17694ac815ed_1.jpg"
 draft: false
 webflowId: "6799484a542c0b889ce7bf7f"
 ---
@@ -17,7 +19,7 @@ Wireframing is a process that helps to design a site that communicates clearly t
 
 ## Mind Mapping for your design
 
-![Web wireframe Design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482b54769870a1e9c883_1.jpeg)
+![Web wireframe Design](/images/blogs/86256bf2c9_6799482b54769870a1e9c883_1.jpeg)
 
 _Quackit and CreativeMarket provide you with ready-made designs._
 
@@ -27,7 +29,7 @@ Before building a site, it’s important to understand what makes a good site la
 
 ## Designing your Process
 
-![Adobe Illustrator for web wireframe design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482b1a8aad975e45552b_2-720x405.jpeg)
+![Adobe Illustrator for web wireframe design](/images/blogs/d68a9c8cf0_6799482b1a8aad975e45552b_2-720x405.jpeg)
 
 Adobe Illustrator for web wireframe design
 
@@ -43,7 +45,7 @@ Illustrator is great for doing an inital desing. Next, you need to test out your
 
 #### [1\. Balsamiq](https://balsamiq.com/)
 
-![Balsamiq is an excellent web frame design tool](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482bb56100be7fa2ef69_3.jpeg)
+![Balsamiq is an excellent web frame design tool](/images/blogs/a7ca295c51_6799482bb56100be7fa2ef69_3.jpeg)
 
 Balsamiq is an excellent web frame design tool
 
@@ -51,7 +53,7 @@ Balsamiq is of the most widely used  tooweb framebframe design. It has integrat
 
 #### [2\.  Atomic](https://atomic.io/)
 
-![atomic.io is another tool for wireframe design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482bb56100be7fa2ef63_4.jpeg)
+![atomic.io is another tool for wireframe design](/images/blogs/3e8431831d_6799482bb56100be7fa2ef63_4.jpeg)
 
 Atomic.io is available on Window & Mac
 
@@ -59,7 +61,7 @@ An alternative to Basalmiq’s orientation on process and components is to look 
 
 #### [3\. Uxpin](https://www.uxpin.com/)
 
-![Uxpin can be used online](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482bb96329f26fce0be2_5-720x347.png)
+![Uxpin can be used online](/images/blogs/49c00fab9c_6799482bb96329f26fce0be2_5-720x347.png)
 
 If you don’t want to install a software for wireframe design, Uxpin may be a good choice for you.
 
@@ -69,7 +71,7 @@ The most important thing is to test the tools that work for you. There is no bes
 
 ## Setting up your Grid
 
-![Grid](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482b8efc312cbdee3b78_5-720x352.jpeg)
+![Grid](/images/blogs/7db77dc58e_6799482b8efc312cbdee3b78_5-720x352.jpeg)
 
 Grid is very important concept in web design & development
 
@@ -77,7 +79,7 @@ Once you’ve decided on your favourite tools, it’s time to get down to work. 
 
 ## Define Layout with Boxes
 
-![grid layout screen](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482b4b27ce75c998a10f_6.png)
+![grid layout screen](/images/blogs/617d6ea883_6799482b4b27ce75c998a10f_6.png)
 
 Boxes should be placed after designing the grid
 
@@ -85,7 +87,7 @@ Once the grid has been defined, boxes are made and placed on the grid layout scr
 
 ## Determine pecking order using the ‘Text Tool’
 
-![Wireframe step - fill text](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482ba96b779450bd4666_7.png)
+![Wireframe step - fill text](/images/blogs/6ad0665ed0_6799482ba96b779450bd4666_7.png)
 
 Some texts should be enlarged for audience to grab what your site does
 
@@ -93,7 +95,7 @@ After setting up all boxes, it’s time to fill them with the a descriptive text
 
 ## Converting Wireframe into a Visual
 
-![Export the design into visual](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799482bfe20b33f4be02c73_8.jpeg)
+![Export the design into visual](/images/blogs/ece91954ce_6799482bfe20b33f4be02c73_8.jpeg)
 
 After your wireframe has been approved, you will need to populate the squares with – no, not data – images. If you were creating a file on Illustrator, then save the .psd file and send it over to Photoshop from where the visuals can be plugged in. Adobe Photoshop CS6 and later versions will have this import feature.
 

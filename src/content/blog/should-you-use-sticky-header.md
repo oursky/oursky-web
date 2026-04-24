@@ -3,17 +3,19 @@ title: "Should you use Sticky Header?"
 description: "Should you use Sticky Header?"
 pubDate: 2025-01-28
 author: "Ken Chan"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994107f8310651bf28fc15_danielle-macinnes-51592.jpg"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/8f11bc26ec_67994107f8310651bf28fc15_danielle-macinnes-51592.jpg"
 draft: false
 webflowId: "6799412bbf8f21608a6a7ac2"
 ---
 
-![https://unsplash.com/@dsmacinnes](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679941160b2cac4eb173109a_danielle-macinnes-51592.jpeg)
+![https://unsplash.com/@dsmacinnes](/images/blogs/6ca60a2d41_679941160b2cac4eb173109a_danielle-macinnes-51592.jpeg)
 
 Sticky Headers are a frequently used pattern in front-end web development. At one of our team breakfasts, we saw Youtube’s sticky header break on IE. Yes, IE is an internet relic and always needs a little more support these days to run. But breaks like the Youtube case got some of our team members discussing sticky headers, and we figured we would share it here.
 
-![IE not mobile responsive](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994116476c3cb2a888b580_Screen-Shot-2017-07-27-at-8.23.28-AM.png)
+![IE not mobile responsive](/images/blogs/a5d8e6cd8a_67994116476c3cb2a888b580_Screen-Shot-2017-07-27-at-8.23.28-AM.png)
 
 They are great for alerts, navigation, and even search when users are reading a long article or an infinitely scrolled product list.
 
@@ -23,7 +25,7 @@ This post is not a discussion about a responsive header solution. We are raising
 *   Navigation breadcrumbs to show menu items;
 *   Promotional item highlights or important user notices (such as usage policies for cookies)
 
-![sticky headers web UI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799411605a71790042510dd_eSSfS-1024x622.png)
+![sticky headers web UI](/images/blogs/15941245db_6799411605a71790042510dd_eSSfS-1024x622.png)
 
 (Source: https://stackoverflow.com/questions/10474354/layout-with-fixed-header-and-footer-fixed-width-sidebar-and-flexible-content)
 
@@ -39,13 +41,19 @@ There are various ways to implement a sticky header. Below are some options.
 
 CSS position fixed + JavaScript calculates the height of the header and inserts an appropriate margin-top to the main content. This hybrid method enables the header to fit its content size, but it is relatively more complex than the other methods below.
 
+<iframe src="https://codepen.io/oursky/embed/preview/eGwQrK?height=300&slug-hash=eGwQrK&default-tabs=js,result&host=https://codepen.io" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
 ### Table
 
 Use a table to put the header and the main content into different `<td>`, so that the header never blocks the main body content. The size of the content in the header can be dynamic. However, because it is part of the main frame, the header is actually part of the `<table>`, so it looks like a table more than a UI with a header.
 
+<iframe src="https://codepen.io/oursky/embed/preview/PJrxaz?height=300&slug-hash=PJrxaz&default-tabs=css,result&host=https://codepen.io" allowfullscreen loading="lazy" title="Embedded content"></iframe>
+
 ### Pure CSS way
 
 Using purely CSS with a media query is only good when you know the content length in the sticky header because otherwise header content may overflow in an ugly way.
+
+<iframe src="https://codepen.io/oursky/embed/preview/ZXdmRR?height=300&slug-hash=ZXdmRR&default-tabs=css,result&host=https://codepen.io" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 The demo reproduced a case that breaks the UI — when content is way taller than the pre-defined header size, they might be invisible in the layout. You may need to handle the header resizing with simple JS just like the Javascript + CSS way.
 
@@ -55,7 +63,7 @@ Sometimes sticky headers don’t hurt, such as showing a proper warning message 
 
 Developers can also consider hiding the header (make it less sticky) when necessary. For example, scrolling up will hide the header to give space for site visitors in Medium.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994116e01fff0ece952278_header-scroll.gif)
+![](/images/blogs/58b614c50a_67994116e01fff0ece952278_header-scroll.gif)
 
 (Source: https://www.npmjs.com/package/header-scroll-up)
 

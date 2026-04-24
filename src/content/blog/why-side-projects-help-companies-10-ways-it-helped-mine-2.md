@@ -3,13 +3,15 @@ title: "Why Side Projects Help Companies: 10 Ways it Helped Mine"
 description: "Why Side Projects Help Companies: 10 Ways it Helped Mine"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994bd7d7c8c7edf2838d2d_Screen-Shot-2016-08-18-at-1.22.57-PM.png"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/17d1009238_67994bd7d7c8c7edf2838d2d_Screen-Shot-2016-08-18-at-1.22.57-PM.png"
 draft: false
 webflowId: "67994becdcaa9b5237fdd96b"
 ---
 
-![Facebook Notification Chima Open Door](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.png)
+![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.png)
 
 I got an e-mail in the middle of the night. I opened it to discover that the Android version of our Chima Open Door app was finished.
 
@@ -19,7 +21,7 @@ This post is about our latest side project, Chima Open Door, why I support my te
 
 ## **1\. Oursky’s real CEOs**
 
-![Fasang Cat Oursky](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff94322d44c9b40c383_13754694_904095849720219_1845042409645774412_n.jpeg)
+![Fasang Cat Oursky](/images/blogs/d5d8026e2f_66e30ff94322d44c9b40c383_13754694_904095849720219_1845042409645774412_n.jpeg)
 
 Mine, all mine!
 
@@ -31,7 +33,7 @@ By the way, Chima Open Door is Chinese for “Open Sesame” (芝麻開門).
 
 ## 2\. Cats, Code, Company
 
-![Oursky Office](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff92e94bdd69458fada_13606876_10153596043472791_6219363569735679250_n.jpeg)
+![Oursky Office](/images/blogs/9d25816155_66e30ff92e94bdd69458fada_13606876_10153596043472791_6219363569735679250_n.jpeg)
 
 Deliberation at work: discussion before voting on next office location…
 
@@ -39,7 +41,7 @@ Our cats show how we work as a team. We try to be as transparent as possible. Ou
 
 ## **3\. Paying you to do more of what you love**
 
-![Raspberry Pi 3 Model B side projects](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff98dae10e000732881_IMG_0526-e1471871697512.jpeg)
+![Raspberry Pi 3 Model B side projects](/images/blogs/8bccb58401_66e30ff98dae10e000732881_IMG_0526-e1471871697512.jpeg)
 
 Raspberry Pi 3 Model B for one of our side projects
 
@@ -51,7 +53,7 @@ Oursky develops web and mobile products for clients. We have long term partnersh
 
 ## **4\. Bottom-Up Product Inspiration**
 
-![Skygear Intern Gomoku side projects](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff9ba96c77fe5d5fffd_13620771_10153580753797791_4454809269986680119_n.jpeg)
+![Skygear Intern Gomoku side projects](/images/blogs/3d5ceeb711_66e30ff9ba96c77fe5d5fffd_13620771_10153580753797791_4454809269986680119_n.jpeg)
 
 Interns 同事負責幫Skygear.io 寫doc。寫寫下今日demo 左個用Skygear 寫既 real time multiple player Gomoku… 😱😱😱
 
@@ -63,7 +65,7 @@ My team always surprises me with new things. It makes work more fun, even for me
 
 ## 5\. Our staff use company products.
 
-![Skygear Hardware Open Source Raspberry Pi](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff9e7844d7e7e332ba2_architecture.png)
+![Skygear Hardware Open Source Raspberry Pi](/images/blogs/a8c365586d_66e30ff9e7844d7e7e332ba2_architecture.png)
 
 Chima Open Door’s architecture
 
@@ -77,7 +79,7 @@ That mindset helped us make tools for ourselves, such as [Shotbot](https://shotb
 
 ## 7\. Brings the team together
 
-![Hardware Raspberry Pi Circuit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff9ab0992a8ae3c6368_circuit.png)
+![Hardware Raspberry Pi Circuit](/images/blogs/4abe89f0ff_66e30ff9ab0992a8ae3c6368_circuit.png)
 
 Circuit diagrams are drawn with this [Circuit Simulator](http://www.falstad.com/circuit/).
 
@@ -85,7 +87,7 @@ For Chima Open Door, Boris worked on the hardware and Steven worked on the softw
 
 ## 8\. Everyone in the company benefits
 
-![Chima Open Door Open Source](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31036301d32ee6856cfc2_image-placeholder.svg)
+![Chima Open Door Open Source](/images/blogs/dd8c2a1ce0_66e31036301d32ee6856cfc2_image-placeholder.svg)
 
 Using my mobile to open our office lock. Chima Open Door is written using clojurescript on react-native.
 
@@ -95,7 +97,7 @@ By the way, if you’re thinking of doing a side project, [check out this piece]
 
 ## 9\. Ownership keeps our people going
 
-![slack bot doorbell](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff96f32a7fd3af43154_Screen-Shot-2016-08-25-at-5.50.08-PM.png)
+![slack bot doorbell](/images/blogs/a01e3a38fb_66e30ff96f32a7fd3af43154_Screen-Shot-2016-08-25-at-5.50.08-PM.png)
 
 Chima is our lunch reminder and our door bell.
 
@@ -103,7 +105,7 @@ The side projects also create ownership. Some of our team members love the start
 
 ## 10\. Side projects generate some good revenue
 
-![ActionSnapSampler](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994bc83fc1f3f9205b4a36_ActionSnapSampler.jpeg)
+![ActionSnapSampler](/images/blogs/2acd8418a4_67994bc83fc1f3f9205b4a36_ActionSnapSampler.jpeg)
 
 ActionSnap Sampler Renders
 

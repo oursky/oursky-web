@@ -13,7 +13,9 @@
     "generate:works": "node scripts/generate-works-stubs.mjs",
     "generate:blog-stubs": "node scripts/generate-blog-stubs.mjs",
     "generate:blog-stubs:all": "node scripts/generate-blog-stubs.mjs --force",
-    "import:webflow-mcp": "node scripts/import-webflow-mcp-dumps.mjs"
+    "import:webflow-mcp": "node scripts/import-webflow-mcp-dumps.mjs",
+    "migrate:cms-images": "node scripts/migrate-cms-images.mjs",
+    "reorganize:cms-images": "node scripts/reorganize-cms-images.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",

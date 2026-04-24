@@ -3,13 +3,15 @@ title: "Lean Project Management: Field Notes from 9 Years of Development"
 description: "Lean Project Management: Field Notes from 9 Years of Development"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "project-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995088005556a1b388e404_dawid-zawila-226624-768x540.jpg"
+categories:
+  - "project-management"
+displayCategory: "Project Management"
+image: "/images/blogs/618e2b8314_67995088005556a1b388e404_dawid-zawila-226624-768x540.jpg"
 draft: false
 webflowId: "6799509eba8a39e39ebfa5dd"
 ---
 
-![lean-project-management](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799508123af1a9d6bd305fc_dawid-zawila-226624-720x506.jpeg)
+![lean-project-management](/images/blogs/b5844d9bc2_6799508123af1a9d6bd305fc_dawid-zawila-226624-720x506.jpeg)
 
 Photo by Dawid Zawiła on Unsplash
 
@@ -21,7 +23,7 @@ Note: We emphasize that everyone on a team is responsible for product quality, f
 
 ## What does a PM actually do in a tech company?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950807f363048382fac48_christopher-burns-270898.jpeg)
+![](/images/blogs/a734831d60_679950807f363048382fac48_christopher-burns-270898.jpeg)
 
 Photo by Christopher Burns via Unsplash
 
@@ -42,7 +44,7 @@ At [Oursky](http://www.oursky.com/), the PM is usually introduced when the sales
 
 ## Queen or King Estimator
 
-![Trello project Management Screenshots](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799508045bd81b830029ca2_Screen-Shot-2016-04-20-at-4.12.23-PM-1024x554.png)
+![Trello project Management Screenshots](/images/blogs/39b09f1e1d_6799508045bd81b830029ca2_Screen-Shot-2016-04-20-at-4.12.23-PM-1024x554.png)
 
 We categorize the issues and features of the app, weigh their significance and prioritize them.
 
@@ -52,7 +54,7 @@ Once the main components, such as key features, budget, and timeline are settled
 
 ## Being Chief Chaser and Maintainer
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995080f2137d56a878b202_quino-al-272729.jpeg)
+![](/images/blogs/6a2f0a77f9_67995080f2137d56a878b202_quino-al-272729.jpeg)
 
 Photo by Quino Al on Unsplash
 
@@ -60,7 +62,7 @@ Another major role for a PM is maintaining communication channels. This begins w
 
 ## Build Once, Revisit Once
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950800f76d341d9afde6d_margarida-csilva-121801.jpeg)
+![](/images/blogs/98f4957cbe_679950800f76d341d9afde6d_margarida-csilva-121801.jpeg)
 
 Photo by Margarida CSilva on Unsplash
 
@@ -68,7 +70,7 @@ Cohesion is just as important as communication. It should be noted that PMs aren
 
 ## Catching the Details
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995080a81f96c1ee8dd6b5_andrew-branch-191920.jpeg)
+![](/images/blogs/e181335a55_67995080a81f96c1ee8dd6b5_andrew-branch-191920.jpeg)
 
 Photo by Margarida CSilva on Unsplash
 
@@ -90,7 +92,7 @@ Our favourite is still [Basecamp](https://www.basecamp.com/) for non-tech consul
 
 ## Conclusion
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995080f80d7a7970e1f51f_rawpixel-com-196464.jpeg)
+![](/images/blogs/751243acd8_67995080f80d7a7970e1f51f_rawpixel-com-196464.jpeg)
 
 Photo by rawpixel.com on Unsplash
 

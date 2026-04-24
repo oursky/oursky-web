@@ -3,13 +3,16 @@ title: "The Essential Launch Checklist for Websites, Web Apps, and Mobile Apps"
 description: "Here's quick website/web app launch checklist and tools for product and project managers, including security, broken links, browser compatibility, SEO/social, and commonly overlooked mobile app simple tests."
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e315c6a62b8d557057d579_glenn-carstens-peters-190592-unsplash-720x479-1-320x240.jpg"
+categories:
+  - "qa"
+  - "product-management"
+displayCategory: "QA TESTING"
+image: "/images/blogs/b7f581d42d_66e315c6a62b8d557057d579_glenn-carstens-peters-190592-unsplash-720x479-1-320x240.jpg"
 draft: false
 webflowId: "66e315f28332af75a834fa34"
 ---
 
-![https://unsplash.com/photos/RLw-UC03Gwc](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159eb317696432493f87_glenn-carstens-peters-190592-unsplash-720x479.jpeg)
+![https://unsplash.com/photos/RLw-UC03Gwc](/images/blogs/d5af3b829f_66e3159eb317696432493f87_glenn-carstens-peters-190592-unsplash-720x479.jpeg)
 
 This simple website and web app checklist will help product and project managers to quickly test their performance before launching them. We also list commonly overlooked mobile app simple tests to confirm that the app behaves as expected and functions as intended. Product managers on the client side can use the tools we enumerate, as they can help in providing performance results when working with digital consultancies or app development agencies.
 
@@ -32,7 +35,7 @@ This simple website and web app checklist will help product and project managers
 
 ### Security Check
 
-![website launch checklist](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159f24bcdfb7e000175a_github-ssl-report-qualys-720x347.png)
+![website launch checklist](/images/blogs/d62b6060c6_66e3159f24bcdfb7e000175a_github-ssl-report-qualys-720x347.png)
 
 ENSURE THAT YOUR WEBSITE OR WEB APP HAS AT LEAST GRADE A SCORE FOR SSL.
 
@@ -44,7 +47,7 @@ ENSURE THAT YOUR WEBSITE OR WEB APP HAS AT LEAST GRADE A SCORE FOR SSL.
 
 ### Check for Broken Links
 
-![website launch checklist](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159ecbbfa7e53d7d5516_screaming-frog-720x297.png)
+![website launch checklist](/images/blogs/28c9827f38_66e3159ecbbfa7e53d7d5516_screaming-frog-720x297.png)
 
 IMAGE SOURCE: SCREAMING FROG
 
@@ -55,7 +58,7 @@ IMAGE SOURCE: SCREAMING FROG
 
 ### Browser Compatibility
 
-![website browser compatibility](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159ef8e725cdde02140d_Screen-Shot-2018-05-14-at-3.52.54-PM-720x599.png)
+![website browser compatibility](/images/blogs/30e14cbf8e_66e3159ef8e725cdde02140d_Screen-Shot-2018-05-14-at-3.52.54-PM-720x599.png)
 
 WEBSITES NEED TO BE COMPATIBLE WITH THE LATEST BROWSERS.
 
@@ -68,7 +71,7 @@ WEBSITES NEED TO BE COMPATIBLE WITH THE LATEST BROWSERS.
 
 ### SEO and Social Media
 
-![website launch checklist](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159e176d8187cdc97213_SEO-for-websites-720x390.png)
+![website launch checklist](/images/blogs/fd5c808131_66e3159e176d8187cdc97213_SEO-for-websites-720x390.png)
 
 KEEPING #1 IN GOOGLE’S SERPS IS ESSENTIAL FOR CLICKS!
 
@@ -83,7 +86,7 @@ KEEPING #1 IN GOOGLE’S SERPS IS ESSENTIAL FOR CLICKS!
 
 ### Nice-to-Have Tests
 
-![offline paper css](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159fca8f21dff8956c45_live-reload.png)
+![offline paper css](/images/blogs/1bbad616d0_66e3159fca8f21dff8956c45_live-reload.png)
 
 IMAGE SOURCE[PAPER CSS](https://github.com/cognitom/paper-css) BY COGNITOM ON GITHUB
 
@@ -97,7 +100,7 @@ IMAGE SOURCE[PAPER CSS](https://github.com/cognitom/paper-css) BY COGNITOM ON GI
 
 ## Launch Checklist for Mobile Apps
 
-![iphone 4se ui breaks](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3159f24bcdfb7e0001777_Screen-Shot-2018-05-14-at-3.34.47-PM-2-720x405.png)
+![iphone 4se ui breaks](/images/blogs/4f74dcec4b_66e3159f24bcdfb7e0001777_Screen-Shot-2018-05-14-at-3.34.47-PM-2-720x405.png)
 
 SMALL SCREENS LIKE THE IPHONE 4SE POSE UI CHALLENGES.
 

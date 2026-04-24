@@ -3,8 +3,10 @@ title: "Code, Celebrations, and Cats: Oursky’s 2016 Year-In-Review"
 description: "Code, Celebrations, and Cats: Oursky’s 2016 Year-In-Review"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994e0945bd81b83000234c_15178179_10154072195426485_9137850630362655260_n.jpg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/6669e1979f_67994e0945bd81b83000234c_15178179_10154072195426485_9137850630362655260_n.jpg"
 draft: false
 webflowId: "67994e1cd42e2f08f17d75f5"
 ---
@@ -13,7 +15,7 @@ It’s almost 2017! Most would agree 2016 has been a roller coaster ride. Before
 
 ## **We found a new home for our growing team**
 
-![15178179\_10154072195426485\_9137850630362655260\_n](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dffb56100be7fa93f3a_15178179_10154072195426485_9137850630362655260_n-720x540.jpeg)
+![15178179\_10154072195426485\_9137850630362655260\_n](/images/blogs/fa79eb69ff_67994dffb56100be7fa93f3a_15178179_10154072195426485_9137850630362655260_n-720x540.jpeg)
 
 We welcome applications from students and recent graduates!
 
@@ -23,7 +25,7 @@ Also, we’ve moved to a [bigger home at Lai Chi Kok](http://life.oursky.com/pos
 
 ## We’re sharing our best practices
 
-![14590315\_10153969175346485\_4763367055708353707\_n](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dffa81f96c1ee8b1b57_14590315_10153969175346485_4763367055708353707_n-720x540.jpeg)
+![14590315\_10153969175346485\_4763367055708353707\_n](/images/blogs/054801f7d8_67994dffa81f96c1ee8b1b57_14590315_10153969175346485_4763367055708353707_n-720x540.jpeg)
 
 David, our Growth lead, shares tips for app development at a co-working space.
 
@@ -31,7 +33,7 @@ We’re also sharing our development process and best practices at talks through
 
 ## We always have something to celebrate
 
-![img\_0030](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff542c0b889cecf0bf_IMG_0030-720x436.jpeg)
+![img\_0030](/images/blogs/50ef555507_67994dff542c0b889cecf0bf_IMG_0030-720x436.jpeg)
 
 We love the lean startup hustle, but we’ll always make time for our monthly team dinners. This year, one colleague got married and two had kids. We even celebrated our new Oursky T-shirts (By the way, we’re doing an [X’mas giveaway draw](https://www.facebook.com/oursky.hk/photos/a.10151073628876485.429950.31563091484/10154137437581485/?type=3&theater) ending Dec. 23 and will mail one anywhere in the world!).
 
@@ -39,7 +41,7 @@ For festive seasons like Christmas, we have days for self-organised company acti
 
 ## We’re grateful for our awesome clients
 
-![unnamed-1](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff697ab60b8f370779_unnamed-1-720x383.jpeg)
+![unnamed-1](/images/blogs/d21d6cef6c_67994dff697ab60b8f370779_unnamed-1-720x383.jpeg)
 
 Carbon controls a thermometer for chefs.
 
@@ -47,7 +49,7 @@ We’ve had more projects than ever for 2016. In addition to doing web and mobil
 
 ## Focused side projects are a key to success
 
-![unnamed-2](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff24c6856e26dd462c_unnamed-2-720x383.jpeg)
+![unnamed-2](/images/blogs/ee0280834b_67994dff24c6856e26dd462c_unnamed-2-720x383.jpeg)
 
 Our side project, [Spentable](https://itunes.apple.com/hk/app/spentable-track-your-daily/id500630565?mt=8), was featured as best new app in 2016 on the Apple Apps Store. The idea began at one of our regular side project meetings, where someone wanted a simple expense tracking app and hadn’t found anything to use. Our other products such as [MakeAppIcon](http://makeappicon.com/), and [Shotbot](https://shotbot.io/) came out of similar brainstorms and [have generated revenue for the company](http://blog.oursky.com/2016/08/30/side-projects-dev-tech-companies/) and grown from simple web products to desktop versions.
 
@@ -55,7 +57,7 @@ Not all side projects are meant to be commercially viable. Some of them are fun 
 
 ## We’re making big bets with an open-source BaaS for developers
 
-![oursky-housewarming-hi-res-8931](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff149ea6cafad50dd7_Oursky-housewarming-hi-res-8931-720x478.jpeg)
+![oursky-housewarming-hi-res-8931](/images/blogs/c1f984e437_67994dff149ea6cafad50dd7_Oursky-housewarming-hi-res-8931-720x478.jpeg)
 
 Ben Cheng, CEO of Oursky, introduces Skygear at our housewarming party.
 
@@ -67,7 +69,7 @@ It’s a pretty big internal project, but we think it’s worth it!
 
 ## We’ve upgraded our project management process
 
-![flower](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff96dda19f1d1d29b8_flower.png)
+![flower](/images/blogs/33a0969f1d_67994dff96dda19f1d1d29b8_flower.png)
 
 Source: [Kubernetes.io](http://kubernetes.io/)
 
@@ -77,7 +79,7 @@ Since then, we’ve adopted [Kubernetes](http://kubernetes.io/), an open source 
 
 ## Finally realizing our QA dream
 
-![team-image-e1472480032979](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dff45bd81b830001d00_team-image-e1472480032979-720x540.jpeg)
+![team-image-e1472480032979](/images/blogs/f80c4b3d69_67994dff45bd81b830001d00_team-image-e1472480032979-720x540.jpeg)
 
 Oursky’s team is the only from Hong Kong to participate in the Software Testing World Cup 2016.
 
@@ -91,7 +93,7 @@ Being the only Hong Kong team to participate in the Asia division of the Softwar
 
 ## Drop by Oursky in 2017
 
-![14517597\_960201950776275\_6848257610123747205\_n](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994dffef50e0706c2787cb_14517597_960201950776275_6848257610123747205_n-720x540.jpeg)
+![14517597\_960201950776275\_6848257610123747205\_n](/images/blogs/1c23697f0b_67994dffef50e0706c2787cb_14517597_960201950776275_6848257610123747205_n-720x540.jpeg)
 
 Chima (sesame) and Faseng (peanut), our “programming cheerleaders”.
 

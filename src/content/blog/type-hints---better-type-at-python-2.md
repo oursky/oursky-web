@@ -3,13 +3,15 @@ title: "Type Hints – Better type at Python"
 description: "Type Hints – Better type at Python"
 pubDate: 2025-01-28
 author: "Rick Mak"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927f66d380fa2db7d03d8_type-hints-cover.gif"
+categories:
+  - "development"
+displayCategory: "Python"
+image: "/images/blogs/7bc189e0d4_679927f66d380fa2db7d03d8_type-hints-cover.gif"
 draft: false
 webflowId: "6799286dc784dff69b0754a0"
 ---
 
-![Type Hints – Better type at Python](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927fe3a98e00badef85ad_type-hints-cover.gif)
+![Type Hints – Better type at Python](/images/blogs/7132217b26_679927fe3a98e00badef85ad_type-hints-cover.gif)
 
 ‍
 
@@ -67,7 +69,7 @@ By introducing Type Hints in Python, it makes Python even more friendly to progr
 
 IDE like [PyCharm](https://www.jetbrains.com/pycharm/) can perform type checking on variable assignments and return values in local functions. Since type information is crucial for static code analysis, this also make code completion easier.
 
-![pycharm](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347fccf9939c6d3b7320a_pycharm.png)
+![pycharm](/images/blogs/3a5da67d54_66e347fccf9939c6d3b7320a_pycharm.png)
 
 ‍
 
@@ -127,7 +129,7 @@ Since there’s no effect on the compiled code, you won’t get a faster nor slo
 
 This might be concerned by Python-lovers. In [PEP-0484](https://www.python.org/dev/peps/pep-0484/), the authors put the following disclaimer to clam the over-reacted Python fans:
 
-![It should also be emphasized that Python will remain a dynamically typed language, and the authors have no desire to ever make type hints mandatory, even by convention.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31036301d32ee6856cfc2_image-placeholder.svg)
+![It should also be emphasized that Python will remain a dynamically typed language, and the authors have no desire to ever make type hints mandatory, even by convention.](/images/blogs/dd8c2a1ce0_66e31036301d32ee6856cfc2_image-placeholder.svg)
 
 Those who worried about Python will be made static-typed can now relax 🙂
 

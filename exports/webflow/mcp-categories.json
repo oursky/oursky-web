@@ -1,1 +1,104 @@
-{"label":"list-categories","action":"list_collection_items","result":{"items":[{"id":"66e30461d41728ea83cc8655","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T15:22:17.835Z","lastUpdated":"2024-09-12T15:10:25.865Z","createdOn":"2024-09-12T15:10:25.865Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Authgear","slug":"authgear"}},{"id":"66e31d0b42c2789ea5940762","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T17:23:18.887Z","lastUpdated":"2024-09-12T16:55:39.138Z","createdOn":"2024-09-12T16:55:39.138Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Case Study","slug":"case-study"}},{"id":"66e341281744da707fec649f","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T20:05:51.045Z","lastUpdated":"2024-09-12T19:29:44.003Z","createdOn":"2024-09-12T19:29:44.003Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Code","slug":"code"}},{"id":"66e3102169c81d6f245e10dd","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T17:23:18.887Z","lastUpdated":"2024-09-12T16:00:33.165Z","createdOn":"2024-09-12T16:00:33.165Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Culture","slug":"culture"}},{"id":"66e14c484e10f26052cc961d","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T08:07:34.154Z","lastUpdated":"2024-09-11T07:52:40.055Z","createdOn":"2024-09-11T07:52:40.055Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Development","slug":"development"}},{"id":"66e14c8253d2161c8be72908","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T08:07:34.154Z","lastUpdated":"2024-09-11T07:53:38.118Z","createdOn":"2024-09-11T07:53:38.118Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Engineering","slug":"engineering"}},{"id":"66e34053edd40593fb6daf6e","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T20:05:51.045Z","lastUpdated":"2024-09-12T19:26:11.199Z","createdOn":"2024-09-12T19:26:11.199Z","isArchived":false,"isDraft":false,"fieldData":{"name":"FormX","slug":"formx"}},{"id":"66e150f2443adb3788fa9772","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T08:12:45.944Z","lastUpdated":"2024-09-11T08:12:34.516Z","createdOn":"2024-09-11T08:12:34.516Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Machine learning and AI","slug":"machine-learning-and-ai"}},{"id":"66e30edc677eec696d6b7e59","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-12T17:23:18.887Z","lastUpdated":"2024-09-12T15:55:08.603Z","createdOn":"2024-09-12T15:55:08.603Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Product Growth","slug":"product-growth"}},{"id":"66e15e2e1375b4a0e70b85ea","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T09:26:28.239Z","lastUpdated":"2024-09-11T09:09:28.640Z","createdOn":"2024-09-11T09:09:02.173Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Product Management","slug":"product-management"}},{"id":"67994c57005556a1b384b8c2","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2025-01-28T21:29:59.781Z","lastUpdated":"2025-01-28T21:29:59.781Z","createdOn":"2025-01-28T21:29:59.781Z","isArchived":false,"isDraft":false,"fieldData":{"name":"Project Management","slug":"project-management"}},{"id":"66e14c5475541121d679c3b1","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T08:07:34.154Z","lastUpdated":"2024-09-11T07:52:52.899Z","createdOn":"2024-09-11T07:52:52.899Z","isArchived":false,"isDraft":false,"fieldData":{"name":"QA","slug":"qa"}},{"id":"66e14c4f6f1337844e464c70","cmsLocaleId":"654ba60def05336c1f0eb137","lastPublished":"2024-09-11T08:07:34.154Z","lastUpdated":"2024-09-11T07:52:47.176Z","createdOn":"2024-09-11T07:52:47.176Z","isArchived":false,"isDraft":false,"fieldData":{"name":"UI Design","slug":"ui-design"}}],"pagination":{"limit":100,"offset":0,"total":13}}}
+{
+  "label": "list-cats",
+  "action": "list_collection_items",
+  "result": {
+    "items": [
+      {
+        "id": "67994c57005556a1b384b8c2",
+        "fieldData": {
+          "name": "Project Management",
+          "slug": "project-management"
+        }
+      },
+      {
+        "id": "66e341281744da707fec649f",
+        "fieldData": {
+          "name": "Code",
+          "slug": "code"
+        }
+      },
+      {
+        "id": "66e34053edd40593fb6daf6e",
+        "fieldData": {
+          "name": "FormX",
+          "slug": "formx"
+        }
+      },
+      {
+        "id": "66e31d0b42c2789ea5940762",
+        "fieldData": {
+          "name": "Case Study",
+          "slug": "case-study"
+        }
+      },
+      {
+        "id": "66e3102169c81d6f245e10dd",
+        "fieldData": {
+          "name": "Culture",
+          "slug": "culture"
+        }
+      },
+      {
+        "id": "66e30edc677eec696d6b7e59",
+        "fieldData": {
+          "name": "Product Growth",
+          "slug": "product-growth"
+        }
+      },
+      {
+        "id": "66e30461d41728ea83cc8655",
+        "fieldData": {
+          "name": "Authgear",
+          "slug": "authgear"
+        }
+      },
+      {
+        "id": "66e15e2e1375b4a0e70b85ea",
+        "fieldData": {
+          "name": "Product Management",
+          "slug": "product-management"
+        }
+      },
+      {
+        "id": "66e150f2443adb3788fa9772",
+        "fieldData": {
+          "name": "Machine learning and AI",
+          "slug": "machine-learning-and-ai"
+        }
+      },
+      {
+        "id": "66e14c8253d2161c8be72908",
+        "fieldData": {
+          "name": "Engineering",
+          "slug": "engineering"
+        }
+      },
+      {
+        "id": "66e14c5475541121d679c3b1",
+        "fieldData": {
+          "name": "QA",
+          "slug": "qa"
+        }
+      },
+      {
+        "id": "66e14c4f6f1337844e464c70",
+        "fieldData": {
+          "name": "UI Design",
+          "slug": "ui-design"
+        }
+      },
+      {
+        "id": "66e14c484e10f26052cc961d",
+        "fieldData": {
+          "name": "Development",
+          "slug": "development"
+        }
+      }
+    ],
+    "pagination": {
+      "limit": 100,
+      "offset": 0,
+      "total": 13
+    }
+  }
+}

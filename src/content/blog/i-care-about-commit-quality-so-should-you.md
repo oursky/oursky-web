@@ -3,8 +3,10 @@ title: "I care about commit quality. So should you."
 description: "I care about commit quality. So should you."
 pubDate: 2025-01-28
 author: "Carmen Lau"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/65800dc11650bb250fd43618_commit-quality.jpeg"
+categories:
+  - "engineering"
+displayCategory: "ENGINEERING CULTURE"
+image: "/images/blogs/88c913598a_65800dc11650bb250fd43618_commit-quality.jpeg"
 draft: false
 webflowId: "65800dc446fa2dba9ca5f991"
 ---
@@ -17,7 +19,7 @@ Below are my reflections on what commits reveal about a developer and why it’s
 
 ## **How we work with new team members**
 
-![onboarding engineering team](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15e7607cb48f6a18f2f03_annie-spratt.jpeg)
+![onboarding engineering team](/images/blogs/a26258fd5f_66e15e7607cb48f6a18f2f03_annie-spratt.jpeg)
 
 PHOTO BY ANNIE SPRATT VIA UNSPLASH
 
@@ -33,7 +35,7 @@ During the onboarding, we can see how a developer works. This includes:
 
 ## What a commit message means to us
 
-![Commits on Skygear.io Server](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15e761b59f04dc4ee78d6_skygear-opensource-commits.png)
+![Commits on Skygear.io Server](/images/blogs/e99d41b918_66e15e761b59f04dc4ee78d6_skygear-opensource-commits.png)
 
 COMMITS ON SKYGEAR.IO SERVER
 
@@ -58,7 +60,7 @@ There isn’t only one right way to do things and we want team members to keep a
 
 ### Things that shouldn’t happen
 
-![good tech mentorship](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15e768514b5005e0ad434_aimee-vogelsang-106103.jpeg)
+![good tech mentorship](/images/blogs/f14045e32e_66e15e768514b5005e0ad434_aimee-vogelsang-106103.jpeg)
 
 PHOTO BY AIMEE VOGELSANG ON UNSPLASH
 

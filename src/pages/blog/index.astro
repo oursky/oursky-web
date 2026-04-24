@@ -2,7 +2,20 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const [allPosts, allCategories] = await Promise.all([
+  getCollection('blog', ({ data }) => !data.draft),
+  getCollection('categories'),
+]);
+const categoryNameBySlug = new Map(allCategories.map((c) => [c.data.slug, c.data.name]));
+const listLabel = (slugs: string[], display?: string) => {
+  if (display) return display;
+  if (!slugs.length) return '';
+  return slugs
+    .map((s) => categoryNameBySlug.get(s) ?? s)
+    .filter(Boolean)
+    .join(' · ');
+};
+
 allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
@@ -10,53 +23,80 @@ allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   title="Blog"
   description="Thoughts on software engineering, product design, and building remarkable digital products from the Oursky team."
 >
-  <main class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+  <main class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
     <header class="mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Blog</h1>
-      <p class="text-xl text-[var(--color-brand-gray-700)]">
-        Engineering, design, and product insights from the Oursky team.
+      <div class="ml-5 max-sm:ml-0">
+        <h1 class="blog-page-title inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">Blog</h1>
+      </div>
+      <p class="ml-5 max-sm:ml-0 text-xl text-black m-0">
+        Our latest news and insights
       </p>
     </header>
 
     {
       allPosts.length === 0 ? (
-        <p class="text-[var(--color-brand-gray-500)]">
+        <p class="text-text-muted">
           Posts are being imported — check back soon.
         </p>
       ) : (
-        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {allPosts.map((post) => (
-            <li>
-              <a href={`/blogs/${post.id}`} class="group block">
-                {post.data.image && (
-                  <img
-                    src={post.data.image}
-                    alt={post.data.imageAlt ?? post.data.title}
-                    class="w-full aspect-video object-cover rounded-lg mb-4 group-hover:opacity-90 transition-opacity"
-                    loading="lazy"
-                  />
-                )}
-                <a
-                  href={`/blog-category/${post.data.category}`}
-                  class="text-xs font-semibold uppercase tracking-wider text-[var(--color-brand-primary)] hover:underline mb-2 block"
-                >
-                  {post.data.category}
+        <ul class="grid gap-6 sm:grid-cols-2 list-none p-0 m-0">
+          {allPosts.map((post) => {
+            const pillSlugs = post.data.tags.length > 0 ? post.data.tags : post.data.categories;
+            return (
+              <li class="bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] flex flex-col">
+                <a href={`/blogs/${post.id}`} class="group flex flex-col gap-4 no-underline text-text p-10 pb-0">
+                  <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-footer truncate m-0">
+                    {listLabel(post.data.categories, post.data.displayCategory)}
+                  </h3>
+                  {post.data.image && (
+                    <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted max-md:h-44">
+                      <img
+                        src={post.data.image}
+                        alt={post.data.imageAlt ?? post.data.title}
+                        class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <h2 class="text-[2rem] font-normal text-black leading-footer m-0 line-clamp-3 group-hover:text-primary">
+                    {post.data.title}
+                  </h2>
+                  {post.data.excerpt && (
+                    <p class="text-text-muted text-sm m-0 line-clamp-3">
+                      {post.data.excerpt}
+                    </p>
+                  )}
+                  <p class="text-text-muted text-sm m-0">
+                    {post.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
                 </a>
-                <h2 class="text-xl font-bold leading-snug group-hover:text-[var(--color-brand-primary)] transition-colors">
-                  {post.data.title}
-                </h2>
-                <p class="text-[var(--color-brand-gray-500)] text-sm mt-2">
-                  {post.data.pubDate.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </p>
-              </a>
-            </li>
-          ))}
+                <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5">
+                  {pillSlugs.map((slug) => (
+                    <a href={`/blog-category/${slug}`} class="no-underline group/pill">
+                      <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">
+                        {categoryNameBySlug.get(slug) ?? slug}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </li>
+            );
+          })}
         </ul>
       )
     }
   </main>
 </BaseLayout>
+
+<style>
+  .blog-page-title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

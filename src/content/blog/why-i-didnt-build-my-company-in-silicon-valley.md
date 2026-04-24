@@ -3,8 +3,10 @@ title: "Why I didn’t build my company in Silicon Valley"
 description: "Why I choose to build products in Hong Kong instead."
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e311b9fbeb775694ec2b51_1pYaYD0AUUirAY6IU4gweWA-720x480.jpeg"
+categories:
+  - "culture"
+displayCategory: "FOUNDER STORIES"
+image: "/images/blogs/98155725a1_66e311b9fbeb775694ec2b51_1pYaYD0AUUirAY6IU4gweWA-720x480.jpeg"
 draft: false
 webflowId: "66e3129d88b9d959dc58b85d"
 ---
@@ -15,7 +17,7 @@ Now, we’re an agency that’s worked with listed companies like Yahoo! and Phi
 
 ## Learning doesn’t have to take place in person, or in Silicon Valley.
 
-![Work Harder!](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e311f58e89d3ddba1d1586_15BBwG3g04WPA7vbCqewjKA.jpeg)
+![Work Harder!](/images/blogs/f7928130d0_66e311f58e89d3ddba1d1586_15BBwG3g04WPA7vbCqewjKA.jpeg)
 
 IMAGE BY JORDAN WHITFIELD VIA [UNSPLASH](https://unsplash.com/@whitfieldjordan)
 
@@ -25,7 +27,7 @@ I’m a typical introverted geek, so teaching myself at home is pretty normal. A
 
 ## Because valuations aren’t my validation.
 
-![Photo of a man](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e311f59f1eb48e11524925_1FEmGTDVhzAjFsEdzO_o7zg.jpeg)
+![Photo of a man](/images/blogs/fbb19ada02_66e311f59f1eb48e11524925_1FEmGTDVhzAjFsEdzO_o7zg.jpeg)
 
 SCREENCAP FROM SIN CITY VIA [MOVIE-SCREENCAPS.COM](https://movie-screencaps.com/)
 
@@ -37,7 +39,7 @@ When I talked to other tech founders and learned more about startups and fundrai
 
 ## Silicon Valley was never my dream.
 
-![Photo of Golden Bridge](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e311f5887f06c4c7838cef_1lWZ0GoJ5vqPKwtt9Ufysdg.jpeg)
+![Photo of Golden Bridge](/images/blogs/c3a9b75d1e_66e311f5887f06c4c7838cef_1lWZ0GoJ5vqPKwtt9Ufysdg.jpeg)
 
 PHOTO BY CHRIS LEIPELT VIA [UNSPLASH](https://unsplash.com/@cleipelt)
 

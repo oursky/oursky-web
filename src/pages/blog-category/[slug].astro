@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
   return categories.map((cat) => {
     const posts = allPosts
-      .filter((p) => p.data.category === cat.id)
+      .filter((p) => p.data.categories.includes(cat.data.slug))
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
     return {
@@ -26,35 +26,39 @@ const { name, description } = category.data;
   title={`${name} — Blog`}
   description={description ?? `All blog posts in the ${name} category.`}
 >
-  <main class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+  <main class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
     <header class="mb-12">
-      <p class="text-sm font-semibold uppercase tracking-wider text-[var(--color-brand-primary)] mb-2">
-        Category
-      </p>
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4">{name}</h1>
-      {description && <p class="text-xl text-[var(--color-brand-gray-700)]">{description}</p>}
+      <div class="ml-5 max-sm:ml-0">
+        <h1 class="blog-page-title inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">View Posts By Category</h1>
+      </div>
+      <p class="ml-5 max-sm:ml-0 text-2xl font-medium leading-desc text-black m-0 max-md:text-lg max-md:leading-desc-sm">{name}</p>
     </header>
 
     {
       posts.length === 0 ? (
-        <p class="text-[var(--color-brand-gray-500)]">No posts in this category yet.</p>
+        <p class="text-text-muted">No posts in this category yet.</p>
       ) : (
-        <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="grid gap-6 sm:grid-cols-2 list-none p-0 m-0">
           {posts.map((post) => (
-            <li>
-              <a href={`/blogs/${post.id}`} class="group block">
+            <li class="bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+              <a href={`/blogs/${post.id}`} class="group block no-underline text-text p-10 pb-5">
+                <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-footer truncate m-0">
+                  {name}
+                </h3>
                 {post.data.image && (
-                  <img
-                    src={post.data.image}
-                    alt={post.data.imageAlt ?? post.data.title}
-                    class="w-full aspect-video object-cover rounded-lg mb-4 group-hover:opacity-90 transition-opacity"
-                    loading="lazy"
-                  />
+                  <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted mt-4 max-md:h-44">
+                    <img
+                      src={post.data.image}
+                      alt={post.data.imageAlt ?? post.data.title}
+                      class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
+                      loading="lazy"
+                    />
+                  </div>
                 )}
-                <h2 class="text-xl font-bold leading-snug group-hover:text-[var(--color-brand-primary)] transition-colors">
+                <h2 class="text-[2rem] font-normal text-black leading-footer m-0 mt-4 line-clamp-3 group-hover:text-primary">
                   {post.data.title}
                 </h2>
-                <p class="text-[var(--color-brand-gray-500)] text-sm mt-2">
+                <p class="text-text-muted text-sm mt-3 m-0">
                   {post.data.pubDate.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
@@ -69,9 +73,18 @@ const { name, description } = category.data;
     }
 
     <div class="mt-12">
-      <a href="/blog" class="text-[var(--color-brand-primary)] hover:underline font-medium">
+      <a href="/blog" class="text-primary hover:underline font-medium">
         &larr; All Posts
       </a>
     </div>
   </main>
 </BaseLayout>
+
+<style>
+  .blog-page-title {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

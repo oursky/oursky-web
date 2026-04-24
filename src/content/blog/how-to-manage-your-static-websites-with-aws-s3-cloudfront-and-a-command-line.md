@@ -3,13 +3,15 @@ title: "How to manage your static websites with AWS S3, CloudFront, and a comman
 description: "How to manage your static websites with AWS S3, CloudFront, and a command line"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d6d38bb3b02c87e5439_1zxIISvYq2_dz4R3THj17pA.jpeg"
+categories:
+  - "development"
+displayCategory: "Devops"
+image: "/images/blogs/fd863bc4a4_67993d6d38bb3b02c87e5439_1zxIISvYq2_dz4R3THj17pA.jpeg"
 draft: false
 webflowId: "67993d8c320ba379f9b47141"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d7496cc2cace8581887_1zxIISvYq2_dz4R3THj17pA.jpeg)
+![](/images/blogs/37a6bccb72_67993d7496cc2cace8581887_1zxIISvYq2_dz4R3THj17pA.jpeg)
 
 Image by Samson via [Unsplash](https://unsplash.com/collections/211345/cyberpunk?photo=ZGjbiukp_-A)
 
@@ -37,7 +39,7 @@ AWS Site Manager is a simple command-line tool that makes it easy to host a stat
 
 If this is your first time hosting a site, create an AWS account and register your domain name with a service such as [Namecheap](https://www.namecheap.com/) (make sure you use their monthly discount coupon).
 
-![AWS-s3-cloudfront-open-source](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d752ad51c2aa8cdd91f_speedup-s3-cloudfront-thum2.png)
+![AWS-s3-cloudfront-open-source](/images/blogs/8dc8f8c0a3_67993d752ad51c2aa8cdd91f_speedup-s3-cloudfront-thum2.png)
 
 Combining AWS S3 and Cloudfront
 
@@ -113,7 +115,7 @@ Finally, you need to set up DNS mapping to your CloudFront distribution endpoint
 
 You need to setup a CNAME record to point your domain name to the Cloud Front Distribution. You can get your CloudFront Domain Name from AWS Management Console, then set your domain’s CNAME to the Domain Name.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d75d01fe4ac5d4848da_1TGXROtf37r5f-_ysbdornQ.png)
+![](/images/blogs/456ff6e67e_67993d75d01fe4ac5d4848da_1TGXROtf37r5f-_ysbdornQ.png)
 
 Screenshots of how to find the CloudFront Distribution Domain Name
 

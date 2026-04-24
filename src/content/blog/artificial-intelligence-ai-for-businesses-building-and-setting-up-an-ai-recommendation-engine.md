@@ -3,8 +3,10 @@ title: "Artificial Intelligence (AI) for Businesses: Building and Setting Up an 
 description: "We take a closer look at AI-powered recommendation engines — and what you need to prepare and the tools you can use to build one."
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a125f7a4f3b93322003_pexels-cristian-dina-1851415-scaled.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "AI and Machine Learning"
+image: "/images/blogs/62ba1c70d2_66e31a125f7a4f3b93322003_pexels-cristian-dina-1851415-scaled.jpg"
 draft: false
 webflowId: "66e31a727d296e49b395ff21"
 ---
@@ -16,7 +18,7 @@ For this guide, we’ll walk you through the following:
 *   What you need to prepare before building one
 *   The costs involved in creating and implementing an AI recommendation engine
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a44917176679596b0bd_pexels-cristian-dina-1851415-1160x773.jpeg)
+![](/images/blogs/ccada0a4d9_66e31a44917176679596b0bd_pexels-cristian-dina-1851415-1160x773.jpeg)
 
 PHOTO BY [**CRISTIAN DINA**](https://www.pexels.com/@cristian-dina-924373?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) FROM [**PEXELS**](https://www.pexels.com/photo/white-smartphone-1851415/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
@@ -34,11 +36,11 @@ So why incorporate a recommendation engine to your digital product or service? Y
 
 There are different types of recommender systems, each of which using various techniques and approaches to generate a prediction. Implementing one would largely depend on your use case (i.e., how it will address your business need), the scope of your project, and the amount and quality of your data. Generally, there’s content- and collaborative filtering-based recommender systems, with the latter split into memory- and model-based approaches.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a45c29f2148873124d1_ai-for-business-reco-1.png)
+![](/images/blogs/2f8f9b159f_66e31a45c29f2148873124d1_ai-for-business-reco-1.png)
 
 AN OVERVIEW OF THE DIFFERENT KINDS OF RECOMMENDATION SYSTEMS
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a45c8cfac8c33ea97c6_ai-for-business-reco-2-e1600925303457-1160x728.png)
+![](/images/blogs/6fc83f2c18_66e31a45c8cfac8c33ea97c6_ai-for-business-reco-2-e1600925303457-1160x728.png)
 
 A MORE DETAILED VISUALIZATION OF THE DIFFERENT KINDS OF RECOMMENDATION SYSTEM
 
@@ -53,7 +55,7 @@ Recommendation systems that use collaborative filtering sift through items based
 
 Content-based recommendation systems work with the data the user provides, either through explicit and implicit feedback. As the user provides more inputs or takes more actions on the initial recommendations, the engine/system becomes more accurate. It is less cumbersome as it only needs to analyze data from a single user profile, but at the same time, it may also be limited. It may produce inaccurate results if there’s not enough data, or if interdependencies and more complex user behaviors are needed to be taken into account.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a45c12a4bd53ddf26cb_ai-for-business-reco-3.png)
+![](/images/blogs/dffccac78d_66e31a45c12a4bd53ddf26cb_ai-for-business-reco-3.png)
 
 AN OVERVIEW OF A RECOMMENDATION SYSTEM THAT USES CONTENT-BASED FILTERING
 
@@ -71,13 +73,13 @@ These reactions and feedback are collated then analyzed for similarities and cor
 
 Check out this [resource](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0) by Amazon Web Service’s Prince Grover if you want to delve deeper into collaborative filtering and its various implementations.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a455bff5e0a494dbc3b_cf.png)
+![](/images/blogs/7ab1c86cd6_66e31a455bff5e0a494dbc3b_cf.png)
 
 _SOURCE/CREDIT TO:_ [_TAKUYA KITAZAWA_](https://github.com/takuti) _VIA_ [_RECOMMENDATION.JL_](https://takuti.github.io/Recommendation.jl/latest/collaborative_filtering/#k-Nearest-Neighbor-1)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a45cff81fcead3ee3dd_ai-for-business-reco-4.png)
+![](/images/blogs/d4ed4f690f_66e31a45cff81fcead3ee3dd_ai-for-business-reco-4.png)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31a45b7441075464b2cdb_ai-for-business-reco-5.png)
+![](/images/blogs/14b5d74331_66e31a45b7441075464b2cdb_ai-for-business-reco-5.png)
 
 A VISUALIZATION SHOWING COLLABORATIVE FILTERING (TOP) AND HOW USER-TO-USER (CENTER) AND USER-TO-ITEM RECOMMENDATIONS WORK (BOTTOM)
 

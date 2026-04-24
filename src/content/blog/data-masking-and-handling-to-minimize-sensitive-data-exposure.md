@@ -3,8 +3,10 @@ title: "Data Masking and Handling to Minimize Sensitive Data Exposure"
 description: "Some tips on how to establish a secure development cycle, covering data-masking and filtering techniques with code examples."
 pubDate: 2024-09-12
 author: "Oursky Team"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3414d06cf626ff37ac77b_image-1160x773.png"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/2a5ab48cff_66e3414d06cf626ff37ac77b_image-1160x773.png"
 draft: false
 webflowId: "66e34153e8d13c9e0ce3b0a8"
 ---
@@ -16,7 +18,7 @@ There are all kinds of data obfuscation tools out there. Instead of covering the
 1.  How we implement our own ways to protect PII
 2.  Some of our data-masking techniques
 
-![Privacy with Data Masking](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e340afab190a148fbe893e_photo-1504639725590-34d0984388bd-1160x870.jpeg)
+![Privacy with Data Masking](/images/blogs/74ed5a5159_66e340afab190a148fbe893e_photo-1504639725590-34d0984388bd-1160x870.jpeg)
 
 MASKING SENSITIVE DATA SHOULD BE A DEFAULT – PHOTO BY [DAYNE TOPKIN](https://unsplash.com/@ikukevk) ON [UNSPLASH](https://unsplash.com/)
 

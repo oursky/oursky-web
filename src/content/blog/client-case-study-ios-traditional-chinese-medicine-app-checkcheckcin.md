@@ -3,13 +3,15 @@ title: "Client Case Study: iOS Traditional Chinese Medicine App CheckCheckCin"
 description: "Client Case Study: iOS Traditional Chinese Medicine App CheckCheckCin"
 pubDate: 2025-01-28
 author: "Oursky"
-category: "case-study"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799528a24c6856e26e279c0_ourskyblog-ccc.jpg"
+categories:
+  - "case-study"
+displayCategory: "Client Stories"
+image: "/images/blogs/0002ec86d5_6799528a24c6856e26e279c0_ourskyblog-ccc.jpg"
 draft: false
 webflowId: "6799529a303d026f27f903fb"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995282ba8a39e39ec1623d_ourskyblog-ccc.jpeg)
+![](/images/blogs/3ec5cf127b_67995282ba8a39e39ec1623d_ourskyblog-ccc.jpeg)
 
 > **At the time, they helped me formulate a vague idea in my head. Oursky was able to help us translate an initial concept into a mature idea and product. — Cinci EC**
 
@@ -17,7 +19,7 @@ As a registered Traditional Chinese Medicine practitioner, Cinci Leung (Cinci EC
 
 ## How can an App Reach New Customers?
 
-![ecclinic-wireframe-141015](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952829e5bbde3d22b8e7f_Screen-Shot-2018-03-23-at-2.58.07-PM-720x183.png)
+![ecclinic-wireframe-141015](/images/blogs/c47290e50b_679952829e5bbde3d22b8e7f_Screen-Shot-2018-03-23-at-2.58.07-PM-720x183.png)
 
 A sample low-fidelity wireframe.
 
@@ -27,13 +29,13 @@ Cinci EC spoke to various vendors to get project quotes and a professional opini
 
 ## Oursky’s Solution
 
-![checkcheckcin app](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995282690e28959ee15fea_011217-Checkcheckcin-UI-Update-720x317.jpeg)
+![checkcheckcin app](/images/blogs/d71b3e298e_67995282690e28959ee15fea_011217-Checkcheckcin-UI-Update-720x317.jpeg)
 
 Oursky’s UI designs for the CheckCheckCin iOS app.
 
 Oursky partnered with Cinci EC to develop her app idea iteratively from design through development. The project began with the design of her app to plan and design features that delivered the core value proposition to users: providing Cinci’s TCM knowledge and personally built food and ingredient database in a relevant and personalized way to each user based on a body type questionnaire (for adults and children) that she created. The design phase went through multiple iterations as Oursky worked with Cinci EC to brainstorm and refine essential features that would go into the CheckCheckCin app that ranged from an onboarding quiz to multilingual (Chinese and English) support. The UX/UI design phase included wireframes, mockups, a prototype, and a feature list that the development team could use to begin building the app.
 
-![hong kong ios app UX UI wireframe](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995282f2137d56a87b0399_Oursky-Services-Template-Slides.002-720x405.jpeg)
+![hong kong ios app UX UI wireframe](/images/blogs/1bb51073c6_67995282f2137d56a87b0399_Oursky-Services-Template-Slides.002-720x405.jpeg)
 
 Oursky’s design process includes the user flow, wireframe, UI styling, mockup, and high-fidelity prototyping.
 
@@ -47,7 +49,7 @@ Each phase of the CheckCheckCin app was completed within two months, with a conf
 
 ## Raising Brand Awareness by Delivering Value to New Users
 
-![CheckCheckCin users could see a personalized list of recommended foods.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995282a75bd78e4bb1bc12_apppreview-413x720.png)
+![CheckCheckCin users could see a personalized list of recommended foods.](/images/blogs/001c5ec4b1_67995282a75bd78e4bb1bc12_apppreview-413x720.png)
 
 CheckCheckCin users could see a personalized list of recommended foods.
 

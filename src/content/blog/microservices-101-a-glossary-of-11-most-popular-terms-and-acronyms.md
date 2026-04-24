@@ -3,13 +3,16 @@ title: "Microservices 101: A Glossary of 11 Most Popular Terms and Acronyms"
 description: "A summary of most popular terms to help build fundamental knowledge about microservices, and how it relates to DevOps, containers or Kubernetes."
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e316bd14404e1e88b7fb58_photo-1546074177-ffdda98d214f.jpeg"
+categories:
+  - "development"
+  - "engineering"
+displayCategory: "DEVELOPMENT"
+image: "/images/blogs/6c20d839c7_66e316bd14404e1e88b7fb58_photo-1546074177-ffdda98d214f.jpeg"
 draft: false
 webflowId: "66e31739014e7117d707c321"
 ---
 
-![microservices terms](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31719ed43523cfd3e3e8f_photo-1546074177-ffdda98d214f-1160x870.jpeg)
+![microservices terms](/images/blogs/90c6250e71_66e31719ed43523cfd3e3e8f_photo-1546074177-ffdda98d214f-1160x870.jpeg)
 
 SOURCE: [NICOLE HONEYWILL](https://unsplash.com/@nicolehoneywill) VIA [UNSPLASH](https://unsplash.com/photos/vcF5y2Edm6A)
 

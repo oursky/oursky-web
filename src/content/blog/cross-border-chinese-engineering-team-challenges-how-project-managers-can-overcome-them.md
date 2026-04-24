@@ -3,13 +3,15 @@ title: "Cross-border Chinese engineering team challenges: how project Managers c
 description: "Cross-border Chinese engineering team challenges: how project Managers can Overcome them"
 pubDate: 2025-01-28
 author: "Athena Lam"
-category: "project-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995378f62a3a7b5895f477_19472808621_a67e7697ec_o.jpg"
+categories:
+  - "project-management"
+displayCategory: "Project Management"
+image: "/images/blogs/7185e4ca2b_67995378f62a3a7b5895f477_19472808621_a67e7697ec_o.jpg"
 draft: false
 webflowId: "6799539fa75bd78e4bb31c18"
 ---
 
-![taipei sunset](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995384d1b6a0967d2021a9_19472808621_a67e7697ec_o.jpeg)
+![taipei sunset](/images/blogs/fce9afc023_67995384d1b6a0967d2021a9_19472808621_a67e7697ec_o.jpeg)
 
 Photo by Tsaiian cc via Flickr
 
@@ -31,7 +33,7 @@ Hong Kong and Taiwan are much more culturally close than to China. But the small
 
 ## Acknowledging the language gaps
 
-![oursky taiwan cats](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995384a81f96c1ee935bf7_photo6269421108830775373.jpeg)
+![oursky taiwan cats](/images/blogs/dc228ffbc0_67995384a81f96c1ee935bf7_photo6269421108830775373.jpeg)
 
 It wasn’t easy to choose names that sound good in Canto and Mando for our Taiwan office cats  
 艾菲爾 and 妹妹.
@@ -44,7 +46,7 @@ As a result, Chinese cross-border collaboration is probably more difficult than 
 
 ## Using documentation for remote-inclusive discussions
 
-![oursky taiwan office ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679953841fcbd03d610e94ef_P1013467.jpeg)
+![oursky taiwan office ](/images/blogs/887691c2f0_679953841fcbd03d610e94ef_P1013467.jpeg)
 
 Our Taiwan team looking over team docs.
 
@@ -59,7 +61,7 @@ Writing also has the added advantage of documenting ideas that may not have been
 
 ## Progress through consistency: daily standup meetings
 
-![Oursky taiwan cat](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679953849465a580dc3b7df0_P1013490.jpeg)
+![Oursky taiwan cat](/images/blogs/e32f6d7d65_679953849465a580dc3b7df0_P1013490.jpeg)
 
 Taiwan making a standup call.
 
@@ -81,11 +83,11 @@ For the medium-term, PMs will arrange for engineers to take turns in projects, s
 
 ## Gluing teams together through company culture
 
-![oursky taiwan office birthday](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995384005556a1b38ca4b4_photo6269421108830775370.jpeg)
+![oursky taiwan office birthday](/images/blogs/6d7bd36e1f_67995384005556a1b38ca4b4_photo6269421108830775370.jpeg)
 
 Oursky’s Taiwan office celebrations.
 
-![oursky hong kong team photo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995384a96b779450c89483_photo_2018-04-23_18-38-49.jpeg)
+![oursky hong kong team photo](/images/blogs/bde6f36d55_67995384a96b779450c89483_photo_2018-04-23_18-38-49.jpeg)
 
 Birthday celebrations in the Hong Kong office (also in Taiwan).
 

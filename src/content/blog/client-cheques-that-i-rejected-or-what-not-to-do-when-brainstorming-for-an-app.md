@@ -3,8 +3,10 @@ title: "Client Cheques that I Rejected (or What Not to Do When Brainstorming for
 description: "Client Cheques that I Rejected (or What Not to Do When Brainstorming for an App)"
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995579a9dc73a424628c90_andrey-larin-Kodkas71tT8-unsplash-scaled.jpg"
+categories:
+  - "product-growth"
+displayCategory: "Growth"
+image: "/images/blogs/71434db437_67995579a9dc73a424628c90_andrey-larin-Kodkas71tT8-unsplash-scaled.jpg"
 draft: false
 webflowId: "67995582fe53167067950a97"
 ---
@@ -13,7 +15,7 @@ As a project consultant in Oursky, I hear a lot of app ideas every day. Listenin
   
 But as I reflect on the potential clients I’ve met, some of the ones I learned most from were the ones we didn’t take on. By sharing them here, I hope these considerations will help startup founders, budding entrepreneurs, and creators set their expectations and refine their ideas to serve their users (and make money!).
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799556b23af1a9d6bd8483d_andrey-larin-Kodkas71tT8-unsplash-1160x773.jpeg)
+![](/images/blogs/2e072625d3_6799556b23af1a9d6bd8483d_andrey-larin-Kodkas71tT8-unsplash-1160x773.jpeg)
 
 Photo by [Andrey Larin](https://unsplash.com/@engine9?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/paper-planes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -33,7 +35,7 @@ To copy a successful product saves work for us as a development agency. Our desi
 
 I didn’t take his cheque because I was not convinced that an Uber clone would add value for Hong Kong people, who can hop on affordable taxis everywhere, hail an Uber ride, or use our homegrown GoGoVan (which we did a UI project for). In business language for that potential client: Creating a successful clone in a saturated market is a lot of hard work for small gains.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799556b9465a580dc3d9fe3_freestocks-I_pOqP6kCOI-unsplash-1160x773.jpeg)
+![](/images/blogs/523e488782_6799556b9465a580dc3d9fe3_freestocks-I_pOqP6kCOI-unsplash-1160x773.jpeg)
 
 Photo by [freestocks](https://unsplash.com/@freestocks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/computers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -73,7 +75,7 @@ _Facepalm._
   
 My role as a consultant is often to help potential clients refine the problems they want to solve and take systematic steps to improve their product with lower risks. Often, potential clients come to us with large, successful products as a reference. But if they’re just starting, they should validate their idea with an MVP.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799556bf80d7a7970e7dbf1_anete-lusina-zwsHjakE_iI-unsplash-1160x772.jpeg)
+![](/images/blogs/0f4af16368_6799556bf80d7a7970e7dbf1_anete-lusina-zwsHjakE_iI-unsplash-1160x772.jpeg)
 
 Photo by [Anete Lūsiņa](https://unsplash.com/@anete_lusina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/work-portfolio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

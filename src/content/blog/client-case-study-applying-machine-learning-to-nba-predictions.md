@@ -3,13 +3,16 @@ title: "Client Case Study: Applying Machine Learning to NBA Predictions"
 description: "Client Case Study: Applying Machine Learning to NBA Predictions"
 pubDate: 2024-09-16
 author: "Oursky Team"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/658006d15b17e17950efdbe9_case-study-nba.jpeg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "MACHINE LEARNING AND AI"
+image: "/images/blogs/9e1b162f5a_658006d15b17e17950efdbe9_case-study-nba.jpeg"
+featured: 4
 draft: false
 webflowId: "658006d47546e598097ee5c2"
 ---
 
-![nba prediction](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15f0a6a0cea115f2f1408_photo-1499754162586-08f451261482-1160x773.jpeg)
+![nba prediction](/images/blogs/f8970b4816_66e15f0a6a0cea115f2f1408_photo-1499754162586-08f451261482-1160x773.jpeg)
 
 ## Executive Summary
 
@@ -38,7 +41,7 @@ Since Oursky team is full of NBA lovers, this project is very interesting to us.
 
 ### How do you start AI projects?
 
-![machine learning project process](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15f0b639441668e426e64_w-1160x464.png)
+![machine learning project process](/images/blogs/5491997f38_66e15f0b639441668e426e64_w-1160x464.png)
 
 Many people may have thought of doing some AI projects but don’t know where to start. Below are some the typical procedures we undergo when starting an AI project:
 
@@ -132,7 +135,7 @@ We tested window sizes ranging from 1 to 200 for the optimal window size. Furthe
 
 We built a network map which shows 26 players’ logs passing through the RNN with weights shared among all the inputs. Three LSTM cells are used in the RNN and the output is a vector of 256-dimension. The output vectors are then concatenated together and fed to a fully connected network of three layers with 1024 nodes each.  
 
-![RNN in NBA prediction](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15f0b9a12f4c1d27c5a92_Screen-Shot-2019-06-27-at-5.13.22-PM.png)
+![RNN in NBA prediction](/images/blogs/98fb7ddb46_66e15f0b9a12f4c1d27c5a92_Screen-Shot-2019-06-27-at-5.13.22-PM.png)
 
 ### Explaining the Prediction Result
 

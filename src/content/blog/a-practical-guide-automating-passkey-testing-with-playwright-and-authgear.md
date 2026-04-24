@@ -3,8 +3,10 @@ title: "A Practical Guide: Automating Passkey Testing with Playwright and Authg
 description: "Automate passkey testing using Playwright and Authgear. Understand WebAuthn, Passkey and CDP simulation for secure, passwordless login validation."
 pubDate: 2025-04-29
 author: "Joyz Ng"
-category: "authgear"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/68109c18d0e0e55f13d361cf_image%20(2).png"
+categories:
+  - "authgear"
+displayCategory: "Automated Testing"
+image: "/images/blogs/3fa40beebc_68109c18d0e0e55f13d361cf_image (2).png"
 draft: false
 webflowId: "68109f04b37ef774ef9c7527"
 ---
@@ -60,7 +62,7 @@ With [Authgear](https://www.authgear.com/) (which provides Free Plan!), you can 
 
 The platform handles all complex WebAuthn protocols and cryptography behind the scenes, giving you a complete passkey authentication system to test with no specialized knowledge required.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/68109c433367793bda78ff8a_1*sAVNAiSzzg_kXkdWzQxyfg.png)
+![](/images/blogs/91ff4ec995_68109c433367793bda78ff8a_1_sAVNAiSzzg_kXkdWzQxyfg.png)
 
 Set Up Passkey on Authgear by One-Click
 
@@ -107,6 +109,8 @@ This test demonstrates a complete user journey:
 4.  Verifies the user identity is preserved between sessions
 5.  Uses proper assertions to validate each step of the process
 6.  Cleans up test resources afterwards
+
+<iframe src="https://player.vimeo.com/video/1079734575#t=0" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 ### **Quick Recap**
 

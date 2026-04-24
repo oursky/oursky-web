@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer.astro';
 interface Props {
   /** Page <title> – appended with " | Oursky" automatically */
   title: string;
-  /** Meta description (≤ 160 chars recommended) */
+  /** Meta description (≤ 160 chars recommended) – used for `meta name="description"` and as default for OG if `ogDescription` is omitted */
   description: string;
   /** Canonical URL – defaults to current page URL */
   canonical?: string;
@@ -15,6 +15,12 @@ interface Props {
   ogImage?: string;
   /** OG type – defaults to "website" */
   ogType?: 'website' | 'article';
+  /** If set, used for `og:title` and `twitter:title` only (not the document `<title>`) */
+  ogTitle?: string;
+  /** If set, used for `og:description` and `twitter:description` only (not `meta name="description"`) */
+  ogDescription?: string;
+  /** Twitter / X card type */
+  twitterCard?: 'summary' | 'summary_large_image';
   /** Whether to add noindex (drafts, utility pages) */
   noindex?: boolean;
   /** Optional body class (e.g. `page--home` for absolute header over hero). */
@@ -27,6 +33,9 @@ const {
   canonical,
   ogImage = '/images/og-default.png',
   ogType = 'website',
+  ogTitle,
+  ogDescription,
+  twitterCard = 'summary_large_image',
   noindex = false,
   bodyClass,
 } = Astro.props;
@@ -34,6 +43,13 @@ const {
 const siteUrl = (import.meta.env.SITE ?? 'https://www.oursky.com').replace(/\/$/, '');
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
 const fullTitle = title === 'Oursky' ? title : `${title} | Oursky`;
+const socialTitle =
+  ogTitle === undefined || ogTitle.length === 0
+    ? fullTitle
+    : ogTitle === 'Oursky'
+      ? ogTitle
+      : `${ogTitle} | Oursky`;
+const socialDescription = ogDescription != null && String(ogDescription).length > 0 ? ogDescription : description;
 const absoluteOgImage = ogImage.startsWith('http')
   ? ogImage
   : `${siteUrl}${ogImage}`;
@@ -54,16 +70,16 @@ const absoluteOgImage = ogImage.startsWith('http')
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
-    <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={socialDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={absoluteOgImage} />
     <meta property="og:site_name" content="Oursky" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={socialDescription} />
     <meta name="twitter:image" content={absoluteOgImage} />
 
     <!-- Favicon -->

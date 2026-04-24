@@ -3,19 +3,21 @@ title: "4 Dating Apps Created by Female Founders"
 description: "4 Dating Apps Created by Female Founders"
 pubDate: 2025-01-28
 author: "Sam Elsley"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d4b5defbec984dcb1b1_blogpostheader-1.webp"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/7f59acaca9_67994d4b5defbec984dcb1b1_blogpostheader-1.webp"
 draft: false
 webflowId: "67994d6929c5fdc5a545140e"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d43f86d8834519388be_blogpostheader-1-720x360.png)
+![](/images/blogs/ee614a74b9_67994d43f86d8834519388be_blogpostheader-1-720x360.png)
 
 Seeing as November 30th marks the social media campaign celebrating [Women’s Entrepreneurship Day](http://womenseday.org/), we here at Oursky wanted to celebrate this global campaign by showcasing cool apps with female founders. Dating apps being as popular as they are nowadays (who would have though “swipe right” would become a household saying?), we suddenly asked ourselves how many were founded by women.
 
 Because — let’s face it — the most successful apps like Tinder, Match or Badoo, were mostly founded by men and aren’t always what women are looking for.
 
-![http://giphy.com/gifs/drinking-12DrpAnEZPW3YI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d425925a7997549ab9f_giphy-1.gif)
+![http://giphy.com/gifs/drinking-12DrpAnEZPW3YI](/images/blogs/ef718a3174_67994d425925a7997549ab9f_giphy-1.gif)
 
 Source: Giphy
 
@@ -23,7 +25,7 @@ So, we did a bit of digging to find the ones that were founded by women. What ma
 
 ## Whitney Wolfe: [Bumble](https://itunes.apple.com/ca/app/bumble-find-date-meet-friends/id930441707?mt=8) (and [Tinder](https://itunes.apple.com/ca/app/tinder/id547702041?mt=8))
 
-![women in business](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d4286e9c74f13e49dfe_app-store-screenshots-720x360.png)
+![women in business](/images/blogs/e145beb132_67994d4286e9c74f13e49dfe_app-store-screenshots-720x360.png)
 
 Bumble empowers its women users by allowing them to begin the conversation. Screenshots from [Apple App Store](https://itunes.apple.com/us/app/bumble-find-date-meet-friends/id930441707?mt=8)
 
@@ -35,7 +37,7 @@ Among its many features, most prominently distinguishing Bumble from the pack is
 
 ## Arum, Dawoon and Soo Kang: [Coffee Meets Bagel](https://itunes.apple.com/ca/app/coffee-meets-bagel-free-dating/id630119301?mt=8)
 
-![coffeemeetsbagel](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d42ff9dc23d3bfc598b_coffeemeetsbagel-720x360.png)
+![coffeemeetsbagel](/images/blogs/1753b1e87a_67994d42ff9dc23d3bfc598b_coffeemeetsbagel-720x360.png)
 
 The adventure begins. Source: [Pexels](https://www.pexels.com/photo/morning-cafe-serve-human-40077/)
 
@@ -43,7 +45,7 @@ If a multi-billionaire offered you $30 million dollars for your three-year-old c
 
 Meaningful relationships are the name of the game for the San-Francisco-based Kang sisters, setting their product apart from the competition with features like significantly limiting the amount of matches (called “bagels”) a user can get each day. The app actually began as a daily e-mail matching service where people could exchange phone numbers only after both parties indicated interest. The limited selection focuses users  much more on the quality of the relationship as opposed to simply the amount of interactions. Some would even call it the anti-Tinder.
 
-![women in business dating apps](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d42542c0b889cec4654_coffeemeetsbagel-app-store-screenshots-720x360.png)
+![women in business dating apps](/images/blogs/d26a5c3702_67994d42542c0b889cec4654_coffeemeetsbagel-app-store-screenshots-720x360.png)
 
 Users receive their selective matches everyday at noon. Screenshots from [Apple App Store](https://itunes.apple.com/us/app/coffee-meets-bagel-free-dating/id630119301?mt=8)
 
@@ -51,7 +53,7 @@ Inspired by their father’s self-employed lifestyle, the three sisters always w
 
 ## Robyn Exton: [Her (formerly Dattch)](https://weareher.com/)
 
-![her\_visual](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d42c94bf5d1172a3c80_her_visual-720x360.png)
+![her\_visual](/images/blogs/e5ff6e54de_67994d42c94bf5d1172a3c80_her_visual-720x360.png)
 
 Source: [Gratisography](http://www.gratisography.com/)
 
@@ -59,7 +61,7 @@ Moving ours sights to the LGBTQ community is Her– the go-to app for the lesbia
 
 While the original focus for Dattch was simply dating, [Her is focused on community](http://www.huffingtonpost.co.uk/entry/robyn-exton-lesbian-dating-app-her-interview_uk_572ca692e4b0e6da49a62a59) has evolved to also act as a localized message board for nearby LGBTQ events and providing its users with the ability to connect with local groups, meet friends, and have discussions on a given topic. The app also has many preference options than traditional dating apps, such as bisexual, bi-curious, fluid, pansexual, and asexual.
 
-![lesbian dating apps women entrepreneurs day](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d427b48cb88ecca2847_Her-app-store-screenshots-720x360.png)
+![lesbian dating apps women entrepreneurs day](/images/blogs/a5de5d9e41_67994d427b48cb88ecca2847_Her-app-store-screenshots-720x360.png)
 
 Her is a dating app with LGBTQ news and event organization. Screenshots from [Apple App Store](https://itunes.apple.com/us/app/her-lesbian-dating-chat-meet/id573328837?mt=8)
 
@@ -69,7 +71,7 @@ Fun fact 2 – Exton is also a founding member of Geek Girl Meetup!
 
 ## Amanda Bradford: [The League](https://itunes.apple.com/ca/app/league-meet.-intelligently./id893653132?mt=8)
 
-![women in business](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d423fc1f3f9205d16f3_The-League-app-store-screenshots-720x360.png)
+![women in business](/images/blogs/d66a4fd45b_67994d423fc1f3f9205d16f3_The-League-app-store-screenshots-720x360.png)
 
 The League handpicks its users based on Linkedin profiles. Those not eligible are put on an ever-growing waiting list. Image property of The League.
 
@@ -79,7 +81,7 @@ By linking user’s profile to their Linked In portfolio, The League handpicks i
 
 While some people argue this feature to be elitist, cherishing educational background and social status over personal character, [Bradford has been quick to denounce such claims](http://www.businessinsider.com/the-league-founder-responds-to-stanford-students-criticism), highlighting her own academic and financial struggles. Her responses made us think of this popular singles meme:
 
-![#teamsingle](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d4200afd2ad0dd4de2d_DStuWcjtbn6x-300x300.jpeg)
+![#teamsingle](/images/blogs/66a6d2a48d_67994d4200afd2ad0dd4de2d_DStuWcjtbn6x-300x300.jpeg)
 
 Image found on [Livingly](http://www.livingly.com/Dating+Advice/articles/4JEpuuMg3uj/40+Memes+Every+Single+Girl+Will+Understand)
 

@@ -3,8 +3,10 @@ title: "Why Use Docker: Real-life Use Cases, Examples, and Takeaways"
 description: "Why Use Docker: Real-life Use Cases, Examples, and Takeaways"
 pubDate: 2025-01-28
 author: "Queenie So"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954428efc312cbdfa142b_image%20(1).webp"
+categories:
+  - "engineering"
+displayCategory: "Engineering"
+image: "/images/blogs/23e7d87e89_679954428efc312cbdfa142b_image (1).webp"
 draft: false
 webflowId: "6799545b9b3ffdecb20a74f7"
 ---
@@ -33,7 +35,7 @@ After using Docker, it brought more benefits to the company than we expected (we
 
 ## Concerns we had before using Docker
 
-![why use docker question](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799543945bd81b8300680e6_image.png)
+![why use docker question](/images/blogs/73a678b3df_6799543945bd81b8300680e6_image.png)
 
 SOURCE: [QIMONO](https://pixabay.com/users/qimono-1962238/) VIA [PIXABAY](https://pixabay.com/illustrations/question-mark-important-sign-1872665/)
 
@@ -50,7 +52,7 @@ Though we had a few concerns, we still decided to be a pioneer of using Docker, 
 
 ## How we adopted Docker
 
-![why use docker how to adopt Docker](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995439be65ccad3d1d116f_image-4-1160x773.png)
+![why use docker how to adopt Docker](/images/blogs/bad88e0dfb_67995439be65ccad3d1d116f_image-4-1160x773.png)
 
 SOURCE: [DANIELLE MACLNNES](https://unsplash.com/@dsmacinnes) VIA [UNSPLASH](https://unsplash.com/photos/IuLgi9PWETU)
 
@@ -68,7 +70,7 @@ Eventually, our whole pipeline is Docker-ready when all tech giants (like AWS, A
 
 ## Real-life use cases of Docker
 
-![why use docker use cases](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799543923af1a9d6bd719d6_image-1.png)
+![why use docker use cases](/images/blogs/03008f2a5c_6799543923af1a9d6bd719d6_image-1.png)
 
 SOURCE: [RAWPIXEL](https://pixabay.com/users/rawpixel-4283981/) VIA [PIXABAY](https://pixabay.com/photos/hand-business-plan-business-3190204/)
 
@@ -104,7 +106,7 @@ Furthermore, standardization plays a key role for automation. **Docker simplifie
 
 ## Key takeaways and how to adopt Docker
 
-![why use docker takeaways](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799543900afd2ad0ddbd2d9_image-5-1160x773.png)
+![why use docker takeaways](/images/blogs/5ca510cd79_6799543900afd2ad0ddbd2d9_image-5-1160x773.png)
 
 SOURCE: [PRISCILLA DU PREEZ](https://unsplash.com/@priscilladupreez) VIA [UNSPLASH](https://unsplash.com/photos/XkKCui44iM0)
 
@@ -134,7 +136,7 @@ We’ve known that Docker can simplify configurations and speed up environment s
 
 ## What’s next?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679954397f3630483833693e_image-2.png)
+![](/images/blogs/91f820ce44_679954397f3630483833693e_image-2.png)
 
 Source: [geralt](https://pixabay.com/users/geralt-9301/) via [Pixabay](https://pixabay.com/illustrations/board-school-immediately-soon-1647323/)
 

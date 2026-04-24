@@ -3,13 +3,15 @@ title: "5 Front-End Design Essentials for Developers"
 description: "5 Front-End Design Essentials for Developers"
 pubDate: 2025-01-28
 author: "Frank Lam"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994b22dcaa9b5237fd24a7_pablo-24-1.webp"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/a9c68f3416_67994b22dcaa9b5237fd24a7_pablo-24-1.webp"
 draft: false
 webflowId: "67994b37299fa013c65fba56"
 ---
 
-![5 Front-End Design Essentials for Developers](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994b1496dda19f1d1a85b6_pablo-24-1-720x360.png)
+![5 Front-End Design Essentials for Developers](/images/blogs/86c49dcae4_67994b1496dda19f1d1a85b6_pablo-24-1-720x360.png)
 
 I went from a part-time designer in a local Hong Kong tech company to one of its partners. Before I joined full-time, I taught myself CSS when I worked as a web designer for a number of agencies and clients. Since joining this company 6 years ago, I’ve been involved with 50+ projects (including in-house ones), including Apple’s Best New App 2016.
 
@@ -17,7 +19,7 @@ As our development team grew, I couldn’t just pass my Sketch design files with
 
 ## Layout
 
-![Zurb Foundation 6 Layout Templates](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994b14f86d8834519172d5_Screen-Shot-2016-08-15-at-4.57.26-PM.png)
+![Zurb Foundation 6 Layout Templates](/images/blogs/942d12ff78_67994b14f86d8834519172d5_Screen-Shot-2016-08-15-at-4.57.26-PM.png)
 
 Front-end templates. Image courtesy of [Zurb Foundation 6](http://foundation.zurb.com/templates.html)
 
@@ -30,7 +32,7 @@ Layout is knowing how to arrange the information on your page to guide user beha
 
 ## Buttons
 
-![UI-BASIC-1](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679926641a1728a7b81c8e7d_UI-BASIC-1.jpeg)
+![UI-BASIC-1](/images/blogs/02aad79310_679926641a1728a7b81c8e7d_UI-BASIC-1.jpeg)
 
 Centre-aligned button. Guiders are used for design software.
 
@@ -45,7 +47,7 @@ Buttons lead your visitor around your page, you want them to be easy to notice a
 
 ## Labels
 
-![icon label UI design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679926643cdca49933e82423_UI-BASIC-2.jpeg)
+![icon label UI design](/images/blogs/2be70a174d_679926643cdca49933e82423_UI-BASIC-2.jpeg)
 
 Give space between your icon and label.
 
@@ -55,7 +57,7 @@ Give space between your icon and label.
 
 ## Typography
 
-![UI-BASIC-3](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992664208e42e86abe90ad_UI-BASIC-3.jpeg)
+![UI-BASIC-3](/images/blogs/d3def77853_67992664208e42e86abe90ad_UI-BASIC-3.jpeg)
 
 Checking heading and text cohesion for our design.
 
@@ -71,7 +73,7 @@ The typography of your site is the first sense of “voice” your visitor will 
 
 ## Images
 
-![Buffer Pablo Twitter Facebook Headers](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994b14be2d1859c05c81a9_Screen-Shot-2016-08-15-at-5.33.44-PM.png)
+![Buffer Pablo Twitter Facebook Headers](/images/blogs/7f95a24849_67994b14be2d1859c05c81a9_Screen-Shot-2016-08-15-at-5.33.44-PM.png)
 
 Know your screen dimensions across platforms. Image courtesy of [Buffer Pablo](https://pablo.buffer.com/app#).
 
@@ -99,7 +101,7 @@ It is often said that the average time it takes for someone to get an impression
 
 ### Jiggle Text when using CSS Transition Effect
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994b14518e430f41f65bf7_UI-Render-4-300x179.png)
+![](/images/blogs/f445f34a1f_67994b14518e430f41f65bf7_UI-Render-4-300x179.png)
 
 Subpixel rendering
 

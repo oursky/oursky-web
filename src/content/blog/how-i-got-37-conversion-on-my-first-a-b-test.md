@@ -3,8 +3,10 @@ title: "How I Got 37% Conversion on My First A/B Test"
 description: "How I Got 37% Conversion on My First A/B Test"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947f70615a7e0ea6aa4da_Screen-Shot-2016-04-07-at-2.webp"
+categories:
+  - "product-growth"
+displayCategory: "Growth"
+image: "/images/blogs/161da63812_679947f70615a7e0ea6aa4da_Screen-Shot-2016-04-07-at-2.webp"
 draft: false
 webflowId: "67994810b56100be7fa2d6d7"
 ---
@@ -13,7 +15,7 @@ When I first joined as a growth-hacking intern at Oursky, I was tasked with achi
 
 ## **Trial 1 – Changing the tagline only**
 
-![Shotbot landing page screenshot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947ecff9dc23d3bf70a56_Screen-Shot-2016-04-07-at-2.15.10-PM-1.png)
+![Shotbot landing page screenshot](/images/blogs/db513c7dcc_679947ecff9dc23d3bf70a56_Screen-Shot-2016-04-07-at-2.15.10-PM-1.png)
 
 Shotbot landing page started off like this.
 
@@ -32,7 +34,7 @@ In my first trial, I learned two things: our users didn’t care about the text 
 
 ## **Trial 2 – Changing Videos to GIFs**
 
-![Shotbot GIF](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947ecbe65ccad3d1082ee_customize-font-background.gif)
+![Shotbot GIF](/images/blogs/589550bad2_679947ecbe65ccad3d1082ee_customize-font-background.gif)
 
 Adding GIFs like this, despite the effort, were useless.
 
@@ -50,7 +52,7 @@ In my next round of testing, I focused on the content above the scroll area. The
 
 ## **Trial 3 – Adding user’s testimonial**
 
-![Shotbot Landing Page User Testimony screenshot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947ec54769870a1e96d5d_Screen-Shot-2016-04-07-at-2.15.10-PM.png)
+![Shotbot Landing Page User Testimony screenshot](/images/blogs/8eef72175d_679947ec54769870a1e96d5d_Screen-Shot-2016-04-07-at-2.15.10-PM.png)
 
 Adding a block of user testimonial at the top of the page.
 
@@ -62,7 +64,7 @@ This small change shot our conversion rate to 37%. The truth coming from a third
 
 The difference in result between my first and third trials was understanding how to use A/B testing as a framework. It’s a dance between the science of studying user behavior and intuiting what users want. The point of A/B testing is to remind ourselves to think about our users, put ourselves in their shoes, ask good questions, and get solid answers.
 
-![Shotbot landing page conversion statistic on Optimizely screenshot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947eca48dced29404ec39_Screen-Shot-2016-04-07-at-2.26.42-PM.png)
+![Shotbot landing page conversion statistic on Optimizely screenshot](/images/blogs/fe87df55cb_679947eca48dced29404ec39_Screen-Shot-2016-04-07-at-2.26.42-PM.png)
 
 Nailing the 37% target. (From Optimizely)
 

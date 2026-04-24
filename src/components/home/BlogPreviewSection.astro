@@ -4,14 +4,39 @@
  *
  * Webflow: .section__home__lastsection > blogscroll container
  * Visual: "Blog" pill top-left, "View All →" link top-right,
- *   horizontal scroll strip of blog cards.
+ *   horizontal scroll strip of blog cards (full-bleed to viewport edges).
+ *
+ * Card selection: posts with `featured: N` in frontmatter appear here in ascending
+ * order. Matches Webflow's hand-picked 6-post featured list (not latest-by-date).
  */
 import { getCollection } from 'astro:content';
 import SectionBadge from '../ui/SectionBadge.astro';
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const latestPosts = allPosts.slice(0, 6);
+const [allPosts, allCategories] = await Promise.all([
+  getCollection('blog', ({ data }) => !data.draft),
+  getCollection('categories'),
+]);
+
+const categoryNameBySlug = new Map(allCategories.map((c) => [c.data.slug, c.data.name]));
+
+const prettySlug = (slug: string) =>
+  slug ? slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : '';
+const categoryLabel = (slug: string) => categoryNameBySlug.get(slug) ?? prettySlug(slug);
+
+const featuredPosts = allPosts
+  .filter((p) => typeof p.data.featured === 'number')
+  .sort((a, b) => (a.data.featured as number) - (b.data.featured as number));
+
+// Fill to 6 with latest non-featured posts if fewer than 6 featured exist
+const MAX = 6;
+let previewPosts = featuredPosts.slice(0, MAX);
+if (previewPosts.length < MAX) {
+  const fallback = allPosts
+    .filter((p) => typeof p.data.featured !== 'number')
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, MAX - previewPosts.length);
+  previewPosts = [...previewPosts, ...fallback];
+}
 ---
 
 <div class="scroll-reveal-group w-full">
@@ -23,90 +48,117 @@ const latestPosts = allPosts.slice(0, 6);
     <SectionBadge label="View All ➞" href="/blog" variant="viewall" />
   </div>
 
-  <section class="blog-section relative px-10 pb-10 max-md:px-5 max-md:pb-8" aria-label="oursky blogs">
-  <div class="overflow-hidden">
-    {latestPosts.length === 0 ? (
-      <p class="scroll-reveal-item p-8 text-text-muted" style="--sr-delay: 40ms">Blog posts coming soon.</p>
-    ) : (
-      <div class="overflow-hidden">
+  <section class="blog-section relative pb-10 max-md:pb-8" aria-label="oursky blogs">
+    <div class="blog-scroll-wrapper">
+      {previewPosts.length === 0 ? (
+        <p class="scroll-reveal-item p-8 text-text-muted" style="--sr-delay: 40ms">Blog posts coming soon.</p>
+      ) : (
         <ul
-          class="blog-card-list flex gap-5 overflow-x-auto overflow-y-visible snap-x snap-mandatory [scrollbar-width:none] list-none py-2 pb-4 m-0"
+          class="blog-card-list flex gap-6 overflow-x-auto overflow-y-visible snap-x [scrollbar-width:none] list-none py-2 pb-4 m-0"
           role="list"
         >
-          {latestPosts.map((post, i) => (
-            <li
-              class="scroll-reveal-item snap-start shrink-0 grow-0 basis-72 w-72 min-w-72 flex flex-col gap-2 max-md:w-56 max-md:min-w-56 max-md:basis-56"
-              style={`--sr-delay: ${45 + i * 48}ms`}
-            >
-              <a
-                href={`/blogs/${post.id}`}
-                class="group flex flex-col gap-2 no-underline rounded-md overflow-hidden bg-surface pb-3 transition-all hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)]"
+          {previewPosts.map((post, i) => {
+            const firstCat = post.data.categories[0];
+            const topLabel = post.data.displayCategory ?? categoryLabel(firstCat);
+            const pillSlugs = post.data.tags.length > 0 ? post.data.tags : post.data.categories;
+            return (
+              <li
+                class="scroll-reveal-item snap-start shrink-0 grow-0 basis-[34.5rem] w-[34.5rem] min-w-[34.5rem] flex flex-col bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] max-lg:basis-[26rem] max-lg:w-[26rem] max-lg:min-w-[26rem] max-md:w-72 max-md:min-w-72 max-md:basis-72"
+                style={`--sr-delay: ${45 + i * 48}ms`}
               >
-                <h3 class="text-xs font-bold text-text-muted uppercase tracking-[0.06em] mx-3.5 mt-3 truncate">
-                  {post.data.category}
-                </h3>
-                <div class="w-full aspect-[16/10] overflow-hidden bg-muted">
-                  {post.data.image ? (
-                    <img
-                      src={post.data.image}
-                      alt={post.data.imageAlt ?? post.data.title}
-                      class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
-                      loading="lazy"
-                      width="320"
-                      height="200"
-                    />
-                  ) : (
-                    <div
-                      class="w-full h-full bg-gradient-to-br from-muted to-accent"
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
-                <h1 class="text-sm font-bold text-text leading-[1.4] mx-3.5 line-clamp-3 group-hover:text-primary">
-                  {post.data.title}
-                </h1>
-              </a>
-              <div class="flex flex-wrap gap-1.5 px-1">
-                <a href={`/blog-category/${post.data.category}`} class="no-underline group/pill">
-                  <div class="inline-flex items-center px-3 py-1 bg-muted rounded-full text-xs font-semibold text-text uppercase tracking-[0.05em] transition-colors group-hover/pill:bg-accent">
-                    {post.data.category}
+                <a
+                  href={`/blogs/${post.id}`}
+                  class="group flex flex-col gap-4 no-underline p-10 pb-0 max-md:p-5 max-md:pb-0 max-md:gap-3"
+                >
+                  <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-[38px] truncate m-0 max-md:text-sm max-md:leading-6">
+                    {topLabel}
+                  </h3>
+                  <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted max-md:h-44">
+                    {post.data.image ? (
+                      <img
+                        src={post.data.image}
+                        alt={post.data.imageAlt ?? post.data.title}
+                        class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
+                        loading="lazy"
+                        width="560"
+                        height="280"
+                      />
+                    ) : (
+                      <div
+                        class="w-full h-full bg-gradient-to-br from-muted to-accent"
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
+                  <h2 class="text-[2rem] font-normal text-black leading-[38px] m-0 line-clamp-3 group-hover:text-primary max-md:text-2xl max-md:leading-8">
+                    {post.data.title}
+                  </h2>
+                  {post.data.excerpt && (
+                    <p class="text-text-muted text-sm m-0 line-clamp-3 max-md:text-xs max-md:leading-5">
+                      {post.data.excerpt}
+                    </p>
+                  )}
                 </a>
-              </div>
-            </li>
-          ))}
+                <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-5 max-md:pt-4 max-md:pb-4">
+                  {pillSlugs.map((slug) => (
+                    <a href={`/blog-category/${slug}`} class="no-underline group/pill">
+                      <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">
+                        {categoryLabel(slug)}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </li>
+            );
+          })}
         </ul>
-      </div>
-    )}
-  </div>
+      )}
+    </div>
 
-  <!-- Scroll buttons: shown on section hover (desktop), hidden on mobile -->
-  <button
-    class="blog-btn blog-btn--left absolute top-1/2 -translate-y-1/2 left-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
-    aria-label="Scroll left"
-    type="button"
-  >
-    <span class="flex items-center justify-center" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" aria-hidden="true">
-        <path fill="currentColor" d="M34.5 239L228.9 44.7c9.4-9.4 24.6-9.4 33.9 0l22.7 22.7c9.4 9.4 9.4 24.5 0 33.9L131.5 256l154 154.8c9.3 9.4 9.3 24.5 0 33.9l-22.7 22.7c-9.4 9.4-24.6 9.4-33.9 0L34.5 273c-9.4-9.4-9.4-24.6 0-33.9z"/>
-      </svg>
-    </span>
-  </button>
-  <button
-    class="blog-btn blog-btn--right absolute top-1/2 -translate-y-1/2 right-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
-    aria-label="Scroll right"
-    type="button"
-  >
-    <span class="flex items-center justify-center" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" aria-hidden="true">
-        <path fill="currentColor" d="M285.5 273L91.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9L188.5 256 34.5 101.3c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L285.5 239c9.4 9.4 9.4 24.6 0 33.9z"/>
-      </svg>
-    </span>
-  </button>
-</section>
+    <!-- Scroll buttons: shown on section hover (desktop), hidden on mobile -->
+    <button
+      class="blog-btn blog-btn--left absolute top-1/2 -translate-y-1/2 left-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      aria-label="Scroll left"
+      type="button"
+    >
+      <span class="flex items-center justify-center" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" aria-hidden="true">
+          <path fill="currentColor" d="M34.5 239L228.9 44.7c9.4-9.4 24.6-9.4 33.9 0l22.7 22.7c9.4 9.4 9.4 24.5 0 33.9L131.5 256l154 154.8c9.3 9.4 9.3 24.5 0 33.9l-22.7 22.7c-9.4 9.4-24.6 9.4-33.9 0L34.5 273c-9.4-9.4-9.4-24.6 0-33.9z"/>
+        </svg>
+      </span>
+    </button>
+    <button
+      class="blog-btn blog-btn--right absolute top-1/2 -translate-y-1/2 right-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      aria-label="Scroll right"
+      type="button"
+    >
+      <span class="flex items-center justify-center" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-4 w-auto" aria-hidden="true">
+          <path fill="currentColor" d="M285.5 273L91.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9L188.5 256 34.5 101.3c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L285.5 239c9.4 9.4 9.4 24.6 0 33.9z"/>
+        </svg>
+      </span>
+    </button>
+  </section>
 </div>
 
 <style>
+  /*
+   * Full-bleed scroll: wrapper breaks out of the rail's max-width and matches
+   * the viewport. Scroll padding recreates the rail gutter so the first card
+   * lines up with the other sections' content edges.
+   */
+  .blog-scroll-wrapper {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+  }
+
+  .blog-card-list {
+    padding-left: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    padding-right: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    scroll-padding-left: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+  }
+
   /* Pseudo-element — requires CSS */
   .blog-card-list::-webkit-scrollbar {
     display: none;
@@ -135,7 +187,7 @@ const latestPosts = allPosts.slice(0, 6);
   const rightBtn = document.querySelector('.blog-btn--right');
   const list = document.querySelector('.blog-card-list') as HTMLElement | null;
 
-  const SCROLL_AMOUNT = 300;
+  const SCROLL_AMOUNT = 580;
 
   leftBtn?.addEventListener('click', () => {
     list?.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });

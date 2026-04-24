@@ -3,13 +3,15 @@ title: "An IoT Side Project: Chima-open-door"
 description: "My company’s Internet of Things (IoT) side project began when we couldn’t reset the door lock that we inherited from a previous tenant. It was one of those minor details we learned about after moving in to our new last-minute office.Normally, people just pay for a new one. But our team was too cheap to replace the lock and no one ever wanted to get the door bell. Plus, we’re engineers and we wanted to fiddle with some hardware.Our goal was to open the door with a phone or wearable technology. We had several options for how to approach the problem. In theory, we could use an app, an integration into another platform, or anything that could send a signal to trigger the door lock.So far in our door lock experiment, we’ve developed solutions for a Slack integration, native iOS and Android apps, the Apple Watch, and Pebble. I’ll focus on the architecture of the mobile apps. I admit the final product is a bit over-engineered, but we just love it!"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993eadb2410b219086190d_Oursky-9381.jpg"
+categories:
+  - "development"
+displayCategory: "IOT"
+image: "/images/blogs/d7f51bd3f6_67993eadb2410b219086190d_Oursky-9381.jpg"
 draft: false
 webflowId: "67993efa0b2cac4eb1709596"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993ec3928c07968276a0b0_Oursky-9381.jpeg)
+![](/images/blogs/6d5c192877_67993ec3928c07968276a0b0_Oursky-9381.jpeg)
 
 My company’s Internet of Things (IoT) side project began when we couldn’t reset the door lock that we inherited from a previous tenant. It was one of those minor details we learned about after moving in to our new last-minute office.
 
@@ -21,7 +23,7 @@ So far in our door lock experiment, we’ve developed solutions for a Slack inte
 
 ## iOS and Android architecture
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30ff9e7844d7e7e332ba2_architecture.png)
+![](/images/blogs/a8c365586d_66e30ff9e7844d7e7e332ba2_architecture.png)
 
 Our IoT door lock project’s architecture
 
@@ -33,7 +35,7 @@ This article focuses on the cloud-based trigger, which is what our door lock app
 
 ## Starting from pressing the button to a record saved on Skygear server.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347b5d44e61d5b04386e0_IMG_1040.png)
+![](/images/blogs/66e3650e15_66e347b5d44e61d5b04386e0_IMG_1040.png)
 
 When a user presses the open door button on the mobile app, the app accesses the cloud server.
 
@@ -57,7 +59,7 @@ Here is the script for the Node client, which includes code related to our speci
 
 The Clojure server directly controls General Purpose Input/Output (GPIO) on a Raspberry Pi. GPIO are the pins on the Raspberry Pi 3. The GPIO connects to the external circuit that is connected with the door magnet.
 
-![Raspberry Pi 3 GPIO Header](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347b5d433098f07df6c44_1d80-lFQeMHleoRI30NzgTA.png)
+![Raspberry Pi 3 GPIO Header](/images/blogs/18496ecf3b_66e347b5d433098f07df6c44_1d80-lFQeMHleoRI30NzgTA.png)
 
 Here is the Clojure code showing how the Raspberry Pi opens the door. Once the Clojure server receives the request from Node client, it will open the door and set it open for 3 seconds. However, if there is a new request coming in during that 3 seconds, the door will reset the timer to another 3 seconds. When the count down time is up, the door will lock again.
 
@@ -71,11 +73,11 @@ Now, you may be wondering why we specifically chose Raspberry Pi. We considered 
 
 What’s more, Raspberry Pi is Bluetooth Low Energy ready (which means we could access the door lock using a third method, Bluetooth).
 
-![Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347b5f0a649927df562fb_IMG_0517-2.jpeg)
+![Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear](/images/blogs/c03138417c_66e347b5f0a649927df562fb_IMG_0517-2.jpeg)
 
 Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e347b56163c2b650f22c7b_IMG_0526-2.jpeg)
+![](/images/blogs/0ec20cb10b_66e347b56163c2b650f22c7b_IMG_0526-2.jpeg)
 
 ## Additional integrations
 

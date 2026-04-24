@@ -3,8 +3,10 @@ title: "Turning Ideas into Digital Solutions: Mapping Out the User Journey and E
 description: "Some of the best ideas for a digital product are conceived accidentally, although many are from painstaking research. Here are some things to keep in mind."
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e321e41bff1a3902a6ccb8_william-iven-gcsNOsPEXfs-unsplash-1160x770.jpg"
+categories:
+  - "product-growth"
+displayCategory: "GROWTH"
+image: "/images/blogs/51a6d34cca_66e321e41bff1a3902a6ccb8_william-iven-gcsNOsPEXfs-unsplash-1160x770.jpg"
 draft: false
 webflowId: "66e3221b26a1336dc9a80554"
 ---
@@ -15,7 +17,7 @@ A digital product might sound like a lofty concept, but it can all start with a 
 
 Today, Uber can even let you order your favorite meals and have them delivered right at your doorstep. Other popular apps allow you to communicate with colleagues remotely, shop for groceries, follow fitness tutorials, wire payments securely, even pay for your car [refuel](https://www.bp.com/en_au/australia/home/products-services/bpme/bpme-app.html) in advance – all from the comfort of wherever you may be.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e321c0f9339f1a54adcf03_william-iven-gcsNOsPEXfs-unsplash-1160x770.jpeg)
+![](/images/blogs/ed35150cae_66e321c0f9339f1a54adcf03_william-iven-gcsNOsPEXfs-unsplash-1160x770.jpeg)
 
 PHOTO BY [WILLIAM IVEN](https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -84,7 +86,7 @@ Here are some [tried-and-tested tips](https://blog.oursky.com/2016/07/11/wirefra
 *   Draw as much detail as you can like labels, instructional texts, and a bit of copy. You can trim these down later when you refine your app.  
 *   The home screen sets the perspective on how spacing is used to prioritize content. Italic or bold texts can be used to emphasize the importance of certain content.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e321c068e6d29a469aec9f_wireframe-vs-mockup-vs-protype-1160x329.png)
+![](/images/blogs/b80a3af108_66e321c068e6d29a469aec9f_wireframe-vs-mockup-vs-protype-1160x329.png)
 
 EXAMPLES OF WIREFRAME, MOCKUP, AND PROTOTYPE
 

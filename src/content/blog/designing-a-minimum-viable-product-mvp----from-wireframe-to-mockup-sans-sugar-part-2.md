@@ -3,13 +3,15 @@ title: "Designing a Minimum Viable Product (MVP) — From Wireframe to Mockup (S
 description: "Designing a Minimum Viable Product (MVP) — From Wireframe to Mockup (Sans Sugar Part 2)"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951565908fb600767534f_Sans-Sugar-ui-design.webp"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/2f7bccab06_679951565908fb600767534f_Sans-Sugar-ui-design.webp"
 draft: false
 webflowId: "6799516786e9c74f13e8eac2"
 ---
 
-![iphone x mockup ux ui design hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799514d45bd81b8300363c7_Sans-Sugar-ui-design-720x347.png)
+![iphone x mockup ux ui design hong kong](/images/blogs/4ffee0b4a6_6799514d45bd81b8300363c7_Sans-Sugar-ui-design-720x347.png)
 
 History is made of accidents and the history of technology is no exception. Many beloved services and digital products began as side projects that became moonshots and spin-offs. Fog Creek spun off [Trello](https://en.wikipedia.org/wiki/Trello) while Basecamp replaced its parent company, [37 Signals](https://37signals.com/), (which also spun off [Know Your Company](https://signalvnoise.com/posts/3700-big-know-your-company-grows-up-and-moves-out)). More recently, [Unsplash was acquired by Dribble and split from Crew](https://techvibes.com/2017/04/06/dribbble-acquires-crew-as-cofounder-shifts-focus-to-spinoff-unsplash). The beauty of these side projects is they began as practical solutions for a problem that the development team could relate to without being weighed down by business models.  
   
@@ -21,7 +23,7 @@ This blog covers the design, style and art direction of the Sans Sugar app that 
 
 ## What’s Next After a Wireframe
 
-![wireframe iterations mvp design thinking](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995100be2d1859c0628e5d_sans-sugarv2.png)
+![wireframe iterations mvp design thinking](/images/blogs/167749c085_67995100be2d1859c0628e5d_sans-sugarv2.png)
 
 Simplify. Focus on user flow and main feature before moving to mockups.
 
@@ -59,7 +61,7 @@ After understanding the purpose and features of the app, the designer will think
 
 ## Design V1
 
-![iPhone x UI design mockup](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799514d0f76d341d9b0c1b0_SansSugar-ui-design-mockupu-v1_071117.png)
+![iPhone x UI design mockup](/images/blogs/406c64d16e_6799514d0f76d341d9b0c1b0_SansSugar-ui-design-mockupu-v1_071117.png)
 
 Our V1 iPhone X mockup for Sans Sugar
 
@@ -75,7 +77,7 @@ After our team agreed on the general design direction, our designer could create
 
 ## Design V2: Adding All the Details
 
-![UI design mockup empty state side project MVP](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799514df2137d56a87997b0_SansSugar_ui-design-iphone-x-mockup-v2.png)
+![UI design mockup empty state side project MVP](/images/blogs/282bc8ad7b_6799514df2137d56a87997b0_SansSugar_ui-design-iphone-x-mockup-v2.png)
 
 Adding pages for various states is a good UI design practice even for rapid prototyping.
 
@@ -96,7 +98,7 @@ We are creating whole products rather than isolated pages, so the design phase i
 
 Because we used Sketch for our mockups, we can also export slices that are more convenient for our developers to create the front end of the app.
 
-![image slices front end developer sketch](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799514dbe65ccad3d19f2da_UI-Design-slices-for-development.png)
+![image slices front end developer sketch](/images/blogs/ddc765fd1d_6799514dbe65ccad3d19f2da_UI-Design-slices-for-development.png)
 
 Oursky’s PMs and developers know how to do image slicing, too.
 
@@ -104,7 +106,7 @@ Where appropriate, our design team also creates style guides to give developers 
 
 ## Designing Ahead
 
-![MVP development rapid prototyping](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799514eef69509e8dc20814_Sans-Sugar_Apple-Watch-App-Mockup.png)
+![MVP development rapid prototyping](/images/blogs/996616dee9_6799514eef69509e8dc20814_Sans-Sugar_Apple-Watch-App-Mockup.png)
 
 Our awesome designer started thinking about the Apple Watch design for later development stages.
 
@@ -112,7 +114,7 @@ Even though we aren’t making the Apple Watch app yet, it is a logical next ste
 
 **This is Part 2 of our iOS MVP design and development series for our side project, Sans Sugar, a simple tracker for your daily sugar intake. Check out** [**Part 1: what you don’t need for an MVP**](http://blog.oursky.com/2017/11/24/minimum-viable-product-iphone-x-ui-wireframe/)**!**
 
-![sugar intake tracker design](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951006fa34d27f8f9610f_SansSugar-appicon-1024-300x300.png)
+![sugar intake tracker design](/images/blogs/f05cba3026_679951006fa34d27f8f9610f_SansSugar-appicon-1024-300x300.png)
 
 The upcoming app logo!
 

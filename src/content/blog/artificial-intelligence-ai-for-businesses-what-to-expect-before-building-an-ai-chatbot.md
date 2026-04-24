@@ -3,8 +3,10 @@ title: "Artificial Intelligence (AI) for Businesses: What to Expect Before Build
 description: "Artificial Intelligence (AI) for Businesses: What to Expect Before Building an AI Chatbot"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955f7c7bcb32a283bff44_bence-boros-anapPhJFRhM-unsplash-2-scaled.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Machine Learning and AI"
+image: "/images/blogs/dd6f14b009_679955f7c7bcb32a283bff44_bence-boros-anapPhJFRhM-unsplash-2-scaled.jpg"
 draft: false
 webflowId: "67995607f28f8449ca19469b"
 ---
@@ -15,7 +17,7 @@ But do you really need one?
 
 Whether you’re a startup founder or an enterprise executive, you may feel entangled by the AI hype on one hand, and the anxiety that your chatbot will drive your customers (or employees) away. Here we demystify some of the myths, answer frequently (un)asked questions, and what you — as a decision maker — should take into consideration before developing an AI chatbot.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955ef1aa263c156b3114d_bence-boros-anapPhJFRhM-unsplash-2-1160x773.jpeg)
+![](/images/blogs/e7cece5595_679955ef1aa263c156b3114d_bence-boros-anapPhJFRhM-unsplash-2-1160x773.jpeg)
 
 Photo by [BENCE BOROS](https://unsplash.com/@benceboros?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -74,7 +76,7 @@ Your AI chatbot can only be as good as the data you feed it. You’re probably a
 
 That said, this can be a drawback from a business perspective. Your users can personify your chatbot, and their expectations can lead to frustration when, for example, their conversation runs in circles. And because AI chatbots rely on amalgamated fragments or patterns of words, phrases, and sentences from its datasets, it is difficult to configure them in a way that can consistently demonstrate your brand’s unique identity or personality.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955efaf6d9677b1894360_alessio-zaccaria-MplUOXqEUK0-unsplash-1160x830.jpeg)
+![](/images/blogs/adafb8e8bf_679955efaf6d9677b1894360_alessio-zaccaria-MplUOXqEUK0-unsplash-1160x830.jpeg)
 
 Photo by [Alessio Zaccaria](https://unsplash.com/@alessiozaccaria?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/s/photos/online-shopping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -146,7 +148,7 @@ Any benefit from technology or innovation comes with risks and responsibility. T
 *   Determine what encryption will work best for the chatbot to secure conversations and communications. The EU General Data Protection Regulation (GDPR), for example, requires companies to pseudonymize and encrypt personal data.
 *   Consider authorization and authentication mechanisms for accessing third-party APIs and services, integrating with social media channels, and verifying users.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3227a2350ed9cfc813b29_scott-graham-5fNmWej4tAA-unsplash-1-1160x774.jpeg)
+![](/images/blogs/51049716d5_66e3227a2350ed9cfc813b29_scott-graham-5fNmWej4tAA-unsplash-1-1160x774.jpeg)
 
 Photo by [Scott Graham](https://unsplash.com/@sctgrhm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

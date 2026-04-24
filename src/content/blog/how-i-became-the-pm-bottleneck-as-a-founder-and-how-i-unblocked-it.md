@@ -3,8 +3,10 @@ title: "How I became the PM bottleneck as a founder: And how I unblocked it."
 description: "Learnings from a startup founder on how to create a project management training system to ensure consistent software development and code quality."
 pubDate: 2025-01-28
 author: "Roy Yuen"
-category: "product-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e315083661072913bdb2fc_matt-briney-160808-720x480.jpg"
+categories:
+  - "product-management"
+displayCategory: "PRODUCT MANAGEMENT"
+image: "/images/blogs/b71962c9a9_66e315083661072913bdb2fc_matt-briney-160808-720x480.jpg"
 draft: false
 webflowId: "66e315370a45327a98e44e9a"
 ---
@@ -31,7 +33,7 @@ At my peak, I managed 10 concurrent projects for over 20 developers, but it was 
 
 ## How our first solution failed in the long-term.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e314e8b787dc2438a29ee2_nicolas-cool-107370-720x352.jpeg)
+![](/images/blogs/8a098410ff_66e314e8b787dc2438a29ee2_nicolas-cool-107370-720x352.jpeg)
 
 PHOTO BY NICOLAS COOL ON UNSPLASH
 
@@ -43,7 +45,7 @@ Us founders and early team members developed many of our best practices in [proj
 
 ## Realizing our PM expectations were unrealistic.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e314e80f61c080a2762696_christian-joudrey-242922.jpeg)
+![](/images/blogs/6aae79e296_66e314e80f61c080a2762696_christian-joudrey-242922.jpeg)
 
 PHOTO BY CHRISTIAN JOUDREY ON UNSPLASH
 
@@ -51,7 +53,7 @@ As a small tech company in Hong Kong, we are challenged to find candidates who f
 
 ## We created a PM learning ladder.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e314e877f83643f66cfb3f_fernando-reyes-241704.jpeg)
+![](/images/blogs/44fa6cba08_66e314e877f83643f66cfb3f_fernando-reyes-241704.jpeg)
 
 PHOTO BY FERNANDO REYES ON UNSPLASH
 
@@ -92,7 +94,7 @@ As our project managers become more experienced, their understanding and ability
 *   The senior PM is expected to take fewer projects that involve direct control and take up an overseeing role at Oursky to make sure different projects are up to standard.
 *   Helps resolve escalated problems from other project managers, and then coordinate different resources to resolve the problems.
 
-![development PM](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e314e9693b92c01255d9e1_Screen-Shot-2017-06-12-at-3.06.36-PM.png)
+![development PM](/images/blogs/ee477bf6b9_66e314e9693b92c01255d9e1_Screen-Shot-2017-06-12-at-3.06.36-PM.png)
 
 OURSKY’S WAFFLE PROJECT MANAGEMENT FOR SKYGEAR.IO
 

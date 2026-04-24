@@ -3,13 +3,15 @@ title: "An Opensourced Recipe for Intializing Redux x Android Native Apps"
 description: "An Opensourced Recipe for Intializing Redux x Android Native Apps"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679942c679416f07ba267b7b_Oursky-life-8827.jpg"
+categories:
+  - "development"
+displayCategory: "OpenSource"
+image: "/images/blogs/0eac53fa20_679942c679416f07ba267b7b_Oursky-life-8827.jpg"
 draft: false
 webflowId: "679942e45d936e4b69fb39c2"
 ---
 
-![oursky opensource github](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679942d2f9deac5f8d123019_Oursky-life-8827.jpeg)
+![oursky opensource github](/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.jpeg)
 
 ## For syncing project structure and frameworks, a case for using Redux
 
@@ -39,7 +41,7 @@ If you’re still wondering why we did this, below are some reasons:
     *   [Flexbox](https://github.com/google/flexbox-layout): Google flexbox library brings a CSS-like flexbox layout to Android. It helps our developers to create views with custom sizes and arrange them with less hassle.  
         
 
-![android redux ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679942d3c081df9e01b3a98f_image-169x300.png)
+![android redux ](/images/blogs/ca074c447f_679942d3c081df9e01b3a98f_image-169x300.png)
 
 Google Flexbox
 

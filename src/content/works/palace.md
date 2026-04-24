@@ -1,0 +1,56 @@
+---
+title: "Palace"
+description: "Oursky works collaboratively with Palace Studio for a Fitness Marketplace App."
+client: "Palace"
+industry: "Technology"
+order: 1
+bgColor: '#77866e'
+heroImage: "/images/works/6c4751d6be_66d09af647c0fdcef8a01dee_Noisy Glass Cube@2-1512x900.png"
+thumbnail: "/images/works/a06ef8e060_65a1111002c8f2d7ca131e27_pl-preview-phone.png"
+draft: false
+webflowId: "65a11132779b3ead687f4b04"
+---
+
+###### The COVID-19 pandemic disrupted many industries, including the fitness world. Gyms closed, and traditional personal training models faced challenges. But Dinesh, an insightful entrepreneur in Hong Kong, saw an opportunity. He recognized the growing need for a space where freelance personal trainers and independent wellness practitioners could thrive.
+
+‍
+
+##### **The Birth of Palace Studio**
+
+Dinesh envisioned Palace Studio – a fitness studio designed specifically for freelance trainers. This unique concept would provide a platform and resources for trainers to operate independently, offering them flexibility and control over their businesses. However, bringing this vision to life required a robust online presence. Dinesh needed a user-friendly (UI) and intuitive (UX) software solution to create a marketplace where trainers and clients could connect.
+
+‍
+
+##### **Finding the Right Partner: Enter Oursky**
+
+Through a friend's recommendation, Dinesh discovered Oursky, a software development company known for its expertise and professionalism. He presented his UI/UX concepts to Oursky, **impressed by their immediate feedback and suggestions for improvement**.
+
+‍
+
+![\_\_wf\_reserved\_inherit](/images/works/f28f8c62f2_66d69c3400ddbed7e1ba975b_66d69c2749bd8001c44e9fe6_palace2.png)
+
+‍
+
+##### **Collaboration Beyond Software**
+
+Dinesh was particularly struck by Oursky's collaborative approach. The team felt like an extension of his own, offering not just software development but also valuable insights for the entire marketplace structure. Building a platform from scratch comes with complexities, and Dinesh appreciated Oursky's guidance throughout the process.
+
+‍
+
+##### **A Dream Realized**
+
+Dinesh describes working with Oursky as a "great experience." Witnessing the first iteration of the Palace Studio platform filled him with immense pride. "I really like the working style in Oursky along with the reliable feedback loop,” said Dinesh, “especially Oursky staff can always think two steps ahead.”
+
+‍
+
+##### **A Multi-Disciplinary Success Story**
+
+The project's success stemmed in part from Oursky's multi-disciplinary team. Dinesh valued the diverse skillsets and perspectives that contributed to the final product.
+
+‍
+
+##### **Looking Ahead: A Recommendation for Others**
+
+Dinesh's experience with Oursky was so positive that he is highly likely to **recommend their services to others**. Palace Studio stands as a testament to the power of a strong vision, a collaborative development process, and the right software partner. In a world forever changed by the pandemic, Palace Studio offers a unique solution for both trainers and clients, a testament to Dinesh's foresight and Oursky's development expertise.
+
+‍

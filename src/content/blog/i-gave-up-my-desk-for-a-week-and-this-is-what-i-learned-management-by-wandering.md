@@ -3,13 +3,15 @@ title: "I Gave Up My Desk for a Week and This is What I Learned: Management by W
 description: "I Gave Up My Desk for a Week and This is What I Learned: Management by Wandering"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950b9be45937c15df55ae_luke-ellis-craven-343694-768x535.jpg"
+categories:
+  - "culture"
+displayCategory: "Founders' Learnings"
+image: "/images/blogs/068995dcfd_679950b9be45937c15df55ae_luke-ellis-craven-343694-768x535.jpg"
 draft: false
 webflowId: "679950e136bc0d12791e1d03"
 ---
 
-![management by wandering](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950c493bdb1ce79fb82bd_luke-ellis-craven-343694-720x501.jpeg)
+![management by wandering](/images/blogs/de02c8319a_679950c493bdb1ce79fb82bd_luke-ellis-craven-343694-720x501.jpeg)
 
 As my company’s grown, the number of internal / external meetings and tasks has become crazy. I have no time to wander around in office and have casual chats with fellows any more.
 

@@ -320,7 +320,7 @@ Per page workflow:
 
 - [ ] **Phase 4**: Logo images — download from Webflow CDN, replace text placeholders in `ClientLogosSection.astro`
 - [x] **Phase 4**: Blog post bodies (138 posts) — via Webflow MCP + `npm run import:webflow-mcp` (see `docs/phase4-handoff.md`)
-- [x] **Phase 4**: Works bodies — case-study copy in `src/content/works/*.mdx` (same import)
+- [x] **Phase 4**: Works bodies — case-study copy in `src/content/works/*.md` (same import)
 - [ ] **Phase 4**: Testimonial avatars — migrate from Webflow CDN to `public/images/`
 - [ ] **SEO**: JSON-LD Organization + WebSite structured data in `BaseLayout.astro` (listed Phase 2)
 - [ ] **Font**: Satoshi Variable — one occurrence in Webflow CSS; download from fontshare.com if needed

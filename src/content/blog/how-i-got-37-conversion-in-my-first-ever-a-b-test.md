@@ -3,13 +3,15 @@ title: "How I got 37% conversion in my first ever A/B test"
 description: "How I got 37% conversion in my first ever A/B test"
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31372ffe29e9cf6815c0e_matthew-henry-87142-768x512.jpg"
+categories:
+  - "product-growth"
+displayCategory: "Product Growth"
+image: "/images/blogs/c6ccdd7924_66e31372ffe29e9cf6815c0e_matthew-henry-87142-768x512.jpg"
 draft: false
 webflowId: "66e313f24464199c0e59de76"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3138dec3f1f2d489152e5_matthew-henry-87142-720x480.jpeg)
+![](/images/blogs/1e53a90844_66e3138dec3f1f2d489152e5_matthew-henry-87142-720x480.jpeg)
 
 PHOTO BY MATTHEW HENRY ON UNSPLASH
 
@@ -27,7 +29,7 @@ I lucked out, and I learned a lot. But I in retrospect, I could have engineered 
 
 ## Trial 1 — Changing the tagline only
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3138d00cae42b61548d07_1xScfyUoxxEELqYDXU8xiDg.png)
+![](/images/blogs/866f456111_66e3138d00cae42b61548d07_1xScfyUoxxEELqYDXU8xiDg.png)
 
 ### Hypothesis
 
@@ -75,7 +77,7 @@ By limiting your variations to the original and one challenger, you can more acc
 
 ## Trial 2 — Changing videos to GIFs
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3138e9f1eb48e11539247_1NIxQOYSsrCon87NNhKjvFw.gif)
+![](/images/blogs/6620443165_66e3138e9f1eb48e11539247_1NIxQOYSsrCon87NNhKjvFw.gif)
 
 ### Hypothesis
 
@@ -104,7 +106,7 @@ What really intrigued me was that most users still clicked the download button l
 
 ## Trial 3 — Adding a user’s testimonial above the fold
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3138d7a74628b269e2533_1fNcm6yPC05kl8_mcpdMH_A.png)
+![](/images/blogs/350e384b6c_66e3138d7a74628b269e2533_1fNcm6yPC05kl8_mcpdMH_A.png)
 
 ### Hypothesis
 
@@ -125,7 +127,7 @@ I reached out to users of ShotBot and asked them to share their experiences with
 
 The testimonial page’s conversion rate shot up to 37%, a significant increase from our previous page’s 24% conversion rate.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3138dc417eae3608a01c6_1NsIcIjX39KieJ4JjJzCLUw.png)
+![](/images/blogs/78c672af92_66e3138dc417eae3608a01c6_1NsIcIjX39KieJ4JjJzCLUw.png)
 
 CREENSHOT OF RESULTS FROM OPTIMIZELY
 

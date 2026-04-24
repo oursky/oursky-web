@@ -3,13 +3,15 @@ title: "Beginner’s guide to Google Analytics for websites"
 description: "Beginner’s guide to Google Analytics for websites"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799505124c6856e26dff22e_nasa-43563-768x512.jpg"
+categories:
+  - "product-growth"
+displayCategory: "Growth"
+image: "/images/blogs/f056bf844e_6799505124c6856e26dff22e_nasa-43563-768x512.jpg"
 draft: false
 webflowId: "6799506323af1a9d6bd2e085"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950338149b61a4ec03a46_nasa-43563-720x480.jpeg)
+![](/images/blogs/e732380c86_679950338149b61a4ec03a46_nasa-43563-720x480.jpeg)
 
 Photo by NASA on Unsplash
 
@@ -28,7 +30,7 @@ Before we dive into Google Analytics, let’s talk about AARRR, which stands for
 *   **Revenue:** your users pay you money to use your product.
 *   **Referral:** users refer your site to their peers.
 
-![Growth Funnel Img ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799503496dda19f1d1f74ad_Product-sales-conversion-pirate-metrics-funnel.png)
+![Growth Funnel Img ](/images/blogs/5eb4d65d61_6799503496dda19f1d1f74ad_Product-sales-conversion-pirate-metrics-funnel.png)
 
 AARRR aka Growth Funnel visualised, from http://blog.twoodo.com/288/best-intro-guide-to-saas-startup-metrics/product-sales-conversion-pirate-metrics-funnel/
 
@@ -38,7 +40,7 @@ In this post, we will be focusing on the first three parts: **AAR**, which trans
 
 ## Acquisition — where did all these people come from?
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950330615a7e0ea737e9e_1*SoRt06-YX3GNLgQSGr0TYw.jpeg)
+![](/images/blogs/cc0d15d485_679950330615a7e0ea737e9e_1_SoRt06-YX3GNLgQSGr0TYw.jpeg)
 
 Photo by Lysander Yuen via Unsplash
 
@@ -55,7 +57,7 @@ Acquisition shows where your users are coming from. **Knowing the source of refe
 *   **Audience > Technology > Browser & OS:** Optional, but browsers will display information differently. For example, if most of your users are using Firefox, which doesn’t support a specific font you’ve been using, will that severely affect your design and user experience?
 *   . **Behavior > Site Content > Landing Pages:** Knowing which pages are attracting people will tell you what evergreen content has a long-tail value (e.g. lots of people discover you by searching about AR) and whether campaigns or link distribution efforts have achieved their desired effects.
 
-![makeappicon](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950338149b61a4ec03a4e_1*dsifPxn2n5hhMieGZsfItQ.png)
+![makeappicon](/images/blogs/bcfccd345a_679950338149b61a4ec03a4e_1_dsifPxn2n5hhMieGZsfItQ.png)
 
 Finding the Page View Per Session and Average Session Duration of traffic from different channels on our product MakeAppIcon.
 
@@ -66,7 +68,7 @@ However, you also need to consider whether your highest sources of traffic are a
 
 ## Activation — SIGN UP!
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679950347b48cb88ecccd898_1*5HwF75bZhzF8z--Vz2NZlQ.jpeg)
+![](/images/blogs/91f7363129_679950347b48cb88ecccd898_1_5HwF75bZhzF8z--Vz2NZlQ.jpeg)
 
 Photo by Sylwia Bartyzel via Unsplash
 
@@ -93,7 +95,7 @@ After you find out how users are behaving on your site, you can make data-driven
 
 ## Retention — Thank you, please come again!
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995033d7c8c7edf2881caf_1*KaVbmNnRdBhqb5DUuUXecA.jpeg)
+![](/images/blogs/bf3a8e6259_67995033d7c8c7edf2881caf_1_KaVbmNnRdBhqb5DUuUXecA.jpeg)
 
 Photo by Richard Nolan via Unsplash
 
@@ -106,7 +108,7 @@ So you’ve got people registering on your site— that’s great! But how do yo
 *   **Audience > Active users:** Number of unique users who visited your site in the past 1 / 7 / 14 / 30 days.
 *   **Audience > Lifetime Value:** The value of users based on their lifetime performance (currently 90 days) on your site (more advanced)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995033d7c8c7edf2881cc5_1*9CAxMFCCGkFiAdtRh9szAQ.png)
+![](/images/blogs/4571d3c41e_67995033d7c8c7edf2881cc5_1_9CAxMFCCGkFiAdtRh9szAQ.png)
 
 A/B Testing cohorts
 

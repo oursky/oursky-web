@@ -3,15 +3,17 @@ title: "A Quick Guide on Iterative Design Process"
 description: "A Quick Guide on Iterative Design Process"
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e318822a6d15d46b33a8b7_rawpixel-com-296613-720x480.jpg"
+categories:
+  - "ui-design"
+displayCategory: "Design"
+image: "/images/blogs/73c9df4402_66e318822a6d15d46b33a8b7_rawpixel-com-296613-720x480.jpg"
 draft: false
 webflowId: "66e31992d42aeba2952592b2"
 ---
 
 If clean and maintainable code is at the heart of a great product, an intuitive and seamless user interface and user experience (UI/UX) is the soul. But in order to have great UX, technical considerations must go into the app design. In order to express great mobile app design, development teams must give as much attention to their front-end code as they do to their system architecture.
 
-![https://unsplash.com/photos/AJCNM8JrzT8/info](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31892e58ec86de18f1c35_rawpixel-com-296613-720x480.jpeg)
+![https://unsplash.com/photos/AJCNM8JrzT8/info](/images/blogs/f082e17ed5_66e31892e58ec86de18f1c35_rawpixel-com-296613-720x480.jpeg)
 
 # What is an iterative design process?
 
@@ -27,7 +29,7 @@ When we’ve captured what we think the users would want to do through these use
 
 # Managing Our App Design Workflow
 
-![OURSKY Design Timeline Template](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31893b5d1205982692b77_Screen-Shot-2016-09-05-at-1.26.10-PM.png)
+![OURSKY Design Timeline Template](/images/blogs/13ac8271d5_66e31893b5d1205982692b77_Screen-Shot-2016-09-05-at-1.26.10-PM.png)
 
 A sample template of Oursky's design timeline
 
@@ -46,7 +48,7 @@ Our UI/UX design process may begin analogue because we have rooms and whiteboard
 
 ## What is a wireframe?
 
-![ui ux design wireframe ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3189377dbcf3ca9e5631d_1_zNIsV2X6rPx71X78h99iIw.png)
+![ui ux design wireframe ](/images/blogs/c4e8a8f44e_66e3189377dbcf3ca9e5631d_1_zNIsV2X6rPx71X78h99iIw.png)
 
 Wireframe examples
 
@@ -88,7 +90,7 @@ The devil is in the details. There are many [free UI elements kits](http://www.w
 
 ## Creating an App Mockup
 
-![hong kong ui ux design agency](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31894b561d6293b6a3c64_1_Cj5_Ck-s9pNBASZwGNpmMA.jpeg)
+![hong kong ui ux design agency](/images/blogs/8b16012dc3_66e31894b561d6293b6a3c64_1_Cj5_Ck-s9pNBASZwGNpmMA.jpeg)
 
 A  sample app mockup for one of our iOS projects
 
@@ -113,7 +115,7 @@ Prototyping also helps entrepreneurs, startup founders, or business executives d
 
 ## Kick-Off Meeting to Start the App Development Process
 
-![style guide design specifications ui ux design hong kong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31893e58ec86de18f1c43_sans-sugar-ui-mockup.png)
+![style guide design specifications ui ux design hong kong](/images/blogs/e58e801e45_66e31893e58ec86de18f1c43_sans-sugar-ui-mockup.png)
 
 Screenshots from our [side project](https://blog.oursky.com/2017/12/11/mvp-ui-design-mockups-sans-sugar/), [Sans Sugar](https://blog.oursky.com/2017/11/24/minimum-viable-product-iphone-x-ui-wireframe/); design specifications and style guide were the final deliverables
 

@@ -3,13 +3,15 @@ title: "The Fallacy of Data-Driven Product Design"
 description: "The Fallacy of Data-Driven Product Design"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994796ff9dc23d3bf6ac34_two_dramas.webp"
+categories:
+  - "ui-design"
+displayCategory: "UI/UX Design"
+image: "/images/blogs/cb865de3bc_67994796ff9dc23d3bf6ac34_two_dramas.webp"
 draft: false
 webflowId: "679947bfa40b4f0f1fa6f6d5"
 ---
 
-![Alpha House and House of Cards](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947a7be45937c15d5fe5f_two_dramas.png)
+![Alpha House and House of Cards](/images/blogs/6216aa409e_679947a7be45937c15d5fe5f_two_dramas.png)
 
 House of Cards vs Alpha House
 
@@ -53,7 +55,7 @@ _“Data and A/B test are valuable allies, and they help us understand and grow 
 
 It is safe to continually launch tests to optimize your products. However, optimization can only go as far, meaning you’ve reached the local maximum.
 
-![Data-driven drags you to local maxima.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679947a7be2d1859c05876da_tumblr_l3yuhnAPpJ1qz8ohs.gif)
+![Data-driven drags you to local maxima.](/images/blogs/481b9e04ec_679947a7be2d1859c05876da_tumblr_l3yuhnAPpJ1qz8ohs.gif)
 
 Data-driven drags you to local maxima.
 

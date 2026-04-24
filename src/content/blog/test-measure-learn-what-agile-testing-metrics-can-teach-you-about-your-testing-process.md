@@ -3,13 +3,15 @@ title: "Test, Measure, Learn: What Agile Testing Metrics Can Teach You about You
 description: "Test, Measure, Learn: What Agile Testing Metrics Can Teach You about Your Testing Process"
 pubDate: 2025-01-28
 author: "Sealights.io"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951bcf2137d56a87a1d57_software-qa-test-result-oursky.png"
+categories:
+  - "qa"
+displayCategory: "Software QA"
+image: "/images/blogs/6ccce51822_679951bcf2137d56a87a1d57_software-qa-test-result-oursky.png"
 draft: false
 webflowId: "679951e1e5c70fc684f7ffe8"
 ---
 
-![agile testing CI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951c63ab5547d30730798_software-qa-test-result-oursky-720x389.png)
+![agile testing CI](/images/blogs/b2501db29f_679951c63ab5547d30730798_software-qa-test-result-oursky-720x389.png)
 
 _This is a guest contribution by Limor, a technical writer and editor with over ten years’ experience writing technical documentation for developer tools and SaaS technologies. She specializes in software development and the Agile methodology, computer/network security, middleware, and cloud technologies._
 
@@ -36,7 +38,7 @@ Test metrics provide a way of improving testing efforts, however, no single metr
 
 **Definition**: Cyclomatic complexity is a measure of the number of linearly independent paths through a section of source code.  
 
-![agile testing software qa](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951c67db63d8307a1f861_8.-Cyclomatic-Complexity.jpeg)
+![agile testing software qa](/images/blogs/0f8b90e941_679951c67db63d8307a1f861_8.-Cyclomatic-Complexity.jpeg)
 
 Cyclomatic complexity targets — Image from Sealights.io
 
@@ -50,7 +52,7 @@ Editor notes: Developers at Oursky have also used [Lizard](http://www.lizard.ws/
 
 ### **Automation Progress**
 
-![agile testing automation software qa](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951c6ef69509e8dc274a6_7.-Automation.jpeg)
+![agile testing automation software qa](/images/blogs/04532950c3_679951c6ef69509e8dc274a6_7.-Automation.jpeg)
 
 Benefits of QA testing automation Image from Sealights.io
 
@@ -74,7 +76,7 @@ It’s important to remember, though, that a larger percentage of coverage achie
 
 ### **Escaped Defects**
 
-![software development qa best practices](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679951c60f76d341d9b14ed9_9.-Escaped-Defects-over-Time.jpeg)
+![software development qa best practices](/images/blogs/a71c16f05a_679951c60f76d341d9b14ed9_9.-Escaped-Defects-over-Time.jpeg)
 
 Image from Sealights.io
 

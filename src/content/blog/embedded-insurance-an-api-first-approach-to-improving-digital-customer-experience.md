@@ -3,8 +3,11 @@ title: "Embedded Insurance: An API-First Approach to Improving Digital Customer 
 description: "Embedded insurance can help InsurTech and FinTech companies improve customer experience, but you need an API-first approach to implement it."
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3053fcf1e65996dcc3947_pexels-pixabay-35550-1160x773.jpg"
+categories:
+  - "engineering"
+  - "development"
+displayCategory: "API FIRST"
+image: "/images/blogs/7acdda4075_66e3053fcf1e65996dcc3947_pexels-pixabay-35550-1160x773.jpg"
 draft: false
 webflowId: "66e305c411ed3245de1970de"
 ---
@@ -17,7 +20,7 @@ Another relatable example is Tesla. Auto insurance is offered at the point of sa
 
 In insurance, the best kind of digital customer experience is to offer services exactly where and when the customer needs them most. By partnering with the right insurance carriers, companies like Airbnb and Tesla stay present at the right moment for their customers. It’s no wonder that it’s expected to be a [US$3-trillion market](https://discover.rainmaking.io/hubfs/Embedded%20Insurance/Embedded%20Insurance-2.pdf) by 2023! That’s tons of opportunities for insurers and brands!
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3055dbf76331a3fa31342_pexels-pixabay-35550-1160x773.jpeg)
+![](/images/blogs/30c82b0399_66e3055dbf76331a3fa31342_pexels-pixabay-35550-1160x773.jpeg)
 
 # Embedded Insurance: An Innovative Insurance Technology (InsurTech) Trend
 
@@ -69,7 +72,7 @@ Adopting an API-first approach means everything about your products or services 
 
 An API- and [microservices-based infrastructure](https://blog.oursky.com/2020/07/16/deconstructing-the-monolith-with-microservices/) helps you accomplish that. You can modularize your core capabilities and integrate third-party components or services, and they’d all communicate through APIs.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3055e6bae31e593ed26fd_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-1-1160x462.png)
+![](/images/blogs/e6299010d4_66e3055e6bae31e593ed26fd_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-1-1160x462.png)
 
 AN API-BASED ARCHITECTURE ENABLES INSURERS TO DYNAMICALLY DELIVER INSURANCE PRODUCTS AND SERVICES.
 
@@ -119,7 +122,7 @@ Another example would be our project with a company whose authentication system 
 
 In any case, you need to carefully review your existing codebase and systems before paving a roadmap to modernize them.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3055e73af8993a451b955_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-2.png)
+![](/images/blogs/87335ee47d_66e3055e73af8993a451b955_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-2.png)
 
 INSTEAD OF THROWING EVERYTHING AWAY, WE EXPLORE WAYS TO STILL USE MODERN TECHNOLOGIES AND BRIDGING IT WITH LEGACY SYSTEMS.
 
@@ -129,7 +132,7 @@ Over the years, we’ve worked with many companies in implementing API integrati
 
 We addressed this challenge by developing a BaaS for the web and mobile applications that we build. The BaaS formed a bridge between the app’s front end and various back ends via APIs.  By modularizing common app features, developers can simply plug and play services to build production-ready apps. We don’t have to reinvent the wheel! Best of all, this approach [saves time and money](https://go.forrester.com/blogs/12-09-02-enterprise_mobility_how_fast_can_development_go/) for our clients, too!
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3055ebb0653993a3b69c6_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-3-1160x569.png)
+![](/images/blogs/f781f8bef2_66e3055ebb0653993a3b69c6_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-3-1160x569.png)
 
 WE BUILT A BAAS PLATFORM FOR OUR OWN WEB AND MOBILE APP DEVELOPMENT PROJECTS.
 

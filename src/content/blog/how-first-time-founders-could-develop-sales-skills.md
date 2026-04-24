@@ -3,13 +3,15 @@ title: "How First-time Founders Could Develop Sales Skills"
 description: "How First-time Founders Could Develop Sales Skills"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679949ae5925a79975464d81_founder.png"
+categories:
+  - "culture"
+displayCategory: "FOUNDERS LEARNING"
+image: "/images/blogs/3e3e47a74f_679949ae5925a79975464d81_founder.png"
 draft: false
 webflowId: "679949bb3edc0a0764653966"
 ---
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679949bb3edc0a0764653948_679949ae5925a79975464d81_founder.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/52c157eeda_679949bb3edc0a0764653948_679949ae5925a79975464d81_founder.png)
 
 The idea has been turned into a plan and now the plan into a product. What’s next? To have the product in the hands of people that value it. How is that done? Simple: by selling. For many first-founders out there this is a huge roadblock as selling is not something that comes easy. Sales is, yet, a crucial skill and a component of the product development process. For founders, sales is of an even greater importance as they alone must create and transfer value for a product to gain traction. For those founders that may not be as sales-inclined, these simple strategies will work to develop sales skills.
 

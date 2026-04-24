@@ -3,8 +3,12 @@ title: "Apple’s Best Music App of 2013 Was Outsourced: Jamn"
 description: "Apple’s Best Music App of 2013 Was Outsourced: Jamn"
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/65800df8928395bb9d852509_Jamn.png"
+categories:
+  - "development"
+  - "ui-design"
+  - "product-management"
+displayCategory: "PRODUCT MANAGEMENT"
+image: "/images/blogs/e588131e12_65800df8928395bb9d852509_Jamn.png"
 draft: false
 webflowId: "65800dfc62633c1f4fb7c50a"
 ---
@@ -13,7 +17,7 @@ webflowId: "65800dfc62633c1f4fb7c50a"
 
 Are in-house apps always better than outsourced apps? _No_. Jamn, the musician’s multi-tool, selected as one of Apple’s Best of 2013 Apps in Europe and the Americas, was an outsourcing success at Oursky. In this post, we will share how we built this award-winning app using an MVP, fast iterations and proactive engagement with our client, MiQ Limited.
 
-![Screenshots of today's Jamn (outsourcing your app project)](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15d29203634060f3b1c8d_Screen-Shot-2016-03-24-at-6.12.15-PM-1024x421.png)
+![Screenshots of today's Jamn (outsourcing your app project)](/images/blogs/ceb50b664f_66e15d29203634060f3b1c8d_Screen-Shot-2016-03-24-at-6.12.15-PM-1024x421.png)
 
 SCREENSHOTS OF TODAY’S JAMN
 
@@ -29,7 +33,7 @@ As a result, Jamn’s first MVP was just a music wheel for the guitar. We wanted
 
 We went through multiple iterations and three versions over 9 months, one step at a time. Within a week of launching, we had 1 million downloads, and by the end of the month, Jamn Multi-tool had 3 million downloads.  
 
-![Screenshot of Jamn's MVP](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15d25c8fd82ea9aff1efa_miKey_24042012.001-1024x576.jpeg)
+![Screenshot of Jamn's MVP](/images/blogs/5998088112_66e15d25c8fd82ea9aff1efa_miKey_24042012.001-1024x576.jpeg)
 
 SCREENSHOT OF JAMN’S MVP
 
@@ -53,7 +57,7 @@ Of course, there are the business aspects such as setting expectations, providin
 
 For product development, a man-day based contract is always superior to fixed scope project, so that changes between iterations can be easier. In addition, both sides can decide the priorities between speed, quality of code and fixing technical debt. This becomes important for future handing off.
 
-![Today's Jamn with an interface illustrating how to play a chord ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e15d26d9a72009f88eadf1_Jamn-blog-02-1024x648.png)
+![Today's Jamn with an interface illustrating how to play a chord ](/images/blogs/3ace5ce208_66e15d26d9a72009f88eadf1_Jamn-blog-02-1024x648.png)
 
 TODAY’S JAMN WITH AN INTERFACE ILLUSTRATING HOW TO PLAY A CHORD
 

@@ -3,13 +3,15 @@ title: "14 Apps to Help You Work Smarter, Not Harder"
 description: "14 Apps to Help You Work Smarter, Not Harder"
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d9a86e9c74f13e4eb6f_Screen-Shot-2016-11-08-at-12.webp"
+categories:
+  - "product-growth"
+displayCategory: "GROWTH"
+image: "/images/blogs/55ad83deff_67994d9a86e9c74f13e4eb6f_Screen-Shot-2016-11-08-at-12.webp"
 draft: false
 webflowId: "67994dae7d3712ae4b276cf4"
 ---
 
-![Sometimes I feel as if I don’t have enough hands, let alone time! — Photo by SerenaWong](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d90bca6350cdf3ee70c_Screen-Shot-2016-11-08-at-12.56.11-AM-720x523.png)
+![Sometimes I feel as if I don’t have enough hands, let alone time! — Photo by SerenaWong](/images/blogs/eb0bbdb612_67994d90bca6350cdf3ee70c_Screen-Shot-2016-11-08-at-12.56.11-AM-720x523.png)
 
 Work isn’t always easy. Everyone faces a road bump from time to time and we lose steam with our projects. Luckily many desktop and mobile apps are available to make our lives more productive and easier. The phrase “work smarter, not harder” is even backed by [science](http://www.acsh.org/news/2016/08/12/work-smarter-not-harder-is-backed-by-science)!
 
@@ -24,7 +26,7 @@ After trying and testing out different methods of working smarter, I wanted to s
 
 ## **Organization**
 
-![A clean organized desk also helps you focus! — Photo by vijaysrmmca](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d90518e430f41f8c7de_my-desk-1625867_960_720-720x458.png)
+![A clean organized desk also helps you focus! — Photo by vijaysrmmca](/images/blogs/2166facedd_67994d90518e430f41f8c7de_my-desk-1625867_960_720-720x458.png)
 
 A clean organized desk also helps you focus! — Photo by [vijaysrmmca](https://pixabay.com/en/my-desk-work-job-1625867/)
 
@@ -34,7 +36,7 @@ When managing your to-do lists, to-don’t lists, or desktop windows, organizati
 
 [**Asana**](https://asana.com/) — Create to-do lists and track your progress, individually or with your team. Asana is great for dragging and dropping files into a conversation, creating a virtual, ongoing discussion with team members. Also, the application is free to use and you can even prioritize the to-do lists.
 
-![Oursky's Trello board shows the progress for each blog piece.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d9054769870a1ef599f_Screen-Shot-2016-11-25-at-5.46.22-PM.png)
+![Oursky's Trello board shows the progress for each blog piece.](/images/blogs/388d91e9b3_67994d9054769870a1ef599f_Screen-Shot-2016-11-25-at-5.46.22-PM.png)
 
 Oursky’s Trello board shows the progress for each blog piece.
 
@@ -46,7 +48,7 @@ Oursky’s Trello board shows the progress for each blog piece.
 
 ## **Time Management**
 
-![Dear time, why can’t we be friends?— Photo by JuralMin](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d90d7c8c7edf2853e26_clock-1763278_1280-720x551.png)
+![Dear time, why can’t we be friends?— Photo by JuralMin](/images/blogs/a408244d1e_67994d90d7c8c7edf2853e26_clock-1763278_1280-720x551.png)
 
 Dear time, why can’t we be friends?— Photo by [JuralMin](https://pixabay.com/en/clock-time-interior-house-room-1763278/)
 
@@ -60,7 +62,7 @@ I’ve pushed deadlines to the absolute last-minute, but thanks to the many time
 
 ## **Focus Tools**
 
-![Being focused improves productivity — Photo by ROverhate](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d90f80d7a7970df163a_woman-1353825-720x465.png)
+![Being focused improves productivity — Photo by ROverhate](/images/blogs/43f692d334_67994d90f80d7a7970df163a_woman-1353825-720x465.png)
 
 Being focused improves productivity — Photo by [ROverhate](https://pixabay.com/en/woman-women-business-woman-female-1353825/)
 
@@ -74,7 +76,7 @@ Focus is a very big hurdle. When I first started using the rescue time app, I wa
 
 ## **Learning Tools**
 
-![Nowadays, we have so many easily accessible learning resources — Photo by geralt](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d905908fb6007635f3f_download-1666700_1920-720x321.jpeg)
+![Nowadays, we have so many easily accessible learning resources — Photo by geralt](/images/blogs/6aea17222d_67994d905908fb6007635f3f_download-1666700_1920-720x321.jpeg)
 
 Nowadays, we have so many easily accessible learning resources — Photo by [geralt](https://pixabay.com/en/download-boy-man-learn-cloud-1666700/)
 

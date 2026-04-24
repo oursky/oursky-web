@@ -3,13 +3,15 @@ title: "How I attracted awesome team members as an introverted founder"
 description: "How I attracted awesome team members as an introverted founder"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eed1a8aad975e4cb57b_1Vf9IqdMX9g82aCAU_nFtkQ.jpeg"
+categories:
+  - "culture"
+displayCategory: "Founders' Learnings"
+image: "/images/blogs/7a0dda1001_67994eed1a8aad975e4cb57b_1Vf9IqdMX9g82aCAU_nFtkQ.jpeg"
 draft: false
 webflowId: "67994f2754769870a1f107ef"
 ---
 
-![Header image](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef5005556a1b38723a4_1Vf9IqdMX9g82aCAU_nFtkQ-720x490.jpeg)
+![Header image](/images/blogs/3eb84bd4a9_67994ef5005556a1b38723a4_1Vf9IqdMX9g82aCAU_nFtkQ-720x490.jpeg)
 
 Image by Edu Lauton via [Unsplash](https://unsplash.com/photos/TyQ-0lPp6e4)
 
@@ -19,7 +21,7 @@ To my fellow introverts: sorry, it doesn’t get easier. But it does get a bit b
 
 ## Be geeky and passionate.
 
-![Passion Led us Here](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef56bbccd9a87b6bf43_1phYON6CGFoO3Kfi2j0Pp2Q.jpeg)
+![Passion Led us Here](/images/blogs/230403cacd_67994ef56bbccd9a87b6bf43_1phYON6CGFoO3Kfi2j0Pp2Q.jpeg)
 
 Photo by Ian Schneider via [Unsplash](https://unsplash.com/photos/TamMbr4okv4)
 
@@ -29,7 +31,7 @@ When we moved to taking client work, we were a small team that could only take o
 
 ## Take a stance.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef53f749d9052574f2f_1kn0EzhHom1ob96Xj3ikDHw.jpeg)
+![](/images/blogs/0a84b8ad85_67994ef53f749d9052574f2f_1kn0EzhHom1ob96Xj3ikDHw.jpeg)
 
 Photo by Paul Skorupskas via [Unsplash](https://unsplash.com/photos/7KLa-xLbSXA)
 
@@ -41,7 +43,7 @@ No. Introversion isn’t an excuse to be conflict-adverse or to only hire people
 
 ## Online => one to one.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef56fa34d27f8f72ee9_1F4bIqMuWG8Xe16bVnQLw0Q.jpeg)
+![](/images/blogs/5582a4782f_67994ef56fa34d27f8f72ee9_1F4bIqMuWG8Xe16bVnQLw0Q.jpeg)
 
 Photo by Chiara Pinna via [Unsplash](https://unsplash.com/photos/d0QWndxSR38)
 
@@ -61,7 +63,7 @@ What do you do when someone ambushes you at an event? _Panic_, of course, just o
 
 ## Optimize yourself.
 
-![Coffee and Book](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef53ab5547d306ff15c_1naphLKkJcfVYSlXyZQaNrQ.jpeg)
+![Coffee and Book](/images/blogs/6f2b7f6d88_67994ef53ab5547d306ff15c_1naphLKkJcfVYSlXyZQaNrQ.jpeg)
 
 Photo by rawpixel.com via [Unsplash](https://unsplash.com/photos/q7GJsXhDzng)
 
@@ -79,7 +81,7 @@ Also, now that my company has developers who are equally passionate about code, 
 
 ## Transparency is important to me.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef5542c0b889cede423_1-XHmpB66X3MrX81Ysn3pQ.jpeg)
+![](/images/blogs/578868e06c_67994ef5542c0b889cede423_1-XHmpB66X3MrX81Ysn3pQ.jpeg)
 
 Photo by Tim Trad via [Unsplash](https://unsplash.com/photos/AIwlyvpQJ18)
 
@@ -93,7 +95,7 @@ Even though a part of me will always be a bit awkward about speaking in a group,
 
 ## It’s not all about talking.
 
-![A Pen](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef58149b61a4ebee5a7_1a20c-rs5m_YFyWpX5G5dAA.jpeg)
+![A Pen](/images/blogs/574f46bf40_67994ef58149b61a4ebee5a7_1a20c-rs5m_YFyWpX5G5dAA.jpeg)
 
 Photo by MJ S via [Unsplash](https://unsplash.com/photos/cw2ai6A_eeM)
 
@@ -101,7 +103,7 @@ Lastly, communication is more than just talking. As an introvert, writing is som
 
 ## Conclusion.
 
-![Coffee, one of our introverted office cats](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ef53edc0a07646a6fb8_1uJ4EUuWpKMIs5IKp9cP82A.jpeg)
+![Coffee, one of our introverted office cats](/images/blogs/ded04dc4e2_67994ef53edc0a07646a6fb8_1uJ4EUuWpKMIs5IKp9cP82A.jpeg)
 
 Coffee, one of our introverted office cats
 

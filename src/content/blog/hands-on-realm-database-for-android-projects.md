@@ -3,8 +3,10 @@ title: "Hands on Realm Database for Android projects"
 description: "Hands on Realm Database for Android projects"
 pubDate: 2025-01-28
 author: "Jim Chim"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924a6635e53a391cbc08f_Screen-Shot-2015-04-30-at-5.41.10-pm-676x429.png"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/6f741420a1_679924a6635e53a391cbc08f_Screen-Shot-2015-04-30-at-5.41.10-pm-676x429.png"
 draft: false
 webflowId: "679924ba92400b3f2818f9ba"
 ---

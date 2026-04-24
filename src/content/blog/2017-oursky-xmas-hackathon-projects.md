@@ -3,13 +3,15 @@ title: "2017 Oursky X’mas Hackathon Projects"
 description: "2017 Oursky X’mas Hackathon Projects"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995221e5c70fc684f83d93_photo6186087868431181780.jpg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/71a3e3f991_67995221e5c70fc684f83d93_photo6186087868431181780.jpg"
 draft: false
 webflowId: "6799523254769870a1f492f3"
 ---
 
-![hong kong startup culture](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952189e5bbde3d22b2331_photo6186087868431181780-720x540.jpeg)
+![hong kong startup culture](/images/blogs/515785e20a_679952189e5bbde3d22b2331_photo6186087868431181780-720x540.jpeg)
 
 We ended off 2017 with an annual Oursky tradition: the Christmas hackathon! Below is a recap of our projects. Anyone could propose an idea and anyone could sign up to help during the two days.  
 
@@ -19,7 +21,7 @@ We ended off 2017 with an annual Oursky tradition: the Christmas hackathon! Belo
 *   Day 2 (29th Dec 2017), 5:30pm – 7pm: Demo!!!  
     
 
-![hong kong opensource](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952189465a580dc3a08e9_20180110_180155.jpeg)
+![hong kong opensource](/images/blogs/ec761dc34b_679952189465a580dc3a08e9_20180110_180155.jpeg)
 
 ## Rules / Notes
 
@@ -42,17 +44,17 @@ We ended off 2017 with an annual Oursky tradition: the Christmas hackathon! Belo
 8.  [Skygear](https://skygear.io/) Zeromq improvement  
     
 
-![hong kong tech culture](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218149ea6cafad93fcf_20180110_180138.jpeg)
+![hong kong tech culture](/images/blogs/78d6dc36ec_67995218149ea6cafad93fcf_20180110_180138.jpeg)
 
 ## Team 1: RC Car with live video and phone control
 
-![hong kong startup culture](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679952188149b61a4ec22dd3_25660390_10155180222421485_904931014054765192_n.jpeg)
+![hong kong startup culture](/images/blogs/55f2be2684_679952188149b61a4ec22dd3_25660390_10155180222421485_904931014054765192_n.jpeg)
 
 One of our colleagues constructed a remote control car using a micro controller. There is a video cam on the car, and 3 fellows wrote an app to connect the mobile phone to control the car, and also sees the video on the screen.
 
 ## Team 2: 緩跑徑開放時間 Telegram Bot for Running Courses
 
-![hong kong jogger telegram bot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218387921465f25bf1c_Screen-Shot-2018-02-28-at-3.06.17-PM-407x720.png)
+![hong kong jogger telegram bot](/images/blogs/73037ab1cd_67995218387921465f25bf1c_Screen-Shot-2018-02-28-at-3.06.17-PM-407x720.png)
 
 Since several Ourskyers are long-distance runners and have trained and travelled together for marathons, we wanted to quickly built a bot that could quickly help us find a suitable running courses in Hong Kong’s neighbourhoods to train in. Some Ourskyers are also open data activists, and this small project fitted a lot of people’s interests.
 
@@ -60,13 +62,13 @@ We used Telegram because it’s our company’s choice IM service and it is crea
 
 ## Team 3: Opensky with face recognition
 
-![hong kong developers neural network](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218d1b6a0967d1e6c42_26229932_10155180222431485_3766646346677966120_n.jpeg)
+![hong kong developers neural network](/images/blogs/e493b20ba3_67995218d1b6a0967d1e6c42_26229932_10155180222431485_3766646346677966120_n.jpeg)
 
 Oursky already uses our [over-engineered IoT doorlock](https://medium.freecodecamp.org/how-to-over-engineer-a-door-lock-863b5d58dd0d) ([Chima Opendoor](https://github.com/oursky/doorlock)) that we wanted to automate with face recognition with the launch of the iPhone X. Two colleagues worked on it and the result was interesting. We found that the generated neural network is too big for Raspberry Pi, so we would need to do more work to put it in our door’s production (it’s set up on our Raspberry Pi, but not integrated into the doorlock system).
 
 ## Team 4: Sublime text + Purescript IDE Bug fix
 
-![github opensource repo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218a81f96c1ee91dc62_Screen-Shot-2018-02-28-at-2.57.27-PM.png)
+![github opensource repo](/images/blogs/ea5d516e5e_67995218a81f96c1ee91dc62_Screen-Shot-2018-02-28-at-2.57.27-PM.png)
 
 One of our colleagues has gone all over the world to work with different developers. He wanted to spend the holidays contributing to the open-source community and finished 2 issues a for [Purescript IDE integration for Sublime Text 3](https://github.com/b123400/purescript-ide-sublime/commits/master).
 
@@ -76,13 +78,13 @@ Another colleague wanted to use an automated bot to deposit e-chques into differ
 
 ## Team 6: Nanoleaf door sign
 
-![hong kong iot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218223c893cb17c4725_26001239_10155180222341485_3287374921414488180_n.jpeg)
+![hong kong iot](/images/blogs/e141e6cc08_67995218223c893cb17c4725_26001239_10155180222341485_3287374921414488180_n.jpeg)
 
 Since we already [over-engineered our doorlock](https://medium.freecodecamp.org/how-to-over-engineer-a-door-lock-863b5d58dd0d), a few of us decided to over-engineer our door status notification as well (because people didn’t listen to the door unlocking and couldn’t tell if our doorlock app had worked). The doorlock was previously written in [Clojurescript](http://clojurescript/) by a former colleague, and the two Ourskyers working on it added a few lines. It was a simple and fun hack.
 
 ## Team 7: 車 Cam Merger and uploader (Dashup)
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218223c893cb17c4721_26166630_10155180222336485_597738249561516723_n.jpeg)
+![](/images/blogs/bac8ed790f_67995218223c893cb17c4721_26166630_10155180222336485_597738249561516723_n.jpeg)
 
 An Ourskyer in Taiwan likes to road trips. But when recording videos he has the problem of recording massive video files or many small files that take too long to stitch back together. He teamed up with another colleague to create a cross-platform [Electron](https://electronjs.org/) desktop app that helps users merge mini car-cam videos to upload to Youtube with a simple drag and drop.
 
@@ -92,7 +94,7 @@ It’s finished! Check out the app [Dash Up](https://github.com/inDream/dash-up)
 
 ## Team 8: Skygear Zeromq Improvement
 
-![hong kong open source](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67995218d7eea6403ab5500d_26112442_10155180222501485_7949591693276991723_n.jpeg)
+![hong kong open source](/images/blogs/34dd71c8d0_67995218d7eea6403ab5500d_26112442_10155180222501485_7949591693276991723_n.jpeg)
 
 We have a team working on [Skygear](https://skygear.io/), our open-source backend-as-a-service, and one of the former team members had always wanted to clean up dependencies on [CZMQ](https://github.com/zeromq/czmq) (deprecated) to speed up the Docker image building time. After removing the dependency ([pull request here](https://github.com/SkygearIO/skygear-server/pull/512)) and reducing the shared state, building a docker image went from 50 seconds to 10 seconds!! Thank you!!
 

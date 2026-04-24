@@ -3,13 +3,15 @@ title: "How to Build Solid Engineering Culture in a Small Tech Team"
 description: "How to Build Solid Engineering Culture in a Small Tech Team"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a75be65ccad3d12f0f0_Photo-.jpg"
+categories:
+  - "culture"
+displayCategory: "Engineering Culture"
+image: "/images/blogs/e65a41e7d7_67994a75be65ccad3d12f0f0_Photo-.jpg"
 draft: false
 webflowId: "67994ad223af1a9d6bcd38f2"
 ---
 
-![Oursky Team Photo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7c542c0b889ce9d26e_Photo--720x540.jpeg)
+![Oursky Team Photo](/images/blogs/d6c4a24159_67994a7c542c0b889ce9d26e_Photo--720x540.jpeg)
 
 ‍
 
@@ -21,7 +23,7 @@ Needless to say, every company’s culture is different, so every company will b
 
 ## Discussion and debate are vital.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7cb3407cd04b015738_marketing-man-person-communication-large.jpeg)
+![](/images/blogs/977e8f17fc_67994a7cb3407cd04b015738_marketing-man-person-communication-large.jpeg)
 
 ‍
 
@@ -33,7 +35,7 @@ It is also an unavoidable fact that some people simply are argumentative. Proble
 
 ## Emphasis on quality, not rank.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7c3ea5365cf0ed403b_startup-photos-large.jpeg)
+![](/images/blogs/dc7ef1528e_67994a7c3ea5365cf0ed403b_startup-photos-large.jpeg)
 
 ## ‍
 
@@ -45,7 +47,7 @@ A strong team culture will accommodate these decisions, which are usually done w
 
 ## Say goodbye to code ownership.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7c109db1cbb13710ba_pexels-photo-large.jpeg)
+![](/images/blogs/750179caf4_67994a7c109db1cbb13710ba_pexels-photo-large.jpeg)
 
 ‍
 
@@ -55,7 +57,7 @@ Thinking as a team encourages developers to consult each other as well because t
 
 ## Optimise for iteration speed.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7ceac1f521a127c476_pexels-photo-large.jpeg)
+![](/images/blogs/0642f502f2_67994a7ceac1f521a127c476_pexels-photo-large.jpeg)
 
 ‍
 
@@ -63,7 +65,7 @@ This will not only increase innovation output in your company, but will give eng
 
 ## Think about your teams.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a7cfe20b33f4be23646_people-coffee-tea-meeting-large.jpeg)
+![](/images/blogs/d8ee4c8477_67994a7cfe20b33f4be23646_people-coffee-tea-meeting-large.jpeg)
 
 ## ‍
 

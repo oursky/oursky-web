@@ -3,13 +3,15 @@ title: "Dockerizing our Python stack"
 description: "Dockerizing our Python stack"
 pubDate: 2025-01-28
 author: "Rick Mak"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799270aed5f0f3cde9a9acc_docker-cover.webp"
+categories:
+  - "development"
+displayCategory: "Devops"
+image: "/images/blogs/018361b6e4_6799270aed5f0f3cde9a9acc_docker-cover.webp"
 draft: false
 webflowId: "6799272c15958e6f60ac44f7"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992714d74f269e13d7542e_docker-cover.png)
+![](/images/blogs/19b4ff1482_67992714d74f269e13d7542e_docker-cover.png)
 
 > **_… and it didn’t benefit that much._**
 
@@ -27,7 +29,7 @@ A small scale online shop might use git to deploy code and [virtualenv](https://
 
 Now, all the configurations and environment settings are standardized in the Docker Container, which actually saves loads of time for developers dealing with the repetitive setup and maintenance.
 
-![docker-2](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927148a612cc0207cb75e_docker-2.png)
+![docker-2](/images/blogs/a0d7a357ee_679927148a612cc0207cb75e_docker-2.png)
 
 (ref. [https://www.docker.com/whatisdocker](https://www.docker.com/whatisdocker))
 

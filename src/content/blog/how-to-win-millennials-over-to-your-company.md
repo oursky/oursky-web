@@ -3,13 +3,15 @@ title: "How to Win Millennials Over to Your Company"
 description: "How to Win Millennials Over to Your Company"
 pubDate: 2025-01-28
 author: "Dennis Tam"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679949e57b48cb88ecc635f1_wordcloud-1.webp"
+categories:
+  - "culture"
+displayCategory: "CULTURE"
+image: "/images/blogs/556a1a6c70_679949e57b48cb88ecc635f1_wordcloud-1.webp"
 draft: false
 webflowId: "679949ff96dda19f1d19760d"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679949f03fc1f3f920595ce3_wordcloud-1-720x553.png)
+![](/images/blogs/0235184d83_679949f03fc1f3f920595ce3_wordcloud-1-720x553.png)
 
 Most businesses nowadays often face a long-due question: how do we attract new talent? As baby-boomers continue to retire, companies are increasingly feeling the pressure to attract and retain the next generation of talent.  The young-hires, known as “millennials”, are an entirely different breed from their predecesors. Who are these “millennials” and how are organisations appealing to this fresh wave of talent? This article is an overview of where to start.
 

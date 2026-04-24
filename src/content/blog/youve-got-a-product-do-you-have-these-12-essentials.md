@@ -3,15 +3,17 @@ title: "You’ve got a product. Do you have these 12 essentials?"
 description: "You’ve got a product. Do you have these 12 essentials?"
 pubDate: 2025-01-28
 author: "David Ng"
-category: "product-growth"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a490f76d341d9a93f56_pablo-22.webp"
+categories:
+  - "product-growth"
+displayCategory: "Growth"
+image: "/images/blogs/a2268f0ddc_67994a490f76d341d9a93f56_pablo-22.webp"
 draft: false
 webflowId: "67994a5e149ea6cafad199c3"
 ---
 
 ## Make Products that Pay
 
-![startup product development pablo buffer](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3ca96b779450bf319e_pablo-22.png)
+![startup product development pablo buffer](/images/blogs/2145fc2d15_67994a3ca96b779450bf319e_pablo-22.png)
 
 Someone once said, “Love is great, but you can’t eat love. You have to have money to eat.” A product is no different. Products are great, but they won’t feed you. Revenue does.
 
@@ -33,7 +35,7 @@ Focusing on the customer is also directly related to conversion. By engaging wit
 
 ## Design Isn’t Optional
 
-![shotbot preview images](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3c93bdb1ce79f4b601_shotbot-preview-images.png)
+![shotbot preview images](/images/blogs/d47017b57f_67994a3c93bdb1ce79f4b601_shotbot-preview-images.png)
 
 Samples of colour themes in our Shotbot app.
 
@@ -43,7 +45,7 @@ At Oursky, we have a handful of designers. Most of them opt to do things in-hous
 
 ## Spend as Much Time Selling as You Do Developing
 
-![Samuel Zeller Unsplash](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3ca40b4f0f1fa97487_photo-1418225162054-0f773a996f9e-e1470295842641.jpeg)
+![Samuel Zeller Unsplash](/images/blogs/9aa25b0b62_67994a3ca40b4f0f1fa97487_photo-1418225162054-0f773a996f9e-e1470295842641.jpeg)
 
 Business Meeting – Photo cc Samuel Zeller via Unsplash
 
@@ -55,7 +57,7 @@ Make sure social media is embedded into your company. Have an online following b
 
 ## Borrow Liberally
 
-![SaaS tools Heroku Mailchimp Bitbucket GitHub Pablo Buffer](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3c96dda19f1d19a68d_Borrow-SaaS-Tools.jpeg)
+![SaaS tools Heroku Mailchimp Bitbucket GitHub Pablo Buffer](/images/blogs/65d4ef63fe_67994a3c96dda19f1d19a68d_Borrow-SaaS-Tools.jpeg)
 
 Great SaaS tools, free and paid!
 
@@ -63,7 +65,7 @@ With all the free tools out there today, don’t try to build things from scratc
 
 ## Build the Right Team
 
-![Team Talent Management Pablo Buffer](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3c974cebaa3edd8980_pablo-23.png)
+![Team Talent Management Pablo Buffer](/images/blogs/a2d5e52d2c_67994a3c974cebaa3edd8980_pablo-23.png)
 
 Created using Pablo Buffer, a free banner creation tool!
 
@@ -81,7 +83,7 @@ Accelerators provide a peer network, industry connections, and, of course, acces
 
 ## Products Don’t Always Need Funding
 
-![money pixelbay buffer pablo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994a3cba8a39e39eb91ebd_pablo-24.png)
+![money pixelbay buffer pablo](/images/blogs/9be6dc05fe_67994a3cba8a39e39eb91ebd_pablo-24.png)
 
 A lot of small teams think about investment before proof of concept. Success isn’t finding an investor. Success is defined by a proven revenue stream. The best way to start is either to have signups, users for your MVP, or better yet, actual transactions. The revenue stream is the strongest proof that your product has a market, and the investors will come.  Look for investors when you’re ready to scale up and can’t do so without capital funding to bring on talent. Bootstrap until you’re ready to scale. In the meantime,  make sure your savings can sustain you for at least 6 months. Also keep a line of credit available, even if you won’t use it.
 

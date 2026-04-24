@@ -3,13 +3,15 @@ title: "Better StackTrace for iOS crash report from Sentry on Slack"
 description: "Better StackTrace for iOS crash report from Sentry on Slack"
 pubDate: 2025-01-28
 author: "Rick Mak"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799276263cf1df864aa245e_dsym-cover.webp"
+categories:
+  - "code"
+displayCategory: "iOS"
+image: "/images/blogs/344043091f_6799276263cf1df864aa245e_dsym-cover.webp"
 draft: false
 webflowId: "6799278496bfcb295c64a8c4"
 ---
 
-![Slack dSYM bot for Sentry](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992770c2a101ee0fdf2c3b_dsym-cover.png)
+![Slack dSYM bot for Sentry](/images/blogs/8b1c7f43c0_67992770c2a101ee0fdf2c3b_dsym-cover.png)
 
 ## Get crash reports from Sentry
 
@@ -27,7 +29,7 @@ We thought we can upload dsym files and get symbolized information returned when
 
 Unfortunately, it is not the case:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927703068a4155692209f_sentry_github_issue.png)
+![](/images/blogs/0993c7d0a5_679927703068a4155692209f_sentry_github_issue.png)
 
 refs. https://github.com/getsentry/raven-objc/issues/11#issuecomment-84141003
 
@@ -47,7 +49,7 @@ Here we introduce a Slack bot that listens to Sentry notification and do all the
 
 1.  When a release is pushed to [Testflight](https://developer.apple.com/testflight/), it also pushes the respective dsym file to Slack.
 
-![Raw exception from Sentry](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927700e8fc967d6bbd659_exception_raw.png)
+![Raw exception from Sentry](/images/blogs/f53bf94db8_679927700e8fc967d6bbd659_exception_raw.png)
 
 Raw exception from Sentry
 
@@ -64,7 +66,7 @@ Raw exception from Sentry
             `0x000000010000003c (in spentable)`
 3.  Result (NB: Only related stack trace) will be posted to corresponding **Slack** channel (in this case _#spentable_)
 
-![De-symbolized stacktrace pushed in Slack channel ](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67992770f349eabfd48c8933_dsym_bot_result_simple.png)
+![De-symbolized stacktrace pushed in Slack channel ](/images/blogs/09966f9609_67992770f349eabfd48c8933_dsym_bot_result_simple.png)
 
 De-symbolized stacktrace pushed in Slack channel
 

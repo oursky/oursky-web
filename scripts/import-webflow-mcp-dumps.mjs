@@ -19,7 +19,10 @@ import TurndownService from 'turndown';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const CATEGORY_ID_TO_SLUG = {
+const DEFAULT_CATEGORY = 'engineering';
+
+/** Built from mcp-categories; legacy IDs never returned by a fresh list stay here */
+const HARDCODED_CATEGORY_ID_TO_SLUG = {
   '66e30461d41728ea83cc8655': 'authgear',
   '66e31d0b42c2789ea5940762': 'case-study',
   '66e341281744da707fec649f': 'code',
@@ -35,9 +38,12 @@ const CATEGORY_ID_TO_SLUG = {
   '66e14c4f6f1337844e464c70': 'ui-design',
 };
 
+let categoryIdToSlug = { ...HARDCODED_CATEGORY_ID_TO_SLUG };
+
 const turndown = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced' });
 turndown.addRule('removeEmptyP', {
-  filter: (node) => node.nodeName === 'P' && (node.textContent || '').trim() === '' && !node.querySelector('img'),
+  filter: (node) =>
+    node.nodeName === 'P' && (node.textContent || '').trim() === '' && !node.querySelector('img'),
   replacement: () => '',
 });
 
@@ -51,33 +57,77 @@ function yamlStr(value) {
   return `"${escaped}"`;
 }
 
+function yamlList(strs) {
+  return strs.map((s) => `  - ${yamlStr(s)}`).join('\n');
+}
+
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
-function pickCategorySlug(fieldData) {
-  const ref = fieldData['category-tags-2'];
-  if (Array.isArray(ref) && ref.length > 0) {
-    for (const id of ref) {
-      const s = CATEGORY_ID_TO_SLUG[id];
-      if (s) return s;
-    }
-  }
-  return 'engineering';
+/**
+ * @param {import('turndown').Node} node
+ */
+function isIFrame(node) {
+  return node && node.nodeName === 'IFRAME';
 }
+
+turndown.addRule('preserveIframes', {
+  filter: isIFrame,
+  replacement: (_c, el) => {
+    const n = el;
+    const src = n.getAttribute ? n.getAttribute('src') : '';
+    return src ? `\n<iframe src="${String(src)}" allowfullscreen loading="lazy" title="Embedded content"></iframe>\n\n` : '\n\n';
+  },
+});
 
 function htmlToMd(html) {
   if (!html || typeof html !== 'string') return '_Content not available._\n';
   return turndown.turndown(html).replace(/\n{3,}/g, '\n\n');
 }
 
-// ─── Categories ─────────────────────────────────────────────────────────────
+/**
+ * @param {Record<string, unknown>} fieldData
+ */
+function pickCategorySlugs(fieldData) {
+  const ref = fieldData['category-tags-2'];
+  if (!Array.isArray(ref) || ref.length === 0) {
+    return [DEFAULT_CATEGORY];
+  }
+  const seen = new Set();
+  const out = [];
+  for (const id of ref) {
+    if (typeof id !== 'string') continue;
+    const s = categoryIdToSlug[id];
+    if (!s) {
+      console.warn(`[blog] Unknown category ref id ${id} (add to Webflow or map)`);
+      continue;
+    }
+    if (seen.has(s)) continue;
+    seen.add(s);
+    out.push(s);
+  }
+  return out.length > 0 ? out : [DEFAULT_CATEGORY];
+}
+
+function readFeaturedFromExisting(filePath) {
+  if (!fs.existsSync(filePath)) return undefined;
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const m = raw.match(/(?:^|\n)featured:\s*(\d+)\s*(?:\n|$)/);
+  if (m) return parseInt(m[1], 10);
+  return undefined;
+}
+
+// ─── Categories (populates `categoryIdToSlug` and JSON files) ─────────────
 const catPath = path.join(ROOT, 'exports/webflow/mcp-categories.json');
 const blogDir = path.join(ROOT, 'src/content/categories');
 if (fs.existsSync(catPath)) {
   const { result } = readJson(catPath);
   for (const it of result.items) {
     const { name, slug } = it.fieldData;
+    if (it.id && typeof slug === 'string') {
+      categoryIdToSlug[it.id] = slug;
+    }
     const out = { slug, name, webflowId: it.id };
     const file = path.join(blogDir, `${slug}.json`);
     fs.writeFileSync(file, JSON.stringify(out, null, 2) + '\n', 'utf8');
@@ -99,7 +149,6 @@ const j2 = readJson(p2);
 const allPosts = [...j1.result.items, ...j2.result.items];
 const outBlog = path.join(ROOT, 'src/content/blog');
 let nBlog = 0;
-// Remove local seed post (not in Webflow CMS) before writing migrated posts
 const seed = path.join(outBlog, 'hello-world.md');
 if (fs.existsSync(seed)) {
   fs.unlinkSync(seed);
@@ -111,27 +160,39 @@ for (const it of allPosts) {
   if (!slug) continue;
   const bodyHtml = fd['blog-content'] || '';
   const md = htmlToMd(bodyHtml);
-  const category = pickCategorySlug(fd);
+  const categorySlugs = pickCategorySlugs(fd);
+  const displayCatRaw = fd.category;
+  const displayCategory =
+    typeof displayCatRaw === 'string' && displayCatRaw.trim() !== '' ? displayCatRaw.trim() : undefined;
+
   const desc = (fd['meta-description'] || '').trim() || fd.name;
   const pub = it.lastPublished ? it.lastPublished.split('T')[0] : '2024-01-01';
   const author = (fd.author || 'Oursky Team').trim() || 'Oursky Team';
   const thumb = fd.thumbnail;
   const image = thumb && typeof thumb === 'object' && thumb.url ? thumb.url : undefined;
   const imageAlt = thumb && thumb.alt ? thumb.alt : undefined;
+  const destPath = path.join(outBlog, `${slug}.md`);
+  const featured = readFeaturedFromExisting(destPath);
+
   const lines = [
     '---',
     `title: ${yamlStr(fd.name || slug)}`,
     `description: ${yamlStr(desc)}`,
     `pubDate: ${pub}`,
     `author: ${yamlStr(author)}`,
-    `category: ${yamlStr(category)}`,
+    'categories:',
+    yamlList(categorySlugs),
   ];
+  if (displayCategory) lines.push(`displayCategory: ${yamlStr(displayCategory)}`);
   if (image) lines.push(`image: ${yamlStr(image)}`);
   if (imageAlt) lines.push(`imageAlt: ${yamlStr(imageAlt)}`);
+  if (typeof featured === 'number') {
+    lines.push(`featured: ${featured}`);
+  }
   lines.push(`draft: ${it.isDraft ? 'true' : 'false'}`);
   lines.push(`webflowId: ${yamlStr(it.id)}`);
   lines.push('---', '', md, '');
-  fs.writeFileSync(path.join(outBlog, `${slug}.md`), lines.join('\n'), 'utf8');
+  fs.writeFileSync(destPath, lines.join('\n'), 'utf8');
   nBlog++;
 }
 console.log(`Wrote ${nBlog} blog markdown files.`);
@@ -167,10 +228,10 @@ if (fs.existsSync(worksMeta) && fs.existsSync(worksHtmlDir)) {
     lines.push(`draft: false`);
     lines.push(`webflowId: ${yamlStr(w.id)}`);
     lines.push('---', '', bodyMd, '');
-    fs.writeFileSync(path.join(outWorks, `${w.slug}.mdx`), lines.join('\n'), 'utf8');
+    fs.writeFileSync(path.join(outWorks, `${w.slug}.md`), lines.join('\n'), 'utf8');
     nWorks++;
   }
-  console.log(`Wrote ${nWorks} works MDX files.`);
+  console.log(`Wrote ${nWorks} works markdown files.`);
 } else {
   console.log('Skip works (works-html/ or works-metadata.json missing).');
 }

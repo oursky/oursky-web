@@ -1,0 +1,63 @@
+---
+title: "Cornerstone"
+description: "Cornerstone partners with Oursky to build the future of EV charging network."
+client: "Cornerstone"
+industry: "Technology"
+order: 0
+bgColor: '#512f60'
+heroImage: "/images/works/53b1ba91ba_66d09fb24e2a8b9549c35424_Animated phone mockup@2-1512x900 (8).png"
+thumbnail: "/images/works/a5241625a9_67f6930ea4da66d89e2681ec_cornerstone.png"
+draft: false
+webflowId: "66d09662a0d17da6fcc71c66"
+---
+
+## **From Fragmented Requirements to Flawless App: How Oursky Delivered for Cornerstone on a Tight Deadline**
+
+###### ‍
+
+##### Building the Future of EV Charging: A Collaborative Effort
+
+The electric vehicle (EV) industry is experiencing a period of rapid growth, driven by increasing environmental concerns and advancements in battery technology. Cornerstone Technology, a Hong Kong-based innovator, is at the forefront of this revolution, providing comprehensive EV charging solutions that integrate software and hardware. Their vision extends beyond individual consumers, offering white-label services to businesses and government agencies.
+
+‍
+
+*   **Comprehensive EV Charging Solutions:** Cornerstone Technology's offerings are not limited to just hardware. They provide a holistic solution that includes integrated software, allowing for a seamless user experience. This software component manages various aspects of the charging process, such as station availability, real-time charging status, and secure payment options.
+*   **Empowering Businesses and Governments:** Cornerstone recognizes the crucial role businesses and governments play in facilitating the widespread adoption of EVs. Through their white-label services, they offer customized EV charging solutions that can be seamlessly integrated into existing infrastructure. This empowers businesses and governments to offer convenient and reliable charging options to their customers and citizens.
+
+‍
+
+##### Overcoming Hurdles: Delivering a User-Friendly Mobile App on a Tight Schedule
+
+‍
+
+Cornerstone Technology presented Oursky with a seemingly insurmountable challenge: developing a mobile app frontend for their EV charging platform within a tight deadline. "Further complicating matters, Our initial requirements were scattered due to busy internal teams," said CK Lee, Engineering Manager at Cornerstone Technology. "To overcome these hurdles and deliver a successful product, Oursky's team needed to combine their expertise in project management, user experience (UX) design, and agile development methodologies."
+
+‍
+
+*   **Project Management Expertise:** Oursky's experienced project manager played a critical role in navigating these initial challenges. They employed a meticulous approach to gather and consolidate Cornerstone's requirements. Fragmented ideas were transformed into a well-organized product specification, ensuring clarity and saving valuable time. This streamlined communication and ensured everyone involved was working towards the same goals.
+*   **Agile Development for Efficiency:** Leveraging their agile development methodology, Oursky fostered a collaborative and iterative development process. This approach allowed for continuous feedback loops and adjustments based on Cornerstone's input. The agile approach ensured the project remained on track, prioritizing the most critical features first and adapting to changing needs throughout the development cycle.
+*   **User-Centric Design for an Exceptional Experience:** Understanding the importance of user experience (UX), Oursky's design team prioritized creating an intuitive and user-friendly mobile app interface. They focused on features that would make the app easy to navigate and understand, even for users unfamiliar with EV charging technology. This focus on UX resulted in a mobile app frontend that exceeded expectations, receiving positive customer feedback for its seamless functionality and intuitive design.
+
+‍
+
+![\_\_wf\_reserved\_inherit](/images/works/637c69f9b4_66d6a0c23b50241e10c802b9_66d6a0bdd800e5113a11fba8_cstl-2.png)
+
+‍
+
+##### **A Client's Perspective: A Strong Recommendation for Efficiency and User Experience**
+
+‍
+
+"I am very impressed with Oursky's capabilities and their ability to deliver under pressure. While the initial tight deadline necessitated outsourcing just the mobile app frontend, I am confident in Oursky's potential to handle full-project development in the future. For businesses that prioritize user experience and efficient workflows, I highly recommend Oursky's expertise in these areas." said CK Lee.
+
+‍
+
+‍
+
+##### **A Look Ahead: A Promising Partnership**
+
+‍
+
+This successful project exemplifies Oursky's ability to deliver exceptional results under pressure, navigate complex requirements, and prioritize user experience. The established trust and positive experience pave the way for a long-lasting partnership between Oursky and Cornerstone. As Cornerstone continues to revolutionize the EV charging landscape, Oursky stands ready to support their vision with innovative and user-centric solutions, potentially expanding their collaboration to encompass full-project development in the future.
+
+‍

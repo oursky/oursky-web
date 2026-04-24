@@ -3,13 +3,15 @@ title: "Catch bugs systematically: how to build a GitLab CI testing pipeline in 
 description: "Catch bugs systematically: how to build a GitLab CI testing pipeline in 4 steps"
 pubDate: 2025-01-28
 author: "Joyz Ng"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799400294397904b35e88a7_1A4gQU4Mtnz0YVNrl8pCwXg.webp"
+categories:
+  - "qa"
+displayCategory: "Software Testing"
+image: "/images/blogs/d3d6e43ab5_6799400294397904b35e88a7_1A4gQU4Mtnz0YVNrl8pCwXg.webp"
 draft: false
 webflowId: "6799403618fcc7842c33fa20"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679940103f5394ebd2ec557c_1A4gQU4Mtnz0YVNrl8pCwXg.png)
+![](/images/blogs/7b0d62c249_679940103f5394ebd2ec557c_1A4gQU4Mtnz0YVNrl8pCwXg.png)
 
 Your first app is a hit the day it’s launched. But one week later, you realize that it has no retention. You discover that this is because whenever a user clicks the “send” button, their comments get posted twice.
 
@@ -38,7 +40,7 @@ I have set up the whole system with these free and open-source tools:
 *   [Gitlab CI](https://about.gitlab.com/gitlab-ci/) — to trigger, build and run the test upon code updates
 *   [Skygear](https://skygear.io/) — to save test result for report on demand
 
-![Handwritten Architecture](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994010630cdc3cd65c3f42_13HCwOHLXPebHuA-2oe_FMA.jpeg)
+![Handwritten Architecture](/images/blogs/e53a8c794d_67994010630cdc3cd65c3f42_13HCwOHLXPebHuA-2oe_FMA.jpeg)
 
 Setting up takes 4 steps. Here we go!
 
@@ -79,7 +81,7 @@ Then, we will also install the Selenium package inside the container. Not all pr
 
 We create a Dockerfile, build the image and upload to our [Docker Cloud](https://cloud.docker.com/).
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994010288cf7532d8d97da_16O2QhCEpjoALjK1nzo0N7g.png)
+![](/images/blogs/655952ce6f_67994010288cf7532d8d97da_16O2QhCEpjoALjK1nzo0N7g.png)
 
 You could find this image through [this link](https://hub.docker.com/r/joyzoursky/python-chromedriver/), or directly pull this image with this command:
 
@@ -103,7 +105,7 @@ Note that there are 2 stages of the build process in this example: `test` and `r
 
 Go to the Pipelines page to see the flow and completion here:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994010630cdc3cd65c3f2e_1yEi8rtmbGz0JYottZ188oA.png)
+![](/images/blogs/597c5580ac_67994010630cdc3cd65c3f2e_1yEi8rtmbGz0JYottZ188oA.png)
 
 So where do we run our tests actually?
 
@@ -115,13 +117,13 @@ It shows the container name running on Digital Ocean.
 
 Of course, you can also create your specific runners to run the test on your self-hosted machines. GitLab supports runners on different platforms including Docker and Kubernetes. But, as GitLab is a new platform, it goes through many updates. So the specific runners may sometimes break when they are out-of-date. You should always refer to the [official repository](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/tree/master) when configuring the setup.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31036301d32ee6856cfc2_image-placeholder.svg)
+![](/images/blogs/dd8c2a1ce0_66e31036301d32ee6856cfc2_image-placeholder.svg)
 
 ## Step #4: Run and report periodically
 
 You may want to have your tests run periodically. You can achieve this by setting up [cron jobs](https://en.wikipedia.org/wiki/Cron), but you may not want to set up a server just to run a one-line cron job. My company’s open source serverless back-end is [Skygear](https://skygear.io/). We can use it to write a simple cloud code function with the [@every decorator](https://docs.skygear.io/guides/cloud-function/scheduled-tasks/python/) and trigger the test pipeline on an interval of time.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994010cfc0649858c63e76_1yuASEuatDfLkSD3sfmKaqA.png)
+![](/images/blogs/0a5d74ab6e_67994010cfc0649858c63e76_1yuASEuatDfLkSD3sfmKaqA.png)
 
 *   Login to your [Skygear portal](https://portal.skygear.io/)
 *   Find your Cloud Code Git URL
@@ -139,7 +141,7 @@ Finally, we can have the test result alerts sent on demand.
 
 P.S. We use [Slack real time messaging API](https://api.slack.com/rtm) to do the reporting, so we can receive notifications in the corresponding project channels.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994010d64c3ca1edc97ee0_1xHr_ezmVEBYRVZ4oOLJq3Q.png)
+![](/images/blogs/d6646dcba6_67994010d64c3ca1edc97ee0_1xHr_ezmVEBYRVZ4oOLJq3Q.png)
 
 ## Conclusion
 

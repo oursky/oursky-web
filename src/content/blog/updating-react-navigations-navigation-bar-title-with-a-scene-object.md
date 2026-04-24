@@ -3,8 +3,10 @@ title: "Updating React Navigation’s navigation bar title with a scene object"
 description: "Updating React Navigation’s navigation bar title with a scene object"
 pubDate: 2025-01-28
 author: "YinYin Chiu"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994096d64c3ca1edc9ecf9_react-navigation.webp"
+categories:
+  - "development"
+displayCategory: "React Native"
+image: "/images/blogs/3e5f64d58e_67994096d64c3ca1edc9ecf9_react-navigation.webp"
 draft: false
 webflowId: "679940dac88568be156f6109"
 ---
@@ -115,7 +117,7 @@ We then update the navigation bar content by calling `setParams` provided. Despi
 
 One of problems is your navigation bar may display the wrong content for a few milliseconds. Any navigation state update (navigation state is not shallow equal) will cause React Navigation to perform a transition. Calling `setParams` will update the navigation state and, hence, make React Navigation perform a transition. However, it only allows one view transition at one time and it only passes a new navigation state to the scene or navigation bar components after the transition is finished. Therefore, if you try to update your navigation bar in the `componentWillMount` of the scene component, your navigation bar may display the wrong content for a few milliseconds.
 
-![react navigation bar demo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679940aaa81a394a550ec431_set_param2-576x1024.gif)
+![react navigation bar demo](/images/blogs/45071ea397_679940aaa81a394a550ec431_set_param2-576x1024.gif)
 
 The flashing navigation bar title
 
@@ -291,7 +293,7 @@ To make it more easy to update – we wrap it up with the `enhanceScene` HOC (Hi
 
 ## Now we have a correct title in the navigation bar
 
-![React navigation bar web development](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679940aae3ba247ff38cfcfa_used_scene_exported-576x1024.gif)
+![React navigation bar web development](/images/blogs/19b31a7f1c_679940aae3ba247ff38cfcfa_used_scene_exported-576x1024.gif)
 
 We now have a tricky work around to the problem of displaying the title bar. Viola!
 

@@ -3,8 +3,10 @@ title: "How to Get into AI: Indie Developers Creating AI-Powered Digital Product
 description: "How to Get into AI: Indie Developers Creating AI-Powered Digital Products"
 pubDate: 2025-01-28
 author: "Oursky"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679958c202dbb8325ebd9f28_arif-wahid-266541-unsplash-768x513.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Machine Learning and AI"
+image: "/images/blogs/7f320b8ccb_679958c202dbb8325ebd9f28_arif-wahid-266541-unsplash-768x513.jpg"
 draft: false
 webflowId: "679958d2811eade87b6dd08f"
 ---
@@ -15,7 +17,7 @@ The tech industry has come a long way since we worked on our first AI project fo
 
 These got us to reflect on how AI has picked up in the past few years. The accessible libraries are freeing up entrepreneurial, indie, and freelance developers to think more about business ideas. Today’s technology landscape, too, are enabling developers to address business needs by creating new AI-powered applications and digital products.
 
-![AI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679958b239e78e0a9adccb60_arif-wahid-266541-unsplash-720x481.jpeg)
+![AI](/images/blogs/55757cef0c_679958b239e78e0a9adccb60_arif-wahid-266541-unsplash-720x481.jpeg)
 
 Photo by Arif Wahid on Unsplash
 
@@ -29,7 +31,7 @@ Some types of machine learning models/techniques, such as [convolutional neural 
 
 That all changed in the past couple of years. The hardware space has caught up, and it opened new opportunities for investment and commercialization.
 
-![convolutional neural networks](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679958b2fb2f61d134c67ffe_lenet.png)
+![convolutional neural networks](/images/blogs/661b194525_679958b2fb2f61d134c67ffe_lenet.png)
 
 image source: [World4Jason](https://world4jason.gitbooks.io/research-log/content/deepLearning/CNN/Model%20&%20ImgNet/lenet.html)
 
@@ -43,7 +45,7 @@ AI is picking up because the technology ecosystem has come together, including:
 *   Increased processing power (servers and consumer-grade processors) that helps with commercialization
 *   Cloud infrastructures that are now commonly used to store large quantities of business data (and thus have the potential to train machine learning models)
 
-![hong kong software development agency](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679958b2cc62a73f1f555c25_blog3-720x432.png)
+![hong kong software development agency](/images/blogs/e894232189_679958b2cc62a73f1f555c25_blog3-720x432.png)
 
 oursky’s open office in kowloon, hong kong
 
@@ -57,7 +59,7 @@ When we first started 12 years ago, only a handful of clients dared to try adopt
 
 Nowadays, Oursky has been getting more enquiries from IT or business departments and digital teams in large companies. They want to use AI, but they don’t have [a clear picture of how different types of AI capabilities can be applied](https://blog.oursky.com/2020/05/07/artificial-intelligence-ai-for-businesses-what-you-need-to-know-before-starting-an-ai-project/) to their existing applications.
 
-![tensorflow image classification](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679958b21400b35535245391_puller-matcher-720x516.jpeg)
+![tensorflow image classification](/images/blogs/75d8bd7523_679958b21400b35535245391_puller-matcher-720x516.jpeg)
 
 We used image classification to help a client identify matching stock to an image.
 

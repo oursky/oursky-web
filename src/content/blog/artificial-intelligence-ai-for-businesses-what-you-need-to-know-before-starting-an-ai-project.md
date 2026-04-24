@@ -3,13 +3,15 @@ title: "Artificial Intelligence (AI) for Businesses: What You Need to Know Befor
 description: "Artificial Intelligence (AI) for Businesses: What You Need to Know Before Starting an AI Project"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955367f3630483834515f_AI_cost_data_needed_for_development.jpeg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Machine Learning and AI"
+image: "/images/blogs/14bf3cd11e_679955367f3630483834515f_AI_cost_data_needed_for_development.jpeg"
 draft: false
 webflowId: "679955483fc1f3f920659a5c"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799550bbe2d1859c066e5fb_AI_cost_data_needed_for_development-1160x653.jpeg)
+![](/images/blogs/77caf47546_6799550bbe2d1859c066e5fb_AI_cost_data_needed_for_development-1160x653.jpeg)
 
 From virtual assistants, conversational chatbots, and self-learning smart cars to prediction engines, artificial intelligence (AI) is ubiquitously moving from research and development (R&D) labs to people’s homes, small businesses, and C-suite boardrooms. However, many still stumble when trying to adopt AI, often misled about what it is and what it’s capable of. Many are also [exploring](https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/ai-adoption-in-the-workforce.html) how to deploy AI, but don’t know where to start, what to expect, and how much an AI project could cost.
 
@@ -19,7 +21,7 @@ Here, we demystify and answer frequently asked questions about AI’s applicatio
 
 AI is the umbrella term of technologies for training machines to mimic human intelligence and behavior. This includes, but is not limited to, cognitive processing, language recognition, planning, reasoning, problem solving, and task execution. ML is the application of AI that involves feeding data to algorithms. These are then used by machines or systems to learn how to execute a task and identify patterns. You may have also heard of deep learning (DL) — a subset of ML that involves learning and extracting patterns, representations, or abstractions from data.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799550baaa47ef20a31cc53_ai-vs-ml-vs-dl-800x847.png)
+![](/images/blogs/8b43d00fb6_6799550baaa47ef20a31cc53_ai-vs-ml-vs-dl-800x847.png)
 
 Artificial intelligence vs. machine learning vs. deep learning
 
@@ -39,7 +41,7 @@ AI projects are only as good and successful as the data it uses. They require va
 
 AI could also reflect [biases](https://www.wired.com/story/ai-biased-how-scientists-trying-fix/) (e.g., racial, gender, cultural) embedded in datasets or by its programmers, which affects the outcome. Additionally, today’s AI is [not mature enough](https://www.kaspersky.com/blog/emotional-ai/31689/) to tackle intuitively complex tasks like emotion recognition or detection. Finding experts with the right skills to take on AI projects is also a challenge. In fact, this shortage of talent is [cited](https://www.ey.com/en_gl/news/2019/08/ey-study-ai-important-to-a-companys-success-but-lack-of-skilled-personnel-remains-a-barrier) as one of the major hurdles for C-suite executives from adopting AI in their organization.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799550a7db63d8307a5aea7_charles-deluvio-pjAH2Ax4uWk-unsplash-1160x773.jpeg)
+![](/images/blogs/92292aef6a_6799550a7db63d8307a5aea7_charles-deluvio-pjAH2Ax4uWk-unsplash-1160x773.jpeg)
 
 Photo by [Charles Deluvio](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -51,7 +53,7 @@ Some use pre-trained ML models or pre-built/off-the-shelf AI tools as a starting
 
 You can also build your own model from scratch. Customized models are ideal for unique business needs, such as a recommendation engine or prediction engines. This is useful for businesses who want to personalize customer experiences by suggesting and providing them relevant content or product, like how Netflix, Amazon, and [Starbucks](https://www.forbes.com/sites/bernardmarr/2018/05/28/starbucks-using-big-data-analytics-and-artificial-intelligence-to-boost-performance/#6628c73065cd) do. Bespoke models can also be used to gain insights and forecast outcomes. The ING Bank, for instance, [augments](https://www.forbes.com/sites/cognitiveworld/2019/08/20/ing-brings-ai-into-trading-with-project-katana/#33ab438a9bb3) their business intelligence capabilities with AI to help bonds traders with pricing decisions. Google Cloud, Amazon Web Services (AWS), and Microsoft’s Azure have their own AI platforms for developing custom models.
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955473fc1f3f920659973_6799552a39e78e0a9ad8ab10_SCR-20250128-tdge.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/ccfc81f1fb_679955473fc1f3f920659973_6799552a39e78e0a9ad8ab10_SCR-20250128-tdge.png)
 
 ‍
 
@@ -85,7 +87,7 @@ Obviously, it will take more significant time if you’re deploying an AI that w
 
 If you are pitching an AI project for your stakeholders, it’s also recommended to set their expectations. In fact, the time it took for surveyed companies to deploy an ML model averaged between [31 and 90 days](https://info.algorithmia.com/hubfs/2019/Whitepapers/The-State-of-Enterprise-ML-2020/Algorithmia_2020_State_of_Enterprise_ML.pdf). Larger businesses and enterprises tend to take more time deploying an ML model, although this doesn’t only have to do with company size, but also with their [readiness and maturity to adopt AI](https://www.idc.com/getdoc.jsp?containerId=prUS45344519).
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799550bea656d6e391bbd30_robynne-hu-HOrhCnQsxnQ-unsplash-1160x774.jpeg)
+![](/images/blogs/d755625f39_6799550bea656d6e391bbd30_robynne-hu-HOrhCnQsxnQ-unsplash-1160x774.jpeg)
 
 Photo by [Robynne Hu](https://unsplash.com/@robynnexy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

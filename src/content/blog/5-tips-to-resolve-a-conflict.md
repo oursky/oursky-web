@@ -3,13 +3,15 @@ title: "5 Tips to Resolve a Conflict"
 description: "5 Tips to Resolve a Conflict"
 pubDate: 2025-01-28
 author: "Sam Elsley"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994cfc36bc0d12791a3136_photo-1454165804606-c3d57bc86b40-720x481.jpeg"
+categories:
+  - "culture"
+displayCategory: "Culture"
+image: "/images/blogs/058ca99fcf_67994cfc36bc0d12791a3136_photo-1454165804606-c3d57bc86b40-720x481.jpeg"
 draft: false
 webflowId: "67994d2500afd2ad0dd4bf65"
 ---
 
-![Conflicts are fixed with conversations, not accusations. Image courtesy of Helloquence on Unsplash.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d0824c6856e26dc3164_photo-1454165804606-c3d57bc86b40-720x481.jpeg)
+![Conflicts are fixed with conversations, not accusations. Image courtesy of Helloquence on Unsplash.](/images/blogs/aacbce96a3_67994d0824c6856e26dc3164_photo-1454165804606-c3d57bc86b40-720x481.jpeg)
 
 Let’s face it; with the exception of maybe Bill O’Reilly, no one likes to argue. Be that as it may, that’s not to say we shouldn’t be prepared for conflict it does inevitably erupt. You and a co-worker are having a dispute over the assumptions and logic for your build? Your cat won’t stop lying down directly on top of your keyboard as you write this article ? How do you deal with it?
 
@@ -17,7 +19,7 @@ The answer is straight forward: conflict resolution. For people working in team-
 
 ## **Attack the problem, not the person**
 
-![Conflict Resolution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d0800afd2ad0dd475be_Oursky-stock-9513-720x478.jpeg)
+![Conflict Resolution](/images/blogs/d5556c673a_67994d0800afd2ad0dd475be_Oursky-stock-9513-720x478.jpeg)
 
 Critical feedback comes with jokes and smiles at Oursky.
 
@@ -27,7 +29,7 @@ One of Ourksy’s key values is [self-management](http://jobs.oursky.com/), and 
 
 ## **Repeat your arguer’s belief**
 
-![Conflict Resolution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d08ef50e0706c26afdc_photo-1471107340929-a87cd0f5b5f3-720x541.jpeg)
+![Conflict Resolution](/images/blogs/b6b38e1f63_67994d08ef50e0706c26afdc_photo-1471107340929-a87cd0f5b5f3-720x541.jpeg)
 
 For most people, visualizing a concept is much easier than trying to understand it from speech. Photo by [Aaron Burden](https://unsplash.com/@aaronburden) via Unsplash
 
@@ -37,7 +39,7 @@ Sometimes, even the basic principle of active listening and allowing other membe
 
 ## **Define the disagreement**
 
-![Conflict Resolution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d080ee0566331d50d3f_photo-1434626881859-194d67b2b86f-720x478.jpeg)
+![Conflict Resolution](/images/blogs/b88435557f_67994d080ee0566331d50d3f_photo-1434626881859-194d67b2b86f-720x478.jpeg)
 
 Keep focus on the task at hand by making keywords and concepts visible to your team at all times. Photo by [William Iven](https://unsplash.com/@firmbee) via Unsplash
 
@@ -45,7 +47,7 @@ Once it’s clear that the conflict is due to a disagreement as opposed to misco
 
 ## **Find a common ground, no matter how insignificant**
 
-![Conflict Resolution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d08974cebaa3ee0bcf8_Oursky-stock-9663-720x478.jpeg)
+![Conflict Resolution](/images/blogs/f22a8322b3_67994d08974cebaa3ee0bcf8_Oursky-stock-9663-720x478.jpeg)
 
 Oursky’s team calling it a week and getting serious in a foosball game!
 
@@ -57,7 +59,7 @@ At Oursky, we also like to provide opportunities for our team members to bond ou
 
 ## **Keep conflict transparent**
 
-![Conflict Resolution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994d0823af1a9d6bcf61c7_photo-1479292889369-1a48f234247e-587x720.jpeg)
+![Conflict Resolution](/images/blogs/b9c7fd7af0_67994d0823af1a9d6bcf61c7_photo-1479292889369-1a48f234247e-587x720.jpeg)
 
 Two pairs of eyes is better than one. Multiply that by ten, and you have the transparent environment fuelling Oursky’s team. Image courtesy of [Joel Filipe](https://unsplash.com/search/glass?photo=ZMRMFULofus) on Unsplash.
 

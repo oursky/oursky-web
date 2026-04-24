@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
 
@@ -7,7 +8,30 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, author, category, image, imageAlt } = post.data;
+const {
+  title,
+  description,
+  pubDate,
+  author,
+  image,
+  imageAlt,
+  categories,
+  ogTitle,
+  ogDescription,
+  ogImage: shareOgImage,
+  canonicalUrl,
+  twitterCard,
+} = post.data;
+
+const siteUrl = (import.meta.env.SITE ?? 'https://www.oursky.com').replace(/\/$/, '');
+const resolvedCanonical = canonicalUrl
+  ? /^https?:\/\//i.test(canonicalUrl)
+    ? canonicalUrl
+    : `${siteUrl}${canonicalUrl.startsWith('/') ? canonicalUrl : `/${canonicalUrl}`}`
+  : undefined;
+
+const allCategories = await getCollection('categories');
+const categoryNameBySlug = new Map(allCategories.map((c) => [c.data.slug, c.data.name]));
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -19,21 +43,30 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 <BaseLayout
   title={title}
   description={description}
-  ogImage={image}
+  canonical={resolvedCanonical}
+  ogImage={shareOgImage ?? image}
   ogType="article"
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterCard={twitterCard}
 >
-  <article class="max-w-[var(--max-w-content)] mx-auto px-[var(--spacing-page-x)] lg:px-[var(--spacing-page-x-lg)] py-16">
+  <article class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
     <header class="mb-10">
-      <div class="mb-4">
-        <a
-          href={`/blog-category/${category}`}
-          class="text-sm font-medium uppercase tracking-wider text-[var(--color-brand-primary)] hover:underline"
-        >
-          {category}
-        </a>
+      <div class="ml-5 max-sm:ml-0">
+        <p class="blog-badge inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">Blog</p>
       </div>
-      <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-4">{title}</h1>
-      <p class="text-[var(--color-brand-gray-500)]">
+      <h1 class="ml-5 max-sm:ml-0 text-[2rem] font-bold leading-footer text-black m-0 mb-4">{title}</h1>
+      <div class="ml-5 max-sm:ml-0 flex flex-wrap gap-1.5 mb-2">
+        {categories.map((slug) => (
+          <a
+            href={`/blog-category/${slug}`}
+            class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors hover:bg-accent no-underline"
+          >
+            {categoryNameBySlug.get(slug) ?? slug}
+          </a>
+        ))}
+      </div>
+      <p class="ml-5 max-sm:ml-0 text-sm text-text-muted m-0">
         {formattedDate} &middot; {author}
       </p>
     </header>
@@ -55,10 +88,19 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
       <slot />
     </div>
 
-    <footer class="mt-16 pt-8 border-t border-[var(--color-brand-gray-200)]">
-      <a href="/blog" class="text-[var(--color-brand-primary)] hover:underline font-medium">
+    <footer class="mt-16 pt-8 border-t border-border">
+      <a href="/blog" class="text-primary hover:underline font-medium">
         &larr; Back to Blog
       </a>
     </footer>
   </article>
 </BaseLayout>
+
+<style>
+  .blog-badge {
+    background-image: var(--gradient-page-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

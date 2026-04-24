@@ -3,8 +3,10 @@ title: "Want to make the deployment process less scary? Build ChatOps in Slack."
 description: "We set up 2 bots on Slack to assist the deployment process. Deployment with ChatOps cares the feelings of other team members (PM, QA and designers)"
 pubDate: 2024-09-12
 author: "Rick Mak"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346c9f05accda69fb3853_jamison-mcandie-112375-1024x683.jpg"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/f6137674db_66e346c9f05accda69fb3853_jamison-mcandie-112375-1024x683.jpg"
 draft: false
 webflowId: "66e346f791de74910e4b130f"
 ---
@@ -17,7 +19,7 @@ At [Oursky](www.oursky.com), our QA built an [automatic testing pipeline](https:
 
 ‍
 
-![oursky chatops](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dd7ad1467be493a2f0_chimadeploy-1024x378.png)
+![oursky chatops](/images/blogs/98288e194a_66e346dd7ad1467be493a2f0_chimadeploy-1024x378.png)
 
 Screenshot of our Slack bots, Chima and Faseng (the names of our resident office cats)\[/caption\]
 
@@ -25,7 +27,7 @@ Screenshot of our Slack bots, Chima and Faseng (the names of our resident office
 
 I adapted GitHub’s use of ChatOps for our deployment with Slack. GitHub’s open source chatbot ([_Hubot_](https://github.com/hubotio/hubot)) does automating deployment, graphing, monitoring, provisioning, tweeting, and many other things. GitHub even created MySQL database back-up jobs so they can do important operations without leaving the chatroom with a set of instructions.
 
-![hubot chatops github](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dd8f8db68d075fb48b_1-fVmXBn-azKd53zoYvKXqoQ.png)
+![hubot chatops github](/images/blogs/8d5d97e738_66e346dd8f8db68d075fb48b_1-fVmXBn-azKd53zoYvKXqoQ.png)
 
 ## The big picture of ChatOps deployment
 
@@ -37,7 +39,7 @@ This graph shows how deployment interactions would work via [Github](http://www.
 
 ‍
 
-![chatios-github](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346ddfe9a70fb69056942_chatios-github.png)
+![chatios-github](/images/blogs/27f67d917c_66e346ddfe9a70fb69056942_chatios-github.png)
 
 Reference: [https://developer.github.com/v3/repos/deployments/](https://developer.github.com/v3/repos/deployments/)\[/caption\]
 
@@ -47,7 +49,7 @@ _The core idea is summarized in this sentence:_
 
 `Talk to` **`Chima`**_`(CEO)`_`,` **`Faseng`**_`(CTO)`_ `will deploy.`
 
-![chatops-oursky](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346ddeb202f2127468b4a_chatops-oursky.png)
+![chatops-oursky](/images/blogs/f30ab9ffbe_66e346ddeb202f2127468b4a_chatops-oursky.png)
 
 ## Roles of the bots: Creating & executing
 
@@ -55,7 +57,7 @@ For each project, we set up respective deployment jobs with Faseng. It’s not o
 
 ‍
 
-![slack-overview](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dda67a72844cb9cbc0_slack-overview.png)
+![slack-overview](/images/blogs/e4f419f90b_66e346dda67a72844cb9cbc0_slack-overview.png)
 
 Screenshot of Chima and Faseng (our Slack bots)\[/caption\]
 
@@ -92,7 +94,7 @@ Deployment task creation and completion will send out notifications into the int
 
 ### 1\. Developers use it to deploy to the staging environment
 
-![rick-deploy](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dd149da2c91435e07a_rick-deploy.png)
+![rick-deploy](/images/blogs/0fe9106c17_66e346dd149da2c91435e07a_rick-deploy.png)
 
 Although we planned to use ChatOps to ease the difficulties for non-developers, it also benefits me as a developer.
 
@@ -102,7 +104,7 @@ To deploy using a chat command, I have to set up the environment settings at Chi
 
 ### 2\. QA can also deploy the latest version to the edge
 
-![qa-deploy](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dd2916a68fab4dddd8_qa-deploy.png)
+![qa-deploy](/images/blogs/4e447964cb_66e346dd2916a68fab4dddd8_qa-deploy.png)
 
 After each milestone, the QA team is responsible for performing functional tests, usability tests, and performance tests for the pre-deliverable software.
 
@@ -110,7 +112,7 @@ In this example, our QA engineer, [Joyz](https://medium.com/@joyzoursky), wants 
 
 ### 3\. Checking up the current jobs
 
-![travis-jobs](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e346dde47fbd9c170f879d_travis-jobs.png)
+![travis-jobs](/images/blogs/da1ef1cd46_66e346dde47fbd9c170f879d_travis-jobs.png)
 
 To see the current building jobs, _everyone_ who is relevant to the project can talk to Chima and check on the Travis building progress.
 

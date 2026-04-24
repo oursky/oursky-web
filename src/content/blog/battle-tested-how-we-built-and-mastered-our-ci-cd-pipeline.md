@@ -3,8 +3,11 @@ title: "Battle-Tested: How We Built and Mastered Our CI/CD Pipeline"
 description: "CI/CD are the pillars supporting DevOps. Here we shared our experience of how we built our own CI/CD pipeline and CI/CD best practices."
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3161c5b6c8148f69000a2_sticky-note-to-ship-code-1160x773.jpg"
+categories:
+  - "engineering"
+  - "development"
+displayCategory: "ENGINEERING"
+image: "/images/blogs/ad4db53205_66e3161c5b6c8148f69000a2_sticky-note-to-ship-code-1160x773.jpg"
 draft: false
 webflowId: "66e3168984da8b61bfa46225"
 ---
@@ -27,9 +30,9 @@ In the age of digital transformation, optimizing software development and delive
 
 ### What is CI/CD?
 
-![traditional software development flow](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31642a63888d6745ebdaf_image-1160x553.png)
+![traditional software development flow](/images/blogs/7359805e65_66e31642a63888d6745ebdaf_image-1160x553.png)
 
-![ci/cd workflow in devops](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31642c25e4f9bebe04a36_image-1-1160x571.png)
+![ci/cd workflow in devops](/images/blogs/e3401c5e83_66e31642c25e4f9bebe04a36_image-1-1160x571.png)
 
 [CI](https://en.wikipedia.org/wiki/Continuous_integration) refers to continuous integration. It aims to reduce integration overhead by continuously integrating all works within a team to one shared repository. It is usually worked out by automated building processes.
 
@@ -47,7 +50,7 @@ Automation sounds good and efficient. However, compared to the traditional proce
 
 ## What are the benefits of CI/CD?
 
-![ci/cd benefits](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31642b31769643249e05c_image-4-1160x774.png)
+![ci/cd benefits](/images/blogs/9d168d4eb5_66e31642b31769643249e05c_image-4-1160x774.png)
 
 SOURCE: [NICOLE DE KHORS](https://burst.shopify.com/@ndekhors) VIA BURST
 
@@ -87,7 +90,7 @@ Before reaping these benefits, a well-established CI/CD pipeline is required. Yo
 
 ## How do we run a CI/CD pipeline in daily operations?
 
-![ci/cd devops cycle](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e316425b6c8148f69024b9_image-3.png)
+![ci/cd devops cycle](/images/blogs/cec518ea82_66e316425b6c8148f69024b9_image-3.png)
 
 A TYPICAL DEVOPS CYCLE
 
@@ -128,7 +131,7 @@ In a typical DevOps cycle, CI is usually integrated into coding, building, and t
 
 _In case you’re interested in our deployment process, we also use_ [_Skygear_](https://skygear.io/) _to deploy. Uploading server code and deploying Lambda functions could be completed with just one simple command. Just type “skycli” and it’s done!_
 
-![ci/cd flow](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e316420f61c080a27843cf_image-2-1160x1131.png)
+![ci/cd flow](/images/blogs/76b1349157_66e316420f61c080a27843cf_image-2-1160x1131.png)
 
 You may have noticed that lots of tools we are using are open-source projects. What does it imply?
 
@@ -138,7 +141,7 @@ We didn’t spend a fortune to set up our CI/CD pipeline, and you don’t need t
 
 ## How do you plan for implementing CI/CD?
 
-![adopting ci/cd](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e316413b9bbe235e7c8c44_image-6-1160x773.png)
+![adopting ci/cd](/images/blogs/453a191beb_66e316413b9bbe235e7c8c44_image-6-1160x773.png)
 
 SOURCE: [DIGGITY MARKETING](https://diggitymarketing.com/white-hat-seo-techniques/) VIA [UNSPLASH](https://unsplash.com/photos/s8HyIEe7lF0)
 
@@ -172,7 +175,7 @@ In fact, setting up a CI/CD pipeline is not technically difficult. The most diff
 
 ## Best Practices We Adopted to Optimize CI/CD
 
-![ci/cd best practices](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31641d3319a04e8c5eac3_image-7-1160x805.png)
+![ci/cd best practices](/images/blogs/6eafccc906_66e31641d3319a04e8c5eac3_image-7-1160x805.png)
 
 SOURCE: [TEROVESALAINEN](https://pixabay.com/users/TeroVesalainen-809550/) VIA PIXABAY
 
@@ -214,7 +217,7 @@ In our CI/CD pipeline, we [use Docker for automated tests to improve QA](https:/
 
 ## One Step Closer to DevOps
 
-![ci/cd devops work](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e316420f61c080a2784408_image-5-1160x773.png)
+![ci/cd devops work](/images/blogs/2d3d81056d_66e316420f61c080a2784408_image-5-1160x773.png)
 
 SOURCE: [MATTHEW HENRY](https://burst.shopify.com/@matthew_henry) VIA BURST
 

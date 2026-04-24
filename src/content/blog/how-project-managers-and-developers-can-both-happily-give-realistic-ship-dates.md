@@ -3,13 +3,16 @@ title: "How project managers and developers can both (happily!) give realistic s
 description: "How we implemented Fog Creek's evidence-based scheduling (EBS) to verify our PM and developer estimation accuracy for better software project maangement."
 pubDate: 2025-01-28
 author: "Roy Yuen"
-category: "product-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31465e154677cd314f180_Oursky-perks-9510-720x478.jpg"
+categories:
+  - "product-management"
+  - "development"
+displayCategory: "Product Management"
+image: "/images/blogs/be84151240_66e31465e154677cd314f180_Oursky-perks-9510-720x478.jpg"
 draft: false
 webflowId: "66e314add2bf9fc097393d8a"
 ---
 
-![Evidence based scheduling EBS fog creek joel on software](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144dc5c78539d58ff4c8_1*I0MCeRgbNi2aHiuxUtD-cg.png)
+![Evidence based scheduling EBS fog creek joel on software](/images/blogs/046dcb0a1f_66e3144dc5c78539d58ff4c8_1_I0MCeRgbNi2aHiuxUtD-cg.png)
 
 SOURCE: FOG CREEK
 
@@ -27,7 +30,7 @@ But the emphasis is not on OCD time tracking tools — we trust our develope
 Besides what Fog Creek mentions in their [EBS blog post](https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/), here’s what we learned in our implementation.  
 **Break down projects into less than 2-day tasks**
 
-![Evidence based scheduling formula fog creek](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144d2718891a812b5746_EBS-velocity-log-template-oursky.png)
+![Evidence based scheduling formula fog creek](/images/blogs/ad82ff7e1a_66e3144d2718891a812b5746_EBS-velocity-log-template-oursky.png)
 
 A TEMPLATE FOR OUR GOOGLE SPREADSHEET FOR EBS
 
@@ -44,7 +47,7 @@ Our PMs help find the sweet spot: they give their developers enough time to arch
 
 ## Tracking elapsed time
 
-![Toggl free time tracker](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144dc17092ac927ab21e_1*EmFTOYBD2bZZdqnNQ3FOpg.png)
+![Toggl free time tracker](/images/blogs/a770dfea20_66e3144dc17092ac927ab21e_1_EmFTOYBD2bZZdqnNQ3FOpg.png)
 
 SOURCE: TOGGL
 
@@ -59,7 +62,7 @@ The goal with tracking is not to become faster for the sake of it. **The goal of
 
 ## Factoring developer estimates into project estimates
 
-![evidence based scheduling software development](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144d3cbc0064c74b7d92_Oursky-EBS-software-project-management-template.png)
+![evidence based scheduling software development](/images/blogs/ab6923fe97_66e3144d3cbc0064c74b7d92_Oursky-EBS-software-project-management-template.png)
 
 A TEMPLATE FOR OUR GOOGLE SPREADSHEET FOR EBS
 
@@ -72,7 +75,7 @@ It just goes to show that evidence is even better than experience.
 
 ## Other EBS observations and learnings
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144c25c887370b875520_1*RR8oubeQOm63YN90Uth0CA.jpeg)
+![](/images/blogs/25cf0bb6a5_66e3144c25c887370b875520_1_RR8oubeQOm63YN90Uth0CA.jpeg)
 
 PHOTO BY NEONBRAND VIA UNSPLASH
 
@@ -90,7 +93,7 @@ EBS has confirmed that software development is a probability.
 
 ## Final thoughts
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3144c25c887370b87551c_1*UAxIYFZyxxfhOwscbRcgCg.jpeg)
+![](/images/blogs/3564f42bb7_66e3144c25c887370b87551c_1_UAxIYFZyxxfhOwscbRcgCg.jpeg)
 
 PHOTO BY FELIX PLAKOLB VIA UNSPLASH
 

@@ -3,13 +3,15 @@ title: "Spentable (Expense Tracker): How we built our first app for watchOS "
 description: "Spentable (Expense Tracker): How we built our first app for watchOS "
 pubDate: 2025-01-28
 author: "David Ng"
-category: "development"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927bf2f1ef50b24d3cdc0_spentable-cover-sf.webp"
+categories:
+  - "development"
+displayCategory: "iOS"
+image: "/images/blogs/b760c0c815_679927bf2f1ef50b24d3cdc0_spentable-cover-sf.webp"
 draft: false
 webflowId: "679927d0ed5f0f3cde9b7165"
 ---
 
-![Spentable: How we built our first app for watchOS 2](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b522b26797a0d771f8_spentable-cover-sf.png)
+![Spentable: How we built our first app for watchOS 2](/images/blogs/598c8ab9a0_679927b522b26797a0d771f8_spentable-cover-sf.png)
 
 In [WWDC2015](https://developer.apple.com/videos/wwdc/2015/), Apple announced iOS 9 for iPhone and watchOS 2 for iWatch. It has been a huge revamp for [watchOS](https://developer.apple.com/watchos/). Not until now, a watch app finally runs **natively** on the watch.
 
@@ -18,20 +20,20 @@ That means the code is now executing on your watch instead of the phone. By redu
 **watchOS 1**  
 _WatchKit Extension runs on the phone and the Watch App is more like a display console for your app._
 
-![watchOS 1](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b5b3777f25b2bd07f0_os_1_extension.png)
+![watchOS 1](/images/blogs/9357aeec8f_679927b5b3777f25b2bd07f0_os_1_extension.png)
 
 watchOS 1
 
 **watchOS 2**  
 _WatchKit Extension now runs on the watch, you don’t have to run a watch app with the phone connected actively._
 
-![watchOS 2](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b5efdae8b2b914781d_os_2_extension.png)
+![watchOS 2](/images/blogs/ac383a22a6_679927b5efdae8b2b914781d_os_2_extension.png)
 
 watchOS 2
 
 ## Spentable: our first app on the watch
 
-![Spentable Watch Face](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b562f31298ce770e12_spentable-glance-face.png)
+![Spentable Watch Face](/images/blogs/e98abb9f8e_679927b562f31298ce770e12_spentable-glance-face.png)
 
 [Oursky](http://www.oursky.com/)
 
@@ -43,7 +45,7 @@ In this post, we will talk about the experience on building an app for watchOS 2
 
 > **Since the watch app is now running on the watch as a native extension, there are situation we need to handle data sync between the phone and the watch. For example, we wish expense input via the watch will be reflected on the phone instantly.**
 
-![wireless](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b5eacc37f13899f66d_wireless.png)
+![wireless](/images/blogs/89dbe7aa8c_679927b5eacc37f13899f66d_wireless.png)
 
 ## Get connected to the phone: Watch Connectivity Framework
 
@@ -109,7 +111,7 @@ TableViews are handled differently than we often do in an iPhone app. Instead of
 
 A MainRowType object is just an NSObject that holds the icon and row description itself. Then we can config each row according to the the properties in each MainRowType. For example, we have defined `WatchMonthlyExpenseRowType` as such:
 
-![WatchMonthlyExpenseRowType](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b508f9d71df7e6b98a_spentable-rowtype.png)
+![WatchMonthlyExpenseRowType](/images/blogs/5b4e3b317d_679927b508f9d71df7e6b98a_spentable-rowtype.png)
 
 WatchMonthlyExpenseRowType
 
@@ -121,7 +123,7 @@ Please let us know your thoughts via comment below or our [Twitter](http://www.t
 
 ## Get Spentable. Get the love of your life.
 
-![Spentable at AppStore](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679927b515958e6f60acd02d_Spentable-at-Appstore.png)
+![Spentable at AppStore](/images/blogs/a25b7c910c_679927b515958e6f60acd02d_Spentable-at-Appstore.png)
 
 [Spentable](https://itunes.apple.com/us/app/spentable/id500630565?mt=8) is now available on the AppStore. Please give it a try!  
 Give us any valuable feedback, this would help us make Spentable better for you.

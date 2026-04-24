@@ -3,8 +3,11 @@ title: "AI vs Human: Test Case Generation"
 description: "We have done a small experiment, to ask ChatGPT to draft some test scenarios for a sample app, and compare the results with those written by a real human tester. The app will have authentication functions such as Sign Up, Sign In, Email Verification, Forgot Password, and Sign Out. Let’s see how it turns out, no cheating!"
 pubDate: 2025-02-07
 author: "Joyz Ng"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e300c2bdcd1bb946551a3f_8137885-scaled.jpg"
+categories:
+  - "qa"
+  - "machine-learning-and-ai"
+displayCategory: "Software QA"
+image: "/images/blogs/8110973e01_66e300c2bdcd1bb946551a3f_8137885-scaled.jpg"
 draft: false
 webflowId: "66e301057ff06c7c48de9e3c"
 ---
@@ -19,7 +22,7 @@ Below we have done a small experiment, to ask ChatGPT to draft some test scenari
 
 ‍
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e300e40e6e153a4cc546d5_8137885-1160x652.jpeg)
+![](/images/blogs/181062c4b9_66e300e40e6e153a4cc546d5_8137885-1160x652.jpeg)
 
 In the experiment, we will only give 1 short question to both ChatGPT and the human tester, without explanation or examples ahead, let’s see what they will show us from scratch:
 

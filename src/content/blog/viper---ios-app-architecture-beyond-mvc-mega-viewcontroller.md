@@ -3,8 +3,10 @@ title: "VIPER – iOS App Architecture Beyond MVC (Mega-ViewController)"
 description: "The MVC Architecture is generally used in developing iOS applications.However the “ViewController” approach widely used is the most evil part that messes up Views and Controllers: Developer writes both view animation and business logic in the UIViewController, hence introducing a MEGA-ViewController.In this passage, we will share our experience on how VIPER saves our lives from this monster in one of our projects."
 pubDate: 2025-02-07
 author: "David Ng"
-category: "code"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2c371a8b4b3fe0c235c3_viper-.png"
+categories:
+  - "code"
+displayCategory: "Code"
+image: "/images/blogs/404d12a10d_673e2c371a8b4b3fe0c235c3_viper-.png"
 draft: false
 webflowId: "673e2c545b10a93fb3c7a09c"
 ---
@@ -25,7 +27,7 @@ VIPER is not a framework  but an approach to iOS application architecture, whic
 
 ## **The “MVC” monster**
 
-![mega-viewcontroller monster](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924090c1b6110b87cc009_673e2c1ef6d8866fd1b57af6_mega-vc-1024x604.jpeg)
+![mega-viewcontroller monster](/images/blogs/92af61c51c_679924090c1b6110b87cc009_673e2c1ef6d8866fd1b57af6_mega-vc-1024x604.jpeg)
 
 Typical **Model** objects are simple, they are just [NSManagedObject](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/CoreDataFramework/Classes/NSManagedObject_Class/index.html).
 
@@ -41,7 +43,7 @@ The resulting ViewController actually violates the original MVC design that _vie
 
 VIPER is an architecture based on the Single Responsibility Principle. There are several components working together to build up the application flow.
 
-![viper-layout](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924090c1b6110b87cc00e_673e2c1e8b9b46101fb646fa_viper-layout.png)
+![viper-layout](/images/blogs/1a92d327e6_679924090c1b6110b87cc00e_673e2c1e8b9b46101fb646fa_viper-layout.png)
 
 #### VIEW
 
@@ -67,7 +69,7 @@ When the presenter receives user interactions and decided to navigate to another
 
 ## **What does VIPER help us achieve?**
 
-![viper-monster](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924090c1b6110b87cc01a_673e2c255834a7e156a6de0f_viper-monster-1024x583.jpeg)
+![viper-monster](/images/blogs/5071c59ee9_679924090c1b6110b87cc01a_673e2c255834a7e156a6de0f_viper-monster-1024x583.jpeg)
 
 If MVC is a mega-monster that troubles you, VIPER is a little-monster-collection that aids you in building iOS apps – in a more delightful and controllable way.
 
@@ -85,9 +87,9 @@ At the first time the app launch, we have a **SignupViewController** as the root
 
 #### **View**
 
-![app-login](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924090c1b6110b87cc011_673e2c1e094173ab4139c204_app-login-577x1024.jpeg)
+![app-login](/images/blogs/4352010fbd_679924090c1b6110b87cc011_673e2c1e094173ab4139c204_app-login-577x1024.jpeg)
 
-![app-signup](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679924090c1b6110b87cc017_673e2c1e770dc3fd276e013f_app-signup-577x1024.jpeg)
+![app-signup](/images/blogs/f1b6438bdf_679924090c1b6110b87cc017_673e2c1e770dc3fd276e013f_app-signup-577x1024.jpeg)
 
 #### Presenter
 

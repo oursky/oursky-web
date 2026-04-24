@@ -3,13 +3,15 @@ title: "Offline-First: No More Network Connection Error"
 description: "Offline-First: No More Network Connection Error"
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "ui-design"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799295d0330a30a262a0d8a_903F4B0.jpg.png"
+categories:
+  - "ui-design"
+displayCategory: "UX/UI Design"
+image: "/images/blogs/3c3d3be8a2_6799295d0330a30a262a0d8a_903F4B0.jpg.png"
 draft: false
 webflowId: "679929900bbcd75afaa4492e"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296e778d40c8eb350dd6_903F4B0.jpg.png)
+![](/images/blogs/9617ad0a04_6799296e778d40c8eb350dd6_903F4B0.jpg.png)
 
 The Internet seems to be always available nowadays. Thanks to the mobility of phones and tablets, mobile app developers can design their apps with a variety of features that assume the Internet connection _is stable_ and let users experience tithe unleash the power of the convenient and efficient network services. Social media apps such as Facebook, WhatsApp and Instagram are good examples. However, how would theses apps function when there is no stable internet connection?
 
@@ -63,15 +65,15 @@ Let’s take Facebook (Android version) as an example, we conducted a simple off
 
 Most of the pages displayed a ‘Can’t connect’ message or ‘Tap to Retry’ button. Though some other pages stuck in the loading state, the main page notification is good enough to notify the users to check the internet connection.
 
-![Facebook offline interface](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296f467318490e1f0a78_Screenshot_2015-10-14-16-59-08-576x1024.png)
+![Facebook offline interface](/images/blogs/bfe1063e15_6799296f467318490e1f0a78_Screenshot_2015-10-14-16-59-08-576x1024.png)
 
 A bar with “Can’t connect right now.” shown at the bottom. What’s more, they have a “Retry” button at the bottom right-hand corner.
 
-![offline UI is important](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296e0bbcd75afaa42c3e_Screenshot_2015-10-14-17-02-56-576x1024.png)
+![offline UI is important](/images/blogs/3f8ab04be7_6799296e0bbcd75afaa42c3e_Screenshot_2015-10-14-17-02-56-576x1024.png)
 
 An error message with “Tap to Retry” in the middle of a major session
 
-![Facebook does a great job on the offline UI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296f40dd8a07dca899cd_Screenshot_2015-10-14-16-59-37-576x1024.png)
+![Facebook does a great job on the offline UI](/images/blogs/521b0e6ce8_6799296f40dd8a07dca899cd_Screenshot_2015-10-14-16-59-37-576x1024.png)
 
 Error message appears in another main page
 
@@ -79,13 +81,13 @@ The other pop hit mobile game “Pokemon GO” sets a bad example.  We conducte
 
 When we shut down the network during catching wild Pokemon, there is a message shown on the top “GPS signal not found”.
 
-![Pokemon - GPS signal not found.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296e0c0cbb9edb1f3012_IMG_5977-576x1024.png)
+![Pokemon - GPS signal not found.](/images/blogs/566ef34cc3_6799296e0c0cbb9edb1f3012_IMG_5977-576x1024.png)
 
 Notifying your users their internet problem is a very basic requirement you need to meet.
 
 However, after we re-connect the network. The top bar disappeared but the interface was stuck there. The app did not “retry” after the app re-connected to the internet. This kind of mistakes disappoints your users a lot.
 
-![Pokemon - Online-first design sucks](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296fc784dff69b087abf_IMG_5978-576x1024.png)
+![Pokemon - Online-first design sucks](/images/blogs/4cf6fd7164_6799296fc784dff69b087abf_IMG_5978-576x1024.png)
 
 Where is my wild pokemon? What should I do with such interface?
 
@@ -95,7 +97,7 @@ Most of the time static information will be downloaded and stored locally during
 
 Google Maps is always a caring service and makes good use of the static cache technique. Considering people using Google Map usually move around. The internet connection can be very unstable. Google Maps designed lots of offline functions.
 
-![Google Map makes good use of state cache](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296eb90ead80822bf1d4_IMG_0362-1-2-576x1024.png)
+![Google Map makes good use of state cache](/images/blogs/29656e2b75_6799296eb90ead80822bf1d4_IMG_0362-1-2-576x1024.png)
 
 Static cache lets user browse your app happily even the network sucks
 
@@ -111,11 +113,11 @@ This technique is widely adopted in most of the games and social media apps such
 
 The following example, Bindle, adopted the dynamic cache technique. From the screenshot below, users can still view their groups as well as the stored messages while they turned on the airplane mode. This is common, even basic, for social media services.
 
-![Dynamic Cache](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296e55cb8a7bec12ef25_IMG_0379-1-1-576x1024.png)
+![Dynamic Cache](/images/blogs/90bae9c75a_6799296e55cb8a7bec12ef25_IMG_0379-1-1-576x1024.png)
 
 You can browse the app during airplane mode
 
-![Bindle makes good use of dynamic cache](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799296f40dd8a07dca899db_IMG_0378-1-576x1024.png)
+![Bindle makes good use of dynamic cache](/images/blogs/0380ef25d1_6799296f40dd8a07dca899db_IMG_0378-1-576x1024.png)
 
 You can read messages during offline mode. This is a very basic requirement that every social app should meet
 

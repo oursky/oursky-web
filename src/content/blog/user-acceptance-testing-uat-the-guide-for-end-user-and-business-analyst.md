@@ -3,8 +3,11 @@ title: "User Acceptance Testing (UAT): The Guide for End-user and Business Analy
 description: "User Acceptance Testing (UAT) is a gatekeeping process in the software development lifecycle, to ensure a new product or version update is ready for public release."
 pubDate: 2025-01-28
 author: "Joyz Ng"
-category: "qa"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3017c827228b7ba355125_uat_balance_2640x1200-1160x527.jpg"
+categories:
+  - "qa"
+  - "product-management"
+displayCategory: "User Acceptance"
+image: "/images/blogs/bd4a7aa1b6_66e3017c827228b7ba355125_uat_balance_2640x1200-1160x527.jpg"
 draft: false
 webflowId: "66e301e7daff84e0e3a0a7ae"
 ---
@@ -13,7 +16,7 @@ User Acceptance Testing (UAT) is a gatekeeping process in the software developme
 
 Depending on the scale, complexity and nature of products, there are many different approaches to perform the UAT. For general user-facing applications, a common method is to run through a combination of **Functional Testing** and **Exploratory Testing**, to evaluate whether the functionality, UI/UX, performance, stability and overall quality match with the business needs.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e301c37113cc800421bb47_uat_balance_2640x1200-1160x527.jpeg)
+![](/images/blogs/0bf3aa6df8_66e301c37113cc800421bb47_uat_balance_2640x1200-1160x527.jpeg)
 
 ## Functional Testing
 
@@ -29,7 +32,7 @@ Imagine that you are working on an e-commerce mobile app. Recently, the app has 
 
 Here is a simple format of Functional Test Cases:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e301c3b50949f894808d27_Screenshot-2023-03-01-at-3.25.43-PM-1160x421.png)
+![](/images/blogs/52ee96f237_66e301c3b50949f894808d27_Screenshot-2023-03-01-at-3.25.43-PM-1160x421.png)
 
 ## Exploratory Testing
 
@@ -68,7 +71,7 @@ For example,
 
 The expected behaviours of these scenarios may not be fully stated in the functional requirements, but should also be addressed if they go against a good user experience.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e301c331363a07fbcf9c57_session-1160x773.jpeg)
+![](/images/blogs/20e63d860c_66e301c331363a07fbcf9c57_session-1160x773.jpeg)
 
 BE CREATIVE, AND TIMEBOX YOUR EXPLORATORY TEST SESSION.
 

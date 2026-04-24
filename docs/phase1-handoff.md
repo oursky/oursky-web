@@ -87,26 +87,34 @@ oursky-web/
 
 ## 3. Content Collection Schemas
 
-### 3a. `blog` — `src/content/blog/*.mdx`
+### 3a. `blog` — `src/content/blog/*.{md,mdx}`
 
 | Field | Type | Required | Notes |
 |---|---|---|---|
-| `title` | string | ✅ | Page title |
-| `description` | string | ✅ | Meta description |
+| `title` | string | ✅ | H1 and default page title |
+| `description` | string | ✅ | Primary `meta` description; default for social copy unless `ogDescription` is set |
 | `pubDate` | date (coerced) | ✅ | ISO or YYYY-MM-DD |
-| `updatedDate` | date (coerced) | ❌ | For schema.org dateModified |
+| `updatedDate` | date (coerced) | ❌ | Optional “last updated” (e.g. future `dateModified`) |
 | `author` | string | ❌ | Default: `"Oursky Team"` |
-| `category` | string | ✅ | Must match a category `id` (filename stem in categories/) |
-| `tags` | string[] | ❌ | Default: `[]` |
-| `image` | string | ❌ | Path to hero image or absolute CDN URL |
+| `categories` | string[] | ✅* | *Or legacy `category` (one slug) — at least one slug; each must match `src/content/categories/<slug>.json` |
+| `tags` | string[] | ❌ | Default: `[]`; if empty, listing chips use `categories` |
+| `displayCategory` | string | ❌ | Card byline; omit to derive from category data |
+| `featured` | number | ❌ | Home blog strip: lower = earlier; not required |
+| `image` | string | ❌ | Hero; default share image if `ogImage` omitted |
 | `imageAlt` | string | ❌ | Alt text for hero image |
+| `excerpt` | string | ❌ | Short blurb on `/blog` and home cards |
+| `ogTitle` | string | ❌ | Open Graph + Twitter title only (not the document `title`) |
+| `ogDescription` | string | ❌ | Open Graph + Twitter description only |
+| `ogImage` | string | ❌ | Open Graph + Twitter image; hero still uses `image` when set |
+| `canonicalUrl` | string | ❌ | Absolute URL or path starting with `/` for `rel=canonical` |
+| `twitterCard` | `summary` \| `summary_large_image` | ❌ | Default in layout: `summary_large_image` |
 | `draft` | boolean | ❌ | Default: `false`; drafts excluded from builds |
-| `webflowId` | string | ❌ | Webflow CMS item ID for traceability |
+| `webflowId` | string | ❌ | Optional; legacy only — not read at build time |
 
 **URL pattern:** `/blogs/[entry.id]`  
 **Webflow equivalent:** `/blogs/<slug>` ✅ (exact match — no redirects)
 
-### 3b. `works` — `src/content/works/*.mdx`
+### 3b. `works` — `src/content/works/*.{md,mdx}`
 
 | Field | Type | Required | Notes |
 |---|---|---|---|
@@ -215,7 +223,7 @@ mkdir scripts
 node scripts/generate-works-stubs.mjs
 # → wrote src/content/works/{cornerstone,hl-insurance,jamn-player,
 #     lavatools-carbon-lite,mtr-mobile,palace,swrm-greenswrm,wilson-parking}.mdx
-# → deleted src/content/works/placeholder.mdx
+# → deleted src/content/works/placeholder (legacy stub)
 
 # Generated 10 representative blog stubs (draft: true) for schema validation
 node scripts/generate-blog-stubs.mjs --limit=10
@@ -229,7 +237,7 @@ npm run build
 - [x] Astro 6 project scaffolded with Tailwind v4, MDX, React, sitemap
 - [x] `src/content.config.ts` — schemas for `blog`, `works`, `categories`
 - [x] `src/content/categories/*.json` — all 13 categories imported from Webflow
-- [x] `src/content/works/*.mdx` — all 8 works stubs with real metadata and CDN image URLs
+- [x] `src/content/works/*.md` — all 8 works stubs with real metadata and CDN image URLs
 - [x] `src/content/blog/hello-world.mdx` — live seed post
 - [x] `src/content/blog/<slug>.mdx` × 10 — draft stubs validating schema (metadata only)
 - [x] `exports/webflow/` — all 5 export files committed (no API tokens in sanitized exports)
@@ -242,7 +250,7 @@ npm run build
 ### What Remains for Phase 4 (Content Migration)
 
 - [ ] **Blog bodies**: Re-fetch 138 post bodies via Webflow Data API → `data_cms_tool` (paginated). Convert HTML → MDX. Run `generate:blog-stubs:all --force` then fill in body content and set `draft: false`.
-- [ ] **Works bodies**: Re-fetch 8 works rich descriptions via `data_cms_tool`. Replace placeholder body in each `src/content/works/*.mdx`.
+- [ ] **Works bodies**: Re-fetch 8 works rich descriptions via `data_cms_tool`. Replace placeholder body in each `src/content/works/*.md`.
 - [ ] **Category mapping cleanup**: Some blog posts from Webflow had `category` values not in the 13 canonical slugs. Audit by searching `category: "development"` (used as fallback) after full import.
 - [ ] **Images**: Download CDN images from `thumbnail`/`heroImage` fields to `public/images/` and rewrite URLs from absolute CDN to relative `/images/…`.
 - [ ] **Author field**: Many blog posts have `author: ""` (empty in Webflow export) — audit and fill in.

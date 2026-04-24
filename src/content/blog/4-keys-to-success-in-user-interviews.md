@@ -3,13 +3,16 @@ title: "4 Keys to Success in User Interviews"
 description: "Find out the importance of user interviews and the four key things that'll lead you to user interview success. Credit to Y Combinator."
 pubDate: 2025-01-28
 author: "Jane C."
-category: "product-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30e6544a3e78fb663a2fa_tumblr_msab2vjdzU1rhf0i3o1_1280.jpg"
+categories:
+  - "product-management"
+  - "product-growth"
+displayCategory: "BUILD PRODUCT"
+image: "/images/blogs/20a77bc57d_66e30e6544a3e78fb663a2fa_tumblr_msab2vjdzU1rhf0i3o1_1280.jpg"
 draft: false
 webflowId: "66e30ef4b6181472176b0abc"
 ---
 
-![y combinator quote make something people want](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30e9f1677d3cfe14b5171_tumblr_msab2vjdzU1rhf0i3o1_1280.jpeg)
+![y combinator quote make something people want](/images/blogs/383c2a8049_66e30e9f1677d3cfe14b5171_tumblr_msab2vjdzU1rhf0i3o1_1280.jpeg)
 
 Y Combinator’s [How to Start a Startup](http://startupclass.samaltman.com/) stressed two important things that every entrepreneur and early-stage startup needs to focus on: 1) building your product and 2) talking to your users. For the latter, they even got Twitch’s founder Emmett Shear to talk about How to Run a User Interview and his past experience of starting a business without running user interviews (versus running user interviews for Twitch) in a [video lecture](https://www.youtube.com/watch?v=qAws7eXItMk).
 
@@ -26,7 +29,7 @@ So is there any fast-track process that’ll guarantee the success of user inter
 
 ‍  
 
-![Start up User Interview](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30e9ff063b66d98e93f1d_Startup-User-Interview-eng-1024x604.png)
+![Start up User Interview](/images/blogs/7b9cf653f5_66e30e9ff063b66d98e93f1d_Startup-User-Interview-eng-1024x604.png)
 
 ‍
 

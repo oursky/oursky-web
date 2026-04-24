@@ -3,13 +3,15 @@ title: "Ethereum 101: Blockchain as Distributed Computation Platform"
 description: "Ethereum 101: Blockchain as Distributed Computation Platform"
 pubDate: 2025-01-28
 author: "Chun Chung Wu"
-category: "engineering"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d2033e340b8738a2c62_blog_header3.webp"
+categories:
+  - "engineering"
+displayCategory: "Blockchain"
+image: "/images/blogs/a34af48718_67993d2033e340b8738a2c62_blog_header3.webp"
 draft: false
 webflowId: "67993d40a11369db32691cf6"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d1194397904b35a93e1_blog_header3.png)
+![](/images/blogs/d4f2d67e01_67993d1194397904b35a93e1_blog_header3.png)
 
 _Editor’s Note: Chung is an Oursky Intern. After participating in our Smart Contract consulting project, he wrote this introductory article to catalog his learnings about the Ethereum network._
 
@@ -139,13 +141,13 @@ Now I need to deploy the code onto the Ethereum network.
 
 First, I open the Ethereum wallet. Then go to the “Contracts” tab for deploying a new contract.
 
-![Distributed computation with Ethereum - Contract UI](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d10e3ba247ff388c5e6_ContractUI-1024x662.png)
+![Distributed computation with Ethereum - Contract UI](/images/blogs/b53048a8db_67993d10e3ba247ff388c5e6_ContractUI-1024x662.png)
 
 Contract UI
 
 In “Deploy New Contract”, I paste my code written in Solidity.
 
-![Distributed computation with Ethereum - Deploy Contract](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d105fcf8e46e9e031a0_DeployContract-1024x706.png)
+![Distributed computation with Ethereum - Deploy Contract](/images/blogs/c3fd28cd2a_67993d105fcf8e46e9e031a0_DeployContract-1024x706.png)
 
 Deploy Contract
 
@@ -155,49 +157,49 @@ After that, I scroll to the bottom to deploy the contract.
 
 You can see that I can specify the fee I want to pay for the contract. The more I pay, the faster the deployment of the contract will be accepted.
 
-![Distributed computation with Ethereum - Select Fee](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d11349163223abd354e_SelectFee-1024x687.png)
+![Distributed computation with Ethereum - Select Fee](/images/blogs/94410bb307_67993d11349163223abd354e_SelectFee-1024x687.png)
 
 Select Fee
 
 One can check the estimated fee of the deployment in the confirmation dialog.
 
-![Distributed computation with Ethereum - Confirm Contract](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d1194397904b35a93f0_ConfirmContract-807x1024.png)
+![Distributed computation with Ethereum - Confirm Contract](/images/blogs/c0886778ce_67993d1194397904b35a93f0_ConfirmContract-807x1024.png)
 
 Confirm contract
 
 Then the contract is sent through the Ethereum network and awaits confirmation by the nodes in the network.
 
-![Distributed computation with Ethereum - Deploying](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d1194397904b35a93de_Deploying-1024x226.png)
+![Distributed computation with Ethereum - Deploying](/images/blogs/8e840d68d8_67993d1194397904b35a93de_Deploying-1024x226.png)
 
 Deploying
 
 After that, the contract will appear in the “Contracts” tab. You can see the public variables and functions exposed by the contract.
 
-![Distributed computation with Ethereum - Deployed Contract](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d103451eeb69b9254b2_DeployedContract-1024x624.png)
+![Distributed computation with Ethereum - Deployed Contract](/images/blogs/3ea09c41bc_67993d103451eeb69b9254b2_DeployedContract-1024x624.png)
 
 Deployed Contract
 
 Note that others cannot view the interfaces exposed by the contract unless they have both the contract address and the contract interface, which one can view by clicking “Show Interface”.
 
-![Distributed computation with Ethereum - JSON Interface](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d100a904779ac2f81ad_JSONInterface-1024x526.png)
+![Distributed computation with Ethereum - JSON Interface](/images/blogs/ead2a4c9e9_67993d100a904779ac2f81ad_JSONInterface-1024x526.png)
 
 JSON interface
 
 Now we can try to execute the contract. In this example, I try to vote for candidate 1 by calling the “Vote” function.
 
-![Distributed computation with Ethereum - Call Function](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d1005a71790042080b1_CallFunction-1024x620.png)
+![Distributed computation with Ethereum - Call Function](/images/blogs/6db2cdd510_67993d1005a71790042080b1_CallFunction-1024x620.png)
 
 Call function
 
 The confirmation and waiting are the same as deploying a contract. After that, we can see that the “Votes” array increased by 1 at index 1, means that candidate 1 has got 1 vote.
 
-![Distributed computation with Ethereum - After Execution](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d10092544fdcad9d5a5_AfterExecution-1024x985.png)
+![Distributed computation with Ethereum - After Execution](/images/blogs/79dd657263_67993d10092544fdcad9d5a5_AfterExecution-1024x985.png)
 
 After Execution
 
 If we try to vote again using the same account, or vote for “candidate 0” in another account, the execution will fail, and the wallet will send a warning.
 
-![Distributed computation with Ethereum - Execute Will Fail](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993d108bd1b37b3ce7ee09_ExecuteWillFail-736x1024.png)
+![Distributed computation with Ethereum - Execute Will Fail](/images/blogs/dc602003af_67993d108bd1b37b3ce7ee09_ExecuteWillFail-736x1024.png)
 
 Execute will fail
 

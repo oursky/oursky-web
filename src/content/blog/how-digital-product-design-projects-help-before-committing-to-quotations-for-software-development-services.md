@@ -3,8 +3,11 @@ title: "How Digital Product Design Projects Help Before Committing to Quotations
 description: "Digital product design projects reduces risks and increases accuracy of estimating costs of software development services quoted by agencies."
 pubDate: 2025-01-28
 author: "Oursky Team"
-category: "product-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e305ef266fa4ff48a25303_oursky-deck.001-720x405.jpeg"
+categories:
+  - "product-management"
+  - "ui-design"
+displayCategory: "DIGITAL PRODUCT DESIGN"
+image: "/images/blogs/b293e9a9ca_66e305ef266fa4ff48a25303_oursky-deck.001-720x405.jpeg"
 draft: false
 webflowId: "66e30656b42bcc17bc50d7dd"
 ---
@@ -17,7 +20,7 @@ No one really knows what X is even with a two-page feature list. Of course, not 
 
 This practice of giving software development quotes without a design is a lose-lose for everyone. We’ll explain how clients and [software development outsourcing agencies](https://blog.oursky.com/2020/06/04/from-ideas-to-owning-source-codes-what-startups-need-to-know-before-developing-an-app/) can use a fixed-cost [digital product design](https://www.oursky.com/design/) project to make informed decisions, align goals, remove risks, and create a practical roadmap for great collaboration.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e3062263b34d768cb92cb0_oursky-deck.001-720x405.jpeg)
+![](/images/blogs/4832088524_66e3062263b34d768cb92cb0_oursky-deck.001-720x405.jpeg)
 
 # How Software Development Quotes Affects Clients and the Agency
 
@@ -37,7 +40,7 @@ The [blueprint for software development](https://blog.oursky.com/2020/05/26/turn
 
 Ultimately, the clients are held hostage if their software development projects begin without a clear design roadmap.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30622d071fc456d47b3ca_Oursky-process.061-copy.jpeg)
+![](/images/blogs/bc41ae9427_66e30622d071fc456d47b3ca_Oursky-process.061-copy.jpeg)
 
 DESIGN STYLING IS PART OF OURSKY’S [DIGITAL PRODUCT DESIGN PROCESS](https://blog.oursky.com/2020/11/03/a-quick-guide-on-iterative-design-process/)
 
@@ -63,9 +66,9 @@ Understanding the technical components of a feature summarized in the documentat
 
 App design projects can usually be completed in weeks. More importantly, this means the client has clear documents and references they can keep and build on. Whether a client works with us for development or not, we create industry-standard digital product design deliverables that they can take to any software development outsourcing agency, app vendor, or their own in-house developers to get project estimates.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-clients-7.png)
+![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
 
-![app web wireframe](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e306227efc6bdee8b5b8f3_Oursky-process.059-copy.jpeg)
+![app web wireframe](/images/blogs/2eb94023b6_66e306227efc6bdee8b5b8f3_Oursky-process.059-copy.jpeg)
 
 BLACK-AND-WHITE WIREFRAMES EASILY SHOW THE FLOW AND FEATURES OF AN APP.
 

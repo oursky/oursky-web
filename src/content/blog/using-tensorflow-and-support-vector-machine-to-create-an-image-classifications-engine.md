@@ -3,13 +3,15 @@ title: "Using Tensorflow and Support Vector Machine to Create an Image Classific
 description: "In this post, we are documenting how we used Google’s TensorFlow to build this image recognition engine. We’ve used Inception to process the images and then train an SVM classifier to recognise the object. Our aim is to build a system that helps a user with a zip puller to find a matching puller in the database. This piece will also cover how the Inception network sees the input images and assess how well the extracted features can be classified."
 pubDate: 2025-01-28
 author: "May Yeung"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e1aff94522de78c74ef_binary-1536651_1920.jpg"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "Artificial Intelligence"
+image: "/images/blogs/aefff61a50_67993e1aff94522de78c74ef_binary-1536651_1920.jpg"
 draft: false
 webflowId: "67993e72f22c56cca5a9be9f"
 ---
 
-![pixabay ai tensorflow post](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e087156cfaa539ba1_binary-1536651_1920.jpeg)
+![pixabay ai tensorflow post](/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.jpeg)
 
 In this post, we are documenting how we used Google’s [TensorFlow](https://www.tensorflow.org/) to build this image recognition engine. We’ve used [Inception](https://github.com/tensorflow/models/tree/master/inception) to process the images and then train an [SVM classifier](https://en.wikipedia.org/wiki/Support_vector_machine) to recognise the object. Our aim is to build a system that helps a user with a zip puller to find a matching puller in the database. This piece will also cover how the Inception network sees the input images and assess how well the extracted features can be classified.  
 
@@ -17,7 +19,7 @@ In this post, we are documenting how we used Google’s [TensorFlow](https://www
 
 Recently, Oursky got a mini zip puller recognition project. One of our teams had to build a system for users to match an image of puller with most similar puller inside the database. The sample size for the trial is small (12 pullers), which has implications discussed below as we share our experience on trying out Google’s TensorFlow.
 
-![pullers](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e4025518652ad6fb5_pullers-1024x339.jpeg)
+![pullers](/images/blogs/246bbf356a_67993e2e4025518652ad6fb5_pullers-1024x339.jpeg)
 
 Images showing 12 different pullers
 
@@ -43,7 +45,7 @@ The common structure of a CNN for image classification has two main parts: 1) a 
 
 The feature that feeds into the last classification layer is also called the bottleneck feature. The following image shows the structure of TensorFlow’s Inception network we are going to use. We have indicated the part of the network that we are getting the output from as our input feature.
 
-![inceptionv3](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e349163223abe40d9_inceptionv3.png)
+![inceptionv3](/images/blogs/0963447f14_67993e2e349163223abe40d9_inceptionv3.png)
 
 TensorFlow Inception Model that indicating the bottlenecks feature
 
@@ -55,7 +57,7 @@ For example, if the input of the convolutional layer is an image with 3 channels
 
 The illustration below is a convolution step.
 
-![conv-layer](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e03893d421e50759e_conv-layer.png)
+![conv-layer](/images/blogs/8170d924a8_67993e2e03893d421e50759e_conv-layer.png)
 
 Illustration of convolution
 
@@ -65,25 +67,25 @@ This is an input image.
 
 All the 32 149×149 images at stage A:
 
-![Output image at stage A](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e5a814b5f21b2f4a2_conv.png)
+![Output image at stage A](/images/blogs/fe636ba593_67993e2e5a814b5f21b2f4a2_conv.png)
 
 Inception Output image at Stage A
 
 All the 32 147×147 images at stage B:
 
-![Output image at stage B](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e2ad51c2aa8cec602_conv2.png)
+![Output image at stage B](/images/blogs/7ea0fa8bf7_67993e2e2ad51c2aa8cec602_conv2.png)
 
 Inception Output image at Stage B
 
 All the 288 35×35 images at stage C:
 
-![Output image at stage C](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2edda2651f69e38580_mixed_2.png)
+![Output image at stage C](/images/blogs/5336cfc18d_67993e2edda2651f69e38580_mixed_2.png)
 
 Inception Output image at stage C
 
 All the 768 17×17 images at stage D:
 
-![Output image at stage D](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2ef42206b546de5567_mixed_7.png)
+![Output image at stage D](/images/blogs/3e4008a078_67993e2ef42206b546de5567_mixed_7.png)
 
 Inception Output image at stage D
 
@@ -93,7 +95,7 @@ Here we can see the images become more and more abstract going down the convolut
 
 The bottleneck feature of Inception network is a 2048-d vector. The following is a figure showing the bottleneck feature of the previous input image in bar chart form.
 
-![bottleneck feature in bar chart form](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2ed64c3ca1edc79f36_features.png)
+![bottleneck feature in bar chart form](/images/blogs/3cd590696e_67993e2ed64c3ca1edc79f36_features.png)
 
 Bottleneck feature in bar chart form
 
@@ -101,7 +103,7 @@ For the bottleneck feature to be a good feature for classification, we would lik
 
 It is hard to see this kind of clustering happened on 2048-d feature data sets. However, we can do a dimensionality reduction[4](https://code.oursky.com/tensorflow-svm-image-classifications-engine/#fn-388-4) on the bottleneck feature and transform them to a 2-d feature which is easy to visualize. The following image is the scatter plot of the transformed feature in our puller data set[5](https://code.oursky.com/tensorflow-svm-image-classifications-engine/#fn-388-5). Different puller type are illustrated by different colors.
 
-![Scatter plot of transformed feature of the puller dataset](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e333a6b4a893d194a_tsne.png)
+![Scatter plot of transformed feature of the puller dataset](/images/blogs/4520b7d9c4_67993e2e333a6b4a893d194a_tsne.png)
 
 Scatter plot of transformed feature of the puller dataset
 
@@ -373,7 +375,7 @@ The following is the training result we get, which got a perfect result! Though 
 
 We’ve used it to built an mobile app and a web front-end for the puller classifier for field testings.
 
-![Puller Matcher screenshot](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67993e2e4025518652ad6fba_puller-matcher-1024x734.jpeg)
+![Puller Matcher screenshot](/images/blogs/c359a1b825_67993e2e4025518652ad6fba_puller-matcher-1024x734.jpeg)
 
 Puller Matcher screenshot
 

@@ -3,8 +3,10 @@ title: "App Development 101: Terms that Non-Technical Startup Founders Should Kn
 description: "App Development 101: Terms that Non-Technical Startup Founders Should Know"
 pubDate: 2025-01-28
 author: "Varya Nekhina"
-category: "project-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955be4a4e525594c1a4f2_teemu-paananen-bzdhc5b3Bxs-unsplash-1536x1097.jpg"
+categories:
+  - "project-management"
+displayCategory: "Guides for Outsourcing"
+image: "/images/blogs/2c23bd0eb1_679955be4a4e525594c1a4f2_teemu-paananen-bzdhc5b3Bxs-unsplash-1536x1097.jpg"
 draft: false
 webflowId: "679955d7d760b0c7d9d06294"
 ---
@@ -15,7 +17,7 @@ Brainstorming ideas and exploring your options are exciting — whether you’re
 
 At Oursky, we’re all about helping people explore the wonderful world of software development. We’ve listed down some essential terms you can start familiarizing yourself with so you’re speaking the same language with your vendor or developers when you kick-start your digital product.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31f4b03497abd129e4b7d_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.jpeg)
+![](/images/blogs/03f26604a7_66e31f4b03497abd129e4b7d_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.jpeg)
 
 Photo by [Teemu Paananen](https://unsplash.com/@xteemu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -59,7 +61,7 @@ During these stages, you can gather early feedback and use it to improve your di
 
 ###### Like this article? Subscribe to our blog for more of Oursky’s startup hacks:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/66e31f4b7e653b055224c5db_ux-indonesia-qC2n6RQU4Vw-unsplash-1160x773.jpeg)
+![](/images/blogs/25774b2ba2_66e31f4b7e653b055224c5db_ux-indonesia-qC2n6RQU4Vw-unsplash-1160x773.jpeg)
 
 Photo by [UX Indonesia](https://unsplash.com/@uxindo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -104,7 +106,7 @@ APIs are a longstanding concept and help you to better define and [manage](https
 *   Automate pipelines and infrastructures
 *   Enable consistency and scalability
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799559c4779025b7e241df1_you-x-ventures-vbxyFxlgpjM-unsplash-1160x773.jpeg)
+![](/images/blogs/4379a5fbbe_6799559c4779025b7e241df1_you-x-ventures-vbxyFxlgpjM-unsplash-1160x773.jpeg)
 
 Photo by [You X Ventures](https://unsplash.com/@youxventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -114,7 +116,7 @@ Waterfall and agile are methodologies or approaches in software development. [Wa
 
 What approach you use when building your app depends on the priorities, scope, and timeline of your project and the team involved. Here’s a brief comparison:
 
-![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679955d7d760b0c7d9d06261_679955b623c03a5217475d71_SCR-20250128-tebi.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/ec2122f4a7_679955d7d760b0c7d9d06261_679955b623c03a5217475d71_SCR-20250128-tebi.png)
 
 ‍
 

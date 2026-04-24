@@ -3,13 +3,15 @@ title: "Why our company’s remote work system failed"
 description: "Why our company’s remote work system failed"
 pubDate: 2025-01-28
 author: "Ben Cheng"
-category: "culture"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994ebd690e28959edd0847_10xI1TFDSNb1etCQSRdGSHg.jpeg"
+categories:
+  - "culture"
+displayCategory: "FOUNDER LEARNINGS"
+image: "/images/blogs/365c0391ca_67994ebd690e28959edd0847_10xI1TFDSNb1etCQSRdGSHg.jpeg"
 draft: false
 webflowId: "67994ed423af1a9d6bd13103"
 ---
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eb44b27ce75c99ed74f_10xI1TFDSNb1etCQSRdGSHg-720x481.jpeg)
+![](/images/blogs/0f04ac68c6_67994eb44b27ce75c99ed74f_10xI1TFDSNb1etCQSRdGSHg-720x481.jpeg)
 
 Image by Robert G Allen Photography via [Unsplash](https://unsplash.com/search/travel?photo=jRlslrpk6ek)
 
@@ -23,7 +25,7 @@ Below are my reflections as a CEO on what we did, why we did it, and what actual
 
 ## Remote Work 0.1
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eb4fe20b33f4be6a9dd_1yK0bC7max3qeb_qob8HJIA.jpeg)
+![](/images/blogs/99b4fec52a_67994eb4fe20b33f4be6a9dd_1yK0bC7max3qeb_qob8HJIA.jpeg)
 
 Image by NASA via [Unsplash](https://unsplash.com/search/launch?photo=n463SoeSiVY)
 
@@ -33,7 +35,7 @@ As fresh graduates at the time, we used going to the office as a motivation to g
 
 ## Remote Work 0.2
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eb58149b61a4ebead30_1I1nSBW60H3QhP97Te4R2nw.jpeg)
+![](/images/blogs/ba2d774196_67994eb58149b61a4ebead30_1I1nSBW60H3QhP97Te4R2nw.jpeg)
 
 Image by Francois Hoang via [Unsplash](https://unsplash.com/@aoirostudio?photo=xxZCfAnMUrM)
 
@@ -64,7 +66,7 @@ The problems with remote work highlighted other things we took for granted about
 
 ## Why people kept coming to the office anyway…
 
-![Oursky's cats photo](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eb53d41623f5f397ccd_1P_ghrIWXduRm3Jpun-6mRA.jpeg)
+![Oursky's cats photo](/images/blogs/14f5081de9_67994eb53d41623f5f397ccd_1P_ghrIWXduRm3Jpun-6mRA.jpeg)
 
 Coffee, one of the four office cats aka programming cheerleaders.
 
@@ -77,7 +79,7 @@ The above has made me realize that we have no ambitions to become a [distributed
 
 > **Today, we embrace remote working as an option just as much as we did 9+ years ago.**
 
-![A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/67994eb5f86d883451952fe1_1XUjOdKcOAjZ0rUuIXobByw.jpeg)
+![A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.](/images/blogs/f197b7a6d0_67994eb5f86d883451952fe1_1XUjOdKcOAjZ0rUuIXobByw.jpeg)
 
 A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.
 

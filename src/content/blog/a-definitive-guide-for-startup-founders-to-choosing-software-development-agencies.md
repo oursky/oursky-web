@@ -3,8 +3,10 @@ title: "A Definitive Guide for Startup Founders to Choosing Software Development
 description: "A Definitive Guide for Startup Founders to Choosing Software Development Agencies"
 pubDate: 2025-01-28
 author: "Ten Tang"
-category: "project-management"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/679956a4458240f8179a27cb_friendship.webp"
+categories:
+  - "project-management"
+displayCategory: "Guides for Outsourcing"
+image: "/images/blogs/956af6747c_679956a4458240f8179a27cb_friendship.webp"
 draft: false
 webflowId: "679956b4d707bd5c8eb43759"
 ---
@@ -13,7 +15,7 @@ You’ve validated your business idea. You know what problem you want to solve. 
 
 Our guide is meant to help you, the startup founder, navigate the often convoluted path of partnering with an agency. As a startup founder, you also wear the hats of a product owner and manager.  You don’t need to have a technical background, but it will be useful for you to pin down the basics of technologies, software development approaches like Agile and SCRUM, and user experience/user interface (UX/UI) design.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/6799569dea66ae4e7707093c_friendship-1160x653.png)
+![](/images/blogs/9ebb1a1d58_6799569dea66ae4e7707093c_friendship-1160x653.png)
 
 [illustration](https://icons8.com/illustrations/style--abstract) by [Icons 8](https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6)
 

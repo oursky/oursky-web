@@ -3,8 +3,10 @@ title: "How to Extract Receipt Data with OCR, Regex and AI"
 description: "Our journey of developing the high accuracy receipt extraction solution."
 pubDate: 2024-01-01
 author: "Ten Tang"
-category: "machine-learning-and-ai"
-image: "https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e226538ae783ffc6ad77d_6604f315601b171d1e9adcf5_614d788a8bd0470c5cf7db82_Receipt%2520Extraction%2520Main.png"
+categories:
+  - "machine-learning-and-ai"
+displayCategory: "FormX"
+image: "/images/blogs/98fdeef919_673e226538ae783ffc6ad77d_6604f315601b171d1e9adcf5_614d788a8bd0470c5cf7db82_Receipt%20Extraction%20Main.png"
 draft: true
 webflowId: "673e22d7a9e0b7dadeface51"
 ---
@@ -35,7 +37,7 @@ We will dive deep into parts where data is captured and extracted. While FormX c
 
 ‍  
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e238c58893131eec4a75f_6604f2a496c8cee23004c0d1_614d74a011af4d4a07051081_receipts.jpeg)
+![](/images/blogs/b6a1e38d76_673e238c58893131eec4a75f_6604f2a496c8cee23004c0d1_614d74a011af4d4a07051081_receipts.jpeg)
 
 PHOTO BY [CARLI JEEN](https://unsplash.com/@carlijeen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578) ON [UNSPLASH](https://unsplash.com/@carlijeen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578)
 
@@ -79,7 +81,7 @@ We will now group them into horizontal lines _relative_ to the receipt, sorted b
 *   Adjacent lines are also more likely to be related. To access them, we can simply move indices up and down as they are sorted instead of comparing the distance between a set of Words with another.
 *   The images we receive can now have tilted angles.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2241b960b2e363f8c0ae_6604f2a496c8cee23004c0cd_614d758587c3947453c4ceb1_formextractor-behind-the-scenes-1.png)
+![](/images/blogs/cc578ea2d5_673e2241b960b2e363f8c0ae_6604f2a496c8cee23004c0cd_614d758587c3947453c4ceb1_formextractor-behind-the-scenes-1.png)
 
 FIGURE 1. RECEIPTS CAPTURED WITH TILTED ANGLE  
 IMAGE SOURCE: [USC ANNENBERG MEDIA](http://www.uscannenbergmedia.com/2019/09/20/paper-receipts-present-potential-hazard-to-the-environment/?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578)
@@ -92,7 +94,7 @@ As a disclaimer, the example above is just a random image. In real life, receipt
 
 Each instance of Word comes with a set of four vertices, and with them is a vector of the Word which carries its direction. It can be calculated through the following:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2238a9e0b7dadefa46cb_6604f2a496c8cee23004c0b5_614d75e7cd261846f80962df_formextractor-behind-the-scenes-2.png)
+![](/images/blogs/9731e5286b_673e2238a9e0b7dadefa46cb_6604f2a496c8cee23004c0b5_614d75e7cd261846f80962df_formextractor-behind-the-scenes-2.png)
 
 FIGURE 2. VECTOR DIRECTION OF A BOUNDING BOX
 
@@ -104,7 +106,7 @@ Fortunately, there is a saying – when we see outliers , we RANSAC them! RANdom
 
 Let’s say there’s a 70% chance to get one inlier (a value within a pattern) out of all Words by picking randomly. We have to be 99.99% sure that only inliers are picked according to this formula:
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2238a7ff97773d2b2266_6604f2a496c8cee23004c0bb_614d76033dd0723f94e58469_formextractor-behind-the-scenes-3.png)
+![](/images/blogs/6e5132317a_673e2238a7ff97773d2b2266_6604f2a496c8cee23004c0bb_614d76033dd0723f94e58469_formextractor-behind-the-scenes-3.png)
 
 FIGURE 3. FORMULA FOR PICKING INLIERS
 
@@ -179,11 +181,13 @@ The model we used for this is random forest with the number of estimators at 300
 
 **Has Symbols.** Candidates with “:” and empty space with less than 2 occurrences are more likely to be time. The ones with am or pm are also prime candidates. Similar to how Date is classified, candidates with Words that imply data related to Time will get extra marks.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2238a3a4f186e2ff57db_6604f2a496c8cee23004c0de_614d768efbc1579df8aa23ab_alex-o9isBQ25H-g-unsplash-1160x774.jpeg)
+![](/images/blogs/b85c420659_673e2238a3a4f186e2ff57db_6604f2a496c8cee23004c0de_614d768efbc1579df8aa23ab_alex-o9isBQ25H-g-unsplash-1160x774.jpeg)
 
 PHOTO BY [ALEX](https://unsplash.com/@alx_andru?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578)
 
 FormX provides a set of pre-trained templates, including receipts, business registration, passport, IDs, etc., so that everyone can easily [extract data from PDFs](https://www.formx.ai/post/extract-data-from-pdf-to-structured-data?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578) or images without having to develop the technology.
+
+<iframe src="https://www.youtube.com/embed/NWeBJgVue9c?enablejsapi=1&origin=https%3A%2F%2Fwww.formx.ai" allowfullscreen loading="lazy" title="Embedded content"></iframe>
 
 To extract data from receipts with FormX, you can use our predefined Receipts template. After you sign in, click on “Receipts” on the left hand side, and simply upload your receipts to view the test result. Below is an image of the receipt and the JSON output.  
 
@@ -192,11 +196,11 @@ Aside from that, you can set up your own template, or Form as we call it, by fol
 *   Click on the “Add New Form” button and select “My Documents don’t have a fixed format” as the layout of receipts are not identical.  
     
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e22380f85cb98f3a71835_6604f2a496c8cee23004c0da_61ea442f47d11954e159f1ef_WZKL-ohKvfRx2JagGH1MHMeRV_wD5bkF86PSFmNlnX8Q1sTh9utAMTWUDVU3yhNBpb0BAku3W20Q-QgkaPQsoIxD0CFRkYRVWAqa_STmHf96deqmXxHro9Vflou0fBKzsg03lIvV.png)
+![](/images/blogs/aab9434f1e_673e22380f85cb98f3a71835_6604f2a496c8cee23004c0da_61ea442f47d11954e159f1ef_WZKL-ohKvfRx2JagGH1MHMeRV_wD5bkF86PSFmNlnX8Q1.png)
 
 *   Select “Receipt” as your document type and pick the auto extraction items you want.
 
-![](https://cdn.prod.website-files.com/654ba60def05336c1f0eb138/673e2238a0b6286a4864ea5c_6604f2a496c8cee23004c0d4_61ea442fbc7ffb3c6f4b321a_Q4sTNVX0oEaWBxPQV5v4zkd2PnUT5XuPJVHMRrCeQ71XlyoWkYgj6Wg1qByxSSfByHDH_HaA0mczC97W-KGYjrtI-1GdGaNvUPDY0azzrUKtsrgblaD3-9ZVgz04EcURuS93-VG1.png)
+![](/images/blogs/41a84b2701_673e2238a0b6286a4864ea5c_6604f2a496c8cee23004c0d4_61ea442fbc7ffb3c6f4b321a_Q4sTNVX0oEaWBxPQV5v4zkd2PnUT5XuPJVHMRrCeQ71Xl.png)
 
 *   Upload an image for testing.  
     

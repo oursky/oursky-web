@@ -68,7 +68,7 @@ if (previewPosts.length < MAX) {
               >
                 <a
                   href={`/blogs/${post.id}`}
-                  class="group flex flex-col gap-4 no-underline p-10 pb-0 max-md:p-5 max-md:pb-0 max-md:gap-3"
+                  class="group flex flex-col gap-4 no-underline p-10 pb-0 max-md:p-4 max-md:pb-0 max-md:gap-3"
                 >
                   <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-[38px] truncate m-0 max-md:text-sm max-md:leading-6">
                     {topLabel}
@@ -99,7 +99,7 @@ if (previewPosts.length < MAX) {
                     </p>
                   )}
                 </a>
-                <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-5 max-md:pt-4 max-md:pb-4">
+                <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
                   {pillSlugs.map((slug) => (
                     <a href={`/blog-category/${slug}`} class="no-underline group/pill">
                       <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">

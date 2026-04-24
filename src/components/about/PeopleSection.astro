@@ -69,21 +69,20 @@ const people = [
 const linkedinSvg = `<svg width="20" height="20" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32.5 0.584473C33.8281 0.584473 35 1.75635 35 3.1626V33.0845C35 34.4907 33.8281 35.5845 32.5 35.5845H2.42188C1.09375 35.5845 0 34.4907 0 33.0845V3.1626C0 1.75635 1.09375 0.584473 2.42188 0.584473H32.5ZM10.5469 30.5845V13.9438H5.39062V30.5845H10.5469ZM7.96875 11.6001C9.60938 11.6001 10.9375 10.272 10.9375 8.63135C10.9375 6.99072 9.60938 5.58447 7.96875 5.58447C6.25 5.58447 4.92188 6.99072 4.92188 8.63135C4.92188 10.272 6.25 11.6001 7.96875 11.6001ZM30 30.5845V21.4438C30 16.9907 28.9844 13.4751 23.75 13.4751C21.25 13.4751 19.5312 14.8813 18.8281 16.2095H18.75V13.9438H13.8281V30.5845H18.9844V22.3813C18.9844 20.1938 19.375 18.0845 22.1094 18.0845C24.7656 18.0845 24.7656 20.5845 24.7656 22.4595V30.5845H30Z" fill="currentColor"/></svg>`;
 ---
 
-<section class="w-full scroll-reveal-group" aria-label="Meet the team">
+<section class="w-full scroll-reveal-group pb-section-lg max-md:pb-section" aria-label="Meet the team">
   <h2 class="scroll-reveal-item m-0 mb-10 text-[2.5rem] font-black leading-[1.2] text-black" style="--sr-delay: 0ms">
     Meet the People<br />Behind Oursky
   </h2>
-  <ul class="list-none m-0 p-0 grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1" role="list">
+  <ul class="list-none m-0 p-0 grid grid-cols-3 gap-x-6 gap-y-[2.625rem] max-lg:grid-cols-2 max-md:grid-cols-1" role="list">
     {people.map((person, i) => (
       <li
         class:list={[
-          'scroll-reveal-item bg-surface rounded-lg p-8 flex flex-col items-center text-center gap-3 shadow-[0_2px_12px_rgba(0,0,0,0.06)]',
-          person.wide ? 'col-span-full max-lg:col-span-2 max-md:col-span-1' : '',
+          'scroll-reveal-item flex flex-col items-center text-center pt-[1.875rem] pb-[1.875rem] px-0.5',
         ]}
         style={`--sr-delay: ${Math.min(i * 60, 300)}ms`}
       >
         <!-- Circular photo -->
-        <div class="w-28 h-28 rounded-full overflow-hidden shrink-0 mb-2">
+        <div class="w-[120px] h-[120px] rounded-full overflow-hidden shrink-0 mb-6 ring-1 ring-[#a0a0a0]">
           <img
             src={person.photo}
             alt={person.name}
@@ -92,22 +91,24 @@ const linkedinSvg = `<svg width="20" height="20" viewBox="0 0 35 36" fill="none"
           />
         </div>
 
-        <!-- Name + role + LinkedIn -->
-        <div class="flex flex-col items-center gap-1">
-          <h3 class="m-0 text-xl font-black leading-snug text-black">{person.name}</h3>
-          <p class="m-0 text-sm font-medium text-text-muted leading-snug">{person.role}</p>
+        <!-- Name -->
+        <h3 class="m-0 text-[2rem] leading-[3.5rem] font-black text-black">{person.name}</h3>
+
+        <!-- Role + LinkedIn -->
+        <div class="flex flex-col items-center mb-6">
+          <p class="m-0 text-base leading-6 font-medium text-text-muted mb-2.5">{person.role}</p>
           <a
             href={person.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${person.name} on LinkedIn`}
-            class="mt-1 flex items-center justify-center text-text-muted opacity-60 hover:opacity-100 transition-opacity duration-200"
+            class="inline-flex items-center justify-center w-5 h-5 text-black hover:text-text-muted"
             set:html={linkedinSvg}
           />
         </div>
 
         <!-- Quote -->
-        <p class="m-0 mt-1 text-sm leading-6 text-text-muted italic">{person.quote}</p>
+        <p class="m-0 mb-2.5 text-base leading-6 text-text-muted italic">{person.quote}</p>
       </li>
     ))}
   </ul>

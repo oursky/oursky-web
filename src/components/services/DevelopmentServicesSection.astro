@@ -17,8 +17,7 @@ const services = [
     title: 'Artificial Intelligence',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M176 16V0H144V16 64H96 64V96v48H16 0v32H16 64v64H16 0v32H16 64v64H16 0v32H16 64v48 32H96h48v48 16h32V496 448h64v48 16h32V496 448h64v48 16h32V496 448h48 32V416 368h48 16V336H496 448V272h48 16V240H496 448V176h48 16V144H496 448V96 64H416 368V16 0H336V16 64H272V16 0H240V16 64H176V16zM416 96V416H96V96H416zm-64 64V352H160V160H352zM160 128H128v32V352v32h32H352h32V352 160 128H352 160z"/></svg>`,
     description: "We create a wide range of Machine Learning solutions for our clients. From experimental projects where we train ML models and replicate results from research papers for trading funds, to fine-tuning Large Language Models for retail and finance companies.\n\nWe also guide our clients on integrating ML/AI into their operations. This includes figuring out the best balance between accuracy and recall for different business situations, and advising on the right time to start using ML tools like Kubeflow.",
-    link: '/service/ai',
-    linkLabel: 'Learn more about AI services',
+    link: null,
   },
 ];
 
@@ -47,14 +46,14 @@ const methodologies = [
 ---
 
 <section class="w-full scroll-reveal-group" aria-label="Development services">
-  <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-col gap-8">
-    <div class="flex items-center gap-5 scroll-reveal-item" style="--sr-delay: 0ms">
-      <div class="w-[15%] self-start shrink-0 max-lg:flex-none max-sm:w-[120px]">
+  <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-col gap-8 max-md:px-5 max-md:pt-8 max-md:pb-10">
+    <div class="flex items-center gap-5 scroll-reveal-item max-sm:flex-col max-sm:items-start max-sm:gap-4" style="--sr-delay: 0ms">
+      <div class="w-[15%] self-start shrink-0 max-lg:flex-none max-sm:w-[80px]">
         <img src="/images/development-service.webp" alt="Software development" class="w-full h-full object-contain" loading="lazy" />
       </div>
       <h2 class="m-0 text-white text-3xl font-semibold leading-section max-lg:text-2xl max-lg:leading-desc">Development</h2>
     </div>
-    <div class="flex flex-wrap gap-16 max-lg:gap-8 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 80ms">
+    <div class="flex flex-wrap gap-16 max-lg:gap-10 max-sm:flex-col max-sm:gap-10 scroll-reveal-item" style="--sr-delay: 80ms">
       {services.map((svc) => (
         <div class="flex-1 min-w-64 max-sm:min-w-0 flex flex-col gap-3">
           <div class="service-icon text-white" set:html={svc.icon} />
@@ -72,7 +71,7 @@ const methodologies = [
     </div>
   </div>
 
-  <div class="flex flex-row gap-5 mt-12 max-lg:flex-wrap max-sm:flex-col scroll-reveal-item" style="--sr-delay: 120ms">
+  <div class="flex flex-row gap-8 max-sm:gap-10 mt-12 max-lg:flex-wrap max-sm:flex-col scroll-reveal-item" style="--sr-delay: 120ms">
     {methodologies.map((m) => (
       <div class="flex-1 max-lg:min-w-[calc(50%-0.625rem)] max-sm:min-w-0 flex flex-col gap-3">
         <div class="methodology-icon text-black" set:html={m.icon} />

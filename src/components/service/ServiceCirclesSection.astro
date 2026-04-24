@@ -7,7 +7,7 @@
 ---
 
 <section class="scroll-reveal-group w-full" aria-label="How we work together">
-  <div class="bg-[#232833] rounded-lg px-8 py-[2.8rem] flex flex-col items-center gap-10 scroll-reveal-item" style="--sr-delay: 0ms">
+  <div class="bg-[#232833] rounded-lg px-8 py-[2.8rem] max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-col items-center gap-10 max-md:gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
     <p class="m-0 text-white text-2xl font-bold text-center leading-10">Create amazing software together!</p>
 
     <div class="circles-wrap w-full flex flex-row gap-2 max-md:flex-col max-md:items-center scroll-reveal-item" style="--sr-delay: 80ms">
@@ -63,10 +63,17 @@
     .circles-wrap {
       flex-direction: column;
       align-items: center;
+      gap: 0;
     }
     .circle-l,
     .circle-r {
       transform: none;
     }
+    .circles-wrap > div + div {
+      margin-top: -8%;
+    }
+    .circle-l { position: relative; z-index: 2; }
+    .circle-c { position: relative; z-index: 1; }
+    .circle-r { position: relative; z-index: 2; }
   }
 </style>

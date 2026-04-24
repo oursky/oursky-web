@@ -16,12 +16,20 @@ interface Props {
 const { stats } = Astro.props;
 ---
 
-<section class="scroll-reveal w-full" aria-label="Statistics">
-  <div class="statistics-container grid grid-cols-3 gap-y-[3.75rem] p-10 max-lg:grid-cols-1 max-lg:gap-y-12">
+<section class="w-full" aria-label="Statistics">
+  <div
+    class="statistics-container scroll-reveal-group grid grid-cols-3 gap-y-[3.75rem] mt-5 p-10 max-md:grid-cols-2 max-md:p-4"
+    aria-label="Key statistics"
+  >
     {stats.map((stat) => (
-      <div class="flex flex-col items-center gap-2 text-center">
+      <div class="statistics scroll-reveal-item flex flex-col items-center gap-2 text-center">
         <div class="flex justify-center items-center" set:html={stat.icon} />
-        <p class="statistics__number m-0 text-[2.625rem] font-medium leading-[3.75rem] text-black" data-count={stat.dataCount}>{stat.number}</p>
+        <p
+          class="statistics__number m-0 text-[2.625rem] font-medium leading-[3.75rem] text-black"
+          data-count={stat.dataCount}
+        >
+          {stat.number}
+        </p>
         <p class="m-0 text-lg font-normal leading-6 text-black" set:html={stat.title} />
       </div>
     ))}

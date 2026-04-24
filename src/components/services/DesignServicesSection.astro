@@ -19,9 +19,9 @@ const methodologies = [
 ---
 
 <section class="w-full scroll-reveal-group" aria-label="Design services">
-  <div class="bg-section-warm-gray rounded-lg px-8 py-[2.8rem] flex flex-col gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
-    <div class="flex items-center gap-5">
-      <div class="w-[15%] self-start shrink-0 max-lg:flex-none max-sm:w-[120px]">
+  <div class="bg-section-warm-gray rounded-lg px-8 py-[2.8rem] flex flex-col gap-6 scroll-reveal-item max-md:px-5 max-md:py-8" style="--sr-delay: 0ms">
+    <div class="flex items-center gap-5 max-sm:flex-col max-sm:items-start max-sm:gap-4">
+      <div class="w-[15%] self-start shrink-0 max-lg:flex-none max-sm:w-[80px]">
         <img src="/images/design-service.webp" alt="UI/UX design" class="w-full h-full object-contain" loading="lazy" />
       </div>
       <h2 class="m-0 text-white text-3xl font-semibold leading-section max-lg:text-2xl max-lg:leading-desc">UI/UX Design</h2>
@@ -37,7 +37,7 @@ const methodologies = [
     </p>
   </div>
 
-  <div class="flex flex-row gap-5 mt-12 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 80ms">
+  <div class="flex flex-row gap-8 max-sm:gap-10 mt-12 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 80ms">
     {methodologies.map((m) => (
       <div class="flex-1 flex flex-col gap-3">
         <div class="methodology-icon text-black" set:html={m.icon} />

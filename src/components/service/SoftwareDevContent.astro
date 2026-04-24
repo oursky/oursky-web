@@ -51,9 +51,22 @@ const stats = [
 <div class="flex flex-col gap-[3.75rem]">
   <!-- Blue intro card -->
   <section class="scroll-reveal-group w-full" aria-label="About our software development">
-    <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
-      <div class="w-[28%] shrink-0 aspect-square rounded-full bg-white flex justify-center items-center max-lg:w-32 max-sm:w-24">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="80" height="80" fill="#1f64e8" aria-hidden="true"><path d="M381.5 4l-4.7 15.3-144 464L228 498.5l30.6 9.5 4.7-15.3 144-464L412 13.5 381.5 4zM160.7 105.4l-11.7 11L13 244.4 .7 256 13 267.7l136 128 11.7 11 21.9-23.3-11.7-11L47.3 256 171 139.6l11.7-11-21.9-23.3zm296.7 23.9l12 10.6c27.8 24.7 47.5 44 67.4 63.5l0 0c16.8 16.4 33.7 32.9 55.5 52.8L469 372.3l-11.7 11 21.9 23.3 11.7-11 136-128 12.7-12L626.6 244c-27.8-24.7-47.5-44-67.4-63.5l0 0C539.2 161 519 141.3 490.6 116l-12-10.6-21.3 23.9z"/></svg>
+    <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 max-md:gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
+      <div
+        class="flex size-24 shrink-0 items-center justify-center self-center overflow-hidden rounded-full bg-white sm:max-lg:size-32 min-lg:size-40"
+      >
+        <!-- laptop-code — FA Sharp Light, path from ref/fontawesome-pro-6.5.1-desktop/svgs/sharp-light/laptop-code.svg -->
+        <svg
+          class="size-[4.5rem] object-contain sm:max-lg:size-28 min-lg:size-32"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          fill="black"
+          aria-hidden="true"
+        >
+          <path
+            d="M544 64H96V352H64V64 32H96 544h32V64 352H544V64zM61.3 448H578.7L608 418.7V416H32v2.7L61.3 448zM640 384v32 16l-48 48H48L0 432V416 384H32 608h32zM294.6 160l-11.3 11.3L230.6 224l52.7 52.7L294.6 288 272 310.6l-11.3-11.3-64-64L185.4 224l11.3-11.3 64-64L272 137.4 294.6 160zm62.1 11.3L345.4 160 368 137.4l11.3 11.3 64 64L454.6 224l-11.3 11.3-64 64L368 310.6 345.4 288l11.3-11.3L409.4 224l-52.7-52.7z"
+          />
+        </svg>
       </div>
       <div class="flex-1 scroll-reveal-item" style="--sr-delay: 80ms">
         <p class="m-0 text-white text-lg leading-8">
@@ -69,7 +82,7 @@ const stats = [
   <section class="scroll-reveal-group w-full" aria-label="Our process">
     <div class="flex flex-col gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
       <h2 class="m-0 text-2xl font-black text-black leading-[2.25rem]">Our Process</h2>
-      <div class="flex flex-wrap gap-8 max-sm:flex-col">
+      <div class="flex flex-wrap gap-8 max-md:gap-10 max-sm:gap-10 max-sm:flex-col">
         {processItems.map((item) => (
           <div class="flex-1 min-w-[200px] max-sm:min-w-0 flex flex-col gap-3">
             <div class="text-black" set:html={item.icon} />

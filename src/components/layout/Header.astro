@@ -180,7 +180,8 @@ function isActive(href: string): boolean {
     left: 0;
     right: 0;
     z-index: 8;
-    overflow-x: clip;
+    /* `overflow: visible` so hover `scale(1.05)` on pills isn’t clipped; nav overflow is kept inside .header__nav-center--desktop (md+). */
+    overflow-x: visible;
     /* Grey strip + in-card band — matches home visual rhythm */
     padding-top: calc(var(--site-rail-strip-above-hero) + clamp(0.5rem, 2vw, 1rem));
     padding-bottom: 0;
@@ -260,8 +261,8 @@ function isActive(href: string): boolean {
     .header {
       position: relative;
       max-width: var(--home-rail-max);
-      /* Keep wide nav + transforms from widening the document (horizontal scroll) */
-      overflow-x: clip;
+      /* `overflow: visible` so pill hover `scale(1.05)` isn’t clipped (previously `overflow-x: clip`). */
+      overflow: visible;
     }
 
     .nav-pill {

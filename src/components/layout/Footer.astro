@@ -29,10 +29,13 @@ const clockSvgPaths = `
 `;
 ---
 
-<footer class="w-full max-w-[1360px] mx-auto px-10 pb-10 box-border max-md:px-5 max-md:pb-5">
+<footer class="site-footer w-full bg-bg">
+  <div
+    class="w-full max-w-[1360px] mx-auto px-10 pb-10 box-border max-md:px-5 max-md:pb-5"
+  >
 
   <!-- Dark card: logo + clocks -->
-  <div class="bg-black rounded-lg flex justify-between items-center px-10 py-12 pb-16 gap-8 mb-8 max-lg:flex-col max-lg:items-start max-lg:px-8 max-lg:py-10 max-md:px-6 max-md:py-8 max-md:mb-6">
+  <div class="bg-black rounded-lg flex justify-between items-center px-10 py-20 gap-8 mb-8 max-lg:flex-col max-lg:items-start max-lg:px-8 max-lg:py-16 max-md:px-6 max-md:py-12 max-md:mb-6">
     <!-- Left: OURSKY logo + "We are hiring!" -->
     <div class="flex flex-col gap-3 justify-between shrink-0">
       <div class="flex items-center gap-2 pr-10">
@@ -108,6 +111,7 @@ const clockSvgPaths = `
   <!-- Copyright -->
   <p class="text-center text-black/40 text-sm mt-3 mb-0">Oursky Ltd. © {currentYear}</p>
 
+  </div>
 </footer>
 
 <script>

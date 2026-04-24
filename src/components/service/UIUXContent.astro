@@ -83,9 +83,22 @@ const stats = [
 <div class="flex flex-col gap-[3.75rem]">
   <!-- Blue intro card -->
   <section class="scroll-reveal-group w-full" aria-label="About our UI/UX design">
-    <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
-      <div class="w-[28%] shrink-0 aspect-square rounded-full bg-white flex justify-center items-center max-lg:w-32 max-sm:w-24">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="80" height="80" fill="#1f64e8" aria-hidden="true"><path d="M368 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V48c0 .4 0 .8 .1 1.2L307.8 73.5c-4.3-1.6-8.9-2.5-13.8-2.5c-11.5 0-21.8 4.6-29.3 12l-8 8c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l8-8c7.4-7.4 17.7-10.8 28-9.5l20.6 2.6c7.4 16.1 11.4 33.9 11.4 52.6c0 50.1-28.5 93.6-70.3 115.2c-1.1 .6-2.2 1.2-3.2 1.8l0 0C261.7 304.3 240 334 240 368v16c0 35.3 28.7 64 64 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16 7.2-16 16s7.2 16 16 16h80c26.5 0 48-21.5 48-48s-21.5-48-48-48H304c-17.7 0-32-14.3-32-32V368c0-20.5 13.9-38.2 33.3-48.9l3-1.7c50.8-28.2 85.1-82.1 85.1-143.4c0-19.2-3.3-37.6-9.3-54.7l17.5 2.2c3.6 17.4 5.5 35.5 5.5 54c0 50.4-14.8 97.4-40.4 136.9l16.6 10.6C411.6 280.2 432 234.5 432 184c0-19.1-2.4-37.7-6.9-55.5L448 131c17.7 0 32-14.3 32-32s-14.3-32-32-32l-80 0 0-35zM160 96a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128zM96 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32 64a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm32 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
+    <div class="bg-section-blue rounded-lg px-8 pt-[2.8rem] pb-14 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 max-md:gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
+      <div
+        class="flex size-24 shrink-0 items-center justify-center self-center overflow-hidden rounded-full bg-white sm:max-lg:size-32 min-lg:size-40"
+      >
+        <!-- compass-drafting — FA Sharp Light, path from ref/fontawesome-pro-6.5.1-desktop/svgs/sharp-light/compass-drafting.svg -->
+        <svg
+          class="size-[4.5rem] object-contain sm:max-lg:size-28 min-lg:size-32"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          fill="black"
+          aria-hidden="true"
+        >
+          <path
+            d="M282.3 154.3l-.2-.3 13-7.4c15.1-11.7 24.8-30 24.8-50.6c0-35.3-28.7-64-64-64s-64 28.7-64 64c0 20.6 9.7 38.9 24.8 50.6l13 7.4-.2 .3c8 3.6 17 5.7 26.3 5.7s18.3-2 26.3-5.7zm15.9 27.9c-12.8 6.3-27.1 9.8-42.3 9.8s-29.5-3.5-42.3-9.8L142.2 307.4C176.1 325.6 214.8 336 256 336c88.8 0 166.4-48.2 207.9-120l27.7 16c-47 81.3-134.9 136-235.6 136c-47 0-91.1-11.9-129.7-32.8L29.9 503.9 2.1 488.1l97-169.8c-32.1-22.7-59-52.1-78.7-86.2l27.7-16c16.9 29.2 39.8 54.6 67 74.3l72.5-126.9C170.5 146.1 160 122.3 160 96c0-53 43-96 96-96s96 43 96 96c0 26.3-10.5 50.1-27.6 67.4l56.5 98.9c-8.5 6.4-17.5 12.2-27 17.2l-55.6-97.4zM482.1 503.9L401.5 363c9.4-5.1 18.5-10.7 27.2-16.8l81.1 141.9-27.8 15.9z"
+          />
+        </svg>
       </div>
       <div class="flex-1 scroll-reveal-item" style="--sr-delay: 80ms">
         <p class="m-0 text-white text-lg leading-8">
@@ -101,7 +114,7 @@ const stats = [
 
   <!-- Approach items -->
   <section class="scroll-reveal-group w-full" aria-label="Our design approach">
-    <div class="flex flex-wrap gap-8 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 0ms">
+    <div class="flex flex-wrap gap-8 max-md:gap-10 max-sm:gap-10 max-sm:flex-col scroll-reveal-item" style="--sr-delay: 0ms">
       {approachItems.map((item) => (
         <div class="flex-1 min-w-[200px] max-sm:min-w-0 flex flex-col gap-3">
           <div class="text-black" set:html={item.icon} />

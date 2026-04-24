@@ -1,6 +1,8 @@
 ---
+// Matches the 15 logos rendered on oursky.com live (Webflow source marks the
+// trailing 7 with `hk_logo` and hides them in production).
 const logos = [
-  { src: '/images/swire.png', srcset: '/images/swire-p-500.png 500w, /images/swire.png 1667w', alt: 'Swire' },
+  { src: '/images/swire.png', srcset: '/images/swire-p-500.png 500w, /images/swire.png 1667w', alt: 'Swire', plain: true },
   { src: '/images/mtr.png', srcset: '/images/mtr-p-500.png 500w, /images/mtr.png 1044w', alt: 'MTR' },
   { src: '/images/welab.png', alt: 'WeLab' },
   { src: '/images/asos.png', srcset: '/images/asos-p-500.png 500w, /images/asos.png 3428w', alt: 'ASOS' },
@@ -15,13 +17,6 @@ const logos = [
   { src: '/images/philips.svg.png', srcset: '/images/philips.svg-p-500.png 500w, /images/philips.svg.png 1680w', alt: 'Philips' },
   { src: '/images/likecoin.png', srcset: '/images/likecoin-p-500.png 500w, /images/likecoin.png 986w', alt: 'LikeCoin' },
   { src: '/images/k11.png', srcset: '/images/k11-p-500.png 500w, /images/k11.png 752w', alt: 'K11' },
-  { src: '/images/wilsonparking_logo4x.png', srcset: '/images/wilsonparking_logo4x-p-500.png 500w, /images/wilsonparking_logo4x.png 768w', alt: 'Wilson Parking' },
-  { src: '/images/the-club-logo.png', srcset: '/images/the-club-logo-p-500.png 500w, /images/the-club-logo.png 506w', alt: 'The Club' },
-  { src: '/images/hkt.png', srcset: '/images/hkt-p-500.png 500w, /images/hkt.png 1547w', alt: 'HKT' },
-  { src: '/images/smartone.svg.png', srcset: '/images/smartone.svg-p-500.png 500w, /images/smartone.svg.png 2560w', alt: 'SmarTone' },
-  { src: '/images/te.png', srcset: '/images/te-p-500.png 500w, /images/te.png 675w', alt: 'TE Connectivity' },
-  { src: '/images/cornerstone.png', srcset: '/images/cornerstone-p-500.png 500w, /images/cornerstone.png 1200w', alt: 'Cornerstone' },
-  { src: '/images/hlia.png', srcset: '/images/hlia-p-500.png 500w, /images/hlia.png 836w', alt: 'HLIA' },
 ];
 ---
 
@@ -42,7 +37,10 @@ const logos = [
             sizes="(max-width: 1023px) 50vw, 25vw"
             alt={logo.alt}
             loading="lazy"
-            class="scroll-reveal-item object-contain w-full max-h-20 py-2.5 brightness-0 invert opacity-75 max-md:max-h-[50px]"
+            class:list={[
+              'scroll-reveal-item object-contain w-full max-h-20 py-2.5 opacity-75 max-md:max-h-[50px]',
+              !logo.plain && 'brightness-0 invert',
+            ]}
             style={`--sr-delay: ${40 + Math.min(i, 11) * 28}ms`}
           />
         ))}

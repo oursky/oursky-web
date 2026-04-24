@@ -50,55 +50,41 @@ const testimonials = [
   <div class="w-full mt-section-lg mb-section pt-section relative block max-lg:mt-12 max-lg:pt-8">
     <div class="testimonials-marquee">
       <div class="testimonials-marquee__track">
-        <div class="testimonials-marquee__set">
-          {testimonials.map((t) => (
-            <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-lg:w-[280px] max-lg:min-w-[280px]">
-              <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-                <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
-                  <img
-                    src={t.avatar}
-                    alt={t.avatarAlt}
-                    loading="lazy"
-                    class="rounded-full w-full h-full object-cover block"
-                  />
+        {[0, 1, 2].map((setIndex) => (
+          <div class="testimonials-marquee__set" aria-hidden={setIndex > 0 ? 'true' : undefined} inert={setIndex > 0 ? true : undefined}>
+            {testimonials.map((t) => (
+              <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-lg:w-[280px] max-lg:min-w-[280px]">
+                <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+                  <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
+                    <img
+                      src={t.avatar}
+                      alt={setIndex === 0 ? t.avatarAlt : ''}
+                      loading="lazy"
+                      class="rounded-full w-full h-full object-cover block"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1">
+                    <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-snug flex-1">
+                      {t.quote}
+                    </blockquote>
+                    <p class="mt-9 mb-0 text-xs font-black leading-[1.2rem]">
+                      {setIndex === 0 ? (
+                        <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
+                          {t.linkText}
+                        </a>
+                      ) : (
+                        <a href={t.link} tabindex="-1" class="pointer-events-none text-text underline">
+                          {t.linkText}
+                        </a>
+                      )}
+                      {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
+                    </p>
+                  </div>
                 </div>
-                <div class="flex flex-col flex-1">
-                  <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-snug flex-1">
-                    {t.quote}
-                  </blockquote>
-                  <p class="mt-9 mb-0 text-xs font-black leading-[1.2rem]">
-                    <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
-                      {t.linkText}
-                    </a>
-                    {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div class="testimonials-marquee__set" aria-hidden="true" inert>
-          {testimonials.map((t) => (
-            <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-lg:w-[280px] max-lg:min-w-[280px]">
-              <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-                <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
-                  <img src={t.avatar} alt="" loading="lazy" class="rounded-full w-full h-full object-cover block" />
-                </div>
-                <div class="flex flex-col flex-1">
-                  <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-snug flex-1">
-                    {t.quote}
-                  </blockquote>
-                  <p class="mt-9 mb-0 text-xs font-black leading-[1.2rem]">
-                    <a href={t.link} tabindex="-1" class="pointer-events-none text-text underline">
-                      {t.linkText}
-                    </a>
-                    {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   </div>
@@ -129,12 +115,17 @@ const testimonials = [
     padding-right: 1rem;
   }
 
+  /*
+   * Three identical sets. Translating by -33.333% (one set width) is enough to
+   * cycle back to the identical starting frame — and the remaining two sets
+   * always keep the viewport fully covered (set width < viewport at 1920).
+   */
   @keyframes testimonials-marquee-scroll {
     from {
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-33.3333%, 0, 0);
     }
   }
 
@@ -170,6 +161,8 @@ const testimonials = [
       display: none;
     }
   }
+
+  /* Reduced-motion fallback already hides duplicate sets above. */
 
   @media (prefers-reduced-motion: reduce) and (max-width: 1023px) {
     .testimonials-marquee__track {

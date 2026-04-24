@@ -62,9 +62,9 @@ const tabs = [
 ---
 
 <section class="w-full scroll-reveal-group" aria-label="Our tech stack">
-  <div class="border border-border-mid rounded-lg px-[2.44rem] py-[2.81rem] flex flex-col gap-[3.81rem] scroll-reveal-item" style="--sr-delay: 0ms">
+  <div class="border border-border-mid rounded-lg px-[2.44rem] py-[2.81rem] max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-col gap-[3.81rem] max-md:gap-10 scroll-reveal-item" style="--sr-delay: 0ms">
     <h2 class="m-0 text-3xl font-black leading-section text-black max-sm:text-2xl max-sm:leading-desc">Our Tech Stack</h2>
-    <div id="tech-stack-tabs">
+    <div id="tech-stack-tabs" class="flex flex-col gap-10 max-md:gap-8">
       <div class="flex flex-wrap gap-6" role="tablist">
         {tabs.map((tab, i) => (
           <button

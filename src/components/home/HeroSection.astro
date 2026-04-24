@@ -110,6 +110,23 @@
     will-change: transform;
   }
 
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-h1 {
+    animation: hero-fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+  }
+
+  .hero-subtitle {
+    animation: hero-fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-h1, .hero-subtitle { animation: none; }
+  }
+
   /* Desktop: headline block close under nav; taller video slice */
   @media (min-width: 1024px) {
     .hero-caption {
@@ -167,9 +184,17 @@
     }
 
     :global(body.page--home) .hero-caption {
-      padding-top: clamp(4rem, 22vw, 5.75rem);
+      /* Extra air under the fixed header + before the gradient headline */
+      padding-top: clamp(4.75rem, 26vw, 6.5rem);
+      /* A bit more room before the video band under the subhead */
+      padding-bottom: 1.125rem;
     }
-    .hero-h1 { font-size: var(--text-hero-secondary); line-height: 2.75rem; white-space: normal; }
+    .hero-h1 {
+      font-size: var(--text-hero-secondary);
+      line-height: 2.75rem;
+      white-space: normal;
+      margin-bottom: 1.125rem;
+    }
     .hero-subtitle { font-size: var(--text-lg); line-height: 1.75rem; white-space: normal; }
     .hero-video-root { min-height: clamp(240px, 48vh, 408px); }
     .hero-gradient { height: 180px; }

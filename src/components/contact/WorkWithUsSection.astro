@@ -2,11 +2,21 @@
 /**
  * WorkWithUsSection — Contact page hero form area.
  *
- * Webflow ref: .work-with-us-section / .work-with-us
+ * Webflow ref: .work-with-us-section / .work-with-us (contact)
+ *              .action-section.action--works (works listing)
  * Desktop: large inner horizontal padding (7.5rem) centres the form in the rail.
  * Mobile: padding collapses to 0.
  */
 import ContactForm from '../ui/ContactForm.astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+const {
+  title = 'Work with us',
+  subtitle = "Let's build it!",
+} = Astro.props;
 ---
 
 <section class="scroll-reveal-group w-full" aria-label="Contact us">
@@ -15,13 +25,13 @@ import ContactForm from '../ui/ContactForm.astro';
       class="scroll-reveal-item text-3xl font-black text-center text-black leading-section m-0"
       style="--sr-delay: 0ms"
     >
-      Work with us
+      {title}
     </h1>
     <p
       class="scroll-reveal-item text-2xl font-normal text-center text-text leading-10 m-0"
       style="--sr-delay: 60ms"
     >
-      Let's build it!
+      {subtitle}
     </p>
     <div class="scroll-reveal-item" style="--sr-delay: 120ms">
       <ContactForm />

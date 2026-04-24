@@ -238,15 +238,15 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 | 2 Design system + layout shell | Done             | `docs/phase2-handoff.md`                                                                                    |
 | 3a Homepage rebuild            | Done             | `docs/phase3-handoff.md`                                                                                    |
 | 3b Remaining pages             | Done             | 34 pages — see `docs/phase3-handoff.md`                                                                     |
-| 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works `.md`, 13 categories; optional image download + JSON-LD remain |
+| 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works `.md`, 13 categories, 773 blog images + 19 works images self-hosted; JSON-LD remains |
 | 5 Deploy + cutover             | Not started      |                                                                                                             |
 
 
 **Open items across phases:**
 
-- JSON-LD Organization + WebSite in `BaseLayout.astro` (deferred from Phase 2)
 - Satoshi Variable font — one occurrence in Webflow CSS; download from fontshare.com if needed
-- Phase 4: all 138 blog HTML bodies, 8 works rich bodies, testimonial avatars, client logos from CDN
+- MD fidelity: spot-check high-traffic posts for turndown artefacts (see `docs/phase4-handoff.md`)
+- Phase 5: redirect strategy (`netlify.toml` / equivalent), ContactForm backend, deploy + DNS cutover
 
 **Key reference:**
 

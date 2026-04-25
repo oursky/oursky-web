@@ -5,7 +5,7 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 
 interface Props {
-  /** Page <title> – appended with " | Oursky" automatically */
+  /** Page <title> – prefixed with "Oursky - " automatically (matches Webflow format) */
   title: string;
   /** Meta description (≤ 160 chars recommended) – used for `meta name="description"` and as default for OG if `ogDescription` is omitted */
   description: string;
@@ -53,6 +53,13 @@ const organizationSchema = {
   name: 'Oursky',
   url: `${siteUrl}/`,
   logo: `${siteUrl}/images/og-default.png`,
+  sameAs: [
+    'https://www.linkedin.com/company/oursky-limited/',
+    'https://www.facebook.com/oursky.hk',
+    'https://www.instagram.com/oursky.hk/',
+    'https://twitter.com/oursky',
+    'https://github.com/oursky',
+  ],
 };
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -64,13 +71,18 @@ const websiteSchema = {
   inLanguage: 'en',
 };
 const extraSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const fullTitle = title === 'Oursky' ? title : `${title} | Oursky`;
+
+// Plausible: only loaded when env var is set AND this is a production build,
+// so deploy previews and local dev never report into the live dashboard.
+const plausibleDomain = import.meta.env.PLAUSIBLE_DOMAIN;
+const enablePlausible = Boolean(plausibleDomain) && import.meta.env.PROD;
+const fullTitle = title === 'Oursky' ? title : `Oursky - ${title}`;
 const socialTitle =
   ogTitle === undefined || ogTitle.length === 0
     ? fullTitle
     : ogTitle === 'Oursky'
       ? ogTitle
-      : `${ogTitle} | Oursky`;
+      : `Oursky - ${ogTitle}`;
 const socialDescription = ogDescription != null && String(ogDescription).length > 0 ? ogDescription : description;
 const absoluteOgImage = ogImage.startsWith('http')
   ? ogImage
@@ -119,6 +131,11 @@ const absoluteOgImage = ogImage.startsWith('http')
     {extraSchemas.map((schema) => (
       <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     ))}
+
+    {/* Plausible analytics — only emitted in production builds with PLAUSIBLE_DOMAIN set */}
+    {enablePlausible && (
+      <script is:inline defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />
+    )}
   </head>
   <body class:list={[bodyClass].filter(Boolean)}>
     <Header />

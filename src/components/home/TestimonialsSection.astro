@@ -48,127 +48,102 @@ const testimonials = [
   aria-label="Testimonials"
 >
   <div class="w-full mt-section-lg mb-section pt-section relative block max-lg:mt-12 max-lg:pt-8">
-    <div class="testimonials-marquee">
-      <div class="testimonials-marquee__track">
-        {[0, 1, 2].map((setIndex) => (
-          <div class="testimonials-marquee__set" aria-hidden={setIndex > 0 ? 'true' : undefined} inert={setIndex > 0 ? true : undefined}>
-            {testimonials.map((t) => (
-              <article class="testimonials-marquee__card shrink-0 snap-start w-80 min-w-80 max-w-80 px-2 box-border max-lg:w-[280px] max-lg:min-w-[280px]">
-                <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-                  <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
-                    <img
-                      src={t.avatar}
-                      alt={setIndex === 0 ? t.avatarAlt : ''}
-                      loading="lazy"
-                      class="rounded-full w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="flex flex-col flex-1">
-                    <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-snug flex-1">
-                      {t.quote}
-                    </blockquote>
-                    <p class="mt-9 mb-0 text-xs font-black leading-[1.2rem]">
-                      {setIndex === 0 ? (
-                        <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
-                          {t.linkText}
-                        </a>
-                      ) : (
-                        <a href={t.link} tabindex="-1" class="pointer-events-none text-text underline">
-                          {t.linkText}
-                        </a>
-                      )}
-                      {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+    <div class="testimonials-swiper swiper">
+      <div class="swiper-wrapper">
+        {testimonials.map((t) => (
+          <article class="swiper-slide testimonial-slide">
+            <div class="bg-surface rounded-lg p-6 h-full flex flex-col gap-0 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
+              <div class="rounded-full shrink-0 w-24 h-24 overflow-hidden mb-2">
+                <img
+                  src={t.avatar}
+                  alt={t.avatarAlt}
+                  loading="lazy"
+                  class="rounded-full w-full h-full object-cover block"
+                />
+              </div>
+              <div class="flex flex-col flex-1">
+                <blockquote class="border-l-0 mb-0 pt-5 text-base italic font-normal leading-snug flex-1">
+                  {t.quote}
+                </blockquote>
+                <p class="mt-9 mb-0 text-xs font-black leading-[1.2rem]">
+                  <a href={t.link} target="_blank" rel="noopener noreferrer" class="text-text underline hover:opacity-60">
+                    {t.linkText}
+                  </a>
+                  {t.linkText !== t.footer && `, ${t.footer.replace(t.linkText + ', ', '')}`}
+                </p>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
     </div>
   </div>
 </section>
 
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay, Mousewheel } from 'swiper/modules';
+  import 'swiper/css';
+
+  /**
+   * Testimonials carousel — replicates the Webflow homepage Swiper config:
+   *   1 slide on mobile, 3 on ≥768px, 12px / 0 gap, 2.2s autoplay, infinite loop.
+   * Re-initialised on every Astro view-transition page-load so it survives
+   * client-side navigations.
+   */
+  let instance: import('swiper').Swiper | null = null;
+
+  function initTestimonialsSwiper() {
+    const el = document.querySelector<HTMLElement>('.testimonials-swiper');
+    if (!el) return;
+    if (instance && !instance.destroyed) instance.destroy(true, true);
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    instance = new Swiper(el, {
+      modules: [Autoplay, Mousewheel],
+      speed: 400,
+      spaceBetween: 12,
+      slidesPerView: 1,
+      loop: true,
+      mousewheel: { forceToAxis: true },
+      autoplay: reducedMotion
+        ? false
+        : { delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  document.addEventListener('astro:page-load', initTestimonialsSwiper);
+</script>
+
 <style>
-  .testimonials-marquee {
+  .testimonials-swiper {
     width: 100%;
     overflow: hidden;
+    padding: 0.5rem 0; /* room for shadow on slide cards */
   }
 
-  .testimonials-marquee__track {
+  /* Slides take their width from Swiper's slidesPerView; ensure cards stretch */
+  .testimonial-slide {
+    height: auto;
     display: flex;
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: testimonials-marquee-scroll 80s linear infinite;
   }
 
-  /*
-   * Two identical flex rows; trailing padding on each matches gap so the loop seam
-   * lines up with spacing between cards (translateX(-50%) = exactly one row width).
-   */
-  .testimonials-marquee__set {
-    display: flex;
-    flex-shrink: 0;
-    align-items: stretch;
-    gap: 1rem;
-    padding-right: 1rem;
+  .testimonial-slide > * {
+    width: 100%;
   }
 
-  /*
-   * Three identical sets. Translating by -33.333% (one set width) is enough to
-   * cycle back to the identical starting frame — and the remaining two sets
-   * always keep the viewport fully covered (set width < viewport at 1920).
-   */
-  @keyframes testimonials-marquee-scroll {
-    from {
-      transform: translate3d(0, 0, 0);
-    }
-    to {
-      transform: translate3d(-33.3333%, 0, 0);
-    }
-  }
-
-  .testimonials-marquee:hover .testimonials-marquee__track,
-  .testimonials-marquee:focus-within .testimonials-marquee__track {
-    animation-play-state: paused;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .testimonials-marquee__track {
-      animation: none;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: auto;
-      flex-wrap: nowrap;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      padding-left: max(calc((100% - 1360px) / 2), 2.5rem);
-      padding-right: max(calc((100% - 1360px) / 2), 2.5rem);
-      scroll-padding-left: max(calc((100% - 1360px) / 2), 2.5rem);
-      box-sizing: border-box;
-    }
-
-    .testimonials-marquee__track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .testimonials-marquee__set {
-      padding-right: 0;
-    }
-
-    .testimonials-marquee__set[aria-hidden='true'] {
-      display: none;
-    }
-  }
-
-  /* Reduced-motion fallback already hides duplicate sets above. */
-
-  @media (prefers-reduced-motion: reduce) and (max-width: 1023px) {
-    .testimonials-marquee__track {
+  /* Mobile: pad each slide so the single card isn't edge-to-edge */
+  @media (max-width: 767px) {
+    .testimonials-swiper {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
-      scroll-padding-left: 1.25rem;
     }
   }
 </style>

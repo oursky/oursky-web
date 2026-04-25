@@ -53,3 +53,7 @@ ref/oursky-com-2023.webflow/
 .claude/launch.json
 .claude/settings.local.json
 .claude/worktrees/
+
+# Local Netlify folder + Deno cache from edge-function emulation in `netlify dev`
+.netlify
+deno.lock

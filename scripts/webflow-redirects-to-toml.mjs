@@ -170,6 +170,5 @@ if (toStdout) {
   console.error(`  ${skipped} row(s) skipped (empty or self-referential)`);
   console.error(`  + 1 baseline rule for /*.html stripping`);
   console.error('');
-  console.error('Next: review the file, then merge its [[redirects]] blocks into netlify.toml');
-  console.error('(or paste into _redirects / vercel.json depending on host).');
+  console.error('Next: review the file, then merge its [[redirects]] blocks into netlify.toml.');
 }

@@ -270,9 +270,10 @@ npm run build
 
 4. **Set up redirects** (no redirects needed — all URLs match Webflow exactly per Section 5)
 
-5. **Deploy to Vercel / Cloudflare Pages**  
+5. **Deploy to Netlify**  
+   Connect the repo in the Netlify dashboard; build settings come from `netlify.toml`.
    ```bash
-   npm run build && vercel deploy --prod
+   npm run build   # local verification before pushing
    ```
 
 ---

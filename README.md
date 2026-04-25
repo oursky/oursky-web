@@ -34,12 +34,13 @@ git branch -M main
 git push -u origin main
 ```
 
-## Vercel (internal / preview)
+## Netlify
 
-1. Import the GitHub repository in the [Vercel dashboard](https://vercel.com/new).
-2. Framework preset **Astro** is detected automatically. Build command `npm run build`, output **static** (`dist/`).
-3. **Preview URLs** use the deployment hostname for canonical URLs, Open Graph base URLs, and the sitemap (via `VERCEL_URL`). **Production** deployments use `https://www.oursky.com` unless you set `PUBLIC_SITE_URL` in project → Environment Variables.
-4. Optional: enable **Deployment Protection** on preview deployments if the site should not be publicly reachable before launch.
+1. In the [Netlify dashboard](https://app.netlify.com), connect the GitHub repository. Build command and publish directory come from `netlify.toml`.
+2. **Deploy previews** use `DEPLOY_PRIME_URL` for canonical URLs, Open Graph base URLs, and the sitemap. **Production** deploys (`CONTEXT=production`) use `https://www.oursky.com` unless you set `PUBLIC_SITE_URL` under Site → Settings → Environment variables.
+3. Contact form submissions land in **Site → Forms → oursky-contact**. Configure email notifications under Forms → Settings → Form notifications.
+4. Redirect rules live in `netlify.toml`. Regenerate the imported set with `npm run convert:redirects exports/webflow/redirects.csv` after refreshing the CSV.
+5. Optional: enable **Password protection** on preview deploys if the site should not be publicly reachable before launch.
 
 ## Content tooling
 

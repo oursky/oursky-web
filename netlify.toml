@@ -1,0 +1,69 @@
+# Netlify configuration for oursky-web.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# ── Redirect strategy ───────────────────────────────────────────────────────
+# 1) Generic .html stripping (improves on Webflow's current behaviour, which
+#    404s on /about.html etc.).
+# 2) Legacy URL rewrites: imported from Webflow's redirects CSV via
+#    `npm run convert:redirects exports/webflow/redirects.csv`. Paste the
+#    generated [[redirects]] blocks into the section marked below.
+#
+# Rule ordering matters: Netlify applies the first match. Put specific
+# rules ABOVE wildcards. Add `force = true` to any rule whose source URL
+# also exists as a static page on this site (the converter script flags
+# these automatically).
+# ────────────────────────────────────────────────────────────────────────────
+
+# .html extension stripping (Webflow legacy URLs).
+# `force = true` so the rule fires for paths like `/index.html` where Astro
+# generates a real file on disk (without force, Netlify serves the file
+# directly instead of redirecting to `/`). Wildcards don't always emulate
+# under `netlify dev --offline`; verify on a deploy preview.
+[[redirects]]
+  from   = "/*.html"
+  to     = "/:splat"
+  status = 301
+  force  = true
+
+# ── Imported from Webflow CSV (exports/webflow/redirects.csv) ──────────────
+# Service-page consolidations: old per-discipline pages now roll up under /services.
+[[redirects]]
+  from   = "/case-studies"
+  to     = "/works"
+  status = 301
+
+[[redirects]]
+  from   = "/product-development"
+  to     = "/services"
+  status = 301
+
+[[redirects]]
+  from   = "/mobile"
+  to     = "/services"
+  status = 301
+
+[[redirects]]
+  from   = "/web"
+  to     = "/services"
+  status = 301
+
+[[redirects]]
+  from   = "/design"
+  to     = "/services"
+  status = 301
+
+[[redirects]]
+  from   = "/tech"
+  to     = "/services"
+  status = 301
+
+[[redirects]]
+  from   = "/findus"
+  to     = "/contact"
+  status = 301

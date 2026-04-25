@@ -9,8 +9,10 @@ import react from '@astrojs/react';
 function resolveSite() {
   const fromEnv = process.env.PUBLIC_SITE_URL?.replace(/\/$/, '');
   if (fromEnv) return fromEnv;
-  if (process.env.VERCEL_ENV === 'production') return 'https://www.oursky.com';
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  // Netlify build env: CONTEXT=production for prod deploys; DEPLOY_PRIME_URL
+  // is the branch/preview URL (already includes the scheme).
+  if (process.env.CONTEXT === 'production') return 'https://www.oursky.com';
+  if (process.env.DEPLOY_PRIME_URL) return process.env.DEPLOY_PRIME_URL.replace(/\/$/, '');
   return 'https://www.oursky.com';
 }
 
@@ -18,6 +20,7 @@ function resolveSite() {
 export default defineConfig({
   site: resolveSite(),
   output: 'static',
+  trailingSlash: 'never',
 
   vite: {
     plugins: [tailwindcss()],

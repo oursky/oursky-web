@@ -29,7 +29,7 @@ draft: true
 # excerpt: "One or two lines for card previews. `description` remains the main SEO text unless you add og* overrides below."
 
 # Optional — social / share overrides (Open Graph + Twitter; the document title and meta description stay from `title` and `description` unless you use these for share tags only)
-# ogTitle: "Shorter share title"           # only og:title + twitter:title (adds " | Oursky" like the main title)
+# ogTitle: "Shorter share title"           # only og:title + twitter:title (prefixed with "Oursky - " like the main title)
 # ogDescription: "Different blurb for link previews"   # only og:description + twitter:description
 # ogImage: "/images/blogs/og-only.jpg"   # share image; hero still uses `image` when set
 # canonicalUrl: "/blogs/your-slug"         # or full https URL; default is the live post URL

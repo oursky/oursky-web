@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 // ─── Blog Posts ───────────────────────────────────────────────────────────────
 // One file per post: src/content/blog/<slug>.md (Markdown; .mdx optional for edge cases)
-// New-post template: docs/templates/blog-post.md
+// New-post template: templates/blog-post.md
 // URL pattern: /blogs/<slug>
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
@@ -79,6 +79,7 @@ const blog = defineCollection({
 
 // ─── Works / Case Studies ─────────────────────────────────────────────────────
 // Maps to src/content/works/*.{md,mdx}
+// New-work template: templates/work.md
 // URL pattern: /works/[slug]
 const works = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/works' }),

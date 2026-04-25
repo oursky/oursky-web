@@ -66,7 +66,7 @@ oursky-web/
 ├── src/
 │   ├── content.config.ts         # Astro 6 content collection schemas
 │   ├── content/
-│   │   ├── blog/                 # One .md file per post (AI-agent managed, 138 target); template: docs/templates/blog-post.md
+│   │   ├── blog/                 # One .md file per post (AI-agent managed, 138 target); template: templates/blog-post.md
 │   │   ├── works/                # Case studies as Markdown (AI-agent managed, 8 items; `.mdx` optional)
 │   │   └── categories/           # JSON blog categories (13 items)
 │   ├── layouts/
@@ -103,12 +103,16 @@ oursky-web/
 │   ├── phase1-handoff.md
 │   ├── phase2-handoff.md
 │   ├── phase3-handoff.md
-│   └── templates/
-│       └── blog-post.md          # Copy-paste template for new `src/content/blog/<slug>.md` posts
+│   ├── phase4-handoff.md
+│   └── phase5-checklist.md
+├── templates/
+│   ├── blog-post.md              # Copy-paste template for new `src/content/blog/<slug>.md` posts
+│   └── work.md                   # Copy-paste template for new `src/content/works/<slug>.md` case studies
 ├── scripts/
 │   ├── generate-blog-stubs.mjs   # Converts Webflow blog export → .md stubs
 │   └── generate-works-stubs.mjs  # Converts Webflow works export → `.md` stubs
-├── .cursor/skills/oursky-webflow-page-rebuild/SKILL.md
+├── .claude/skills/oursky-webflow-page-rebuild/SKILL.md
+├── netlify.toml                  # Build config + redirect rules
 ├── astro.config.mjs
 └── .env.example                  # WEBFLOW_API_TOKEN, PLAUSIBLE_DOMAIN, PUBLIC_SITE_URL
 ```
@@ -132,7 +136,7 @@ All dynamic content lives as files in `src/content/`. An AI agent creates or edi
 
 ### Blog posts — `src/content/blog/<slug>.md`
 
-Each post is a single Markdown file with YAML frontmatter (see `docs/templates/blog-post.md` for a starter). The content collection also accepts `.mdx` if a post needs embedded components. Same general pattern as **formx.ai** (`src/content/blog/*.md` with frontmatter, listings sorted by date).
+Each post is a single Markdown file with YAML frontmatter (see `templates/blog-post.md` for a starter). The content collection also accepts `.mdx` if a post needs embedded components. Same general pattern as **formx.ai** (`src/content/blog/*.md` with frontmatter, listings sorted by date).
 
 ```yaml
 ---
@@ -143,7 +147,7 @@ author: "Oursky Team"
 categories:
   - "engineering"   # each slug has src/content/categories/<slug>.json
 excerpt: "One-line card blurb (optional; description remains primary SEO text)."
-# Optional share overrides: ogTitle, ogDescription, ogImage, canonicalUrl, twitterCard — see docs/templates/blog-post.md
+# Optional share overrides: ogTitle, ogDescription, ogImage, canonicalUrl, twitterCard — see templates/blog-post.md
 image: "/images/blog/build-it-right.jpg"
 draft: false
 ---
@@ -213,7 +217,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 ### Phase 4: Full content migration (in progress)
 
 - Re-fetch 138 blog post HTML bodies from Webflow API; convert to **Markdown** (`.md` in `src/content/blog/`); set `draft: false` per post when the body is complete
-- New posts: copy `docs/templates/blog-post.md` → `src/content/blog/<slug>.md` and fill frontmatter + body
+- New posts: copy `templates/blog-post.md` → `src/content/blog/<slug>.md` and fill frontmatter + body
 - Fetch rich body content for 8 works; complete case-study Markdown
 - Download and migrate all CDN images to `public/images/`
 - Audit category mapping; verify all blog post slugs and author fields
@@ -221,7 +225,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 
 ### Phase 5: Deploy and cutover
 
-- Deploy to Vercel or Cloudflare Pages
+- Deploy to Netlify (config in `netlify.toml`; redirects imported from `exports/webflow/redirects.csv`)
 - Verify sitemap, `robots.txt`, canonical URLs, OG tags
 - Update DNS from Webflow to new host
 - Monitor 404s; add redirect rules for any missed URLs
@@ -239,7 +243,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 | 3a Homepage rebuild            | Done             | `docs/phase3-handoff.md`                                                                                    |
 | 3b Remaining pages             | Done             | 34 pages — see `docs/phase3-handoff.md`                                                                     |
 | 4 Full content migration       | Done (see `docs/phase4-handoff.md`) | 138 blog `.md`, 8 works `.md`, 13 categories, 773 blog images + 19 works images self-hosted; JSON-LD remains |
-| 5 Deploy + cutover             | Not started      |                                                                                                             |
+| 5 Deploy + cutover             | In progress      | Checklist: `docs/phase5-checklist.md`. Done so far: redirects, ContactForm, JSON-LD, Netlify config.        |
 
 
 **Open items across phases:**

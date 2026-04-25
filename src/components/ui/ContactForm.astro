@@ -6,7 +6,21 @@
  * "Contacts" heading only shown when `showHeading` is true (home CTA).
  * No wrapping layout or dark banner — those belong to the parent section.
  *
- * Form action is deferred to Phase 4/5 (backend integration).
+ * Backend: Netlify Forms.
+ *  - The form is detected at deploy time by Netlify's build bot from the
+ *    statically-rendered HTML (Astro emits both rendered locations).
+ *  - Submissions land in Netlify dashboard → Forms → "oursky-contact".
+ *  - JS progressive-enhancement POSTs to `/` and shows in-page status; if JS
+ *    is disabled, the browser submits to `/` and Netlify shows its default
+ *    thank-you page.
+ *  - Spam protection (defense in depth):
+ *      1. Netlify-hosted reCAPTCHA 2 — `data-netlify-recaptcha="true"` on the
+ *         form + a placeholder `<div data-netlify-recaptcha="true">`. Netlify
+ *         injects the widget at runtime and validates server-side. No Google
+ *         keys required. Limit: one reCAPTCHA per page.
+ *      2. `bot-field` honeypot — bots fill it; Netlify silently drops those
+ *         submissions before they reach the dashboard or trigger reCAPTCHA.
+ *      3. Akismet — Netlify auto-filters obvious spam.
  */
 import PillButton from './PillButton.astro';
 
@@ -14,59 +28,137 @@ interface Props {
   showHeading?: boolean;
 }
 const { showHeading = false } = Astro.props;
+
+const FORM_NAME = 'oursky-contact';
 ---
 
-<form class="flex flex-col gap-3.5" name="Contact us form" method="post" action="/contact">
-  {showHeading && <h2 class="text-xl font-bold text-black mb-2">Contacts</h2>}
+<div class="contact-form-wrapper">
+  <form
+    class="contact-form flex flex-col gap-3.5"
+    name={FORM_NAME}
+    method="post"
+    action="/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true"
+  >
+    {/* Required for Netlify to associate this submission with FORM_NAME */}
+    <input type="hidden" name="form-name" value={FORM_NAME} />
 
-  <div class="grid grid-cols-2 max-[599px]:grid-cols-1 gap-3">
+    {/* Honeypot — bots fill this; Netlify silently discards those submissions */}
+    <p class="hidden" aria-hidden="true">
+      <label>
+        Don't fill this out if you're human:
+        <input name="bot-field" tabindex="-1" autocomplete="off" />
+      </label>
+    </p>
+
+    {showHeading && <h2 class="text-xl font-bold text-black mb-2">Contacts</h2>}
+
+    <div class="grid grid-cols-2 max-[599px]:grid-cols-1 gap-3">
+      <div class="flex flex-col">
+        <label for="contact-name" class="sr-only">Name</label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border placeholder:text-text-muted"
+          placeholder="Name"
+          autocomplete="name"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="contact-company" class="sr-only">Company</label>
+        <input
+          id="contact-company"
+          type="text"
+          name="company"
+          class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border placeholder:text-text-muted"
+          placeholder="Company"
+          autocomplete="organization"
+        />
+      </div>
+    </div>
+
     <div class="flex flex-col">
-      <label for="contact-name" class="sr-only">Name</label>
+      <label for="contact-email" class="sr-only">Email</label>
       <input
-        id="contact-name"
-        type="text"
-        name="name"
+        id="contact-email"
+        type="email"
+        name="email"
         class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border placeholder:text-text-muted"
-        placeholder="Name"
-        autocomplete="name"
+        placeholder="Email"
+        autocomplete="email"
+        required
       />
     </div>
+
     <div class="flex flex-col">
-      <label for="contact-company" class="sr-only">Company</label>
-      <input
-        id="contact-company"
-        type="text"
-        name="company"
-        class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border placeholder:text-text-muted"
-        placeholder="Company"
-        autocomplete="organization"
-      />
+      <label for="contact-message" class="sr-only">Message</label>
+      <textarea
+        id="contact-message"
+        name="message"
+        class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border resize-y min-h-[11rem]"
+        rows="4"
+        placeholder="Your Message"
+      ></textarea>
     </div>
-  </div>
 
-  <div class="flex flex-col">
-    <label for="contact-email" class="sr-only">Email</label>
-    <input
-      id="contact-email"
-      type="email"
-      name="email"
-      class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border placeholder:text-text-muted"
-      placeholder="Email"
-      autocomplete="email"
-      required
-    />
-  </div>
+    {/* Netlify-hosted reCAPTCHA 2 placeholder — widget is injected at runtime. */}
+    <div data-netlify-recaptcha="true" class="self-start"></div>
 
-  <div class="flex flex-col">
-    <label for="contact-message" class="sr-only">Message</label>
-    <textarea
-      id="contact-message"
-      name="message"
-      class="w-full px-4 py-[1.1rem] rounded-md bg-black/5 text-base text-text outline-none transition-colors focus:bg-black/10 box-border resize-y min-h-[11rem]"
-      rows="4"
-      placeholder="Your Message"
-    ></textarea>
-  </div>
+    <PillButton type="submit" label="Let's Talk" variant="primary" class="self-start" />
+  </form>
 
-  <PillButton type="submit" label="Let's Talk" variant="primary" class="self-start" />
-</form>
+  <div
+    class="contact-form-status mt-4 text-base hidden"
+    role="status"
+    aria-live="polite"
+  ></div>
+</div>
+
+<script>
+  const FORM_SELECTOR = 'form.contact-form[name="oursky-contact"]';
+
+  document.querySelectorAll<HTMLFormElement>(FORM_SELECTOR).forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const wrapper = form.closest('.contact-form-wrapper');
+      const status = wrapper?.querySelector<HTMLElement>('.contact-form-status') ?? null;
+      const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+      if (submit) submit.disabled = true;
+      if (status) {
+        status.hidden = false;
+        status.classList.remove('hidden', 'text-red-600');
+        status.classList.add('text-text-muted');
+        status.textContent = 'Sending…';
+      }
+
+      try {
+        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString(),
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        form.hidden = true;
+        if (status) {
+          status.classList.remove('text-text-muted', 'text-red-600');
+          status.classList.add('text-black', 'font-semibold');
+          status.textContent = "Thanks — we'll be in touch shortly.";
+        }
+      } catch {
+        if (status) {
+          status.classList.remove('text-text-muted');
+          status.classList.add('text-red-600');
+          status.textContent =
+            'Something went wrong. Please try again, or email hello@oursky.com.';
+        }
+        if (submit) submit.disabled = false;
+      }
+    });
+  });
+</script>

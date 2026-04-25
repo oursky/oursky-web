@@ -111,7 +111,7 @@ oursky-web/
 ├── scripts/
 │   ├── generate-blog-stubs.mjs   # Converts Webflow blog export → .md stubs
 │   └── generate-works-stubs.mjs  # Converts Webflow works export → `.md` stubs
-├── .claude/skills/oursky-webflow-page-rebuild/SKILL.md
+├── .claude/skills/oursky-page-and-content/SKILL.md
 ├── netlify.toml                  # Build config + redirect rules
 ├── astro.config.mjs
 └── .env.example                  # WEBFLOW_API_TOKEN, PLAUSIBLE_DOMAIN, PUBLIC_SITE_URL
@@ -254,7 +254,7 @@ Schemas are enforced in `src/content.config.ts` — malformed content fails the 
 
 **Key reference:**
 
-- Page rebuild skill: `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md`
+- Page & content skill: `.claude/skills/oursky-page-and-content/SKILL.md`
 - Webflow site ID: `6544a001d4acba67aa28f5f5`
 - Webflow collection IDs: blogs `654c9b978627503eaa19e2fd`, works `654ba60d6d88c15f2b6e94e3`, categories `66e14c181ca7ef2021f1efca`
 

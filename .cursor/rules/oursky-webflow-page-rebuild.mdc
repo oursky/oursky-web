@@ -1,6 +1,0 @@
----
-description: Oursky Webflow → Astro page rebuild skill. Applied when building or editing any marketing page.
-alwaysApply: true
----
-
-@.cursor/skills/oursky-webflow-page-rebuild/SKILL.md

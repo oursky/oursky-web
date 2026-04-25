@@ -57,10 +57,10 @@ src/
 
 docs/
   phase3-handoff.md                        ← This file
-.cursor/
+.claude/
   skills/
-    oursky-webflow-page-rebuild/
-      SKILL.md                             ← Phase 3b reusable skill
+    oursky-page-and-content/
+      SKILL.md                             ← Page & content skill
 ```
 
 ### Implementation Notes
@@ -245,7 +245,7 @@ Astro scopes `<style>` blocks by appending `[data-astro-cid-xxx]` to every selec
 
 ## Phase 3b — Remaining Pages (Use the skill)
 
-**Prerequisite skill:** `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md` — read it first.
+**Prerequisite skill:** `.claude/skills/oursky-page-and-content/SKILL.md` — read it first.
 
 Priority order from `docs/phase2-handoff.md`:
 
@@ -306,7 +306,7 @@ Service images: `development-service.webp`, `design-service.webp`
 Tech stack logos: `react-native.webp`, `flutter.webp`, `kotlin.png`, `swift.webp`, `graphql.png`, `ionic.webp`, `tailwindcss.png`, `reactjs.svg`, `typescript.webp`, `vite.png`, `storybook.svg`, `k8s.png`, `openai.png`, `helm.png`, `prometheusio.svg`, `terraform.png`, `kubeflow.svg`, `dotnet.png`, `golang.png`, `rails.png`, `python.png`, `fastapi.png`, `celery.png`, `langchain.png`, `github-actions.png`, `gnupg.png`
 
 Per page workflow:
-1. Read `.cursor/skills/oursky-webflow-page-rebuild/SKILL.md` first
+1. Read `.claude/skills/oursky-page-and-content/SKILL.md` first
 2. Call `data_pages_tool → get_page_metadata` + `get_page_content`
 3. Build `src/pages/<slug>.astro` (thin) + `src/components/<slug>/*.astro`
 4. Reuse shared UI components from `src/components/ui/` where possible

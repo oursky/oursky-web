@@ -172,9 +172,11 @@ const clockSvgPaths = `
 </script>
 
 <script>
-  import lottie from 'lottie-web';
-
-  let logoAnim: ReturnType<typeof lottie.loadAnimation> | null = null;
+  // Lottie is loaded dynamically only when the footer enters the viewport,
+  // keeping it off the critical path so it doesn't delay astro:page-load.
+  type LottieModule = typeof import('lottie-web');
+  let lottieModule: LottieModule | null = null;
+  let logoAnim: ReturnType<LottieModule['default']['loadAnimation']> | null = null;
   let logoObserver: IntersectionObserver | null = null;
 
   function initLogoLottie() {
@@ -184,35 +186,54 @@ const clockSvgPaths = `
       logoObserver.disconnect();
       logoObserver = null;
     }
-    if (logoAnim) {
-      logoAnim.destroy();
-      logoAnim = null;
-    }
-    logoAnim = lottie.loadAnimation({
-      container,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: '/oursky-logo-footer.json',
-    });
 
-    if (!logoAnim) return;
-    const anim = logoAnim;
-    let hasPlayed = false;
-
-    logoObserver = new IntersectionObserver(
-      (entries) => {
+    // Load Lottie lazily the first time the footer is about to enter view.
+    const visibilityObserver = new IntersectionObserver(
+      async (entries, obs) => {
         for (const entry of entries) {
-          if (!entry.isIntersecting || hasPlayed) continue;
-          hasPlayed = true;
-          anim.play();
-          logoObserver?.disconnect();
-          logoObserver = null;
+          if (!entry.isIntersecting) continue;
+          obs.disconnect();
+
+          if (!lottieModule) {
+            lottieModule = await import('lottie-web');
+          }
+          const lottie = lottieModule.default;
+
+          if (logoAnim) {
+            logoAnim.destroy();
+            logoAnim = null;
+          }
+
+          logoAnim = lottie.loadAnimation({
+            container,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/oursky-logo-footer.json',
+          });
+
+          if (!logoAnim) return;
+          const anim = logoAnim;
+          let hasPlayed = false;
+
+          logoObserver = new IntersectionObserver(
+            (playEntries) => {
+              for (const e of playEntries) {
+                if (!e.isIntersecting || hasPlayed) continue;
+                hasPlayed = true;
+                anim.play();
+                logoObserver?.disconnect();
+                logoObserver = null;
+              }
+            },
+            { threshold: 0.25 }
+          );
+          logoObserver.observe(container);
         }
       },
-      { threshold: 0.25 }
+      { rootMargin: '200px' }
     );
-    logoObserver.observe(container);
+    visibilityObserver.observe(container);
   }
 
   document.addEventListener('astro:page-load', initLogoLottie);

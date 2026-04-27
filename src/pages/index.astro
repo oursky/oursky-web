@@ -85,6 +85,9 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
       groups.forEach((el) => io.observe(el));
     }
 
+    // Run immediately so above-fold content isn't hidden while scripts load.
+    // astro:page-load re-runs it after view-transition navigations.
+    initHomeScrollReveal();
     document.addEventListener('astro:page-load', initHomeScrollReveal);
   </script>
 </BaseLayout>

@@ -14,13 +14,9 @@
  *    is disabled, the browser submits to `/` and Netlify shows its default
  *    thank-you page.
  *  - Spam protection (defense in depth):
- *      1. Netlify-hosted reCAPTCHA 2 — `data-netlify-recaptcha="true"` on the
- *         form + a placeholder `<div data-netlify-recaptcha="true">`. Netlify
- *         injects the widget at runtime and validates server-side. No Google
- *         keys required. Limit: one reCAPTCHA per page.
- *      2. `bot-field` honeypot — bots fill it; Netlify silently drops those
- *         submissions before they reach the dashboard or trigger reCAPTCHA.
- *      3. Akismet — Netlify auto-filters obvious spam.
+ *      1. `bot-field` honeypot — bots fill it; Netlify silently discards those
+ *         submissions before they reach the dashboard.
+ *      2. Akismet — Netlify auto-filters obvious spam.
  */
 import PillButton from './PillButton.astro';
 
@@ -40,7 +36,6 @@ const FORM_NAME = 'oursky-contact';
     action="/"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    data-netlify-recaptcha="true"
   >
     {/* Required for Netlify to associate this submission with FORM_NAME */}
     <input type="hidden" name="form-name" value={FORM_NAME} />
@@ -103,9 +98,6 @@ const FORM_NAME = 'oursky-contact';
         placeholder="Your Message"
       ></textarea>
     </div>
-
-    {/* Netlify-hosted reCAPTCHA 2 placeholder — widget is injected at runtime. */}
-    <div data-netlify-recaptcha="true" class="self-start"></div>
 
     <PillButton type="submit" label="Let's Talk" variant="primary" class="self-start" />
   </form>

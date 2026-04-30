@@ -21,7 +21,7 @@ interface Props {
   type?: 'button' | 'submit' | 'reset';
   class?: string;
   style?: string;
-  /** Force a full page reload instead of view-transition swap (use for pages with reCAPTCHA). */
+  /** Force a full page reload instead of view-transition swap (e.g. pages that load reCAPTCHA scripts). */
   reload?: boolean;
 }
 

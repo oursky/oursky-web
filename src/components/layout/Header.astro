@@ -32,8 +32,8 @@ function isActive(href: string): boolean {
     class="header relative flex w-full max-w-full items-center justify-between gap-1 max-md:justify-center max-md:gap-2 sm:gap-2 md:max-w-none mx-auto pointer-events-auto"
   >
     <!-- Logo pill (tablet+ — Webflow hides separate header icon below md) -->
-    <!-- data-astro-reload: home page hosts a contact form whose reCAPTCHA must
-         re-mount per visit; ClientRouter swaps would skip the bootstrap script. -->
+    <!-- data-astro-reload: home page has a Brevo newsletter form that loads
+         reCAPTCHA v3; ClientRouter swaps would skip the bootstrap script. -->
     <a
       href="/"
       data-astro-reload
@@ -101,7 +101,6 @@ function isActive(href: string): boolean {
     <!-- Contact: icon-only <lg; label lg+ -->
     <a
       href={ctaLink.href}
-      data-astro-reload
       class="pill contact-pill relative z-[2] flex flex-none items-center justify-center rounded-full no-underline text-black lg:min-h-[4.25rem] lg:px-[3.125rem] lg:py-4 lg:text-lg lg:font-semibold"
       aria-label={ctaLink.label}
     >

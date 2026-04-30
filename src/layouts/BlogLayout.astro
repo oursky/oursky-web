@@ -105,7 +105,7 @@ const pubDateDisplay = pubDate.toLocaleDateString('en-US', {
       <div class="ml-5 max-sm:ml-0">
         <p class="blog-badge inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">Blog</p>
       </div>
-      <h1 class="ml-5 max-sm:ml-0 text-[2rem] font-bold leading-footer text-black m-0 mb-4">{title}</h1>
+      <h1 class="ml-5 max-sm:ml-0 text-3xl font-bold leading-section text-black m-0 mb-4 max-md:text-[2.25rem] max-md:leading-[2.75rem]">{title}</h1>
       <div class="ml-5 max-sm:ml-0 flex flex-wrap gap-1.5 mb-2">
         {categories.map((slug) => (
           <a
@@ -131,7 +131,7 @@ const pubDateDisplay = pubDate.toLocaleDateString('en-US', {
       </div>
 
       <aside class="shrink-0 w-20 max-lg:w-full max-lg:order-first" aria-label="Share this post">
-        <div class="sticky top-[30vh] flex flex-col items-center gap-3 max-lg:static max-lg:flex-row max-lg:justify-start max-lg:gap-4">
+        <div class="sticky top-[30vh] flex flex-col items-center gap-3 max-lg:static max-lg:flex-row max-lg:justify-start max-lg:gap-4 max-lg:pl-5 max-sm:pl-0">
           <span class="text-sm font-semibold text-black">Share</span>
           <div class="flex flex-col gap-3 max-lg:flex-row">
             <a

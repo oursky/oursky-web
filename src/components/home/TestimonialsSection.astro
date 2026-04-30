@@ -120,6 +120,12 @@ const testimonials = [
   }
 
   document.addEventListener('astro:page-load', initTestimonialsSwiper);
+  // Fallback for initial load if astro:page-load hasn't fired yet
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTestimonialsSwiper);
+  } else {
+    initTestimonialsSwiper();
+  }
 </script>
 
 <style>

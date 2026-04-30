@@ -39,9 +39,11 @@ Webflow → new site URL conventions are 1:1; the migration plan promised no red
   done
   # all 7 should be 301 → /works (or /services, /contact)
 
-  # On deploy preview URL, additionally verify .html stripping:
+  # On deploy preview URL, additionally verify .html stripping and trailing-slash strip:
   curl -sI -o /dev/null -w "%{http_code} -> %{redirect_url}\n" "https://<preview>.netlify.app/about.html"
   # should be 301 → /about
+  curl -sI -o /dev/null -w "%{http_code} -> %{redirect_url}\n" "https://<preview>.netlify.app/blog/"
+  # should be 301 → /blog
   ```
 
 ## 3. SEO

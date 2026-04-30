@@ -32,8 +32,11 @@ function isActive(href: string): boolean {
     class="header relative flex w-full max-w-full items-center justify-between gap-1 max-md:justify-center max-md:gap-2 sm:gap-2 md:max-w-none mx-auto pointer-events-auto"
   >
     <!-- Logo pill (tablet+ — Webflow hides separate header icon below md) -->
+    <!-- data-astro-reload: home page hosts a contact form whose reCAPTCHA must
+         re-mount per visit; ClientRouter swaps would skip the bootstrap script. -->
     <a
       href="/"
+      data-astro-reload
       class="pill logo-pill relative z-[2] mr-2 hidden flex-none items-center justify-center no-underline sm:mr-4 md:flex lg:mr-5"
       aria-label="Oursky home"
     >
@@ -59,6 +62,7 @@ function isActive(href: string): boolean {
         <!-- Phone: logo inside nav bar replaces Home (ref: Webflow .navbar__icon) -->
         <a
           href="/"
+          data-astro-reload
           class:list={[
             'nav-pill__brand md:hidden mr-0.5 flex shrink-0 items-center justify-center rounded-full no-underline transition-transform duration-300',
             { 'nav-pill__brand--active': isActive('/') },
@@ -78,6 +82,7 @@ function isActive(href: string): boolean {
         {mainNav.map((link) => (
           <a
             href={link.href}
+            data-astro-reload={link.href === '/' ? '' : undefined}
             class:list={[
               'nav-link flex h-full shrink-0 items-center rounded-full px-1.5 py-0.5 text-xs font-medium leading-tight text-black no-underline whitespace-nowrap transition-transform duration-300 sm:px-2 sm:text-sm sm:leading-snug lg:px-3 lg:text-lg lg:leading-9',
               {
@@ -96,6 +101,7 @@ function isActive(href: string): boolean {
     <!-- Contact: icon-only <lg; label lg+ -->
     <a
       href={ctaLink.href}
+      data-astro-reload
       class="pill contact-pill relative z-[2] flex flex-none items-center justify-center rounded-full no-underline text-black lg:min-h-[4.25rem] lg:px-[3.125rem] lg:py-4 lg:text-lg lg:font-semibold"
       aria-label={ctaLink.label}
     >

@@ -25,7 +25,7 @@ npm run preview        # spot-check 5–10 pages
 
 Webflow → new site URL conventions are 1:1; the migration plan promised no redirects beyond the 8 we explicitly added.
 
-- [x] Blog posts render at `/blogs/<slug>` (not `/post/<slug>` — that pattern was never used by Webflow, confirmed by Phase 5 audit `/tmp/audit-results.txt`)
+- [x] Blog posts render at `/blogs/<slug>` (not `/post/<slug>` — that pattern was never used by Webflow, confirmed by Phase 5 production-redirect audit on 2026-04-25)
 - [x] Works render at `/works/<slug>`
 - [x] Categories render at `/blog-category/<slug>`
 - [x] Paginated blog listing renders at `/blog` and `/blog/<page>`
@@ -87,17 +87,17 @@ grep -rE '\b(w-form|w-nav|w-richtext)\b' src/ --include="*.astro"  # → 0 resul
 
 The form name is `oursky-contact`. Submissions group under that name in the Netlify dashboard.
 
-- [ ] First deploy succeeds — Netlify build log says it detected the form `oursky-contact` (look for "Detected forms" line)
-- [ ] Form on `/contact` page submits successfully (test with a real submission)
-- [ ] Form on `/` (homepage CTA) submits successfully
-- [ ] In-page success state displays ("Thanks — we'll be in touch shortly.")
-- [ ] In-page error state displays when offline / network blocked
-- [ ] Submission visible in **Netlify dashboard → Site → Forms → oursky-contact**
-- [ ] Netlify-hosted reCAPTCHA 2 widget renders before the submit button (Google "I'm not a robot" checkbox). Netlify injects this at runtime — no script tag in our source.
-- [ ] Submitting without solving the reCAPTCHA fails (server-side validation rejects). Our AJAX handler shows the in-page error state.
-- [ ] Honeypot working: submitting with the hidden `bot-field` filled gets silently discarded (won't appear in dashboard).
-- [ ] One reCAPTCHA per page rule respected: each page has at most one ContactForm instance (homepage has 1 in CTA section, `/contact` has 1 in `WorkWithUsSection`). If you ever add a second form to a single page, you must use the bring-your-own reCAPTCHA flavor instead.
-- [ ] Email notification configured: **Forms → Settings → Form notifications → Email notification** → recipient address set
+- [x] First deploy succeeds — Netlify build log shows "Detected forms"
+- [x] Form on `/contact` page submits successfully (verified with a real submission)
+- [x] Form on `/` (homepage CTA) submits successfully
+- [x] In-page success state displays ("Thanks — we'll be in touch shortly.")
+- [ ] In-page error state displays when offline / network blocked (quick verification — toggle DevTools network → "Offline" and submit)
+- [x] Submission visible in **Netlify dashboard → Site → Forms → oursky-contact**
+- [x] Netlify-hosted reCAPTCHA 2 widget renders before the submit button. Netlify injects this at runtime — no script tag in our source.
+- [x] Submitting without solving the reCAPTCHA fails (server-side validation rejects).
+- [ ] Honeypot working: submitting with the hidden `bot-field` filled gets silently discarded (quick verification — fill `bot-field` via DevTools and submit; submission should not appear in the Netlify dashboard).
+- [x] One reCAPTCHA per page rule respected. Three pages currently render a `ContactForm`, each at most once: `/` (homepage CTA section), `/contact` (`WorkWithUsSection`), and `/works` (`WorkWithUsSection` reused at the bottom of the listing). If you ever add a second form to a single page, switch to the bring-your-own reCAPTCHA flavor.
+- [x] Email notification configured: **Forms → Settings → Form notifications → Email notification** → recipient address set
 - [x] No leftover `data-wf-*` / `data-name` / Webflow reCAPTCHA `<div class="w-form-formrecaptcha">` in source. Clean rebuild — confirmed by `grep` returning 0.
 
 ## 7. Third-party scripts
@@ -114,7 +114,13 @@ Live-site script inventory ran 2026-04-25 against `https://www.oursky.com`. Find
 
 ## 8. Deploy & DNS cutover
 
-- [ ] Netlify site is connected to the GitHub repo, building from `master`
+- [x] Netlify site is connected to the GitHub repo, building from **`live`**. `master` is the development trunk; pushes there run CI but do **not** trigger a Netlify build. Promote to deploy by merging `master` into `live` and pushing `live`.
+
+  ```bash
+  # Trigger a deploy
+  git checkout live && git merge master --ff-only && git push origin live
+  git checkout master   # back to dev
+  ```
 - [ ] Custom domain `www.oursky.com` added in Netlify → Domain management
 - [ ] HTTPS certificate provisioned (Netlify auto-issues via Let's Encrypt; wait for green check)
 - [ ] `PUBLIC_SITE_URL=https://www.oursky.com` set in Netlify environment variables (production context)
@@ -139,10 +145,9 @@ Live-site script inventory ran 2026-04-25 against `https://www.oursky.com`. Find
 
 These need access to third-party accounts that the dev/migration team doesn't own. Coordinate with Oursky admins before they can ship.
 
-- [ ] **Newsletter signup** — Webflow homepage has a Mailchimp signup ("Get updates and tips from the team") posting to `oursky.us2.list-manage.com/subscribe/post?u=34db69ee3e01fe49e12302054&id=72405ff6d4` with Cloudflare Turnstile (`data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"`). Not migrated. **Decision needed**: re-implement with same Mailchimp endpoint (needs confirmation list IDs are still active), switch to Netlify Forms + Mailchimp sync, or drop entirely. Owner: Oursky Mailchimp admin.
-- [ ] **n8n integration for contact form submissions** — route Netlify form submissions through an n8n webhook for downstream automation (CRM, email, Slack, etc.). Requires n8n instance, webhook URL, and a Netlify outgoing webhook configured under **Forms → Settings → Outgoing notifications → Add notification → HTTP POST**. Owner: n8n / ops admin.
+- [x] **Newsletter signup** — wired in `src/components/home/ActionCardsSection.astro` (commit `93e6ee1`). Posts to the existing Mailchimp audience `oursky.us2.list-manage.com/.../u=34db69ee3e01fe49e12302054&id=72405ff6d4` with inline JSONP feedback and a no-JS fallback POST. No Mailchimp API token required (direct form post, not the API).
+- [ ] **n8n integration for contact form submissions** — route Netlify form submissions through an n8n webhook for downstream automation (CRM, email, Slack, etc.). Requires n8n instance, webhook URL, and a Netlify outgoing webhook configured under **Forms → Settings → Outgoing notifications → Add notification → HTTP POST**. Owner: n8n / ops admin. **Optional for launch** — submissions still land in the Netlify dashboard without it.
 - [ ] **Plausible env var** — `PLAUSIBLE_DOMAIN=oursky.com` in Netlify dashboard (production context). Needs Netlify site admin.
-- [ ] **Mailchimp API token** (only if going the API/sync route for newsletter) — generate in Mailchimp dashboard, store as `MAILCHIMP_API_KEY` in Netlify env. Owner: Mailchimp admin.
 
 ## Known followups (not blockers for launch)
 
@@ -152,5 +157,4 @@ These need access to third-party accounts that the dev/migration team doesn't ow
 
 - Migration plan: `docs/migration-plan.md`
 - Phase handoffs: `docs/phase1-handoff.md`, `phase2-handoff.md`, `phase3-handoff.md`, `phase4-handoff.md`
-- Production-redirect audit results: `/tmp/audit-results.txt` (regenerate by re-running the curl loop in §2)
 - Redirect converter: `npm run convert:redirects exports/webflow/redirects.csv`

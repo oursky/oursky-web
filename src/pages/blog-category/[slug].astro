@@ -26,21 +26,21 @@ const { name, description } = category.data;
   title={`${name} — Blog`}
   description={description ?? `All blog posts in the ${name} category.`}
 >
-  <main class="max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
-    <header class="mb-12">
-      <div class="ml-5 max-sm:ml-0">
+  <main class="blog-page max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] pb-16 max-lg:pt-page-top-tablet box-border">
+    <header class="scroll-reveal-group mb-12">
+      <div class="ml-5 max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
         <h1 class="blog-page-title inline-block m-0 mb-4 text-5xl font-semibold leading-hero pb-2 max-md:text-hero-secondary max-md:leading-hero-sm">View Posts By Category</h1>
       </div>
-      <p class="ml-5 max-sm:ml-0 text-2xl font-medium leading-desc text-black m-0 max-md:text-lg max-md:leading-desc-sm">{name}</p>
+      <p class="ml-5 max-sm:ml-0 text-2xl font-medium leading-desc text-black m-0 max-md:text-lg max-md:leading-desc-sm scroll-reveal-item" style="--sr-delay: 80ms">{name}</p>
     </header>
 
     {
       posts.length === 0 ? (
         <p class="text-text-muted">No posts in this category yet.</p>
       ) : (
-        <ul class="grid gap-6 sm:grid-cols-2 list-none p-0 m-0">
-          {posts.map((post) => (
-            <li class="bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+        <ul class="scroll-reveal-group grid gap-6 sm:grid-cols-2 list-none p-0 m-0">
+          {posts.map((post, i) => (
+            <li class="scroll-reveal-item bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)]" style={`--sr-delay: ${(i % 2) * 80}ms`}>
               <a href={`/blogs/${post.id}`} class="group block no-underline text-text p-10 pb-5 max-md:p-4">
                 <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-footer truncate m-0">
                   {name}
@@ -81,3 +81,34 @@ const { name, description } = category.data;
     background-clip: text;
   }
 </style>
+
+<script>
+  function initPage() {
+    const root = document.querySelector('.blog-page');
+    if (!root) return;
+    const singles = root.querySelectorAll('.scroll-reveal');
+    const groups = root.querySelectorAll('.scroll-reveal-group');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      singles.forEach((el) => el.classList.add('scroll-reveal--visible'));
+      groups.forEach((el) => el.classList.add('scroll-reveal-group--visible'));
+    } else if (singles.length || groups.length) {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const t = entry.target;
+            t.classList.add(t.classList.contains('scroll-reveal-group') ? 'scroll-reveal-group--visible' : 'scroll-reveal--visible');
+            observer.unobserve(t);
+          }
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.05 }
+      );
+      singles.forEach((el) => io.observe(el));
+      groups.forEach((el) => io.observe(el));
+    }
+  }
+
+  initPage();
+  document.addEventListener('astro:page-load', initPage);
+</script>

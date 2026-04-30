@@ -53,5 +53,6 @@ import ActionCardsSection from '../components/home/ActionCardsSection.astro';
     groups.forEach((el) => io.observe(el));
   }
 
+  initContactScrollReveal();
   document.addEventListener('astro:page-load', initContactScrollReveal);
 </script>

@@ -78,6 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       groups.forEach((el) => io.observe(el));
     }
   }
+  initOpenskyPage();
   document.addEventListener('astro:page-load', initOpenskyPage);
 </script>
 

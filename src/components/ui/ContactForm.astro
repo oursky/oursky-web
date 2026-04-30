@@ -107,50 +107,71 @@ const FORM_NAME = 'oursky-contact';
     role="status"
     aria-live="polite"
   ></div>
+
+  <div class="contact-form-success hidden flex-col items-center gap-6 py-10 text-center" role="status" aria-live="polite">
+    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary-dark/20">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M6 16.5L12.5 23L26 9" stroke="#c8830a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h3 class="text-2xl font-black text-black m-0">Message received!</h3>
+    <p class="text-base text-text m-0 max-w-md leading-relaxed">
+      Thanks for reaching out — we aim to get back to you within 2 business days.
+    </p>
+  </div>
 </div>
 
 <script>
   const FORM_SELECTOR = 'form.contact-form[name="oursky-contact"]';
 
-  document.querySelectorAll<HTMLFormElement>(FORM_SELECTOR).forEach((form) => {
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const wrapper = form.closest('.contact-form-wrapper');
-      const status = wrapper?.querySelector<HTMLElement>('.contact-form-status') ?? null;
-      const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+  function initContactForms() {
+    document.querySelectorAll<HTMLFormElement>(FORM_SELECTOR).forEach((form) => {
+      if (form.dataset.listenerAttached) return;
+      form.dataset.listenerAttached = 'true';
 
-      if (submit) submit.disabled = true;
-      if (status) {
-        status.hidden = false;
-        status.classList.remove('hidden', 'text-red-600');
-        status.classList.add('text-text-muted');
-        status.textContent = 'Sending…';
-      }
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const wrapper = form.closest('.contact-form-wrapper');
+        const status = wrapper?.querySelector<HTMLElement>('.contact-form-status') ?? null;
+        const success = wrapper?.querySelector<HTMLElement>('.contact-form-success') ?? null;
+        const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
 
-      try {
-        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
-        const response = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: body.toString(),
-        });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-        form.hidden = true;
+        if (submit) submit.disabled = true;
         if (status) {
-          status.classList.remove('text-text-muted', 'text-red-600');
-          status.classList.add('text-black', 'font-semibold');
-          status.textContent = "Thanks — we'll be in touch shortly.";
+          status.hidden = false;
+          status.classList.remove('hidden', 'text-red-600');
+          status.classList.add('text-text-muted');
+          status.textContent = 'Sending…';
         }
-      } catch {
-        if (status) {
-          status.classList.remove('text-text-muted');
-          status.classList.add('text-red-600');
-          status.textContent =
-            'Something went wrong. Please try again, or email hello@oursky.com.';
+
+        try {
+          const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: body.toString(),
+          });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+          form.hidden = true;
+          if (status) status.hidden = true;
+          if (success) {
+            success.classList.remove('hidden');
+            success.classList.add('flex');
+          }
+        } catch {
+          if (status) {
+            status.classList.remove('text-text-muted');
+            status.classList.add('text-red-600');
+            status.textContent =
+              'Something went wrong. Please try again, or email hello@oursky.com.';
+          }
+          if (submit) submit.disabled = false;
         }
-        if (submit) submit.disabled = false;
-      }
+      });
     });
-  });
+  }
+
+  initContactForms();
+  document.addEventListener('astro:page-load', initContactForms);
 </script>

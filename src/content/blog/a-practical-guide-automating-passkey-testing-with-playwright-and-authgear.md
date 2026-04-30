@@ -6,7 +6,7 @@ author: "Joyz Ng"
 categories:
   - "authgear"
 displayCategory: "Automated Testing"
-image: "/images/blogs/3fa40beebc_68109c18d0e0e55f13d361cf_image (2).png"
+image: "/images/blogs/3fa40beebc_68109c18d0e0e55f13d361cf_image (2).webp"
 draft: false
 webflowId: "68109f04b37ef774ef9c7527"
 ---
@@ -62,7 +62,7 @@ With [Authgear](https://www.authgear.com/) (which provides Free Plan!), you can 
 
 The platform handles all complex WebAuthn protocols and cryptography behind the scenes, giving you a complete passkey authentication system to test with no specialized knowledge required.
 
-![](/images/blogs/91ff4ec995_68109c433367793bda78ff8a_1_sAVNAiSzzg_kXkdWzQxyfg.png)
+![](/images/blogs/91ff4ec995_68109c433367793bda78ff8a_1_sAVNAiSzzg_kXkdWzQxyfg.webp)
 
 Set Up Passkey on Authgear by One-Click
 

@@ -11,7 +11,7 @@ draft: false
 webflowId: "6799407a476c3cb2a8881468"
 ---
 
-![](/images/blogs/98724e9399_6799406353e5a1d6a9fedff2_monica-silva-144544.jpeg)
+![](/images/blogs/98724e9399_6799406353e5a1d6a9fedff2_monica-silva-144544.webp)
 
 Photo by Monica Silva on Unsplash
 
@@ -66,7 +66,7 @@ _Check out the link for the AR App demo!_
 
 ## What’s special about ARKit?
 
-![](/images/blogs/6cfe546e09_6799406338bb3b02c881abbe_1_kn24j6a4FQ9K8SjoqJvhCA.png)
+![](/images/blogs/6cfe546e09_6799406338bb3b02c881abbe_1_kn24j6a4FQ9K8SjoqJvhCA.webp)
 
 ARKit is groundbreaking in its attention to real life details and ability to capture 2D camera information and match it with 3D objects that are rendered.
 

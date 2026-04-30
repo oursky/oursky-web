@@ -6,12 +6,12 @@ author: "Ken Chan"
 categories:
   - "ui-design"
 displayCategory: "UX/UI Design"
-image: "/images/blogs/8f11bc26ec_67994107f8310651bf28fc15_danielle-macinnes-51592.jpg"
+image: "/images/blogs/8f11bc26ec_67994107f8310651bf28fc15_danielle-macinnes-51592.webp"
 draft: false
 webflowId: "6799412bbf8f21608a6a7ac2"
 ---
 
-![https://unsplash.com/@dsmacinnes](/images/blogs/6ca60a2d41_679941160b2cac4eb173109a_danielle-macinnes-51592.jpeg)
+![https://unsplash.com/@dsmacinnes](/images/blogs/6ca60a2d41_679941160b2cac4eb173109a_danielle-macinnes-51592.webp)
 
 Sticky Headers are a frequently used pattern in front-end web development. At one of our team breakfasts, we saw Youtube’s sticky header break on IE. Yes, IE is an internet relic and always needs a little more support these days to run. But breaks like the Youtube case got some of our team members discussing sticky headers, and we figured we would share it here.
 

@@ -45,7 +45,7 @@ AI is picking up because the technology ecosystem has come together, including:
 *   Increased processing power (servers and consumer-grade processors) that helps with commercialization
 *   Cloud infrastructures that are now commonly used to store large quantities of business data (and thus have the potential to train machine learning models)
 
-![hong kong software development agency](/images/blogs/e894232189_679958b2cc62a73f1f555c25_blog3-720x432.png)
+![hong kong software development agency](/images/blogs/e894232189_679958b2cc62a73f1f555c25_blog3-720x432.webp)
 
 oursky’s open office in kowloon, hong kong
 

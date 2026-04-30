@@ -32,7 +32,7 @@ Of course, our alumni have also moved on to Apple and Google, and we’re proud 
 
 ## The first thing you should look for in a developer
 
-![](/images/blogs/d807b0d7da_66e15c661b59f04dc4eca297_15ap0MqBYVXj-rQheao9nyA.jpeg)
+![](/images/blogs/d807b0d7da_66e15c661b59f04dc4eca297_15ap0MqBYVXj-rQheao9nyA.webp)
 
 PHOTO BY FAUSTIN TUYAMBAZE VIA [UNSPLASH](https://unsplash.com/photos/32jpXPNlmqY)
 

@@ -132,7 +132,7 @@ Over the years, we’ve worked with many companies in implementing API integrati
 
 We addressed this challenge by developing a BaaS for the web and mobile applications that we build. The BaaS formed a bridge between the app’s front end and various back ends via APIs.  By modularizing common app features, developers can simply plug and play services to build production-ready apps. We don’t have to reinvent the wheel! Best of all, this approach [saves time and money](https://go.forrester.com/blogs/12-09-02-enterprise_mobility_how_fast_can_development_go/) for our clients, too!
 
-![](/images/blogs/f781f8bef2_66e3055ebb0653993a3b69c6_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-3-1160x569.png)
+![](/images/blogs/f781f8bef2_66e3055ebb0653993a3b69c6_embedded-insurance-an-api-first-approach-to-improving-digital-customer-experience-3-1160x569.webp)
 
 WE BUILT A BAAS PLATFORM FOR OUR OWN WEB AND MOBILE APP DEVELOPMENT PROJECTS.
 

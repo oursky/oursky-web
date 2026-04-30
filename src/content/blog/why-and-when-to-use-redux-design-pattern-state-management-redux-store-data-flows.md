@@ -7,7 +7,7 @@ categories:
   - "development"
   - "engineering"
 displayCategory: "REDUX"
-image: "/images/blogs/12c39396a2_66e30379cf1e65996dca8095_jason-leung-8-Hw2S-j3VU-unsplash-1160x773.jpg"
+image: "/images/blogs/12c39396a2_66e30379cf1e65996dca8095_jason-leung-8-Hw2S-j3VU-unsplash-1160x773.webp"
 draft: false
 webflowId: "66e303d633a4d3846b6da18d"
 ---
@@ -16,7 +16,7 @@ Oursky creates websites, software, and applications that run on multiple platfor
 
 As the lead engineer at Oursky, one of my responsibilities is to optimize development and engineering management. This is to minimize the mental overhead needed for developers to contribute to an existing project. One of the ways we used to address this was to adopt a Redux design pattern. In this blog, I’ll share the lessons we learned adopting [Redux design pattern](https://medium.com/@abhiaiyer/the-command-pattern-c51292e22ea7) across all platforms, why we’re using it, and how it can help fellow engineers and developers who are setting a standard to cap the cost and complexity of projects.
 
-![Why and When to Use Redux Design Pattern: State Management, Redux Store, Data Flows](/images/blogs/c6bb314c1a_66e3039f73af8993a44fe0b1_jason-leung-8-Hw2S-j3VU-unsplash-1160x773.jpeg)
+![Why and When to Use Redux Design Pattern: State Management, Redux Store, Data Flows](/images/blogs/c6bb314c1a_66e3039f73af8993a44fe0b1_jason-leung-8-Hw2S-j3VU-unsplash-1160x773.webp)
 
 PHOTO BY [JASON LEUNG](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

@@ -73,11 +73,11 @@ Now, you may be wondering why we specifically chose Raspberry Pi. We considered 
 
 What’s more, Raspberry Pi is Bluetooth Low Energy ready (which means we could access the door lock using a third method, Bluetooth).
 
-![Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear](/images/blogs/c03138417c_66e347b5f0a649927df562fb_IMG_0517-2.jpeg)
+![Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear](/images/blogs/c03138417c_66e347b5f0a649927df562fb_IMG_0517-2.webp)
 
 Linus-based Raspberry Pi is compatible with Oursky’s open-source serverless platform, Skygear
 
-![](/images/blogs/0ec20cb10b_66e347b56163c2b650f22c7b_IMG_0526-2.jpeg)
+![](/images/blogs/0ec20cb10b_66e347b56163c2b650f22c7b_IMG_0526-2.webp)
 
 ## Additional integrations
 

@@ -6,12 +6,12 @@ author: "May Yeung"
 categories:
   - "product-growth"
 displayCategory: "Growth"
-image: "/images/blogs/cef7ac12b9_67994f623ab5547d307078d4_1EQ91GnXdCyjLulTsESZaJw.jpeg"
+image: "/images/blogs/cef7ac12b9_67994f623ab5547d307078d4_1EQ91GnXdCyjLulTsESZaJw.webp"
 draft: false
 webflowId: "679950076fa34d27f8f865a4"
 ---
 
-![](/images/blogs/6701df8747_67994f5c9e5bbde3d2284b84_1EQ91GnXdCyjLulTsESZaJw-720x540.jpeg)
+![](/images/blogs/6701df8747_67994f5c9e5bbde3d2284b84_1EQ91GnXdCyjLulTsESZaJw-720x540.webp)
 
 Photo by Beata Ratuszniak via [Unsplash](https://unsplash.com/photos/-6mZyblCys4)
 
@@ -19,7 +19,7 @@ When my company started writing blog posts a year ago, we discovered two big pro
 
 When one of our colleagues suggested we try Medium for more exposure, we were excited. We read stuff on Medium, but how does it work? What topics are Medium readers interested in? We wanted to do some research to answer all these questions. I have a technical background so I suggested crawling some data to see what types of posts and publications performed well. Here, I’ll share with you how we built a web crawler in a day to help our content team figure out what topics to focus on.  
 
-![](/images/blogs/5d872b1048_67994f5c5908fb6007653aa0_1PXijbpzeZVGluY5MDckwCQ.png)
+![](/images/blogs/5d872b1048_67994f5c5908fb6007653aa0_1PXijbpzeZVGluY5MDckwCQ.webp)
 
 Our results for the keyword “BaaS” (Backend-as-a-Serverless), which is related to our open-source product, Skygear
 
@@ -36,7 +36,7 @@ Building a web crawler does require basic coding skills. For this project I, I u
 
 The goal is to extract data from Medium and represent it in a nice spreadsheet for my team to analyze like the one below.
 
-![](/images/blogs/cecc560639_67994f5cf86d88345195fcc5_1elGvjnRffi4nwiYmqpHv0Q.png)
+![](/images/blogs/cecc560639_67994f5cf86d88345195fcc5_1elGvjnRffi4nwiYmqpHv0Q.webp)
 
 We can also crawl based on publication and extract data such as tags and read length.
 
@@ -86,7 +86,7 @@ Now, you will need to let the crawler know which site you want to crawl data fro
 
 Medium publications have a page call ‘Archive’, where you can find the blog posts published in the past few years. For example, the URL for 2016 is `https://m.oursky.com/archive/2016`
 
-![](/images/blogs/1ee045bd75_67994f5c9e5bbde3d2284b79_1FjuTBiDQomAQsckj_-Zkw.png)
+![](/images/blogs/1ee045bd75_67994f5c9e5bbde3d2284b79_1FjuTBiDQomAQsckj_-Zkw.webp)
 
 You can search any publication with an archive and target date.
 
@@ -98,7 +98,7 @@ So far so good? Hang in there, because it gets a bit trickier!
 
 ## Study the website: Identify the path of the components you want to crawl
 
-![](/images/blogs/f2fd96a9e1_67994f5cdd39cae2d757a9bd_1z1S3xH09NK3aHBG4Pv206A.png)
+![](/images/blogs/f2fd96a9e1_67994f5cdd39cae2d757a9bd_1z1S3xH09NK3aHBG4Pv206A.webp)
 
 Tell your crawler which components you want to extract from the unstructured HTML data
 
@@ -136,7 +136,7 @@ Command for crawling data
 
 Completed
 
-![](/images/blogs/822cfe4811_67994f5cba8a39e39ebe849b_1oVfCt9oXNzzvrk73yH1AXQ.png)
+![](/images/blogs/822cfe4811_67994f5cba8a39e39ebe849b_1oVfCt9oXNzzvrk73yH1AXQ.webp)
 
 stories.json
 
@@ -150,7 +150,7 @@ Now, I want to represent the raw JSON data on Google Spreadsheet for my colleagu
 
 First, create a new spreadsheet on Google Drive. Google Spreadsheets has a Script Editor function for you to integrate it to other programs. Open script editor for writing your program.
 
-![](/images/blogs/c47821b9b7_67994f5cf80d7a7970e0df65_18_SgRuUfNirn1cI6OtGTTQ.png)
+![](/images/blogs/c47821b9b7_67994f5cf80d7a7970e0df65_18_SgRuUfNirn1cI6OtGTTQ.webp)
 
 Under Tools, there is a Script Editor
 
@@ -162,13 +162,13 @@ Steps for this program:
 
 You can try it yourself by referencing Google Spreadsheet Documentation. Below is my work.
 
-![](/images/blogs/39833df99d_67994f5caa4593aa035f050d_1FIC77_fgRwdlQe0Eo9zA1A.png)
+![](/images/blogs/39833df99d_67994f5caa4593aa035f050d_1FIC77_fgRwdlQe0Eo9zA1A.webp)
 
 JavaScript on Google Script Editor
 
 Save and press Run. You will then see the result on the spreadsheet.
 
-![](/images/blogs/58f7a4ef73_67994f5c0f76d341d9aeb8af_1AsBvNPU2OUcvJAqv0TRLzw.png)
+![](/images/blogs/58f7a4ef73_67994f5c0f76d341d9aeb8af_1AsBvNPU2OUcvJAqv0TRLzw.webp)
 
 Everything on Spreadsheet. Other Team members can view themselves.
 

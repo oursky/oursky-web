@@ -6,7 +6,7 @@ author: "Oursky Team"
 categories:
   - "development"
 displayCategory: "Development"
-image: "/images/blogs/e81d80064c_66e31f9b86a6f6d8b8067d39_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.jpg"
+image: "/images/blogs/e81d80064c_66e31f9b86a6f6d8b8067d39_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.webp"
 draft: false
 webflowId: "66e31fa1d3dc47adc0267172"
 ---
@@ -17,7 +17,7 @@ Brainstorming ideas and exploring your options are exciting — whether you’re
 
 At Oursky, we’re all about helping people explore the wonderful world of software development. We’ve listed down some essential terms you can start familiarizing yourself with so you’re speaking the same language with your vendor or developers when you kick-start your digital product.
 
-![](/images/blogs/03f26604a7_66e31f4b03497abd129e4b7d_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.jpeg)
+![](/images/blogs/03f26604a7_66e31f4b03497abd129e4b7d_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.webp)
 
 PHOTO BY [TEEMU PAANANEN](https://unsplash.com/@xteemu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -59,7 +59,7 @@ Founders should [expect](https://blog.oursky.com/2020/05/26/turning-ideas-into-d
 
 During these stages, you can gather early feedback and use it to improve your digital product. It’s easier and more cost-effective to implement changes during these stages rather than adjusting the UI after the website or app has been launched.
 
-![](/images/blogs/25774b2ba2_66e31f4b7e653b055224c5db_ux-indonesia-qC2n6RQU4Vw-unsplash-1160x773.jpeg)
+![](/images/blogs/25774b2ba2_66e31f4b7e653b055224c5db_ux-indonesia-qC2n6RQU4Vw-unsplash-1160x773.webp)
 
 PHOTO BY [UX INDONESIA](https://unsplash.com/@uxindo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -104,7 +104,7 @@ APIs are a longstanding concept and help you to better define and [manage](https
 *   Automate pipelines and infrastructures
 *   Enable consistency and scalability
 
-![](/images/blogs/85d0f8fb43_66e31f4b0568a60907d0a164_you-x-ventures-vbxyFxlgpjM-unsplash-1160x773.jpeg)
+![](/images/blogs/85d0f8fb43_66e31f4b0568a60907d0a164_you-x-ventures-vbxyFxlgpjM-unsplash-1160x773.webp)
 
 PHOTO BY [YOU X VENTURES](https://unsplash.com/@youxventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://blog.oursky.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

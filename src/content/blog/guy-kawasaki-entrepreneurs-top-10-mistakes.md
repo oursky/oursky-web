@@ -6,7 +6,7 @@ author: "Dennis Tam"
 categories:
   - "product-management"
 displayCategory: "Product Management"
-image: "/images/blogs/f30fef70f1_679945c1b2410b21908d32fb_toa-heftiba-239004.jpg"
+image: "/images/blogs/f30fef70f1_679945c1b2410b21908d32fb_toa-heftiba-239004.webp"
 draft: false
 webflowId: "6799466447bf2621e895ab2d"
 ---
@@ -19,7 +19,7 @@ As a technologist with over 30 years of experience navigating marketing and entr
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/9359f80e8a_6799466347bf2621e895aa5e_679945c1b2410b21908d32fb_toa-heftiba-239004.jpeg)
+![\_\_wf\_reserved\_inherit](/images/blogs/9359f80e8a_6799466347bf2621e895aa5e_679945c1b2410b21908d32fb_toa-heftiba-239004.webp)
 
 Applying a general calculation without regard to the market you’re in simply doesn’t work.
 
@@ -41,7 +41,7 @@ Instead of striving for a general percentage, entrepreneurs should project using
 
 > **“I have never seen a company die because it didn’t scale fast enough.” — Guy Kawasaki**
 
-![](/images/blogs/ab8b2c45b1_679945d2ad58bd8e923fd3d0_insung-yoon-259475.jpeg)
+![](/images/blogs/ab8b2c45b1_679945d2ad58bd8e923fd3d0_insung-yoon-259475.webp)
 
 Photo by insung yoon on Unsplash
 
@@ -57,7 +57,7 @@ While expansion is important, best practice is to expand only when you need to a
 
 > **“You wanna be left alone by your investors? Meet your numbers.” — Guy Kawasaki**
 
-![](/images/blogs/d55ef0b532_679945d21d0a449b567f6e0b_yuriy-rzhemovskiy-251115.jpeg)
+![](/images/blogs/d55ef0b532_679945d21d0a449b567f6e0b_yuriy-rzhemovskiy-251115.webp)
 
 Photo by Yuriy Rzhemovskiy on Unsplash
 
@@ -69,7 +69,7 @@ Sponsorships, cross-branding, bundling — whatever kind of partnership it i
 
 “If someone gave me a choice of coming in to see a team with a great PowerPoint pitch, or a team with a prototype that’s working, I would pick the prototype team all day long.” — Guy Kawasaki  
 
-![](/images/blogs/ec1387cadc_679945d212f48d46b5b3ead5_pim-chu-261032.jpeg)
+![](/images/blogs/ec1387cadc_679945d212f48d46b5b3ead5_pim-chu-261032.webp)
 
 Photo by Pim Chu on Unsplash
 
@@ -104,7 +104,7 @@ Keeping your presentation short and concise helps convey your message and makes 
 
 > **“The serial world in entrepreneurship does not exist.” — Guy Kawasaki**
 
-![](/images/blogs/e16890349a_679945d21445436566eec477_kolleen-gladden-224796.jpeg)
+![](/images/blogs/e16890349a_679945d21445436566eec477_kolleen-gladden-224796.webp)
 
 Photo by Kolleen Gladden on Unsplash
 
@@ -130,7 +130,7 @@ Even if investors cannot vote at the table, they can vote with their feet. If yo
 
 > **“Getting infringed and suing Microsoft successfully is not a fundable business model.” — Guy Kawasaki**
 
-![](/images/blogs/564c194d31_679945d3d176c76040961947_davide-cantelli-150413.jpeg)
+![](/images/blogs/564c194d31_679945d3d176c76040961947_davide-cantelli-150413.webp)
 
 Photo by Davide Cantelli on Unsplash
 
@@ -147,7 +147,7 @@ In theory, patents sound wonderful, but in practice, they won’t be contributin
 
 > **“They are not in the business of making friends. Venture capitalists are in the business of making money.” — Guy Kawasaki**
 
-![startup teamwork](/images/blogs/7a8c401fec_679945d2f22c56cca5b1f682_alice-pasqual-258250.jpeg)
+![startup teamwork](/images/blogs/7a8c401fec_679945d2f22c56cca5b1f682_alice-pasqual-258250.webp)
 
 Photo by Alice Pasqual on Unsplash
 
@@ -159,7 +159,7 @@ Want to stay best friends with your VC? Meet your projections. Simple as that.
 
 > **“Fundamentally, what you need in a startup is someone to make it, sell it, and collect it.” — Guy Kawasaki**
 
-![entrepreneurship diversity](/images/blogs/5b28a39fca_679945d3087156cfaa5be3d9_jessica-ruscello-99566.jpeg)
+![entrepreneurship diversity](/images/blogs/5b28a39fca_679945d3087156cfaa5be3d9_jessica-ruscello-99566.webp)
 
 Photo by Alice Pasqual on Unsplash
 

@@ -31,7 +31,7 @@ In the 200+ candidates I interview annually, I look for good team members, and a
 
 ## Interns are not cheap labor. They are inexperienced labor.
 
-![](/images/blogs/0378efe44c_66e31322fbeb775694edb3fd_1azAwNH7BZaJ3cSENoMvsDw.jpeg)
+![](/images/blogs/0378efe44c_66e31322fbeb775694edb3fd_1azAwNH7BZaJ3cSENoMvsDw.webp)
 
 PHOTO BY [RICARDO VIANA](https://unsplash.com/photos/-tYsPFKMm7g) VIA UNSPLASH
 
@@ -47,7 +47,7 @@ For our content team, this begins with research and editing pieces so that the t
 
 ## Stop asking “Do you have any questions?” They won’t, and that’s bad.
 
-![](/images/blogs/33da9343d3_66e3132245a71ecd8dd55b45_11bp7kWs88QTBCqucIcKEiA.jpeg)
+![](/images/blogs/33da9343d3_66e3132245a71ecd8dd55b45_11bp7kWs88QTBCqucIcKEiA.webp)
 
 PHOTO BY [RAY HENNESSY](https://unsplash.com/photos/n6I2GT_Pij4) VIA UNSPLASH
 
@@ -63,7 +63,7 @@ One of our colleagues began asking this instead: “How would you proceed to sol
 
 ## Learning your assumptions.
 
-![](/images/blogs/2ff7a4ef90_66e3132231cff2f5db988424_1XRk6imEclPHJpGpM2CKPzQ.jpeg)
+![](/images/blogs/2ff7a4ef90_66e3132231cff2f5db988424_1XRk6imEclPHJpGpM2CKPzQ.webp)
 
 PHOTO BY [GLENN CARSTENS-PETERS](https://unsplash.com/photos/RLw-UC03Gwc) VIA UNSPLASH
 
@@ -93,7 +93,7 @@ In contrast, by paying our interns, we can set clear expectations for delivery s
 
 ## Give a 2x buffer time.
 
-![](/images/blogs/6e97aca083_66e31322a10db7ebc0c21f8f_1F2x4vRvnz7Wlqhgr2Wweww.jpeg)
+![](/images/blogs/6e97aca083_66e31322a10db7ebc0c21f8f_1F2x4vRvnz7Wlqhgr2Wweww.webp)
 
 PHOTO BY [LOIC DJIM](https://unsplash.com/photos/ft0-Xu4nTvA) VIA UNSPLASH
 
@@ -107,7 +107,7 @@ Our editorial team still continues to write, but our staff can now focus on high
 
 ## Don’t just invest time, invest money, too.
 
-![](/images/blogs/1ead221632_66e313223ceab0b1d64b318b_1ruBgMhwPHqeV2KipldEofQ.jpeg)
+![](/images/blogs/1ead221632_66e313223ceab0b1d64b318b_1ruBgMhwPHqeV2KipldEofQ.webp)
 
 PHOTO BY [LUCA ZANON](https://unsplash.com/photos/aViOQZzikVs) VIA UNSPLASH
 
@@ -125,7 +125,7 @@ Our company generally pays hourly because we prefer long-term relationships with
 
 ## What do coffee runs say about you?
 
-![](/images/blogs/dfc27683f5_66e3132200cae42b6154209b_191030B-FCCq-7zj4kandPA.jpeg)
+![](/images/blogs/dfc27683f5_66e3132200cae42b6154209b_191030B-FCCq-7zj4kandPA.webp)
 
 In a small and growing company, there are a million things to be done — including errands. But executing daily coffee and stationary runs is not an employable skill for your intern.
 
@@ -137,7 +137,7 @@ One easy principle is that you can ask an intern to do anything you would do, wh
 
 ## Get off your high horse.
 
-![](/images/blogs/e481b8d7e3_66e3132288b9d959dc594421_1sF_WgBCvITzAYNZsDg1WGQ.jpeg)
+![](/images/blogs/e481b8d7e3_66e3132288b9d959dc594421_1sF_WgBCvITzAYNZsDg1WGQ.webp)
 
 PHOTO BY [CLARK YOUNG](https://unsplash.com/photos/DZqtE4IrBg0) VIA UNSPLASH
 

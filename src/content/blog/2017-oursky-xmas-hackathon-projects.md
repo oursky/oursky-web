@@ -6,7 +6,7 @@ author: "May Yeung"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/71a3e3f991_67995221e5c70fc684f83d93_photo6186087868431181780.jpg"
+image: "/images/blogs/71a3e3f991_67995221e5c70fc684f83d93_photo6186087868431181780.webp"
 draft: false
 webflowId: "6799523254769870a1f492f3"
 ---

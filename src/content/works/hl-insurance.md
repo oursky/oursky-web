@@ -6,7 +6,7 @@ industry: "Technology"
 order: 5
 bgColor: '#021934'
 heroImage: "/images/works/44e13b85dc_659516993eefb52c0b720cb4_65802c01b29d515ac2d8e41e_HL Insurance-p-1600.webp"
-thumbnail: "/images/works/2d63247ffd_659516460b07e0284df1c13d_hl-preview-phone.png"
+thumbnail: "/images/works/2d63247ffd_659516460b07e0284df1c13d_hl-preview-phone.webp"
 draft: false
 webflowId: "65802c0e1421eaa74fd5fd04"
 ---

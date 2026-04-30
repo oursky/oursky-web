@@ -6,7 +6,7 @@ industry: "Technology"
 order: 3
 bgColor: '#ba933d'
 heroImage: "/images/works/33ea1654e0_65802992efd477e9e9f34e8d_Jamn Player.webp"
-thumbnail: "/images/works/d80d887e4b_6595219127ede6e1108f5f48_jp-preview-phone.png"
+thumbnail: "/images/works/d80d887e4b_6595219127ede6e1108f5f48_jp-preview-phone.webp"
 draft: false
 webflowId: "658029c97bc738af86516c6f"
 ---

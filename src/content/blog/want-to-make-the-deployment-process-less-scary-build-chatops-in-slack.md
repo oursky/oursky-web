@@ -94,7 +94,7 @@ Deployment task creation and completion will send out notifications into the int
 
 ### 1\. Developers use it to deploy to the staging environment
 
-![rick-deploy](/images/blogs/0fe9106c17_66e346dd149da2c91435e07a_rick-deploy.png)
+![rick-deploy](/images/blogs/0fe9106c17_66e346dd149da2c91435e07a_rick-deploy.webp)
 
 Although we planned to use ChatOps to ease the difficulties for non-developers, it also benefits me as a developer.
 

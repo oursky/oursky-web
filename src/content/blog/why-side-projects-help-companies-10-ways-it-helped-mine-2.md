@@ -6,12 +6,12 @@ author: "Ben Cheng"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/17d1009238_67994bd7d7c8c7edf2838d2d_Screen-Shot-2016-08-18-at-1.22.57-PM.png"
+image: "/images/blogs/17d1009238_67994bd7d7c8c7edf2838d2d_Screen-Shot-2016-08-18-at-1.22.57-PM.webp"
 draft: false
 webflowId: "67994becdcaa9b5237fdd96b"
 ---
 
-![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.png)
+![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.webp)
 
 I got an e-mail in the middle of the night. I opened it to discover that the Android version of our Chima Open Door app was finished.
 
@@ -41,7 +41,7 @@ Our cats show how we work as a team. We try to be as transparent as possible. Ou
 
 ## **3\. Paying you to do more of what you love**
 
-![Raspberry Pi 3 Model B side projects](/images/blogs/8bccb58401_66e30ff98dae10e000732881_IMG_0526-e1471871697512.jpeg)
+![Raspberry Pi 3 Model B side projects](/images/blogs/8bccb58401_66e30ff98dae10e000732881_IMG_0526-e1471871697512.webp)
 
 Raspberry Pi 3 Model B for one of our side projects
 
@@ -105,7 +105,7 @@ The side projects also create ownership. Some of our team members love the start
 
 ## 10\. Side projects generate some good revenue
 
-![ActionSnapSampler](/images/blogs/2acd8418a4_67994bc83fc1f3f9205b4a36_ActionSnapSampler.jpeg)
+![ActionSnapSampler](/images/blogs/2acd8418a4_67994bc83fc1f3f9205b4a36_ActionSnapSampler.webp)
 
 ActionSnap Sampler Renders
 

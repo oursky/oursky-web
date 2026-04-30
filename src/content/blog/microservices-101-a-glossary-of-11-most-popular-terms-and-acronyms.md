@@ -7,7 +7,7 @@ categories:
   - "development"
   - "engineering"
 displayCategory: "DEVELOPMENT"
-image: "/images/blogs/6c20d839c7_66e316bd14404e1e88b7fb58_photo-1546074177-ffdda98d214f.jpeg"
+image: "/images/blogs/6c20d839c7_66e316bd14404e1e88b7fb58_photo-1546074177-ffdda98d214f.webp"
 draft: false
 webflowId: "66e31739014e7117d707c321"
 ---

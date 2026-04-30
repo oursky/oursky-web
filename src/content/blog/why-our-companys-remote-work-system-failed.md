@@ -6,7 +6,7 @@ author: "Ben Cheng"
 categories:
   - "culture"
 displayCategory: "FOUNDER LEARNINGS"
-image: "/images/blogs/365c0391ca_67994ebd690e28959edd0847_10xI1TFDSNb1etCQSRdGSHg.jpeg"
+image: "/images/blogs/365c0391ca_67994ebd690e28959edd0847_10xI1TFDSNb1etCQSRdGSHg.webp"
 draft: false
 webflowId: "67994ed423af1a9d6bd13103"
 ---
@@ -25,7 +25,7 @@ Below are my reflections as a CEO on what we did, why we did it, and what actual
 
 ## Remote Work 0.1
 
-![](/images/blogs/99b4fec52a_67994eb4fe20b33f4be6a9dd_1yK0bC7max3qeb_qob8HJIA.jpeg)
+![](/images/blogs/99b4fec52a_67994eb4fe20b33f4be6a9dd_1yK0bC7max3qeb_qob8HJIA.webp)
 
 Image by NASA via [Unsplash](https://unsplash.com/search/launch?photo=n463SoeSiVY)
 
@@ -35,7 +35,7 @@ As fresh graduates at the time, we used going to the office as a motivation to g
 
 ## Remote Work 0.2
 
-![](/images/blogs/ba2d774196_67994eb58149b61a4ebead30_1I1nSBW60H3QhP97Te4R2nw.jpeg)
+![](/images/blogs/ba2d774196_67994eb58149b61a4ebead30_1I1nSBW60H3QhP97Te4R2nw.webp)
 
 Image by Francois Hoang via [Unsplash](https://unsplash.com/@aoirostudio?photo=xxZCfAnMUrM)
 
@@ -79,7 +79,7 @@ The above has made me realize that we have no ambitions to become a [distributed
 
 > **Today, we embrace remote working as an option just as much as we did 9+ years ago.**
 
-![A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.](/images/blogs/f197b7a6d0_67994eb5f86d883451952fe1_1XUjOdKcOAjZ0rUuIXobByw.jpeg)
+![A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.](/images/blogs/f197b7a6d0_67994eb5f86d883451952fe1_1XUjOdKcOAjZ0rUuIXobByw.webp)
 
 A view of Mt. Fuji from Tokyo, Japan. Taken by one of our remote team members, Athena.
 

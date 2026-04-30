@@ -6,12 +6,12 @@ author: "Ben Cheng"
 categories:
   - "development"
 displayCategory: "Devops"
-image: "/images/blogs/fd863bc4a4_67993d6d38bb3b02c87e5439_1zxIISvYq2_dz4R3THj17pA.jpeg"
+image: "/images/blogs/fd863bc4a4_67993d6d38bb3b02c87e5439_1zxIISvYq2_dz4R3THj17pA.webp"
 draft: false
 webflowId: "67993d8c320ba379f9b47141"
 ---
 
-![](/images/blogs/37a6bccb72_67993d7496cc2cace8581887_1zxIISvYq2_dz4R3THj17pA.jpeg)
+![](/images/blogs/37a6bccb72_67993d7496cc2cace8581887_1zxIISvYq2_dz4R3THj17pA.webp)
 
 Image by Samson via [Unsplash](https://unsplash.com/collections/211345/cyberpunk?photo=ZGjbiukp_-A)
 
@@ -115,7 +115,7 @@ Finally, you need to set up DNS mapping to your CloudFront distribution endpoint
 
 You need to setup a CNAME record to point your domain name to the Cloud Front Distribution. You can get your CloudFront Domain Name from AWS Management Console, then set your domain’s CNAME to the Domain Name.
 
-![](/images/blogs/456ff6e67e_67993d75d01fe4ac5d4848da_1TGXROtf37r5f-_ysbdornQ.png)
+![](/images/blogs/456ff6e67e_67993d75d01fe4ac5d4848da_1TGXROtf37r5f-_ysbdornQ.webp)
 
 Screenshots of how to find the CloudFront Distribution Domain Name
 

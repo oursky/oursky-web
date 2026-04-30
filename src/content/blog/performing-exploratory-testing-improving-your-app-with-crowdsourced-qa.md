@@ -111,7 +111,7 @@ For example, in one software testing case with a client, we had 100+ issues repo
 
 Since the severity of defects on different sections are clearly listed on the report, the PM can easily scan the document and further discuss with the client about fixing the major issues before proceeding to adding new features. This meeting may seem like a small step, but it is crucial because it prevents the development schedule from being delayed due to unknown major issues that may arise after all the planning is done. Of course, the client will also receive the full report and can take the report to meet with any [app vendors they choose](https://blog.oursky.com/2020/08/19/a-definitive-guide-for-startup-founders-to-choosing-software-development-agencies/).
 
-![gitlab ci software qa](/images/blogs/aefff3e273_679957c809f41a233c80d2a8_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.37.37-PM-720x687.png)
+![gitlab ci software qa](/images/blogs/aefff3e273_679957c809f41a233c80d2a8_Oursky-Exploratory-Test-QA-Screen-Shot-2018-03-16-at-4.37.37-PM-720x687.webp)
 
 ALL BUG REPORTS BY TESTERS SHOULD INCLUDE SCREENSHOTS AND DETAILED INSTRUCTIONS.
 

@@ -6,7 +6,7 @@ author: "Varya Nekhina"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/65224ce63c_6799566058b328b61e60ffbb_varya-business-development-scaled.jpg"
+image: "/images/blogs/65224ce63c_6799566058b328b61e60ffbb_varya-business-development-scaled.webp"
 draft: false
 webflowId: "67995678d760b0c7d9d0f40d"
 ---
@@ -19,7 +19,7 @@ Recently, the Oursky team managed to pull off an event for startup founders. We 
 
 So what has these got to do with business development?
 
-![](/images/blogs/8e54f0f860_67995656855eb8d4a019c8b1_varya-business-development-1160x870.jpeg)
+![](/images/blogs/8e54f0f860_67995656855eb8d4a019c8b1_varya-business-development-1160x870.webp)
 
 One of the events we helped organize in Taiwan for the startup community
 

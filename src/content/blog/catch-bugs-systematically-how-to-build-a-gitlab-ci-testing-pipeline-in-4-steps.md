@@ -40,7 +40,7 @@ I have set up the whole system with these free and open-source tools:
 *   [Gitlab CI](https://about.gitlab.com/gitlab-ci/) — to trigger, build and run the test upon code updates
 *   [Skygear](https://skygear.io/) — to save test result for report on demand
 
-![Handwritten Architecture](/images/blogs/e53a8c794d_67994010630cdc3cd65c3f42_13HCwOHLXPebHuA-2oe_FMA.jpeg)
+![Handwritten Architecture](/images/blogs/e53a8c794d_67994010630cdc3cd65c3f42_13HCwOHLXPebHuA-2oe_FMA.webp)
 
 Setting up takes 4 steps. Here we go!
 
@@ -81,7 +81,7 @@ Then, we will also install the Selenium package inside the container. Not all pr
 
 We create a Dockerfile, build the image and upload to our [Docker Cloud](https://cloud.docker.com/).
 
-![](/images/blogs/655952ce6f_67994010288cf7532d8d97da_16O2QhCEpjoALjK1nzo0N7g.png)
+![](/images/blogs/655952ce6f_67994010288cf7532d8d97da_16O2QhCEpjoALjK1nzo0N7g.webp)
 
 You could find this image through [this link](https://hub.docker.com/r/joyzoursky/python-chromedriver/), or directly pull this image with this command:
 

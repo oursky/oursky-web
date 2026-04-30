@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "case-study"
 displayCategory: "Client Stories"
-image: "/images/blogs/c74408e4ee_679958f539e78e0a9add05bb_pexels-cottonbro-5082580-scaled.jpg"
+image: "/images/blogs/c74408e4ee_679958f539e78e0a9add05bb_pexels-cottonbro-5082580-scaled.webp"
 draft: false
 webflowId: "679959582d86b2417748d717"
 ---
@@ -23,7 +23,7 @@ This echoes the success stories of [AliExpress](https://developers.google.com/we
 
 So what’s with progressive web applications that are making businesses use them? What are PWA’s use cases and how do you build one? We’ll take a closer look by telling our own story of how we developed a PWA.
 
-![](/images/blogs/2762015950_679958edf82bf08f7d8f2727_pexels-cottonbro-5082580-1160x1058.jpeg)
+![](/images/blogs/2762015950_679958edf82bf08f7d8f2727_pexels-cottonbro-5082580-1160x1058.webp)
 
 Photo by cottonbro from Pexels
 
@@ -174,7 +174,7 @@ PWAs may not be replacing native mobile apps soon, but they will play important 
 
 ## TL;DR: Progressive web apps vs native apps:
 
-![\_\_wf\_reserved\_inherit](/images/blogs/b28bd722b7_679959582d86b2417748d6e5_67995932f40308ded19c5f49_SCR-20250128-tjex.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/b28bd722b7_679959582d86b2417748d6e5_67995932f40308ded19c5f49_SCR-20250128-tjex.webp)
 
 ‍
 

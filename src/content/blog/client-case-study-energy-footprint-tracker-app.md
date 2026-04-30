@@ -6,12 +6,12 @@ author: "Queenie So"
 categories:
   - "case-study"
 displayCategory: "Client Stories"
-image: "/images/blogs/03323ab616_679953f4387921465f2815a5_A4.png"
+image: "/images/blogs/03323ab616_679953f4387921465f2815a5_A4.webp"
 draft: false
 webflowId: "6799541b8149b61a4ec44aa9"
 ---
 
-![edwel energy footprint tracker](/images/blogs/10d2861c7f_679953fc04177405443dbaf9_A4.png)
+![edwel energy footprint tracker](/images/blogs/03323ab616_679953f4387921465f2815a5_A4.webp)
 
 Edwel Energy: Energy Footprint Tracker
 
@@ -59,7 +59,7 @@ When we talk about engaging users in doing daily tracking, it is important to en
 
 In order to engage people in learning the carbon footprint concept and further track something that they are not used to, we utilized our expertise of UI/UX design to achieve simplicity – users have to feel that it is easy enough to complete the task through the App, and they are able to do it repeatedly without hassle.  
 
-![edwel energy footprint tracker](/images/blogs/e813813132_67995409949feb7a44cbddd5_A4-Copy-1160x770.png)
+![edwel energy footprint tracker](/images/blogs/e813813132_67995409949feb7a44cbddd5_A4-Copy-1160x770.webp)
 
 ‍
 

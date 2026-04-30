@@ -11,7 +11,7 @@ draft: false
 webflowId: "679927d0ed5f0f3cde9b7165"
 ---
 
-![Spentable: How we built our first app for watchOS 2](/images/blogs/598c8ab9a0_679927b522b26797a0d771f8_spentable-cover-sf.png)
+![Spentable: How we built our first app for watchOS 2](/images/blogs/598c8ab9a0_679927b522b26797a0d771f8_spentable-cover-sf.webp)
 
 In [WWDC2015](https://developer.apple.com/videos/wwdc/2015/), Apple announced iOS 9 for iPhone and watchOS 2 for iWatch. It has been a huge revamp for [watchOS](https://developer.apple.com/watchos/). Not until now, a watch app finally runs **natively** on the watch.
 

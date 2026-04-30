@@ -21,7 +21,7 @@ We’ve all been there.
 
 [**Bashstrap**](https://github.com/barryclark/bashstrap) is a quick way to spruce up your OSX terminal. It cuts out the fluff, adds in timesaving features, and provides a solid foundation for customising your terminal style.
 
-![bashstrap](/images/blogs/33c718f11c_67993dc15d936e4b69f4fef5_bashstrap.png)
+![bashstrap](/images/blogs/33c718f11c_67993dc15d936e4b69f4fef5_bashstrap.webp)
 
 **Features:**
 
@@ -114,7 +114,7 @@ First, type the command on the terminal `ssh -c arcfour -D 8080` . It opens a SO
 
 Then open your browser and go changing your proxy setting. By choosing the “change proxy settings”, you can check the SOCKS Proxy and type the SOCKS Proxy Server address 127.0.0.1:8080. The Great FireWall is no longer an obstacle to Google or Facebook.
 
-![Screen Shot 2016-08-17 at 6.05.46 PM](/images/blogs/66b2fc73f9_67993dc1e60cb7aadb93cc8e_Screen-Shot-2016-08-17-at-6.05.46-PM-1024x512.png)
+![Screen Shot 2016-08-17 at 6.05.46 PM](/images/blogs/66b2fc73f9_67993dc1e60cb7aadb93cc8e_Screen-Shot-2016-08-17-at-6.05.46-PM-1024x512.webp)
 
 ## 8\. mkdir -p what/the/hell
 
@@ -130,7 +130,7 @@ It’s like telling mkdir: if there is any non-existing directory along the path
 
 Command line for opening a Finder.
 
-![Screen Shot 2016-08-18 at 5.58.55 PM](/images/blogs/9b0bcf2ef8_67993dc179416f07ba2134ac_Screen-Shot-2016-08-18-at-5.58.55-PM-1024x547.png)
+![Screen Shot 2016-08-18 at 5.58.55 PM](/images/blogs/9b0bcf2ef8_67993dc179416f07ba2134ac_Screen-Shot-2016-08-18-at-5.58.55-PM-1024x547.webp)
 
 ## 10\. pbcopy / pbpaste (Mac Only)
 

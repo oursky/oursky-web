@@ -6,7 +6,7 @@ industry: "Technology"
 order: 4
 bgColor: '#1e1e1e'
 heroImage: "/images/works/b5a2faa518_65802bb45dfc85aa91e05c94_Lavatools.webp"
-thumbnail: "/images/works/401156112e_65951e1ec7221bf0ed6edf6b_cb-preview-ipad.png"
+thumbnail: "/images/works/401156112e_65951e1ec7221bf0ed6edf6b_cb-preview-ipad.webp"
 draft: false
 webflowId: "65802bc3326ad330e903c260"
 ---

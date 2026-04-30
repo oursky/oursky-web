@@ -6,7 +6,7 @@ author: "Jason Wu"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "Artificial Intelligence"
-image: "/images/blogs/932be10e6f_6799430118fcc7842c36cec5_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648.jpg"
+image: "/images/blogs/932be10e6f_6799430118fcc7842c36cec5_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648.webp"
 draft: false
 webflowId: "679943e3c3544ff0a210b45a"
 ---
@@ -336,7 +336,7 @@ The following is a code snippet of text generation using a pre-trained GPT-2 mod
 
 Thanks to jessevig’s [BertViz](https://github.com/jessevig/bertviz) tool, we can peek at how GPT-2 works by visualizing the attention values.
 
-![](/images/blogs/408abb1db5_679943214c7c056e6eb49237_Article-Generation-and-GPT-2-Model-5-1160x950.png)
+![](/images/blogs/408abb1db5_679943214c7c056e6eb49237_Article-Generation-and-GPT-2-Model-5-1160x950.webp)
 
 The figure above is a visualization of attention values on each decoder block (from top to bottom of the grid, with the first row as the first block). Each attention head (from left to right) of the GPT-2 small model takes “I disapprove of what you say, but” as input.
 

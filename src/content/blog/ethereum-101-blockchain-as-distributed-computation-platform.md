@@ -163,7 +163,7 @@ Select Fee
 
 One can check the estimated fee of the deployment in the confirmation dialog.
 
-![Distributed computation with Ethereum - Confirm Contract](/images/blogs/c0886778ce_67993d1194397904b35a93f0_ConfirmContract-807x1024.png)
+![Distributed computation with Ethereum - Confirm Contract](/images/blogs/c0886778ce_67993d1194397904b35a93f0_ConfirmContract-807x1024.webp)
 
 Confirm contract
 
@@ -181,7 +181,7 @@ Deployed Contract
 
 Note that others cannot view the interfaces exposed by the contract unless they have both the contract address and the contract interface, which one can view by clicking “Show Interface”.
 
-![Distributed computation with Ethereum - JSON Interface](/images/blogs/ead2a4c9e9_67993d100a904779ac2f81ad_JSONInterface-1024x526.png)
+![Distributed computation with Ethereum - JSON Interface](/images/blogs/ead2a4c9e9_67993d100a904779ac2f81ad_JSONInterface-1024x526.webp)
 
 JSON interface
 

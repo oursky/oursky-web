@@ -105,7 +105,7 @@ Last but not least, we would also like to share you a sample of an Issue Report 
 
 ‍
 
-![](/images/blogs/ef730cab6f_66e302ccbb0653993a38b9b9_issue_report-1160x1276.png)
+![](/images/blogs/ef730cab6f_66e302ccbb0653993a38b9b9_issue_report-1160x1276.webp)
 
 HTTPS://GITHUB.COM/AUTHGEAR/AUTHGEAR-SERVER/ISSUES/2537
 

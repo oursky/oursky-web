@@ -23,7 +23,7 @@ The good news is that companies can take steps to lower the risk of being forced
 
 ## Common reasons to switch tech stacks
 
-![](/images/blogs/bbaeae8d9d_6799517e45bd81b83003b2e8_christian-sterk-218727.jpeg)
+![](/images/blogs/bbaeae8d9d_6799517e45bd81b83003b2e8_christian-sterk-218727.webp)
 
 Photo by Christian Sterk via Unsplash
 
@@ -39,7 +39,7 @@ Below, are some considerations for entrepreneurs or developers aiming to build p
 
 ## Entering new markets
 
-![](/images/blogs/7e777e0957_6799517ed42e2f08f180edce_jamie-templeton-428883.jpeg)
+![](/images/blogs/7e777e0957_6799517ed42e2f08f180edce_jamie-templeton-428883.webp)
 
 Photo by Jamie Templeton via Unsplash
 
@@ -49,7 +49,7 @@ We also suggest companies do research on security and privacy when using third-p
 
 ## Deprecated frameworks or outdated platforms
 
-![](/images/blogs/704a7ed75f_6799517e5908fb6007678dcb_pablo-garcia-saldana-27622.jpeg)
+![](/images/blogs/704a7ed75f_6799517e5908fb6007678dcb_pablo-garcia-saldana-27622.webp)
 
 Photo by Pablo Garcia Saldaña via Unsplash
 
@@ -63,7 +63,7 @@ When using API-as-a-service, serverless, or BaaS solutions, consider products de
 
 ## Their existing code base cannot support new features
 
-![](/images/blogs/beaa1969be_6799517eb3407cd04b0871ba_joshua-ness-112783.jpeg)
+![](/images/blogs/beaa1969be_6799517eb3407cd04b0871ba_joshua-ness-112783.webp)
 
 Photo by Joshua Ness via Unsplash
 
@@ -73,7 +73,7 @@ No matter how well you plan, it’s difficult to know which direction your produ
 
 ## Suffering performance and scalability issues
 
-![](/images/blogs/1f104f54e0_6799517ede1f0564894b08b6_enrapture-media-266831.jpeg)
+![](/images/blogs/1f104f54e0_6799517ede1f0564894b08b6_enrapture-media-266831.webp)
 
 Photo by Enrapture Media via Unsplash
 
@@ -85,7 +85,7 @@ Another common mistake is to completely rewrite the backend once the original MV
 
 ## Very specific features available only with one technology
 
-![](/images/blogs/9eee232077_6799517ea81f96c1ee913dde_veronica-benavides-331238.jpeg)
+![](/images/blogs/9eee232077_6799517ea81f96c1ee913dde_veronica-benavides-331238.webp)
 
 Photo by Veronica Benavides via Unsplash
 

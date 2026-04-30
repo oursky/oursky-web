@@ -5,8 +5,8 @@ client: "Cornerstone"
 industry: "Technology"
 order: 0
 bgColor: '#512f60'
-heroImage: "/images/works/53b1ba91ba_66d09fb24e2a8b9549c35424_Animated phone mockup@2-1512x900 (8).png"
-thumbnail: "/images/works/a5241625a9_67f6930ea4da66d89e2681ec_cornerstone.png"
+heroImage: "/images/works/53b1ba91ba_66d09fb24e2a8b9549c35424_Animated phone mockup@2-1512x900 (8).webp"
+thumbnail: "/images/works/a5241625a9_67f6930ea4da66d89e2681ec_cornerstone.webp"
 draft: false
 webflowId: "66d09662a0d17da6fcc71c66"
 ---
@@ -40,7 +40,7 @@ Cornerstone Technology presented Oursky with a seemingly insurmountable challeng
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/works/637c69f9b4_66d6a0c23b50241e10c802b9_66d6a0bdd800e5113a11fba8_cstl-2.png)
+![\_\_wf\_reserved\_inherit](/images/works/637c69f9b4_66d6a0c23b50241e10c802b9_66d6a0bdd800e5113a11fba8_cstl-2.webp)
 
 ‍
 

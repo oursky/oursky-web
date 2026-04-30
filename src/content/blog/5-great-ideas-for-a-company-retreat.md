@@ -6,12 +6,12 @@ author: "Dennis Tam"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/b86439b857_679948fd55c9627e91a8fea5_retreat.png"
+image: "/images/blogs/b86439b857_679948fd55c9627e91a8fea5_retreat.webp"
 draft: false
 webflowId: "67994919f80d7a7970da6369"
 ---
 
-![\_\_wf\_reserved\_inherit](/images/blogs/689a8f931c_67994919f80d7a7970da6313_679948fd55c9627e91a8fea5_retreat.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/689a8f931c_67994919f80d7a7970da6313_679948fd55c9627e91a8fea5_retreat.webp)
 
 ‍
 

@@ -6,12 +6,12 @@ author: "David Ng"
 categories:
   - "development"
 displayCategory: "OpenSource"
-image: "/images/blogs/0eac53fa20_679942c679416f07ba267b7b_Oursky-life-8827.jpg"
+image: "/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.webp"
 draft: false
 webflowId: "679942e45d936e4b69fb39c2"
 ---
 
-![oursky opensource github](/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.jpeg)
+![oursky opensource github](/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.webp)
 
 ## For syncing project structure and frameworks, a case for using Redux
 

@@ -25,7 +25,7 @@ So if you want an “Uber” app for your industry, for example, be prepared to 
 
 The good news? That price can go down significantly depending on the [location/region](https://www.slideshare.net/accelerance/the-2018-guide-to-global-software-outsourcing-rates-87930700) of your developer. If you’re from the U.S. or Australia, outsourcing to a local or onshore developer will likely rack up higher fees. Offshore or [nearshore outsourcing](https://blog.oursky.com/2020/05/19/startups-and-enterprises-that-owe-their-success-from-outsourcing-software-development/) of app development are your best bet. For instance, highly-skilled developers in neighboring countries can be more cost-effective but also get the work done just as well.
 
-![](/images/blogs/8740ee26ad_66e320b47f55069bf5424e8d_kevin-ku-aiyBwbrWWlo-unsplash-1160x871.jpeg)
+![](/images/blogs/8740ee26ad_66e320b47f55069bf5424e8d_kevin-ku-aiyBwbrWWlo-unsplash-1160x871.webp)
 
 PHOTO BY [KEVIN KU](https://unsplash.com/@ikukevk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

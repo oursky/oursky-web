@@ -6,7 +6,7 @@ author: "Carmen Lau"
 categories:
   - "engineering"
 displayCategory: "ENGINEERING CULTURE"
-image: "/images/blogs/88c913598a_65800dc11650bb250fd43618_commit-quality.jpeg"
+image: "/images/blogs/88c913598a_65800dc11650bb250fd43618_commit-quality.webp"
 draft: false
 webflowId: "65800dc446fa2dba9ca5f991"
 ---
@@ -60,7 +60,7 @@ There isn’t only one right way to do things and we want team members to keep a
 
 ### Things that shouldn’t happen
 
-![good tech mentorship](/images/blogs/f14045e32e_66e15e768514b5005e0ad434_aimee-vogelsang-106103.jpeg)
+![good tech mentorship](/images/blogs/f14045e32e_66e15e768514b5005e0ad434_aimee-vogelsang-106103.webp)
 
 PHOTO BY AIMEE VOGELSANG ON UNSPLASH
 

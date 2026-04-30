@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "product-growth"
 displayCategory: "Growth"
-image: "/images/blogs/71434db437_67995579a9dc73a424628c90_andrey-larin-Kodkas71tT8-unsplash-scaled.jpg"
+image: "/images/blogs/71434db437_67995579a9dc73a424628c90_andrey-larin-Kodkas71tT8-unsplash-scaled.webp"
 draft: false
 webflowId: "67995582fe53167067950a97"
 ---

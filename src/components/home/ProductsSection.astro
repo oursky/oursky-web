@@ -2,15 +2,13 @@
 const products = [
   {
     href: 'https://formx.ai',
-    icon: '/images/fx-icon.png',
-    icon500: '/images/fx-icon-p-500.png',
+    icon: '/images/fx-icon.webp',
     name: 'FormX',
     desc: 'Automate Document Workflow\nwith AI Agents',
   },
   {
     href: 'https://authgear.com',
-    icon: '/images/authgear-icon.png',
-    icon500: '/images/authgear-icon-p-500.png',
+    icon: '/images/authgear-icon.webp',
     name: 'Authgear',
     desc: 'Secure Single Sign On for\nFrontline Workers & Customers',
   },
@@ -35,8 +33,6 @@ const products = [
             <div class="flex flex-col justify-start items-center">
               <img
                 src={p.icon}
-                srcset={`${p.icon500} 500w, ${p.icon} 800w`}
-                sizes="(max-width: 800px) 100vw, 800px"
                 alt={p.name}
                 loading="lazy"
                 class="scroll-reveal-item w-[260px] block max-md:w-[180px]"

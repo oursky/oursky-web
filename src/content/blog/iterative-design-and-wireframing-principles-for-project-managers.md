@@ -7,7 +7,7 @@ categories:
   - "product-management"
   - "ui-design"
 displayCategory: "PROECT MANAGEMENT"
-image: "/images/blogs/0b84602eab_66e304897c63cee189fc8e1f_sigmund-4UGmm3WRUoQ-unsplash-1160x870.jpg"
+image: "/images/blogs/0b84602eab_66e304897c63cee189fc8e1f_sigmund-4UGmm3WRUoQ-unsplash-1160x870.webp"
 draft: false
 webflowId: "66e304da6bae31e593ec9c1d"
 ---
@@ -22,7 +22,7 @@ These days, UI/UX design tools like [Figma](https://www.figma.com/wireframe-tool
 
 However, knowing the fundamentals of paper prototyping or whiteboard and pencil wireframing is an essential skill, especially for software and app development project managers. Here are 8 essential principles in iterative design and wireframing that project managers should try to live by in an app development process.
 
-![](/images/blogs/0b89191bc4_66e304a742ffaf526c8a6637_sigmund-4UGmm3WRUoQ-unsplash-1160x870.jpeg)
+![](/images/blogs/0b89191bc4_66e304a742ffaf526c8a6637_sigmund-4UGmm3WRUoQ-unsplash-1160x870.webp)
 
 PHOTO BY [SIGMUND](https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) ON [UNSPLASH](https://unsplash.com/s/photos/wireframe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

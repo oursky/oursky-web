@@ -33,7 +33,7 @@ At this point, we were thinking about a representative image for our new product
 
 ## **Simple Metaphors**
 
-![MakeAppIcon Toaster Logo Design Web UI](/images/blogs/50f6213faa_67994b7a7db63d83079af7eb_toaster-1.png)
+![MakeAppIcon Toaster Logo Design Web UI](/images/blogs/50f6213faa_67994b7a7db63d83079af7eb_toaster-1.webp)
 
 The toaster concept is versatile.
 
@@ -61,7 +61,7 @@ Logo goes in to be toasted!
 
 Visual identity is about cohesion. Our original toaster took logos, put them in, and pushed back out the export files. With the flattened look, the inputs looked like cards, so we expanded on the idea and created three colour cards. The cards could also greyscale easily.
 
-![MakeAppIcon UI Design ](/images/blogs/d6047c2146_67994b7a23af1a9d6bcddd5f_mai-image.png)
+![MakeAppIcon UI Design ](/images/blogs/d6047c2146_67994b7a23af1a9d6bcddd5f_mai-image.webp)
 
 The tri-colour squares were great to fill with detail.
 
@@ -69,13 +69,13 @@ The tri-colour squares were great to fill with detail.
 
 By February 2016, we wanted to make a native desktop app as well. By then, the toaster had become a recognised symbol for [MakeAppIcon](http://www.makeappicon.com/) , so we sketched the new logo. The desktop icon would incorporate the file cards that slipped into our web app to be toasted. However, we opted for the original glossy look to match better with other Mac icons. We kept the flat logo for our web version.
 
-![MakeAppIcon Desktop App Icon](/images/blogs/2df8c05f8a_67994b7ac94bf5d117286a2e_icon_512x512.png)
+![MakeAppIcon Desktop App Icon](/images/blogs/2df8c05f8a_67994b7ac94bf5d117286a2e_icon_512x512.webp)
 
 MakeAppIcon’s shiny new look for V2
 
 Because we took out the toaster image as the backdrop in our native app landing page, we used the three cards instead. These three cards were also a visual way to tell our users what files they could use.
 
-![Revamping old favourites](/images/blogs/fed92ba108_67994b7a23af1a9d6bcdddbd_makeappicon-scrshot-1.png)
+![Revamping old favourites](/images/blogs/fed92ba108_67994b7a23af1a9d6bcdddbd_makeappicon-scrshot-1.webp)
 
 Simple drag and drop interface.
 

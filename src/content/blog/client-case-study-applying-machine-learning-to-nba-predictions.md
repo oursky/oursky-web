@@ -6,13 +6,13 @@ author: "Oursky Team"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "MACHINE LEARNING AND AI"
-image: "/images/blogs/9e1b162f5a_658006d15b17e17950efdbe9_case-study-nba.jpeg"
+image: "/images/blogs/9e1b162f5a_658006d15b17e17950efdbe9_case-study-nba.webp"
 featured: 4
 draft: false
 webflowId: "658006d47546e598097ee5c2"
 ---
 
-![nba prediction](/images/blogs/f8970b4816_66e15f0a6a0cea115f2f1408_photo-1499754162586-08f451261482-1160x773.jpeg)
+![nba prediction](/images/blogs/f8970b4816_66e15f0a6a0cea115f2f1408_photo-1499754162586-08f451261482-1160x773.webp)
 
 ## Executive Summary
 

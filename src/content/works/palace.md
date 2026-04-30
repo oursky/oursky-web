@@ -5,8 +5,8 @@ client: "Palace"
 industry: "Technology"
 order: 1
 bgColor: '#77866e'
-heroImage: "/images/works/6c4751d6be_66d09af647c0fdcef8a01dee_Noisy Glass Cube@2-1512x900.png"
-thumbnail: "/images/works/a06ef8e060_65a1111002c8f2d7ca131e27_pl-preview-phone.png"
+heroImage: "/images/works/6c4751d6be_66d09af647c0fdcef8a01dee_Noisy Glass Cube@2-1512x900.webp"
+thumbnail: "/images/works/a06ef8e060_65a1111002c8f2d7ca131e27_pl-preview-phone.webp"
 draft: false
 webflowId: "65a11132779b3ead687f4b04"
 ---
@@ -27,7 +27,7 @@ Through a friend's recommendation, Dinesh discovered Oursky, a software developm
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/works/f28f8c62f2_66d69c3400ddbed7e1ba975b_66d69c2749bd8001c44e9fe6_palace2.png)
+![\_\_wf\_reserved\_inherit](/images/works/f28f8c62f2_66d69c3400ddbed7e1ba975b_66d69c2749bd8001c44e9fe6_palace2.webp)
 
 ‍
 

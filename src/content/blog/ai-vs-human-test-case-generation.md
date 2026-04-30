@@ -7,7 +7,7 @@ categories:
   - "qa"
   - "machine-learning-and-ai"
 displayCategory: "Software QA"
-image: "/images/blogs/8110973e01_66e300c2bdcd1bb946551a3f_8137885-scaled.jpg"
+image: "/images/blogs/8110973e01_66e300c2bdcd1bb946551a3f_8137885-scaled.webp"
 draft: false
 webflowId: "66e301057ff06c7c48de9e3c"
 ---

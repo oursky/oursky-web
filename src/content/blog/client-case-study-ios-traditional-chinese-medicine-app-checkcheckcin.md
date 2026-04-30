@@ -6,7 +6,7 @@ author: "Oursky"
 categories:
   - "case-study"
 displayCategory: "Client Stories"
-image: "/images/blogs/0002ec86d5_6799528a24c6856e26e279c0_ourskyblog-ccc.jpg"
+image: "/images/blogs/3ec5cf127b_67995282ba8a39e39ec1623d_ourskyblog-ccc.jpeg"
 draft: false
 webflowId: "6799529a303d026f27f903fb"
 ---
@@ -49,7 +49,7 @@ Each phase of the CheckCheckCin app was completed within two months, with a conf
 
 ## Raising Brand Awareness by Delivering Value to New Users
 
-![CheckCheckCin users could see a personalized list of recommended foods.](/images/blogs/001c5ec4b1_67995282a75bd78e4bb1bc12_apppreview-413x720.png)
+![CheckCheckCin users could see a personalized list of recommended foods.](/images/blogs/001c5ec4b1_67995282a75bd78e4bb1bc12_apppreview-413x720.webp)
 
 CheckCheckCin users could see a personalized list of recommended foods.
 

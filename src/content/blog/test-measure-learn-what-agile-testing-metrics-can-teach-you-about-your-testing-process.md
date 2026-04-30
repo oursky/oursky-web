@@ -38,7 +38,7 @@ Test metrics provide a way of improving testing efforts, however, no single metr
 
 **Definition**: Cyclomatic complexity is a measure of the number of linearly independent paths through a section of source code.  
 
-![agile testing software qa](/images/blogs/0f8b90e941_679951c67db63d8307a1f861_8.-Cyclomatic-Complexity.jpeg)
+![agile testing software qa](/images/blogs/0f8b90e941_679951c67db63d8307a1f861_8.-Cyclomatic-Complexity.webp)
 
 Cyclomatic complexity targets — Image from Sealights.io
 

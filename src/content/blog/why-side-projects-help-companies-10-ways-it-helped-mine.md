@@ -11,7 +11,7 @@ draft: false
 webflowId: "66e31037301d32ee6856d0a7"
 ---
 
-![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.png)
+![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.webp)
 
 I GOT AN E-MAIL IN THE MIDDLE OF THE NIGHT. I OPENED IT TO DISCOVER THAT THE ANDROID VERSION OF OUR CHIMA OPEN DOOR APP WAS FINISHED.
 
@@ -45,7 +45,7 @@ Our cats show how we work as a team. We try to be as transparent as possible. Ou
 
 ## **3\. Paying you to do more of what you love**
 
-![Raspberry Pi 3 Model B side projects](/images/blogs/8bccb58401_66e30ff98dae10e000732881_IMG_0526-e1471871697512.jpeg)
+![Raspberry Pi 3 Model B side projects](/images/blogs/8bccb58401_66e30ff98dae10e000732881_IMG_0526-e1471871697512.webp)
 
 RASPBERRY PI 3 MODEL B FOR ONE OF OUR SIDE PROJECTS
 
@@ -109,7 +109,7 @@ The side projects also create ownership. Some of our team members love the start
 
 ## 10\. Side projects generate some good revenue
 
-![ActionSnapSampler](/images/blogs/32cf448512_66e30ff9ae6b0675ca0006a7_ActionSnapSampler.jpeg)
+![ActionSnapSampler](/images/blogs/32cf448512_66e30ff9ae6b0675ca0006a7_ActionSnapSampler.webp)
 
 ACTIONSNAP SAMPLER RENDERS
 

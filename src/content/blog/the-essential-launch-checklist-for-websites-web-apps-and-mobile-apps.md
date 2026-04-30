@@ -86,7 +86,7 @@ KEEPING #1 IN GOOGLE’S SERPS IS ESSENTIAL FOR CLICKS!
 
 ### Nice-to-Have Tests
 
-![offline paper css](/images/blogs/1bbad616d0_66e3159fca8f21dff8956c45_live-reload.png)
+![offline paper css](/images/blogs/1bbad616d0_66e3159fca8f21dff8956c45_live-reload.webp)
 
 IMAGE SOURCE[PAPER CSS](https://github.com/cognitom/paper-css) BY COGNITOM ON GITHUB
 
@@ -100,7 +100,7 @@ IMAGE SOURCE[PAPER CSS](https://github.com/cognitom/paper-css) BY COGNITOM ON GI
 
 ## Launch Checklist for Mobile Apps
 
-![iphone 4se ui breaks](/images/blogs/4f74dcec4b_66e3159f24bcdfb7e0001777_Screen-Shot-2018-05-14-at-3.34.47-PM-2-720x405.png)
+![iphone 4se ui breaks](/images/blogs/4f74dcec4b_66e3159f24bcdfb7e0001777_Screen-Shot-2018-05-14-at-3.34.47-PM-2-720x405.webp)
 
 SMALL SCREENS LIKE THE IPHONE 4SE POSE UI CHALLENGES.
 

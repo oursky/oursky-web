@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/1572dad99e_679954b493bdb1ce79ffdab3_bench-accounting-8D2k7a3wMKQ-unsplash-scaled.jpg"
+image: "/images/blogs/1572dad99e_679954b493bdb1ce79ffdab3_bench-accounting-8D2k7a3wMKQ-unsplash-scaled.webp"
 draft: false
 webflowId: "679954c5ff9dc23d3b0409a3"
 ---
@@ -17,7 +17,7 @@ The novel coronavirus pandemic is teaching people all around the world hard less
 
 But despite the comforts of working remotely, we are all learning to adapt to what can be an inevitable norm for everyone. Moving work from an office environment to the virtual world can be new (and distracting and stressful) to many, and this can be a challenge, even for us. In the past, we only had about one or two team members who dials in for our meetings. Now, everyone has to rely on Zoom for meetings. Before, the team is huddled in a laptop to discuss codes — now, we need to resort to Slack or our online channels for technical discussions, and things can get lost in translation.
 
-![Lessons Working Remotely in the Time of Coronavirus](/images/blogs/a213d7b018_679954acef69509e8dc56f3b_bench-accounting-8D2k7a3wMKQ-unsplash-1160x773.jpeg)
+![Lessons Working Remotely in the Time of Coronavirus](/images/blogs/a213d7b018_679954acef69509e8dc56f3b_bench-accounting-8D2k7a3wMKQ-unsplash-1160x773.webp)
 
 Photo by [Bench Accounting](https://unsplash.com/@benchaccounting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -62,7 +62,7 @@ Even though we are a remote work-friendly company, many of us haven’t experien
 
 I enjoy working remotely a lot. There are fewer distractions and it improves my efficiency at work. But at the same time, I also miss going to the office and having fun with my colleagues. At the office, we celebrate everyone’s birthday and hang out for team dinner every month. Instead of cancelling all these social moments, we moved them online!
 
-![](/images/blogs/0139d0ff9b_679954acd42e2f08f1850035_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-5-1160x805.png)
+![](/images/blogs/0139d0ff9b_679954acd42e2f08f1850035_Lessons-Working-Remotely-in-the-Time-of-Coronavirus-5-1160x805.webp)
 
 We celebrated May’s birthday on Zoom
 

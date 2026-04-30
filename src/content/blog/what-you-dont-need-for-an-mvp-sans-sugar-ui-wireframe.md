@@ -11,7 +11,7 @@ draft: false
 webflowId: "6799512154769870a1f32ef8"
 ---
 
-![iphone x mockup app design UI UX](/images/blogs/e8d52964a5_67995100697ab60b8f3a0256_SnasSugar-Appicon-Preview-720x354.png)
+![iphone x mockup app design UI UX](/images/blogs/e8d52964a5_67995100697ab60b8f3a0256_SnasSugar-Appicon-Preview-720x354.webp)
 
 ## How we started our side project
 
@@ -50,7 +50,7 @@ Always check to see if someone else has solved your problem already. We went to 
 
 ## Solving different problems
 
-![android UI calorie intake app](/images/blogs/a29c0d45b6_67995100daa2fabb50333388_diet-app-UX-UI-.png)
+![android UI calorie intake app](/images/blogs/a29c0d45b6_67995100daa2fabb50333388_diet-app-UX-UI-.webp)
 
 Above are three of the most popular calorie tracker apps: Lifesum, Yazio, and FatSecret.
 
@@ -66,7 +66,7 @@ The purpose of an MVP is to validate a user need. Because the MVP is barebones, 
 
 **Our hypothesis is that our target users (like us) want an interface that is easy to access, read, and input data.** Because the other tracker apps we looked at were based on three meals a day, a user is required to click through several screens or search for their food items.
 
-![Lifesum Yazio FatSecret comparison](/images/blogs/7656c14ee2_67995100aa572ea096838333_calorie-tracking-apps-android.png)
+![Lifesum Yazio FatSecret comparison](/images/blogs/7656c14ee2_67995100aa572ea096838333_calorie-tracking-apps-android.webp)
 
 Android UI version for calorie tracking apps.
 
@@ -81,7 +81,7 @@ Because we relied on barcode scanning, we didn’t have to build our database fr
 
 **Below was our first wireframe:**
 
-![iOS wireframe sample](/images/blogs/fbd003c686_67995100518e430f41fcde36_sanssugar-wireframe_original.jpeg)
+![iOS wireframe sample](/images/blogs/fbd003c686_67995100518e430f41fcde36_sanssugar-wireframe_original.webp)
 
 V1 of our Sans Sugar App Wireframe
 
@@ -100,7 +100,7 @@ The non-technical team members looked at the wireframe and gave feedback. Four c
 
 **Our V2 reflected these suggestions.**
 
-![UX UI ios 11 app design](/images/blogs/f0dfa6948c_679951003ab5547d30721a49_ios-11-app-wireframe.png)
+![UX UI ios 11 app design](/images/blogs/f0dfa6948c_679951003ab5547d30721a49_ios-11-app-wireframe.webp)
 
 Our Sans Sugar iOS 11 app V2 wireframe
 
@@ -112,7 +112,7 @@ These were the things we removed:
 2.  Additional gamification screens (could simplify the history screen to achieve the same result)
 3.  Settings and update info screens because they aren’t essential for an MVP
 
-![wireframe iterations mvp design thinking](/images/blogs/167749c085_67995100be2d1859c0628e5d_sans-sugarv2.png)
+![wireframe iterations mvp design thinking](/images/blogs/167749c085_67995100be2d1859c0628e5d_sans-sugarv2.webp)
 
 Simplify. Focus on user flow and main feature before moving to mockups.
 

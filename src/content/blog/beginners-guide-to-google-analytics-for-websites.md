@@ -40,7 +40,7 @@ In this post, we will be focusing on the first three parts: **AAR**, which trans
 
 ## Acquisition — where did all these people come from?
 
-![](/images/blogs/cc0d15d485_679950330615a7e0ea737e9e_1_SoRt06-YX3GNLgQSGr0TYw.jpeg)
+![](/images/blogs/cc0d15d485_679950330615a7e0ea737e9e_1_SoRt06-YX3GNLgQSGr0TYw.webp)
 
 Photo by Lysander Yuen via Unsplash
 
@@ -57,7 +57,7 @@ Acquisition shows where your users are coming from. **Knowing the source of refe
 *   **Audience > Technology > Browser & OS:** Optional, but browsers will display information differently. For example, if most of your users are using Firefox, which doesn’t support a specific font you’ve been using, will that severely affect your design and user experience?
 *   . **Behavior > Site Content > Landing Pages:** Knowing which pages are attracting people will tell you what evergreen content has a long-tail value (e.g. lots of people discover you by searching about AR) and whether campaigns or link distribution efforts have achieved their desired effects.
 
-![makeappicon](/images/blogs/bcfccd345a_679950338149b61a4ec03a4e_1_dsifPxn2n5hhMieGZsfItQ.png)
+![makeappicon](/images/blogs/bcfccd345a_679950338149b61a4ec03a4e_1_dsifPxn2n5hhMieGZsfItQ.webp)
 
 Finding the Page View Per Session and Average Session Duration of traffic from different channels on our product MakeAppIcon.
 
@@ -95,7 +95,7 @@ After you find out how users are behaving on your site, you can make data-driven
 
 ## Retention — Thank you, please come again!
 
-![](/images/blogs/bf3a8e6259_67995033d7c8c7edf2881caf_1_KaVbmNnRdBhqb5DUuUXecA.jpeg)
+![](/images/blogs/bf3a8e6259_67995033d7c8c7edf2881caf_1_KaVbmNnRdBhqb5DUuUXecA.webp)
 
 Photo by Richard Nolan via Unsplash
 
@@ -108,7 +108,7 @@ So you’ve got people registering on your site— that’s great! But how do yo
 *   **Audience > Active users:** Number of unique users who visited your site in the past 1 / 7 / 14 / 30 days.
 *   **Audience > Lifetime Value:** The value of users based on their lifetime performance (currently 90 days) on your site (more advanced)
 
-![](/images/blogs/4571d3c41e_67995033d7c8c7edf2881cc5_1_9CAxMFCCGkFiAdtRh9szAQ.png)
+![](/images/blogs/4571d3c41e_67995033d7c8c7edf2881cc5_1_9CAxMFCCGkFiAdtRh9szAQ.webp)
 
 A/B Testing cohorts
 

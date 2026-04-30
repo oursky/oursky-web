@@ -11,7 +11,7 @@ draft: false
 webflowId: "67994d2500afd2ad0dd4bf65"
 ---
 
-![Conflicts are fixed with conversations, not accusations. Image courtesy of Helloquence on Unsplash.](/images/blogs/aacbce96a3_67994d0824c6856e26dc3164_photo-1454165804606-c3d57bc86b40-720x481.jpeg)
+![Conflicts are fixed with conversations, not accusations. Image courtesy of Helloquence on Unsplash.](/images/blogs/058ca99fcf_67994cfc36bc0d12791a3136_photo-1454165804606-c3d57bc86b40-720x481.jpeg)
 
 Let’s face it; with the exception of maybe Bill O’Reilly, no one likes to argue. Be that as it may, that’s not to say we shouldn’t be prepared for conflict it does inevitably erupt. You and a co-worker are having a dispute over the assumptions and logic for your build? Your cat won’t stop lying down directly on top of your keyboard as you write this article ? How do you deal with it?
 

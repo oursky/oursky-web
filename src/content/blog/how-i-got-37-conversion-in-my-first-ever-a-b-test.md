@@ -29,7 +29,7 @@ I lucked out, and I learned a lot. But I in retrospect, I could have engineered 
 
 ## Trial 1 — Changing the tagline only
 
-![](/images/blogs/866f456111_66e3138d00cae42b61548d07_1xScfyUoxxEELqYDXU8xiDg.png)
+![](/images/blogs/866f456111_66e3138d00cae42b61548d07_1xScfyUoxxEELqYDXU8xiDg.webp)
 
 ### Hypothesis
 
@@ -106,7 +106,7 @@ What really intrigued me was that most users still clicked the download button l
 
 ## Trial 3 — Adding a user’s testimonial above the fold
 
-![](/images/blogs/350e384b6c_66e3138d7a74628b269e2533_1fNcm6yPC05kl8_mcpdMH_A.png)
+![](/images/blogs/350e384b6c_66e3138d7a74628b269e2533_1fNcm6yPC05kl8_mcpdMH_A.webp)
 
 ### Hypothesis
 

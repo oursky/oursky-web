@@ -7,7 +7,7 @@ categories:
   - "qa"
   - "machine-learning-and-ai"
 displayCategory: "Prompt Engineering"
-image: "/images/blogs/9d8ba9fbfc_67189f1e42276195b294a300_b_thumbnail2.jpg"
+image: "/images/blogs/9d8ba9fbfc_67189f1e42276195b294a300_b_thumbnail2.webp"
 draft: false
 webflowId: "671897f809338115a460f5de"
 ---
@@ -32,7 +32,7 @@ Before diving into the prompts, an important note on security:
 
 Remember: Your test cases are a blueprint of your system. Treat them with appropriate security measures.
 
-![\_\_wf\_reserved\_inherit](/images/blogs/c6067f6789_67189b4b1091e924910e3bd0_67189b22a5e112e0f61b7cc9_Screenshot%202024-10-23%20at%202.43.21%E2%80%AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/c6067f6789_67189b4b1091e924910e3bd0_67189b22a5e112e0f61b7cc9_Screenshot%202024-10-23%20at%202.43.21%E2%80%AFPM.webp)
 
 Self-hosted Local AI Chatbot
 
@@ -112,7 +112,7 @@ Quick Tips:
 *   Focus on the issues one by one, don't retest multiple issues at a time.
 *   Use [IssueSnap](https://issuesnap.oursky.app/) to help you create a clear and informative bug report.
 
-![\_\_wf\_reserved\_inherit](/images/blogs/b32b9c5e42_6718a1617c4cc60fdc665775_6718a0e6d9e6f55f4d34d99b_Screenshot%202024-10-23%20at%203.07.10%E2%80%AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/b32b9c5e42_6718a1617c4cc60fdc665775_6718a0e6d9e6f55f4d34d99b_Screenshot%202024-10-23%20at%203.07.10%E2%80%AFPM.webp)
 
 IssueSnap - Your Bug Report Helper
 

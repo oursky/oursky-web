@@ -39,7 +39,7 @@ On Facebook, you might already notice some shared links are displayed in differe
 
 ###### FORM2 – Top cover Image
 
-![large-og-image-sample](/images/blogs/d6b49dd3f6_679925e13a98e00baded4983_Screen-Shot-2015-07-14-at-8.06.21-pm.png)
+![large-og-image-sample](/images/blogs/d6b49dd3f6_679925e13a98e00baded4983_Screen-Shot-2015-07-14-at-8.06.21-pm.webp)
 
 Research shows that a large cover image can positively affect the conversion rate of shared your post.  
 **You might now want to ask, why do these two posts are presented so differently?**  
@@ -76,7 +76,7 @@ Our editors are using a tool to generate standard News Feed Images. Select an im
 
 [http://newfeedimage.appspot.com/](http://newfeedimage.appspot.com/)
 
-![News Feed Generator Image](/images/blogs/780b298e5a_679925e208f9d71df7e4bc62_Screen-Shot-2015-07-14-at-7.15.11-pm.png)
+![News Feed Generator Image](/images/blogs/780b298e5a_679925e208f9d71df7e4bc62_Screen-Shot-2015-07-14-at-7.15.11-pm.webp)
 
 We’ve also made life-saver other tools for developers. Check them out and share with your friends.
 

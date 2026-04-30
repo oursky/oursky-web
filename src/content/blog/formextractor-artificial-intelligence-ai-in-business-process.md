@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "Machine Learning and AI"
-image: "/images/blogs/0d5bc7d8bf_6799547d223c893cb17ebc4b_campaign-creators-774sCXD0dDU-unsplash-scaled.jpg"
+image: "/images/blogs/0d5bc7d8bf_6799547d223c893cb17ebc4b_campaign-creators-774sCXD0dDU-unsplash-scaled.webp"
 draft: false
 webflowId: "67995493ff9dc23d3b03e275"
 ---

@@ -15,7 +15,7 @@ When I first joined as a growth-hacking intern at Oursky, I was tasked with achi
 
 ## **Trial 1 – Changing the tagline only**
 
-![Shotbot landing page screenshot](/images/blogs/db513c7dcc_679947ecff9dc23d3bf70a56_Screen-Shot-2016-04-07-at-2.15.10-PM-1.png)
+![Shotbot landing page screenshot](/images/blogs/db513c7dcc_679947ecff9dc23d3bf70a56_Screen-Shot-2016-04-07-at-2.15.10-PM-1.webp)
 
 Shotbot landing page started off like this.
 
@@ -52,7 +52,7 @@ In my next round of testing, I focused on the content above the scroll area. The
 
 ## **Trial 3 – Adding user’s testimonial**
 
-![Shotbot Landing Page User Testimony screenshot](/images/blogs/8eef72175d_679947ec54769870a1e96d5d_Screen-Shot-2016-04-07-at-2.15.10-PM.png)
+![Shotbot Landing Page User Testimony screenshot](/images/blogs/8eef72175d_679947ec54769870a1e96d5d_Screen-Shot-2016-04-07-at-2.15.10-PM.webp)
 
 Adding a block of user testimonial at the top of the page.
 

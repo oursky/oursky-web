@@ -6,12 +6,12 @@ author: "Dennis Tam"
 categories:
   - "product-growth"
 displayCategory: "Growth"
-image: "/images/blogs/6e6920bab4_679945262d8409abc58c45ab_photo-1456406644174-8ddd4cd52a06.jpeg"
+image: "/images/blogs/6e6920bab4_679945262d8409abc58c45ab_photo-1456406644174-8ddd4cd52a06.webp"
 draft: false
 webflowId: "67994544e60cb7aadb9ba335"
 ---
 
-![photo-1456406644174-8ddd4cd52a06](/images/blogs/8945301af7_67994532b922bb4dfb2ae40c_photo-1456406644174-8ddd4cd52a06.jpeg)
+![photo-1456406644174-8ddd4cd52a06](/images/blogs/6e6920bab4_679945262d8409abc58c45ab_photo-1456406644174-8ddd4cd52a06.webp)
 
 If you have not yet read my previous article on my first magical A/B test, you should [check it out here](http://blog.oursky.com/2016/04/08/improve-conversion-rate-37-ab-test/), or else you wouldn’t know what the hell I am talking about.
 
@@ -19,7 +19,7 @@ In this article, I will talk about my learnings from the experiments.
 
 ## Mistake #1: I applied two challengers to the A/B test for trial 1
 
-![Test result screenshot](/images/blogs/d403b6131e_67994532c88568be157433f0_Screen-Shot-2016-04-07-at-2.47.40-PM.png)
+![Test result screenshot](/images/blogs/d403b6131e_67994532c88568be157433f0_Screen-Shot-2016-04-07-at-2.47.40-PM.webp)
 
 Having two challengers means it takes a long time to reach significance level.
 
@@ -31,7 +31,7 @@ You should always aim at having one challenger at a time, unless you have thousa
 
 ## Mistake #2: I made small changes early-on in Trial 1
 
-![Shotbot landing page screenshot A/B test Img](/images/blogs/1c84c48a9b_6799453260fabc180c7b2565_Screen-Shot-2016-04-07-at-2.15.10-PM-2.png)
+![Shotbot landing page screenshot A/B test Img](/images/blogs/1c84c48a9b_6799453260fabc180c7b2565_Screen-Shot-2016-04-07-at-2.15.10-PM-2.webp)
 
 I merely changed the headline text here.
 

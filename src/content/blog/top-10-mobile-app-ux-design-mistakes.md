@@ -7,7 +7,7 @@ categories:
   - "qa"
   - "ui-design"
 displayCategory: "User Experience"
-image: "/images/blogs/7f14b43b0f_66e349609847feb156298a34_lead-nuclear-power-human-error-homer-simpson-1-1024x680.jpg"
+image: "/images/blogs/7f14b43b0f_66e349609847feb156298a34_lead-nuclear-power-human-error-homer-simpson-1-1024x680.webp"
 draft: false
 webflowId: "66e3497eebe06c795cbc410f"
 ---
@@ -43,7 +43,7 @@ However at some time, users might need to take a step back to the previous page,
 
 \[caption id="attachment\_155" align="aligncenter" width="499"\]
 
-![Let me in, I need to go back out again](/images/blogs/90702f81cd_66e349448ee82fc85464cfc5_let-me-in.png)
+![Let me in, I need to go back out again](/images/blogs/90702f81cd_66e349448ee82fc85464cfc5_let-me-in.webp)
 
 I left my toy there\[/caption\]
 
@@ -109,7 +109,7 @@ Asking bad questions or provide confusing choices might cause a panic.
 
 \[caption id="attachment\_169" align="aligncenter" width="658"\]
 
-![Does the skip skip the "skip"?](/images/blogs/24106fb92a_66e349446983c4e6a717347c_instagram-skips.png)
+![Does the skip skip the "skip"?](/images/blogs/24106fb92a_66e349446983c4e6a717347c_instagram-skips.webp)
 
 image from useronboard.com\[/caption\]
 

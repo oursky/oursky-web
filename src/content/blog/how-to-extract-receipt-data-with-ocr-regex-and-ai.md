@@ -81,7 +81,7 @@ We will now group them into horizontal lines _relative_ to the receipt, sorted b
 *   Adjacent lines are also more likely to be related. To access them, we can simply move indices up and down as they are sorted instead of comparing the distance between a set of Words with another.
 *   The images we receive can now have tilted angles.
 
-![](/images/blogs/cc578ea2d5_673e2241b960b2e363f8c0ae_6604f2a496c8cee23004c0cd_614d758587c3947453c4ceb1_formextractor-behind-the-scenes-1.png)
+![](/images/blogs/cc578ea2d5_673e2241b960b2e363f8c0ae_6604f2a496c8cee23004c0cd_614d758587c3947453c4ceb1_formextractor-behind-the-scenes-1.webp)
 
 FIGURE 1. RECEIPTS CAPTURED WITH TILTED ANGLE  
 IMAGE SOURCE: [USC ANNENBERG MEDIA](http://www.uscannenbergmedia.com/2019/09/20/paper-receipts-present-potential-hazard-to-the-environment/?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578)
@@ -181,7 +181,7 @@ The model we used for this is random forest with the number of estimators at 300
 
 **Has Symbols.** Candidates with “:” and empty space with less than 2 occurrences are more likely to be time. The ones with am or pm are also prime candidates. Similar to how Date is classified, candidates with Words that imply data related to Time will get extra marks.
 
-![](/images/blogs/b85c420659_673e2238a3a4f186e2ff57db_6604f2a496c8cee23004c0de_614d768efbc1579df8aa23ab_alex-o9isBQ25H-g-unsplash-1160x774.jpeg)
+![](/images/blogs/b85c420659_673e2238a3a4f186e2ff57db_6604f2a496c8cee23004c0de_614d768efbc1579df8aa23ab_alex-o9isBQ25H-g-unsplash-1160x774.webp)
 
 PHOTO BY [ALEX](https://unsplash.com/@alx_andru?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578) ON [UNSPLASH](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText?distinct_id=018d788d-11b3-7cfd-a96c-68eb54acb578)
 
@@ -196,7 +196,7 @@ Aside from that, you can set up your own template, or Form as we call it, by fol
 *   Click on the “Add New Form” button and select “My Documents don’t have a fixed format” as the layout of receipts are not identical.  
     
 
-![](/images/blogs/aab9434f1e_673e22380f85cb98f3a71835_6604f2a496c8cee23004c0da_61ea442f47d11954e159f1ef_WZKL-ohKvfRx2JagGH1MHMeRV_wD5bkF86PSFmNlnX8Q1.png)
+![](/images/blogs/aab9434f1e_673e22380f85cb98f3a71835_6604f2a496c8cee23004c0da_61ea442f47d11954e159f1ef_WZKL-ohKvfRx2JagGH1MHMeRV_wD5bkF86PSFmNlnX8Q1.webp)
 
 *   Select “Receipt” as your document type and pick the auto extraction items you want.
 

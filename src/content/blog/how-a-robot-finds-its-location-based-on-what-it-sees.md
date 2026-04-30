@@ -39,7 +39,7 @@ Let’s start with how we as humans locate ourselves. We would first look around
 
 \[caption id="" align="alignnone" width="1492"\]
 
-![](/images/blogs/3eb2b5a9a3_66e347426163c2b650f19836_1_MFeX4C1ZFioyn70wBsngmA.png)
+![](/images/blogs/3eb2b5a9a3_66e347426163c2b650f19836_1_MFeX4C1ZFioyn70wBsngmA.webp)
 
 Map of Singapore has symbols\[/caption\]
 
@@ -76,7 +76,7 @@ An image feature has the same characteristic as landmark, it is a small region o
 
 \[caption id="" align="alignnone" width="800"\]
 
-![](/images/blogs/81e235886a_66e34742159215f0398f9cd1_1_elZIhYoCY06f9P907drbgQ.jpeg)
+![](/images/blogs/81e235886a_66e34742159215f0398f9cd1_1_elZIhYoCY06f9P907drbgQ.webp)
 
 The robot recognizes the differences that make this tower tand out.\[/caption\]
 
@@ -94,11 +94,11 @@ _Figure 3b. In contrast, houses in the estate are bad landmarks. Given only the 
 
 \[caption id="" align="alignnone" width="562"\]
 
-![Visual odometry](/images/blogs/fd58a51149_66e34742efb2cb8d74bfa5ab_1_jFapWOk4j_iyY0cKw7xWsg.png)
+![Visual odometry](/images/blogs/fd58a51149_66e34742efb2cb8d74bfa5ab_1_jFapWOk4j_iyY0cKw7xWsg.webp)
 
 How does a robot see this?\[/caption\] \[caption id="" align="alignnone" width="561"\]
 
-![Visual odometry](/images/blogs/4319893665_66e34742d433098f07dee935_1_UNGI7_Kk7jQ3UH6Be-mVdQ.png)
+![Visual odometry](/images/blogs/4319893665_66e34742d433098f07dee935_1_UNGI7_Kk7jQ3UH6Be-mVdQ.webp)
 
 Robot's way of differentiating an object.\[/caption\]
 
@@ -126,7 +126,7 @@ One of the ways to search for feature on an image is to look for a sharp change 
 
 \[caption id="attachment\_516" align="alignnone" width="600"\]
 
-![](/images/blogs/c32c3d9acc_66e3474526e49420a7efefd7_coffee-cat-oursky.jpeg)
+![](/images/blogs/c32c3d9acc_66e3474526e49420a7efefd7_coffee-cat-oursky.webp)
 
 Distinguishing contrasting colours.\[/caption\]
 
@@ -141,7 +141,7 @@ Similarly, if we move away from an object, some part of the object, say a spot, 
 
 Okay, now we know how to find image features and we can locate them in an image, what’s next? After detecting an image feature, we need to come up with a way to describe it, meaning record how the feature looks. The most straight forward way probably is, draw a 7x7 square centered at the image feature, and use those 49 pixel values inside the square as an descriptor of that feature. If we want the same object but with different color being described by the same (or at least similar) way, instead of storing the 7x7 image patch with all the RGB value, we could use the greyscale value \[²\].
 
-![](/images/blogs/ded7b1a2c9_66e34742cf9939c6d3b68e36_1-enBMScsG6sSuIJ9BFfKtnA.png)
+![](/images/blogs/ded7b1a2c9_66e34742cf9939c6d3b68e36_1-enBMScsG6sSuIJ9BFfKtnA.webp)
 
   
 _Figure 7. Illustration shows how to describe an image feature using image patch. Basically we just need to crop a small area of image near the image feature (here is a 15x15 image patch), convert it to grey scale and store the pixel values in a pre-defined order (here is from left to top and from top to bottom.)_
@@ -169,7 +169,7 @@ So each pixel of the gradient image is actually telling us how strongly a pixel 
 
 Once we know how to determine the orientation of an image, we could also do that on the image patch we used as image descriptor. Now, instead of just using the image patch, we use the rotated image patch for feature description. A rotated image patch means we pick the 7x7 image patch after we rotated the image to offset its orientation; say the computed orientation of an image patch is 15 degrees clockwise, we need to pre-rotated the image by 15 degrees counter-clockwise before picking image patch. By doing so, when we’re comparing two descriptors, we are comparing them in the same orientation.
 
-![](/images/blogs/3fa5f14610_66e34742b46f18b2c5b4df95_1-w2r_yC0aToagLxgac_8XRQ.png)
+![](/images/blogs/3fa5f14610_66e34742b46f18b2c5b4df95_1-w2r_yC0aToagLxgac_8XRQ.webp)
 
   
 _Figure 9. The Illustration shows image patches of a normal Sydney opera house image and a rotated image located at the same image feature. If we compute SAD on these two patches, it will show large difference. However, let’s say we can detect the orientation of both images, i.e. we know that the image on the right is rotated 90 degrees clockwise, we can then pre-rotated the right image by 90 degrees counter-clockwise before taking the image patch. In that case, we will have 2 identical image patch on the same image feature._

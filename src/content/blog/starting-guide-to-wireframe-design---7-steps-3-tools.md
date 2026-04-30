@@ -6,7 +6,7 @@ author: "Jane C"
 categories:
   - "ui-design"
 displayCategory: "UX/UI Design"
-image: "/images/blogs/aa3cdfde6c_6799483e826e17694ac815ed_1.jpg"
+image: "/images/blogs/86256bf2c9_6799482b54769870a1e9c883_1.jpeg"
 draft: false
 webflowId: "6799484a542c0b889ce7bf7f"
 ---
@@ -61,7 +61,7 @@ An alternative to Basalmiq’s orientation on process and components is to look 
 
 #### [3\. Uxpin](https://www.uxpin.com/)
 
-![Uxpin can be used online](/images/blogs/49c00fab9c_6799482bb96329f26fce0be2_5-720x347.png)
+![Uxpin can be used online](/images/blogs/49c00fab9c_6799482bb96329f26fce0be2_5-720x347.webp)
 
 If you don’t want to install a software for wireframe design, Uxpin may be a good choice for you.
 
@@ -79,7 +79,7 @@ Once you’ve decided on your favourite tools, it’s time to get down to work. 
 
 ## Define Layout with Boxes
 
-![grid layout screen](/images/blogs/617d6ea883_6799482b4b27ce75c998a10f_6.png)
+![grid layout screen](/images/blogs/617d6ea883_6799482b4b27ce75c998a10f_6.webp)
 
 Boxes should be placed after designing the grid
 
@@ -87,7 +87,7 @@ Once the grid has been defined, boxes are made and placed on the grid layout scr
 
 ## Determine pecking order using the ‘Text Tool’
 
-![Wireframe step - fill text](/images/blogs/6ad0665ed0_6799482ba96b779450bd4666_7.png)
+![Wireframe step - fill text](/images/blogs/6ad0665ed0_6799482ba96b779450bd4666_7.webp)
 
 Some texts should be enlarged for audience to grab what your site does
 

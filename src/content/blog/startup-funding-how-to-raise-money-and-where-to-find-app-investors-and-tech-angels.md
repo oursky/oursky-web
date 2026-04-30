@@ -6,7 +6,7 @@ author: "Varya Nekhina"
 categories:
   - "product-growth"
 displayCategory: "Growth"
-image: "/images/blogs/f4ede91e5c_67995894c7bcb32a283ee869_table-2-1536x768.png"
+image: "/images/blogs/f4ede91e5c_67995894c7bcb32a283ee869_table-2-1536x768.webp"
 draft: false
 webflowId: "6799589b33831f9bf4d5dee3"
 ---
@@ -75,11 +75,11 @@ These types of funding are for startups that have already found a product-market
 
 Unlike incubators, accelerators usually provide support through a highly selective, cohort-based program with limited duration. Services often include assistance in developing the business plans, investor pitch decks, prototypes, and initial market testing. Accelerators sometimes provide seed-round investments in exchange for equity.
 
-![](/images/blogs/0d45c50941_6799584eea66ae4e77091898_table-1-final-1160x631.png)
+![](/images/blogs/0d45c50941_6799584eea66ae4e77091898_table-1-final-1160x631.webp)
 
 A comparison of different types of business incubation and their common features
 
-![](/images/blogs/9c2844375b_6799584e7128f5e3c8da81be_table-2-1160x580.png)
+![](/images/blogs/9c2844375b_6799584e7128f5e3c8da81be_table-2-1160x580.webp)
 
 An overview of the overlapping features between incubators and accelerators
 
@@ -105,7 +105,7 @@ Both require completely different business models and approaches. The first one 
 
 A [Crunchbase report](https://about.crunchbase.com/wp-content/uploads/2020/03/Funding-To-Female-Founders_Report.pdf) said that 97% of all funding goes to male founders. It’s very important to bridge this gap, which is why there are more and more programs for underrepresented entrepreneurs. If you are a female founder or a person of color, there are [plenty of options](https://gosuperscript.com/blog/15-female-focused-vc-opportunities-uk/) available to fund your venture, including private and government-backed loans and [business grants](http://www.aabrs.com/small-business-grants-for-women/).
 
-![](/images/blogs/5ef169042f_6799584e4779025b7e26cd19_table-3-e1602566977306-1160x1003.png)
+![](/images/blogs/5ef169042f_6799584e4779025b7e26cd19_table-3-e1602566977306-1160x1003.webp)
 
 An overview of comparison of different funding options for startup founders
 

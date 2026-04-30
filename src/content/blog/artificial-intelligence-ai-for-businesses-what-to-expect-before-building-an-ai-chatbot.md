@@ -6,7 +6,7 @@ author: "May Yeung"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "Machine Learning and AI"
-image: "/images/blogs/dd6f14b009_679955f7c7bcb32a283bff44_bence-boros-anapPhJFRhM-unsplash-2-scaled.jpg"
+image: "/images/blogs/dd6f14b009_679955f7c7bcb32a283bff44_bence-boros-anapPhJFRhM-unsplash-2-scaled.webp"
 draft: false
 webflowId: "67995607f28f8449ca19469b"
 ---

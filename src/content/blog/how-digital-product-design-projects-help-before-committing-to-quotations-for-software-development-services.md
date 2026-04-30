@@ -66,7 +66,7 @@ Understanding the technical components of a feature summarized in the documentat
 
 App design projects can usually be completed in weeks. More importantly, this means the client has clear documents and references they can keep and build on. Whether a client works with us for development or not, we create industry-standard digital product design deliverables that they can take to any software development outsourcing agency, app vendor, or their own in-house developers to get project estimates.
 
-![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
+![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.webp)
 
 ![app web wireframe](/images/blogs/2eb94023b6_66e306227efc6bdee8b5b8f3_Oursky-process.059-copy.jpeg)
 

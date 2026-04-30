@@ -6,7 +6,7 @@ author: "Oursky"
 categories:
   - "project-management"
 displayCategory: "Guides for Outsourcing"
-image: "/images/blogs/f2443780ad_679952f9a48dced2941113c5_Newsletter_JUN2018_210618.png"
+image: "/images/blogs/1fd3b6904d_679952ed00afd2ad0dda8c63_Newsletter_JUN2018_210618.webp"
 draft: false
 webflowId: "6799530f8149b61a4ec31862"
 ---
@@ -15,6 +15,6 @@ We’ll just say it: choosing a software development partner sucks. It’s like 
 
 Also look out for our upcoming step-by-step guide!
 
-![infographic outsourcing software development](/images/blogs/1fd3b6904d_679952ed00afd2ad0dda8c63_Newsletter_JUN2018_210618.png)
+![infographic outsourcing software development](/images/blogs/1fd3b6904d_679952ed00afd2ad0dda8c63_Newsletter_JUN2018_210618.webp)
 
 ‍

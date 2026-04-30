@@ -5,8 +5,8 @@ client: "MTR Mobile"
 industry: "Technology"
 order: 0
 bgColor: '#003562'
-heroImage: "/images/works/7435b37153_67eedfc1001c726d46b11411_mockup3.jpg"
-thumbnail: "/images/works/9b486f979d_67f67f73e089bd5b4b12d991_mtr-mobile.png"
+heroImage: "/images/works/7435b37153_67eedfc1001c726d46b11411_mockup3.webp"
+thumbnail: "/images/works/9b486f979d_67f67f73e089bd5b4b12d991_mtr-mobile.webp"
 draft: false
 webflowId: "67eeddd0d8505637ff53555b"
 ---
@@ -19,7 +19,7 @@ However, user interviews and data tracking revealed the app's limitations, as ma
 
 ‍
 
-![](/images/works/5d5b48b47b_67eedf2039e4799278b3f6aa_AD_4nXf31Cj1wiTOM5W0IatX8PeVqDnFbcfnGb5C3etAd5e_po6QPx-yvq3Hx-mEepWcYEpYJ36O_fe-7YHrGtdBY7FI2p0.jpeg)
+![](/images/works/5d5b48b47b_67eedf2039e4799278b3f6aa_AD_4nXf31Cj1wiTOM5W0IatX8PeVqDnFbcfnGb5C3etAd5e_po6QPx-yvq3Hx-mEepWcYEpYJ36O_fe-7YHrGtdBY7FI2p0.webp)
 
 ‍
 

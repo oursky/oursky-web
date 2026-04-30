@@ -23,7 +23,7 @@ Note: We emphasize that everyone on a team is responsible for product quality, f
 
 ## What does a PM actually do in a tech company?
 
-![](/images/blogs/a734831d60_679950807f363048382fac48_christopher-burns-270898.jpeg)
+![](/images/blogs/a734831d60_679950807f363048382fac48_christopher-burns-270898.webp)
 
 Photo by Christopher Burns via Unsplash
 
@@ -44,7 +44,7 @@ At [Oursky](http://www.oursky.com/), the PM is usually introduced when the sales
 
 ## Queen or King Estimator
 
-![Trello project Management Screenshots](/images/blogs/39b09f1e1d_6799508045bd81b830029ca2_Screen-Shot-2016-04-20-at-4.12.23-PM-1024x554.png)
+![Trello project Management Screenshots](/images/blogs/39b09f1e1d_6799508045bd81b830029ca2_Screen-Shot-2016-04-20-at-4.12.23-PM-1024x554.webp)
 
 We categorize the issues and features of the app, weigh their significance and prioritize them.
 
@@ -54,7 +54,7 @@ Once the main components, such as key features, budget, and timeline are settled
 
 ## Being Chief Chaser and Maintainer
 
-![](/images/blogs/6a2f0a77f9_67995080f2137d56a878b202_quino-al-272729.jpeg)
+![](/images/blogs/6a2f0a77f9_67995080f2137d56a878b202_quino-al-272729.webp)
 
 Photo by Quino Al on Unsplash
 
@@ -62,7 +62,7 @@ Another major role for a PM is maintaining communication channels. This begins w
 
 ## Build Once, Revisit Once
 
-![](/images/blogs/98f4957cbe_679950800f76d341d9afde6d_margarida-csilva-121801.jpeg)
+![](/images/blogs/98f4957cbe_679950800f76d341d9afde6d_margarida-csilva-121801.webp)
 
 Photo by Margarida CSilva on Unsplash
 
@@ -70,7 +70,7 @@ Cohesion is just as important as communication. It should be noted that PMs aren
 
 ## Catching the Details
 
-![](/images/blogs/e181335a55_67995080a81f96c1ee8dd6b5_andrew-branch-191920.jpeg)
+![](/images/blogs/e181335a55_67995080a81f96c1ee8dd6b5_andrew-branch-191920.webp)
 
 Photo by Margarida CSilva on Unsplash
 
@@ -92,7 +92,7 @@ Our favourite is still [Basecamp](https://www.basecamp.com/) for non-tech consul
 
 ## Conclusion
 
-![](/images/blogs/751243acd8_67995080f80d7a7970e1f51f_rawpixel-com-196464.jpeg)
+![](/images/blogs/751243acd8_67995080f80d7a7970e1f51f_rawpixel-com-196464.webp)
 
 Photo by rawpixel.com on Unsplash
 

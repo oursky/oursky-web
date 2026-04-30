@@ -29,7 +29,7 @@ So is there any fast-track process that’ll guarantee the success of user inter
 
 ‍  
 
-![Start up User Interview](/images/blogs/7b9cf653f5_66e30e9ff063b66d98e93f1d_Startup-User-Interview-eng-1024x604.png)
+![Start up User Interview](/images/blogs/7b9cf653f5_66e30e9ff063b66d98e93f1d_Startup-User-Interview-eng-1024x604.webp)
 
 ‍
 

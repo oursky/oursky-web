@@ -11,7 +11,7 @@ draft: false
 webflowId: "67994dae7d3712ae4b276cf4"
 ---
 
-![Sometimes I feel as if I don’t have enough hands, let alone time! — Photo by SerenaWong](/images/blogs/eb0bbdb612_67994d90bca6350cdf3ee70c_Screen-Shot-2016-11-08-at-12.56.11-AM-720x523.png)
+![Sometimes I feel as if I don’t have enough hands, let alone time! — Photo by SerenaWong](/images/blogs/eb0bbdb612_67994d90bca6350cdf3ee70c_Screen-Shot-2016-11-08-at-12.56.11-AM-720x523.webp)
 
 Work isn’t always easy. Everyone faces a road bump from time to time and we lose steam with our projects. Luckily many desktop and mobile apps are available to make our lives more productive and easier. The phrase “work smarter, not harder” is even backed by [science](http://www.acsh.org/news/2016/08/12/work-smarter-not-harder-is-backed-by-science)!
 

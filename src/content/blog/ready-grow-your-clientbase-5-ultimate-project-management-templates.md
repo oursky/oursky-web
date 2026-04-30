@@ -11,7 +11,7 @@ draft: false
 webflowId: "67994c47ce187ddae853f956"
 ---
 
-![](/images/blogs/ee435c414e_67994c1f974cebaa3edf83e6_oursky-blog-img-220916-720x378.png)
+![](/images/blogs/ee435c414e_67994c1f974cebaa3edf83e6_oursky-blog-img-220916-720x378.webp)
 
 Just wrapped up your latest contract and swamped with potential clients? Do you want them, but not sure if you can take the extra load? We currently have 13 active projects and 18 open products. We’d love to share with you how we do project management.
 
@@ -77,7 +77,7 @@ Spreadsheets just make great trackers. For simple and semi-frequent status updat
 
 This standup template is for transparency so that the entire company can see when various project meetings are. Even if you don’t need this template because your team is quite small, we strongly advise that your company has a standup meeting to recap on **learnings**, **bottlenecks**, and **that day’s task list**.
 
-![Oursky Cats ](/images/blogs/f2d84714dd_67994c1f4b27ce75c99c4430_12696943_808199069309898_3422714549946103529_o.jpeg)
+![Oursky Cats ](/images/blogs/f2d84714dd_67994c1f4b27ce75c99c4430_12696943_808199069309898_3422714549946103529_o.webp)
 
 The world awaits!
 

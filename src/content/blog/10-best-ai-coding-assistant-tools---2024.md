@@ -7,7 +7,7 @@ categories:
   - "machine-learning-and-ai"
   - "development"
 displayCategory: "AI and Machine Learning"
-image: "/images/blogs/b951f9150c_66e3fc0e1ff91c70fd6eafbe_deep-learning-ai-empowering-businesses-with-intel-2023-11-27-04-58-50-utc.jpg"
+image: "/images/blogs/b951f9150c_66e3fc0e1ff91c70fd6eafbe_deep-learning-ai-empowering-businesses-with-intel-2023-11-27-04-58-50-utc.webp"
 featured: 2
 draft: false
 webflowId: "66e4042ae799660d2f11aa3e"
@@ -65,7 +65,7 @@ For this guide, we’ve selected the best AI coding assistants: GitHub Copilot, 
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/56a03148b8_66e40a1b4a241b976666c442_66e405ebc0a5b5e6dac6864d_hero%20copy.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/56a03148b8_66e40a1b4a241b976666c442_66e405ebc0a5b5e6dac6864d_hero%20copy.webp)
 
 Github Copilot
 
@@ -94,7 +94,7 @@ GitHub Copilot is rapidly becoming the AI code completion tool of choice for dev
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/b1e5506bbe_66e40a1b4a241b976666c424_66e4064263e121da9c7b91c0_09_1200_562_20MB_20FR_128C_Low.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/b1e5506bbe_66e40a1b4a241b976666c424_66e4064263e121da9c7b91c0_09_1200_562_20MB_20FR_128C_Low.webp)
 
 Tabnine UI
 
@@ -121,7 +121,7 @@ Tabnine is the perfect AI assistant for teams that prioritize control over their
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/7bd297c2ac_66e40a1b4a241b976666c428_66e406d346e48580f18b0f28_123.jpeg)
+![\_\_wf\_reserved\_inherit](/images/blogs/7bd297c2ac_66e40a1b4a241b976666c428_66e406d346e48580f18b0f28_123.webp)
 
 Amazon CodeWhisperer UI
 
@@ -167,7 +167,7 @@ Replit AI is accessible for free with a Replit account, with enhanced features l
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/0c3d73b4ef_66e40a1b4a241b976666c445_66e40766b1d8eda611d94045_image-002.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/0c3d73b4ef_66e40a1b4a241b976666c445_66e40766b1d8eda611d94045_image-002.webp)
 
 Cody UI
 
@@ -233,7 +233,7 @@ The Auto-Debug feature suggests fixes directly in the terminal window, while qui
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/1c601ce8c5_66e40a1b4a241b976666c43f_66e408b0ceea8855413c6352_gemini-intro-poster.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/1c601ce8c5_66e40a1b4a241b976666c43f_66e408b0ceea8855413c6352_gemini-intro-poster.webp)
 
 Gemini in Android Studio
 
@@ -273,7 +273,7 @@ The tool simplifies obtaining real-time data insights, allowing users to run AI-
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/22d459afa1_66e40a1b4a241b976666c44c_66e40915fcf6addb4200d51b_illustration-ui-spot-snyk-deepcode-fix-sql-injection.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/22d459afa1_66e40a1b4a241b976666c44c_66e40915fcf6addb4200d51b_illustration-ui-spot-snyk-deepcode-fix-sql-injection.webp)
 
 DeepCode AI in Snyk
 

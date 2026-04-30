@@ -6,7 +6,7 @@ author: "Dennis Tam"
 categories:
   - "culture"
 displayCategory: "Engineering Culture"
-image: "/images/blogs/e65a41e7d7_67994a75be65ccad3d12f0f0_Photo-.jpg"
+image: "/images/blogs/e65a41e7d7_67994a75be65ccad3d12f0f0_Photo-.webp"
 draft: false
 webflowId: "67994ad223af1a9d6bcd38f2"
 ---

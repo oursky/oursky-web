@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "engineering"
 displayCategory: "Engineering"
-image: "/images/blogs/27b35fae14_679956287edf02e003e39819_chuttersnap-9cCeS9Sg6nU-unsplash-scaled.jpg"
+image: "/images/blogs/27b35fae14_679956287edf02e003e39819_chuttersnap-9cCeS9Sg6nU-unsplash-scaled.webp"
 draft: false
 webflowId: "6799564209f41a233c7f3a8c"
 ---
@@ -15,7 +15,7 @@ Whether a startup or an enterprise, businesses may not be able to predict how lu
 
 That’s the gist of Netflix’s story. What started out as a fledgling subscription-based DVD provider 20 years ago evolved into a tech-driven company that revolutionized online media streaming. But Netflix is also more than just a media service provider — it’s also considered a role model for cloud computing and microservices.
 
-![](/images/blogs/b63b230b4a_67995620458240f81799ab15_chuttersnap-9cCeS9Sg6nU-unsplash-1160x773.jpeg)
+![](/images/blogs/b63b230b4a_67995620458240f81799ab15_chuttersnap-9cCeS9Sg6nU-unsplash-1160x773.webp)
 
 Photo by [chuttersnap](https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

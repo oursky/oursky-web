@@ -7,7 +7,7 @@ categories:
   - "ui-design"
   - "development"
 displayCategory: "GUIDES FOR OUTSOURCING"
-image: "/images/blogs/59c10773fe_658006431e8318870c77ab3c_Outsourcing.jpeg"
+image: "/images/blogs/59c10773fe_658006431e8318870c77ab3c_Outsourcing.webp"
 featured: 3
 draft: false
 webflowId: "6580064e62633c1f4fb330ec"

@@ -6,12 +6,12 @@ author: "Joyz Ng"
 categories:
   - "qa"
 displayCategory: "Software Testing"
-image: "/images/blogs/77f78aa7c3_67994153dda2651f69e72a2c_Oursky-9365.jpg"
+image: "/images/blogs/77f78aa7c3_67994153dda2651f69e72a2c_Oursky-9365.webp"
 draft: false
 webflowId: "6799418fd64c3ca1edcb1f61"
 ---
 
-![carmen female developer](/images/blogs/7aca75e9e9_679941668a6ab8453f3f8e9c_Oursky-9365.jpeg)
+![carmen female developer](/images/blogs/7aca75e9e9_679941668a6ab8453f3f8e9c_Oursky-9365.webp)
 
 The QA team leads bug catching, but manual testing is not scalable when your company takes on more projects. Since my company sends builds every two weeks, the QA team wants to test every build before we pass them to our clients.
 
@@ -96,7 +96,7 @@ Then let’s start the headless Chrome. Some options are required to pass to the
 
 Now the browser is already opened in the container, but we cannot see it. Let’s try to go to this website and check the inner text of the top right button.
 
-![headless chrome driver](/images/blogs/c9c4f8bc86_67994166532500bb2ca85739_1_D7jYr0G-UJTQv6OSzDx32w.png)
+![headless chrome driver](/images/blogs/c9c4f8bc86_67994166532500bb2ca85739_1_D7jYr0G-UJTQv6OSzDx32w.webp)
 
 Testing Oursky’s website
 
@@ -132,6 +132,6 @@ You may find the [GitHub repository of the docker image](https://github.com/joyz
 
 Also take a look at the full [Python Selenium script example](https://github.com/joyzoursky/selenium-template), so you can customize it into your own test.
 
-![Automated website tests oursky](/images/blogs/85eff39e76_679941666ea876501804bd0b_1_t4Upcp610WTzRnkNRXb6qQ.png)
+![Automated website tests oursky](/images/blogs/85eff39e76_679941666ea876501804bd0b_1_t4Upcp610WTzRnkNRXb6qQ.webp)
 
 ‍

@@ -6,7 +6,7 @@ author: "Sam Elsley"
 categories:
   - "ui-design"
 displayCategory: "UX/UI Design"
-image: "/images/blogs/ba04421287_6799579924471ad9df7825ab_halacious-tZc3vjPCk-Q-unsplash-scaled.jpg"
+image: "/images/blogs/ba04421287_6799579924471ad9df7825ab_halacious-tZc3vjPCk-Q-unsplash-scaled.webp"
 draft: false
 webflowId: "679957b1737fb78978284b83"
 ---
@@ -75,15 +75,15 @@ A sample wireframe for our award-winning iOS music app, [Jamn PLAYER](https://ww
 
 A [low-fidelity wireframe](https://blog.oursky.com/2018/03/27/checkcheckcin-ios-app/) we created for one of our apps, [CheckCheckCin](https://www.oursky.com/cases/checkcheckcin/)
 
-![](/images/blogs/a003167f88_67995791dc7b3366510d9482_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
+![](/images/blogs/a003167f88_67995791dc7b3366510d9482_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.webp)
 
 A wireframe we drew by hand for one of our [cloud-based, open-source tool](https://www.oursky.com/microservices/)
 
-![](/images/blogs/8fae8887b6_67995791aaae6351616d060a_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
+![](/images/blogs/8fae8887b6_67995791aaae6351616d060a_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.webp)
 
 A [basic wireframe template](https://blog.oursky.com/2016/09/06/oursky-website-design-transparency/) we made using Adobe Illustrator
 
-![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
+![](/images/blogs/e7ca2146b1_66e30622f085a56f78bd4e49_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.webp)
 
 A wireframe example we did using Sketch and Invision, visualizing the app’s ‘find friends,’ user profile, livestreaming, and user setting features
 
@@ -91,7 +91,7 @@ A wireframe example we did using Sketch and Invision, visualizing the app’s �
 
 A sample wireframe visualizing the app’s geolocation features
 
-![](/images/blogs/feb8c3f5c9_67995791d78eb40361ab28a9_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.png)
+![](/images/blogs/feb8c3f5c9_67995791d78eb40361ab28a9_communicating-your-mobile-app-ideas-some-wireframe-examples-and-why-startups-need-one-to-win-cl.webp)
 
 Difference between wireframe, mockup, and prototype
 

@@ -6,7 +6,7 @@ author: "May Yeung"
 categories:
   - "product-management"
 displayCategory: "PRODUCT MANAGEMENT"
-image: "/images/blogs/28d38f8ec8_66e30f6057508ab9c8a154e7_guille-b-cbuBpUx1_eI-unsplash.jpg"
+image: "/images/blogs/28d38f8ec8_66e30f6057508ab9c8a154e7_guille-b-cbuBpUx1_eI-unsplash.webp"
 draft: false
 webflowId: "66e30f7fa668c7a426bbc163"
 ---
@@ -15,7 +15,7 @@ Managing software projects is no easy task. In this post, we will share what our
 
 ## Estimate effectively so everyone can expect the roadmap and their workload
 
-![Project Manager Estimation Sheet](/images/blogs/de627e3cd0_66e30f2f6474ba6414595888_Oursky_Estimation.png)
+![Project Manager Estimation Sheet](/images/blogs/de627e3cd0_66e30f2f6474ba6414595888_Oursky_Estimation.webp)
 
 PROJECT MANAGER ESTIMATION SHEET
 

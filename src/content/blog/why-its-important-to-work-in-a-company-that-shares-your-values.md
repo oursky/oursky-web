@@ -6,7 +6,7 @@ author: "Varya Nekhina"
 categories:
   - "culture"
 displayCategory: "Culture"
-image: "/images/blogs/7e7a0c8872_679954e43f749d90525dd5ad_photo-1496115965489-21be7e6e59a0-e1587582578824.jpg"
+image: "/images/blogs/7e7a0c8872_679954e43f749d90525dd5ad_photo-1496115965489-21be7e6e59a0-e1587582578824.webp"
 draft: false
 webflowId: "679954f523af1a9d6bd7cfbe"
 ---
@@ -29,7 +29,7 @@ _But things were not what they seemed. The environment wasn’t conducive to cre
 
 _It came to blows when I was unjustly reprimanded for my appearance and ultimately had a conversation with HR about what was going on and what I was feeling. I understand that all companies have problems and emotions can run high in certain situations. When this happens, the most important part is how they are handled. The company responded to the gender discrimination I raised by starting an “investigation”. HR talked to my bosses and asked them to be kinder to me. Instead, they stopped talking to me. To say that I was shocked was an understatement. The whole package of problems was still there, only without the shouting. The professional ‘ghosting’ was bewildering. In the end, it was easier to get rid of the person who called them out._
 
-![](/images/blogs/dc82b6f9f9_679954db223c893cb17f1958_hannah-busing-Zyx1bK9mqmA-unsplash-1160x773.jpeg)
+![](/images/blogs/dc82b6f9f9_679954db223c893cb17f1958_hannah-busing-Zyx1bK9mqmA-unsplash-1160x773.webp)
 
 Photo by [Hannah Busing](https://unsplash.com/@hannahbusing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

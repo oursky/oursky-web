@@ -6,7 +6,7 @@ author: "May Yeung"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "AI and Machine Learning"
-image: "/images/blogs/62ba1c70d2_66e31a125f7a4f3b93322003_pexels-cristian-dina-1851415-scaled.jpg"
+image: "/images/blogs/62ba1c70d2_66e31a125f7a4f3b93322003_pexels-cristian-dina-1851415-scaled.webp"
 draft: false
 webflowId: "66e31a727d296e49b395ff21"
 ---
@@ -18,7 +18,7 @@ For this guide, we’ll walk you through the following:
 *   What you need to prepare before building one
 *   The costs involved in creating and implementing an AI recommendation engine
 
-![](/images/blogs/ccada0a4d9_66e31a44917176679596b0bd_pexels-cristian-dina-1851415-1160x773.jpeg)
+![](/images/blogs/ccada0a4d9_66e31a44917176679596b0bd_pexels-cristian-dina-1851415-1160x773.webp)
 
 PHOTO BY [**CRISTIAN DINA**](https://www.pexels.com/@cristian-dina-924373?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) FROM [**PEXELS**](https://www.pexels.com/photo/white-smartphone-1851415/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
@@ -40,7 +40,7 @@ There are different types of recommender systems, each of which using various te
 
 AN OVERVIEW OF THE DIFFERENT KINDS OF RECOMMENDATION SYSTEMS
 
-![](/images/blogs/6fc83f2c18_66e31a45c8cfac8c33ea97c6_ai-for-business-reco-2-e1600925303457-1160x728.png)
+![](/images/blogs/6fc83f2c18_66e31a45c8cfac8c33ea97c6_ai-for-business-reco-2-e1600925303457-1160x728.webp)
 
 A MORE DETAILED VISUALIZATION OF THE DIFFERENT KINDS OF RECOMMENDATION SYSTEM
 

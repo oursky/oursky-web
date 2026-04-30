@@ -11,7 +11,7 @@ draft: false
 webflowId: "679947bfa40b4f0f1fa6f6d5"
 ---
 
-![Alpha House and House of Cards](/images/blogs/6216aa409e_679947a7be45937c15d5fe5f_two_dramas.png)
+![Alpha House and House of Cards](/images/blogs/6216aa409e_679947a7be45937c15d5fe5f_two_dramas.webp)
 
 House of Cards vs Alpha House
 

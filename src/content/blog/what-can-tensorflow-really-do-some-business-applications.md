@@ -89,7 +89,7 @@ The benefits of starting early with AI/ML is that early adopters will have large
 
 ### Sequence-to-Sequence models and human language
 
-![sequence to sequence language](/images/blogs/186583028e_6799524c3d41623f5f3d6206_tenorflow_cantonese_mini_english_Final.007.jpeg)
+![sequence to sequence language](/images/blogs/186583028e_6799524c3d41623f5f3d6206_tenorflow_cantonese_mini_english_Final.007.webp)
 
 Implementing TensorFlow’s Sequence-to-Sequence framework for chatbot conversation.
 
@@ -97,7 +97,7 @@ Sequence-to-Sequence (Seq2Seq) models use [recurrent neural networks](https://ww
 
 One interesting point is that we just need to feed in a raw word sequence and we can get back a word sequence output with mostly correct grammar (not perfect, but at least understandable). This means that seq2seq models can learn the language model from the training sample and implicitly learn it during training, which usually is not the case in traditional NLP where the language model needs to be explicitly taught.
 
-![artificial intelligence chatbot](/images/blogs/a11434e126_6799524cff9dc23d3b01c890_tenorflow_cantonese_mini_english_Final.015.jpeg)
+![artificial intelligence chatbot](/images/blogs/a11434e126_6799524cff9dc23d3b01c890_tenorflow_cantonese_mini_english_Final.015.webp)
 
 Oursky trained a [Cantonese chatbot](https://www.facebook.com/oursky.hk/posts/10155107424981485) from scratch using local forum data.
 

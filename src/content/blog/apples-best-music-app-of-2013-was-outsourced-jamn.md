@@ -8,7 +8,7 @@ categories:
   - "ui-design"
   - "product-management"
 displayCategory: "PRODUCT MANAGEMENT"
-image: "/images/blogs/e588131e12_65800df8928395bb9d852509_Jamn.png"
+image: "/images/blogs/e588131e12_65800df8928395bb9d852509_Jamn.webp"
 draft: false
 webflowId: "65800dfc62633c1f4fb7c50a"
 ---
@@ -17,7 +17,7 @@ webflowId: "65800dfc62633c1f4fb7c50a"
 
 Are in-house apps always better than outsourced apps? _No_. Jamn, the musician’s multi-tool, selected as one of Apple’s Best of 2013 Apps in Europe and the Americas, was an outsourcing success at Oursky. In this post, we will share how we built this award-winning app using an MVP, fast iterations and proactive engagement with our client, MiQ Limited.
 
-![Screenshots of today's Jamn (outsourcing your app project)](/images/blogs/ceb50b664f_66e15d29203634060f3b1c8d_Screen-Shot-2016-03-24-at-6.12.15-PM-1024x421.png)
+![Screenshots of today's Jamn (outsourcing your app project)](/images/blogs/ceb50b664f_66e15d29203634060f3b1c8d_Screen-Shot-2016-03-24-at-6.12.15-PM-1024x421.webp)
 
 SCREENSHOTS OF TODAY’S JAMN
 
@@ -57,7 +57,7 @@ Of course, there are the business aspects such as setting expectations, providin
 
 For product development, a man-day based contract is always superior to fixed scope project, so that changes between iterations can be easier. In addition, both sides can decide the priorities between speed, quality of code and fixing technical debt. This becomes important for future handing off.
 
-![Today's Jamn with an interface illustrating how to play a chord ](/images/blogs/3ace5ce208_66e15d26d9a72009f88eadf1_Jamn-blog-02-1024x648.png)
+![Today's Jamn with an interface illustrating how to play a chord ](/images/blogs/3ace5ce208_66e15d26d9a72009f88eadf1_Jamn-blog-02-1024x648.webp)
 
 TODAY’S JAMN WITH AN INTERFACE ILLUSTRATING HOW TO PLAY A CHORD
 

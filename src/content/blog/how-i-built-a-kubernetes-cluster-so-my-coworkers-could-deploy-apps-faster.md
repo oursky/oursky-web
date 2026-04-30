@@ -6,7 +6,7 @@ author: "CHEUNGPAT"
 categories:
   - "engineering"
 displayCategory: "Devops"
-image: "/images/blogs/13afc501ec_67993f238bd1b37b3ce9ed94_1tTK6pwJc63dSpVzGImKEvQ.png"
+image: "/images/blogs/13afc501ec_67993f238bd1b37b3ce9ed94_1tTK6pwJc63dSpVzGImKEvQ.webp"
 draft: false
 webflowId: "67993f663451eeb69b95372b"
 ---

@@ -11,7 +11,7 @@ draft: false
 webflowId: "67994b37299fa013c65fba56"
 ---
 
-![5 Front-End Design Essentials for Developers](/images/blogs/86c49dcae4_67994b1496dda19f1d1a85b6_pablo-24-1-720x360.png)
+![5 Front-End Design Essentials for Developers](/images/blogs/86c49dcae4_67994b1496dda19f1d1a85b6_pablo-24-1-720x360.webp)
 
 I went from a part-time designer in a local Hong Kong tech company to one of its partners. Before I joined full-time, I taught myself CSS when I worked as a web designer for a number of agencies and clients. Since joining this company 6 years ago, I’ve been involved with 50+ projects (including in-house ones), including Apple’s Best New App 2016.
 
@@ -73,7 +73,7 @@ The typography of your site is the first sense of “voice” your visitor will 
 
 ## Images
 
-![Buffer Pablo Twitter Facebook Headers](/images/blogs/7f95a24849_67994b14be2d1859c05c81a9_Screen-Shot-2016-08-15-at-5.33.44-PM.png)
+![Buffer Pablo Twitter Facebook Headers](/images/blogs/7f95a24849_67994b14be2d1859c05c81a9_Screen-Shot-2016-08-15-at-5.33.44-PM.webp)
 
 Know your screen dimensions across platforms. Image courtesy of [Buffer Pablo](https://pablo.buffer.com/app#).
 

@@ -6,12 +6,12 @@ author: "May Yeung"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "Artificial Intelligence"
-image: "/images/blogs/aefff61a50_67993e1aff94522de78c74ef_binary-1536651_1920.jpg"
+image: "/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.webp"
 draft: false
 webflowId: "67993e72f22c56cca5a9be9f"
 ---
 
-![pixabay ai tensorflow post](/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.jpeg)
+![pixabay ai tensorflow post](/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.webp)
 
 In this post, we are documenting how we used Google’s [TensorFlow](https://www.tensorflow.org/) to build this image recognition engine. We’ve used [Inception](https://github.com/tensorflow/models/tree/master/inception) to process the images and then train an [SVM classifier](https://en.wikipedia.org/wiki/Support_vector_machine) to recognise the object. Our aim is to build a system that helps a user with a zip puller to find a matching puller in the database. This piece will also cover how the Inception network sees the input images and assess how well the extracted features can be classified.  
 
@@ -45,7 +45,7 @@ The common structure of a CNN for image classification has two main parts: 1) a 
 
 The feature that feeds into the last classification layer is also called the bottleneck feature. The following image shows the structure of TensorFlow’s Inception network we are going to use. We have indicated the part of the network that we are getting the output from as our input feature.
 
-![inceptionv3](/images/blogs/0963447f14_67993e2e349163223abe40d9_inceptionv3.png)
+![inceptionv3](/images/blogs/0963447f14_67993e2e349163223abe40d9_inceptionv3.webp)
 
 TensorFlow Inception Model that indicating the bottlenecks feature
 
@@ -67,25 +67,25 @@ This is an input image.
 
 All the 32 149×149 images at stage A:
 
-![Output image at stage A](/images/blogs/fe636ba593_67993e2e5a814b5f21b2f4a2_conv.png)
+![Output image at stage A](/images/blogs/fe636ba593_67993e2e5a814b5f21b2f4a2_conv.webp)
 
 Inception Output image at Stage A
 
 All the 32 147×147 images at stage B:
 
-![Output image at stage B](/images/blogs/7ea0fa8bf7_67993e2e2ad51c2aa8cec602_conv2.png)
+![Output image at stage B](/images/blogs/7ea0fa8bf7_67993e2e2ad51c2aa8cec602_conv2.webp)
 
 Inception Output image at Stage B
 
 All the 288 35×35 images at stage C:
 
-![Output image at stage C](/images/blogs/5336cfc18d_67993e2edda2651f69e38580_mixed_2.png)
+![Output image at stage C](/images/blogs/5336cfc18d_67993e2edda2651f69e38580_mixed_2.webp)
 
 Inception Output image at stage C
 
 All the 768 17×17 images at stage D:
 
-![Output image at stage D](/images/blogs/3e4008a078_67993e2ef42206b546de5567_mixed_7.png)
+![Output image at stage D](/images/blogs/3e4008a078_67993e2ef42206b546de5567_mixed_7.webp)
 
 Inception Output image at stage D
 
@@ -375,7 +375,7 @@ The following is the training result we get, which got a perfect result! Though 
 
 We’ve used it to built an mobile app and a web front-end for the puller classifier for field testings.
 
-![Puller Matcher screenshot](/images/blogs/c359a1b825_67993e2e4025518652ad6fba_puller-matcher-1024x734.jpeg)
+![Puller Matcher screenshot](/images/blogs/c359a1b825_67993e2e4025518652ad6fba_puller-matcher-1024x734.webp)
 
 Puller Matcher screenshot
 

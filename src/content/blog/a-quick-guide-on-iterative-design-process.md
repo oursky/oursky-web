@@ -48,7 +48,7 @@ Our UI/UX design process may begin analogue because we have rooms and whiteboard
 
 ## What is a wireframe?
 
-![ui ux design wireframe ](/images/blogs/c4e8a8f44e_66e3189377dbcf3ca9e5631d_1_zNIsV2X6rPx71X78h99iIw.png)
+![ui ux design wireframe ](/images/blogs/c4e8a8f44e_66e3189377dbcf3ca9e5631d_1_zNIsV2X6rPx71X78h99iIw.webp)
 
 Wireframe examples
 
@@ -90,7 +90,7 @@ The devil is in the details. There are many [free UI elements kits](http://www.w
 
 ## Creating an App Mockup
 
-![hong kong ui ux design agency](/images/blogs/8b16012dc3_66e31894b561d6293b6a3c64_1_Cj5_Ck-s9pNBASZwGNpmMA.jpeg)
+![hong kong ui ux design agency](/images/blogs/8b16012dc3_66e31894b561d6293b6a3c64_1_Cj5_Ck-s9pNBASZwGNpmMA.webp)
 
 A  sample app mockup for one of our iOS projects
 
@@ -115,7 +115,7 @@ Prototyping also helps entrepreneurs, startup founders, or business executives d
 
 ## Kick-Off Meeting to Start the App Development Process
 
-![style guide design specifications ui ux design hong kong](/images/blogs/e58e801e45_66e31893e58ec86de18f1c43_sans-sugar-ui-mockup.png)
+![style guide design specifications ui ux design hong kong](/images/blogs/e58e801e45_66e31893e58ec86de18f1c43_sans-sugar-ui-mockup.webp)
 
 Screenshots from our [side project](https://blog.oursky.com/2017/12/11/mvp-ui-design-mockups-sans-sugar/), [Sans Sugar](https://blog.oursky.com/2017/11/24/minimum-viable-product-iphone-x-ui-wireframe/); design specifications and style guide were the final deliverables
 

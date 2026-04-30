@@ -39,7 +39,7 @@ We also assume that a reader already has an idea of the problem they want to sol
 **Being a Good Product Owner**  
 Understanding your role as a product owner will help you communicate with agencies. As the product owner, you will often be the key contact point between your team or company and the agency. Having a clear product vision is important to kick-starting the project and also evaluating the agencies you are in discussions with. Whether you are a solo entrepreneur or working for a corporation, knowing some of the factors below will help you frame your project to start discussions and managge expectations.
 
-![how to be a good product owner](/images/blogs/9fe581e48d_66e15cc2f2b29457af4f03d9_Newsletter_JUN2018_210618-4.jpeg)
+![how to be a good product owner](/images/blogs/9fe581e48d_66e15cc2f2b29457af4f03d9_Newsletter_JUN2018_210618-4.webp)
 
 ## Framing your Project
 
@@ -55,7 +55,7 @@ These projects are focused on product scope to estimate a timeline going forward
 
 ### Overview of Building an Idea into a Final Product
 
-![](/images/blogs/e6434e35ef_66e15cc27a5a3af9f8752a25_development-cycle.001.jpeg)
+![](/images/blogs/e6434e35ef_66e15cc27a5a3af9f8752a25_development-cycle.001.webp)
 
 When contacting a software development agency, it is important to be clear on where you are in the software development process to choose the right potential partner. Below is an outline of steps:
 
@@ -91,7 +91,7 @@ Choosing which types of agencies to approach can help you focus your search effo
 
 **Location: Local vs Overseas vs Hybrid**  
 
-![overseas hybrid local dev shops](/images/blogs/a6358fa606_66e15cc2db56b5a9121c3909_location.001.jpeg)
+![overseas hybrid local dev shops](/images/blogs/a6358fa606_66e15cc2db56b5a9121c3909_location.001.webp)
 
 Location matters because it impacts your work flow. For example, how do you typically communicate with service providers? Do you prefer face to face or is video conferencing fine? Are you willing to use the agency’s tools or do you need them to match yours? Do you need frequent meetings to work closely together and fine tune the prototype based on feedback or are you certain of your product and would prefer regular reports? Below is an overview of the location considerations:
 
@@ -106,7 +106,7 @@ Hybrid companies try to offer the best of both worlds, with project managers and
 
 **Types of Companies**  
 
-![understanding types of software agencies](/images/blogs/6e2a398ddb_66e15cc3c356358755328895_Agency-Types.001.jpeg)
+![understanding types of software agencies](/images/blogs/6e2a398ddb_66e15cc3c356358755328895_Agency-Types.001.webp)
 
 The types of agencies to work with depends on the type of product you are developing. Though many agencies are versatile, they will also have specializations. Below, we will outline the types of software agencies and what they are suited for:
 
@@ -159,7 +159,7 @@ Agencies often receive inbound inquiries that start with a request for a quote e
 
 ## Maximizing Meetings to Get Comparable Answers
 
-![questions to ask developers and designers](/images/blogs/60ec125e11_66e15cc33513789738d6e103_Newsletter_JUN2018_210618-3.jpeg)
+![questions to ask developers and designers](/images/blogs/60ec125e11_66e15cc33513789738d6e103_Newsletter_JUN2018_210618-3.webp)
 
 We assume that project managers will be getting quotes from at least a few agencies. After the initial inquiry and response with a ballpark figure, a project manager to understand why the prices and the formatting of quotes can differ to compare agencies. In follow-up meetings, you can prepare questions to standardize the information you are getting from agencies to make an informed decision about what is included in the prices and how an agency works.
 
@@ -273,7 +273,7 @@ As a product owner, consider which trade offs you are willing to make both for t
 
 ### Considering Pricing Models: Fixed-Cost or Estimations?
 
-![software agency pricing models fixed cost hourly](/images/blogs/46096967f4_66e15cc3639441668e402cde_Newsletter_JUN2018_210618-5.jpeg)
+![software agency pricing models fixed cost hourly](/images/blogs/46096967f4_66e15cc3639441668e402cde_Newsletter_JUN2018_210618-5.webp)
 
 Some vendors can propose a fixed-cost pricing rather than a ballpark or estimation. The estimation approach implies a vendor’s business model. Some companies will charge less for development upfront, allowing for a fixed-cost model, but make revenue on the hosting or post-launch maintenance if you are using their services and they keep the code base. Agencies may also be able to do a fixed cost because they are using pre-existing template apps and can make minor customizations. Using template apps that do not fit the project requirements will run the risk of poor quality software.
 

@@ -6,7 +6,7 @@ author: "May Yeung"
 categories:
   - "machine-learning-and-ai"
 displayCategory: "Machine Learning and AI"
-image: "/images/blogs/14bf3cd11e_679955367f3630483834515f_AI_cost_data_needed_for_development.jpeg"
+image: "/images/blogs/14bf3cd11e_679955367f3630483834515f_AI_cost_data_needed_for_development.webp"
 draft: false
 webflowId: "679955483fc1f3f920659a5c"
 ---
@@ -21,7 +21,7 @@ Here, we demystify and answer frequently asked questions about AI’s applicatio
 
 AI is the umbrella term of technologies for training machines to mimic human intelligence and behavior. This includes, but is not limited to, cognitive processing, language recognition, planning, reasoning, problem solving, and task execution. ML is the application of AI that involves feeding data to algorithms. These are then used by machines or systems to learn how to execute a task and identify patterns. You may have also heard of deep learning (DL) — a subset of ML that involves learning and extracting patterns, representations, or abstractions from data.
 
-![](/images/blogs/8b43d00fb6_6799550baaa47ef20a31cc53_ai-vs-ml-vs-dl-800x847.png)
+![](/images/blogs/8b43d00fb6_6799550baaa47ef20a31cc53_ai-vs-ml-vs-dl-800x847.webp)
 
 Artificial intelligence vs. machine learning vs. deep learning
 
@@ -53,7 +53,7 @@ Some use pre-trained ML models or pre-built/off-the-shelf AI tools as a starting
 
 You can also build your own model from scratch. Customized models are ideal for unique business needs, such as a recommendation engine or prediction engines. This is useful for businesses who want to personalize customer experiences by suggesting and providing them relevant content or product, like how Netflix, Amazon, and [Starbucks](https://www.forbes.com/sites/bernardmarr/2018/05/28/starbucks-using-big-data-analytics-and-artificial-intelligence-to-boost-performance/#6628c73065cd) do. Bespoke models can also be used to gain insights and forecast outcomes. The ING Bank, for instance, [augments](https://www.forbes.com/sites/cognitiveworld/2019/08/20/ing-brings-ai-into-trading-with-project-katana/#33ab438a9bb3) their business intelligence capabilities with AI to help bonds traders with pricing decisions. Google Cloud, Amazon Web Services (AWS), and Microsoft’s Azure have their own AI platforms for developing custom models.
 
-![\_\_wf\_reserved\_inherit](/images/blogs/ccfc81f1fb_679955473fc1f3f920659973_6799552a39e78e0a9ad8ab10_SCR-20250128-tdge.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/ccfc81f1fb_679955473fc1f3f920659973_6799552a39e78e0a9ad8ab10_SCR-20250128-tdge.webp)
 
 ‍
 
@@ -87,7 +87,7 @@ Obviously, it will take more significant time if you’re deploying an AI that w
 
 If you are pitching an AI project for your stakeholders, it’s also recommended to set their expectations. In fact, the time it took for surveyed companies to deploy an ML model averaged between [31 and 90 days](https://info.algorithmia.com/hubfs/2019/Whitepapers/The-State-of-Enterprise-ML-2020/Algorithmia_2020_State_of_Enterprise_ML.pdf). Larger businesses and enterprises tend to take more time deploying an ML model, although this doesn’t only have to do with company size, but also with their [readiness and maturity to adopt AI](https://www.idc.com/getdoc.jsp?containerId=prUS45344519).
 
-![](/images/blogs/d755625f39_6799550bea656d6e391bbd30_robynne-hu-HOrhCnQsxnQ-unsplash-1160x774.jpeg)
+![](/images/blogs/d755625f39_6799550bea656d6e391bbd30_robynne-hu-HOrhCnQsxnQ-unsplash-1160x774.webp)
 
 Photo by [Robynne Hu](https://unsplash.com/@robynnexy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

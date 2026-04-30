@@ -45,7 +45,7 @@ Us founders and early team members developed many of our best practices in [proj
 
 ## Realizing our PM expectations were unrealistic.
 
-![](/images/blogs/6aae79e296_66e314e80f61c080a2762696_christian-joudrey-242922.jpeg)
+![](/images/blogs/6aae79e296_66e314e80f61c080a2762696_christian-joudrey-242922.webp)
 
 PHOTO BY CHRISTIAN JOUDREY ON UNSPLASH
 
@@ -53,7 +53,7 @@ As a small tech company in Hong Kong, we are challenged to find candidates who f
 
 ## We created a PM learning ladder.
 
-![](/images/blogs/44fa6cba08_66e314e877f83643f66cfb3f_fernando-reyes-241704.jpeg)
+![](/images/blogs/44fa6cba08_66e314e877f83643f66cfb3f_fernando-reyes-241704.webp)
 
 PHOTO BY FERNANDO REYES ON UNSPLASH
 
@@ -94,7 +94,7 @@ As our project managers become more experienced, their understanding and ability
 *   The senior PM is expected to take fewer projects that involve direct control and take up an overseeing role at Oursky to make sure different projects are up to standard.
 *   Helps resolve escalated problems from other project managers, and then coordinate different resources to resolve the problems.
 
-![development PM](/images/blogs/ee477bf6b9_66e314e9693b92c01255d9e1_Screen-Shot-2017-06-12-at-3.06.36-PM.png)
+![development PM](/images/blogs/ee477bf6b9_66e314e9693b92c01255d9e1_Screen-Shot-2017-06-12-at-3.06.36-PM.webp)
 
 OURSKY’S WAFFLE PROJECT MANAGEMENT FOR SKYGEAR.IO
 

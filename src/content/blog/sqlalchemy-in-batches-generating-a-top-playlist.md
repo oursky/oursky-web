@@ -6,7 +6,7 @@ author: "Kenji Pa"
 categories:
   - "code"
 displayCategory: "Code"
-image: "/images/blogs/a9703ec3a5_679925b5208e42e86abdef04_IMG_3332.png"
+image: "/images/blogs/a9703ec3a5_679925b5208e42e86abdef04_IMG_3332.webp"
 draft: false
 webflowId: "679925bb62f31298ce7515fe"
 ---
@@ -21,7 +21,7 @@ We built a popular iOS application with a song recommendation system at the back
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/1887895a88_679926cc6d380fa2db7bb4aa_679925b5208e42e86abdef04_IMG_3332.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/1887895a88_679926cc6d380fa2db7bb4aa_679925b5208e42e86abdef04_IMG_3332.webp)
 
 Previously our editors hand-picked popular songs by download count and gather a new playlist as a recommendation to users. Now, we want to automate this process and generate the playlist weekly.
 

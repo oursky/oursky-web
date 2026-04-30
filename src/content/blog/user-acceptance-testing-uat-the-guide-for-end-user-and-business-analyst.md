@@ -32,7 +32,7 @@ Imagine that you are working on an e-commerce mobile app. Recently, the app has 
 
 Here is a simple format of Functional Test Cases:
 
-![](/images/blogs/52ee96f237_66e301c3b50949f894808d27_Screenshot-2023-03-01-at-3.25.43-PM-1160x421.png)
+![](/images/blogs/52ee96f237_66e301c3b50949f894808d27_Screenshot-2023-03-01-at-3.25.43-PM-1160x421.webp)
 
 ## Exploratory Testing
 
@@ -71,7 +71,7 @@ For example,
 
 The expected behaviours of these scenarios may not be fully stated in the functional requirements, but should also be addressed if they go against a good user experience.
 
-![](/images/blogs/20e63d860c_66e301c331363a07fbcf9c57_session-1160x773.jpeg)
+![](/images/blogs/20e63d860c_66e301c331363a07fbcf9c57_session-1160x773.webp)
 
 BE CREATIVE, AND TIMEBOX YOUR EXPLORATORY TEST SESSION.
 

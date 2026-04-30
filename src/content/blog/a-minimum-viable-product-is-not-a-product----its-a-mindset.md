@@ -6,7 +6,7 @@ author: "Ten Tang"
 categories:
   - "product-growth"
 displayCategory: "Growth"
-image: "/images/blogs/91a94d5083_6799597c7e076a22d075685b_leon-vbxyFxlgpjM-unsplash-1-scaled.jpg"
+image: "/images/blogs/91a94d5083_6799597c7e076a22d075685b_leon-vbxyFxlgpjM-unsplash-1-scaled.webp"
 draft: false
 webflowId: "679959967ca8e3d723c27024"
 ---
@@ -19,7 +19,7 @@ After spending more years working with them, it made me step back and reflect. A
 
 By sharing the lessons I’ve learned over the past years, I hope that they’ll help and inspire creators and entrepreneurs in bringing their ideas to life (while also making money!).
 
-![](/images/blogs/fb3458522f_6799597473409f4af6290197_leon-vbxyFxlgpjM-unsplash-1-1160x773.jpeg)
+![](/images/blogs/fb3458522f_6799597473409f4af6290197_leon-vbxyFxlgpjM-unsplash-1-1160x773.webp)
 
 Photo by [Leon](https://unsplash.com/@myleon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
@@ -35,7 +35,7 @@ Fast forward to several years and I began to better understand what the product 
 
 Working as a consultant in an [Agile team](https://blog.oursky.com/2020/06/18/app-development-101-terms-that-non-technical-startup-founders-should-know/), I’ve become accustomed to using a lot of tools to get things done. I switch between Microsoft Office and Google Docs. I use Slack, Discord, Zoom, and Google Meet to talk to teammates. I use Gmail and Outlook. I switch between Mailchimp, Sendgrid, and MailerLite to send marketing campaigns. See the pattern here?There are so many companies providing the same products and services. Case in point: In Europe alone, around 3,647 marketing technology (MarTech) solutions were [listed](https://www.martechalliance.com/stories/2021-european-martech-supergraphic) this March. That’s 66% more compared to last year. The MarTech software-as-a-service (SaaS) market is so crowded with similar tools, products, and services that compete with each other. Just look at the [supergraphic](https://chiefmartec.com/2020/04/marketing-technology-landscape-2020-martech-5000/) below! Navigating the SaaS market is like walking into busy streets full of people, buildings, tramlines, traffic lights, and moving vehicles.
 
-![](/images/blogs/87e46c7956_67995974aaa47ef20a368ca4_MarTech-Landscape-Marketing-Technology-Media-1160x653.png)
+![](/images/blogs/87e46c7956_67995974aaa47ef20a368ca4_MarTech-Landscape-Marketing-Technology-Media-1160x653.webp)
 
 MarTech Landscape in 2020  
 Image Source: [Marketing Technology Media, LLC](https://chiefmartec.com/2020/04/marketing-technology-landscape-2020-martech-5000/)
@@ -112,7 +112,7 @@ A common concern I found among founders is the cost involved in creating an MVP 
 
 There’s a lot of free and open-source tools that product owners and startup founders can use to kick-start their MVP or wireframes. You don’t have to spend a lot of money to create the earliest showable or testable product and reach out to customers. Even if you’re a business-oriented or nontechnical startup founder, you can take advantage of low- or no-code tools to get things going.I’ve even started recommending different tools to clients I work with. There’s Webflow for creating landing pages; Powtoon and Canva for product videos; and Ghost and WordPress for blogging. There’s Seedrs and Crowdcube for founders who are looking into startup funding and [crowdfunding options for their app](https://blog.oursky.com/2021/02/01/startup-funding-how-to-raise-money-and-where-to-find-app-investors-and-tech-angels/); and Figma and Balsamiq for creating [UI/UX designs and wireframes](https://blog.oursky.com/2020/11/03/a-quick-guide-on-iterative-design-process/). There’s even [Maze](https://maze.co/) that lets real people test your app!
 
-![](/images/blogs/c243358634_67995974d707bd5c8eb74434_sample-visualizations-of-user-personas-1160x593.png)
+![](/images/blogs/c243358634_67995974d707bd5c8eb74434_sample-visualizations-of-user-personas-1160x593.webp)
 
 _Sample visualizations of user personas  
 Source:_ [_Xtensio, Inc._](https://xtensio.com/)

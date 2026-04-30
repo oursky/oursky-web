@@ -19,7 +19,7 @@ As well-paid as it seems, you may not be so sure if you want to spend the next t
 
 I joined Oursky as part of the Chinese University of Hong Kong (CUHK)’s 2-month Global Internship Program. I spent my first and last week in [Oursky’s](http://oursky.com/) Hong Kong office and about 6 weeks in Oursky’s Taipei office. During my internship, one of my main job duties was to join one of the development teams working on an Android app that involved image recognition. I even presented about blockchain during one of our company sharing sessions. The two months were a good chance to take an early look into how life of a developer actually is before leaving school. It is quite different from what I had imagined before starting. Below are some of the things I didn’t even think about before joining that might help other computer science interns get the most out of their internship opportunities.
 
-![oursky friday sharing session](/images/blogs/ada09753ef_679953459e5bbde3d22c3877_IMG_0562.jpeg)
+![oursky friday sharing session](/images/blogs/ada09753ef_679953459e5bbde3d22c3877_IMG_0562.webp)
 
 During my internship, I presented about blockchain at Oursky’s Friday sharing session.
 
@@ -61,7 +61,7 @@ Just as you would not like to spend hours to read and understand complicated cod
 
 The two most common project risks in software development are poor requirements and poor project planning. Misunderstanding project requirements makes what you do a waste of time. You can avoid this by putting a little bit more effort in communicating with your PM or tech lead to clarify the requirement.
 
-![oursky taipei 台北](/images/blogs/4161ba2967_67995345690e28959ee2379b_IMG_0578.jpeg)
+![oursky taipei 台北](/images/blogs/4161ba2967_67995345690e28959ee2379b_IMG_0578.webp)
 
 Farewell dinner with Oursky’s Taiwan team
 

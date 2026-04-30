@@ -7,7 +7,7 @@ categories:
   - "product-management"
   - "qa"
 displayCategory: "QA TESTING"
-image: "/images/blogs/4ef67f00ae_66e306d03a8aa54db92c0811_pexels-kevin-ku-577585-1160x870.jpg"
+image: "/images/blogs/4ef67f00ae_66e306d03a8aa54db92c0811_pexels-kevin-ku-577585-1160x870.webp"
 draft: false
 webflowId: "66e30716a9778b10dc4ceee5"
 ---

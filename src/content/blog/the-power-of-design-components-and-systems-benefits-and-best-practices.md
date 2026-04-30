@@ -6,7 +6,7 @@ author: "Oursky Team"
 categories:
   - "ui-design"
 displayCategory: "Design"
-image: "/images/blogs/22da8697a5_66e158007ee515828c668f29_ux-developer-and-ui-designer-brainstorming-2024-08-27-16-11-36-utc.jpg"
+image: "/images/blogs/22da8697a5_66e158007ee515828c668f29_ux-developer-and-ui-designer-brainstorming-2024-08-27-16-11-36-utc.webp"
 featured: 5
 draft: false
 webflowId: "66e158106fc39a3ee8347591"
@@ -23,7 +23,7 @@ In Oursky, we've witnessed the transformative power of design components and des
 
 ‍
 
-![\_\_wf\_reserved\_inherit](/images/blogs/27f2972e03_66e159187a5a3af9f8717988_66e158fbd9a72009f88a9dd6_Screenshot%202024-09-11%20at%204.46.32%E2%80%AFPM.png)
+![\_\_wf\_reserved\_inherit](/images/blogs/27f2972e03_66e159187a5a3af9f8717988_66e158fbd9a72009f88a9dd6_Screenshot%202024-09-11%20at%204.46.32%E2%80%AFPM.webp)
 
 Example of a Design System Components Library
 

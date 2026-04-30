@@ -15,7 +15,7 @@ As a software development company, Oursky has worked with a number of clients on
 
 We would love to share one of our journeys: the development of Jamn Multi-Tool, which was featured by the Apple App Store in different countries and was selected as Best of 2013 in Music Category.
 
-![Jamn Screenshot Cover Img](/images/blogs/26822e5e6b_679944c9bf8f21608a6ea7c6_Screen-Shot-2016-03-24-at-6.12.15-PM.png)
+![Jamn Screenshot Cover Img](/images/blogs/26822e5e6b_679944c9bf8f21608a6ea7c6_Screen-Shot-2016-03-24-at-6.12.15-PM.webp)
 
 Screenshot of today’s Jamn
 
@@ -29,7 +29,7 @@ That’s where [MVP](https://blog.oursky.com/2017/12/10/apple-best-music-app-201
 
 This is what we got for the MVP version. With this level of engineering, we believed it was enough to test out how well the digital version of a chord wheel worked for musicians.
 
-![Screenshot of Jamn Player's MVP Img](/images/blogs/ac4b894117_679944c84c7c056e6eb61c70_miKey_24042012.001.jpeg)
+![Screenshot of Jamn Player's MVP Img](/images/blogs/ac4b894117_679944c84c7c056e6eb61c70_miKey_24042012.001.webp)
 
 Screenshot of Jamn’s MVP
 
@@ -49,7 +49,7 @@ Here is a list of modifications we added on over the years:
 
 This is the final product:
 
-![Jamn Screenshot Img](/images/blogs/edf789972d_679944c9087156cfaa5a87e7_Jamn-blog-02.png)
+![Jamn Screenshot Img](/images/blogs/edf789972d_679944c9087156cfaa5a87e7_Jamn-blog-02.webp)
 
 Today’s Jamn with an interface illustrating how to play a chord
 

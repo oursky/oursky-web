@@ -6,7 +6,7 @@ author: "Oursky Team"
 categories:
   - "case-study"
 displayCategory: "CASE STUDY"
-image: "/images/blogs/3443cdc1f3_66e31cd6f07d75e0b3b5479d_asos-1160x672.jpg"
+image: "/images/blogs/3443cdc1f3_66e31cd6f07d75e0b3b5479d_asos-1160x672.webp"
 draft: false
 webflowId: "66e31d24b4fc80186f34ac97"
 ---
@@ -19,7 +19,7 @@ In fact, some of the most successful businesses started as moonshot ideas. Look 
 
 Another example is WeChat. While you can argue that it benefited from the absence of big players like Facebook and Google, WeChat’s success wasn’t a cakewalk. It had to contend with local competitors and had to continuously reinvent itself. It’s winning formula? Less is more. That means significantly less ads, simpler (and more coherent) design, and fewer hoops and loops to jump through in order to buy, sell, or interact with other users. WeChat restrained the user experience in a way that would still let the technologically challenged be able to use it. WeChat’s [approach](https://hbr.org/2019/10/the-kind-of-creative-thinking-that-fueled-wechats-success) to user experience, in fact, is something that even Facebook [reportedly](https://www.nytimes.com/2019/03/07/technology/facebook-zuckerberg-wechat.html) wants to emulate.
 
-![](/images/blogs/55c6aee1cc_66e31c459660d95b1abf46c7_silhouette-of-person-holding-glass-mason-jar-1274260-1160x966.jpeg)
+![](/images/blogs/55c6aee1cc_66e31c459660d95b1abf46c7_silhouette-of-person-holding-glass-mason-jar-1274260-1160x966.webp)
 
 PHOTO BY [**RAKICEVIC NENAD**](https://www.pexels.com/@rakicevic-nenad-233369?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) FROM [**PEXELS**](https://www.pexels.com/photo/silhouette-of-person-holding-glass-mason-jar-1274260/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 

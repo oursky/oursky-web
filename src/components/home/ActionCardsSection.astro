@@ -27,19 +27,35 @@ const socialLinks = [
   <!-- Left card: Newsletter -->
   <div class="rounded-lg p-10 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-col gap-10 max-md:gap-6 bg-newsletter-blue">
     <p class="scroll-reveal-item text-2xl font-medium leading-footer text-white m-0" style="--sr-delay: 0ms">Get updates and tips from the team</p>
-    <form class="scroll-reveal-item flex gap-3 flex-wrap" style="--sr-delay: 55ms" action="#" method="post" onsubmit="return false">
-      <label for="newsletter-email" class="sr-only">Your Email</label>
+    <form
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="scroll-reveal-item flex gap-3 flex-wrap"
+      style="--sr-delay: 55ms"
+      action="https://oursky.us2.list-manage.com/subscribe/post?u=34db69ee3e01fe49e12302054&id=72405ff6d4&f_id=00646ce0f0"
+      method="post"
+    >
+      <label for="mce-EMAIL" class="sr-only">Your Email</label>
       <input
-        id="newsletter-email"
+        id="mce-EMAIL"
         type="email"
-        name="email"
+        name="EMAIL"
         class="flex-1 min-w-32 md:min-w-40 px-5 py-3 max-md:py-2.5 rounded-full bg-white/20 text-white text-sm border-0 outline-none placeholder:text-white/65 focus:bg-white/30 transition-colors"
         placeholder="Your Email"
         autocomplete="email"
         required
       />
-      <PillButton type="submit" label="Subscribe" variant="secondary" onDark class="flex-none max-md:!h-11 max-md:!px-6 max-md:!text-sm" />
+      {/* Mailchimp bot trap — must stay empty for real users */}
+      <div aria-hidden="true" style="position:absolute;left:-5000px">
+        <input type="text" name="b_34db69ee3e01fe49e12302054_72405ff6d4" tabindex="-1" value="" />
+      </div>
+      <PillButton type="submit" label="Subscribe" variant="secondary" onDark class="flex-none max-md:!h-11 max-md:!px-6 max-md:!text-sm disabled:opacity-60 disabled:cursor-not-allowed" />
     </form>
+    <p
+      class="newsletter-status text-sm text-white/85 m-0 hidden [&_a]:underline [&_a]:text-white"
+      role="status"
+      aria-live="polite"
+    ></p>
   </div>
 
   <!-- Right card: Follow Us -->
@@ -83,3 +99,67 @@ const socialLinks = [
     </div>
   </div>
 </div>
+
+<script>
+  // Submits to Mailchimp's JSONP endpoint so the user stays on the page.
+  // No-JS fallback: the form's regular `action` POSTs to Mailchimp's hosted page.
+  const form = document.getElementById('mc-embedded-subscribe-form') as HTMLFormElement | null;
+  const status = document.querySelector<HTMLElement>('.newsletter-status');
+  if (form && status) {
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const originalLabel = submit?.textContent ?? 'Subscribe';
+
+    const setStatus = (html: string, kind: 'info' | 'success' | 'error') => {
+      status.hidden = false;
+      status.classList.remove('hidden', 'text-white/85', 'text-amber-200');
+      status.classList.add(kind === 'error' ? 'text-amber-200' : 'text-white/85');
+      status.innerHTML = html;
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      setStatus('Subscribing…', 'info');
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Please wait…';
+      }
+
+      const callbackName = `mcCb_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+      const params = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
+      const url = `${form.action.replace('/post', '/post-json')}&${params.toString()}&c=${callbackName}`;
+      const script = document.createElement('script');
+
+      const cleanup = () => {
+        delete (window as unknown as Record<string, unknown>)[callbackName];
+        script.remove();
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = originalLabel;
+        }
+      };
+
+      (window as unknown as Record<string, unknown>)[callbackName] = (data: { result: string; msg: string }) => {
+        cleanup();
+        const msg = (data.msg || '').replace(/^\d+\s*-\s*/, '');
+        if (data.result === 'success') {
+          setStatus(msg || 'Thanks — check your inbox to confirm.', 'success');
+          form.reset();
+        } else {
+          setStatus(msg || 'Something went wrong. Please try again.', 'error');
+        }
+      };
+
+      script.src = url;
+      script.onerror = () => {
+        cleanup();
+        setStatus('Could not reach the subscription service. Please try again.', 'error');
+      };
+      document.body.appendChild(script);
+    });
+  }
+</script>

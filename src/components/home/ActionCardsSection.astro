@@ -1,9 +1,7 @@
 ---
 /**
  * ActionCardsSection — Newsletter signup + social media follow cards.
- *
- * Webflow: ActionCardsContainer component (componentId: 4f905d05-a3db-b075-6fd3-6641fb2041b5)
- * Located in: .action-section div inside .section__home__lastsection
+ * Newsletter form posts to Brevo (subscription type); submission handled by Brevo's hosted main.js + reCAPTCHA v3.
  *
  * Visual: Two side-by-side rounded cards:
  *   Left (blue #1a4fff): email input + Subscribe button
@@ -28,16 +26,16 @@ const socialLinks = [
   <div class="rounded-lg p-10 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-col gap-10 max-md:gap-6 bg-newsletter-blue">
     <p class="scroll-reveal-item text-2xl font-medium leading-footer text-white m-0" style="--sr-delay: 0ms">Get updates and tips from the team</p>
     <form
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
+      id="sib-form"
       class="scroll-reveal-item flex gap-3 flex-wrap"
       style="--sr-delay: 55ms"
-      action="https://oursky.us2.list-manage.com/subscribe/post?u=34db69ee3e01fe49e12302054&id=72405ff6d4&f_id=00646ce0f0"
+      action="https://4a0d91fc.sibforms.com/serve/MUIFAIowdRP4zK82ouLpuOrhMjyuJtzS-Bh8ngJDLMBUXA-Tb0k_aiT4-ilcGSVee--J4ws5ZVLwMMvkHgvSRRhsVz25wvZkt0IHsWQYFCV6E5JCA7ahj-AmGsCfv_FkbYe1Bi2xY0eVcVwWLK9_nOZuJaK1kYWHZtok--IVfi1YAY5VK1yHasCKS8o1fNtlrm9KuE4tMZjwGE_03g=="
       method="post"
+      data-type="subscription"
     >
-      <label for="mce-EMAIL" class="sr-only">Your Email</label>
+      <label for="EMAIL" class="sr-only">Your Email</label>
       <input
-        id="mce-EMAIL"
+        id="EMAIL"
         type="email"
         name="EMAIL"
         class="flex-1 min-w-32 md:min-w-40 px-5 py-3 max-md:py-2.5 rounded-full bg-white/20 text-white text-sm border-0 outline-none placeholder:text-white/65 focus:bg-white/30 transition-colors"
@@ -45,17 +43,30 @@ const socialLinks = [
         autocomplete="email"
         required
       />
-      {/* Mailchimp bot trap — must stay empty for real users */}
-      <div aria-hidden="true" style="position:absolute;left:-5000px">
-        <input type="text" name="b_34db69ee3e01fe49e12302054_72405ff6d4" tabindex="-1" value="" />
-      </div>
+      {/* Brevo honeypot — must stay empty for real users */}
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[5000px]" />
+      <input type="hidden" name="locale" value="en" />
+      <div class="g-recaptcha-v3" data-sitekey="6LeMONIsAAAAAGZ7UGFC2CHlNYU9Atvs_pppe0h1" style="display: none"></div>
       <PillButton type="submit" label="Subscribe" variant="secondary" onDark class="flex-none max-md:!h-11 max-md:!px-6 max-md:!text-sm disabled:opacity-60 disabled:cursor-not-allowed" />
     </form>
-    <p
-      class="newsletter-status text-sm text-white/85 m-0 hidden [&_a]:underline [&_a]:text-white"
+    <div
+      id="error-message"
+      class="sib-form-message-panel text-sm text-amber-200 m-0"
       role="status"
       aria-live="polite"
-    ></p>
+      hidden
+    >
+      <span class="sib-form-message-panel__inner-text"></span>
+    </div>
+    <div
+      id="success-message"
+      class="sib-form-message-panel text-sm text-white/90 m-0"
+      role="status"
+      aria-live="polite"
+      hidden
+    >
+      <span class="sib-form-message-panel__inner-text"></span>
+    </div>
   </div>
 
   <!-- Right card: Follow Us -->
@@ -100,66 +111,24 @@ const socialLinks = [
   </div>
 </div>
 
-<script>
-  // Submits to Mailchimp's JSONP endpoint so the user stays on the page.
-  // No-JS fallback: the form's regular `action` POSTs to Mailchimp's hosted page.
-  const form = document.getElementById('mc-embedded-subscribe-form') as HTMLFormElement | null;
-  const status = document.querySelector<HTMLElement>('.newsletter-status');
-  if (form && status) {
-    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-    const originalLabel = submit?.textContent ?? 'Subscribe';
-
-    const setStatus = (html: string, kind: 'info' | 'success' | 'error') => {
-      status.hidden = false;
-      status.classList.remove('hidden', 'text-white/85', 'text-amber-200');
-      status.classList.add(kind === 'error' ? 'text-amber-200' : 'text-white/85');
-      status.innerHTML = html;
-    };
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      setStatus('Subscribing…', 'info');
-      if (submit) {
-        submit.disabled = true;
-        submit.textContent = 'Please wait…';
-      }
-
-      const callbackName = `mcCb_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-      const params = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
-      const url = `${form.action.replace('/post', '/post-json')}&${params.toString()}&c=${callbackName}`;
-      const script = document.createElement('script');
-
-      const cleanup = () => {
-        delete (window as unknown as Record<string, unknown>)[callbackName];
-        script.remove();
-        if (submit) {
-          submit.disabled = false;
-          submit.textContent = originalLabel;
-        }
-      };
-
-      (window as unknown as Record<string, unknown>)[callbackName] = (data: { result: string; msg: string }) => {
-        cleanup();
-        const msg = (data.msg || '').replace(/^\d+\s*-\s*/, '');
-        if (data.result === 'success') {
-          setStatus(msg || 'Thanks — check your inbox to confirm.', 'success');
-          form.reset();
-        } else {
-          setStatus(msg || 'Something went wrong. Please try again.', 'error');
-        }
-      };
-
-      script.src = url;
-      script.onerror = () => {
-        cleanup();
-        setStatus('Could not reach the subscription service. Please try again.', 'error');
-      };
-      document.body.appendChild(script);
-    });
-  }
+<script is:inline>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.INVALID_NUMBER = "The information provided is invalid. Please review the field format and try again.";
+  window.INVALID_DATE = "Please enter a valid date";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  window.AUTOHIDE = false;
 </script>
+<script is:inline defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script is:inline async defer src="https://www.google.com/recaptcha/api.js?render=6LeMONIsAAAAAGZ7UGFC2CHlNYU9Atvs_pppe0h1&hl=en"></script>

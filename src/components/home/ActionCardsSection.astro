@@ -1,7 +1,7 @@
 ---
 /**
  * ActionCardsSection — Newsletter signup + social media follow cards.
- * Newsletter form posts to Brevo (subscription type); submission handled by Brevo's hosted main.js + reCAPTCHA v3.
+ * Newsletter form posts to Brevo (subscription type); submission handled by Brevo's hosted main.js; honeypot for spam (no reCAPTCHA).
  *
  * Visual: Two side-by-side rounded cards:
  *   Left (blue #1a4fff): email input + Subscribe button
@@ -24,7 +24,10 @@ const socialLinks = [
 <div class="scroll-reveal-group grid grid-cols-2 max-md:grid-cols-1 gap-5 pt-10 max-md:pt-6 w-full">
   <!-- Left card: Newsletter -->
   <div class="rounded-lg p-10 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-col gap-10 max-md:gap-6 bg-newsletter-blue">
-    <p class="scroll-reveal-item text-2xl font-medium leading-footer text-white m-0" style="--sr-delay: 0ms">Get updates and tips from the team</p>
+    <div class="scroll-reveal-item flex flex-col gap-2" style="--sr-delay: 0ms">
+      <p class="text-2xl font-medium leading-footer text-white m-0">Oursky Newsletter</p>
+      <p class="text-base text-white/80 m-0">Subscribe to our newsletter and stay updated.</p>
+    </div>
     <form
       id="sib-form"
       class="scroll-reveal-item flex gap-3 flex-wrap"
@@ -46,7 +49,6 @@ const socialLinks = [
       {/* Brevo honeypot — must stay empty for real users */}
       <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[5000px]" />
       <input type="hidden" name="locale" value="en" />
-      <div class="g-recaptcha-v3" data-sitekey="6LeMONIsAAAAAGZ7UGFC2CHlNYU9Atvs_pppe0h1" style="display: none"></div>
       <PillButton type="submit" label="Subscribe" variant="secondary" onDark class="flex-none max-md:!h-11 max-md:!px-6 max-md:!text-sm disabled:opacity-60 disabled:cursor-not-allowed" />
     </form>
     <div
@@ -117,9 +119,6 @@ const socialLinks = [
   window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
   window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
   window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.INVALID_NUMBER = "The information provided is invalid. Please review the field format and try again.";
-  window.INVALID_DATE = "Please enter a valid date";
-  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
   window.translation = {
     common: {
       selectedList: '{quantity} list selected',
@@ -131,4 +130,3 @@ const socialLinks = [
   window.AUTOHIDE = false;
 </script>
 <script is:inline defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-<script is:inline async defer src="https://www.google.com/recaptcha/api.js?render=6LeMONIsAAAAAGZ7UGFC2CHlNYU9Atvs_pppe0h1&hl=en"></script>

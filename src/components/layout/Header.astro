@@ -32,8 +32,8 @@ function isActive(href: string): boolean {
     class="header relative flex w-full max-w-full items-center justify-between gap-1 max-md:justify-center max-md:gap-2 sm:gap-2 md:max-w-none mx-auto pointer-events-auto"
   >
     <!-- Logo pill (tablet+ — Webflow hides separate header icon below md) -->
-    <!-- data-astro-reload: home page has a Brevo newsletter form that loads
-         reCAPTCHA v3; ClientRouter swaps would skip the bootstrap script. -->
+    <!-- data-astro-reload: home page loads Brevo's main.js (is:inline) to wire
+         the newsletter form; ClientRouter swaps would skip that bootstrap. -->
     <a
       href="/"
       data-astro-reload

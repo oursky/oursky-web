@@ -1,0 +1,78 @@
+---
+/**
+ * BlogCard — shared visual blog card.
+ *
+ * Used by the home BlogPreviewSection (horizontal scroll), blog detail
+ * RelatedBlogSection ("Read more" scroll), and the /blog index BlogPostList
+ * (grid). Sizing/snap classes belong on the parent <li>; this component owns
+ * the card surface, content, and tag pill row.
+ */
+import type { CollectionEntry } from 'astro:content';
+
+interface Pill {
+  slug: string;
+  label: string;
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  topLabel: string;
+  pills: Pill[];
+  /**
+   * When true, drops the title min-height at <640px so single-column mobile
+   * layouts don't reserve 3-line title space. Default false (keeps min-h —
+   * required for cross-card pill alignment in multi-column / scroll layouts).
+   */
+  dropTitleMinHOnMobile?: boolean;
+}
+
+const { post, topLabel, pills, dropTitleMinHOnMobile = false } = Astro.props;
+---
+
+<article class="w-full bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] flex flex-col h-full">
+  <a
+    href={`/blogs/${post.id}/`}
+    class="group flex flex-col gap-4 no-underline p-10 pb-0 max-md:p-4 max-md:pb-0 max-md:gap-3"
+  >
+    <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-[38px] truncate m-0 max-md:text-sm max-md:leading-6">
+      {topLabel}
+    </h3>
+    <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted max-md:h-44">
+      {post.data.image ? (
+        <img
+          src={post.data.image}
+          alt={post.data.imageAlt ?? post.data.title}
+          class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
+          loading="lazy"
+          width="560"
+          height="280"
+        />
+      ) : (
+        <div class="w-full h-full bg-gradient-to-br from-muted to-accent" aria-hidden="true" />
+      )}
+    </div>
+    <h2
+      class:list={[
+        'text-xl-plus font-normal text-black leading-[34px] m-0 line-clamp-3 min-h-[102px] group-hover:text-primary max-md:text-xl max-md:leading-7 max-md:min-h-[84px]',
+        dropTitleMinHOnMobile && 'max-sm:min-h-0',
+      ]}
+    >
+      {post.data.title}
+    </h2>
+    {post.data.excerpt && (
+      <p class="text-text-muted text-sm m-0 line-clamp-3 max-md:text-xs max-md:leading-5">
+        {post.data.excerpt}
+      </p>
+    )}
+  </a>
+  <div class="mt-auto flex flex-wrap items-center gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
+    {pills.map(({ slug, label }) => (
+      <a
+        href={`/blog-category/${slug}/`}
+        class="inline-flex items-center h-9 px-2.5 bg-muted text-sm font-semibold text-black tracking-[0.02em] whitespace-nowrap no-underline transition-colors hover:bg-accent"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</article>

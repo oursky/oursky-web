@@ -177,8 +177,10 @@ const pubDateDisplay = pubDate.toLocaleDateString('en-US', {
 
   </article>
 
-  <div class="max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] mt-16 pb-16 box-border">
+  <div class="w-full max-w-[var(--home-rail-max)] mx-auto mt-16 box-border">
     <RelatedBlogSection currentSlug={post.id} />
+  </div>
+  <div class="max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] pb-16 box-border">
     <ServiceLetsTalkSection />
   </div>
 </BaseLayout>

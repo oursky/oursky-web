@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import BlogCard from './BlogCard.astro';
 
 interface Props {
   posts: CollectionEntry<'blog'>[];
@@ -26,41 +27,14 @@ const listLabel = (slugs: string[], display?: string) => {
     <ul class="scroll-reveal-group grid gap-6 sm:grid-cols-2 list-none p-0 m-0">
       {posts.map((post, i) => {
         const pillSlugs = post.data.tags.length > 0 ? post.data.tags : post.data.categories;
+        const pills = pillSlugs.map((slug) => ({
+          slug,
+          label: categoryNameBySlug.get(slug) ?? slug,
+        }));
+        const topLabel = listLabel(post.data.categories, post.data.displayCategory);
         return (
-          <li class="scroll-reveal-item bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] flex flex-col" style={`--sr-delay: ${(i % 2) * 80}ms`}>
-            <a
-              href={`/blogs/${post.id}/`}
-              class="group flex flex-col gap-4 no-underline text-text p-10 pb-0 max-md:p-4 max-md:pb-0"
-            >
-              <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-footer truncate m-0">
-                {listLabel(post.data.categories, post.data.displayCategory)}
-              </h3>
-              {post.data.image && (
-                <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted max-md:h-44">
-                  <img
-                    src={post.data.image}
-                    alt={post.data.imageAlt ?? post.data.title}
-                    class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
-                    loading="lazy"
-                  />
-                </div>
-              )}
-              <h2 class="text-xl-plus font-normal text-black leading-[34px] m-0 line-clamp-3 group-hover:text-primary max-md:text-xl max-md:leading-7">
-                {post.data.title}
-              </h2>
-              {post.data.excerpt && (
-                <p class="text-text-muted text-sm m-0 line-clamp-3">{post.data.excerpt}</p>
-              )}
-            </a>
-            <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
-              {pillSlugs.map((slug) => (
-                <a href={`/blog-category/${slug}/`} class="no-underline group/pill">
-                  <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">
-                    {categoryNameBySlug.get(slug) ?? slug}
-                  </div>
-                </a>
-              ))}
-            </div>
+          <li class="scroll-reveal-item flex" style={`--sr-delay: ${(i % 2) * 80}ms`}>
+            <BlogCard post={post} topLabel={topLabel} pills={pills} dropTitleMinHOnMobile />
           </li>
         );
       })}

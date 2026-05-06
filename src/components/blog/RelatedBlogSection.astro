@@ -7,6 +7,7 @@
  */
 import { getCollection } from 'astro:content';
 import SectionBadge from '../ui/SectionBadge.astro';
+import BlogCard from './BlogCard.astro';
 
 interface Props {
   currentSlug: string;
@@ -54,53 +55,13 @@ const relatedPosts = allPosts
             const firstCat = post.data.categories[0];
             const topLabel = post.data.displayCategory ?? categoryLabel(firstCat);
             const pillSlugs = post.data.tags.length > 0 ? post.data.tags : post.data.categories;
+            const pills = pillSlugs.map((slug) => ({ slug, label: categoryLabel(slug) }));
             return (
               <li
-                class="snap-start shrink-0 grow-0 basis-[34.5rem] w-[34.5rem] min-w-[34.5rem] flex flex-col bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] max-lg:basis-[26rem] max-lg:w-[26rem] max-lg:min-w-[26rem] max-md:w-72 max-md:min-w-72 max-md:basis-72"
+                class="snap-start shrink-0 grow-0 basis-[34.5rem] w-[34.5rem] min-w-[34.5rem] flex max-lg:basis-[26rem] max-lg:w-[26rem] max-lg:min-w-[26rem] max-md:w-72 max-md:min-w-72 max-md:basis-72"
                 style={`--sr-delay: ${45 + i * 48}ms`}
               >
-                <a
-                  href={`/blogs/${post.id}/`}
-                  class="group flex flex-col gap-4 no-underline p-10 pb-0 max-md:p-4 max-md:pb-0 max-md:gap-3"
-                >
-                  <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-[38px] truncate m-0 max-md:text-sm max-md:leading-6">
-                    {topLabel}
-                  </h3>
-                  <div class="w-full h-[17.5rem] overflow-hidden rounded-md bg-muted max-md:h-44">
-                    {post.data.image ? (
-                      <img
-                        src={post.data.image}
-                        alt={post.data.imageAlt ?? post.data.title}
-                        class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.04]"
-                        loading="lazy"
-                        width="560"
-                        height="280"
-                      />
-                    ) : (
-                      <div
-                        class="w-full h-full bg-gradient-to-br from-muted to-accent"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </div>
-                  <h2 class="text-xl-plus font-normal text-black leading-[34px] m-0 line-clamp-3 group-hover:text-primary max-md:text-xl max-md:leading-7">
-                    {post.data.title}
-                  </h2>
-                  {post.data.excerpt && (
-                    <p class="text-text-muted text-sm m-0 line-clamp-3 max-md:text-xs max-md:leading-5">
-                      {post.data.excerpt}
-                    </p>
-                  )}
-                </a>
-                <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
-                  {pillSlugs.map((slug) => (
-                    <a href={`/blog-category/${slug}/`} class="no-underline group/pill">
-                      <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">
-                        {categoryLabel(slug)}
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                <BlogCard post={post} topLabel={topLabel} pills={pills} />
               </li>
             );
           })}
@@ -109,7 +70,7 @@ const relatedPosts = allPosts
     </div>
 
     <button
-      class="related-blog-btn related-blog-btn--left absolute top-1/2 -translate-y-1/2 left-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      class="related-blog-btn related-blog-btn--left absolute top-1/2 -translate-y-1/2 left-6 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
       aria-label="Scroll left"
       type="button"
     >
@@ -120,7 +81,7 @@ const relatedPosts = allPosts
       </span>
     </button>
     <button
-      class="related-blog-btn related-blog-btn--right absolute top-1/2 -translate-y-1/2 right-6 w-20 h-20 p-2 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      class="related-blog-btn related-blog-btn--right absolute top-1/2 -translate-y-1/2 right-6 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
       aria-label="Scroll right"
       type="button"
     >

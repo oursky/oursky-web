@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { currentPage, totalPages } = Astro.props;
-const href = (n: number) => (n <= 1 ? '/blog' : `/blog/${n}`);
+const href = (n: number) => (n <= 1 ? '/blog/' : `/blog/${n}/`);
 ---
 
 {totalPages >= 2 && (

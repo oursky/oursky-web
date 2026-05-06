@@ -29,7 +29,7 @@ const listLabel = (slugs: string[], display?: string) => {
         return (
           <li class="scroll-reveal-item bg-surface border border-[#E0E9EC] rounded-[20px] overflow-hidden transition-shadow hover:shadow-[0_2px_5px_rgba(0,0,0,0.1)] flex flex-col" style={`--sr-delay: ${(i % 2) * 80}ms`}>
             <a
-              href={`/blogs/${post.id}`}
+              href={`/blogs/${post.id}/`}
               class="group flex flex-col gap-4 no-underline text-text p-10 pb-0 max-md:p-4 max-md:pb-0"
             >
               <h3 class="text-base font-medium text-black uppercase tracking-[0.02em] leading-footer truncate m-0">
@@ -54,7 +54,7 @@ const listLabel = (slugs: string[], display?: string) => {
             </a>
             <div class="flex flex-wrap gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
               {pillSlugs.map((slug) => (
-                <a href={`/blog-category/${slug}`} class="no-underline group/pill">
+                <a href={`/blog-category/${slug}/`} class="no-underline group/pill">
                   <div class="inline-flex items-center px-2.5 py-2 bg-muted text-sm font-semibold text-black tracking-[0.02em] transition-colors group-hover/pill:bg-accent">
                     {categoryNameBySlug.get(slug) ?? slug}
                   </div>

@@ -13,14 +13,14 @@ export interface NavLink {
 }
 
 export const mainNav: NavLink[] = [
-  { label: 'Home',     href: '/',         narrowHidden: true },
-  { label: 'About',    href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Blog',     href: '/blog',     narrowHidden: true },
-  { label: 'Works',    href: '/works' },
+  { label: 'Home',     href: '/',          narrowHidden: true },
+  { label: 'About',    href: '/about/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Blog',     href: '/blog/',     narrowHidden: true },
+  { label: 'Works',    href: '/works/' },
 ];
 
-export const ctaLink = { label: 'Contact', href: '/contact' };
+export const ctaLink = { label: 'Contact', href: '/contact/' };
 
 export interface FooterSection {
   heading: string;
@@ -31,15 +31,15 @@ export const footerSections: FooterSection[] = [
   {
     heading: 'Works',
     links: [
-      { label: 'All Works', href: '/works' },
+      { label: 'All Works', href: '/works/' },
     ],
   },
   {
     heading: 'Services',
     links: [
-      { label: 'Software Development', href: '/service/software-development' },
-      { label: 'UI / UX Design',       href: '/service/ui-ux-design' },
-      { label: 'AI',                   href: '/service/ai' },
+      { label: 'Software Development', href: '/service/software-development/' },
+      { label: 'UI / UX Design',       href: '/service/ui-ux-design/' },
+      { label: 'AI',                   href: '/service/ai/' },
     ],
   },
   {
@@ -52,10 +52,10 @@ export const footerSections: FooterSection[] = [
   {
     heading: 'Company',
     links: [
-      { label: 'About',       href: '/about' },
-      { label: 'Blog',        href: '/blog' },
-      { label: 'Open Source', href: '/open-source' },
-      { label: 'Contact',     href: '/contact' },
+      { label: 'About',       href: '/about/' },
+      { label: 'Blog',        href: '/blog/' },
+      { label: 'Open Source', href: '/open-source/' },
+      { label: 'Contact',     href: '/contact/' },
     ],
   },
 ];

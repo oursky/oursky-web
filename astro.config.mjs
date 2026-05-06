@@ -20,7 +20,7 @@ function resolveSite() {
 export default defineConfig({
   site: resolveSite(),
   output: 'static',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
 
   vite: {
     plugins: [tailwindcss()],

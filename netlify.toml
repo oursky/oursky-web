@@ -35,35 +35,35 @@
 # Service-page consolidations: old per-discipline pages now roll up under /services.
 [[redirects]]
   from   = "/case-studies"
-  to     = "/works"
+  to     = "/works/"
   status = 301
 
 [[redirects]]
   from   = "/product-development"
-  to     = "/services"
+  to     = "/services/"
   status = 301
 
 [[redirects]]
   from   = "/mobile"
-  to     = "/services"
+  to     = "/services/"
   status = 301
 
 [[redirects]]
   from   = "/web"
-  to     = "/services"
+  to     = "/services/"
   status = 301
 
 [[redirects]]
   from   = "/design"
-  to     = "/services"
+  to     = "/services/"
   status = 301
 
 [[redirects]]
   from   = "/tech"
-  to     = "/services"
+  to     = "/services/"
   status = 301
 
 [[redirects]]
   from   = "/findus"
-  to     = "/contact"
+  to     = "/contact/"
   status = 301

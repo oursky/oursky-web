@@ -135,9 +135,15 @@ const testimonials = [
     padding: 0.5rem 0; /* room for shadow on slide cards */
   }
 
-  /* Slides take their width from Swiper's slidesPerView; ensure cards stretch */
+  /* Force equal heights: align-items:normal (Swiper default) behaves like start,
+     not stretch, when items have no explicit height. Override so all slides
+     stretch to the tallest sibling. */
+  .testimonials-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
   .testimonial-slide {
-    height: auto;
+    height: auto !important; /* override swiper/css .swiper-slide{height:100%} so align-items:stretch can equalize */
     display: flex;
   }
 

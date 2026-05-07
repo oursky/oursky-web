@@ -20,6 +20,14 @@
 # these automatically).
 # ────────────────────────────────────────────────────────────────────────────
 
+# Redirect Netlify preview domain to production.
+# Must use absolute `from` URL (with host) for hostname-based matching.
+[[redirects]]
+  from   = "https://ourskyweb.netlify.app/*"
+  to     = "https://www.oursky.com/:splat"
+  status = 301
+  force  = true
+
 # .html extension stripping (Webflow legacy URLs).
 # `force = true` so the rule fires for paths like `/index.html` where Astro
 # generates a real file on disk (without force, Netlify serves the file

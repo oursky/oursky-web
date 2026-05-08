@@ -25,27 +25,40 @@ import ContactCtaSection from '../components/home/ContactCtaSection.astro';
       Wraps hero + intro: light gray background, max-width 1360px, centered.
       The hero card (border-radius 48px) fills the rail content box.
     -->
-    <div class="bg-bg-hero flex flex-col items-stretch w-full max-w-[var(--home-rail-max)] mx-auto pt-4 px-[var(--home-rail-gutter)] gap-0 overflow-visible box-border lg:pt-10 max-md:max-w-none max-md:p-0">
+    <div class="bg-bg flex flex-col items-stretch w-full max-w-[var(--home-rail-max)] mx-auto pt-4 px-[var(--home-rail-gutter)] gap-0 overflow-visible box-border lg:pt-10 max-md:max-w-none max-md:p-0">
       <HeroSection />
       <IntroSection />
     </div>
 
-    <!-- Full-width section backgrounds; inner rails use --home-rail-* -->
-    <WorksPreviewSection />
+    <!-- Our Works card -->
+    <div class="w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] max-md:px-0">
+      <div class="rounded-xl max-md:rounded-lg overflow-hidden">
+        <WorksPreviewSection />
+      </div>
+    </div>
+
+    <!-- Our Products full-width (no card) -->
     <ProductsSection />
-    <ClientLogosSection />
+
+    <!-- Trusted Clients card — negative margin overlaps the Products bg pattern -->
+    <div class="relative z-10 w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] -mt-20 max-md:-mt-10 max-md:px-0">
+      <div class="rounded-xl max-md:rounded-lg overflow-hidden">
+        <ClientLogosSection />
+      </div>
+    </div>
+
     <TestimonialsSection />
 
     <!--
       Last section: light gray (#f7f7f7) rounded-top section containing
       the blog scroll, action cards, and contact form.
     -->
-    <section class="bg-bg-section-light rounded-t-[40px] flex flex-col justify-center items-center w-full overflow-hidden p-0">
+    <section class="bg-bg rounded-t-[40px] flex flex-col justify-center items-center w-full overflow-hidden p-0">
       <div class="w-full max-w-[var(--home-rail-max)] mx-auto box-border">
         <BlogPreviewSection />
       </div>
 
-      <div class="w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] pb-8 bg-bg-section-light rounded-t-[40px] flex flex-col gap-8 box-border max-md:pb-6 max-md:gap-6">
+      <div class="w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] pb-8 bg-bg rounded-t-[40px] flex flex-col gap-8 box-border max-md:pb-6 max-md:gap-6">
         <ActionCardsSection />
         <ContactCtaSection />
       </div>

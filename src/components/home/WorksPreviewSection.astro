@@ -2,9 +2,8 @@
 import PillButton from '../ui/PillButton.astro';
 ---
 
-<!-- Blue gradient section with rounded top corners and 3D card transforms -->
-<section class="works-section scroll-reveal-group w-full min-h-[500px] py-20 pb-section-lg max-md:py-12 max-md:pb-16" aria-labelledby="works-heading">
-  <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-10 box-border max-lg:flex-col max-lg:gap-8 max-md:px-5">
+<section class="works-section scroll-reveal-group w-full min-h-[640px] max-lg:min-h-[860px] max-md:min-h-[840px] py-28 pb-section-lg max-md:py-16 max-md:pb-20" aria-labelledby="works-heading">
+  <div class="flex justify-center items-center w-full max-w-[1360px] mx-auto px-16 box-border max-lg:flex-col max-lg:gap-8 max-md:px-8">
     <!-- Text column -->
     <div class="flex flex-col justify-center items-start w-1/2 max-lg:w-full">
       <h2 id="works-heading" class="scroll-reveal-item text-white text-3xl font-semibold leading-[3.5rem] mb-4" style="--sr-delay: 0ms">
@@ -25,92 +24,61 @@ import PillButton from '../ui/PillButton.astro';
         class="scroll-reveal-item my-2.5"
       />
     </div>
+    <!-- Right spacer: keeps text pinned left on desktop, hidden on tablet/mobile -->
+    <div class="w-1/2 max-lg:hidden" aria-hidden="true"></div>
+  </div>
 
-    <!-- 3D card stack — transforms require CSS -->
-    <div
-      class="scroll-reveal-item flex justify-center items-center w-1/2 text-center max-lg:w-full max-lg:h-[340px] max-md:h-[260px]"
-      style="--sr-delay: 200ms"
-      aria-hidden="true"
-    >
-      <div class="works-cardwrap">
-        <div class="works-card works-card--1"></div>
-        <div class="works-card works-card--2"></div>
-        <div class="works-card works-card--3"></div>
-      </div>
-    </div>
+  <!-- Phone group: always absolute bottom-right, bleeds off right + bottom edges -->
+  <div class="works-cardwrap" aria-hidden="true">
+    <img class="works-card works-card--1" src="/images/swrm-preview-phone.webp" alt="" loading="lazy" />
+    <img class="works-card works-card--2" src="/images/pl-preview-phone.webp" alt="" loading="lazy" />
+    <img class="works-card works-card--3" src="/images/jp-preview-phone.webp" alt="" loading="lazy" />
   </div>
 </section>
 
 <style>
-  /* Blue gradient + rounded top corners + clip-path (3D overflow fix) — no Tailwind equivalent */
   .works-section {
     background-color: #00aeff;
     background-image: linear-gradient(120deg, #42afb9 17%, #0095ff 52%, #2b5ef8 81%);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    clip-path: inset(0 0 0 0 round 40px 40px 0 0);
-    /* 3D card transforms use large translate(); visible overflow widens the whole page */
     overflow-x: clip;
-  }
-
-  @media (max-width: 767px) {
-    .works-section {
-      border-radius: 2rem 2rem 0 0;
-      clip-path: inset(0 0 0 0 round 2rem 2rem 0 0);
-    }
-  }
-
-  /* 3D card container (overflow clipped at .works-section so transforms don’t widen the page) */
-  .works-cardwrap {
-    aspect-ratio: 2 / 3;
-    width: 280px;
     position: relative;
+  }
+
+  .works-card {
+    position: absolute;
+    display: block;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.14));
+  }
+
+  /* ── Desktop (≥1024px) ── */
+  .works-cardwrap {
+    position: absolute;
     overflow: visible;
     will-change: transform;
+    bottom: -120px;
+    right: -60px;
+    width: 630px;
+    height: 654px;
   }
 
-  /* Shared card base — 3D transform-style required for perspective */
-  .works-card {
-    aspect-ratio: 2 / 3;
-    width: 280px;
-    transform-style: preserve-3d;
-    background-position: 50%;
-    background-size: cover;
-    border-radius: 36px;
-    position: absolute;
+  .works-card--1 { width: 336px; z-index: 3; left: 289px; top: 44px;  transform: rotate(13.38deg); }
+  .works-card--2 { width: 366px; z-index: 2; left: 17px;  top: 0;     transform: rotate(13.38deg); }
+  .works-card--3 { width: 338px; z-index: 1; left: 0;     top: 282px; transform: rotate(13.38deg); }
+
+  /* ── Tablet (768–1023px) — 25% larger ── */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .works-cardwrap { bottom: -60px; right: -40px; width: 519px; height: 538px; }
+    .works-card--1 { width: 276px; left: 238px; top: 36px;  }
+    .works-card--2 { width: 301px; left: 15px;  top: 0;     }
+    .works-card--3 { width: 278px; left: 0;     top: 233px; }
   }
 
-  /* Individual card transforms — exact rotateX/rotateZ values from Webflow */
-  .works-card--1 {
-    z-index: 3;
-    background-color: #00973d;
-    background-image: url('/images/swrm-preview-phone.webp');
-    transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(360px, -60px);
-  }
-
-  .works-card--2 {
-    z-index: 2;
-    background-color: #242a34;
-    background-image: url('/images/pl-preview-phone.webp');
-    transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(47px, -61px);
-  }
-
-  .works-card--3 {
-    z-index: 1;
-    background-color: #222;
-    background-image: url('/images/jp-preview-phone.webp');
-    transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(220px, 388px);
-  }
-
+  /* ── Mobile (≤767px): large tight cluster, bottom-right, heavy crop ── */
   @media (max-width: 767px) {
-    .works-cardwrap,
-    .works-card {
-      width: 180px;
-    }
-
-    .works-card--1 { transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(220px, -40px); }
-    .works-card--2 { transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(30px, -40px); }
-    .works-card--3 { transform: rotateX(45deg) rotateY(0) rotateZ(45deg) translate(140px, 240px); }
+    .works-cardwrap { right: -80px; width: 560px; height: 580px; bottom: -120px; }
+    .works-card--1 { width: 300px; left: 255px; top: 38px;  }
+    .works-card--2 { width: 325px; left: 14px;  top: 0;     }
+    .works-card--3 { width: 300px; left: 0;     top: 250px; }
   }
 </style>
 
@@ -118,7 +86,7 @@ import PillButton from '../ui/PillButton.astro';
   (function () {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = document.querySelector('.works-section');
-    const cardwrap = section?.querySelector('.works-cardwrap');
+    const cardwrap = section?.querySelector<HTMLElement>('.works-cardwrap');
     if (!section || !cardwrap) return;
 
     const FACTOR = 0.12;
@@ -126,7 +94,6 @@ import PillButton from '../ui/PillButton.astro';
 
     function update() {
       const rect = section.getBoundingClientRect();
-      // offset is positive when section is below viewport center, negative when above
       const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * FACTOR;
       cardwrap.style.transform = `translateY(${-offset}px)`;
       raf = 0;

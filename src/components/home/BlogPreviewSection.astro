@@ -42,7 +42,7 @@ if (previewPosts.length < MAX) {
 
 <div class="scroll-reveal-group w-full">
   <div
-    class="scroll-reveal-item flex items-center justify-between px-10 pt-10 pb-4 w-full max-md:px-5 max-md:pt-8 max-md:pb-3"
+    class="scroll-reveal-item flex items-center justify-between px-[var(--home-rail-gutter)] pt-10 pb-4 w-full max-md:px-5 max-md:pt-8 max-md:pb-3"
     style="--sr-delay: 0ms"
   >
     <SectionBadge label="Blog" />
@@ -78,7 +78,7 @@ if (previewPosts.length < MAX) {
 
     <!-- Scroll buttons: shown on section hover (desktop), hidden on mobile -->
     <button
-      class="blog-btn blog-btn--left absolute top-1/2 -translate-y-1/2 left-6 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      class="blog-btn blog-btn--left absolute top-1/2 -translate-y-1/2 left-0 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
       aria-label="Scroll left"
       type="button"
     >
@@ -89,7 +89,7 @@ if (previewPosts.length < MAX) {
       </span>
     </button>
     <button
-      class="blog-btn blog-btn--right absolute top-1/2 -translate-y-1/2 right-6 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
+      class="blog-btn blog-btn--right absolute top-1/2 -translate-y-1/2 right-0 w-12 h-12 rounded-full border-0 cursor-pointer flex items-center justify-center text-white bg-black/30 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-10 max-md:hidden"
       aria-label="Scroll right"
       type="button"
     >
@@ -109,9 +109,68 @@ if (previewPosts.length < MAX) {
    * lines up with the other sections' content edges.
    */
   .blog-scroll-wrapper {
+    /* --fade-w: centering offset + rail gutter — fade completes at the content edge */
+    --fade-w: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    /* --fade-zone: gradient ramp width; cards are fully gone at fade-w from the edge */
+    --fade-zone: 40px;
     width: 100vw;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
+    /* default (mid-scroll): transparent outside badge lines, 80px ramp on each side */
+    mask-image: linear-gradient(to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
+  }
+
+  /* At scroll start — left side fully opaque; right still fades out AT VIEW ALL */
+  .blog-scroll-wrapper[data-at-start] {
+    mask-image: linear-gradient(to right,
+      black 0,
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(to right,
+      black 0,
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
+  }
+
+  /* At scroll end — right side fully opaque; left still fades in from BLOG badge */
+  .blog-scroll-wrapper[data-at-end] {
+    mask-image: linear-gradient(to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black 100%
+    );
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black 100%
+    );
+  }
+
+  /* Fits without scrolling — no fade at all */
+  .blog-scroll-wrapper[data-at-start][data-at-end] {
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .blog-card-list {
@@ -147,8 +206,20 @@ if (previewPosts.length < MAX) {
   const leftBtn = document.querySelector('.blog-btn--left');
   const rightBtn = document.querySelector('.blog-btn--right');
   const list = document.querySelector('.blog-card-list') as HTMLElement | null;
+  const wrapper = document.querySelector('.blog-scroll-wrapper') as HTMLElement | null;
 
   const SCROLL_AMOUNT = 580;
+
+  function updateFade() {
+    if (!list || !wrapper) return;
+    const atStart = list.scrollLeft <= 1;
+    const atEnd = list.scrollLeft + list.clientWidth >= list.scrollWidth - 1;
+    atStart ? wrapper.setAttribute('data-at-start', '') : wrapper.removeAttribute('data-at-start');
+    atEnd   ? wrapper.setAttribute('data-at-end', '')   : wrapper.removeAttribute('data-at-end');
+  }
+
+  list?.addEventListener('scroll', updateFade, { passive: true });
+  updateFade();
 
   leftBtn?.addEventListener('click', () => {
     list?.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });

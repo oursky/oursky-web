@@ -47,7 +47,7 @@ const testimonials = [
   class="scroll-reveal-group flex flex-col justify-center items-start w-full overflow-hidden"
   aria-label="Testimonials"
 >
-  <div class="w-full mt-section-lg mb-section pt-section relative block max-lg:mt-12 max-lg:pt-8">
+  <div class="w-full max-w-[var(--home-rail-max)] mx-auto px-[var(--home-rail-gutter)] box-border mt-section mb-section pt-section relative block max-lg:mt-10 max-lg:pt-6">
     <div class="testimonials-swiper swiper">
       <div class="swiper-wrapper">
         {testimonials.map((t) => (
@@ -115,6 +115,10 @@ const testimonials = [
           slidesPerView: 3,
           spaceBetween: 24,
         },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
       },
     });
   }
@@ -130,9 +134,30 @@ const testimonials = [
 
 <style>
   .testimonials-swiper {
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     overflow: hidden;
     padding: 0.5rem 0; /* room for shadow on slide cards */
+    --fade-w: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    --fade-zone: 40px;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      transparent var(--fade-w),
+      black calc(var(--fade-w) + var(--fade-zone)),
+      black calc(100% - var(--fade-w) - var(--fade-zone)),
+      transparent calc(100% - var(--fade-w)),
+      transparent 100%
+    );
   }
 
   /* Force equal heights: align-items:normal (Swiper default) behaves like start,
@@ -151,11 +176,14 @@ const testimonials = [
     width: 100%;
   }
 
-  /* Mobile: pad each slide so the single card isn't edge-to-edge */
   @media (max-width: 767px) {
     .testimonials-swiper {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      width: 100%;
+      margin-left: 0;
+      mask-image: none;
+      -webkit-mask-image: none;
+      padding: 0.75rem; /* all sides: room for card box-shadow */
     }
   }
+
 </style>

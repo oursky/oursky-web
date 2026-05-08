@@ -65,7 +65,7 @@ const { post, topLabel, pills, dropTitleMinHOnMobile = false } = Astro.props;
       </p>
     )}
   </a>
-  <div class="mt-auto flex flex-wrap items-center gap-1.5 px-10 pt-5 pb-5 max-md:px-4 max-md:pt-3 max-md:pb-3">
+  <div class="mt-auto flex flex-wrap items-center gap-1.5 px-10 pt-5 pb-10 max-md:px-4 max-md:pt-3 max-md:pb-5">
     {pills.map(({ slug, label }) => (
       <a
         href={`/blog-category/${slug}/`}

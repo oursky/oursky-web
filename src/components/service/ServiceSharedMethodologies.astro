@@ -29,13 +29,18 @@ const methodologies = [
 ---
 
 <section class="scroll-reveal-group w-full" aria-label="Why Oursky">
-  <div class="flex flex-wrap gap-10 max-lg:gap-8 max-sm:gap-10 scroll-reveal-item" style="--sr-delay: 0ms">
-    {methodologies.map((m) => (
-      <div class="shared-method-card flex-none w-[calc(50%-1.25rem)] max-lg:w-[calc(50%-0.75rem)] max-sm:w-full flex flex-col gap-3">
-        <div class="text-black" set:html={m.icon} />
-        <h3 class="m-0 text-lg font-bold text-black leading-6">{m.title}</h3>
-        <p class="m-0 text-base leading-[1.2rem] text-black" set:html={m.body} />
-      </div>
-    ))}
+  <div class="px-8 max-md:px-5">
+    <div
+      class="flex flex-row gap-8 max-sm:gap-10 max-lg:flex-wrap max-sm:flex-col scroll-reveal-item"
+      style="--sr-delay: 0ms"
+    >
+      {methodologies.map((m) => (
+        <div class="shared-method-card flex-1 max-lg:min-w-[calc(50%-0.625rem)] max-sm:min-w-0 flex flex-col gap-3">
+          <div class="methodology-icon text-black" set:html={m.icon} />
+          <h3 class="m-0 text-lg font-semibold leading-6 text-black">{m.title}</h3>
+          <p class="m-0 text-lg leading-6 text-black" set:html={m.body} />
+        </div>
+      ))}
+    </div>
   </div>
 </section>

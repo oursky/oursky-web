@@ -278,10 +278,6 @@ body {
   line-height: 1.43; /* 20px / 14px */
 }
 
-/* Home: last full-width block uses --color-bg-section-light; footer should match, full-bleed. */
-body.page--home .site-footer {
-  background-color: var(--color-bg-section-light);
-}
 
 /* ── Prose (MDX content) ───────────────────────────────
    Values match live oursky.com blog/works bodies:

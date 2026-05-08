@@ -134,11 +134,11 @@ const testimonials = [
 
 <style>
   .testimonials-swiper {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: min(100vw, calc(var(--home-rail-max) + 2 * var(--home-rail-gutter)));
+    margin-left: max(calc(50% - 50vw), calc(50% - var(--home-rail-max) / 2 - var(--home-rail-gutter)));
     overflow: hidden;
     padding: 0.5rem 0; /* room for shadow on slide cards */
-    --fade-w: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    --fade-w: min(max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter)), calc(2 * var(--home-rail-gutter)));
     --fade-zone: 40px;
     mask-image: linear-gradient(
       to right,

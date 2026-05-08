@@ -109,12 +109,12 @@ if (previewPosts.length < MAX) {
    * lines up with the other sections' content edges.
    */
   .blog-scroll-wrapper {
-    /* --fade-w: centering offset + rail gutter — fade completes at the content edge */
-    --fade-w: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    /* --fade-w: capped at 2×gutter so cards don't shrink on ultra-wide viewports */
+    --fade-w: min(max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter)), calc(2 * var(--home-rail-gutter)));
     /* --fade-zone: gradient ramp width; cards are fully gone at fade-w from the edge */
     --fade-zone: 40px;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: min(100vw, calc(var(--home-rail-max) + 2 * var(--home-rail-gutter)));
+    margin-left: max(calc(50% - 50vw), calc(50% - var(--home-rail-max) / 2 - var(--home-rail-gutter)));
     overflow: hidden;
     /* default (mid-scroll): transparent outside badge lines, 80px ramp on each side */
     mask-image: linear-gradient(to right,
@@ -174,9 +174,9 @@ if (previewPosts.length < MAX) {
   }
 
   .blog-card-list {
-    padding-left: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
-    padding-right: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
-    scroll-padding-left: max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter));
+    padding-left: min(max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter)), calc(2 * var(--home-rail-gutter)));
+    padding-right: min(max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter)), calc(2 * var(--home-rail-gutter)));
+    scroll-padding-left: min(max(calc((100vw - var(--home-rail-max)) / 2 + var(--home-rail-gutter)), var(--home-rail-gutter)), calc(2 * var(--home-rail-gutter)));
   }
 
   /* Pseudo-element — requires CSS */

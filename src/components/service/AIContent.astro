@@ -53,14 +53,12 @@ const stats = [
   <!-- Dark-blue intro card -->
   <section class="scroll-reveal-group w-full" aria-label="About our AI services">
     <div class="bg-[#282d49] rounded-lg px-8 pt-[2.8rem] pb-14 max-md:px-5 max-md:pt-8 max-md:pb-10 flex flex-row gap-16 items-center max-lg:flex-col max-lg:gap-8 max-md:gap-6 scroll-reveal-item" style="--sr-delay: 0ms">
-      <div class="w-[28%] shrink-0 flex justify-center max-lg:w-32 max-sm:w-24">
-        <img
-          src="/images/Icon-iOS-Default-1024x10242x.webp"
-          alt="Oursky AI"
-          class="w-full object-contain max-lg:w-32 max-sm:w-24"
-          loading="lazy"
-        />
-      </div>
+      <img
+        src="/images/Icon-iOS-Default-1024x10242x.webp"
+        alt="Oursky AI"
+        class="size-24 shrink-0 self-center object-contain sm:max-lg:size-32 min-lg:size-40"
+        loading="lazy"
+      />
       <div class="flex-1 scroll-reveal-item" style="--sr-delay: 80ms">
         <p class="m-0 text-white text-lg leading-8">
           Oursky has refined AI capabilities for over a decade, delivering solutions like{' '}
@@ -83,14 +81,14 @@ const stats = [
 
   <!-- AI approach items -->
   <section class="scroll-reveal-group w-full" aria-label="How our experts work with AI">
-    <div class="flex flex-col gap-6 max-md:gap-5 scroll-reveal-item" style="--sr-delay: 0ms">
+    <div class="flex flex-col gap-6 max-md:gap-5 scroll-reveal-item px-8 max-md:px-5" style="--sr-delay: 0ms">
       <h2 class="m-0 text-2xl font-black text-black leading-[2.25rem]">How our experts work with AI</h2>
       <div class="flex flex-wrap gap-8 max-md:gap-10 max-sm:gap-10 max-sm:flex-col">
         {approachItems.map((item) => (
           <div class="flex-1 min-w-[200px] max-sm:min-w-0 flex flex-col gap-3">
-            <div class="text-black" set:html={item.icon} />
-            <h3 class="m-0 text-lg font-bold text-black leading-6">{item.title}</h3>
-            <p class="m-0 text-base leading-[1.2rem] text-black">{item.body}</p>
+            <div class="methodology-icon text-black" set:html={item.icon} />
+            <h3 class="m-0 text-lg font-semibold leading-6 text-black">{item.title}</h3>
+            <p class="m-0 text-lg leading-6 text-black">{item.body}</p>
           </div>
         ))}
       </div>
@@ -105,12 +103,12 @@ const stats = [
     <div class="flex flex-col gap-8 scroll-reveal-item" style="--sr-delay: 0ms">
       <h2 class="m-0 text-2xl font-black text-black text-center leading-[2.25rem]">Our Products leveraging the Power of AI</h2>
       <div class="flex flex-row gap-8 justify-center max-sm:flex-col max-sm:items-center scroll-reveal-item" style="--sr-delay: 80ms">
-        <a href="https://formx.ai/" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black hover:opacity-80 transition-opacity">
+        <a href="https://formx.ai/" target="_blank" rel="noopener noreferrer" class="product-card flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black">
           <img src="/images/fx-icon.webp" alt="FormX" class="w-[260px] object-contain" loading="lazy" />
           <h3 class="m-0 text-[2rem] font-semibold leading-[2.625rem]">FormX</h3>
           <p class="m-0 text-lg text-center leading-8">Automate Data Processing with AI</p>
         </a>
-        <a href="https://skytest.ai/" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black hover:opacity-80 transition-opacity">
+        <a href="https://skytest.ai/" target="_blank" rel="noopener noreferrer" class="product-card flex-1 max-w-[300px] flex flex-col items-center gap-3 mt-12 no-underline text-black">
           <img src="/images/skytest-icon.webp" alt="Skytest.ai" class="w-[260px] object-contain" loading="lazy" />
           <h3 class="m-0 text-[2rem] font-semibold leading-[2.625rem]">Skytest.ai</h3>
           <p class="m-0 text-lg text-center leading-8">Enterprise-Grade E2E Testing<br />at a Fraction of the Cost</p>
@@ -125,3 +123,28 @@ const stats = [
   <!-- Shared "why Oursky" methodologies -->
   <ServiceSharedMethodologies />
 </div>
+
+<style>
+  @media (hover: hover) {
+    .product-card {
+      transition: transform 0.35s cubic-bezier(0.34, 1.45, 0.64, 1);
+    }
+    .product-card img {
+      transition: filter 0.35s ease;
+      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.10));
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    .product-card:hover img {
+      filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.18));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .product-card,
+    .product-card img {
+      transition: none;
+    }
+  }
+</style>

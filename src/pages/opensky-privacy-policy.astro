@@ -8,20 +8,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   noindex={true}
 >
   <div class="opensky-page">
-    <div class="flex flex-col gap-6 w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top px-[var(--home-rail-gutter)] box-border max-lg:pt-page-top-tablet">
+    <!-- Horizontal inset matches Header `.header-wrapper` (gutter + --home-hero-header-inline-pad on both sides) -->
+    <div
+      class="flex flex-col gap-[3.75rem] w-full max-w-[var(--home-rail-max)] mx-auto pt-page-top pb-16 box-border px-[calc(var(--home-rail-gutter)+var(--home-hero-header-inline-pad))] max-lg:pt-page-top-tablet max-lg:gap-12 max-md:pb-12"
+    >
 
-      <!-- Page hero: gradient title + subtitle -->
+      <!-- Page hero: flush to rail — no extra ml/pl (those pushed content right of the header logo) -->
       <section class="scroll-reveal-group w-full flex flex-col items-start gap-6" aria-label="OpenSky Privacy Policy">
-        <div class="ml-5 max-sm:ml-0 scroll-reveal-item" style="--sr-delay: 0ms">
+        <div class="scroll-reveal-item w-full max-w-hero-desc" style="--sr-delay: 0ms">
           <h1 class="opensky-hero__title m-0 text-5xl font-semibold leading-hero max-md:text-hero-secondary max-md:leading-hero-sm">OpenSky</h1>
         </div>
-        <div class="max-w-hero-desc scroll-reveal-item" style="--sr-delay: 80ms">
-          <p class="m-0 pl-5 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm max-md:pl-0">Privacy Policy</p>
+        <div class="scroll-reveal-item w-full max-w-hero-desc" style="--sr-delay: 80ms">
+          <p class="m-0 text-2xl font-medium leading-desc text-black max-md:text-lg max-md:leading-desc-sm">Privacy Policy</p>
         </div>
       </section>
 
-      <!-- Policy content -->
-      <div class="scroll-reveal-item w-full max-w-[63.75rem] mx-auto mt-[3.75rem] mb-[3.75rem] px-5 max-lg:px-0" style="--sr-delay: 160ms">
+      <div class="scroll-reveal-item w-full max-w-[63.75rem] box-border" style="--sr-delay: 160ms">
         <div class="text-2xl leading-loose text-text prose prose-2xl max-w-none">
           <p>OpenSky is an internal-use mobile application developed by Oursky Ltd. This Privacy Policy explains how we handle user information when using the app.</p>
 

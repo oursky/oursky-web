@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/3c3d3be8a2_6799295d0330a30a262a0d8a_903F4B0.jpg.png"
 draft: false
-webflowId: "679929900bbcd75afaa4492e"
 ---
 
 ![](/images/blogs/3c3d3be8a2_6799295d0330a30a262a0d8a_903F4B0.jpg.png)

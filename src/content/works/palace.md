@@ -8,7 +8,6 @@ bgColor: '#77866e'
 heroImage: "/images/works/6c4751d6be_66d09af647c0fdcef8a01dee_Noisy Glass Cube@2-1512x900.webp"
 thumbnail: "/images/works/a06ef8e060_65a1111002c8f2d7ca131e27_pl-preview-phone.webp"
 draft: false
-webflowId: "65a11132779b3ead687f4b04"
 ---
 
 ###### The COVID-19 pandemic disrupted many industries, including the fitness world. Gyms closed, and traditional personal training models faced challenges. But Dinesh, an insightful entrepreneur in Hong Kong, saw an opportunity. He recognized the growing need for a space where freelance personal trainers and independent wellness practitioners could thrive.

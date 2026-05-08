@@ -10,7 +10,6 @@ categories:
 displayCategory: "PRODUCT MANAGEMENT"
 image: "/images/blogs/e588131e12_65800df8928395bb9d852509_Jamn.webp"
 draft: false
-webflowId: "65800dfc62633c1f4fb7c50a"
 ---
 
 ## Outsourcing vs insourcing

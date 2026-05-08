@@ -8,7 +8,6 @@ categories:
 displayCategory: "Software QA"
 image: "/images/blogs/6ccce51822_679951bcf2137d56a87a1d57_software-qa-test-result-oursky.png"
 draft: false
-webflowId: "679951e1e5c70fc684f7ffe8"
 ---
 
 ![agile testing CI](/images/blogs/b2501db29f_679951c63ab5547d30730798_software-qa-test-result-oursky-720x389.png)

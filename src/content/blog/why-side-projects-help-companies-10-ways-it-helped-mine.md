@@ -8,7 +8,6 @@ categories:
 displayCategory: "CULTURE"
 image: "/images/blogs/dbfe57185a_66e3100a57508ab9c8a21af2_Screen-Shot-2016-08-29-at-10.24.02-PM-720x339.png"
 draft: false
-webflowId: "66e31037301d32ee6856d0a7"
 ---
 
 ![Facebook Notification Chima Open Door](/images/blogs/c4cbfabfa1_66e30ff9279f9ba3c0274fb7_Screen-Shot-2016-08-18-at-1.22.57-PM.webp)

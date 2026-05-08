@@ -9,7 +9,6 @@ categories:
 displayCategory: "DEVELOPMENT"
 image: "/images/blogs/6c20d839c7_66e316bd14404e1e88b7fb58_photo-1546074177-ffdda98d214f.webp"
 draft: false
-webflowId: "66e31739014e7117d707c321"
 ---
 
 ![microservices terms](/images/blogs/90c6250e71_66e31719ed43523cfd3e3e8f_photo-1546074177-ffdda98d214f-1160x870.jpeg)

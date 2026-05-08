@@ -8,7 +8,6 @@ categories:
 displayCategory: "FormX"
 image: "/images/blogs/98fdeef919_673e226538ae783ffc6ad77d_6604f315601b171d1e9adcf5_614d788a8bd0470c5cf7db82_Receipt%20Extraction%20Main.png"
 draft: true
-webflowId: "673e22d7a9e0b7dadeface51"
 ---
 
 Optical Image Recognition (OCR) has been widely used these days to extract information from various documents like receipts to digitize physical paper documents and optimize document management workflow. Even though receipt OCR comes in handy when businesses have to deal with piles of receipts every day, an OCR receipt scanner itself is not enough to generate accurate-enough results.

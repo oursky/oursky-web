@@ -9,7 +9,6 @@ categories:
 displayCategory: "PROECT MANAGEMENT"
 image: "/images/blogs/0b84602eab_66e304897c63cee189fc8e1f_sigmund-4UGmm3WRUoQ-unsplash-1160x870.webp"
 draft: false
-webflowId: "66e304da6bae31e593ec9c1d"
 ---
 
 The role and responsibilities of a project manager in software development aren’t just restricted to being a middleman between the client and development teams. Beyond [setting goals and keeping deadlines](https://blog.oursky.com/2017/11/29/project-managers-developers-ship-dates-ebs-evidence-based-scheduling/), a project manager in software development makes sure that everyone in on the same page. By also being involved in the design and development stages, the project manager can ensure that the digital product reflects the stakeholder’s expectations and vision.

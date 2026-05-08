@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/404d12a10d_673e2c371a8b4b3fe0c235c3_viper-.png"
 draft: false
-webflowId: "673e2c545b10a93fb3c7a09c"
 ---
 
 The MVC Architecture is generally used in developing iOS applications.

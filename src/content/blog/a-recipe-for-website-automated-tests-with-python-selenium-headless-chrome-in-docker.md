@@ -8,7 +8,6 @@ categories:
 displayCategory: "Software Testing"
 image: "/images/blogs/77f78aa7c3_67994153dda2651f69e72a2c_Oursky-9365.webp"
 draft: false
-webflowId: "6799418fd64c3ca1edcb1f61"
 ---
 
 ![carmen female developer](/images/blogs/7aca75e9e9_679941668a6ab8453f3f8e9c_Oursky-9365.webp)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "FOUNDER STORIES"
 image: "/images/blogs/98155725a1_66e311b9fbeb775694ec2b51_1pYaYD0AUUirAY6IU4gweWA-720x480.jpeg"
 draft: false
-webflowId: "66e3129d88b9d959dc58b85d"
 ---
 
 Years ago, I co-founded a company with Rick and Roy and created a product that helped businesses create forms and collect payments via Paypal. It ate up three of our lives and made life better for some small businesses. Honestly, this first product didn’t disrupt an industry. It probably only took a handful of clients from bigger competitors and we don’t have investors from Silicon Valley. Oursky has no valuation. Instead, we started getting paid to make other people’s products. Yes. We became an agency. We gave up being a sexy startup to become _just another agency_. And we got more jobs than we could handle, so we recruited more developers to help.

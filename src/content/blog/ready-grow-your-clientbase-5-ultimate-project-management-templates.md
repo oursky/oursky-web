@@ -8,7 +8,6 @@ categories:
 displayCategory: "Project Management"
 image: "/images/blogs/3172a64696_67994c2a974cebaa3edf8e4f_oursky-blog-img-220916.webp"
 draft: false
-webflowId: "67994c47ce187ddae853f956"
 ---
 
 ![](/images/blogs/ee435c414e_67994c1f974cebaa3edf83e6_oursky-blog-img-220916-720x378.webp)

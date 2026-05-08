@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/2a5ab48cff_66e3414d06cf626ff37ac77b_image-1160x773.webp"
 draft: false
-webflowId: "66e34153e8d13c9e0ce3b0a8"
 ---
 
 Data privacy and security is an essential R&D stage for many applications. Here, we’ll walk you through on how to securely handle sensitive or personal information in your applications and reduce their chance of leaking.

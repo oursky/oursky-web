@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/71a3e3f991_67995221e5c70fc684f83d93_photo6186087868431181780.webp"
 draft: false
-webflowId: "6799523254769870a1f492f3"
 ---
 
 ![hong kong startup culture](/images/blogs/515785e20a_679952189e5bbde3d22b2331_photo6186087868431181780-720x540.jpeg)

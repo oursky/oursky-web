@@ -8,7 +8,6 @@ categories:
 displayCategory: "GROWTH"
 image: "/images/blogs/51a6d34cca_66e321e41bff1a3902a6ccb8_william-iven-gcsNOsPEXfs-unsplash-1160x770.webp"
 draft: false
-webflowId: "66e3221b26a1336dc9a80554"
 ---
 
 In the 90s, a downpour might leave you stranded on a sidewalk shed with other commuters clamoring for a cab that won’t appear after another hour or so. We used to compromise needs over everyday incidences we can’t control, like bad weather. The advent of smartphones and applications, however, let people bid goodbye to many inconveniences and change the way we do things.

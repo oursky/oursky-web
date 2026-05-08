@@ -8,7 +8,6 @@ categories:
 displayCategory: "OpenSource"
 image: "/images/blogs/a138bb513e_679941aae30d0858a819cd21_Screen-Shot-2017-10-09-at-7.37.06-PM.png"
 draft: false
-webflowId: "6799428ee30d0858a81ae890"
 ---
 
 ![discourse forum deployed on kubernetes k8s](/images/blogs/5a28785fc2_679941be5d936e4b69f9d858_Screen-Shot-2017-10-09-at-7.37.06-PM.png)

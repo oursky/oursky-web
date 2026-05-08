@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/91a94d5083_6799597c7e076a22d075685b_leon-vbxyFxlgpjM-unsplash-1-scaled.webp"
 draft: false
-webflowId: "679959967ca8e3d723c27024"
 ---
 
 Over the past years working at Oursky, I’ve worked with a lot of startup founders, product owners, and entrepreneurs. I’ve joined many startup communities and even shared some of my experiences with them. It’s one of the most enjoyable parts of my work (apart from the coffee!). I’ve listened to ideas of all shapes, sizes, and color. Most were creative ways to solve the same problems. Some were disruptive and very niche, while others were just not technically feasible, if not bizarre.

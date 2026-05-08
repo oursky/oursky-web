@@ -8,7 +8,6 @@ categories:
 displayCategory: "Client Stories"
 image: "/images/blogs/92d6e4c52e_679944dc240ba8d13d5e6cec_Screen-Shot-2016-03-24-at-6.webp"
 draft: false
-webflowId: "679944fcd176c760409548a0"
 ---
 
 As a software development company, Oursky has worked with a number of clients on building great digital products. Throughout our journey, we learned a lot in refining our approach and process for developing minimum viable products (MVP). These learning experiences helped us build mobile apps for our clients that are featured by the App Store and loved by users, and get millions of downloads and active users.

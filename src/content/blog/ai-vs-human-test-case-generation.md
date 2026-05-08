@@ -9,7 +9,6 @@ categories:
 displayCategory: "Software QA"
 image: "/images/blogs/8110973e01_66e300c2bdcd1bb946551a3f_8137885-scaled.webp"
 draft: false
-webflowId: "66e301057ff06c7c48de9e3c"
 ---
 
 Over the past few months, people have seen a surge of AI generated contents from articles to illustrations and more. ChatGPT is currently the most powerful AI model with the ability to chat with humans like a real person, and has a huge professional knowledge base to perform even techincal tasks.

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Devops"
 image: "/images/blogs/018361b6e4_6799270aed5f0f3cde9a9acc_docker-cover.webp"
 draft: false
-webflowId: "6799272c15958e6f60ac44f7"
 ---
 
 ![](/images/blogs/19b4ff1482_67992714d74f269e13d7542e_docker-cover.webp)

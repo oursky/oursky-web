@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/2658bb5a22_679926163cdca49933e7e4c9_Screen-Shot-2015-07-14-at-8.webp"
 draft: false
-webflowId: "6799261a4273ee79928878b5"
 ---
 
 [Open Graph](http://ogp.me/) is a good standard, it helps turning a web page to become a rich object in a social graph.  

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/f4ede91e5c_67995894c7bcb32a283ee869_table-2-1536x768.webp"
 draft: false
-webflowId: "6799589b33831f9bf4d5dee3"
 ---
 
 “I have an idea for an app. How much does it cost to develop an app? Where do I find investors and tech angels? How do I raise app funding?”

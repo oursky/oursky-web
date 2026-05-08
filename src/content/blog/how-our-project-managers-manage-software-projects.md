@@ -8,7 +8,6 @@ categories:
 displayCategory: "PRODUCT MANAGEMENT"
 image: "/images/blogs/28d38f8ec8_66e30f6057508ab9c8a154e7_guille-b-cbuBpUx1_eI-unsplash.webp"
 draft: false
-webflowId: "66e30f7fa668c7a426bbc163"
 ---
 
 Managing software projects is no easy task. In this post, we will share what our project managers (PM) do and how they work with developers on software projects, which begins the minute our PMs receive a wireframe from the designers.

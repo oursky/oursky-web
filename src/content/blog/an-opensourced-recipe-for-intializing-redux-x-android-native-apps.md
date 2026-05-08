@@ -8,7 +8,6 @@ categories:
 displayCategory: "OpenSource"
 image: "/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.webp"
 draft: false
-webflowId: "679942e45d936e4b69fb39c2"
 ---
 
 ![oursky opensource github](/images/blogs/efe99b5919_679942d2f9deac5f8d123019_Oursky-life-8827.webp)

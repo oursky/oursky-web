@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/631af278b9_6799534c36bc0d1279202abb_IMG_0578-768x576.jpg"
 draft: false
-webflowId: "67995361d1b6a0967d1ff97a"
 ---
 
 ![oursky taipei 台北](/images/blogs/4359782f24_679953455defbec984e29f9a_IMG_0578-720x540.jpeg)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "PRODUCT MANAGEMENT"
 image: "/images/blogs/b71962c9a9_66e315083661072913bdb2fc_matt-briney-160808-720x480.jpg"
 draft: false
-webflowId: "66e315370a45327a98e44e9a"
 ---
 
 Until 2014, I was the only project manager (PM) for the company I co-founded 9 years ago. While my co-founder, [Ben Cheng](https://medium.com/@chpapa), became the technical and [product bottleneck](https://medium.com/personal-growth/how-i-attracted-awesome-team-members-as-an-introverted-founder-cd6c17cf627), I became the project management bottleneck when our team grew to 20+ developers and 10+ projects.

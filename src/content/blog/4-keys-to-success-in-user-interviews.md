@@ -9,7 +9,6 @@ categories:
 displayCategory: "BUILD PRODUCT"
 image: "/images/blogs/20a77bc57d_66e30e6544a3e78fb663a2fa_tumblr_msab2vjdzU1rhf0i3o1_1280.jpg"
 draft: false
-webflowId: "66e30ef4b6181472176b0abc"
 ---
 
 ![y combinator quote make something people want](/images/blogs/383c2a8049_66e30e9f1677d3cfe14b5171_tumblr_msab2vjdzU1rhf0i3o1_1280.jpeg)

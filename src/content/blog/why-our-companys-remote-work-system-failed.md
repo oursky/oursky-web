@@ -8,7 +8,6 @@ categories:
 displayCategory: "FOUNDER LEARNINGS"
 image: "/images/blogs/365c0391ca_67994ebd690e28959edd0847_10xI1TFDSNb1etCQSRdGSHg.webp"
 draft: false
-webflowId: "67994ed423af1a9d6bd13103"
 ---
 
 ![](/images/blogs/0f04ac68c6_67994eb44b27ce75c99ed74f_10xI1TFDSNb1etCQSRdGSHg-720x481.jpeg)

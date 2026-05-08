@@ -8,7 +8,6 @@ categories:
 displayCategory: "Product Management"
 image: "/images/blogs/da0e49e877_679946d955c9627e91a6e6c7_Screen-2-Copy-1-575x1024.webp"
 draft: false
-webflowId: "679946f6690e28959ed5bb10"
 ---
 
 1.  Coffee bots mean no more waiting in line for caffeine.

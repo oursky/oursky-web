@@ -8,7 +8,6 @@ categories:
 displayCategory: "Engineering Culture"
 image: "/images/blogs/3feac975cf_67994e6b55c9627e91aedcb3_meme-768x432.png"
 draft: false
-webflowId: "67994e947db63d83079e586a"
 ---
 
 ![js javascript](/images/blogs/ca2f663f7b_67994e7324f417e49877d157_meme-720x405.png)

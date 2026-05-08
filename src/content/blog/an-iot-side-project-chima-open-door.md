@@ -8,7 +8,6 @@ categories:
 displayCategory: "IOT"
 image: "/images/blogs/d7f51bd3f6_67993eadb2410b219086190d_Oursky-9381.jpg"
 draft: false
-webflowId: "67993efa0b2cac4eb1709596"
 ---
 
 ![](/images/blogs/6d5c192877_67993ec3928c07968276a0b0_Oursky-9381.jpeg)

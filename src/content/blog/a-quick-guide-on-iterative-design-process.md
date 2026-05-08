@@ -8,7 +8,6 @@ categories:
 displayCategory: "Design"
 image: "/images/blogs/73c9df4402_66e318822a6d15d46b33a8b7_rawpixel-com-296613-720x480.jpg"
 draft: false
-webflowId: "66e31992d42aeba2952592b2"
 ---
 
 If clean and maintainable code is at the heart of a great product, an intuitive and seamless user interface and user experience (UI/UX) is the soul. But in order to have great UX, technical considerations must go into the app design. In order to express great mobile app design, development teams must give as much attention to their front-end code as they do to their system architecture.

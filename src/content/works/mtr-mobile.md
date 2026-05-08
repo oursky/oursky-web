@@ -8,7 +8,6 @@ bgColor: '#003562'
 heroImage: "/images/works/7435b37153_67eedfc1001c726d46b11411_mockup3.webp"
 thumbnail: "/images/works/9b486f979d_67f67f73e089bd5b4b12d991_mtr-mobile.webp"
 draft: false
-webflowId: "67eeddd0d8505637ff53555b"
 ---
 
 **Clean Tracks, Clear Journey: A UI Revamp for Seamless Train Travel**

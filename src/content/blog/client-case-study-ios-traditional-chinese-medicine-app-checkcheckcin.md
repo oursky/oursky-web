@@ -8,7 +8,6 @@ categories:
 displayCategory: "Client Stories"
 image: "/images/blogs/3ec5cf127b_67995282ba8a39e39ec1623d_ourskyblog-ccc.jpeg"
 draft: false
-webflowId: "6799529a303d026f27f903fb"
 ---
 
 ![](/images/blogs/3ec5cf127b_67995282ba8a39e39ec1623d_ourskyblog-ccc.jpeg)

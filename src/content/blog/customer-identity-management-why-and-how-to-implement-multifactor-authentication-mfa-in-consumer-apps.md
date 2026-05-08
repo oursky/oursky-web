@@ -9,7 +9,6 @@ categories:
 displayCategory: "Multifactor authentication"
 image: "/images/blogs/67785e4e21_66e303fdbf76331a3fa1bfd1_franck-DoWZMPZ-M9s-unsplash-1160x870.jpg"
 draft: false
-webflowId: "66e3046b7077ba8363d54ebe"
 ---
 
 In August last year, someone going by the handle “[Kromatix](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/)” was seen peddling 400 compromised SendGrid accounts in the cybercriminal underground. Kromatix sold these for as much as US$400 per hacked SendGrid account, touting that they can send as much as 10 million emails per month.

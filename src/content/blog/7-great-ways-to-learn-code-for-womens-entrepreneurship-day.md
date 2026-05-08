@@ -8,7 +8,6 @@ categories:
 displayCategory: "CULTURE"
 image: "/images/blogs/aa622e4aa6_66e3106a890bd45d95615689_Aleks-Dorohovich.webp"
 draft: false
-webflowId: "66e310f4e154677cd3115338"
 ---
 
 The tech industry is one of the fastest growing industries, but only [28% of proprietary software jobs are held by women](https://www.themuse.com/advice/the-latest-stats-on-women-in-tech). The industry is slowly changing, and diversity initiatives are supporting women to get jobs and rise in company ranks. At Oursky, we have women across all our teams and leadership whom have helped [shape our inclusive company policies](http://blog.oursky.com/2016/09/29/period-leave-female-developers-tech/). For [Women Entrepreneurship Day](http://womenseday.org/) (Twitter #choosewomen), we wanted to share the awesome organizations — founded by women! — that help women and girls take off as awesome developers.

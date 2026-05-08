@@ -57,3 +57,6 @@ ref/oursky-com-2023.webflow/
 # Local Netlify folder + Deno cache from edge-function emulation in `netlify dev`
 .netlify
 deno.lock
+
+# Migration handoff docs — kept locally but no longer tracked post-launch
+docs/

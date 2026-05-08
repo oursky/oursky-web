@@ -8,7 +8,6 @@ categories:
 displayCategory: "Project Management"
 image: "/images/blogs/7185e4ca2b_67995378f62a3a7b5895f477_19472808621_a67e7697ec_o.webp"
 draft: false
-webflowId: "6799539fa75bd78e4bb31c18"
 ---
 
 ![taipei sunset](/images/blogs/fce9afc023_67995384d1b6a0967d2021a9_19472808621_a67e7697ec_o.webp)

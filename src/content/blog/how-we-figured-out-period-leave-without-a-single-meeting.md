@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/724ac904f9_67994c8efe20b33f4be45398_1s0LCbddq8T4VN4kXtt9r2g.webp"
 draft: false
-webflowId: "67994c9ec94bf5d11729a93b"
 ---
 
 Normally, we talk about code at Oursky, but a discussion about [period leave in Hong Kong](http://www.scmp.com/comment/insight-opinion/article/1932342/why-not-period-leave-women-hong-kong-should-consider-womens) last spring got us thinking about our team culture. Why were people having this debate? Or rather, we realized, the question was: why wasn’t it one for us?

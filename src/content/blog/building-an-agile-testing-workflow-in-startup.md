@@ -9,7 +9,6 @@ categories:
 displayCategory: "QA IN SCRUM METHODOLOGY"
 image: "/images/blogs/75659f176e_66e30303e992404f6e423c3c_pexels-picjumbocom-210661-1160x773.jpg"
 draft: false
-webflowId: "66e30356c5577b9b8ea33b41"
 ---
 
 **Agile** methodology has been a trend in software industry in the recent years. Publishing speedy new releases with high quality is the goal of all product teams.

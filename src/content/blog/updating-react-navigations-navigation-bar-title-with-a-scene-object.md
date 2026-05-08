@@ -8,7 +8,6 @@ categories:
 displayCategory: "React Native"
 image: "/images/blogs/3e5f64d58e_67994096d64c3ca1edc9ecf9_react-navigation.webp"
 draft: false
-webflowId: "679940dac88568be156f6109"
 ---
 
 > **NOTE: This version is based on React Navigation 1.0.0-beta.6**

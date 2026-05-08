@@ -8,7 +8,6 @@ categories:
 displayCategory: "Blockchain"
 image: "/images/blogs/a34af48718_67993d2033e340b8738a2c62_blog_header3.webp"
 draft: false
-webflowId: "67993d40a11369db32691cf6"
 ---
 
 ![](/images/blogs/d4f2d67e01_67993d1194397904b35a93e1_blog_header3.png)

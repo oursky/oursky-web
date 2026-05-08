@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/6669e1979f_67994e0945bd81b83000234c_15178179_10154072195426485_9137850630362655260_n.jpg"
 draft: false
-webflowId: "67994e1cd42e2f08f17d75f5"
 ---
 
 It’s almost 2017! Most would agree 2016 has been a roller coaster ride. Before Oursky breaks for the winter holidays, we’re taking the time to reflect on this year’s milestones, achievements, and learnings. We’re grateful to all our clients, friends, and extended Oursky family who challenged and supported us to grow as a company.  Find out what we’ve been up to below!

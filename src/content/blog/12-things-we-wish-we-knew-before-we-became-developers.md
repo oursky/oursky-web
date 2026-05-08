@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/f6c83c9e61_67994dd1b3407cd04b04cf46_Group-1.webp"
 draft: false
-webflowId: "67994debf2137d56a875a667"
 ---
 
 ![things i wish i knew as a developer](/images/blogs/148ceabb20_67994dc79e5bbde3d226b64c_Group-1-720x405.png)

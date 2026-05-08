@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/a2268f0ddc_67994a490f76d341d9a93f56_pablo-22.webp"
 draft: false
-webflowId: "67994a5e149ea6cafad199c3"
 ---
 
 ## Make Products that Pay

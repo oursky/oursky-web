@@ -8,7 +8,6 @@ categories:
 displayCategory: "Guides for Outsourcing"
 image: "/images/blogs/81fc51c9ee_679956daf82bf08f7d8cf405_pexels-fauxels-3183150-scaled.webp"
 draft: false
-webflowId: "679956ec87883908fb4612e2"
 ---
 
 This guide will arm you with insights on app or software development. We’ll walk you through the things you need to do when creating a specification document that you’ll use to communicate your idea to your team and stakeholders. If you want something to print out and send to your team, check out our [app project specification creator](https://guides.oursky.com/app-project-specification) that you can fill to build a specification document.

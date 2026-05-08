@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/a5dc261751_6799510993bdb1ce79fbea1e_SnasSugar-Appicon-Preview.webp"
 draft: false
-webflowId: "6799512154769870a1f32ef8"
 ---
 
 ![iphone x mockup app design UI UX](/images/blogs/e8d52964a5_67995100697ab60b8f3a0256_SnasSugar-Appicon-Preview-720x354.webp)

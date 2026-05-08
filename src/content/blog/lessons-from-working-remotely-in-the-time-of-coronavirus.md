@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/1572dad99e_679954b493bdb1ce79ffdab3_bench-accounting-8D2k7a3wMKQ-unsplash-scaled.webp"
 draft: false
-webflowId: "679954c5ff9dc23d3b0409a3"
 ---
 
 The novel coronavirus pandemic is teaching people all around the world hard lessons. One of them is how to manage ourselves at work while hunkered down to our homes as we wait for everything to settle down. Remote working is abuzz and social distancing is nearly mandatory. A lot of companies are ramping up work-from-home arrangements and moving meetings online to protect the health of their employees.

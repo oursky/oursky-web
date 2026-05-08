@@ -8,7 +8,6 @@ categories:
 displayCategory: "UI 101"
 image: "/images/blogs/ff4dc49b80_6799267ef349eabfd48b59a7_UI-BASIC-1 (1).jpg"
 draft: false
-webflowId: "6799269763cf1df864a959c7"
 ---
 
 We have many pixel lovers at Oursky. We strive for perfection in the UI design process, and most importantly, make sure developers implementing them perfectly.

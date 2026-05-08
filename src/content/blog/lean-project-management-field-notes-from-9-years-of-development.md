@@ -8,7 +8,6 @@ categories:
 displayCategory: "Project Management"
 image: "/images/blogs/618e2b8314_67995088005556a1b388e404_dawid-zawila-226624-768x540.jpg"
 draft: false
-webflowId: "6799509eba8a39e39ebfa5dd"
 ---
 
 ![lean-project-management](/images/blogs/b5844d9bc2_6799508123af1a9d6bd305fc_dawid-zawila-226624-720x506.jpeg)

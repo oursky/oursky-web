@@ -8,7 +8,6 @@ categories:
 displayCategory: "Artificial Intelligence"
 image: "/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.webp"
 draft: false
-webflowId: "67993e72f22c56cca5a9be9f"
 ---
 
 ![pixabay ai tensorflow post](/images/blogs/5c36a5fcce_67993e2e087156cfaa539ba1_binary-1536651_1920.webp)

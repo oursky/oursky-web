@@ -8,7 +8,6 @@ bgColor: '#1a9f5f'
 heroImage: "/images/works/8a01950b54_65802c4a9bd169732357595b_SWRM.webp"
 thumbnail: "/images/works/7311235fd1_659513ea6bd758cb3a45b94c_swrm-preview-phone.webp"
 draft: false
-webflowId: "65802c54a07870c109215192"
 ---
 
 ##### The Need: An app that can motivate people into reducing their carbon footprint

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Guides for Outsourcing"
 image: "/images/blogs/f69e95d49a_679952bca40b4f0f1fb2b7dd_annie-spratt-604126-unsplash-768x504.jpg"
 draft: false
-webflowId: "679952d0f86d88345199c092"
 ---
 
 ![Photo by Annie Spratt on Unsplash](/images/blogs/dfffa9271a_679952b574e0389b4b45177d_annie-spratt-604126-unsplash-720x472.jpeg)

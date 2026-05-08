@@ -8,7 +8,6 @@ bgColor: '#fd8a18'
 heroImage: "/images/works/bfd1adc630_65802c80b9d86a471ec92cee_Wilson Parking.webp"
 thumbnail: "/images/works/52503dc5ed_65951119c3ce9c6556fb8afa_wilsonparking-preview-phone.webp"
 draft: false
-webflowId: "65802c8c1ca2c616c3898122"
 ---
 
 ###### The Need: Revamp mobile apps to jump-start a contactless parking experience

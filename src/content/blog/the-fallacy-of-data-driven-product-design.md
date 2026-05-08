@@ -8,7 +8,6 @@ categories:
 displayCategory: "UI/UX Design"
 image: "/images/blogs/cb865de3bc_67994796ff9dc23d3bf6ac34_two_dramas.webp"
 draft: false
-webflowId: "679947bfa40b4f0f1fa6f6d5"
 ---
 
 ![Alpha House and House of Cards](/images/blogs/6216aa409e_679947a7be45937c15d5fe5f_two_dramas.webp)

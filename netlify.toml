@@ -8,16 +8,9 @@
   NODE_VERSION = "22"
 
 # ── Redirect strategy ───────────────────────────────────────────────────────
-# 1) Generic .html stripping (improves on Webflow's current behaviour, which
-#    404s on /about.html etc.).
-# 2) Legacy URL rewrites: imported from Webflow's redirects CSV via
-#    `npm run convert:redirects exports/webflow/redirects.csv`. Paste the
-#    generated [[redirects]] blocks into the section marked below.
-#
 # Rule ordering matters: Netlify applies the first match. Put specific
 # rules ABOVE wildcards. Add `force = true` to any rule whose source URL
-# also exists as a static page on this site (the converter script flags
-# these automatically).
+# also exists as a static page on this site.
 # ────────────────────────────────────────────────────────────────────────────
 
 # Redirect Netlify preview domain to production.

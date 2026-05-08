@@ -8,7 +8,6 @@ categories:
 displayCategory: "Software Testing"
 image: "/images/blogs/05c0bac77b_679928a9b7be1beda2dc35e6_Agile-Pyramid-comic.png"
 draft: false
-webflowId: "679928e18a612cc0207e988f"
 ---
 
 ![](/images/blogs/05c0bac77b_679928a9b7be1beda2dc35e6_Agile-Pyramid-comic.png)

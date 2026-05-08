@@ -8,7 +8,6 @@ categories:
 displayCategory: "Augmented Reality"
 image: "/images/blogs/9123ab46a9_67994053c0359ca570108331_monica-silva-144544-1024x681.jpg"
 draft: false
-webflowId: "6799407a476c3cb2a8881468"
 ---
 
 ![](/images/blogs/98724e9399_6799406353e5a1d6a9fedff2_monica-silva-144544.webp)

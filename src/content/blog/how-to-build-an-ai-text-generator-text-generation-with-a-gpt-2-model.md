@@ -8,7 +8,6 @@ categories:
 displayCategory: "Artificial Intelligence"
 image: "/images/blogs/932be10e6f_6799430118fcc7842c36cec5_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648.webp"
 draft: false
-webflowId: "679943e3c3544ff0a210b45a"
 ---
 
 ![](/images/blogs/fe5f73d071_67994321333a6b4a8942beed_fotis-fotopoulos-DuHKoV44prg-unsplash-scaled-e1589540870648-1160x519.jpeg)

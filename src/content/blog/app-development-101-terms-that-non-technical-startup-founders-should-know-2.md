@@ -8,7 +8,6 @@ categories:
 displayCategory: "Guides for Outsourcing"
 image: "/images/blogs/2c23bd0eb1_679955be4a4e525594c1a4f2_teemu-paananen-bzdhc5b3Bxs-unsplash-1536x1097.webp"
 draft: false
-webflowId: "679955d7d760b0c7d9d06294"
 ---
 
 Ever feel like application or software developers speak a foreign language when you discuss your app ideas? Just as slang and jargon are common in everyday conversations, the world of app and software development is filled with them, too.

@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/86256bf2c9_6799482b54769870a1e9c883_1.jpeg"
 draft: false
-webflowId: "6799484a542c0b889ce7bf7f"
 ---
 
 Have you ever dreamed about random strangers showing up your storefront and walking away a happy customer? In the digital world, that’s called your website. Just like a well-designed store that’s a pleasure to browse through, there can be well-designed websites that are effortless to navigate.

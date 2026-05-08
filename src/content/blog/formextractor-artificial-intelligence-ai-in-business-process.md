@@ -8,7 +8,6 @@ categories:
 displayCategory: "Machine Learning and AI"
 image: "/images/blogs/0d5bc7d8bf_6799547d223c893cb17ebc4b_campaign-creators-774sCXD0dDU-unsplash-scaled.webp"
 draft: false
-webflowId: "67995493ff9dc23d3b03e275"
 ---
 
 From digital assistants Siri and Alexa to e-commerce and self-service banking chatbots, artificial intelligence (AI) continues to change the way we buy, sell, interact, manage activities, and everything else in between. In fact, by 2022, [75%](https://www.forbes.com/sites/gilpress/2019/11/22/top-artificial-intelligence-ai-predictions-for-2020-from-idc-and-forrester/#70d17bac315a) of enterprises are expected to include elements of AI to improve their technology and process development.

@@ -9,7 +9,6 @@ categories:
 displayCategory: "User Experience"
 image: "/images/blogs/7f14b43b0f_66e349609847feb156298a34_lead-nuclear-power-human-error-homer-simpson-1-1024x680.webp"
 draft: false
-webflowId: "66e3497eebe06c795cbc410f"
 ---
 
 We've been dealing with [many many different apps](https://oursky.com/works/). App quality and usability are always our core values we never settle for less.

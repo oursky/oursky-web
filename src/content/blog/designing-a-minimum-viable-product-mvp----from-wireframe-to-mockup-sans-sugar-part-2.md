@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/2f7bccab06_679951565908fb600767534f_Sans-Sugar-ui-design.webp"
 draft: false
-webflowId: "6799516786e9c74f13e8eac2"
 ---
 
 ![iphone x mockup ux ui design hong kong](/images/blogs/4ffee0b4a6_6799514d45bd81b8300363c7_Sans-Sugar-ui-design-720x347.webp)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Client Stories"
 image: "/images/blogs/03323ab616_679953f4387921465f2815a5_A4.webp"
 draft: false
-webflowId: "6799541b8149b61a4ec44aa9"
 ---
 
 ![edwel energy footprint tracker](/images/blogs/03323ab616_679953f4387921465f2815a5_A4.webp)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/6f741420a1_679924a6635e53a391cbc08f_Screen-Shot-2015-04-30-at-5.41.10-pm-676x429.png"
 draft: false
-webflowId: "679924ba92400b3f2818f9ba"
 ---
 
 In one of the Android app projects at [Oursky](http://www.oursky.com/), we started using [**Realm**](http://realm.io/) for data caching. So users won’t have to look at blank pages when they log back to the app, waiting for remote API results.

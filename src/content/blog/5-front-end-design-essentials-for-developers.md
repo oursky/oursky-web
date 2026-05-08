@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/a9c68f3416_67994b22dcaa9b5237fd24a7_pablo-24-1.webp"
 draft: false
-webflowId: "67994b37299fa013c65fba56"
 ---
 
 ![5 Front-End Design Essentials for Developers](/images/blogs/86c49dcae4_67994b1496dda19f1d1a85b6_pablo-24-1-720x360.webp)

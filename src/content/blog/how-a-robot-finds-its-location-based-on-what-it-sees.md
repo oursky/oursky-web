@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/c82a5689f9_66e3476597727d587309aabb_leah-han-170866-768x1024.jpg"
 draft: false
-webflowId: "66e3477fccc23d445438d294"
 ---
 
 ## Fundamental techniques for navigation

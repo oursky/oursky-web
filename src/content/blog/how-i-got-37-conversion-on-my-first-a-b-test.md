@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/161da63812_679947f70615a7e0ea6aa4da_Screen-Shot-2016-04-07-at-2.webp"
 draft: false
-webflowId: "67994810b56100be7fa2d6d7"
 ---
 
 When I first joined as a growth-hacking intern at Oursky, I was tasked with achieving a 40% conversion rate for A/B testing. Only, that was the first time I’d ever heard the term. Our company had just completed the app [Shotbot](https://shotbot.io/), which helps developers submit screenshots to iTunes Connect in a few clicks. Of course, the next step was to promote it, and I had to learn the science of A/B testing on the job. It took three A/B tests before I hit a 37% conversion rate on Optimizely. In this post, I’m sharing my mistakes and learnings from each of my three trials.

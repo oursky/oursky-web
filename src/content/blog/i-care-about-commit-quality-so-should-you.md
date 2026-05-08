@@ -8,7 +8,6 @@ categories:
 displayCategory: "ENGINEERING CULTURE"
 image: "/images/blogs/88c913598a_65800dc11650bb250fd43618_commit-quality.webp"
 draft: false
-webflowId: "65800dc446fa2dba9ca5f991"
 ---
 
 When I started working as a developer in Hong Kong, iOS was still in Version 4. Since then, I’ve become one of the six partners in one of Hong Kong’s leading web and mobile development agencies. In addition to acting as the tech lead or PM for projects, I work on initiatives like setting up the company’s [Kubernetes cluster for DevOps](https://code.oursky.com/built-kubernetes-cluster-coworkers-deploy-apps-faster/#more-466) and mentor junior developers.

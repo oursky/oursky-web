@@ -9,7 +9,6 @@ categories:
 displayCategory: "QA TESTING"
 image: "/images/blogs/4ef67f00ae_66e306d03a8aa54db92c0811_pexels-kevin-ku-577585-1160x870.webp"
 draft: false
-webflowId: "66e30716a9778b10dc4ceee5"
 ---
 
 Many of our clients come to us to build software and apps from scratch. A lot come to us, too, and ask us to take over or revamp an existing digital product built by a third-party development team. A lot of them are either transitioning or planning to change to a new software outsourcing vendor. Some of our clients are even the ones who ask about reviewing the app after it’s been built by another development team.

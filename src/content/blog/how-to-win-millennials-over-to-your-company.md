@@ -8,7 +8,6 @@ categories:
 displayCategory: "CULTURE"
 image: "/images/blogs/556a1a6c70_679949e57b48cb88ecc635f1_wordcloud-1.webp"
 draft: false
-webflowId: "679949ff96dda19f1d19760d"
 ---
 
 ![](/images/blogs/0235184d83_679949f03fc1f3f920595ce3_wordcloud-1-720x553.png)

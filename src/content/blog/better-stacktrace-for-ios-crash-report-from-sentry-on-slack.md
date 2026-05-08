@@ -8,7 +8,6 @@ categories:
 displayCategory: "iOS"
 image: "/images/blogs/344043091f_6799276263cf1df864aa245e_dsym-cover.webp"
 draft: false
-webflowId: "6799278496bfcb295c64a8c4"
 ---
 
 ![Slack dSYM bot for Sentry](/images/blogs/8b1c7f43c0_67992770c2a101ee0fdf2c3b_dsym-cover.png)

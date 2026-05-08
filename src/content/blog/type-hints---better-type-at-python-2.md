@@ -8,7 +8,6 @@ categories:
 displayCategory: "Python"
 image: "/images/blogs/7bc189e0d4_679927f66d380fa2db7d03d8_type-hints-cover.gif"
 draft: false
-webflowId: "6799286dc784dff69b0754a0"
 ---
 
 ![Type Hints – Better type at Python](/images/blogs/7132217b26_679927fe3a98e00badef85ad_type-hints-cover.gif)

@@ -9,7 +9,6 @@ categories:
 displayCategory: "Product Management"
 image: "/images/blogs/be84151240_66e31465e154677cd314f180_Oursky-perks-9510-720x478.jpg"
 draft: false
-webflowId: "66e314add2bf9fc097393d8a"
 ---
 
 ![Evidence based scheduling EBS fog creek joel on software](/images/blogs/046dcb0a1f_66e3144dc5c78539d58ff4c8_1_I0MCeRgbNi2aHiuxUtD-cg.png)

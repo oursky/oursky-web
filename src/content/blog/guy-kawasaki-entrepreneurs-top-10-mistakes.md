@@ -8,7 +8,6 @@ categories:
 displayCategory: "Product Management"
 image: "/images/blogs/f30fef70f1_679945c1b2410b21908d32fb_toa-heftiba-239004.webp"
 draft: false
-webflowId: "6799466447bf2621e895ab2d"
 ---
 
 As a technologist with over 30 years of experience navigating marketing and entrepreneurial landscapes, Guy Kawasaki knows a thing or two about entrepreneurial success. The following list reveals the 10 most common pitfalls Guy has seen entrepreneurs make when building high growth companies.

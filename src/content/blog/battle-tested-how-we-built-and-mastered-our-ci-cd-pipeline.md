@@ -9,7 +9,6 @@ categories:
 displayCategory: "ENGINEERING"
 image: "/images/blogs/ad4db53205_66e3161c5b6c8148f69000a2_sticky-note-to-ship-code-1160x773.jpg"
 draft: false
-webflowId: "66e3168984da8b61bfa46225"
 ---
 
 _In this article, we’re going to share our own experience of how we built and run our CI/CD pipeline, as well as some basic continuous integration/continuous delivery (CI/CD_) _concepts._

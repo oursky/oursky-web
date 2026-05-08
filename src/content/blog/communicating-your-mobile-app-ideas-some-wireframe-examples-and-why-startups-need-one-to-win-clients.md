@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/ba04421287_6799579924471ad9df7825ab_halacious-tZc3vjPCk-Q-unsplash-scaled.webp"
 draft: false
-webflowId: "679957b1737fb78978284b83"
 ---
 
 Why would anyone care about a barebones wireframe? Because basic layouts can help you demonstrate your competency to potential clients. Oursky’s working relationship with a client begins with understanding the problem they want to work and developing a user story. We share our early designs in the conversation to demonstrate our working style before they make their decision. This small investment builds trust with potential clients, helps secure contracts, and begins great working relationships. The best part is, everyone can create a wireframe.

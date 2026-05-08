@@ -57,8 +57,6 @@ const blog = defineCollection({
       twitterCard: z.enum(['summary', 'summary_large_image']).optional(),
       /** Controls whether post appears in listings */
       draft: z.boolean().default(false),
-      /** Webflow CMS item ID — optional, legacy; not read at build/runtime */
-      webflowId: z.string().optional(),
     })
     .transform((d) => {
       const categories =
@@ -104,7 +102,6 @@ const works = defineCollection({
       })
       .optional(),
     draft: z.boolean().default(false),
-    webflowId: z.string().optional(),
   }),
 });
 
@@ -118,7 +115,6 @@ const categories = defineCollection({
     /** URL-safe slug; should match the filename without extension */
     slug: z.string(),
     description: z.string().optional(),
-    webflowId: z.string().optional(),
   }),
 });
 

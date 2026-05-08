@@ -8,7 +8,6 @@ categories:
 displayCategory: "Machine Learning and AI"
 image: "/images/blogs/7f320b8ccb_679958c202dbb8325ebd9f28_arif-wahid-266541-unsplash-768x513.jpg"
 draft: false
-webflowId: "679958d2811eade87b6dd08f"
 ---
 
 Most artificial intelligence (AI) libraries and machine learning (ML) algorithms have been around for decades. However, easy access to these AI and ML libraries and large training data sets is relatively new.

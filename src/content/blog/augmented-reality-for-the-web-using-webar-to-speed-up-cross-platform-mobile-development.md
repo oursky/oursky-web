@@ -8,7 +8,6 @@ categories:
 displayCategory: "Augmented Reality (AR)"
 image: "/images/blogs/f23839898f_6799581f35d3af619f07a99e_AR-for-the-Web-Oursky-01-23-at-12.webp"
 draft: false
-webflowId: "67995835f0bb85751062bcfc"
 ---
 
 More than a decade ago, it wouldn’t have been possible to create an augmented reality (AR) app or demo for your smartphone in a day or two. But with the likes of Pokemon Go and interactive AR stickers on Android devices and iPhones, we’re seeing AR technology move forward to new heights. In fact, we’re already seeing AR extend into the business space.

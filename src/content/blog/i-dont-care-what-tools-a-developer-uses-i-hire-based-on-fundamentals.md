@@ -9,7 +9,6 @@ displayCategory: "ENGINEERING CULTURE"
 image: "/images/blogs/3f2ff601c2_65800e7bff2246883c213677_hiring-culture.jpeg"
 featured: 6
 draft: false
-webflowId: "65800e7e237f3fa05a22c0f2"
 ---
 
 ![](/images/blogs/039f22fc7b_66e15c66a13a5b5bcf837a4d_scott-webb-208072-720x480.jpeg)

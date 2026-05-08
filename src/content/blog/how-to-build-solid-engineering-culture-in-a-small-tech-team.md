@@ -8,7 +8,6 @@ categories:
 displayCategory: "Engineering Culture"
 image: "/images/blogs/e65a41e7d7_67994a75be65ccad3d12f0f0_Photo-.webp"
 draft: false
-webflowId: "67994ad223af1a9d6bcd38f2"
 ---
 
 ![Oursky Team Photo](/images/blogs/d6c4a24159_67994a7c542c0b889ce9d26e_Photo--720x540.jpeg)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/65224ce63c_6799566058b328b61e60ffbb_varya-business-development-scaled.webp"
 draft: false
-webflowId: "67995678d760b0c7d9d0f40d"
 ---
 
 When my friends or colleagues need to find a person to do a job for them — they come to me. A successful startup founder to learn from, lawyer, coach, an event speaker, connection in The Big 4, or even a date, you name it. They know I have a massive network of contacts and will be able to point out where to dig, if not connect them directly to the right person.

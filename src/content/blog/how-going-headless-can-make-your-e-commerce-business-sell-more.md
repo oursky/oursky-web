@@ -8,7 +8,6 @@ categories:
 displayCategory: "E-COMMERCE"
 image: "/images/blogs/0e55a5d88a_66e31fddf5365dd0060b0f10_blake-wisz-Xn5FbEM9564-unsplash-1160x669.webp"
 draft: false
-webflowId: "66e3204f459b7d49daa70a6a"
 ---
 
 A decade or so ago, an e-commerce shop for desktop PCs was all you needed. Today, consumers demand innovative interactions with their favorite brands on the many devices they own and platforms they frequent. There’s fierce competition to meet this demand, and as a digital retailer, you can’t let others gain ground over you.

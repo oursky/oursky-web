@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/71434db437_67995579a9dc73a424628c90_andrey-larin-Kodkas71tT8-unsplash-scaled.webp"
 draft: false
-webflowId: "67995582fe53167067950a97"
 ---
 
 As a project consultant in Oursky, I hear a lot of app ideas every day. Listening to passionate clients talking about specific problems they’re working to solve or learning about innovative and simple solutions to new market niches is one of my favorite things about my job (our specialty coffee club comes a close second).  

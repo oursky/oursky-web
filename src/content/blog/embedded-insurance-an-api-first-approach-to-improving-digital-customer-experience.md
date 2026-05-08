@@ -9,7 +9,6 @@ categories:
 displayCategory: "API FIRST"
 image: "/images/blogs/7acdda4075_66e3053fcf1e65996dcc3947_pexels-pixabay-35550-1160x773.jpg"
 draft: false
-webflowId: "66e305c411ed3245de1970de"
 ---
 
 You’ve got a beautiful, cozy place in the London suburbs that you want to rent out. You go to Airbnb to list your property, but you suddenly hesitate. What if, by some freak of nature, some accident happens? What if the guests trash your place — or don’t show up at all?

@@ -8,7 +8,6 @@ bgColor: '#512f60'
 heroImage: "/images/works/53b1ba91ba_66d09fb24e2a8b9549c35424_Animated phone mockup@2-1512x900 (8).webp"
 thumbnail: "/images/works/a5241625a9_67f6930ea4da66d89e2681ec_cornerstone.webp"
 draft: false
-webflowId: "66d09662a0d17da6fcc71c66"
 ---
 
 ## **From Fragmented Requirements to Flawless App: How Oursky Delivered for Cornerstone on a Tight Deadline**

@@ -9,7 +9,6 @@ categories:
 displayCategory: "REDUX"
 image: "/images/blogs/12c39396a2_66e30379cf1e65996dca8095_jason-leung-8-Hw2S-j3VU-unsplash-1160x773.webp"
 draft: false
-webflowId: "66e303d633a4d3846b6da18d"
 ---
 
 Oursky creates websites, software, and applications that run on multiple platforms — from JavaScript- and Angular- to React Native-based apps. Before adopting Redux, there was no common design pattern to adhere to. Back then, every project could have a different philosophy in how data flows were implemented.

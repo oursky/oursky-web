@@ -8,7 +8,6 @@ categories:
 displayCategory: "React Native"
 image: "/images/blogs/5220c46fe6_67993fa638bb3b02c880bebe_giphy.gif"
 draft: false
-webflowId: "67993fe1bf8f21608a694882"
 ---
 
 ![React Navigation](/images/blogs/7f7f8b29a7_67993f965a814b5f21b472a2_giphy.gif)

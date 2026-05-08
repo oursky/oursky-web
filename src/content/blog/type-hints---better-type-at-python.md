@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/3858c2b873_66e347f913eb0585f98ca7a5_type-hints-cover-150x150.gif"
 draft: false
-webflowId: "66e34920e47fbd9c1711e790"
 ---
 
 Python is known as a dynamic, \[strong-typed\](https://wiki.python.org/moin/Why is Python a dynamic language and also a strongly typed language) language. Most developers love it but some feel mad without type checking or type-hinted auto-completion. In Python3.5, [Type Hints](https://www.python.org/dev/peps/pep-0484/) is introduced to further delight developers who want those features.  

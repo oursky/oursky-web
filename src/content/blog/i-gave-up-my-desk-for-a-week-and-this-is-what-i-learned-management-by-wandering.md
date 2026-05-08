@@ -8,7 +8,6 @@ categories:
 displayCategory: "Founders' Learnings"
 image: "/images/blogs/068995dcfd_679950b9be45937c15df55ae_luke-ellis-craven-343694-768x535.jpg"
 draft: false
-webflowId: "679950e136bc0d12791e1d03"
 ---
 
 ![management by wandering](/images/blogs/de02c8319a_679950c493bdb1ce79fb82bd_luke-ellis-craven-343694-720x501.jpeg)

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Geek"
 image: "/images/blogs/28e3fe7eff_67993db647f7923e8b796257_keep-calm-and-sudo.webp"
 draft: false
-webflowId: "67993debf9deac5f8d0cd84d"
 ---
 
 A list of command line tips to optimize your terminal experience. All the recommended features are linked to their appropriate sources.

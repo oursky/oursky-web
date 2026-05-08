@@ -8,7 +8,6 @@ categories:
 displayCategory: "Automated Testing"
 image: "/images/blogs/3fa40beebc_68109c18d0e0e55f13d361cf_image (2).webp"
 draft: false
-webflowId: "68109f04b37ef774ef9c7527"
 ---
 
 Passkeys (WebAuthn) offer a secure, passwordless future for web logins, but testing them presents unique challenges. This practical guide walks you through automating Passkey testing using Playwright and CDP features, and how you can quickly build an app to support Passkeys login with Authgear.

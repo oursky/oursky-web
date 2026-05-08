@@ -8,7 +8,6 @@ categories:
 displayCategory: "Product Growth"
 image: "/images/blogs/c6ccdd7924_66e31372ffe29e9cf6815c0e_matthew-henry-87142-768x512.jpg"
 draft: false
-webflowId: "66e313f24464199c0e59de76"
 ---
 
 ![](/images/blogs/1e53a90844_66e3138dec3f1f2d489152e5_matthew-henry-87142-720x480.jpeg)

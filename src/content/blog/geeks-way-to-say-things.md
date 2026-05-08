@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/753677757f_673e2cf2f36902869c96caaa_cover.webp"
 draft: false
-webflowId: "673e2d16e21da63266dc369a"
 ---
 
 ![developer's way to say things](/images/blogs/318c5f28ce_673e2cc07d3cc29f716147be_cover.png)

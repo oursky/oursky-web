@@ -8,7 +8,6 @@ categories:
 displayCategory: "Project Management"
 image: "/images/blogs/032277f452_6799518696dda19f1d20e111_austin-chan-275638-768x512.jpg"
 draft: false
-webflowId: "679951a10615a7e0ea74f91a"
 ---
 
 ![](/images/blogs/6fdd8bccc1_6799517edaa2fabb50340d8a_austin-chan-275638-720x480.jpeg)

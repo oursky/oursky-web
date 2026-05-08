@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/7f59acaca9_67994d4b5defbec984dcb1b1_blogpostheader-1.webp"
 draft: false
-webflowId: "67994d6929c5fdc5a545140e"
 ---
 
 ![](/images/blogs/ee614a74b9_67994d43f86d8834519388be_blogpostheader-1-720x360.webp)

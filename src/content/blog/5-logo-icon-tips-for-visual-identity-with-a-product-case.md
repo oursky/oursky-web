@@ -8,7 +8,6 @@ categories:
 displayCategory: "UX/UI Design"
 image: "/images/blogs/bd48f92fd2_67994b8d3fc1f3f9205b0bbe_makeappicon-scrshot-1.webp"
 draft: false
-webflowId: "67994ba445bd81b830fdaf4f"
 ---
 
 ![Revamping old favourites](/images/blogs/8c62ded13d_67994b7a23af1a9d6bcddd50_makeappicon-scrshot-1-720x450.png)

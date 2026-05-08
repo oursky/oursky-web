@@ -8,7 +8,6 @@ categories:
 displayCategory: "Development"
 image: "/images/blogs/753cd6b70a_66e3209b91727a9c954f6999_riccardo-annandale-7e2pe9wjL9M-unsplash-1160x930.jpg"
 draft: false
-webflowId: "66e32111a49e006c069bed55"
 ---
 
 Are you an entrepreneur with a great idea for the next Uber app? Are you trying to secure boardroom support for a mobile app project that can potentially reach thousands of new customers? Are you a startup founder looking to kick-start a great app idea? We’ve collected frequently asked questions about app development and answered them based on our experience and interactions with startup founders, business owners, and enterprise executives.

@@ -8,7 +8,6 @@ categories:
 displayCategory: "Growth"
 image: "/images/blogs/f056bf844e_6799505124c6856e26dff22e_nasa-43563-768x512.jpg"
 draft: false
-webflowId: "6799506323af1a9d6bd2e085"
 ---
 
 ![](/images/blogs/e732380c86_679950338149b61a4ec03a46_nasa-43563-720x480.jpeg)

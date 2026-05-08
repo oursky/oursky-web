@@ -8,7 +8,6 @@ categories:
 displayCategory: "iOS"
 image: "/images/blogs/b760c0c815_679927bf2f1ef50b24d3cdc0_spentable-cover-sf.webp"
 draft: false
-webflowId: "679927d0ed5f0f3cde9b7165"
 ---
 
 ![Spentable: How we built our first app for watchOS 2](/images/blogs/598c8ab9a0_679927b522b26797a0d771f8_spentable-cover-sf.webp)

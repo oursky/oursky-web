@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/058ca99fcf_67994cfc36bc0d12791a3136_photo-1454165804606-c3d57bc86b40-720x481.jpeg"
 draft: false
-webflowId: "67994d2500afd2ad0dd4bf65"
 ---
 
 ![Conflicts are fixed with conversations, not accusations. Image courtesy of Helloquence on Unsplash.](/images/blogs/058ca99fcf_67994cfc36bc0d12791a3136_photo-1454165804606-c3d57bc86b40-720x481.jpeg)

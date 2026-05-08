@@ -8,7 +8,6 @@ categories:
 displayCategory: "Machine Learning and AI"
 image: "/images/blogs/dd6f14b009_679955f7c7bcb32a283bff44_bence-boros-anapPhJFRhM-unsplash-2-scaled.webp"
 draft: false
-webflowId: "67995607f28f8449ca19469b"
 ---
 
 In our [previous blog](https://blog.oursky.com/2020/05/07/artificial-intelligence-ai-for-businesses-what-you-need-to-know-before-starting-an-ai-project/), we demystified what artificial intelligence (AI) can and cannot do for your business — and what you should expect and prepare when developing an AI project. Here, we go a step further and explore conversational AI — more specifically, chatbots. They seem to be a must-have for businesses these days. In fact, a recent Gartner survey reported that chief information officers (CIOs) [cited](https://www.gartner.com/smarterwithgartner/chatbots-will-appeal-to-modern-workers) chatbots as the primary AI-based application used in their organizations, noting their [capabilities](https://www.gartner.com/smarterwithgartner/4-uses-for-chatbots-in-the-enterprise/) to automate and streamline internal workflows.

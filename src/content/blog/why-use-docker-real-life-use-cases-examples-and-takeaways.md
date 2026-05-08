@@ -8,7 +8,6 @@ categories:
 displayCategory: "Engineering"
 image: "/images/blogs/23e7d87e89_679954428efc312cbdfa142b_image (1).webp"
 draft: false
-webflowId: "6799545b9b3ffdecb20a74f7"
 ---
 
 [Docker](https://www.docker.com/) just celebrated its [sixth anniversary](https://blog.docker.com/2019/02/22757/) earlier. Back in 2013, [Oursky](https://oursky.com/) was probably one of Docker’s earliest adopters, using it long before it went mainstream. And to be honest, when we start using Docker six years ago, we didn’t imagine that Docker would have evolved at an astonishing pace like this. Throughout our six-year journey with Docker, we found great potential in how Docker could benefit the company and get inspired by the use cases. In this blog post, we are going to share our own experience with you about:

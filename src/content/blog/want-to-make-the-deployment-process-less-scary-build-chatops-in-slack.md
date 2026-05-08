@@ -8,7 +8,6 @@ categories:
 displayCategory: "Code"
 image: "/images/blogs/f6137674db_66e346c9f05accda69fb3853_jamison-mcandie-112375-1024x683.jpg"
 draft: false
-webflowId: "66e346f791de74910e4b130f"
 ---
 
 In a company that makes mobile and web products, developers shouldn’t be the only ones who can launch the latest version of an app. You need proper testing beyond getting colleagues to give ad hoc feedback by clicking through the app.

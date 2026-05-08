@@ -8,7 +8,6 @@ categories:
 displayCategory: "Software QA"
 image: "/images/blogs/aefdbc7a06_679957d04779025b7e265017_1S-KcVsKM2Jui-dodKJUTUA.webp"
 draft: false
-webflowId: "679957e3fe53167067980e33"
 ---
 
 Whenever a client wants Oursky to take over an existing app or software, we always recommend [performing exploratory testing and codebase review](https://blog.oursky.com/2020/12/21/exploratory-testing-and-code-review-why-theyre-important-when-changing-software-outsourcing-vendors/) first before tinkering with it.

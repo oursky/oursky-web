@@ -10,7 +10,6 @@ displayCategory: "Test Automation"
 image: "/images/blogs/6590ffe387_66e7b17a8935e3e5cd466add_cover_img.webp"
 featured: 1
 draft: false
-webflowId: "66e7b89177d7d990d1fc049b"
 ---
 
 End-to-end (E2E) test automation has long been a critical component of software quality assurance. Traditionally, when comparing automated testing with manual testing, factors such as coverage, limitations, and cost have been the primary focus. However, the landscape is changing rapidly, and it's time to reassess the value proposition of E2E test automation.

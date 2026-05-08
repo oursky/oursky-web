@@ -8,7 +8,6 @@ categories:
 displayCategory: "FOUNDERS LEARNING"
 image: "/images/blogs/c64c2a0a35_66e3130946e57a7951527438_1HARd87fcKvAnMxeFExyOgw.jpeg"
 draft: false
-webflowId: "66e31346dd35f44dc9db5986"
 ---
 
 ![Dollar Sign](/images/blogs/b94f400cf0_66e31322e0884e5ff1f08754_1HARd87fcKvAnMxeFExyOgw-720x422.jpeg)

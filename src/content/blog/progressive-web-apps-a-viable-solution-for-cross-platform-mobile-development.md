@@ -8,7 +8,6 @@ categories:
 displayCategory: "Client Stories"
 image: "/images/blogs/c74408e4ee_679958f539e78e0a9add05bb_pexels-cottonbro-5082580-scaled.webp"
 draft: false
-webflowId: "679959582d86b2417748d717"
 ---
 
 Seven years ago, Starbucks released its mobile app. It all went smoothly, but they want to take it up a notch. When they were updating their website, they wanted the ordering functionality to be accessible to all kinds of coffee lovers in the United States — people on the go, customers with intermittent internet, and users who just don’t like using mobile apps.

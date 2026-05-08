@@ -8,7 +8,6 @@ categories:
 displayCategory: "FORMX"
 image: "/images/blogs/661557225b_66e33f63fdded1189c754025_annie-spratt-tuJ3tXSayco-unsplash-1160x773.webp"
 draft: false
-webflowId: "66e34071fdded1189c7685ba"
 ---
 
 In this article, regular expressions of currency (e.g., US$100, £0.12, or HK$54), time, and date are listed out for quick copy and paste. They’re battle-tested, since our very own form and document data extraction service, [FormX](https://www.formx.ai/), use them frequently in the extraction process. While each regex comes with limitations, we have notes addressing that along with customization tips. There are also code snippets written in Python to let you try customizing and using them.

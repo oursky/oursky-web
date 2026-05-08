@@ -8,7 +8,6 @@ categories:
 displayCategory: "Machine Learning and AI"
 image: "/images/blogs/14bf3cd11e_679955367f3630483834515f_AI_cost_data_needed_for_development.webp"
 draft: false
-webflowId: "679955483fc1f3f920659a5c"
 ---
 
 ![](/images/blogs/77caf47546_6799550bbe2d1859c066e5fb_AI_cost_data_needed_for_development-1160x653.jpeg)

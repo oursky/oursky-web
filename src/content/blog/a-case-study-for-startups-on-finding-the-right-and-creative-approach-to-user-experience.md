@@ -8,7 +8,6 @@ categories:
 displayCategory: "CASE STUDY"
 image: "/images/blogs/3443cdc1f3_66e31cd6f07d75e0b3b5479d_asos-1160x672.webp"
 draft: false
-webflowId: "66e31d24b4fc80186f34ac97"
 ---
 
 Conventional wisdom would say that you need to shake off shiny object syndrome to keep your startup laser-focused. But with the many partnerships and collaborations we’ve made building and launching apps, I’ve learned that startups — and even established businesses for that matter — are far from conventional.

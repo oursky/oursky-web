@@ -9,7 +9,6 @@ categories:
 displayCategory: "DIGITAL PRODUCT DESIGN"
 image: "/images/blogs/b293e9a9ca_66e305ef266fa4ff48a25303_oursky-deck.001-720x405.jpeg"
 draft: false
-webflowId: "66e30656b42bcc17bc50d7dd"
 ---
 
 No one likes to admit it, but if you’re contracting custom software development services, getting project price estimates and quotations can be a guessing game.

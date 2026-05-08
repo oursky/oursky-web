@@ -9,7 +9,6 @@ categories:
 displayCategory: "User Acceptance"
 image: "/images/blogs/bd4a7aa1b6_66e3017c827228b7ba355125_uat_balance_2640x1200-1160x527.jpg"
 draft: false
-webflowId: "66e301e7daff84e0e3a0a7ae"
 ---
 
 User Acceptance Testing (UAT) is a gatekeeping process in the software development lifecycle, to ensure a new product or version update is ready for public release. The application needs to be fully tested and accepted by the real End-Users and/or the Business Analysts (BA), to make sure the business requirements are met and the features are worked as intended from the users’ point of view.

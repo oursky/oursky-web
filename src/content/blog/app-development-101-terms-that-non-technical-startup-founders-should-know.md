@@ -8,7 +8,6 @@ categories:
 displayCategory: "Development"
 image: "/images/blogs/e81d80064c_66e31f9b86a6f6d8b8067d39_teemu-paananen-bzdhc5b3Bxs-unsplash-1160x829.webp"
 draft: false
-webflowId: "66e31fa1d3dc47adc0267172"
 ---
 
 Ever feel like application or software developers speak a foreign language when you discuss your app ideas? Just as slang and jargon are common in everyday conversations, the world of app and software development is filled with them, too.

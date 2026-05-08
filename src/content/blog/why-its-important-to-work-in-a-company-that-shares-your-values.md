@@ -8,7 +8,6 @@ categories:
 displayCategory: "Culture"
 image: "/images/blogs/7e7a0c8872_679954e43f749d90525dd5ad_photo-1496115965489-21be7e6e59a0-e1587582578824.webp"
 draft: false
-webflowId: "679954f523af1a9d6bd7cfbe"
 ---
 
 As a new addition to the Oursky team, I’m immersing myself in its culture. It’s one thing when HR or your manager tells you about the workplace environment, but it’s totally different when you observe it with your own eyes. Some of my tenured colleagues have never worked in other companies before. I’ve experienced living in and working for different employers in Russia, Myanmar, and Taiwan, so I have multiple perspectives about working with people from different cultures. Whether you’re a developer, project manager, sales executive, business development executive, or a professional pursuing a career in software development (or any industry for that matter), it’s important to see if you will fit in with the company culture. I’m sharing my experience so that, hopefully, when you find yourself in a similar boat, you can bridge the gaps — and take action —  between corporate values and your own.

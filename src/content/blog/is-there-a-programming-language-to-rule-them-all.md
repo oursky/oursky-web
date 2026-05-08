@@ -9,7 +9,6 @@ categories:
 displayCategory: "DEVELOPMENT"
 image: "/images/blogs/a813c45355_66e31bd47bbb64fd01f3fb04_kobu-agency-67L18R4tW_w-unsplash-1160x778.jpg"
 draft: false
-webflowId: "66e31c03c6aed5186d71ef73"
 ---
 
 Many IT, DevOps, or DevSecOps teams in enterprises may find themselves at a tight spot when it comes to supporting programming languages. On one hand, there’s the understandable aspiration to standardize languages to help control maintenance costs or future-proof the team’s portfolio. Conversely, many also see the advantages of writing software or applications with whatever language the team thinks will address business requirements and express themselves the best.

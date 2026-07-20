@@ -22,7 +22,7 @@ npm run preview  # serve dist/ locally
 
 ## Environment variables
 
-Copy `.env.example` to `.env` if you need to override site defaults (e.g. `PUBLIC_SITE_URL`, `PLAUSIBLE_DOMAIN`). The static site build does not require a `.env` file.
+Copy `.env.example` to `.env` if you need to override site defaults (e.g. `PUBLIC_SITE_URL`). The static site build does not require a `.env` file.
 
 ## GitHub
 

@@ -72,10 +72,10 @@ const websiteSchema = {
 };
 const extraSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
-// Plausible: only loaded when env var is set AND this is a production build,
-// so deploy previews and local dev never report into the live dashboard.
-const plausibleDomain = import.meta.env.PLAUSIBLE_DOMAIN;
-const enablePlausible = Boolean(plausibleDomain) && import.meta.env.PROD;
+// Plausible: only loaded in production builds, so local dev and Netlify deploy
+// previews never report into the live dashboard. The site's domain/config is
+// baked into the script ID, so no data-domain attribute or env var is needed.
+const enablePlausible = import.meta.env.PROD;
 const fullTitle = title === 'Oursky' ? title : `Oursky - ${title}`;
 const socialTitle =
   ogTitle === undefined || ogTitle.length === 0
@@ -132,9 +132,15 @@ const absoluteOgImage = ogImage.startsWith('http')
       <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     ))}
 
-    {/* Plausible analytics — only emitted in production builds with PLAUSIBLE_DOMAIN set */}
+    {/* Plausible analytics — only emitted in production builds */}
     {enablePlausible && (
-      <script is:inline defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />
+      <>
+        <script is:inline async src="https://plausible.io/js/pa-wM4pfvIYRQVuIgaXue7ry.js" />
+        <script is:inline>
+          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+          plausible.init()
+        </script>
+      </>
     )}
   </head>
   <body class:list={[bodyClass].filter(Boolean)}>
